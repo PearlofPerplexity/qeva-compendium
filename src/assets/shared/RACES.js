@@ -319,5 +319,5 @@ export const RACES = [
         residence: 'Mahelos',
         description: 'It was revealed later in history that some of the flora had become sentient. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are shy folk and do not carry out business like other races. They seem to see themselves as more plant than people and keep to themselves in their forests, gravitating to the center of the forest.',
         image: user
-    },
+    }
 ];

@@ -8,14 +8,29 @@ const Header = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="uil-bars text-white"></i>
                     </button>
-                    <Link className="navbar-brand" to="index.html">Qeṽa Compendium</Link>
+                    <Link className="navbar-brand p-3" to="/">Qeṽa Compendium</Link>
                 </div>
                 <div className="collapse navbar-collapse" id="toggle-navbar">
-                    <ul className="navbar-nav ms-auto">
+                    <ul className="navbar-nav mx-3 d-block d-md-none text-white">
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">
-                                <i data-show="show-side-navigation1" className="uil-bars show-side-btn"></i>
-                            </Link>
+                            <i className="uil-comment-info"></i>
+                            <Link to='/about'>The Basics</Link>
+                        </li>
+                        <li className="nav-item">
+                            <i className="uil-diamond"></i>
+                            <Link to='/gem-overview'>Gemstones</Link>
+                        </li>
+                        <li className="nav-item">
+                            <i className="uil-wind"></i>
+                            <Link to='/spiritual-realities'>Divination</Link>
+                        </li>
+                        <li className="nav-item">
+                            <i className="uil-users-alt"></i>
+                            <Link to='/elves'>Races</Link>
+                        </li>
+                        <li className="nav-item">
+                            <i className="uil-users-alt"></i>
+                            <Link to='/orcs'>Dark Races</Link>
                         </li>
                     </ul>
                 </div>

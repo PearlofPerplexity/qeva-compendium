@@ -4,16 +4,16 @@ import {
     AccordionItem,
   } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { RACES } from '../../assets/shared/RACES';
+import { DRACES } from '../../assets/shared/DRACES';
 
-const RaceSidebar = () => {
+const DRaceSidebar = () => {
     return (
         <AccordionItem>
-            <AccordionHeader targetId="4"><i className="uil-users-alt"></i>&nbsp; Races
+            <AccordionHeader targetId="5"><i className="uil-users-alt"></i>&nbsp; Dark Races
             </AccordionHeader>
-            <AccordionBody accordionId="4">
+            <AccordionBody accordionId="5">
                 <ul className="sidebar-dropdown list-unstyled">
-                    {RACES.map((race) => {
+                    {DRACES.map((race) => {
                         return (
                             <li key={race.id}>
                                 <Link to={race.link}>{race.race}</Link>
@@ -26,4 +26,4 @@ const RaceSidebar = () => {
     );
 }
 
-export default RaceSidebar;
+export default DRaceSidebar;

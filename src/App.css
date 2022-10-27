@@ -77,14 +77,6 @@ a.cover-link {
 	z-index: 9999999
 }
 
-.sidebar .close-aside {
-	position: absolute;
-	top: 7px;
-	right: 7px;
-	cursor: pointer;
-	color: #EEE;
-}
-
 .sidebar .sidebar-header {
 	border-bottom: 1px solid #2a2b3c;
 	background-image: url("./assets/imgs/gemstone-wallpaper4.jpg");
@@ -114,67 +106,6 @@ aside ul {
 	margin-bottom: 0px;
 }
 
-/* Start numbers */
-.sidebar ul > li > a > .num {
-	line-height: 0;
-	border-radius: 3px;
-	font-size: 14px;
-	padding: 0px 5px
-}
-
-.sidebar ul > li > i {
-	font-size: 18px;
-	margin-right: .7rem;
-	color: var(--dk-gray-500);
-}
-
-.sidebar ul > li.has-dropdown > a:after {
-	content: '\eb3a';
-	font-family: unicons-line;
-	font-size: 1rem;
-	line-height: 1.8;
-	float: right;
-	color: var(--dk-gray-500);
-	transition: all .3s ease-in-out;
-}
-
-.sidebar ul .opened > a:after {
-	transform: rotate(-90deg);
-}
-
-/* Start dropdown menu */
-.sidebar ul .sidebar-dropdown {
-	padding-top: 10px;
-	padding-left: 30px;
-	display: none;
-}
-.sidebar ul .sidebar-dropdown.active {
-	display: block;
-}
-
-.sidebar ul .sidebar-dropdown > li > a {
-  font-size: .85rem;
-	padding: .5rem 0;
-	display: block;
-}
-/* End dropdown menu */
-
-.show-sidebar {
-	transform: translateX(-270px);
-}
-
-/* @media (max-width: 767px) {
-	.sidebar ul > li {
-		padding-top: 12px;
-		padding-bottom: 12px;
-	}
-
-	.sidebar .search {
-		padding: 10px 0 10px 30px
-	}
-} */
-
-
 
 
 /** --------------------------------
@@ -191,7 +122,6 @@ aside ul {
 .welcome p {
 	color: var(--dk-gray-400);
 }
-
 
 
 
@@ -215,7 +145,6 @@ aside ul {
 .highlights .box p {
 	color: var(--dk-gray-400);
 }
-
 
 
 
@@ -274,6 +203,7 @@ aside ul {
 }
 
 
+
 /** --------------------------------
  -- users
 -------------------------------- */
@@ -288,7 +218,6 @@ aside ul {
 .admins .box p {
 	color: var(--dk-gray-400)
 }
-
 
 
 
@@ -333,10 +262,7 @@ aside ul {
 	background-color: var(--navbar-bg-color);
 	border: none;
 }
-.navbar .dropdown-menu {
-	right: auto;
-	left: 0;
-}
+
 .navbar .navbar-nav>li>a {
 	color: #EEE;
 	line-height: 55px;
@@ -346,45 +272,11 @@ aside ul {
 .navbar .navbar-nav>li>a:focus,
 .navbar .navbar-nav>li>a:hover {color: #EEE;}
 
-.navbar .navbar-nav>.open>a,
-.navbar .navbar-nav>.open>a:focus,
-.navbar .navbar-nav>.open>a:hover {background-color: transparent; color: #FFF;}
-
 .navbar .navbar-brand {line-height: 55px; padding: 0}
 .navbar .navbar-brand:focus,
 .navbar .navbar-brand:hover {color: #FFF;}
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {margin: 0}
 
-/* @media (max-width: 767px) {
-	.navbar>.container-fluid .navbar-brand {
-		margin-left: 15px;
-	}
-	.navbar .navbar-nav>li>a {
-		padding-left: 0;
-	}
-	.navbar-nav {
-		margin: 0;
-	}
-	.navbar .navbar-collapse,
-	.navbar .navbar-form {
-		border: none;
-	}
-} */
-
-.navbar .navbar-nav>li>a {
-	float: left;
-}
-.navbar .navbar-nav>li>a>span:not(.caret) {
-	background-color: #e74c3c;
-	border-radius: 50%;
-	height: 25px;
-	width: 25px;
-	padding: 2px;
-	font-size: 11px;
-	position: relative;
-	top: -10px;
-	right: 5px;
-}
 .dropdown-menu>li>a {
 	padding-top: 5px;
 	padding-right: 5px;
@@ -433,7 +325,7 @@ aside ul {
 
 /* Start media query */
 
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
 	#wrapper {
 		margin: 0;
 	}
@@ -452,7 +344,7 @@ aside ul {
 		font-size: 18px;
 	}
 	.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {background-color: transparent}
-} */
+}
 
 ::-webkit-scrollbar {
 	background: transparent;
