@@ -16,7 +16,7 @@ const RaceSidebar = () => {
                     {RACES.map((race) => {
                         return (
                             <li key={race.id}>
-                                <Link to={race.link}>{race.race}</Link>
+                                <Link to={race.link}>{race.name}</Link>
                             </li>
                         );
                     })}

@@ -15,7 +15,7 @@ export const RACES = [
     {
         id: 0,
         link: '/elves',
-        race: 'Elves',
+        name: 'Elves',
         heartStone: 'Diamond (Love)',
         spawnStone: 'Quartz (Strength)',
         elder: 'Amare',
@@ -29,7 +29,7 @@ export const RACES = [
         subraces: [
             {
                 id: 0,
-                race: 'Wood Elves',
+                name: 'Wood Elves',
                 residence: 'Forests of Navenia & Navalil',
                 eyes: 'Green',
                 skin: 'White',
@@ -39,7 +39,7 @@ export const RACES = [
             },
             {
                 id: 1,
-                race: 'River Elves',
+                name: 'River Elves',
                 residence: 'Miolaire & Dundili Rivers',
                 eyes: 'Blue',
                 skin: 'White',
@@ -49,7 +49,7 @@ export const RACES = [
             },
             {
                 id: 2,
-                race: 'Desert Elves',
+                name: 'Desert Elves',
                 residence: 'Miolaire & Dundili Rivers',
                 eyes: 'Brown, Purple',
                 skin: 'Tan',
@@ -62,7 +62,7 @@ export const RACES = [
     {
         id: 1,
         link: '/aviame',
-        race: 'Aviame',
+        name: 'Aviame',
         heartStone: 'Ruby (Self-control)',
         spawnStone: 'Crocoite (Dexterity)',
         elden: 'Thelmiel',
@@ -76,7 +76,7 @@ export const RACES = [
         subraces: [
             {
                 id: 0,
-                race: 'Lumiare',
+                name: 'Lumiare',
                 nickname: 'Autumn Avi',
                 residence: 'Mountains of Altiavaire',
                 hair: 'black',
@@ -87,7 +87,7 @@ export const RACES = [
             },
             {
                 id: 1,
-                race: 'Athiame',
+                name: 'Athiame',
                 nickname: 'Night Avi',
                 residence: 'Athvari Cliffs',
                 hair: 'White',
@@ -98,7 +98,7 @@ export const RACES = [
             },
             {
                 id: 2,
-                race: 'Asiame',
+                name: 'Asiame',
                 nickname: 'Snow Avi',
                 residence: 'High Mountains, Orcaṽa',
                 hair: 'White',
@@ -109,7 +109,7 @@ export const RACES = [
             },
             {
                 id: 3,
-                race: 'Half-Aviame, Half-Elf',
+                name: 'Half-Aviame, Half-Elf',
                 nickname: 'Aves',
                 residence: 'Elven & Aviame Communities',
                 hair: 'White',
@@ -123,7 +123,7 @@ export const RACES = [
     {
         id: 2,
         link: '/humans',
-        race: 'Humans',
+        name: 'Humans',
         heartStone: 'Onyx (Faithfulness)',
         spawnStone: 'Shungite (Loyalty)',
         elden: 'Çairça',
@@ -137,7 +137,7 @@ export const RACES = [
         subraces: [
             {
                 id: 0,
-                race: 'Humans',
+                name: 'Humans',
                 residence: 'Arvañon',
                 eyes: 'Varied',
                 skin: 'Varied',
@@ -147,7 +147,7 @@ export const RACES = [
             },
             {
                 id: 1,
-                race: 'Elden',
+                name: 'Elden',
                 residence: 'Brielle',
                 eyes: 'Multi-colored',
                 skin: 'Varied',
@@ -157,7 +157,7 @@ export const RACES = [
             },
             {
                 id: 2,
-                race: 'Half-Elves',
+                name: 'Half-Elves',
                 residence: 'Elven & Human Communities',
                 eyes: 'Color of Elven parent',
                 skin: 'White',
@@ -170,7 +170,7 @@ export const RACES = [
     {
         id: 3,
         link: '/osei',
-        race: 'Osei',
+        name: 'Osei',
         heartStone: 'Amethyst (Peace)',
         spawnStone: 'Azurite (Charisma)',
         elden: 'Moriel',
@@ -189,7 +189,7 @@ export const RACES = [
     {
         id: 4,
         link: '/dwarves',
-        race: 'Dwarves',
+        name: 'Dwarves',
         heartStone: 'Pyrite (Patience)',
         spawnStone: 'Rutile (Endurance)',
         elden: 'Ferthrui',
@@ -204,7 +204,7 @@ export const RACES = [
         subraces: [
             {
                 id: 0,
-                race: 'Dwarves of the Thrush Mountains',
+                name: 'Dwarves of the Thrush Mountains',
                 family: 'Thrauldem',
                 craft: 'Opal',
                 description: 
@@ -213,7 +213,7 @@ export const RACES = [
             },
             {
                 id: 1,
-                race: 'Dwarves of the Bare Mountains',
+                name: 'Dwarves of the Bare Mountains',
                 family: 'Narduhelm',
                 craft: 'Quartz',
                 description: 
@@ -225,7 +225,7 @@ export const RACES = [
     {
         id: 5,
         link: '/gnomes',
-        race: 'Gnomes',
+        name: 'Gnomes',
         heartStone: 'Sapphire (Kindness)',
         spawnStone: 'Tanzanite (Truth)',
         elden: 'Nware',
@@ -240,7 +240,7 @@ export const RACES = [
         subraces: [
             {
                 id: 0,
-                race: 'Green Gnomes',
+                name: 'Green Gnomes',
                 residence: 'Farathain',
                 skin: 'Green',
                 description: 
@@ -249,7 +249,7 @@ export const RACES = [
             },
             {
                 id: 1,
-                race: 'Blue Gnomes',
+                name: 'Blue Gnomes',
                 residence: 'Haven',
                 skin: 'Blue',
                 description: 
@@ -258,7 +258,7 @@ export const RACES = [
             },
             {
                 id: 2,
-                race: 'Red Gnomes',
+                name: 'Red Gnomes',
                 residence: 'Baroach, Bare Mountains',
                 skin: 'Red',
                 description: 
@@ -270,7 +270,7 @@ export const RACES = [
     {
         id: 6,
         link: '/halflings',
-        race: 'Halflings',
+        name: 'Halflings',
         heartStone: 'Jasper (Joy)',
         spawnStone: 'Scarlet Scolecite (Happiness)',
         elden: 'Xaradriel',
@@ -289,7 +289,7 @@ export const RACES = [
     {
         id: 7,
         link: '/aeoki',
-        race: 'Aeoki',
+        name: 'Aeoki',
         heartStone: 'Turqouise (Gentleness)',
         spawnStone: 'Chryscocolla (Stealth)',
         elden: 'Mhindil',
@@ -307,7 +307,7 @@ export const RACES = [
     {
         id: 8,
         link: '/arborums',
-        race: 'Arborums',
+        name: 'Arborums',
         heartStone: 'Emerald (Goodness)',
         spawnStone: 'Jade (Awareness)',
         elden: 'Arboriul',

@@ -11,8 +11,10 @@ import GemSidebar from '../features/gems/GemSidebar';
 import DivineSidebar from '../features/divine/DivineSidebar';
 import RaceSidebar from '../features/races/RaceSidebar';
 import DRaceSidebar from '../features/draces/DRaceSidebar';
+import { BasicIcon } from '../utils/icon';
+import { BasicLink } from '../utils/link';
 
-function Aside(props) {
+function Aside() {
     const [open, setOpen] = useState('');
     const toggle = (id) => {
       if (open === id) {
@@ -23,7 +25,7 @@ function Aside(props) {
     };
 
     return (
-        <aside className='sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1'>
+        <aside className='sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1 d-none d-md-block'>
             <Link to="/">
                 <div className="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
                     <img
@@ -41,12 +43,12 @@ function Aside(props) {
             <Accordion flush open={open} toggle={toggle}>
                 <AccordionItem>
                     <AccordionHeader targetId="1">
-                        <i className="uil-comment-info"></i>
+                        <i className={BasicIcon}></i>
                         &nbsp; The Basics
                     </AccordionHeader>
                     <AccordionBody accordionId="1">
                         <ul className='sidebar-dropdown list-unstyled'>
-                            <li><Link to='/about'>Discover what makes Qeṽa unique.</Link></li>
+                            <li><Link to={BasicLink}>Discover what makes Qeṽa unique.</Link></li>
                         </ul>
                     </AccordionBody>
                 </AccordionItem>
@@ -62,71 +64,7 @@ function Aside(props) {
 export default Aside;
 
 
-/*
-const Aside = () => {
-    return (
-        <aside className="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
-            <Link to="/">
-                <div className="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
-                    <img
-                        className="rounded-pill img-fluid"
-                        width="65"
-                        src={mainLogo}
-                        alt="worldbuilding logo" />
-                </div>
-            </Link>
-
-            <div className="search position-relative text-center px-4 py-3 mt-2">
-                <input type="text" className="text-white form-control w-100 border-0 bg-transparent" placeholder="Search here" />
-                <i className="fa fa-search position-absolute d-block fs-6"></i>
-            </div>
-
-            <ul className="categories list-unstyled">
-                <li className="">
-                    <i className="uil-comment-info"></i><Link to="basics.html"> The Basics</Link>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-diamond"></i><Link to="/" className="side-menu-header"> Gemstones</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="gemstones/gems-divine.html">Divine Stones</Link></li>
-                        <li><Link to="gemstones/gems-cardinal.html">Cardinal Stones</Link></li>
-                        <li><Link to="gemstones/gems-incidental.html">Incidental Stones</Link></li>
-                        <li><Link to="gemstones/gems-overview.html">Overview</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-wind"></i><Link to="/" className="side-menu-header"> Divination</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="divination/divination-layers.html">Layers of Heavens</Link></li>
-                        <li><Link to="divination/divination-magic.html">Magic & Divination</Link></li>
-                        <li><Link to="divination/divination-ethereal.html">Ethereals</Link></li>
-                        <li><Link to="divination/divination-spiritual.html">Spiritual Realities</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-users-alt"></i><Link to="/" className="side-menu-header"> Noble Races</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="races/elves.html">Elves</Link></li>
-                        <li><Link to="races/aviame.html">Aviame</Link></li>
-                        <li><Link to="races/humans.html">Humans</Link></li>
-                        <li><Link to="races/osei.html">Osei</Link></li>
-                        <li><Link to="races/dwarves.html">Dwarves</Link></li>
-                        <li><Link to="races/gnomes.html">Gnomes</Link></li>
-                        <li><Link to="races/halflings.html">Halflings</Link></li>
-                        <li><Link to="races/aeoki.html">Aeoki</Link></li>
-                        <li><Link to="races/arborums.html">Arborums</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-users-alt"></i><Link to="/" className="side-menu-header"> Dark Races</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="d-races/orc.html">Orcs</Link></li>
-                        <li><Link to="d-races/husks.html">Husks</Link></li>
-                        <li><Link to="d-races/ronin.html">Ronin</Link></li>
-                        <li><Link to="d-races/jackals.html">Jackals</Link></li>
-                        <li><Link to="d-races/mongrels.html">Mongrels</Link></li>
-                    </ul>
-                </li>
+/*           
                 <li className="has-dropdown">
                     <i className="uil-fire"></i><Link to="/" className="side-menu-header"> Classes</Link>
                     <ul className="sidebar-dropdown list-unstyled">
@@ -198,10 +136,4 @@ const Aside = () => {
                 <li className="">
                     <i className="uil-map-marker"></i><Link to="/" className="side-menu-header"> Map</Link>
                 </li>
-            </ul>
-        </aside>
-    );
-};
-
-export default Aside;
 */

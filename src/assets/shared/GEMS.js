@@ -27,11 +27,10 @@ import tourmaline from '../imgs/gems/tourmaline.png';
 import turquoise from '../imgs/gems/turquoise.png';
 import whitestone from '../imgs/gems/whitestone.png';
 
-
 export const GEMS = [
     {
         id: 0,
-        link: '/divine',
+        link: '/gems/divine',
         type: 'Divine',
         gems: [
             {
@@ -103,7 +102,7 @@ export const GEMS = [
     },
     {
         id: 1,
-        link: '/cardinal',
+        link: '/gems/cardinal',
         type: 'Cardinal',
         gems: [
             {
@@ -258,7 +257,7 @@ export const GEMS = [
     },
     {
         id: 2,
-        link: '/incidental',
+        link: '/gems/incidental',
         type: 'Incindental',
         gems: [
             {
@@ -413,7 +412,7 @@ export const GEMS = [
     },
     {
         id: 3,
-        link: '/gem-overview',
+        link: '/gems/overview',
         type: 'Overview',
         topics: [
             {

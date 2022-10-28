@@ -4,7 +4,7 @@ export const DRACES = [
     {
         id: 0,
         link: '/orcs',
-        race: 'Orcs',
+        name: 'Orcs',
         origin: 'Osei',
         heartStone: 'Black Amethyst (Mayhem)',
         elder: 'Moriel',
@@ -22,7 +22,7 @@ export const DRACES = [
     {
         id: 1,
         link: '/husks',
-        race: 'Husks',
+        name: 'Husks',
         origin: 'Elves, Aviame, or Humans',
         heartStone: 'Black Diamond (Hate), Black Ruby (Havoc) & Dead Onyx (Faithless)',
         elder: 'Moriel',
@@ -40,7 +40,7 @@ export const DRACES = [
     {
         id: 2,
         link: '/ronin',
-        race: 'Ronin',
+        name: 'Ronin',
         origin: 'Mating of a Reaper with an Elf, Aviame, or Human',
         heartStone: 'Black Diamond (Hate), Black Ruby (Havoc) & Dead Onyx (Faithless)',
         lifespan: '~Half-life of original race',
@@ -58,7 +58,7 @@ export const DRACES = [
     {
         id: 3,
         link: '/jackals',
-        race: 'Jackals',
+        name: 'Jackals',
         origin: 'Corrupt creation of Ithmaar in collusion with the wraith-world',
         heartStone: 'None',
         lifespan: '~20 yrs',
@@ -76,7 +76,7 @@ export const DRACES = [
     {
         id: 4,
         link: '/mongrels',
-        race: 'Mongrels',
+        name: 'Mongrels',
         origin: 'Mating of a monstrous reaper with a dragon, mongrel or another monstrous reaper',
         heartStone: 'Black Emerald (Evil)',
         lifespan: 'Immortal',

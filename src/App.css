@@ -285,6 +285,10 @@ aside ul {
 	font-size: 18px;
 }
 
+#breadcrumb {
+	color: gray;
+}
+
 /* ---------------
 --Tabs 
 ----------------*/
