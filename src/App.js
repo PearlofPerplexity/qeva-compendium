@@ -5,7 +5,8 @@ import { Routes, Route } from 'react-router-dom';
 import Aside from './components/Aside';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
-import GemRouter from './pages/gems/GemRouter';
+import BasicPage from './pages/BasicPage';
+import GemPage from './pages/gems/GemPage';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/gems/*' element={<GemRouter />} />
+          <Route path='/about' element={<BasicPage />} />
+          <Route path='/gems/*' element={<GemPage />} />
         </Routes>
         <Fragment>
           <ScrollUp />

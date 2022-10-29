@@ -5,7 +5,7 @@ import CarGem from './CarGem';
 import IncGem from './IncGem';
 import GemOvr from './GemOvr';
 
-const GemRouter = () => {
+const GemPage = () => {
     return (
         <div className='py-2 px-3'>
             <GemNav />
@@ -26,4 +26,4 @@ const GemRouter = () => {
     );
 }
 
-export default GemRouter;
+export default GemPage;
