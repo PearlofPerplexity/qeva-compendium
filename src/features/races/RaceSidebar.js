@@ -4,12 +4,13 @@ import {
     AccordionItem,
   } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { RaceIcon } from '../../utils/icon';
 import { RACES } from '../../assets/shared/RACES';
 
 const RaceSidebar = () => {
     return (
         <AccordionItem>
-            <AccordionHeader targetId="4"><i className="uil-users-alt"></i>&nbsp; Races
+            <AccordionHeader targetId="4"><i className={RaceIcon}></i>&nbsp; Races
             </AccordionHeader>
             <AccordionBody accordionId="4">
                 <ul className="sidebar-dropdown list-unstyled">

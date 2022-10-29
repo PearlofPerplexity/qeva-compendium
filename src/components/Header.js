@@ -29,7 +29,7 @@ const Header = (args) => {
     const toggle = () => setIsOpen(!isOpen);
     
     return (
-        <Navbar {...args} dark sticky='top' expand='md'>
+        <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>
             <NavbarBrand href='/' className="mx-3" to="/">Qeṽa Compendium</NavbarBrand>
 
             <NavbarToggler onClick={toggle} />

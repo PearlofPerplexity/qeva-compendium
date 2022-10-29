@@ -74,7 +74,7 @@ a.cover-link {
 	width: var(--sidebar-width);
 	transition: all .3s ease-in-out;
 	transform: translateX(0);
-	z-index: 9999999
+	z-index: 1
 }
 
 .sidebar .sidebar-header {
@@ -258,9 +258,13 @@ aside ul {
 	border-radius: 50%;
 }
 
-.navbar {
+.topnavbar {
 	background-color: var(--navbar-bg-color);
 	border: none;
+}
+
+.navbar {
+	padding: 0px
 }
 
 .navbar .navbar-nav>li>a {
@@ -299,25 +303,24 @@ aside ul {
   }
   
   /* Style the buttons inside the tab */
-  .tab button {
+  .tab .button {
 	color: var(--dk-gray-200);
 	background-color: inherit;
 	float: left;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	padding: 14px 16px;
 	transition: 0.3s;
 	font-size: 17px;
   }
   
   /* Change background color of buttons on hover */
-  .tab button:hover {
+  .tab .button:hover {
 	background-color: var(--dk-gray-700);
   }
   
   /* Create an active/current tablink class */
-  .tab button.active {
+  .tab .button.active {
 	background-color: var(--dk-gray-600);
   }
   
@@ -424,4 +427,18 @@ aside ul {
 
 .accordion-item {
 	background-color: rgb(0, 0, 0, 0) !important;
+}
+
+/* SCROLL BUTTONS */
+
+#scrollup {
+	position: fixed; 
+	width: 100%;
+	left: 0%;
+	bottom:3rem;
+	height: 3rem;
+	font-size: 3rem;
+	z-index: 2;
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.3)
 }
