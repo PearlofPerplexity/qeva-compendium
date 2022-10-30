@@ -17,7 +17,7 @@ const DivineSidebar = () => {
                     {DIVINE.map((props) => {
                         return (
                             <li key={props.id}>
-                                <Link to={props.link}>{props.category}</Link>
+                                <Link to={props.link}>{props.type}</Link>
                             </li>
                         );
                     })}

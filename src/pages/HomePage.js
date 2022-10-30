@@ -215,15 +215,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-
-            <section className="charts mt-4">
-                <div className="chart-container p-3">
-                    <h3 className="fs-6 mb-3">©2020 Kyle O'Brien</h3>
-                    <div style={{height: '300px'}}>
-                        <canvas id="chart3" width="100%"></canvas>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 };

@@ -1,14 +1,13 @@
-import { useState } from 'react';
 import { 
     Navbar, 
     Nav,
     NavItem
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { GemIcon } from '../../utils/icon';
-import { GEMS } from '../../assets/shared/GEMS';
+import { DivineIcon } from '../../utils/icon';
+import { DIVINE } from '../../assets/shared/DIVINE';
 
-const GemNav = () => {
+const DivNav = () => {
     return (
         <section className="highlights mt-2">
             <div className="row">
@@ -16,8 +15,8 @@ const GemNav = () => {
                     <div className="box d-flex align-items-center mb-lg-0 p-1">
                         <div className="ms-3 ">
                             <div className="d-flex align-items-center">
-                            <i className={GemIcon}></i>
-                            <h5 className="mb-0">Gemstones</h5>
+                            <i className={DivineIcon}></i>
+                            <h5 className="mb-0">Divination</h5>
                             </div>
                         </div>
                     </div>
@@ -25,10 +24,10 @@ const GemNav = () => {
                         <div className="">
                             <Navbar dark expand='xs'>
                                 <Nav className='tab row' navbar>
-                                    {GEMS.map((type) => {
+                                    {DIVINE.map((type) => {
                                         return (
                                             <NavItem className='col-md button' key={type.id}>
-                                                <NavLink className='nav-link' to={type.link}>{type.type}</NavLink>
+                                                <NavLink className='nav-link text-nowrap' to={type.link}>{type.type}</NavLink>
                                             </NavItem>
                                         );
                                     })}
@@ -42,4 +41,4 @@ const GemNav = () => {
     );
 }
 
-export default GemNav;
+export default DivNav;

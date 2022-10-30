@@ -436,9 +436,9 @@ aside ul {
 	width: 100%;
 	left: 0%;
 	bottom:3rem;
-	height: 3rem;
+	height: 2.5rem;
 	font-size: 3rem;
 	z-index: 2;
 	cursor: pointer;
-	color: rgba(0, 0, 0, 0.3)
+	color: rgba(255, 255, 255, 0.75)
 }

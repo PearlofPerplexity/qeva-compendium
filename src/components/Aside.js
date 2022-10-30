@@ -8,7 +8,7 @@ import {
 import { Link } from 'react-router-dom';
 import mainLogo from '../assets/imgs/sentinel-logo-white.png';
 import GemSidebar from '../features/gems/GemSidebar';
-import DivineSidebar from '../features/divine/DivineSidebar';
+import DivSidebar from '../features/divine/DivSidebar';
 import RaceSidebar from '../features/races/RaceSidebar';
 import DRaceSidebar from '../features/draces/DRaceSidebar';
 import { BasicIcon } from '../utils/icon';
@@ -53,7 +53,7 @@ function Aside() {
                     </AccordionBody>
                 </AccordionItem>
                 <GemSidebar />
-                <DivineSidebar />
+                <DivSidebar />
                 <RaceSidebar />
                 <DRaceSidebar />
             </Accordion>

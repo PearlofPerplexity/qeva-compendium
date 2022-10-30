@@ -19,7 +19,7 @@ export const DIVINE = [
     {
         id: 0,
         link: `/divine/layers-of-heavens`,
-        category: `Layers of Heavens`,
+        type: `Layers of Heavens`,
         layers: [
             {
                 id: 0,
@@ -56,7 +56,7 @@ export const DIVINE = [
     {
         id: 1,
         link: `/divine/divination-magic`,
-        category: `Magic & Divination`,
+        type: `Magic & Divination`,
         topics: [
             {
                 id: 0,
@@ -83,7 +83,7 @@ export const DIVINE = [
     {
         id: 2,
         link: `/divine/ethereals`,
-        category: `Ethereals`,
+        type: `Ethereals`,
         types: [
             {
                 id: 0,
@@ -146,7 +146,7 @@ export const DIVINE = [
     {
         id: 3,
         link: `/divine/spiritual-realities`,
-        category: `Spiritual Realities`,
+        type: `Spiritual Realities`,
         topics: [
             {
                 id: 0,
