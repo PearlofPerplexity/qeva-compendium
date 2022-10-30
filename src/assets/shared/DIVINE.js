@@ -90,6 +90,7 @@ export const DIVINE = [
                 name: `Spirit`,
                 alignment: `Good`,
                 form: `Ethereal`,
+                influence: `Medium`,
                 description: `Spirits (or Haelas in the celestial tongue) are the original and intended form of all ethereals. They dwell and act from the ether as immortal beings and are perfectly aligned with DIA meaning they have never committed evil. However, this does not mean that they do the greatest good. Some are free of evil and still lazy, unfocused or simply untapped of their full potential.`,
                 image: spirit
             },
@@ -98,6 +99,7 @@ export const DIVINE = [
                 name: `Seraph`,
                 alignment: `Good`,
                 form: `Ethereal`,
+                influence: `High`,
                 description: `Seraphs or “Gran Haelas” are granted the highest respect among all spirits and are endowed with special gifts and responsibilities. You will recognize them at once if you ever see them. Wings hide their face and their feet and spread from their torso. They are so powerful they bring light to the physical world wherever they step. They are only matched by Gran Haellians in ethereal combat.`,
                 image: seraph
             },
@@ -106,6 +108,7 @@ export const DIVINE = [
                 name: `Spectre`,
                 alignment: `Good`,
                 form: `Physical`,
+                influence: `Low`,
                 description: `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their moissanite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them mortal. They would look identical to humans if not for their luminescence. They are rare in Qeva and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
                 image: spectre
             },
@@ -114,6 +117,7 @@ export const DIVINE = [
                 name: `Wraith`,
                 alignment: `Evil`,
                 form: `Ethereal`,
+                influence: `Medium`,
                 description: `Wraiths or Haellians maintain their immortal, spiritual existence and grip on moissanite and yet have turned away from the pursuit of goodness and alignment with DIA. They work from the ether to oppose DIA and attack the physical beings who represent HIM. Their power derives from the void.`,
                 image: wraith
             },
@@ -122,6 +126,7 @@ export const DIVINE = [
                 name: `Shadow Reaper`,
                 alignment: `Evil`,
                 form: `Ethereal`,
+                influence: `High`,
                 description: `There are some wraiths so powerful that they manifest a physical shadow when they are near. These are known as the shadow reapers or “Gran Haellians” and are high servants of the great demon. They are the greatest tests of the will beyond the great demon himself.`,
                 image: shadowReaper
             },
@@ -130,6 +135,7 @@ export const DIVINE = [
                 name: `Reaper`,
                 alignment: `Evil`,
                 form: `Physical`,
+                influence: `Low`,
                 description: `Like wraiths, Reapers (Muerarayas) oppose goodness and DIA, but unlike wraiths they take a physical form. They often take this form out of impatience to ravage DIA's creation in the ether and so are wild and savage when met, though some are able to subdue their bloodlust long enough to deceive. This being said, they prefer to take terrible shapes and even interbreed with orcs to create even more terrible creatures.`,
                 image: reaper
             },
@@ -138,6 +144,7 @@ export const DIVINE = [
                 name: `The Great Demon`,
                 alignment: `Evil`,
                 form: `Ethereal & Physical`,
+                influence: `Very High`,
                 description: `Wraiths are not witless nor haphazard in their response to the ethereal's divine council. They are led by an evil one so great, he is not flippantly named or taunted. His tendrils you see, but rarely his face. The great demon he is called on the earth below and “Mentroso” in the ether above. They say he will turn your heart as cold as the void when you are near. You will lose any will to oppose him the second you fall under his shadow. Legend says he was once the greatest and most gifted spirit to reign the haelas and the whole ether and outerworld, but when he had pushed all the expanses of space, it was still not enough for him. He desired more; the rulership of Qeva and so he would find a way to achieve physical form alongside his ethereal form and have it for a short time.`,
                 image: demon
             }

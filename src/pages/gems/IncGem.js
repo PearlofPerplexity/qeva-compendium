@@ -21,9 +21,9 @@ const IncGem = () => {
                                     <p className="card-text">{gem.quality}</p>
                                 </div>
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item"><b>Purpose</b> {gem.purpose}</li>
-                                    <li className="list-group-item"><b>Original Location</b> {gem.originalLocation}</li>
-                                    <li className="list-group-item"><b>Notable Locations</b> {gem.notableLocations}</li>
+                                    <li className="list-group-item"><b>Parent Stone</b> {gem.parentStone}</li>
+                                    <li className="list-group-item"><b>Synthetic Stone</b> {gem.syntheticStone}</li>
+                                    <li className="list-group-item"><b>Dark Stone</b> {gem.darkStone}</li>
                                 </ul>
                                 <div className="card-body">
                                     {gem.smDescription}

@@ -1,45 +1,44 @@
-import { GEMS } from "../../assets/shared/GEMS";
+import { DIVINE } from "../../assets/shared/DIVINE";
 
-const CarGem = () => {
+const DivEther = () => {
     return (
-        <div className="container-fluid" id="accordionGem">
-            {GEMS[1].gems.map((gem) => {
-            let headingID = 'heading' + gem.id;
-            let collapseID = 'collapse' + gem.id;
-            let dataTarget = '#collapse' + gem.id;
+        <div className="container-fluid" id="accordionEth">
+            {DIVINE[2].types.map((eth) => {
+            let headingID = 'heading' + eth.id;
+            let collapseID = 'collapse' + eth.id;
+            let dataTarget = '#collapse' + eth.id;
             
             return (
-                <div className="col col-lg-10 col-xl-9 mt-4" key={gem.id}>
+                <div className="col col-lg-10 col-xl-9 mt-4" key={eth.id}>
                     <div className="row align-items-center background-box rounded-2">
-                        <div className="mx-auto col-md-4 col-lg-2 d-none d-md-block fixed-width">
-                            <img className="card-img" src={gem.image} alt="Card image cap" />
+                        <div className="mx-auto col-md-4 col-lg-2 d-none d-md-block md-fixed-width">
+                            <img className="card-img" src={eth.image} alt="Card image cap" />
                         </div>
                         <div className="col p-0 fs-7">
                             <div className="card p-3">
                                 <div className="card-body">
-                                    <h5 className="card-title fs-4">{gem.name}</h5>
-                                    <p className="card-text">{gem.quality}</p>
+                                    <h5 className="card-title fs-4">{eth.name}</h5>
                                 </div>
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item"><b>Child Stone</b> {gem.childStone}</li>
-                                    <li className="list-group-item"><b>Synthetic Stone</b> {gem.syntheticStone}</li>
-                                    <li className="list-group-item"><b>Dark Stone</b> {gem.darkStone}</li>
+                                    <li className="list-group-item"><b>Alignment</b> {eth.alignment}</li>
+                                    <li className="list-group-item"><b>Form</b> {eth.form}</li>
+                                    <li className="list-group-item"><b>Influence</b> {eth.influence}</li>
                                 </ul>
                                 <div className="card-body">
-                                    {gem.smDescription}
+                                    {eth.smDescription}
                                 </div>
                             </div>
                         </div>
-                        <div className="accordion p-0" id="accordionGem">
+                        <div className="accordion p-0" id="accordionEth">
                             <div className="accordion-item border border-0">
                                 <h2 className="accordion-header" id={headingID}>
                                     <button className="accordion-button collapsed border border-0" type="button" data-bs-toggle="collapse" data-bs-target={dataTarget} aria-expanded="true" aria-controls={collapseID}>
                                     More Info
                                     </button>
                                 </h2>
-                                <div id={collapseID} className="accordion-collapse collapse" aria-labelledby={headingID} data-bs-parent="#accordionGem">
+                                <div id={collapseID} className="accordion-collapse collapse" aria-labelledby={headingID} data-bs-parent="#accordionEth">
                                     <div className="accordion-body border border-0 p-5 fs-5">
-                                    {gem.description}
+                                    {eth.description}
                                     </div>
                                 </div>
                             </div>
@@ -52,4 +51,4 @@ const CarGem = () => {
     );
 }
 
-export default CarGem;
+export default DivEther;

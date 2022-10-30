@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import DivNav from "../../features/divine/DivNav";
 import DivLayers from './DivLayers';
 import DivMagic from './DivMagic';
+import DivEther from './DivEther';
 import DivSR from './DivSR';
 
 const DivPage = () => {
@@ -11,6 +12,7 @@ const DivPage = () => {
             <Routes>
                 <Route path='/layers-of-heavens' element={<DivLayers />} />
                 <Route path='/divination-magic' element={<DivMagic />} />
+                <Route path='/ethereals' element={<DivEther />} />
                 <Route path='/spiritual-realities' element={<DivSR />} />
             </Routes>
         </div>
