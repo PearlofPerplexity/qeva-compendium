@@ -279,7 +279,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone native to Malunë, home of the Elves`,
                 description:
-                    `Quartz is the stone of strength, born out of diamond, the cardinal stone of love. When given the choice between love and strength, few choose love. This stone is found on the eastern rim where Malune broke from Navalil.`,
+                    `Quartz is the stone of strength, born out of diamond, the cardinal stone of love. When given the choice between love and strength, few choose love. This stone is found on the eastern rim where Malunë broke from Navalil.`,
                 image: quartz
             },
             {
