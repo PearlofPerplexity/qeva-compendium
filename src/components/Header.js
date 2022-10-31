@@ -14,14 +14,17 @@ import {
     DivineLink, 
     DRaceLink, 
     GemLink, 
-    RaceLink 
+    RaceLink,
+    ClassLink 
 } from '../utils/link';
 import { 
     BasicIcon, 
     DivineIcon, 
     DRaceIcon, 
     GemIcon, 
-    RaceIcon } from '../utils/icon';
+    RaceIcon,
+    ClassIcon 
+} from '../utils/icon';
 
 const Header = (args) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -63,6 +66,18 @@ const Header = (args) => {
                         <NavLink href={DRaceLink}>
                             <i className={DRaceIcon} />
                             &nbsp; Dark Races
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className="nav-item">
+                        <NavLink href={DRaceLink}>
+                            <i className={DRaceIcon} />
+                            &nbsp; Dark Races
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className="nav-item">
+                        <NavLink href={ClassLink}>
+                            <i className={ClassIcon} />
+                            &nbsp; Classes
                         </NavLink>
                     </NavItem>
                 </Nav>

@@ -1,3 +1,4 @@
+import { CLASSES } from "../assets/shared/CLASSES";
 import { DIVINE } from "../assets/shared/DIVINE";
 import { DRACES } from "../assets/shared/DRACES";
 import { GEMS } from "../assets/shared/GEMS";
@@ -9,6 +10,7 @@ export const DivineLink = DIVINE[3].link;
 export const DRaceLink = DRACES[0].link;
 export const GemLink = GEMS[3].link;
 export const RaceLink = RACES[0].link;
+export const ClassLink = CLASSES[9].link;
 
 // Gem Links
 export const GLinkDiv = GEMS[0].link;
@@ -39,4 +41,6 @@ export const DRLinkHsk = DRACES[1].link;
 export const DRLinkRon = DRACES[2].link;
 export const DRLinkJck = DRACES[3].link;
 export const DRLinkMgrl = DRACES[4].link;
+
+// Class Links
 

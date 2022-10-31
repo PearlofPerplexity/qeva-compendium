@@ -7,12 +7,13 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import mainLogo from '../assets/imgs/sentinel-logo-white.png';
+import { BasicIcon } from '../utils/icon';
+import { BasicLink } from '../utils/link';
 import GemSidebar from '../features/gems/GemSidebar';
 import DivSidebar from '../features/divine/DivSidebar';
 import RaceSidebar from '../features/races/RaceSidebar';
 import DRaceSidebar from '../features/draces/DRaceSidebar';
-import { BasicIcon } from '../utils/icon';
-import { BasicLink } from '../utils/link';
+import ClassSidebar from '../features/classes/ClassSidebar';
 
 function Aside() {
     const [open, setOpen] = useState('');
@@ -56,6 +57,7 @@ function Aside() {
                 <DivSidebar />
                 <RaceSidebar />
                 <DRaceSidebar />
+                <ClassSidebar />
             </Accordion>
         </aside>
     )

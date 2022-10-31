@@ -2,6 +2,7 @@ import { DIVINE } from '../assets/shared/DIVINE';
 import { DRACES } from '../assets/shared/DRACES';
 import { GEMS } from '../assets/shared/GEMS';
 import { RACES } from '../assets/shared/RACES';
+import { CLASSES } from '../assets/shared/CLASSES';
 
 // GEM COUNTER
 const DivGemCount = GEMS[0].gems.length;
@@ -23,4 +24,4 @@ const EtherRaceCount = DIVINE[2].types.length - 1; // minus 'the Great Demon'
 export const TotalRaceCount = NobleRaceCount + DarkRaceCount + EtherRaceCount;
 
 //CLASS COUNTER
-export const TotalClassCount = 17;
+export const TotalClassCount = CLASSES.length;

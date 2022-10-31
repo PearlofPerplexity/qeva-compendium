@@ -122,7 +122,7 @@ const HomePage = () => {
                                     <p className="mb-0">Read individual stories of characters throughout history.</p>
                                 </div>
                             </div>
-                            <div className="admin d-flex align-items-center rounded-2 p-3">
+                            <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"
