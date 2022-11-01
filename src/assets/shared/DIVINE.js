@@ -20,7 +20,7 @@ export const DIVINE = [
         id: 0,
         link: `/divine/layers-of-heavens`,
         name: `Layers of Heavens`,
-        layers: [
+        topics: [
             {
                 id: 0,
                 name: `Natural World`,

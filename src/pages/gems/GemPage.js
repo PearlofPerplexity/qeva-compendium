@@ -5,7 +5,7 @@ import InnerNav from '../../features/InnerNav';
 import DivGem from './DivGem';
 import CarGem from './CarGem';
 import IncGem from './IncGem';
-import GemOvr from './GemOvr';
+import TxtCards from '../../features/TxtCards';
 
 const GemPage = () => {
     return (
@@ -15,7 +15,9 @@ const GemPage = () => {
                 <Route path='/divine' element={<DivGem />} />
                 <Route path='/cardinal' element={<CarGem />} />
                 <Route path='/incidental' element={<IncGem />} />
-                <Route path='/overview' element={<GemOvr />} />
+                <Route path='/overview' element={
+                    <TxtCards array={GEMS[3]} />
+                } />
             </Routes>
         </div>
     );

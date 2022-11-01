@@ -7,10 +7,10 @@ import { RACES } from "../assets/shared/RACES";
 // Landing Page Links
 export const BasicLink = '/about';
 export const DivineLink = DIVINE[3].link;
-export const DRaceLink = DRACES[0].link;
+export const DRaceLink = '/dark-races';
 export const GemLink = GEMS[3].link;
 export const RaceLink = RACES[0].link;
-export const ClassLink = CLASSES[9].link;
+export const ClassLink = '/classes';
 
 // Gem Links
 export const GLinkDiv = GEMS[0].link;

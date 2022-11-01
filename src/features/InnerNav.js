@@ -19,7 +19,7 @@ const InnerNav = (props) => {
                         </div>
                     </div>
                     { props.array.length > '4' ? (
-                        <Navbar dark className='box mb-4 mb-lg-0'>   
+                        <Navbar dark className='box'>   
                             <Nav className='tab row' style={{width: '100%'}} navbar>
                                 <NavItem className='button'>
                                     <NavLink className='nav-link text-nowrap text-center' to={props.link} >All {props.name}</NavLink>
@@ -27,7 +27,7 @@ const InnerNav = (props) => {
                             </Nav>
                         </Navbar>
                         ) : (
-                        <div className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0">
+                        <div className="box d-flex rounded-2 align-items-center">
                             <Navbar dark expand='xs'>
                                 <Nav className='tab row' navbar>
                                     {props.array.map((type) => {

@@ -1,9 +1,7 @@
-import { DIVINE } from "../../assets/shared/DIVINE";
-
-const DivSR = () => {
+const TxtCards = (props) => {
     return (
         <div className="container-fluid">
-            {DIVINE[3].topics.map((topic) => {
+            {props.array.topics.map((topic) => {
                 return (
                     <div className="col col-lg-10 col-xl-9 mt-4" key={topic.id}>
                         <div className="row align-items-center background-box rounded-2">
@@ -34,4 +32,4 @@ const DivSR = () => {
     );
 }
 
-export default DivSR;
+export default TxtCards;
