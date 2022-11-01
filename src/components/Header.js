@@ -19,7 +19,7 @@ import {
 } from '../utils/link';
 import { 
     BasicIcon, 
-    DivineIcon, 
+    DivineIcon,
     DRaceIcon, 
     GemIcon, 
     RaceIcon,

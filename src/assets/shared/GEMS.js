@@ -40,7 +40,7 @@ export const GEMS = [
     {
         id: 0,
         link: `/gems/divine`,
-        type: `Divine`,
+        name: `Divine`,
         gems: [
             {
                 id: 0,
@@ -112,7 +112,7 @@ export const GEMS = [
     {
         id: 1,
         link: `/gems/cardinal`,
-        type: `Cardinal`,
+        name: `Cardinal`,
         gems: [
             {
                 id: 0,
@@ -267,7 +267,7 @@ export const GEMS = [
     {
         id: 2,
         link: `/gems/incidental`,
-        type: `Incidental`,
+        name: `Incidental`,
         gems: [
             {
                 id: 0,
@@ -422,7 +422,7 @@ export const GEMS = [
     {
         id: 3,
         link: `/gems/overview`,
-        type: `Overview`,
+        name: `Overview`,
         topics: [
             {
                 id: 0,

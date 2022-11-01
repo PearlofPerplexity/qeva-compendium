@@ -7,13 +7,23 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import mainLogo from '../assets/imgs/sentinel-logo-white.png';
-import { BasicIcon } from '../utils/icon';
+import { 
+    BasicIcon,
+    DivineIcon,
+    DRaceIcon,
+    GemIcon,
+    RaceIcon,
+    ClassIcon,
+} from '../utils/icon';
 import { BasicLink } from '../utils/link';
-import GemSidebar from '../features/gems/GemSidebar';
-import DivSidebar from '../features/divine/DivSidebar';
-import RaceSidebar from '../features/races/RaceSidebar';
-import DRaceSidebar from '../features/draces/DRaceSidebar';
-import ClassSidebar from '../features/classes/ClassSidebar';
+import Sidebar from '../features/Sidebar';
+import { CLASSES } from '../assets/shared/CLASSES';
+import { DIVINE } from '../assets/shared/DIVINE';
+import { DRACES } from '../assets/shared/DRACES';
+import { GEMS } from '../assets/shared/GEMS';
+import { RACES } from '../assets/shared/RACES';
+
+
 
 function Aside() {
     const [open, setOpen] = useState('');
@@ -53,11 +63,11 @@ function Aside() {
                         </ul>
                     </AccordionBody>
                 </AccordionItem>
-                <GemSidebar />
-                <DivSidebar />
-                <RaceSidebar />
-                <DRaceSidebar />
-                <ClassSidebar />
+                <Sidebar name="Gemstones" id="2" array={GEMS} icon={GemIcon} />
+                <Sidebar name="Divination" id="3" array={DIVINE} icon={DivineIcon} />
+                <Sidebar name="Races" id="4" array={RACES} icon={RaceIcon} />
+                <Sidebar name="Dark Races" id="5" array={DRACES} icon={DRaceIcon} />
+                <Sidebar name="Classes" id="6" array={CLASSES} icon={ClassIcon} />
             </Accordion>
         </aside>
     )

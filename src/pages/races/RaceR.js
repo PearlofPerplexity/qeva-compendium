@@ -4,10 +4,10 @@ import {
     NavItem
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { DivineIcon } from '../../utils/icon';
-import { DIVINE } from '../../assets/shared/DIVINE';
+import { RaceIcon } from '../../utils/icon';
+import { RACES } from '../../assets/shared/RACES';
 
-const DivNav = () => {
+const RaceR = () => {
     return (
         <section className="highlights mt-2">
             <div className="row">
@@ -15,8 +15,8 @@ const DivNav = () => {
                     <div className="box d-flex align-items-center mb-lg-0 p-1">
                         <div className="ms-3 ">
                             <div className="d-flex align-items-center">
-                            <i className={DivineIcon}></i>
-                            <h5 className="mb-0">Divination</h5>
+                            <i className={RaceIcon}></i>
+                            <h5 className="mb-0">Races</h5>
                             </div>
                         </div>
                     </div>
@@ -24,10 +24,10 @@ const DivNav = () => {
                         <div className="">
                             <Navbar dark expand='xs'>
                                 <Nav className='tab row' navbar>
-                                    {DIVINE.map((type) => {
+                                    {RACES.map((type) => {
                                         return (
-                                            <NavItem className='col-md button' key={type.id}>
-                                                <NavLink className='nav-link text-nowrap' to={type.link}>{type.type}</NavLink>
+                                            <NavItem className='button' key={type.id}>
+                                                <NavLink className='nav-link text-nowrap text-center' to={type.link}>{type.name}</NavLink>
                                             </NavItem>
                                         );
                                     })}
@@ -41,4 +41,4 @@ const DivNav = () => {
     );
 }
 
-export default DivNav;
+export default RaceR;

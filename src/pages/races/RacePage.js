@@ -1,12 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
-import RaceNav from '../../features/races/RaceNav';
+import RaceR from './RaceR';
+import InnerNav from '../../features/InnerNav';
+import { RACES } from '../../assets/shared/RACES';
+import { RaceIcon } from '../../utils/icon';
 
 const RacePage = () => {
     return (
         <div className='py-2 px-3'>
-            <RaceNav />
+            <InnerNav name='Races' icon={RaceIcon} array={RACES} />
             <Routes>
-                <Route path='/elves' />
+                <Route path='/' element={<RaceR />} />
             </Routes>
         </div>
     );

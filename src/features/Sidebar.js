@@ -4,20 +4,18 @@ import {
     AccordionItem,
   } from 'reactstrap';
   import { Link } from 'react-router-dom';
-  import { GemIcon } from '../../utils/icon';
-  import { GEMS } from '../../assets/shared/GEMS';
 
-const GemSidebar = () => {
+const Sidebar = (props) => {
     return (
         <AccordionItem>
-            <AccordionHeader targetId="2"><i className={GemIcon}></i>&nbsp; Gemstones
+            <AccordionHeader targetId={props.id}><i className={props.icon}></i>&nbsp; {props.name}
             </AccordionHeader>
-            <AccordionBody accordionId="2">
+            <AccordionBody accordionId={props.id}>
                 <ul className="sidebar-dropdown list-unstyled">
-                    {GEMS.map((gem) => { 
+                    {props.array.map((props) => {
                         return (
-                            <li key={gem.id}>
-                                <Link to={gem.link}>{gem.type}</Link>
+                            <li key={props.id}>
+                                <Link to={props.link}>{props.name}</Link>
                             </li>
                         );
                     })}
@@ -27,4 +25,4 @@ const GemSidebar = () => {
     );
 }
 
-export default GemSidebar;
+export default Sidebar;
