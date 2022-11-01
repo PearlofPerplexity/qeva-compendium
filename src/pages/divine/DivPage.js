@@ -3,7 +3,7 @@ import { DivineIcon } from '../../utils/icon';
 import { DIVINE } from '../../assets/shared/DIVINE';
 import InnerNav from '../../features/InnerNav';
 import DivEther from './DivEther';
-import TxtCards from '../../features/TxtCards';
+import TxtCards from '../../features//cards/TxtCards';
 
 const DivPage = () => {
     return (
@@ -17,7 +17,7 @@ const DivPage = () => {
                     <TxtCards array={DIVINE[1]}/>
                 } />
                 <Route path='/ethereals' element={
-                    <TxtCards />
+                    <DivEther />
                 } />
                 <Route path='/spiritual-realities' element={
                     <TxtCards array={DIVINE[3]}/>

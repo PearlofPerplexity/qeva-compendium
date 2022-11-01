@@ -14,7 +14,7 @@ import {
 } from '../utils/counter';
 import { 
     BasicLink, 
-    DivineLink, 
+    DivineLink,
     GemLink, 
     RaceLink 
 } from '../utils/link';

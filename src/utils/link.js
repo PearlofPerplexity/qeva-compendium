@@ -9,7 +9,7 @@ export const BasicLink = '/about';
 export const DivineLink = DIVINE[3].link;
 export const DRaceLink = '/dark-races';
 export const GemLink = GEMS[3].link;
-export const RaceLink = RACES[0].link;
+export const RaceLink = '/races';
 export const ClassLink = '/classes';
 
 // Gem Links

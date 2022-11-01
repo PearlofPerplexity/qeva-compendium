@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import InnerNav from '../../features/InnerNav';
 import { CLASSES } from '../../assets/shared/CLASSES';
 import { ClassIcon } from '../../utils/icon';
+import InnerNav from '../../features/InnerNav';
 import InnerMenu from '../../features/InnerMenu';
 
 const ClassPage = () => {

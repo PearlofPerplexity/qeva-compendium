@@ -18,29 +18,18 @@ const InnerNav = (props) => {
                             </div>
                         </div>
                     </div>
-                    { props.array.length > '4' ? (
-                        <Navbar dark className='box'>   
-                            <Nav className='tab row' style={{width: '100%'}} navbar>
-                                <NavItem className='button'>
-                                    <NavLink className='nav-link text-nowrap text-center' to={props.link} >All {props.name}</NavLink>
-                                </NavItem>
+                    <div className="box d-flex rounded-2 align-items-center">
+                        <Navbar dark expand='xs'>
+                            <Nav className='tab row' navbar>
+                                {props.array.map((type) => {
+                                    return (
+                                        <NavItem className='col-md button' key={type.id}>
+                                            <NavLink className='nav-link text-nowrap text-center' to={type.link}>{type.name}</NavLink>
+                                        </NavItem>
+                                )})}
                             </Nav>
                         </Navbar>
-                        ) : (
-                        <div className="box d-flex rounded-2 align-items-center">
-                            <Navbar dark expand='xs'>
-                                <Nav className='tab row' navbar>
-                                    {props.array.map((type) => {
-                                        return (
-                                            <NavItem className='col-md button' key={type.id}>
-                                                <NavLink className='nav-link text-nowrap text-center' to={type.link}>{type.name}</NavLink>
-                                            </NavItem>
-                                    )})}
-                                </Nav>
-                            </Navbar>
-                        </div>
-                        )
-                    }
+                    </div>
                 </div>
             </div>
         </section>

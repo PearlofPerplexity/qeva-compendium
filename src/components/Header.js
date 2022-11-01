@@ -69,12 +69,6 @@ const Header = (args) => {
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <NavLink href={DRaceLink}>
-                            <i className={DRaceIcon} />
-                            &nbsp; Dark Races
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
                         <NavLink href={ClassLink}>
                             <i className={ClassIcon} />
                             &nbsp; Classes

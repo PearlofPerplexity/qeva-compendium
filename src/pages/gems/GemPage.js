@@ -5,7 +5,7 @@ import InnerNav from '../../features/InnerNav';
 import DivGem from './DivGem';
 import CarGem from './CarGem';
 import IncGem from './IncGem';
-import TxtCards from '../../features/TxtCards';
+import TxtCards from '../../features/cards/TxtCards';
 
 const GemPage = () => {
     return (

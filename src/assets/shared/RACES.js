@@ -31,7 +31,7 @@ export const RACES = [
         name: `Elves`,
         heartStone: `Diamond (Love)`,
         spawnStone: `Quartz (Strength)`,
-        elder: `Amare`,
+        elden: `Amare`,
         lifespan: `~120 yrs`,
         height: `5-6 ft`,
         weight: `120-180lbs`,
@@ -44,8 +44,7 @@ export const RACES = [
                 id: 0,
                 name: `Wood Elves`,
                 residence: `Forests of Navenia & Navalil`,
-                eyes: `Green`,
-                skin: `White`,
+                appearance: `Gold Hair & White Skin`,
                 description: 
                     `Wood elves are drawn to trees and so reside in forests where plantlife is abundant. They maintain the oldest and most central city of civilization, which is Brielle in the forest of Navenia. Other great cities include Eavano in Evendil, as well as Linda and Nalri in the west. They are traditionally vegetarian and perceptive to the nature of forest environments and plants.`,
                 image: wood
@@ -54,8 +53,7 @@ export const RACES = [
                 id: 1,
                 name: `River Elves`,
                 residence: `Miolaire & Dundili Rivers`,
-                eyes: `Blue`,
-                skin: `White`,
+                appearance: `Black Hair & White Skin`,
                 description: 
                     `River elves are those that are drawn most to flowing water and so build their cities adjacent to rivers. Their greatest cities are Thelos on the Silver river, Anuage on the Dundili, Vaiorse on the Oulaire, Eteala on the Neale and Helos on the Miolaire before the wood was cursed. They are traditionally pescatarian and perceptive to the nature of water.`,
                 image: river
@@ -64,8 +62,7 @@ export const RACES = [
                 id: 2,
                 name: `Desert Elves`,
                 residence: `Miolaire & Dundili Rivers`,
-                eyes: `Brown, Purple`,
-                skin: `Tan`,
+                appearance: `Gold Hair & Tan Skin`,
                 description: 
                     `The Alvani elves are those who withdrew from society to seek separation from the growing hostility in Avlim. They found seclusion in the northeastern deserts of Shaole, in an oasis they've hidden by illusions. Though their community was built on passivism, there are still those among them who reenter society to play a role in the events of history.`,
                 image: desert
@@ -92,8 +89,7 @@ export const RACES = [
                 name: `Lumiare`,
                 nickname: `Autumn Avi`,
                 residence: `Mountains of Altiavaire`,
-                hair: `black`,
-                skin: `Tangerine`,
+                appearance: `Black Hair & Tangerine Skin`,
                 description: 
                     `The Lumiare or Autumn Avi have a tanish, orange tint to their skin, dark purple lips and black markings on their face. Their greatest city is Lumion in the Anduir valley of Altiavaire, though their kind can be found scattered throughout the mid-north. Unlike elves, they have a sense for mountainous terrain and wildlife. They are best known for their legendary mountain warfare school and companionship with birds.`,
                 image: lumiare
@@ -103,8 +99,7 @@ export const RACES = [
                 name: `Athiame`,
                 nickname: `Night Avi`,
                 residence: `Athvari Cliffs`,
-                hair: `White`,
-                skin: `Black`,
+                appearance: `White Hair & Black Skin`,
                 description: 
                     `The Athiame or “Night Avi” were degradingly called the Athmari after the Athiame-born tyrant, Ithmar reigned ruthlessly over Avlim in the age of darkness. This tie to the dark armies would scar their reputation as many of the noble races would compare their dark skin to the gray skin of orcs, declaring them as untrustworthy. Thus, the Athiame would lock themselves in the Athiari cliffs, guarded by their greatly feared order of the ghost blades.`,
                 image: athiame
@@ -114,8 +109,7 @@ export const RACES = [
                 name: `Asiame`,
                 nickname: `Snow Avi`,
                 residence: `High Mountains, Orcaṽa`,
-                hair: `White`,
-                skin: `White`,
+                appearance: `White Hair & Skin`,
                 description: 
                     `The Viame or Snow Avi or even High Aviame have a pale, white skin and blue lips. They live in the high mountains; most prevalently in the north ranges acting as a gatekeepers of Altiavaire. Beyond the normal tolerance of other Aviame, Tsiame are especially built for the cold so much so that some sailed north for inhabitable land after the Terracut.`,
                 image: asiame
@@ -125,8 +119,7 @@ export const RACES = [
                 name: `Half-Aviame, Half-Elf`,
                 nickname: `Aves`,
                 residence: `Elven & Aviame Communities`,
-                hair: `White`,
-                skin: `Calico`,
+                appearance: `White Hair & Calico Skin`,
                 description: 
                     `Aves are a half elf, half aviame race. Though they are given a warm welcome in Altiavaire and Navalil and experience the best of Elven and Aviame hospitality, they are not well-trusted among the other races. Along with their kind being rare, their often calico complexion sparks others races to distrust them and distance themselves. They are not numerous enough to have their own cities, but rather mix in with the elven and aviame population. They carry themselves like their parent races and do not often venture west.`,
                 image: ave
@@ -152,31 +145,28 @@ export const RACES = [
                 id: 0,
                 name: `Humans`,
                 residence: `Arvañon`,
-                eyes: `Varied`,
-                skin: `Varied`,
+                appearance: `Varied Hair & Skin`,
                 description: 
                     `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
                 image: human
             },
             {
                 id: 1,
-                name: `Elden`,
-                residence: `Brielle`,
-                eyes: `Multi-colored`,
-                skin: `Varied`,
-                description: 
-                    `The Elden were the first nine created by Dia and from them all men were born. Their names are not all known, but nearly all are familiar with Amare, Xaradriel, Çairça and Nware. They were the only elves taught divination directly from DIA and so were commanded to oversee the sentinel order. Thus, they are said to be the wisest of all.`,
-                image: elder
-            },
-            {
-                id: 2,
                 name: `Half-Elves`,
                 residence: `Elven & Human Communities`,
-                eyes: `Color of Elven parent`,
-                skin: `White`,
+                appearance: `Eyes the color of their elven parent`,
                 description: 
                     `Half-elves are half-human and half-elf and they are indistinguishable from either race depending on the genes they inherent. They walk among both races nearly unnoticed with only the most perceptive recognizing their irregularity. Some half-elves do not even know their heritage until they outlive their human counterparts or begin to show the signs of mortality. Half-elves live for around a century, depending on the purity of their elven bloodline.`,
                 image: halfElf
+            },
+            {
+                id: 2,
+                name: `Elden`,
+                residence: `Brielle`,
+                appearance: `Each elden different`,
+                description: 
+                    `The Elden were the first nine created by Dia and from them all men were born. Their names are not all known, but nearly all are familiar with Amare, Xaradriel, Çairça and Nware. They were the only elves taught divination directly from DIA and so were commanded to oversee the sentinel order. Thus, they are said to be the wisest of all.`,
+                image: elder
             }
         ]
     },
@@ -190,8 +180,7 @@ export const RACES = [
         lifespan: `~60 yrs`,
         height: `6-7 ft`,
         weight: `180-250lbs`,
-        skin: `Pale White`,
-        hair: `None`,
+        appearance: `Pale White Skin, No Hair`,
         language: `Common`,
         government: `Theocracy`,
         residence: `None`,
@@ -217,18 +206,18 @@ export const RACES = [
         subraces: [
             {
                 id: 0,
-                name: `Dwarves of the Thrush Mountains`,
-                family: `Thrauldem`,
-                craft: `Opal`,
+                name: `Thrauldem's Folk`,
+                residence: `Thursh Mountains`,
+                appearance: `~Black Hair, White Skin`,
                 description: 
                     `The Dwarves of the west are dispersed in the Thrush mountains with their largest stronghold being in Haraduin. Acting as gatekeepers between Navalil and Ouri, they learned to have better relations with other races than eastern dwarves. They formed significant relationships with both halflings and elves.`,
                 image: user
             },
             {
                 id: 1,
-                name: `Dwarves of the Bare Mountains`,
-                family: `Narduhelm`,
-                craft: `Quartz`,
+                name: `Narduhelm's Folk`,
+                residence: `Bare Mountains`,
+                appearance: `~Brown Hair, White Skin`,
                 description: 
                     `The eastern dwarves of the Bare Mountains are bread even harder than their western cousins and are not typically an amiable acquaintance. They reside in the barren lands of Shaole, where few things grow or last and their greatest city was Barahduil until it was overtaken by the dark armies. Now, any great gathering of western dwarves is hidden or eradicated and dispersed.`,
                 image: user
@@ -248,14 +237,14 @@ export const RACES = [
         language: `Gnomish`,
         government: `None`,
         residence: `Greenlands`,
-        foundedOrders: `Moonstone Guild`,
+        foundedOrders: `Order of the Feather`,
         description: `The Gnomes are some of the least involved in world events. They are 4-5 feet tall with long pointy ears and a unique face. Like halflings, they have little affinity for glory in war, but unlike halflings they are positioned to avoid it. Their settlements are greatly distanced from Shaole and buffered by mountains, oceans and surrounding nations. Removed from conflict, they find tranquility in the trades of leatherwork and fishing, though a spark of curiosity inspires many to become travelers and adventurers. The Eldar, Çairça watches over them.`,
         subraces: [
             {
                 id: 0,
                 name: `Green Gnomes`,
                 residence: `Farathain`,
-                skin: `Green`,
+                appearance: `Green Skin`,
                 description: 
                     `Green Gnomes can be found in Farathain, the southern region of Ouri below Fletcheren. Their greatest towns are Nalri in the wood and Nadia south of Loch Ladish. Unlike most sentient races, these Gnomes have a natural propensity for divination. Without any training, they begin forming minor illusions as children and progress in their skill from there.`,
                 image: user
@@ -264,7 +253,7 @@ export const RACES = [
                 id: 1,
                 name: `Blue Gnomes`,
                 residence: `Haven`,
-                skin: `Blue`,
+                appearance: `Blue Skin`,
                 description: 
                     `Blue Gnomes live on the island, Haven, southwest of Avlim with their greatest city being Amvil, city of bridges. They are the farthest removed from world events, though Haven was the primary refuge for all races during the reign of Ithmar and his void that brought on the age of darkness. Like green gnomes, they have a natural propensity for divination.`,
                 image: user
@@ -273,7 +262,7 @@ export const RACES = [
                 id: 2,
                 name: `Red Gnomes`,
                 residence: `Baroach, Bare Mountains`,
-                skin: `Red`,
+                appearance: `Red Skin`,
                 description: 
                     `Unlike green and blue gnomes, red gnomes do not have an ability to produce divination, but only magic. Also unlike other gnomes, they are unfriendly if not altogether hostile. No one seems to really know their source of origin, though most claim that they live in the uninhabited treelines of the thrush and bare mountains.`,
                 image: user
@@ -290,8 +279,7 @@ export const RACES = [
         lifespan: `~150 yrs`,
         height: `3 ft`,
         weight: `40-60lbs`,
-        skin: `Varied`,
-        hair: `Varied`,
+        appearance: `Varied Hair & Skin`,
         language: `Common`,
         government: `Democracy`,
         residence: `Fletcheren`,
@@ -309,8 +297,7 @@ export const RACES = [
         lifespan: `Unknown`,
         height: `2 ft`,
         weight: `20-25lbs`,
-        skin: `Tan`,
-        hair: `Brown`,
+        appearance: `Tan Skin & Brown Hair`,
         language: `Kigaul`,
         government: `Communal`,
         residence: `Mhindileth`,
@@ -327,6 +314,7 @@ export const RACES = [
         lifespan: `~10,000 yrs`,
         height: `20 ft`,
         weight: `1,000lbs`,
+        appearance: `Barkskin & Leaves`,
         language: `Treeish`,
         government: `Communal`,
         residence: `Mahelos`,
