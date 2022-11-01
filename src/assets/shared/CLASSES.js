@@ -1,11 +1,11 @@
-import avikin from '../imgs/logos/avikin.png';
-import caracadre from '../imgs/logos/caracadre.png';
-import elvishcloaks from '../imgs/logos/elvishcloaks.png';
-import ghostblade from '../imgs/logos/ghostblade.png';
-import moonstone from '../imgs/logos/moonstone.png';
-import sentinel from '../imgs/logos/sentinel.png';
-import uncorrupted from '../imgs/logos/uncorrupted.png';
-import avlimeth from '../imgs/logos/avlimeth.png';
+import avikin from '../imgs/logos/avikin-white.png';
+import caracadre from '../imgs/logos/caracadre-white.png';
+import elvishcloaks from '../imgs/logos/ecloaks-white.png';
+import ghostblade from '../imgs/logos/ghostblade-white.png';
+import sentinel from '../imgs/sentinel-logo-white.png';
+import uncorrupted from '../imgs/logos/uncorrupted-white.png';
+import toppler from '../imgs/logos/topplers-white.png';
+import avlimeth from '../imgs/logos/helmsman-white.png';
 import feather from '../imgs/logos/feather.png';
 
 export const CLASSES = [
@@ -19,13 +19,12 @@ export const CLASSES = [
         primaryWeapon: `Zanhari`,
         sacredText: `Sa Siavana`,
         worldKnowledge: `High`,
-        description: `Sentinels are the guardians of Qeva and are viewed as authoritative figures in all of Avlim. To maintain this, they are the only beings formally trained by the Eldar in the arts of divination - what is commonly known as magic. Given their prestige and weight of responsibility, A novitiate cannot volunteer, but can only be selected. Before accepting this role, one should know that Sentinels have a strict moral code and life of discipline; To follow this path is to accept a difficult and restricted life, but no less rewarding. However, only races endowed with the capacity for divination are fit to serve in such a role. To initiate themselves as sentinels, a novitiate must walk to the sacred island of agate and attune themselves with one of the cardinal stones that lies there. They also select a cut of turquoise, which is crucial to the forging of the iconic luminescent blade of a Sentinel.`,
         image: sentinel,
         topics: [
             {
                 id: 0,
                 name: `Overview`,
-                description: `Below are excerpts from the Sa Siavana, the Sentinel's most holy text, which details the beliefs held most dear by the sentinels.`
+                description: `Sentinels are the guardians of Qeva and are viewed as authoritative figures in all of Avlim. To maintain this, they are the only beings formally trained by the Eldar in the arts of divination - what is commonly known as magic. Given their prestige and weight of responsibility, A novitiate cannot volunteer, but can only be selected. Before accepting this role, one should know that Sentinels have a strict moral code and life of discipline; To follow this path is to accept a difficult and restricted life, but no less rewarding. However, only races endowed with the capacity for divination are fit to serve in such a role. To initiate themselves as sentinels, a novitiate must walk to the sacred island of agate and attune themselves with one of the cardinal stones that lies there. They also select a cut of turquoise, which is crucial to the forging of the iconic luminescent blade of a Sentinel.`
             },
             {
                 id: 1,
@@ -383,43 +382,47 @@ export const CLASSES = [
         primaryWeapon: `Any`,
         sacredText: `SenSavye (From the Sentinels)`,
         worldKnowledge: `Medium`,
-        description: `Where Sentinels are selected, Caracadre volunteer. They are the rangers of Avlim who take it upon themselves to ensure peace and justice is given to all. They often sentry the wild and rural lands where a Sentinel presence is unfelt. Though often traveling alone or in small factions, they are all tied together by the Caracadre code, legends and songs. Like the sentinels, they believe gems promise unnatural and superior abilities and make it their goal to pursue the possession and mastery of these gems. However, unlike the sentinels, Caracadre tend to value common stones over spiritual stones as they offer more tangible benefits such as strength, dexterity and intelligence. One who possess and masters all seven common stones is known as a grand caracadre though it is difficult to obtain and attune to even one stone.`,
         image: caracadre,
         topics: [
             {
                 id: 0,
+                name: `Overview`,
+                description: `Where Sentinels are selected, Caracadre volunteer. They are the rangers of Avlim who take it upon themselves to ensure peace and justice is given to all. They often sentry the wild and rural lands where a Sentinel presence is unfelt. Though often traveling alone or in small factions, they are all tied together by the Caracadre code, legends and songs. Like the sentinels, they believe gems promise unnatural and superior abilities and make it their goal to pursue the possession and mastery of these gems. However, unlike the sentinels, Caracadre tend to value common stones over spiritual stones as they offer more tangible benefits such as strength, dexterity and intelligence. One who possess and masters all seven common stones is known as a grand caracadre though it is difficult to obtain and attune to even one stone.`,
+            },
+            {
+                id: 1,
                 name: `History`,
                 description: `The Caracadre arose from the ashes of the beginning of wars in 2229 Q.Y. as a brotherhood that would defend against the dark armies of Moriel. They followed the formation of the Sentinel order commissioned by DIA in 2084 Q.Y. and the elvish cloaks begun in 2199 Q.Y. Unlike the former orders, the caracadre comprised of volunteers for Sentinels were selected by DIA and elves were merely born into their “cloaked” communities. The order was began by Mayveo, Lachlan and Haemon.`
             },
             {
-                id: 1,
+                id: 2,
                 name: `Ontology`,
                 description: `Caracadre are among the most dedicated warriors in Avlim, the first shores of all sentient beings in Qeva. They sacrificed their bodies to intense training and spent most of their life away from any sense of home. They gave their minds to find and carry the jewels and gems of Avlim, which legend said would extend their abilities. Among the varieties of precious stones in Qeva, Caracadre traditionally focused on the common stones (or “incidental stones” as referred to by the Sentinels) as they were more widely available. The stones of Dia or “cardinal stones” could only be sought after in deep stone or at the crystal isle of agate during the summer or autumn equinox. The seas were much too treacherous to venture there otherwise.`
             },
             {
-                id: 2,
+                id: 3,
                 name: `Tenets`,
                 description: `There are 3 Tenets a caracadre lives their life by:`,
                 subtopics: [
                     {
                         id: 0,
-                        name: `Protect the noble people and lands within and without the sentinel's gaze`,
+                        name: `1. Protect the noble people and lands within and without the sentinel's gaze`,
                         description: ``
                     },
                     {
                         id: 1,
-                        name: `Atune, not abuse the Gems`,
+                        name: `2. Atune, not abuse the Gems`,
                         description: ``
                     },
                     {
                         id: 2,
-                        name: `Sacrifice thy life as the least`,
+                        name: `3. Sacrifice thy life as the least`,
                         description: ``
                     }
                 ]
             },
             {
-                id: 3,
+                id: 4,
                 name: `Pathways`,
                 description: `The order of the caracadre is so large that it splits and takes many forms. It is possible for a caracadre to abide by one, many or none of the features below:`,
                 subtopics: [
@@ -451,82 +454,62 @@ export const CLASSES = [
                 ]
             },
             {
-                id: 4,
+                id: 5,
                 name: `Mastery of Stones`,
                 description: `Few caracadre ever mastered more than one stone which was a feat in itself. To master one stone was to be worthy of it, bond with it, master its qualities and maintain the bond. Those who tried to cheat the stone would watch the stone slowly dim to darkness. It is for these reasons that the Caracadre were careful in their selection of stone. A chosen stone was kept close - either set into a weapon, in a ring or hung around the neck.`
             },
             {
-                id: 5,
+                id: 6,
                 name: `The Grand Caracadre`,
                 description: `To become a Grand Caracadre was the goal of most, for a Grand Caracadre was one who mastered all seven incidental stones. Such a master of stones was rarer than even the sentinels whose greatness they rivaled, despite no affinity to divination. They were quicker and lighter than the wind wielded by the sentinels and stronger than the crystals they carried. A grand caracadre was given equal status of a sentinel and welcomed within their ranks and sacred spaces.`
             },
             {
-                id: 6,
+                id: 7,
                 name: `The Crested Caracara`,
                 description: `The name “Caracadre is derived from the two words “caracara” and “cadre”. A cadre is one specially trained for a profession. In suit, the caracadre's unique set of skills make them specially equipped for a singular task: to protect the marginalized in the far reaches of society. The Crested “Caracara” is a bird of prey; the only bird brave enough to fly over the black shores of Avlim (besides the wretched vulture). The caracadre see themselves as keeping a watchful eye over the noble races and preying on those who do evil - even in places where it is darkest. The caracadre do not look solely to the crested caracara for their name, but also for their aid. Over the years, the caracadre have trained the caracara to strike down small prey and carry written messages in their talons. One must but offer the birds a token of friendship and then set auditory markers: a marker for themselves and a marker for those they wish to find. It is an amicable relationship between the two beyond the puncture wounds the bird leaves in the cadre's arm. This being said there is healthy mutual respect as they both seem to understand each other as fierce hunters.`
             },
             {
-                id: 7,
+                id: 8,
                 name: `Song of the Caracadre`,
                 description: `The song of the caracadre is a song often sung by homesick caracadre traveling through the harsher lands of Qeva.`,
                 subtopics: [
                     {
                         id: 0,
                         name: ``,
-                        description: `I remember when I was a little boy`
+                        description: `I remember when I was a little boy. Running around in a world so bright. I remember when the scariest thing was walking around the house at night.`
                     },
                     {
                         id: 1,
                         name: ``,
-                        description: `Running around in a world so bright`
+                        description: ``
                     },
                     {
                         id: 2,
-                        name: ``,
-                        description: `I remember when the scariest thing`
-                    },
-                    {
-                        id: 3,
-                        name: ``,
-                        description: `Was walking around the house at night`
-                    },
-                    {
-                        id: 4,
                         name: `Take me back to where the waters flow`,
                         description: ``
                     },
                     {
-                        id: 5,
+                        id: 3,
                         name: `Take me back to where the flowers grow`,
                         description: ``
                     },
                     {
-                        id: 6,
+                        id: 4,
                         name: `Take me back somewhere familiar`,
                         description: ``
                     },
                     {
+                        id: 5,
+                        name: `Take me back`,
+                        description: ``
+                    },
+                    {
+                        id: 6,
+                        name: ``,
+                        description: `I remember the warmth of my mother's arms. I remember the joy of my little heart. I remember when I saw the world through younger eyes - Innocent and full of life.`
+                    },
+                    {
                         id: 7,
-                        name: ``,
-                        description: `I remember the warmth of my mother's arms`
-                    },
-                    {
-                        id: 8,
-                        name: ``,
-                        description: `I remember the joy of my little heart`
-                    },
-                    {
-                        id: 9,
-                        name: ``,
-                        description: `I remember when I saw the world through younger eyes`
-                    },
-                    {
-                        id: 10,
-                        name: ``,
-                        description: `Innocent and full of life`
-                    },
-                    {
-                        id: 11,
                         name: `Chorus`,
                         description: ``
                     }
@@ -544,8 +527,14 @@ export const CLASSES = [
         primaryWeapon: `Longsword`,
         sacredText: `SenSavye (From the Sentinels)`,
         worldKnowledge: `Medium`,
-        description: `The Avlimeth or "Haven of Avlim" are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences  in their beliefs about gems. After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the Sentinels placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, elemental caracadre only pursue stones of a shared element.`,
-        image: avlimeth
+        image: avlimeth,
+        topics: [
+            {
+                id: 0,
+                name: `Overview`,
+                description: `The Avlimeth or "Haven of Avlim" are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences  in their beliefs about gems. After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the Sentinels placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, elemental caracadre only pursue stones of a shared element.`,
+            }
+        ]
     },
     {
         id: 3,
@@ -557,21 +546,33 @@ export const CLASSES = [
         primaryWeapon: `Longbow`,
         sacredText: `Histories of Avlim`,
         worldKnowledge: `Medium-High`,
-        description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elvish cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains iconic for the towering elven statues on either side. They were the only order established by Sentinels and are rumored to have been graced with a small degree of knowledge in divination.`,
-        image: elvishcloaks
+        image: elvishcloaks,
+        topics: [
+            {
+                id: 0,
+                name: `Overview`,
+                description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elvish cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains iconic for the towering elven statues on either side. They were the only order established by Sentinels and are rumored to have been graced with a small degree of knowledge in divination.`,
+            }
+        ]
     },
     {
         id: 4,
         link: `/classes/avikin`,
-        quality: `Mountain Warriors`,
+        quality: `Mountain Bowmen`,
         goal: `Defend Altiavaire and Avlim at large from Evil`,
         name: `Avikin`,
         race: `Aviame, Aves & All races may become an Avikith`,
         primaryWeapon: `Longbow`,
         sacredText: `Thesathsia`,
         worldKnowledge: `Medium-High`,
-        description: `In the ever-autumn mountains of the Anduir valley, the Aviame have devised their own order, known as the “Avikith.” This faction represents some of the most highly trained warriors in all of Avlim, notorious for their proficiency in archery and acrobatics. Though only a true Aviame can achieve the rank of master avikith, honorary training is open to all races. However, one must understand that such training is no small venture. To train is to set aside one's possessions and life for the foreseeable future and to promise never return if they leave before their training is complete.`,
-        image: avikin
+        image: avikin,
+        topics: [
+            {
+                id: 0,
+                name: `Overview`,
+                description: `In the ever-autumn mountains of the Anduir valley, the Aviame have devised their own order, known as the “Avikith.” This faction represents some of the most highly trained warriors in all of Avlim, notorious for their proficiency in archery and acrobatics. Though only a true Aviame can achieve the rank of master avikith, honorary training is open to all races. However, one must understand that such training is no small venture. To train is to set aside one's possessions and life for the foreseeable future and to promise never return if they leave before their training is complete.`,
+            }
+        ]
     },
     {
         id: 5,
@@ -583,8 +584,14 @@ export const CLASSES = [
         primaryWeapon: `Two Daggers`,
         sacredText: `None`,
         worldKnowledge: `Low`,
-        description: `Perhaps the most feared among the factions are the Athiame Ghost Blades. Though they are skilled warriors, public fear is due more to history than skill. One of the most lethal sorcerers to live was the dark lord Ithmaar of Athiame descent. Not only was he responsible for the cursing of the Mahelo wood and Rose Fields of Altiavaire, but he initiated the Aeoki genocide and was a ruthless oppressor during the Void age. His actions scarred the reputation of athiame became known as the “Athmari.” Being welcomed less and less elsewhere, The Athiame holed themselves up in the Athiare cliffs. Their borders were secured by the “ghost blades” who had such stealth that men would say a trespasser's neck would be slit before they even felt the blade. The recent actions of the Athiame, Theathe has somewhat redeemed the Athiame name, but there is still great skepticism and fear around the renowned Athmari ghost blades (though they prefer “Athiame ghost blades”).`,
-        image: ghostblade
+        image: ghostblade,
+        topics: [
+            {
+                id: 0,
+                name: `Overview`,
+                description: `Perhaps the most feared among the factions are the Athiame Ghost Blades. Though they are skilled warriors, public fear is due more to history than skill. One of the most lethal sorcerers to live was the dark lord Ithmaar of Athiame descent. Not only was he responsible for the cursing of the Mahelo wood and Rose Fields of Altiavaire, but he initiated the Aeoki genocide and was a ruthless oppressor during the Void age. His actions scarred the reputation of athiame became known as the “Athmari.” Being welcomed less and less elsewhere, The Athiame holed themselves up in the Athiare cliffs. Their borders were secured by the “ghost blades” who had such stealth that men would say a trespasser's neck would be slit before they even felt the blade. The recent actions of the Athiame, Theathe has somewhat redeemed the Athiame name, but there is still great skepticism and fear around the renowned Athmari ghost blades (though they prefer “Athiame ghost blades”).`,
+            }
+        ]
     },
     {
         id: 6,
@@ -596,8 +603,14 @@ export const CLASSES = [
         primaryWeapon: `Pike`,
         sacredText: `None`,
         worldKnowledge: `Medium`,
-        description: `The uncorrupted is the nickname given to a legion of disciplined Ohri soldiers with an unmatched reputation. They comprised the front lines in the retaking of Avlim and comprised the majority of the force in the war of all. Despite their reputation, there is very little known about them. They did not appear in Avlim until the end of the void age and it is a bit of a mystery of where they came from. Some speculate that they were a byproduct of Ithmaar's void magic or divined by the Eldar while others believe them to be underdwellers who burrowed up from the ground or voyagers from another land. Few dare to ask, as the uncorrupted are of a battle-hardened, stoic breed. They have perfect chemistry with each other, but struggle forming bonds with others.`,
-        image: uncorrupted
+        image: uncorrupted,
+        topics: [
+            {
+                id: 0,
+                name: `Overview`,
+                description: `The uncorrupted is the nickname given to a legion of disciplined Ohri soldiers with an unmatched reputation. They comprised the front lines in the retaking of Avlim and comprised the majority of the force in the war of all. Despite their reputation, there is very little known about them. They did not appear in Avlim until the end of the void age and it is a bit of a mystery of where they came from. Some speculate that they were a byproduct of Ithmaar's void magic or divined by the Eldar while others believe them to be underdwellers who burrowed up from the ground or voyagers from another land. Few dare to ask, as the uncorrupted are of a battle-hardened, stoic breed. They have perfect chemistry with each other, but struggle forming bonds with others.`,
+            }
+        ]
     },
     {
         id: 7,
@@ -609,8 +622,14 @@ export const CLASSES = [
         primaryWeapon: `Slingshot`,
         sacredText: `None`,
         worldKnowledge: `Low`,
-        description: `In response to the war of the weak, the Halflings became trained in combat by the man, Tyrns, a grand caracadre. This formed the first significant bond between men and halflings and their “order" became known as the “Topplers.” Before the void, they saw little action, but gave a small measure of pride and security to their people in the Fletcheren hills. Now in a different world, they call upon their distant training to aid in the restoration of Avlim. However, their lighthearted disposition, small stature and lack of experience in real battle has led them to be seen as  joke in the realm of warfare.`,
-        image: uncorrupted
+        image: toppler,
+        topics: [
+            {
+                id: 0,
+                name: `Overview`,
+                description: `In response to the war of the weak, the Halflings became trained in combat by the man, Tyrns, a grand caracadre. This formed the first significant bond between men and halflings and their “order" became known as the “Topplers.” Before the void, they saw little action, but gave a small measure of pride and security to their people in the Fletcheren hills. Now in a different world, they call upon their distant training to aid in the restoration of Avlim. However, their lighthearted disposition, small stature and lack of experience in real battle has led them to be seen as  joke in the realm of warfare.`,
+            }
+        ]
     },
     {
         id: 8,
@@ -622,13 +641,77 @@ export const CLASSES = [
         primaryWeapon: `None`,
         sacredText: `None`,
         worldKnowledge: `Medium`,
-        description: `This group of primarily gnomes has little care for rebuilding the infrastructure of Avlim, though they will help where they can - or more likely, where is convenient. They are driven by an obsession with exploration and travel around Qeva to see and experience the world. During the void age and the years before it, gnomes were the farthest from harm and the least involved with great wars and world events. This simple, lackluster legacy motivated their kind to form the order of the feather, to explore not only Avlim, but all continents of Qeva. Their order also includes cartographers who who seek to map out not only Avlim, but all the lands of Qeva. They share their maps and findings freely within the guild to grow the knowledge and intrigue of Avlim. They can be recognized by a feather, which tends to find itself somewhere on their person from their hat to their boot.`,
-        image: feather
+        image: feather,
+        topics: [
+            {
+                id: 0,
+                name: `Overview`,
+                description: `This group of primarily gnomes has little care for rebuilding the infrastructure of Avlim, though they will help where they can - or more likely, where is convenient. They are driven by an obsession with exploration and travel around Qeva to see and experience the world. During the void age and the years before it, gnomes were the farthest from harm and the least involved with great wars and world events. This simple, lackluster legacy motivated their kind to form the order of the feather, to explore not only Avlim, but all continents of Qeva. Their order also includes cartographers who who seek to map out not only Avlim, but all the lands of Qeva. They share their maps and findings freely within the guild to grow the knowledge and intrigue of Avlim. They can be recognized by a feather, which tends to find itself somewhere on their person from their hat to their boot.`,
+            }
+        ]
     },
     {
         id: 9,
-        link: `/classes/unaffiliated`,
-        name: `Unaffiliated`,
-        classes: []
-    },
+        link: `/classes/no-affiliation`,
+        name: `No Affiliation`,
+        description: `Not all who adventure or make their way through the world adhere to an order. View other common trades and lifestyles below.`,
+        topics: [
+            {
+                id: 0,
+                name: `Adventurer`,
+                expertise: `Varies`,
+                equipment: `Varies`,
+                description: `Unrestricted by any affiliation is the adventurer. Each one as their own reasons for venturing into the still orc-riddled lands of Avlim.`
+            },
+            {
+                id: 1,
+                name: `Acolyte`,
+                expertise: `The Unseen`,
+                equipment: `A Cut of Emerald`,
+                description: `The acolyte is well-versed in the spiritual realities of Qeva. They have discovered the true meaning of gems and the hidden realities of the ethereal realm. By pouring over old texts or pestering sentinels, elves or cathedral keepers, they have uncovered secrets held only by a few. Though most believe in an unseen realm, they tend to trust their own experience and dismiss acolytes as fairy tale storytellers.`
+            },
+            {
+                id: 2,
+                name: `Bard`,
+                expertise: `Town Talk`,
+                equipment: `Instrument`,
+                description: `Whether they are versed in battle or not, the bard travels the adulterated lands of Avlim with instrument in hand to inspire their own songs, or write about the heroic ventures of others.`
+            },
+            {
+                id: 3,
+                name: `Crafter`,
+                expertise: `Herbs & Elixirs`,
+                equipment: `Herbalism Kit`,
+                description: `Whether by magical means or herbal knowledge, the crafter is skilled in healing and medicine. They take company with others to heal their fellow warriors or heal the ones they find. However, this skill with herbs can also prove dangerous as they possess the knowledge to create potions of great detriment as well.`
+            },
+            {
+                id: 4,
+                name: `Druid`,
+                expertise: `Nature`,
+                equipment: `Bird-caller`,
+                description: `They have answered the call to free Avlim of danger, but their true love is for nature. They wish to see the world of Avlim to witness and interact with the various flora and fauna, and especially its birds.`
+            },
+            {
+                id: 5,
+                name: `Fighter`,
+                expertise: `Combat`,
+                equipment: `Heavy Weapons`,
+                description: `Whether they are a new recruit or a veteran soldier hardened by past wars, the fighter has donned their armor and picked up their weapon to answer the king's call.`
+            },
+            {
+                id: 6,
+                name: `Gemcutter`,
+                expertise: `Gemstones`,
+                equipment: `Jeweler's Kit`,
+                description: `Gems hold renowned in Qeva whether for their beauty and mystic. For this, many wish for a stone to be cut into a shape that accentuates its beauty. However, such things must be handled with great care. The stonecutter knows how to cut a stone without opening it and open it when the clients are so inclined. However, given their value, an honest stonecutter is hard to find. Some are crafty and keep shards of stones or even steal stones. Others maintain a blameless reputation and charge a fine price. It takes a bit of wisdom to tell the difference.`
+            },
+            {
+                id: 7,
+                name: `Scribe`,
+                expertise: `History`,
+                equipment: `Quill, Ink & Paper`,
+                description: `Like the Bard the scribe wishes to record history, but in books rather than song. Perhaps they want to get the most honest account of the state of the different regions after the void, or perhaps they wish to sell their tale fact or fiction when they return.`
+            }
+        ]
+    }
 ];

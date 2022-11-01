@@ -14,6 +14,7 @@ import {
 } from '../utils/counter';
 import { 
     BasicLink, 
+    ClassLink, 
     DivineLink,
     GemLink, 
     RaceLink 
@@ -57,7 +58,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="col-lg-4 covered-div">
-                        <Link to="/sentinels" className="cover-link"></Link>
+                        <Link to={ClassLink} className="cover-link"></Link>
                         <div className="box d-flex rounded-2 align-items-center p-3">
                             <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
                             <div className="ms-3">
@@ -199,7 +200,7 @@ const HomePage = () => {
                     </div>
                     <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
                         <div className="box class-box p-3">
-                            <Link to="/sentinels" className="cover-link"></Link>
+                            <Link to={ClassLink} className="cover-link"></Link>
                             <i className="uil-fire"></i>
                             <h3>{TotalClassCount}</h3>
                             <p className="lead">Classes</p>

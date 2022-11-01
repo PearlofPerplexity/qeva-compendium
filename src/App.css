@@ -388,6 +388,10 @@ aside ul {
 	background-color: var(--dk-dark-bg);
 }
 
+.class-card-img {
+	width: 100px;
+}
+
 .intro-txt {
 	font-style: italic;
 	font-weight: normal;
@@ -399,7 +403,7 @@ aside ul {
 }
 
 .sm-fixed-width {
-	width: 150px;
+	width: 130px;
 }
 
 .md-fixed-width {

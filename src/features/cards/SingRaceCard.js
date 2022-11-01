@@ -18,23 +18,15 @@ const SingRaceCard = (props) => {
       <div className="container-fluid">
         <div className="col col-lg-10 col-xl-9 mt-4">
           <div className="row align-items-center background-box">
-            <div className="mx-auto col-md-4 col-lg-2 d-none d-md-block md-fixed-width">
+            <div className="mx-auto col-md-4 col-lg-2 sm-fixed-width">
               <img className="card-img" src={image} alt="Card image cap" />
             </div>
             <div className="col p-0 fs-7">
               <div className="card p-3 border-bottom-0">
                 <div className="card-body">
                   <h5 className="card-title fs-4">{name}</h5>
+                  <p>Created by the Elden, {elden}</p>
                 </div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item"><b>Heart Stone</b> {heartStone}</li>
-                  {spawnStone ? (
-                    <li className="list-group-item"><b>Spawn Stone</b> {spawnStone}</li>
-                  ) : ( 
-                    <li className="list-group-item"><b>Origin</b> {origin}</li>
-                  )}
-                  <li className="list-group-item"><b>Elden</b> {elden}</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -44,6 +36,13 @@ const SingRaceCard = (props) => {
           <div className="col p-0 fs-7">
             <div className="card p-5 border-top-0">
               <ul className="list-group list-group-flush">
+                <li className="list-group-item"><b>Heart Stone</b> {heartStone}</li>
+                  {spawnStone ? (
+                    <li className="list-group-item"><b>Spawn Stone</b> {spawnStone}</li>
+                  ) : ( 
+                    <li className="list-group-item"><b>Origin</b> {origin}</li>
+                  )}
+                  <li className="list-group-item"><b>Elden</b> {elden}</li>
                 <li className="list-group-item"><b>Lifespan</b> {lifespan}</li>
                 <li className="list-group-item"><b>Size</b> {height} | {weight}</li>
                 <li className="list-group-item"><b>Appearance</b> {appearance}</li>

@@ -1,11 +1,12 @@
 import LgInnerNav from "../LgInnerNav";
-import { ClassIcon, DRaceIcon } from "../../utils/icon";
-import { ClassLink, DRaceLink } from "../../utils/link";
+import { ClassIcon } from "../../utils/icon";
+import { ClassLink } from "../../utils/link";
+import TxtCards from "./TxtCards";
 
 // Used for Both Races & Dark Races with ternary operators handling differences below
 
-const SingRaceCard = (props) => {
-    const { image, name, heartStone, spawnStone, origin, elden, lifespan, height, weight, appearance, language, government, residence, foundedOrders, description } = props.array;
+const ClassCard = (props) => {
+    const { image, name, quality, goal, race, primaryWeapon, sacredText, worldKnowledge } = props.array;
 
     return (
     
@@ -14,53 +15,39 @@ const SingRaceCard = (props) => {
       <div className="container-fluid">
         <div className="col col-lg-10 col-xl-9 mt-4">
           <div className="row align-items-center background-box">
-            <div className="mx-auto col-md-4 col-lg-2 d-none d-md-block md-fixed-width">
+            <div className="mx-auto col-md-4 col-lg-2 sm-fixed-width">
               <img className="card-img" src={image} alt="Card image cap" />
             </div>
             <div className="col p-0 fs-7">
-              <div className="card p-3 border-bottom-0">
+              <div className="card p-4 border-bottom-0">
                 <div className="card-body">
                   <h5 className="card-title fs-4">{name}</h5>
+                  <p>{quality}</p>
                 </div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item"><b>Heart Stone</b> {heartStone}</li>
-                  {spawnStone ? (
-                    <li className="list-group-item"><b>Spawn Stone</b> {spawnStone}</li>
-                  ) : ( 
-                    <li className="list-group-item"><b>Origin</b> {origin}</li>
-                  )}
-                  <li className="list-group-item"><b>Elden</b> {elden}</li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
       <div className="col col-lg-10 col-xl-9">
-        <div className="row align-items-center background-box">
+        <div className="row background-box">
           <div className="col p-0 fs-7">
             <div className="card p-5 border-top-0">
               <ul className="list-group list-group-flush">
-                <li className="list-group-item"><b>Lifespan</b> {lifespan}</li>
-                <li className="list-group-item"><b>Size</b> {height} | {weight}</li>
-                <li className="list-group-item"><b>Appearance</b> {appearance}</li>
-                <li className="list-group-item"><b>Language</b> {language}</li>
-                <li className="list-group-item"><b>Government</b> {government}</li>
-                <li className="list-group-item"><b>Residence</b> {residence}</li>
-                {foundedOrders ? (
-                <li className="list-group-item"><b>Founded Orders</b> {foundedOrders}</li>
-                ) : ( '' )}
+                <li className="list-group-item"><b>Goal</b> {goal}</li>
+                <li className="list-group-item"><b>Sacred Text</b> {sacredText}</li>
+                <li className="list-group-item"><b>worldKnowledge</b> {worldKnowledge}</li>
+                <li className="list-group-item"><b>Possible Races</b> {race}</li>
+                <li className="list-group-item"><b>Primary Weapon</b> {primaryWeapon}</li>
               </ul>
             </div>
-          </div>
-          <div className="card-text p-4 px-5">
-            {description}
           </div>
         </div>
       </div>
   </div>
+  <TxtCards array={props.array} />
 </>
 
     );
 }
 
-export default SingRaceCard;
+export default ClassCard;
