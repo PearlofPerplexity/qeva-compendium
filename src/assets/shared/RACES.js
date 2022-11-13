@@ -64,7 +64,7 @@ export const RACES = [
                 residence: `Miolaire & Dundili Rivers`,
                 appearance: `Gold Hair & Tan Skin`,
                 description: 
-                    `The Alvani elves are those who withdrew from society to seek separation from the growing hostility in Avlim. They found seclusion in the northeastern deserts of Shaole, in an oasis they've hidden by illusions. Though their community was built on passivism, there are still those among them who reenter society to play a role in the events of history.`,
+                    `Desert elves are those who withdrew from society to seek separation from the growing hostility in Avlim. They found seclusion in the northeastern deserts of Shaole, in an oasis they've hidden by illusions. Though their community was built on passivism, there are still those among them who reenter society to play a role in the events of history.`,
                 image: desert
             }
         ]
@@ -319,6 +319,23 @@ export const RACES = [
         government: `Communal`,
         residence: `Mahelos`,
         description: `It was revealed later in history that some of the flora had become sentient. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are shy folk and do not carry out business like other races. They seem to see themselves as more plant than people and keep to themselves in their forests, gravitating to the center of the forest.`,
+        image: user
+    },
+    {
+        id: 9,
+        link: `/races/dragons`,
+        name: `Dragons`,
+        heartStone: `Tourmaline (Immensity)`,
+        spawnStone: `Bismuth (Intelligence)`,
+        elden: `Moriel`,
+        lifespan: `~10,000 yrs`,
+        height: `Gargantuan`,
+        weight: `3,000lbs`,
+        appearance: `Various Colored-Scales & Wings`,
+        language: `Common, Dark Speech`,
+        government: `None`,
+        residence: `Varied`,
+        description: `Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elder elves, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.`,
         image: user
     }
 ];

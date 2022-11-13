@@ -14,6 +14,12 @@ import {
     GemIcon,
     RaceIcon,
     ClassIcon,
+    CharIcon,
+    FaunaIcon,
+    FloraIcon,
+    HistIcon,
+    LocIcon,
+    MapIcon
 } from '../utils/icon';
 import { BasicLink } from '../utils/link';
 import Sidebar from '../features/Sidebar';
@@ -22,6 +28,11 @@ import { DIVINE } from '../assets/shared/DIVINE';
 import { DRACES } from '../assets/shared/DRACES';
 import { GEMS } from '../assets/shared/GEMS';
 import { RACES } from '../assets/shared/RACES';
+import { CHARACTERS } from '../assets/shared/CHARACTERS';
+import { FAUNA } from '../assets/shared/FAUNA';
+import { FLORA } from '../assets/shared/FLORA';
+import { HISTORY } from '../assets/shared/HISTORY';
+import { LOCATIONS } from '../assets/shared/LOCATIONS';
 
 
 
@@ -68,6 +79,11 @@ function Aside() {
                 <Sidebar name="Races" id="4" array={RACES} icon={RaceIcon} />
                 <Sidebar name="Dark Races" id="5" array={DRACES} icon={DRaceIcon} />
                 <Sidebar name="Classes" id="6" array={CLASSES} icon={ClassIcon} />
+                <Sidebar name="Characters" id="7" array={CHARACTERS} icon={CharIcon} />
+                <Sidebar name="Fauna" id="8" array={FAUNA} icon={FaunaIcon} />
+                <Sidebar name="Flora" id="9" array={FLORA} icon={FloraIcon} />
+                <Sidebar name="History" id="10" array={HISTORY} icon={HistIcon} />
+                <Sidebar name="Locations" id="11" array={LOCATIONS} icon={LocIcon} />
             </Accordion>
         </aside>
     )

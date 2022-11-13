@@ -682,7 +682,7 @@ export const CLASSES = [
                 name: `Crafter`,
                 expertise: `Herbs & Elixirs`,
                 equipment: `Herbalism Kit`,
-                description: `Whether by magical means or herbal knowledge, the crafter is skilled in healing and medicine. They take company with others to heal their fellow warriors or heal the ones they find. However, this skill with herbs can also prove dangerous as they possess the knowledge to create potions of great detriment as well.`
+                description: `Whether by magical means or herbal knowledge, the crafter is skilled in healing and natural crafting. They take company with others to heal their fellow warriors or heal the ones they find. However, this skill with herbs can also prove dangerous as they possess the knowledge to create potions of great detriment as well. When working with gems, crafters can work beyond simple elixirs. Crafters can use combinations of gem ingredients to create things as DIA did. For example, half an emerald combined with half a topaz gem might make a kind of tree.`
             },
             {
                 id: 4,

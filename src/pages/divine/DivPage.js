@@ -3,7 +3,7 @@ import { DivineIcon } from '../../utils/icon';
 import { DIVINE } from '../../assets/shared/DIVINE';
 import InnerNav from '../../features/InnerNav';
 import DivEther from './DivEther';
-import TxtCards from '../../features//cards/TxtCards';
+import TxtCards from '../../features/cards/TxtCards';
 
 const DivPage = () => {
     return (
