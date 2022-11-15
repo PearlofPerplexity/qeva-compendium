@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { RACES } from '../../assets/shared/RACES';
 import { RaceIcon } from '../../utils/icon';
-import { RaceLink } from '../../utils/link';
 import InnerMenu from '../../features/InnerMenu';
 import MultiRaceCards from '../../features/cards/MultiRaceCards';
 import SingRaceCard from '../../features/cards/SingRaceCard';
@@ -11,7 +10,7 @@ const RacePage = () => {
         <div className='py-2 px-3'>
             <Routes>
                 <Route path='/' element={
-                    <InnerMenu name='Races' icon={RaceIcon} array={RACES} link={RaceLink} />
+                    <InnerMenu name='Races' icon={RaceIcon} array={RACES} />
                 } />
                 <Route path='/elves' element={
                     <MultiRaceCards array={RACES[0]} />
@@ -39,6 +38,9 @@ const RacePage = () => {
                 } />
                 <Route path='/arborums' element={
                     <SingRaceCard array={RACES[8]} />
+                } />
+                <Route path='/dragons' element={
+                    <SingRaceCard array={RACES[9]} />
                 } />
             </Routes>
         </div>

@@ -1,3 +1,5 @@
+
+
 export const LOCATIONS = [
     {
         id: 0,
@@ -15,15 +17,16 @@ export const LOCATIONS = [
                 id: 0,
                 name: `Arvañon`,
                 climate: `Semi-Arid`,
-                description: `Root, whcih can be ground into a white paste that can be used as a numbing agent`,
-                regions: [
+                description: `This is the northwestern sector of Avlim, which is home to the race of men.`,
+                subtopics: [
                     {
                         id: 0,
                         name: `Athari Cliffs`,
                         race: `Athiame`,
                         cities: `Athiansali (capital)`,
                         features: `Pillar-like Cliffs`,
-                        description: `Their proximity to the coast shrouds them in mist and a stable, warm climate.`
+                        description: `Their proximity to the coast shrouds them in mist and a stable, warm climate.`,
+                        image: ''
                     },
                     {
                         id: 1,
@@ -56,7 +59,7 @@ export const LOCATIONS = [
                 name: `Ouri`,
                 climate: `Marine Coastal to Humid Continental`,
                 description: `Root, whcih can be ground into a white paste that can be used as a numbing agent`,
-                regions: [
+                subtopics: [
                     {
                         id: 0,
                         name: `Fletcheren`,
@@ -104,7 +107,7 @@ export const LOCATIONS = [
                 name: `Alsthiavaire`,
                 climate: `Semi-Arid`,
                 description: `The highlands of Alsthiavaire lie at a higher elevation, but share the semi-arid climate of Arvañon.`,
-                regions: [
+                subtopics: [
                     {
                         id: 0,
                         name: `Lumier Valley`,
@@ -144,7 +147,7 @@ export const LOCATIONS = [
                 name: `Navalil`,
                 climate: `Tropical`,
                 description: `Navalil is the southern wooded realms that originally belonged to men, but were garnered by elves.`,
-                regions: [
+                subtopics: [
                     {
                         id: 0,
                         name: `Navenia`,
@@ -192,7 +195,7 @@ export const LOCATIONS = [
                 name: `Nagar`,
                 climate: `Arid`,
                 description: `From the mountains to the canyons, nearly the whole land is cracked and dry`,
-                regions: [
+                subtopics: [
                     {
                         id: 0,
                         name: `Mhindilin`,
@@ -265,7 +268,7 @@ export const LOCATIONS = [
                 name: `North of the Shattered Sea`,
                 climate: `Arid`,
                 description: `Lands where the Ohri children began to habitat in their separation from Avlim`,
-                regions: [
+                subtopics: [
                     {
                         id: 0,
                         name: `The Sea Caves of Uthaduhn`,
@@ -305,7 +308,7 @@ export const LOCATIONS = [
                 name: `South of the Shattered Sea`,
                 climate: `Arid`,
                 description: `As one descends Baroach, they move into the lusher places of the continent.`,
-                regions: [
+                subtopics: [
                     {
                         id: 0,
                         name: `Avu Dunes`,

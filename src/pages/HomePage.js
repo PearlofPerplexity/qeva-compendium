@@ -4,7 +4,7 @@ import lumiareValley from '../assets/imgs/locations/lumiare.jpg';
 import sky from '../assets/imgs/sky.jpg';
 import elf from '../assets/imgs/elf.jpg';
 import book from '../assets/imgs/book.jpg';
-import caracara from '../assets/imgs/caracara.jpg';
+import caracara from '../assets/imgs/fauna/caracara.jpg';
 import forestTwo from '../assets/imgs/forest2.jpg';
 import quill from '../assets/imgs/quill.jpg';
 import { 
@@ -14,10 +14,16 @@ import {
 } from '../utils/counter';
 import { 
     BasicLink, 
-    ClassLink, 
+    ClassLink,
     DivineLink,
     GemLink, 
-    RaceLink 
+    RaceLink,
+    CharLink,
+    FaunaLink,
+    FloraLink,
+    HistLink,
+    LocLink,
+    MapLink
 } from '../utils/link';
 import {
     GemIcon, 
@@ -77,7 +83,7 @@ const HomePage = () => {
                         <div className="chart-container map-img rounded-2 p-3">
                             <img className="map-img" src={avlimMap} />
                             <div className="overlay">
-                                <Link to="/" className="cover-link"></Link>
+                                <Link to={MapLink} className="cover-link"></Link>
                                 <div className="text">MAP</div>
                             </div> 
                         </div>
@@ -86,7 +92,7 @@ const HomePage = () => {
                         <div className="chart-container rounded-2 p-3">
                             <img className="map-img" src={lumiareValley} />
                             <div className="overlay">
-                                <Link to="/" className="cover-link"></Link>
+                                <Link to={LocLink} className="cover-link"></Link>
                                 <div className="text">LOCATIONS</div>
                             </div>
                         </div>
@@ -118,7 +124,8 @@ const HomePage = () => {
                                         src={elf}
                                         alt="elf-girl icon" />
                                 </div>
-                                <div className="ms-3">
+                                <div className="ms-3 covered-div">
+                                    <Link to={CharLink} className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">Characters</h3>
                                     <p className="mb-0">Read individual stories of characters throughout history.</p>
                                 </div>
@@ -130,8 +137,9 @@ const HomePage = () => {
                                         src={book}
                                         alt="book icon" />
                                 </div>
-                                <div className="ms-3">
-                                    <h3 className="fs-5 mb-1">Histories</h3>
+                                <div className="ms-3 covered-div">
+                                    <Link to={HistLink} className="cover-link"></Link>
+                                    <h3 className="fs-5 mb-1">History</h3>
                                     <p className="mb-0">Pour over the broad brushstrokes of history</p>
                                 </div>
                             </div>
@@ -146,7 +154,8 @@ const HomePage = () => {
                                         src={caracara}
                                         alt="bird icon" />
                                 </div>
-                                <div className="ms-3">
+                                <div className="ms-3 covered-div">
+                                    <Link to={FaunaLink} className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">Fauna</h3>
                                     <p className="mb-0">Discover the native animals habitating Qeṽa.</p>
                                 </div>
@@ -158,7 +167,8 @@ const HomePage = () => {
                                         src={forestTwo}
                                         alt="forest icon" />
                                 </div>
-                                <div className="ms-3">
+                                <div className="ms-3 covered-div">
+                                    <Link to={FloraLink} className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">Flora</h3>
                                     <p className="mb-0">Discover the native plant-life and their significance.</p>
                                 </div>
@@ -170,7 +180,8 @@ const HomePage = () => {
                                         src={quill}
                                         alt="quill icon" />
                                 </div>
-                                <div className="ms-3">
+                                <div className="ms-3 covered-div">
+                                    <Link to='/' className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">Languages</h3>
                                     <p className="mb-0">Learn the languages of Avlim.</p>
                                 </div>

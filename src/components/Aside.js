@@ -57,7 +57,6 @@ function Aside() {
                         alt="worldbuilding logo" />
                 </div>
             </Link>
-
             <div className="search position-relative text-center px-4 py-3 mt-2">
                 <input type="text" className="text-white form-control w-100 border-0 bg-transparent" placeholder="Search here" />
                 <i className="fa fa-search position-absolute d-block fs-6"></i>
@@ -90,78 +89,3 @@ function Aside() {
 }
 
 export default Aside;
-
-
-/*           
-                <li className="has-dropdown">
-                    <i className="uil-fire"></i><Link to="/" className="side-menu-header"> Classes</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="/">Sentinels</Link></li>
-                        <li><Link to="/">Caracadre</Link></li>
-                        <li><Link to="/">Elvish Cloaks</Link></li>
-                        <li><Link to="/">Avikin</Link></li>
-                        <li><Link to="/">Ghost Blades</Link></li>
-                        <li><Link to="/">Uncorrupted</Link></li>
-                        <li><Link to="/">Topplers</Link></li>
-                        <li><Link to="/">Moonstone Guild</Link></li>
-                        <li><Link to="/">Quartagraphers</Link></li>
-                        <li><Link to="/">No Affiliation</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-user"></i><Link to="/" className="side-menu-header"> Characters</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="/">Merith</Link></li>
-                        <li><Link to="/">Rhins</Link></li>
-                        <li><Link to="/">Atia</Link></li>
-                        <li><Link to="/">Alohir</Link></li>
-                        <li><Link to="/">Alrhyme</Link></li>
-                        <li><Link to="/">Cathelia</Link></li>
-                        <li><Link to="/">Hartri</Link></li>
-                        <li><Link to="/">Gatling</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-twitter-alt"></i><Link to="/" className="side-menu-header"> Fauna</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="/">Birds</Link></li>
-                        <li><Link to="/">Owls</Link></li>
-                        <li><Link to="/">Dragons</Link></li>
-                        <li><Link to="/">Wolves</Link></li>
-                        <li><Link to="/">Insects</Link></li>
-                        <li><Link to="/">Leeches</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-pagelines"></i><Link to="/" className="side-menu-header"> Flora</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="/">Trees</Link></li>
-                        <li><Link to="/">Medicinal Plants & Herbs</Link></li>
-                        <li><Link to="/">Fruits & Vegetables</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-book-open"></i><Link to="/" className="side-menu-header"> Histories</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="/">Sparkling Age</Link></li>
-                        <li><Link to="/">Quintessential Age</Link></li>
-                        <li><Link to="/">Divergent Age</Link></li>
-                        <li><Link to="/">Void Age</Link></li>
-                        <li><Link to="/">Mortal Age</Link></li>
-                        <li><Link to="/">Agate Above</Link></li>
-                    </ul>
-                </li>
-                <li className="has-dropdown">
-                    <i className="uil-university fa-fw"></i><Link to="/" className="side-menu-header"> Locations</Link>
-                    <ul className="sidebar-dropdown list-unstyled">
-                        <li><Link to="/">Qeṽa</Link></li>
-                        <li><Link to="/">Avlim</Link></li>
-                        <li><Link to="/">Malunë</Link></li>
-                        <li><Link to="/">Orcaṽa</Link></li>
-                        <li><Link to="/">Baroach</Link></li>
-                    </ul>
-                </li>
-                <li className="">
-                    <i className="uil-map-marker"></i><Link to="/" className="side-menu-header"> Map</Link>
-                </li>
-*/

@@ -1,12 +1,12 @@
 import LgInnerNav from "../LgInnerNav";
-import { RaceIcon } from "../../utils/icon";
+import { LocIcon } from "../../utils/icon";
 
-const MultiRaceCards = (props) => {
-    const { name, heartStone, spawnStone, elden, lifespan, height, weight, language, government, foundedOrders, description, subtopics } = props.array;
+const LocCard = (props) => {
+    const { name, climate, description, regions } = props.array;
 
     return (
         <>
-        <LgInnerNav name='Races' icon={RaceIcon} link='/races' />
+        <LgInnerNav name='Locations' icon={LocIcon} link='/locations' />
         <div className="container-fluid">
             <div className="col col-lg-10 col-xl-9 mt-4">
                 <div className="row align-items-center background-box rounded-2">
@@ -16,14 +16,7 @@ const MultiRaceCards = (props) => {
                                 <h5 className="card-title fs-4">{name}</h5>
                             </div>
                             <ul className="list-group list-group-flush">
-                                <li className="list-group-item"><b>Heart Stone</b> {heartStone}</li>
-                                <li className="list-group-item"><b>Spawn Stone</b> {spawnStone}</li>
-                                <li className="list-group-item"><b>Elder</b> {elden}</li>
-                                <li className="list-group-item"><b>Lifespan</b> {lifespan}</li>
-                                <li className="list-group-item"><b>Size</b> {height} | {weight}</li>
-                                <li className="list-group-item"><b>Language</b> {language}</li>
-                                <li className="list-group-item"><b>Government</b> {government}</li>
-                                <li className="list-group-item"><b>Founded Orders</b> {foundedOrders}</li>
+                                <li className="list-group-item"><b>Climate</b> {climate}</li>
                             </ul>
                         </div>
                     </div>
@@ -43,8 +36,8 @@ const MultiRaceCards = (props) => {
                     </div>
                 </div>
             </div>
-            {subtopics.map((race) => {
-                const { id, name, nickname, residence, appearance, description, image } = race;
+            {regions.map((place) => {
+                const { id, name, nickname, residence, appearance, description, image } = place;
 
                 return (
                     <div className="col col-lg-10 col-xl-9 mt-4" key={id}>
@@ -76,4 +69,4 @@ const MultiRaceCards = (props) => {
     );
 }
 
-export default MultiRaceCards;
+export default LocCard;

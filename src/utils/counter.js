@@ -13,8 +13,8 @@ export const TotalGemCount = DivGemCount + CardGemCount + IncGemCount;
 // RACE COUNTER
 let NobleRaceCount = 0
 for (const race of RACES) {
-    if ( race.hasOwnProperty('subraces') ) {
-        NobleRaceCount += race.subraces.length;
+    if ( race.hasOwnProperty('subtopics') ) {
+        NobleRaceCount += race.subtopics.length;
     } else {
         NobleRaceCount += 1;
     }

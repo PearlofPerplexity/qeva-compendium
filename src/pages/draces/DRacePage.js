@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { DRaceIcon } from '../../utils/icon';
 import { DRACES } from '../../assets/shared/DRACES';
+import { DRaceIcon } from '../../utils/icon';
 import InnerMenu from '../../features/InnerMenu';
 import SingRaceCard from '../../features/cards/SingRaceCard';
 

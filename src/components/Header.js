@@ -49,7 +49,11 @@ const Header = (args) => {
 
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
-                <Nav className="mx-2 d-md-none" navbar>
+                <Nav 
+                    className="mx-2 d-md-none navbar-nav-scroll" 
+                    navbar
+                    style={{height: '200px'}}
+                >
                     <NavItem className="nav-item">
                         <NavLink href={BasicLink}>
                             <i className={BasicIcon} />

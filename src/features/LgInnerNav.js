@@ -31,4 +31,4 @@ const LgInneNav = (props) => {
     );
 }
 
-export default LgInneNav
+export default LgInneNav;

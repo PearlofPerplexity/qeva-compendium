@@ -137,7 +137,7 @@ export const CHARACTERS = [
         ]
     },
     {
-        id: 0,
+        id: 1,
         link: `/characters/evil`,
         name: `Evil`,
         topics: [

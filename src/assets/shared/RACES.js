@@ -39,7 +39,7 @@ export const RACES = [
         government: `Republic`,
         foundedOrders: `Elvish Cloaks`,
         description: `Elves were the first race to live in Qeva. They roamed the world and even the stars for a thousand years before the other races appeared. They are immortal therefore wisest of the races. They can be deciphered from men by their fair skin, and pointed ears. They are responsible for the cathedrals around Qeva mythed to be erected through divination and they are drawn to DIA's attributes in water and wood.`,
-        subraces: [
+        subtopics: [
             {
                 id: 0,
                 name: `Wood Elves`,
@@ -83,7 +83,7 @@ export const RACES = [
         government: `Autocracy`,
         foundedOrders: `Avikin, Ghost Blades`,
         description: `Aviame or Avi are a race under the guidance of the eldar, Nware. They are the most similar in build to elves, but easily identifiable from them by their shades of skin color and face markings. While Avis live longer than most, they are not immortal and few age past a century. They tend to prefer mountainous regions where the air is thinner and the temperature colder as their bodies have a higher tolerance for the cold.`,
-        subraces: [
+        subtopics: [
             {
                 id: 0,
                 name: `Lumiare`,
@@ -140,7 +140,7 @@ export const RACES = [
         government: `Republic`,
         foundedOrders: `Caracadre, Helmsmen`,
         description: `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
-        subraces: [
+        subtopics: [
             {
                 id: 0,
                 name: `Humans`,
@@ -203,7 +203,7 @@ export const RACES = [
         residence: `Within Mountain & Rock`,
         foundedOrders: `Gemcutters`,
         description: `If you are looking for skilled craftsmen, look no further than the dwarves. In their great mountain halls, they have mastered the crafting of metal and stone. With their thick beards and stout stature standing at 4 feet tall, they appear as tough as the stone they cut and metal they beat. They are slower to trust, but more loyal than any when their trust is gained. Their lifespan can reach up to half a century though most live to about 400 years.`,
-        subraces: [
+        subtopics: [
             {
                 id: 0,
                 name: `Thrauldem's Folk`,
@@ -239,7 +239,7 @@ export const RACES = [
         residence: `Greenlands`,
         foundedOrders: `Order of the Feather`,
         description: `The Gnomes are some of the least involved in world events. They are 4-5 feet tall with long pointy ears and a unique face. Like halflings, they have little affinity for glory in war, but unlike halflings they are positioned to avoid it. Their settlements are greatly distanced from Shaole and buffered by mountains, oceans and surrounding nations. Removed from conflict, they find tranquility in the trades of leatherwork and fishing, though a spark of curiosity inspires many to become travelers and adventurers. The Eldar, Çairça watches over them.`,
-        subraces: [
+        subtopics: [
             {
                 id: 0,
                 name: `Green Gnomes`,

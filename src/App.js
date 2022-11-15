@@ -11,6 +11,11 @@ import DivPage from './pages/divine/DivPage';
 import RacePage from './pages/races/RacePage';
 import DRacePage from './pages/draces/DRacePage';
 import ClassPage from './pages/classes/ClassPage';
+import CharPage from './pages/characters/CharPage';
+import FaunaPage from './pages/fauna/FaunaPage';
+import FloraPage from './pages/flora/FloraPage';
+import HistPage from './pages/history/HistPage';
+import LocPage from './pages/locations/LocPage';
 import BelowSpace from './components/BelowSpace';
 
 function App() {
@@ -27,6 +32,11 @@ function App() {
           <Route path='/races/*' element={<RacePage />} />
           <Route path='/dark-races/*' element={<DRacePage />} />
           <Route path='/classes/*' element={<ClassPage />} />
+          <Route path='/characters/*' element={<CharPage />} />
+          <Route path='/fauna/*' element={<FaunaPage />} />
+          <Route path='/flora/*' element={<FloraPage />} />
+          <Route path='/history/*' element={<HistPage />} />
+          <Route path='/locations/*' element={<LocPage />} />
         </Routes>
         <BelowSpace />
         <Fragment>

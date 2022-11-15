@@ -5,8 +5,8 @@ const BasicPage = () => {
         <div className='py-2 px-3'>
             <section className="highlights mt-2">
                 <div className="row">
-                    <div className="col-lg-12 rounded-2">
-                        <div className="box d-flex align-items-center mb-4 mb-lg-0 p-3">
+                    <div className="col col-lg-10 col-xl-9 rounded-2">
+                        <div className="box d-flex align-items-center mb-lg-0 p-3">
                             <h3 className="mb-0">The Basics - What makes Qeṽa unique?</h3>
                         </div>
                     </div>
