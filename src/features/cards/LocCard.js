@@ -10,8 +10,8 @@ return (
 <div className="container-fluid">
 <section className="highlights mt-4">
     <div className="row">
-        <div className="col col-lg-10 col-xl-9 rounded-2 welcome">
-            <div className="box mb-lg-0 p-3 card-body">
+        <div className="col col-lg-10 col-xl-9 welcome">
+            <div className="box mb-lg-0 p-3 card-body rounded-2">
                 <h3 className="mb-0 p-3">{props.array.name}</h3>
                 <p className="card-text ps-3">{props.array.description}</p>
             </div>
@@ -22,7 +22,6 @@ return (
         </div>
     </div>
 </section>
-    {props.array.hTopics ? ( <TxtCards array={props.array.hTopics[0]} /> ) : ('')}
     {props.array.topics ? (
         props.array.topics.map((topic) => {
             let headingID = 'heading' + topic.id;
@@ -102,6 +101,20 @@ return (
         })
         ) : ( '' )
     }
+    {props.array.hTopics ? ( 
+        <>
+            <section className="highlights mt-4">
+                <div className="row">
+                    <div className="col col-lg-10 col-xl-9 welcome">
+                        <div className="box mb-lg-0 p-3 card-body rounded-2">
+                            <h3 className="mb-0 p-3">History of {props.array.name}</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <TxtCards array={props.array.hTopics[0]} /> 
+        </>
+    ) : ('')}
 </div>
 </>
 );
