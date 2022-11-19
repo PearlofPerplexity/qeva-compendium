@@ -1,9 +1,16 @@
+import sparkling from '../imgs/maps/sparkling-age.jpg';
+import quint from '../imgs/maps/quint-age.jpg';
+import divergent from '../imgs/maps/divergent-age.jpg';
+import voidage from '../imgs/maps/void-age.jpg';
+import agateAbove from '../imgs/locations/agate-above.jpg';
+
 export const HISTORY = [
     {
         id: 0,
         link: `/history/sparkling-era`,
         name: `Sparkling Era`,
         description: `The sparkling era encompasses the inception and shaping of the world before the first race of men were born.`,
+        image: sparkling,
         topics: [
             {
                 id: 0,
@@ -30,6 +37,7 @@ export const HISTORY = [
         link: `/history/quintessential-era`,
         name: `Quintessential Era`,
         description: `The quintessential era is the era of Qeṽa at its best when the veil of the void was secure and DIA's qualities flourished throughout the world.`,
+        image: quint,
         topics: [
             {
                 id: 0,
@@ -47,13 +55,13 @@ export const HISTORY = [
                 id: 2,
                 name: `Estratara`,
                 year: `220 Q.E.`,
-                description: `After one day of particular beauty, a gale came over Qeṽa, and turbulent weather filled the skies. No weather had ever been so strong nor so fierce and wicked to the earth below it. The eveile did not know it, but It came from a great stirring in the etherworld where the spirits dwelled. Something there had been unbalanced. The eveile found shelter within their abodes, under tree and rock to hide from the distress and by the next day, the winds calmed and the skies turned blue once again. At once, the eveile came out from their hiding eerar to discover this new phenomenon. They searched the damaged lands of Avlim and found a strange figure staggering helplessly in a field. Its body luminated at first and then diminished in glow, appearing to weaken. The eveile took the figure in and nurtured it back to health; Moriel most of all for the entity favored him the most though they knew not why.. In the weeks of healing, the figure gave its name to be “Estratara” and spoke of himself as a star fallen to the ground from above, a shepherd from the unseen skies. When Moriel asked why he had fallen, Estratara pained to speak of it. He desired something ungiven to his kind; to walk in both the seen and unseen world, with one foot in each. When denied his request, Estratara took it upon himself to step into the realm of the eveile, but at great cost. The skies became angry and disturbed and DIA threw Estratara down onto the earth. And now he was banished, unable to return to the ethereal realm until the stone of moissanite revealed itself to him. Moriel felt great sadness in his heart and understood not why DIA would cast him away. Following his own wisdom, Moriel pledged himself to his friend, Estratara and his quest for moissanite - despite it being against the wishes of DIA. Estratara embraced Moriel and thanked him for his kindness; a caliber of which he named beyond the kindness of Dia. Moriel liked this very much.`
+                description: `After one day of particular beauty, a gale came over Qeṽa, and turbulent weather filled the skies. No weather had ever been so strong nor so fierce and wicked to the earth below it. The eveile did not know it, but It came from a great stirring in the etherworld where the spirits dwelled. Something there had been unbalanced. The eveile found shelter within their abodes, under tree and rock to hide from the distress and by the next day, the winds calmed and the skies turned blue once again. At once, the eveile came out from their hiding eerar to discover this new phenomenon. They searched the damaged lands of Avlim and found a strange figure staggering helplessly in a field. Its body luminated at first and then diminished in glow, appearing to weaken. The eveile took the figure in and nurtured it back to health; Moriel most of all for the entity favored him the most though they knew not why.. In the weeks of healing, the figure gave its name to be “Estratara” and spoke of himself as a star fallen to the ground from above, a shepherd from the unseen skies. When Moriel asked why he had fallen, Estratara pained to speak of it. He desired something ungiven to his kind; to walk in both the seen and unseen world, with one foot in each. When denied his request, Estratara took it upon himself to step into the realm of the eveile, but at great cost. The skies became angry and disturbed and DIA threw Estratara down onto the earth. And now he was banished, unable to return to the ethereal realm until the stone of celestite revealed itself to him. Moriel felt great sadness in his heart and understood not why DIA would cast him away. Following his own wisdom, Moriel pledged himself to his friend, Estratara and his quest for celestite - despite it being against the wishes of DIA. Estratara embraced Moriel and thanked him for his kindness; a caliber of which he named beyond the kindness of Dia. Moriel liked this very much.`
             },
             {
                 id: 3,
                 year: `225 Q.E.`,
                 name: `Veil of the Void`,
-                description: `Estratara then told him secrets about his own soul, that it was chambered by the stone of moissanite, the same stone that hid the ethereal world. It could only be parsed by powers that lay behind the veil of the void. At this, Moriel was eager to learn more as to how he could help his new friend. He offered to help any way he could, even if it required parsing the very moissanite chambering his soul. He only asked that his soul be returned intact for it was his greatest gift from DIA whom he still loved. Now Estratara was a 'Haela', a fallen spirit from the ethereal realm, a shepherd of the seen world and before his fall he discovered that Moriel had recovered a cut of moonstone. He coyly admitted to Moriel that their plan would work only if they had moonstone for moonstone was the stone of wisdom and required to open the veil. Moriel rejoiced and revealed it for he had given Estratara his whole trust. But Moriel was tricked and did not know that his soul and even more so the veil was a delicate thing. When Estratara called on those loyal to him in the ether, Moriel lifted the veil and they divined the moissanite from the soul chamber of Moriel's body. But the deed did not go as Moriel expected. He found he could not let down the veil after he had lifted it for the void was strong. It whipped through the open seam and quickly ripped away the veil entirely. The veil was now gone and the void threatened to consume everything DIA created. To prevent this, DIA acted quickly and built gates between the layers of heaven: between the void, the everworld, the etterworld, the outerworld and the world itself. Gates so strong that the layers of heaven would not reunite until Agate above. Still, the void had been unleashed and the elements of the world would never be the same again. As a result of the evils in the ether, the skies would remain bitter and turnout harsh weather. DIA distanced himself from the eveille in the obsidian of the earth. Being HIS purest form of solitude, the earth turned rigid and unyielding to block itself from being breached. The angry seas became even more violent and unstable when they clashed against it and so weather became even more bitter. In Moriel's soul another thing changed. Without a chamber to hold it, his soul floated far from him into the ethereal layer of heavens. It created great sadness in Moriel's heart and DIA grieved with him, but could not undone such a delicate thing.`
+                description: `Estratara then told him secrets about his own soul, that it was chambered by the stone of celestite, the same stone that hid the ethereal world. It could only be parsed by powers that lay behind the veil of the void. At this, Moriel was eager to learn more as to how he could help his new friend. He offered to help any way he could, even if it required parsing the very celestite chambering his soul. He only asked that his soul be returned intact for it was his greatest gift from DIA whom he still loved. Now Estratara was a 'Haela', a fallen spirit from the ethereal realm, a shepherd of the seen world and before his fall he discovered that Moriel had recovered a cut of moonstone. He coyly admitted to Moriel that their plan would work only if they had moonstone for moonstone was the stone of wisdom and required to open the veil. Moriel rejoiced and revealed it for he had given Estratara his whole trust. But Moriel was tricked and did not know that his soul and even more so the veil was a delicate thing. When Estratara called on those loyal to him in the ether, Moriel lifted the veil and they divined the celestite from the soul chamber of Moriel's body. But the deed did not go as Moriel expected. He found he could not let down the veil after he had lifted it for the void was strong. It whipped through the open seam and quickly ripped away the veil entirely. The veil was now gone and the void threatened to consume everything DIA created. To prevent this, DIA acted quickly and built gates between the layers of heaven: between the void, the everworld, the etterworld, the outerworld and the world itself. Gates so strong that the layers of heaven would not reunite until Agate above. Still, the void had been unleashed and the elements of the world would never be the same again. As a result of the evils in the ether, the skies would remain bitter and turnout harsh weather. DIA distanced himself from the eveille in the obsidian of the earth. Being HIS purest form of solitude, the earth turned rigid and unyielding to block itself from being breached. The angry seas became even more violent and unstable when they clashed against it and so weather became even more bitter. In Moriel's soul another thing changed. Without a chamber to hold it, his soul floated far from him into the ethereal layer of heavens. It created great sadness in Moriel's heart and DIA grieved with him, but could not undone such a delicate thing.`
             },
             {
                 id: 4,
@@ -65,7 +73,7 @@ export const HISTORY = [
                 id: 5,
                 name: `Vasia`,
                 year: `245 Q.E.`,
-                description: `By means of the moissanite, Estratara achieved unnatural power to span the seen and unseen realms. Though like Moriel, his soul was torn between the two and it bred great conflict and anger within him, even more than when he had first defied DIA. Estratara returned to the ether and gathered new followers, persuading them with the prowess of his new powers. When his forces in the ether became strong, he took another form in Qeṽa and began to speak into Moriel's ear. He came in a form Moriel did not recognize, in a wise form from above by the name, “Vasia”, which means “void” and advised him on how to escape his many woes. For Moriel still griefed his error in the gifting of his moissanite and was desperate to remedy it and the world of Qeṽa. Vasia knew this desire and convinced Moriel that the bending of stone in a new creation may bring the resolution he sought. This idea resonated with Moriel for like a kite to a string, his soul was far from him and his heart burned for intimacy. Beyond his grief, he was dissatisfied and alone and the whisperings of Vasia consumed his mind. When his deception was accomplished, Vasia molted from this form into another and continued to take many evil and fearful shapes in Avlim. He became known as the “Great Demon” for no evil was greater nor more elusive and frightful than he. By great devilry he walked in both the seen and unseen world.`
+                description: `By means of the celestite, Estratara achieved unnatural power to span the seen and unseen realms. Though like Moriel, his soul was torn between the two and it bred great conflict and anger within him, even more than when he had first defied DIA. Estratara returned to the ether and gathered new followers, persuading them with the prowess of his new powers. When his forces in the ether became strong, he took another form in Qeṽa and began to speak into Moriel's ear. He came in a form Moriel did not recognize, in a wise form from above by the name, “Vasia”, which means “void” and advised him on how to escape his many woes. For Moriel still griefed his error in the gifting of his celestite and was desperate to remedy it and the world of Qeṽa. Vasia knew this desire and convinced Moriel that the bending of stone in a new creation may bring the resolution he sought. This idea resonated with Moriel for like a kite to a string, his soul was far from him and his heart burned for intimacy. Beyond his grief, he was dissatisfied and alone and the whisperings of Vasia consumed his mind. When his deception was accomplished, Vasia molted from this form into another and continued to take many evil and fearful shapes in Avlim. He became known as the “Great Demon” for no evil was greater nor more elusive and frightful than he. By great devilry he walked in both the seen and unseen world.`
             }
         ]
     },
@@ -74,6 +82,7 @@ export const HISTORY = [
         link: `/history/divergent-era`,
         name: `Divergent Era`,
         description: `The Divergent Era was marked by the creation of the different races, which led to the divergence of the eveile.`,
+        image: divergent,
         topics: [
             {
                 id: 0,
@@ -119,6 +128,7 @@ export const HISTORY = [
         link: `/history/void-era`,
         name: `Void Era`,
         description: `The Void Era was the darkest hour of Avlim when the dark Lord Ithmaar summoned void magic to drain Avlim of DIA's qualities in the world and the heart.`,
+        image: voidage,
         topics: [
             {
                 id: 0,
@@ -133,6 +143,7 @@ export const HISTORY = [
         link: `/history/mortal-era`,
         name: `Mortal Era`,
         description: `The mortal era began when DIA's Spirit filled a man and through this man cast out Ithmaar from Avlim. Because of this, the rule of Avlim was given to men`,
+        image: divergent,
         topics: [
             {
                 id: 0,
@@ -147,6 +158,7 @@ export const HISTORY = [
         link: `/history/agate-above`,
         name: `Agate Above`,
         description: `Agate Above is the mythed afterlife of Qeṽa where DIA's attributes will be refilled in the World and all set right.`,
+        image: agateAbove,
         topics: [
             {
                 id: 0,

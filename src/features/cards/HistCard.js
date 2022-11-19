@@ -12,6 +12,10 @@ const HistCard = (props) => {
                         <div className="box d-flex align-items-center mb-lg-0 p-3">
                             <h3 className="mb-0 p-3">{props.array.name}</h3>
                         </div>
+                        {props.array.image ? (
+                            <img className='card-img' src={props.array.image} />
+                        ) 
+                        : ('')}
                     </div>
                 </div>
             </section>

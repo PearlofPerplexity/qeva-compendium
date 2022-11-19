@@ -9,7 +9,7 @@ import diamond from '../imgs/gems/diamond.png';
 import emerald from '../imgs/gems/emerald.png';
 import jade from '../imgs/gems/jade.png';
 import jasper from '../imgs/gems/jasper.png';
-import moissanite from '../imgs/gems/moissanite.png';
+import celestite from '../imgs/gems/celestite.png';
 import obsidian from '../imgs/gems/obsidian-1.png';
 import onyx from '../imgs/gems/onyx.png';
 import opal from '../imgs/gems/opal.png';
@@ -57,7 +57,7 @@ export const GEMS = [
             },
             {
                 id: 1,
-                name: `Moissanite`,
+                name: `Celestite`,
                 quality: `Invisibility`,
                 purpose: `Divide the Heavenly Layers`,
                 originalLocation: `The Five Heavens beyond the natural world`,
@@ -65,8 +65,8 @@ export const GEMS = [
                 smDescription: 
                     `Stone dropped by DIA at the parsing of invisibility`,
                 description:
-                    `Last is moissanite, the stone of invisibility. It was the cinder of hope to humanity in the age of darkness at the expense of DIA Himself. As black polluted clouds covered the entire planet, it seemed that all bonds with DIA were lost. On the islands, there were no mountains high enough for the people to speak with God and no way to rise above the smoke. To remain in communion with his people, the good and gracious DIA spared a cut of his true essence of invisibility and bestowed it upon Avlim. With this parsing of His essence, DIA would be bound to a visible form for the remainder of eternity. At its parsing, a bit of moissanite fell from the sky like a falling star. If it was not found at its fall, it will likely never be found for the stone itself is invisible. It is a stone of divinity as no created sentient being can experience all the layers of heavens hidden by the varieties of moissanite.`,
-                image: moissanite
+                    `Last is celestite, the stone of invisibility. It was the cinder of hope to humanity in the age of darkness at the expense of DIA Himself. As black polluted clouds covered the entire planet, it seemed that all bonds with DIA were lost. On the islands, there were no mountains high enough for the people to speak with God and no way to rise above the smoke. To remain in communion with his people, the good and gracious DIA spared a cut of his true essence of invisibility and bestowed it upon Avlim. With this parsing of His essence, DIA would be bound to a visible form for the remainder of eternity. At its parsing, a bit of celestite fell from the sky like a falling star. If it was not found at its fall, it will likely never be found for the stone itself is invisible. It is a stone of divinity as no created sentient being can experience all the layers of heavens hidden by the varieties of celestite.`,
+                image: celestite
             },
             {
                 id: 2,

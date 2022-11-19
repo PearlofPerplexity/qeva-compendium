@@ -388,6 +388,16 @@ aside ul {
 	background-color: var(--dk-dark-bg);
 }
 
+.accordion-body .card, 
+.accordion-body .list-group-item {
+	background-color: var(--dk-gray-800);
+}
+
+.accordion-body .card {
+	border-color: var(--dk-dark-bg);
+	border-width: 2px;
+}
+
 .class-card-img {
 	width: 100px;
 }
@@ -442,7 +452,7 @@ aside ul {
 	bottom:3rem;
 	height: 2.5rem;
 	font-size: 3rem;
-	z-index: 2;
+	z-index: 100;
 	cursor: pointer;
 	color: rgba(255, 255, 255, 0.75)
 }

@@ -4,9 +4,9 @@ import {
     Nav,
     NavItem
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
-const InnerHistMenu = (props) => {
+const InnerExMenu = (props) => {
     return (
         <section className="highlights mt-2">
             <div className="row">
@@ -29,16 +29,13 @@ const InnerHistMenu = (props) => {
                                                 <NavItem className='button'>
                                                     <NavLink className='nav-link text-nowrap text-center' to={type.link}>{type.name}</NavLink>
                                                 </NavItem>
-                                                <table className='box'>
-                                                    <tbody className='container'>
+                                                    <div className='box text-center p-2 fst-italic'>
                                                         {type.topics.map((props) => (
-                                                            <tr className='row p-3' key={props.id}>
-                                                                <td className='col-3'>{props.year}</td>
-                                                                <td className='text-left col'>{props.name}</td>
-                                                            </tr>
+                                                            <React.Fragment key={props.id}>
+                                                                <Link to=''>| {props.name} |</Link>
+                                                            </React.Fragment>
                                                         ))}
-                                                    </tbody>
-                                                </table>
+                                                    </div>
                                             </React.Fragment>
                                         );
                                     })}
@@ -52,4 +49,4 @@ const InnerHistMenu = (props) => {
     );
 }
 
-export default InnerHistMenu;
+export default InnerExMenu;
