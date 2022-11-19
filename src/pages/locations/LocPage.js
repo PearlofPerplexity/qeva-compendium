@@ -3,6 +3,7 @@ import { LocIcon } from '../../utils/icon';
 import { LOCATIONS } from '../../assets/shared/LOCATIONS';
 import InnerExMenu from '../../features/InnerExMenu';
 import LocCard from '../../features/cards/LocCard';
+import HistCard from '../../features/cards/HistCard';
 
 const LocPage = () => {
     return (

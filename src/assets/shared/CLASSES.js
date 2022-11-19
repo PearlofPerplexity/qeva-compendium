@@ -520,7 +520,7 @@ export const CLASSES = [
     {
         id: 2,
         link: `/classes/avlimeth`,
-        quality: `Rangers`,
+        quality: `Helmsman`,
         goal: `Bring Peace & Justice for the Common Man`,
         name: `Avlimeth`,
         race: `Any`,
@@ -532,7 +532,12 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `The Avlimeth or "Haven of Avlim" are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences  in their beliefs about gems. After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the Sentinels placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, elemental caracadre only pursue stones of a shared element.`,
+                description: `The Avlimeth or "Haven of Avlim" more commonly known as 'watchers' are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences  in their beliefs about gems. After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the Sentinels placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, elemental caracadre only pursue stones of a shared element.`
+            },
+            {
+                id: 1,
+                name: `The Genogravé`,
+                description: `There are many methods for a watcher to select a stone. They may visit an acolyte or they may read the stone descriptions in the texts of the SenSavye. They may even decide based on instinct. However, the method recommended by the sentinels is to consult the Genogravé. The Genogravé is a painting, which can be found in every eldar cathedral in Avlim and the outer isles. Though they depict the same scene, each Genogravé depicts it differently. The Sentinels say a caracadre ought to sit before the painting and ask themselves, “What resonates with you in the painting?” Within the painting are powerful notes of every stone and these notes draw out the emotions of the viewer. Some argue and most avlimeth affirm that it is the emotional piece of art ever created and likely so because it is inspired by DIA HIMSELF. The attribute the viewer is drawn to is the attribute they ought to pursue. An initiate may do this to select their first stone or a caracadre may do it to identify their next stone.`
             }
         ]
     },
@@ -540,7 +545,7 @@ export const CLASSES = [
         id: 3,
         link: `/classes/elvish-cloaks`,
         quality: `Wood Elven Warriors`,
-        goal: `Keep Watch over the Elvish Woodland Realms`,
+        goal: `Keep Watch over the Elvish Realms`,
         name: `Elvish Cloaks`,
         race: `Elves, Aves`,
         primaryWeapon: `Longbow`,
@@ -558,12 +563,12 @@ export const CLASSES = [
     {
         id: 4,
         link: `/classes/avikin`,
-        quality: `Mountain Bowmen`,
+        quality: `Mountain Archers`,
         goal: `Defend Altiavaire and Avlim at large from Evil`,
         name: `Avikin`,
         race: `Aviame, Aves & All races may become an Avikith`,
         primaryWeapon: `Longbow`,
-        sacredText: `Thesathsia`,
+        sacredText: `Thesáthsia`,
         worldKnowledge: `Medium-High`,
         image: avikin,
         topics: [
@@ -608,7 +613,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `The uncorrupted is the nickname given to a legion of disciplined Ohri soldiers with an unmatched reputation. They comprised the front lines in the retaking of Avlim and comprised the majority of the force in the war of all. Despite their reputation, there is very little known about them. They did not appear in Avlim until the end of the void age and it is a bit of a mystery of where they came from. Some speculate that they were a byproduct of Ithmaar's void magic or divined by the Eldar while others believe them to be underdwellers who burrowed up from the ground or voyagers from another land. Few dare to ask, as the uncorrupted are of a battle-hardened, stoic breed. They have perfect chemistry with each other, but struggle forming bonds with others.`,
+                description: `The uncorrupted is the nickname given to a legion of disciplined Ohri soldiers with an unmatched reputation. They comprised the front lines in the retaking of Avlim and comprised the majority of the force in the war of all. Despite their reputation, there is very little known about them. They did not appear in Avlim until the end of the void age and it is a bit of a mystery of where they came from. Some speculate that they were a byproduct of Ithmaar's void magic or divined by the Eldar while others believe them to be underdwellers who burrowed up from the ground or voyagers from another land. Few dare to ask, as the uncorrupted are of a battle-hardened, stoic breed. They have perfect chemistry with each other, but struggle forming bonds with others.`
             }
         ]
     },

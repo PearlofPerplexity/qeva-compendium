@@ -1,5 +1,6 @@
 import avlim from '../imgs/maps/avlim.jpg';
 import baroach from '../imgs/maps/baroach.jpg';
+import orcava from '../imgs/locations/orcava.jpg';
 import altiavaire from '../imgs/maps/altiavaire.jpg';
 import arvanon from '../imgs/maps/arvanon.jpg';
 import nagar from '../imgs/maps/nagar.jpg';
@@ -36,7 +37,7 @@ export const LOCATIONS = [
                         race: `Athiame`,
                         cities: `Athiansali (capital)`,
                         features: `Pillar-like Cliffs`,
-                        description: `The Athari cliffs is home to the Athiame, who do not take kindly to visitors. Their dreaded guards, the "ghost blades" who watch over the borders of Athari are said to slit the throats of whoever passes without approval. Their proximity to the coast shrouds them in mist and a stable, warm climate.`,
+                        description: `The Athari cliffs is home to the Athiame, who do not take kindly to visitors. Their dreaded guards, the "ghost blades" who watch over the borders of Athari are said to slit the throats of whoever passes without approval. Their proximity to the coast shrouds them in mist and a stable, warm climate.`, 
                     },
                     {
                         id: 1,
@@ -178,7 +179,7 @@ export const LOCATIONS = [
                         race: `Wood Elves`,
                         cities: `Brielle`,
                         features: `Catedral Brielle`,
-                        description: `This is the heart of civilization and the capital of Avlim. Within its borders are the lushest and most abundant plant-life in all Avlim if not all of Qeva`,
+                        description: `This is the heart of civilization and the capital of Avlim. Within its borders are the lushest and most abundant plant-life in all Avlim if not all of Qeṽa`,
                         image: brielle
                     },
                     {
@@ -275,6 +276,33 @@ export const LOCATIONS = [
         link: `/locations/orcava`,
         name: `Orcaṽa`,
         description: ``,
+        image: orcava,
+        hTopics: [
+            {
+                id: 0,
+                name: `History`,
+                topics: [
+                    {
+                        id: 0,
+                        name: `Breaking from Qeṽa`,
+                        year: `2084 D.E.`,
+                        description: `At the Splitting of Qeṽa no sentient life was on the continent of Orcava.`
+                    },
+                    {
+                        id: 1,
+                        name: `Ice Caves of Orcaṽa`,
+                        year: `2084 D.E.`,
+                        description: `As Orcaṽa drifted northward, the ice and snow crept in and the lush green forests turned to white. Snow powdered the forests and the dropping temperature turned the trees to icicles. The snow was so thick atop the trees, that it formed into one large ceiling and the trees became like giant beams to a great hall. Thus the forest would be called the arctic halls of Orcaṽa. It would become a home and sacred place to the high aviame for the cold suited them and their kind would voyage there to start a new life. They would carve magnificent halls in the ice.`
+                    },
+                    {
+                        id: 2,
+                        name: `Voyage of Lost Worlds`,
+                        year: `2084 D.E.`,
+                        description: `After the war of dragons, the ice dragon, Nagil bid his farewell to the free people of Avlim. He had heard Moriel speak of the breaking of Qeva and sought to look for what remained of the other continents. He had now bonded with two Aviame, and took them as companions on the journey. These aviame were Leocas and Lavendi. They would find and explore the western continents of Qeva until they finally settled in the Ice forest of Orcava; a climate fitting to both the Aviame and Ice dragon. The two Asi chipped at the Ice and developed great halls where many Aviame would come to live.`
+                    }
+                ]
+            }
+        ],
         topics: []
     },
     {
@@ -282,6 +310,7 @@ export const LOCATIONS = [
         link: `/locations/baroach`,
         name: `Baroach`,
         description: ``,
+        image: baroach,
         topics: [
             {
                 id: 0,

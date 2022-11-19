@@ -8,6 +8,9 @@ const TxtCards = (props) => {
                                 <div className="card p-3">
                                     <div className="card-body">
                                         <h5 className="card-title fs-4">{topic.name}</h5>
+                                        {topic.year ? (
+                                            <p>{topic.year}</p>
+                                        ) : ('')}
                                         <p className="card-text">{topic.description}</p>
                                         {topic.subtopics ? (
                                             topic.subtopics.map((props) => (

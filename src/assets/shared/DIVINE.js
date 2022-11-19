@@ -179,7 +179,7 @@ export const DIVINE = [
             },
             {
                 id: 2,
-                name: `celestite`,
+                name: `Celestite`,
                 description: `celestite is the stone of invisibility and divides the planes of existence. It is found in the air around us and the ethereals who dwell within it and every soul of every sentient ever created. It makes up DIA himself and HIS manifestation within the world. Active celestite travels freely through space if not wrapped in the hands of a sentient, most often times an ethereal. However, if an ethereal abandons the quality of the celestite and loiters too long in the etterworld, the heart of the gem will diminish and no longer travel freely. It will be bound by physics and be visible from the corner of one's eye.`,
                 subtopics: [
                     {

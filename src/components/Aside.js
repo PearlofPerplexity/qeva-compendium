@@ -33,7 +33,7 @@ import { FAUNA } from '../assets/shared/FAUNA';
 import { FLORA } from '../assets/shared/FLORA';
 import { HISTORY } from '../assets/shared/HISTORY';
 import { LOCATIONS } from '../assets/shared/LOCATIONS';
-
+import BelowSpace from './BelowSpace';
 
 
 function Aside() {
@@ -84,6 +84,7 @@ function Aside() {
                 <Sidebar name="History" id="10" array={HISTORY} icon={HistIcon} />
                 <Sidebar name="Locations" id="11" array={LOCATIONS} icon={LocIcon} />
             </Accordion>
+            <BelowSpace />
         </aside>
     )
 }
