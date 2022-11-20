@@ -128,7 +128,7 @@ aside ul {
 	color: var(--dk-gray-300);
 }
 
-.welcome .content {
+.welcome .content, #inactive {
 	background-color: var(--navbar-bg-color);
 }
 
@@ -337,7 +337,7 @@ aside ul {
 }
 
   /* Change background color of buttons on hover */
-  .tab .button:hover, #not-active:hover {
+  .tab .button:hover, #lgnav #inactive:hover {
 	background-color: var(--dk-gray-700);
   }
   
@@ -346,7 +346,7 @@ aside ul {
 	background-color: var(--dk-gray-700);
   }
 
-  #not-active {
+  #lgnav #inactive {
 	background-color: var(--dk-gray-800);
   }
   

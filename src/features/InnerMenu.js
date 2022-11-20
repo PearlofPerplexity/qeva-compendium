@@ -30,6 +30,9 @@ const InnerMenu = (props) => {
                                             </NavItem>
                                         );
                                     })}
+                                    <NavItem className='button' id="inactive">
+                                        <NavLink className='nav-link text-nowrap text-center' to='/'>Home</NavLink>
+                                    </NavItem>
                                 </Nav>
                             </Navbar>
                         </div>
