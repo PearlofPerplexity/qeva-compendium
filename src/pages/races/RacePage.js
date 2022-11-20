@@ -13,34 +13,34 @@ const RacePage = () => {
                     <InnerMenu name='Races' icon={RaceIcon} array={RACES} />
                 } />
                 <Route path='/elves' element={
-                    <MultiRaceCards array={RACES[0]} left={RACES[9].link} right={RACES[1].link} />
+                    <MultiRaceCards array={RACES[0]} left={RACES[9]} right={RACES[1]} />
                 } />
                 <Route path='/aviame' element={
-                    <MultiRaceCards array={RACES[1]} left={RACES[0].link} right={RACES[2].link} />
+                    <MultiRaceCards array={RACES[1]} left={RACES[0]} right={RACES[2]} />
                 } />
                 <Route path='/humans' element={
-                    <MultiRaceCards array={RACES[2]} left={RACES[1].link} right={RACES[3].link} />
+                    <MultiRaceCards array={RACES[2]} left={RACES[1]} right={RACES[3]} />
                 } />
                 <Route path='/osei' element={
-                    <SingRaceCard array={RACES[3]} left={RACES[2].link} right={RACES[4].link} />
+                    <SingRaceCard array={RACES[3]} left={RACES[2]} right={RACES[4]} />
                 } />
                 <Route path='/dwarves' element={
-                    <MultiRaceCards array={RACES[4]} left={RACES[3].link} right={RACES[5].link} />
+                    <MultiRaceCards array={RACES[4]} left={RACES[3]} right={RACES[5]} />
                 } />
                 <Route path='/gnomes' element={
-                    <MultiRaceCards array={RACES[5]} left={RACES[4].link} right={RACES[6].link} />
+                    <MultiRaceCards array={RACES[5]} left={RACES[4]} right={RACES[6]} />
                 } />
                 <Route path='/halflings' element={
-                    <SingRaceCard array={RACES[6]} left={RACES[5].link} right={RACES[7].link} />
+                    <SingRaceCard array={RACES[6]} left={RACES[5]} right={RACES[7]} />
                 } />
                 <Route path='/aeoki' element={
-                    <SingRaceCard array={RACES[7]} left={RACES[6].link} right={RACES[8].link} />
+                    <SingRaceCard array={RACES[7]} left={RACES[6]} right={RACES[8]} />
                 } />
                 <Route path='/arborums' element={
-                    <SingRaceCard array={RACES[8]} left={RACES[7].link} right={RACES[9].link} />
+                    <SingRaceCard array={RACES[8]} left={RACES[7]} right={RACES[9]} />
                 } />
                 <Route path='/dragons' element={
-                    <SingRaceCard array={RACES[9]} left={RACES[8].link} right={RACES[0].link} />
+                    <SingRaceCard array={RACES[9]} left={RACES[8]} right={RACES[0]} />
                 } />
             </Routes>
         </div>

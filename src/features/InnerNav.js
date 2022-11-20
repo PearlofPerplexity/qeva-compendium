@@ -18,7 +18,7 @@ const InnerNav = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="box d-flex rounded-2 align-items-center">
+                    <div className="d-flex rounded-2 align-items-center">
                         <Navbar dark expand='xs'>
                             <Nav className='tab row' navbar>
                                 {props.array.map((type) => {

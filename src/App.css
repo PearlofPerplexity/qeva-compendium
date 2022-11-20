@@ -40,11 +40,11 @@ body {
 
 a {
 	text-decoration: none;
-	color: skyblue;
+	color: var(--dk-gray-100);
 }
 
 a:hover {
-	color: var(--dk-gray-300) !important;
+	color: var(--dk-gray-400);
 }
 
 div.covered-div {
@@ -91,7 +91,21 @@ a.cover-link {
 .sidebar ul > li > a {
 	color: var(--dk-gray-400);
 	text-decoration: none;
+}
 
+.sidebar ul > li > a:hover {
+	color: var(--dk-gray-200);
+	text-decoration: none;
+}
+
+aside .accordion-button:not(.collapsed),
+aside .accordion-button:hover {
+	color: var(--dk-gray-200);
+}
+
+.accordion {
+	--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='gray'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+	--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='gray'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 aside .accordion-body,
@@ -99,13 +113,12 @@ aside .accordion-button,
 aside .accordion {
  background-color: var(--sidebar-bg-colo) !important;
  --bs-accordion-border-color: none;
- color: var(--dk-gray-400) !important;
+ color: var(--dk-gray-400);
  padding: 10px;
 }
 aside ul {
 	margin-bottom: 0px;
 }
-
 
 
 /** --------------------------------
@@ -211,15 +224,6 @@ aside ul {
 	background-color: var(--dk-dark-bg);
 }
 
-.admins .box h3 {
-	color: var(--dk-gray-300);
-}
-
-.admins .box p {
-	color: var(--dk-gray-400)
-}
-
-
 
 /** --------------------------------
  -- statis
@@ -323,9 +327,27 @@ aside ul {
 	background-color: var(--dk-gray-700);
   }
   
-  /* Create an active/current tablink class */
+  /* Create an current tablink class */
   .tab .button.active {
 	background-color: var(--dk-gray-600);
+  }
+
+  .accordion-button:not(.collapsed) {
+	color: var(--dk-gray-700);
+}
+
+  /* Change background color of buttons on hover */
+  .tab .button:hover, #not-active:hover {
+	background-color: var(--dk-gray-700);
+  }
+  
+  /* Create an current tablink class */
+  .button:has(.active) {
+	background-color: var(--dk-gray-700);
+  }
+
+  #not-active {
+	background-color: var(--dk-gray-800);
   }
   
   /* Style the tab content */
@@ -426,12 +448,12 @@ aside ul {
 
 .background-box, .accordion-body {
 	background-color: var(--dk-gray-800) !important;
-	color: var(--dk-gray-200) !important;
+	color: var(--dk-gray-200);
 }
 
 .accordion-button {
 	background-color: var(--dk-dark-bg) !important;
-	color: var(--dk-gray-200) !important;
+	color: var(--dk-gray-200);
 }
 
 .accordion-button:not(.collapsed){

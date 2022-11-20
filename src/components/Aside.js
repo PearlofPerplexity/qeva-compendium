@@ -35,7 +35,6 @@ import { HISTORY } from '../assets/shared/HISTORY';
 import { LOCATIONS } from '../assets/shared/LOCATIONS';
 import BelowSpace from './BelowSpace';
 
-
 function Aside() {
     const [open, setOpen] = useState('');
     const toggle = (id) => {

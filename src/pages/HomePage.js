@@ -41,8 +41,7 @@ const HomePage = () => {
 
             <section className="highlights mt-4">
                 <div className="row">
-                    <div className="col-lg-4 covered-div">
-                        <Link to={GemLink} className="cover-link"></Link>
+                    <Link className="col-lg-4" to={GemLink}>
                         <div className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
                             <i className="iconify fs-2" data-icon="twemoji:gem-stone"></i>
                             <div className="ms-3">
@@ -51,9 +50,8 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-4 covered-div">
-                        <Link to={RaceLink} className="cover-link"></Link>
+                    </Link>
+                    <Link className="col-lg-4 covered-div" to={RaceLink}>
                         <div className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
                             <i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i>
                             <div className="ms-3">
@@ -62,9 +60,8 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-4 covered-div">
-                        <Link to={ClassLink} className="cover-link"></Link>
+                    </Link>
+                    <Link className="col-lg-4" to={ClassLink}>
                         <div className="box d-flex rounded-2 align-items-center p-3">
                             <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
                             <div className="ms-3">
@@ -73,7 +70,7 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>      
             </section>
 
@@ -104,7 +101,7 @@ const HomePage = () => {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="box">
-                            <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
+                            <Link className="admin d-flex align-items-center rounded-2 p-3 mb-4" to={DivineLink}>
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"
@@ -112,12 +109,11 @@ const HomePage = () => {
                                         alt="sky icon" />
                                 </div>
                                 <div className="ms-3 covered-div">
-                                    <Link to={DivineLink} className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">Divination</h3>
                                     <p className="mb-0">Discover the unseen dimensions and the powers within.</p>
                                 </div>
-                            </div>
-                            <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
+                            </Link>
+                            <Link className="admin d-flex align-items-center rounded-2 p-3 mb-4" to={CharLink}>
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"
@@ -125,12 +121,11 @@ const HomePage = () => {
                                         alt="elf-girl icon" />
                                 </div>
                                 <div className="ms-3 covered-div">
-                                    <Link to={CharLink} className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">Characters</h3>
                                     <p className="mb-0">Read individual stories of characters throughout history.</p>
                                 </div>
-                            </div>
-                            <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
+                            </Link>
+                            <Link className="admin d-flex align-items-center rounded-2 p-3 mb-4" to={HistLink}>
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"
@@ -138,16 +133,15 @@ const HomePage = () => {
                                         alt="book icon" />
                                 </div>
                                 <div className="ms-3 covered-div">
-                                    <Link to={HistLink} className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">History</h3>
                                     <p className="mb-0">Pour over the broad brushstrokes of history</p>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="box">
-                            <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
+                            <Link className="admin d-flex align-items-center rounded-2 p-3 mb-4" to={FaunaLink}>
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"
@@ -155,37 +149,34 @@ const HomePage = () => {
                                         alt="bird icon" />
                                 </div>
                                 <div className="ms-3 covered-div">
-                                    <Link to={FaunaLink} className="cover-link"></Link>
                                     <h3 className="fs-5 mb-1">Fauna</h3>
                                     <p className="mb-0">Discover the native animals habitating Qeṽa.</p>
                                 </div>
-                            </div>
-                            <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
+                            </Link>
+                            <Link className="admin d-flex align-items-center rounded-2 p-3 mb-4" to={FloraLink}>
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"
                                         src={forestTwo}
                                         alt="forest icon" />
                                 </div>
-                                <div className="ms-3 covered-div">
-                                    <Link to={FloraLink} className="cover-link"></Link>
+                                <div className="ms-3">
                                     <h3 className="fs-5 mb-1">Flora</h3>
                                     <p className="mb-0">Discover the native plant-life and their significance.</p>
                                 </div>
-                            </div>
-                            <div className="admin d-flex align-items-center rounded-2 p-3">
+                            </Link>
+                            <Link className="admin d-flex align-items-center rounded-2 p-3" to='/'>
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"
                                         src={quill}
                                         alt="quill icon" />
                                 </div>
-                                <div className="ms-3 covered-div">
-                                    <Link to='/' className="cover-link"></Link>
+                                <div className="ms-3">
                                     <h3 className="fs-5 mb-1">Languages</h3>
                                     <p className="mb-0">Learn the languages of Avlim.</p>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -193,38 +184,34 @@ const HomePage = () => {
 
             <section className="statis mt-4 text-center">
                 <div className="row">
-                    <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <Link className="col-md-6 col-lg-3 mb-4 mb-lg-0" to={GemLink}>
                         <div className="box gem-box p-3">
-                            <Link to={GemLink} className="cover-link"></Link>
                             <i className={GemIcon}></i>
                             <h3>{TotalGemCount}</h3>
                             <p className="lead">Gemstones</p>
                         </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    </Link>
+                    <Link className="col-md-6 col-lg-3 mb-4 mb-lg-0" to={RaceLink}>
                         <div className="box race-box p-3">
-                            <Link to={RaceLink} className="cover-link"></Link>
                             <i className={RaceIcon}></i>
                             <h3>{TotalRaceCount}</h3>
                             <p className="lead">Races</p>
                         </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    </Link>
+                    <Link className="col-md-6 col-lg-3 mb-4 mb-md-0" to={ClassLink}>
                         <div className="box class-box p-3">
-                            <Link to={ClassLink} className="cover-link"></Link>
                             <i className="uil-fire"></i>
                             <h3>{TotalClassCount}</h3>
                             <p className="lead">Classes</p>
                         </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
+                    </Link>
+                    <Link className="col-md-6 col-lg-3" to={BasicLink}>
                         <div className="box potential-box p-3">
-                            <Link to={BasicLink} className="cover-link"></Link>
                             <i className="uil-atom"></i>
                             <h3>Unlimited</h3>
                             <p className="lead">Potential</p>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </section>
         </div>

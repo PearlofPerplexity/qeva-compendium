@@ -12,19 +12,19 @@ const DRacePage = () => {
                     <InnerMenu name='Dark Races' icon={DRaceIcon} array={DRACES} /> 
                 } />
                 <Route path='/orcs' element={
-                    <SingRaceCard array={DRACES[0]} left={DRACES[4].link} right={DRACES[1].link} />
+                    <SingRaceCard array={DRACES[0]} left={DRACES[4]} right={DRACES[1]} />
                 } />
                 <Route path='/husks' element={
-                    <SingRaceCard array={DRACES[1]} left={DRACES[0].link} right={DRACES[2].link} />
+                    <SingRaceCard array={DRACES[1]} left={DRACES[0]} right={DRACES[2]} />
                 } />
                 <Route path='/ronin' element={
-                    <SingRaceCard array={DRACES[2]} left={DRACES[1].link} right={DRACES[3].link} />
+                    <SingRaceCard array={DRACES[2]} left={DRACES[1]} right={DRACES[3]} />
                 } />
                 <Route path='/jackals' element={
-                    <SingRaceCard array={DRACES[3]} left={DRACES[2].link} right={DRACES[4].link} />
+                    <SingRaceCard array={DRACES[3]} left={DRACES[2]} right={DRACES[4]} />
                 } />
                 <Route path='/mongrels' element={
-                    <SingRaceCard array={DRACES[4]} left={DRACES[3].link} right={DRACES[0].link} />
+                    <SingRaceCard array={DRACES[4]} left={DRACES[3]} right={DRACES[0]} />
                 } />
             </Routes>
         </div>
