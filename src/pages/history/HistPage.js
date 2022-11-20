@@ -12,22 +12,22 @@ const HistPage = () => {
                     <InnerHistMenu name='History' icon={HistIcon} array={HISTORY} link='/' />
                 } />
                 <Route path='/sparkling-era' element={
-                    <HistCard array={HISTORY[0]} />
+                    <HistCard array={HISTORY[0]} left={HISTORY[5].link} right={HISTORY[1].link} />
                 } />
                 <Route path='/quintessential-era' element={
-                    <HistCard array={HISTORY[1]}/>
+                    <HistCard array={HISTORY[1]} left={HISTORY[0].link} right={HISTORY[2].link} />
                 } />
                 <Route path='/divergent-era' element={
-                    <HistCard array={HISTORY[2]}/>
+                    <HistCard array={HISTORY[2]} left={HISTORY[1].link} right={HISTORY[3].link} />
                 } />
                 <Route path='/void-era' element={
-                    <HistCard array={HISTORY[3]}/>
+                    <HistCard array={HISTORY[3]} left={HISTORY[2].link} right={HISTORY[4].link} />
                 } />
                 <Route path='/mortal-era' element={
-                    <HistCard array={HISTORY[4]}/>
+                    <HistCard array={HISTORY[4]} left={HISTORY[3].link} right={HISTORY[5].link} />
                 } />
                 <Route path='/agate-above' element={
-                    <HistCard array={HISTORY[5]}/>
+                    <HistCard array={HISTORY[5]} left={HISTORY[4].link} right={HISTORY[0].link} />
                 } />
             </Routes>
         </div>

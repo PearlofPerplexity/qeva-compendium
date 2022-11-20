@@ -10,10 +10,10 @@ const CharPage = () => {
             <InnerNav name='Characters' icon={CharIcon} array={CHARACTERS} />
             <Routes>
                 <Route path='/noble' element={
-                    <CharCard array={CHARACTERS[0]} />
+                    <CharCard array={CHARACTERS[0]} other={CHARACTERS[1]} />
                 } />
                 <Route path='/evil' element={
-                    <CharCard array={CHARACTERS[1]}/>
+                    <CharCard array={CHARACTERS[1]} other={CHARACTERS[0]} />
                 } />
             </Routes>
         </div>

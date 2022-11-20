@@ -1,11 +1,12 @@
 import LgInnerNav from '../LgInnerNav';
 import { HistIcon } from "../../utils/icon";
 import { HistLink } from "../../utils/link";
+import BottomNav from '../BottomNav';
 
 const HistCard = (props) => {
     return (
         <>
-            <LgInnerNav name='History' icon={HistIcon} link={HistLink} />
+            <LgInnerNav name='History' icon={HistIcon} link={HistLink} right={props.right} left={props.left} />
             <section className="highlights mt-4">
                 <div className="row">
                     <div className="col col-lg-10 col-xl-9 rounded-2">
@@ -49,6 +50,7 @@ const HistCard = (props) => {
                     );
                 })}
             </div>
+            <BottomNav name='History' link={HistLink} right={props.right} left={props.left} />
         </>
     );
 }

@@ -1,6 +1,7 @@
 import LgInnerNav from "../LgInnerNav";
 import { ClassIcon } from "../../utils/icon";
 import { ClassLink } from "../../utils/link";
+import BottomNav from "../BottomNav";
 
 const NoAffCard = (props) => {
 
@@ -9,7 +10,7 @@ const { name, description } = props.array;
 return (
 
 <>
-  <LgInnerNav name='Classes' icon={ClassIcon} link={ClassLink} />
+  <LgInnerNav name='Classes' icon={ClassIcon} link={ClassLink} left={props.left} right={props.right} />
     <div className="container-fluid">
       <div className="col col-lg-10 col-xl-9 mt-4">
         <div className="row align-items-center">
@@ -50,6 +51,7 @@ return (
         </div>
       );
   })}
+  <BottomNav name='Classes' link={ClassLink} left={props.left} right={props.right} />
 </>
 
     );

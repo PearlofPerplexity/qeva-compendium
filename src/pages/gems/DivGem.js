@@ -1,7 +1,9 @@
 import { GEMS } from "../../assets/shared/GEMS";
+import BottomSmNav from '../../features/BottomSmNav';
 
 const DivGem = () => {
     return (
+    <>
         <div className="container-fluid" id="accordionGem">
             {GEMS[0].gems.map((gem) => {
             let headingID = 'heading' + gem.id;
@@ -49,6 +51,8 @@ const DivGem = () => {
                 );
             })}
         </div>
+        <BottomSmNav left={GEMS[3]} right={GEMS[1]} />
+    </>
     );
 }
 

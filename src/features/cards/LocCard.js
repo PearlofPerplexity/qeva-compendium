@@ -1,12 +1,14 @@
 import LgInnerNav from "../LgInnerNav";
 import { LocIcon } from "../../utils/icon";
+import { LocLink } from "../../utils/link";
 import TxtCards from "./TxtCards";
+import BottomNav from "../BottomNav";
 
 const LocCard = (props) => {
 
 return (
 <>
-<LgInnerNav name='Locations' icon={LocIcon} link='/locations' />
+<LgInnerNav name='Locations' icon={LocIcon} link={LocLink} right={props.right} left={props.left} />
 <div className="container-fluid">
 <section className="highlights mt-4">
     <div className="row">
@@ -116,6 +118,7 @@ return (
         </>
     ) : ('')}
 </div>
+<BottomNav name='Locations' icon={LocIcon} link={LocLink} right={props.right} left={props.left} />
 </>
 );
 }

@@ -1,12 +1,14 @@
 import LgInnerNav from "../LgInnerNav";
 import { RaceIcon } from "../../utils/icon";
+import { RaceLink } from "../../utils/link";
+import BottomNav from "../BottomNav";
 
 const MultiRaceCards = (props) => {
     const { name, heartStone, spawnStone, elden, lifespan, height, weight, language, government, foundedOrders, description, subtopics } = props.array;
 
     return (
         <>
-        <LgInnerNav name='Races' icon={RaceIcon} link='/races' />
+        <LgInnerNav name='Races' icon={RaceIcon} link={RaceLink} left={props.left} right={props.right} />
         <div className="container-fluid">
             <div className="col col-lg-10 col-xl-9 mt-4">
                 <div className="row align-items-center background-box rounded-2">
@@ -72,6 +74,7 @@ const MultiRaceCards = (props) => {
                 );
             })}
       </div>
+      <BottomNav name='Races' link={RaceLink} right={props.right} left={props.left} />
       </>
     );
 }

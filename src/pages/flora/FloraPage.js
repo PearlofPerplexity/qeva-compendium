@@ -3,6 +3,34 @@ import { FloraIcon } from '../../utils/icon';
 import { FLORA } from '../../assets/shared/FLORA';
 import InnerNav from '../../features/InnerNav';
 import TxtCards from '../../features/cards/TxtCards';
+import BottomSmNav from '../../features/BottomSmNav';
+
+const PLFlora = () => {
+    return (
+        <>
+            <TxtCards array={FLORA[0]} />
+            <BottomSmNav left={FLORA[2]} right={FLORA[1]} />
+        </>
+    );
+}
+
+const HBFlora = () => {
+    return (
+        <>
+            <TxtCards array={FLORA[1]} />
+            <BottomSmNav left={FLORA[0]} right={FLORA[2]} />
+        </>
+    );
+}
+
+const CPFlora = () => {
+    return (
+        <>
+            <TxtCards array={FLORA[2]} />
+            <BottomSmNav left={FLORA[1]} right={FLORA[0]} />
+        </>
+    );
+}
 
 const FloraPage = () => {
     return (
@@ -10,13 +38,13 @@ const FloraPage = () => {
             <InnerNav name='Flora' icon={FloraIcon} array={FLORA} />
             <Routes>
                 <Route path='/plants' element={
-                    <TxtCards array={FLORA[0]} />
+                    <PLFlora />
                 } />
                 <Route path='/herbs' element={
-                    <TxtCards array={FLORA[1]}/>
+                    <HBFlora />
                 } />
                 <Route path='/crops' element={
-                    <TxtCards array={FLORA[2]}/>
+                    <CPFlora />
                 } />
             </Routes>
         </div>

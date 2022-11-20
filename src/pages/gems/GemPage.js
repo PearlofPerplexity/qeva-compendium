@@ -6,6 +6,16 @@ import DivGem from './DivGem';
 import CarGem from './CarGem';
 import IncGem from './IncGem';
 import TxtCards from '../../features/cards/TxtCards';
+import BottomSmNav from '../../features/BottomSmNav';
+
+const OverGem = () => {
+    return (
+        <>
+            <TxtCards array={GEMS[3]} />
+            <BottomSmNav left={GEMS[2]} right={GEMS[0]} />
+        </>
+    )
+};
 
 const GemPage = () => {
     return (
@@ -15,9 +25,7 @@ const GemPage = () => {
                 <Route path='/divine' element={<DivGem />} />
                 <Route path='/cardinal' element={<CarGem />} />
                 <Route path='/incidental' element={<IncGem />} />
-                <Route path='/overview' element={
-                    <TxtCards array={GEMS[3]} />
-                } />
+                <Route path='/overview' element={<OverGem />} />
             </Routes>
         </div>
     );

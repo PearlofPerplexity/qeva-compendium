@@ -14,5 +14,9 @@ export const HistIcon = 'uil-book-open';
 export const LocIcon = 'uil-university fa-fw';
 export const MapIcon = 'uil-map-marker';
 
+// Arrow Icons
+export const leftArrow = 'uil-angle-left-b';
+export const rightArrow = 'uil-angle-right-b';
+
 // Scroll to Top Icon
 export const ScrollIcon = 'uil uil-cloud-upload';

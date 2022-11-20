@@ -2,6 +2,7 @@ import LgInnerNav from "../LgInnerNav";
 import { ClassIcon } from "../../utils/icon";
 import { ClassLink } from "../../utils/link";
 import TxtCards from "./TxtCards";
+import BottomNav from "../BottomNav";
 
 // Used for Both Races & Dark Races with ternary operators handling differences below
 
@@ -11,7 +12,7 @@ const ClassCard = (props) => {
     return (
     
     <>
-      <LgInnerNav name='Classes' icon={ClassIcon} link={ClassLink} />
+      <LgInnerNav name='Classes' icon={ClassIcon} link={ClassLink} right={props.right} left={props.left} />
       <div className="container-fluid">
         <div className="col col-lg-10 col-xl-9 mt-4">
           <div className="row align-items-center background-box">
@@ -45,6 +46,7 @@ const ClassCard = (props) => {
       </div>
   </div>
   <TxtCards array={props.array} />
+  <BottomNav name='Classes' link={ClassLink} right={props.right} left={props.left} />
 </>
 
     );

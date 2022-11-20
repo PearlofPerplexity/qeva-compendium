@@ -1,6 +1,7 @@
 import LgInnerNav from "../LgInnerNav";
 import { RaceIcon, DRaceIcon } from "../../utils/icon";
 import { RaceLink, DRaceLink } from "../../utils/link";
+import BottomNav from "../BottomNav";
 
 // Used for Both Races & Dark Races with ternary operators handling differences below
 
@@ -11,9 +12,9 @@ const SingRaceCard = (props) => {
     
     <>
       {spawnStone ? (
-        <LgInnerNav name='Races' icon={RaceIcon} link={RaceLink} />
+        <LgInnerNav name='Races' icon={RaceIcon} link={RaceLink} right={props.right} left={props.left} />
       ) : ( 
-        <LgInnerNav name='Dark Races' icon={DRaceIcon} link={DRaceLink} />
+        <LgInnerNav name='Dark Races' icon={DRaceIcon} link={DRaceLink} right={props.right} left={props.left} />
       )}
       <div className="container-fluid">
         <div className="col col-lg-10 col-xl-9 mt-4">
@@ -61,6 +62,11 @@ const SingRaceCard = (props) => {
         </div>
       </div>
   </div>
+  {spawnStone ? (
+        <BottomNav name='Races' icon={RaceIcon} link={RaceLink} right={props.right} left={props.left} />
+      ) : ( 
+        <BottomNav name='Dark Races' icon={DRaceIcon} link={DRaceLink} right={props.right} left={props.left} />
+      )}
 </>
 
     );

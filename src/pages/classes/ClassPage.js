@@ -13,34 +13,34 @@ const ClassPage = () => {
                     <InnerMenu name='Classes' icon={ClassIcon} array={CLASSES} link='/' />
                 } />
                 <Route path='/sentinels' element={
-                    <ClassCard array={CLASSES[0]} />
+                    <ClassCard array={CLASSES[0]} left={CLASSES[9].link} right={CLASSES[1].link} />
                 } />
                 <Route path='/caracadre' element={
-                    <ClassCard array={CLASSES[1]} />
+                    <ClassCard array={CLASSES[1]} left={CLASSES[0].link} right={CLASSES[2].link} />
                 } />
                 <Route path='/avlimeth' element={
-                    <ClassCard array={CLASSES[2]} />
+                    <ClassCard array={CLASSES[2]} left={CLASSES[1].link} right={CLASSES[3].link} />
                 } />
                 <Route path='/elvish-cloaks' element={
-                    <ClassCard array={CLASSES[3]} />
+                    <ClassCard array={CLASSES[3]} left={CLASSES[2].link} right={CLASSES[4].link} />
                 } />
                 <Route path='/avikin' element={
-                    <ClassCard array={CLASSES[4]} />
+                    <ClassCard array={CLASSES[4]} left={CLASSES[3].link} right={CLASSES[5].link} />
                 } />
                 <Route path='/ghost-blades' element={
-                    <ClassCard array={CLASSES[5]} />
+                    <ClassCard array={CLASSES[5]} left={CLASSES[4].link} right={CLASSES[6].link} />
                 } />
                 <Route path='/uncorrupted' element={
-                    <ClassCard array={CLASSES[6]} />
+                    <ClassCard array={CLASSES[6]} left={CLASSES[5].link} right={CLASSES[7].link} />
                 } />
                 <Route path='/topplers' element={
-                    <ClassCard array={CLASSES[7]} />
+                    <ClassCard array={CLASSES[7]} left={CLASSES[6].link} right={CLASSES[8].link} />
                 } />
                 <Route path='/order-of-the-feather' element={
-                    <ClassCard array={CLASSES[8]} />
+                    <ClassCard array={CLASSES[8]} left={CLASSES[7].link} right={CLASSES[9].link} />
                 } />
                 <Route path='/no-affiliation' element={
-                    <NoAffCard array={CLASSES[9]} />
+                    <NoAffCard array={CLASSES[9]} left={CLASSES[8].link} right={CLASSES[0].link} />
                 } />
             </Routes>
         </div>

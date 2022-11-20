@@ -1,7 +1,9 @@
 import { DIVINE } from "../../assets/shared/DIVINE";
+import BottomSmNav from '../../features/BottomSmNav';
 
 const DivEther = () => {
     return (
+    <>
         <div className="container-fluid" id="accordionEth">
             {DIVINE[2].types.map((eth) => {
             let headingID = 'heading' + eth.id;
@@ -48,6 +50,8 @@ const DivEther = () => {
                 );
             })}
         </div>
+        <BottomSmNav left={DIVINE[2]} right={DIVINE[0]} />
+    </>
     );
 }
 

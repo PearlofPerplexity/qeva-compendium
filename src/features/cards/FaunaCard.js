@@ -1,6 +1,9 @@
+import BottomSmNav from '../BottomSmNav';
+
 const FaunaCard = (props) => {
 
     return (
+    <>
         <div className="container-fluid">
             {props.array.topics.map((fauna) => {
                 const { id, name, habitat, home, description, image } = fauna;
@@ -29,7 +32,9 @@ const FaunaCard = (props) => {
                     </div>
                 );
             })}
-      </div>
+        </div>
+        <BottomSmNav left={props.left} right={props.right} />
+    </>
     );
 }
 
