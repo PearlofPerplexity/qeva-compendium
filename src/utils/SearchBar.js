@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { SearchIcon, CloseIcon } from "./icon";
 import { CHARACTERS } from '../assets/shared/CHARACTERS';
 import { CLASSES } from '../assets/shared/CLASSES';
@@ -34,8 +34,12 @@ const SearchBar = () => {
     const handleFilter = (event) => {
         const searchWord = event.target.value;
         setWordEntered(searchWord);
-        const newFilter = allArrays.filter((value) => {
-            return value.name.toLowerCase().includes(searchWord.toLowerCase());
+        let data = allArrays.flat(10);
+        let newFilter = data.filter
+        (value => {
+            return Object.keys(value).some(key =>
+                value[key].toString().toLowerCase().includes(wordEntered.toString().toLowerCase())
+            )
         });
         if (searchWord === "") {
             setFilteredData([]);
@@ -68,8 +72,8 @@ const SearchBar = () => {
                     <div className="dataResult rounded-2">
                         {filteredData.map((value, key) => (
                             filteredData.length === 0 ? ('') : (
-                                <Link className='dataItem' to={value.link} key={key}>
-                                    <p>{value.name}</p>
+                                <Link className='dataItem' to={value.link} key={key} onClick={clearInput}>
+                                    <p>"{wordEntered}" found in {value.name}</p>
                                 </Link>
                             )
                         ))}
@@ -77,7 +81,7 @@ const SearchBar = () => {
                 ) : wordEntered.length !=0 && filteredData.length === 0 ?(
                     <div className="dataResult rounded-2">
                         <div className="dataItem">
-                            <p className="fst-italic">No Results Found</p>
+                            <p className="fst-italic">No Results Found for "{wordEntered}"</p>
                         </div>
                     </div>
                 ) : ('')}
