@@ -13,6 +13,7 @@
 	--dk-dark-bg: #313b48;
 	--dk-darker-bg: #2a323d;
 	--navbar-bg-color: #374969;
+	--navbar-bg-dk: #2c3c56;
 	--sidebar-bg-color: #252d36;
 	--sidebar-width: 250px;
 }
@@ -62,6 +63,52 @@ a.cover-link {
 /** --------------------------------
  -- Sidebar
 -------------------------------- */
+.topnavbar {
+	color: var(--dk-gray-200);
+}
+
+.searchbar {
+	position: relative;
+}
+
+.searchbar, .searchbar input, .searchbar input:focus {
+	background-color: var(--navbar-bg-dk);
+	color: var(--dk-gray-200);
+}
+
+.searchIcon {
+	height: 35px;
+	width: 35px;
+	margin-left: 10px;
+}
+
+#clearBtn {
+	cursor: pointer;
+}
+
+.dataResult {
+	margin-top: 5px;
+	padding-top: 15px;
+	width: 100%;
+	max-height: 200px;
+	background-color: var(--sidebar-bg-color);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	overflow: hidden;
+	overflow-y: auto;
+	position: absolute;
+}
+
+.dataResult .dataItem {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	color: var(--dk-gray-400);
+}
+
+.dataItem p {
+	margin-left: 10px;
+}
+
 .sidebar .search {
 	padding: 0px 10px !important;
 	margin: 10px 10px 0px 10px !important;
@@ -333,12 +380,12 @@ aside ul {
   }
 
   .accordion-button:not(.collapsed) {
-	color: var(--dk-gray-700);
+	color: var(--dk-gray-200);
 }
 
   /* Change background color of buttons on hover */
   .tab .button:hover, #lgnav #inactive:hover {
-	background-color: var(--dk-gray-700);
+	background-color: var(--dk-gray-600);
   }
   
   /* Create an current tablink class */

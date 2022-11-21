@@ -17,7 +17,7 @@ const BottomNav = (props) => {
                                 <NavItem className='col-1 button'>
                                     <NavLink className='nav-link p-0' to={props.left.link}><i className={leftArrow}></i></NavLink>
                                 </NavItem>
-                                <NavItem className='col-10 button' id='not-active'>
+                                <NavItem className='col-10 button' id='inactive'>
                                     <NavLink className='nav-link text-nowrap' to={props.link} >All {props.name}</NavLink>
                                 </NavItem>
                                 <NavItem className='col-1 button'>
