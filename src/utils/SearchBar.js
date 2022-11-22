@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { SearchIcon, CloseIcon } from "./icon";
 import { CHARACTERS } from '../assets/shared/CHARACTERS';
 import { CLASSES } from '../assets/shared/CLASSES';
@@ -28,13 +28,15 @@ const SearchBar = () => {
         ...RACES
     ]
 
+    // The Filtered State of the Array
     const [filteredData, setFilteredData] = useState([]);
+    // The Value State of the Input Field
     const [wordEntered, setWordEntered] = useState("");
 
     const handleFilter = (event) => {
         const searchWord = event.target.value;
         setWordEntered(searchWord);
-        let data = allArrays.flat(10);
+        const data = allArrays.flat(Infinity);
         let newFilter = data.filter
         (value => {
             return Object.keys(value).some(key =>
@@ -68,7 +70,7 @@ const SearchBar = () => {
                         ) : (<i className={CloseIcon} id="clearBtn" onClick={clearInput}></i>)}
                     </div>
                 </div>
-                {wordEntered.length != 0 && filteredData.length != 0 ? (
+                {wordEntered.length !== 0 && filteredData.length !== 0 ? (
                     <div className="dataResult rounded-2">
                         {filteredData.map((value, key) => (
                             filteredData.length === 0 ? ('') : (
@@ -78,7 +80,7 @@ const SearchBar = () => {
                             )
                         ))}
                     </div>
-                ) : wordEntered.length !=0 && filteredData.length === 0 ?(
+                ) : wordEntered.length !==0 && filteredData.length === 0 ?(
                     <div className="dataResult rounded-2">
                         <div className="dataItem">
                             <p className="fst-italic">No Results Found for "{wordEntered}"</p>

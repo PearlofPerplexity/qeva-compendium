@@ -5,9 +5,9 @@ import { RACES } from '../assets/shared/RACES';
 import { CLASSES } from '../assets/shared/CLASSES';
 
 // GEM COUNTER
-const DivGemCount = GEMS[0].gems.length;
-const CardGemCount = GEMS[1].gems.length;
-const IncGemCount = GEMS[2].gems.length;
+const DivGemCount = GEMS[0].topics.length;
+const CardGemCount = GEMS[1].topics.length;
+const IncGemCount = GEMS[2].topics.length;
 export const TotalGemCount = DivGemCount + CardGemCount + IncGemCount;
 
 // RACE COUNTER
@@ -24,4 +24,6 @@ const EtherRaceCount = DIVINE[2].types.length - 1; // minus 'the Great Demon'
 export const TotalRaceCount = NobleRaceCount + DarkRaceCount + EtherRaceCount;
 
 //CLASS COUNTER
-export const TotalClassCount = CLASSES.length;
+const RcClassCount = CLASSES.length - 1; // minus 'No Affiliation
+const NaClassCount = CLASSES[9].topics.length;
+export const TotalClassCount = RcClassCount + NaClassCount;

@@ -5,7 +5,7 @@ const IncGem = () => {
     return (
     <>
         <div className="container-fluid" id="accordionGem">
-            {GEMS[2].gems.map((gem) => {
+            {GEMS[2].topics.map((gem) => {
             let headingID = 'heading' + gem.id;
             let collapseID = 'collapse' + gem.id;
             let dataTarget = '#collapse' + gem.id;

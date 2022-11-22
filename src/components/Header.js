@@ -46,7 +46,7 @@ const Header = (args) => {
     
     return (
         <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>
-            <NavbarBrand className="mx-3" to="/">Qeṽa Compendium</NavbarBrand>
+            <NavbarBrand className="mx-3" href="/">Qeṽa Compendium</NavbarBrand>
             <SearchBar />
 
             <NavbarToggler onClick={toggle} />

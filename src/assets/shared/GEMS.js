@@ -41,7 +41,7 @@ export const GEMS = [
         id: 0,
         link: `/gems/divine`,
         name: `Divine`,
-        gems: [
+        topics: [
             {
                 id: 0,
                 name: `Tourmaline`,
@@ -113,7 +113,7 @@ export const GEMS = [
         id: 1,
         link: `/gems/cardinal`,
         name: `Cardinal`,
-        gems: [
+        topics: [
             {
                 id: 0,
                 name: `Diamond`,
@@ -268,7 +268,7 @@ export const GEMS = [
         id: 2,
         link: `/gems/incidental`,
         name: `Incidental`,
-        gems: [
+        topics: [
             {
                 id: 0,
                 name: `Quartz`,
