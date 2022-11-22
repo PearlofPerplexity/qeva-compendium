@@ -14,7 +14,15 @@ import { RACES } from '../assets/shared/RACES';
 
 
 const SearchBar = () => {
-    
+
+// let tmp = [];
+// for (const sub in races.subtopics) {
+//     tmp.push(sub);
+// }
+// For (const sub in races.subtopics) {
+// Getting Nested Comments
+// 
+
     const allArrays = [
         ...CHARACTERS, 
         ...CLASSES, 
@@ -36,7 +44,16 @@ const SearchBar = () => {
     const handleFilter = (event) => {
         const searchWord = event.target.value;
         setWordEntered(searchWord);
-        const data = allArrays.flat(Infinity);
+
+        console.log('all arrays:', allArrays);
+
+        const data = allArrays;
+        // const data = allArrays.flatMap(
+        //     (element) => element.topics.subtopics
+        // );
+
+        console.log('data variable:', data);
+
         let newFilter = data.filter
         (value => {
             return Object.keys(value).some(key =>
