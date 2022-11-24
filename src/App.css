@@ -157,7 +157,8 @@ aside .accordion-button:hover {
 
 aside .accordion-body,
 aside .accordion-button,
-aside .accordion {
+aside .accordion,
+.basic-btn {
  background-color: var(--sidebar-bg-colo) !important;
  --bs-accordion-border-color: none;
  color: var(--dk-gray-400);

@@ -36,7 +36,7 @@ import { LOCATIONS } from '../assets/shared/LOCATIONS';
 import BelowSpace from './BelowSpace';
 
 function Aside() {
-    const [open, setOpen] = useState('');
+    const [open, setOpen] = useState('1');
     const toggle = (id) => {
       if (open === id) {
         setOpen();
@@ -56,10 +56,6 @@ function Aside() {
                         alt="worldbuilding logo" />
                 </div>
             </Link>
-            <div className="search position-relative text-center px-4 py-3 mt-2">
-                <input type="text" className="text-white form-control w-100 border-0 bg-transparent" placeholder="Search here" />
-                <i className="fa fa-search position-absolute d-block fs-6"></i>
-            </div>
             <Accordion flush open={open} toggle={toggle}>
                 <AccordionItem>
                     <AccordionHeader targetId="1">

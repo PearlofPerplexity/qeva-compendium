@@ -1,8 +1,8 @@
-import LgInnerNav from "../LgInnerNav";
+import LgInnerNav from "../navs/LgInnerNav";
 import { LocIcon } from "../../utils/icon";
 import { LocLink } from "../../utils/link";
 import TxtCards from "./TxtCards";
-import BottomNav from "../BottomNav";
+import BottomNav from "../navs/BottomNav";
 
 const LocCard = (props) => {
 

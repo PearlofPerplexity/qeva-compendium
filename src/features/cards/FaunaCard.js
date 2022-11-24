@@ -1,4 +1,4 @@
-import BottomSmNav from '../BottomSmNav';
+import BottomSmNav from '../navs/BottomSmNav';
 
 const FaunaCard = (props) => {
 

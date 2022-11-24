@@ -1,5 +1,5 @@
 import { DIVINE } from "../../assets/shared/DIVINE";
-import BottomSmNav from '../../features/BottomSmNav';
+import BottomSmNav from '../../features/navs/BottomSmNav';
 
 const DivEther = () => {
     return (

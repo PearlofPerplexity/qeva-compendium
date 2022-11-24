@@ -1,7 +1,7 @@
-import LgInnerNav from '../LgInnerNav';
+import LgInnerNav from '../navs/LgInnerNav';
 import { HistIcon } from "../../utils/icon";
 import { HistLink } from "../../utils/link";
-import BottomNav from '../BottomNav';
+import BottomNav from '../navs/BottomNav';
 
 const HistCard = (props) => {
     return (

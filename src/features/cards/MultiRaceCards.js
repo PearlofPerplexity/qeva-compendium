@@ -1,7 +1,7 @@
-import LgInnerNav from "../LgInnerNav";
+import LgInnerNav from "../navs/LgInnerNav";
 import { RaceIcon } from "../../utils/icon";
 import { RaceLink } from "../../utils/link";
-import BottomNav from "../BottomNav";
+import BottomNav from "../navs/BottomNav";
 
 const MultiRaceCards = (props) => {
     const { name, heartStone, spawnStone, elden, lifespan, height, weight, language, government, foundedOrders, description, topics } = props.array;

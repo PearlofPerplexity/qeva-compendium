@@ -1,7 +1,7 @@
-import LgInnerNav from "../LgInnerNav";
+import LgInnerNav from "../navs/LgInnerNav";
 import { RaceIcon, DRaceIcon } from "../../utils/icon";
 import { RaceLink, DRaceLink } from "../../utils/link";
-import BottomNav from "../BottomNav";
+import BottomNav from "../navs/BottomNav";
 
 // Used for Both Races & Dark Races with ternary operators handling differences below
 

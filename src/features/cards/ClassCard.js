@@ -1,8 +1,8 @@
-import LgInnerNav from "../LgInnerNav";
+import LgInnerNav from "../navs/LgInnerNav";
 import { ClassIcon } from "../../utils/icon";
 import { ClassLink } from "../../utils/link";
 import TxtCards from "./TxtCards";
-import BottomNav from "../BottomNav";
+import BottomNav from "../navs/BottomNav";
 
 // Used for Both Races & Dark Races with ternary operators handling differences below
 

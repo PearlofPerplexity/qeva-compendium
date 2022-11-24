@@ -1,7 +1,7 @@
-import LgInnerNav from "../LgInnerNav";
+import LgInnerNav from "../navs/LgInnerNav";
 import { ClassIcon } from "../../utils/icon";
 import { ClassLink } from "../../utils/link";
-import BottomNav from "../BottomNav";
+import BottomNav from "../navs/BottomNav";
 
 const NoAffCard = (props) => {
 

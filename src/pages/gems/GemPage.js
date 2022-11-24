@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { GemIcon } from '../../utils/icon';
 import { GEMS } from '../../assets/shared/GEMS';
-import InnerNav from '../../features/InnerNav';
+import InnerNav from '../../features/navs/InnerNav';
 import DivGem from './DivGem';
 import CarGem from './CarGem';
 import IncGem from './IncGem';
 import TxtCards from '../../features/cards/TxtCards';
-import BottomSmNav from '../../features/BottomSmNav';
+import BottomSmNav from '../../features/navs/BottomSmNav';
 
 const OverGem = () => {
     return (

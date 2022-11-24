@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import { DivineIcon } from '../../utils/icon';
 import { DIVINE } from '../../assets/shared/DIVINE';
-import InnerNav from '../../features/InnerNav';
+import InnerNav from '../../features/navs/InnerNav';
 import DivEther from './DivEther';
 import TxtCards from '../../features/cards/TxtCards';
-import BottomSmNav from '../../features/BottomSmNav';
+import BottomSmNav from '../../features/navs/BottomSmNav';
 
 const DivLayers = () => {
     return (

@@ -4,7 +4,7 @@ import {
     NavItem
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { leftArrow, rightArrow } from '../utils/icon';
+import { leftArrow, rightArrow } from '../../utils/icon';
 
 const SmBottomNav = (props) => {
     return (
