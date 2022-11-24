@@ -1,23 +1,11 @@
 import { GEMS } from "../../assets/shared/GEMS";
+import Intro from "../../features/intro";
 import BottomSmNav from '../../features/navs/BottomSmNav';
 
 const DivGem = () => {
     return (
     <>
-    <div className="container-fluid">
-        <div className="col col-lg-10 col-xl-9 mt-4">
-            <div className="row align-items-center">
-                <div className="col p-0 fs-7">
-                    <div className="welcome p-3">
-                        <div className="card-body">
-                            <h5 className="fs-4">{GEMS[3].topics[0].subtopics[0].name}</h5>
-                            <p className="card-text">{GEMS[3].topics[0].subtopics[0].description}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <Intro name={GEMS[3].topics[0].subtopics[0].name} description={GEMS[3].topics[0].subtopics[0].description} />
     <div className="container-fluid" id="accordionGem">
         {GEMS[0].topics.map((gem) => {
         let headingID = 'heading' + gem.id;

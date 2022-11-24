@@ -61,8 +61,8 @@ const HomePage = () => {
                             </div>
                         </Link>
                     </div>
-                    <div className="col-lg-4" to={ClassLink}>
-                        <Link className="box d-flex rounded-2 align-items-center p-3">
+                    <div className="col-lg-4" >
+                        <Link className="box d-flex rounded-2 align-items-center p-3" to={ClassLink}>
                             <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
                             <div className="ms-3">
                                 <div className="d-flex align-items-center">

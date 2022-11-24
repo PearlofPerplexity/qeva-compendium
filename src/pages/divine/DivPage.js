@@ -3,12 +3,14 @@ import { DivineIcon } from '../../utils/icon';
 import { DIVINE } from '../../assets/shared/DIVINE';
 import InnerNav from '../../features/navs/InnerNav';
 import DivEther from './DivEther';
+import Intro from '../../features/intro';
 import TxtCards from '../../features/cards/TxtCards';
 import BottomSmNav from '../../features/navs/BottomSmNav';
 
 const DivLayers = () => {
     return (
         <>
+            <Intro name={DIVINE[0].name} description={DIVINE[0].description} />
             <TxtCards array={DIVINE[0]} />
             <BottomSmNav left={DIVINE[3]} right={DIVINE[1]} />
         </>
@@ -18,6 +20,7 @@ const DivLayers = () => {
 const DivMagic = () => {
     return (
         <>
+            <Intro name={DIVINE[1].name} description={DIVINE[1].description} />
             <TxtCards array={DIVINE[1]} />
             <BottomSmNav left={DIVINE[0]} right={DIVINE[2]} />
         </>

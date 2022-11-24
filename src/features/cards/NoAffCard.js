@@ -1,6 +1,7 @@
 import LgInnerNav from "../navs/LgInnerNav";
 import { ClassIcon } from "../../utils/icon";
 import { ClassLink } from "../../utils/link";
+import Intro from "../intro";
 import BottomNav from "../navs/BottomNav";
 
 const NoAffCard = (props) => {
@@ -11,20 +12,7 @@ return (
 
 <>
   <LgInnerNav name='Classes' icon={ClassIcon} link={ClassLink} left={props.left} right={props.right} />
-    <div className="container-fluid">
-      <div className="col col-lg-10 col-xl-9 mt-4">
-        <div className="row align-items-center">
-          <div className="col p-0 fs-7">
-            <div className="welcome p-3">
-              <div className="card-body">
-                <h5 className="fs-4">{name}</h5>
-                <p className="card-text">{description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Intro name={name} description={description} />
   {props.array.topics.map((classx) => {
       const { id, name, expertise, equipment, description } = classx;
 
