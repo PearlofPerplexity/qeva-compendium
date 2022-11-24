@@ -1,17 +1,12 @@
 import { BASICS } from "../assets/shared/BASICS";
+import { BasicIcon } from "../utils/icon";
+import InnerSmNav from "../features/navs/InnerSmNav";
+import BottomSmNav from '../features/navs/BottomSmNav';
 
 const BasicPage = () => {
     return (
         <div className='py-2 px-3'>
-            <section className="highlights mt-2">
-                <div className="row">
-                    <div className="col col-lg-10 col-xl-9 rounded-2">
-                        <div className="box d-flex align-items-center mb-lg-0 p-3">
-                            <h3 className="mb-0">The Basics - What makes Qeṽa unique?</h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <InnerSmNav icon={BasicIcon} name="The Basics - What makes Qeṽa unique?" />
             <div className="container-fluid">
                 {BASICS[0].topics.map((topic) => {
                     return (
@@ -32,6 +27,7 @@ const BasicPage = () => {
                     );
                 })}
             </div>
+            <BottomSmNav left={BASICS[0].topics[0]} right={BASICS[0].topics[1]} />
         </div>
     );
 }

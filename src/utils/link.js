@@ -7,6 +7,7 @@ import { FLORA } from "../assets/shared/FLORA";
 // Landing Page Links
 export const BasicLink = '/about';
 export const DivineLink = DIVINE[3].link;
+export const EthLink = DIVINE[2].link
 export const DRaceLink = '/dark-races';
 export const GemLink = GEMS[3].link;
 export const RaceLink = '/races';

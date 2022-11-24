@@ -16,6 +16,7 @@ import FaunaPage from './pages/FaunaPage';
 import FloraPage from './pages/FloraPage';
 import HistPage from './pages/HistPage';
 import LocPage from './pages/LocPage';
+import MapPage from './pages/MapPage';
 import BelowSpace from './components/BelowSpace';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path='/flora/*' element={<FloraPage />} />
           <Route path='/history/*' element={<HistPage />} />
           <Route path='/locations/*' element={<LocPage />} />
+          <Route path='/map' element={<MapPage />} />
         </Routes>
         <BelowSpace />
         <Fragment>

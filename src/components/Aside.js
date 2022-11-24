@@ -21,7 +21,7 @@ import {
     LocIcon,
     MapIcon
 } from '../utils/icon';
-import { BasicLink } from '../utils/link';
+import { BasicLink, MapLink } from '../utils/link';
 import Sidebar from './Sidebar';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { DIVINE } from '../assets/shared/DIVINE';
@@ -78,6 +78,17 @@ function Aside() {
                 <Sidebar name="Flora" id="9" array={FLORA} icon={FloraIcon} />
                 <Sidebar name="History" id="10" array={HISTORY} icon={HistIcon} />
                 <Sidebar name="Locations" id="11" array={LOCATIONS} icon={LocIcon} />
+                <AccordionItem>
+                    <AccordionHeader targetId="12">
+                        <i className={MapIcon}></i>
+                        &nbsp; Map
+                    </AccordionHeader>
+                    <AccordionBody accordionId="12">
+                        <ul className='sidebar-dropdown list-unstyled'>
+                            <li><Link to={MapLink}>Avlim</Link></li>
+                        </ul>
+                    </AccordionBody>
+                </AccordionItem>
             </Accordion>
             <BelowSpace />
         </aside>

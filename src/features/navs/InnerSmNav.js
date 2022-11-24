@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-const InnerNav = (props) => {
+const InnerSmNav = (props) => {
     return (
         <section className="highlights mt-2">
             <div className="row">
@@ -18,17 +18,16 @@ const InnerNav = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="d-flex rounded-2 align-items-center">
-                        <Navbar dark expand='xs'>
-                            <Nav className='tab row' navbar>
-                                {props.array.map((type) => {
-                                    return (
-                                        <NavItem className='col-sm button' key={type.id}>
-                                            <NavLink className='nav-link text-nowrap text-center' to={type.link}>{type.name}</NavLink>
-                                        </NavItem>
-                                )})}
-                            </Nav>
-                        </Navbar>
+                    <div className='col-md-12 col-lg-10 col-xl-9'>
+                        <div className='d-flex align-items-center p-0 m-0'>
+                            <Navbar dark className='container p-0 m-0' id='lgnav' expand='xs'>   
+                                <Nav className='tab row text-center p-0 m-0' style={{width: '100%'}} navbar>
+                                    <NavItem className='col-12 button' id='inactive'>
+                                        <NavLink className='nav-link text-nowrap'  to='/' >Home</NavLink>
+                                    </NavItem>
+                                </Nav>
+                            </Navbar>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,4 +35,4 @@ const InnerNav = (props) => {
     );
 }
 
-export default InnerNav;
+export default InnerSmNav;
