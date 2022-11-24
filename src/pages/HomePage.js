@@ -78,7 +78,7 @@ const HomePage = () => {
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="chart-container map-img rounded-2 p-3">
-                            <img className="map-img" src={avlimMap} />
+                            <img className="map-img" src={avlimMap} alt='map of Avlim'/>
                             <div className="overlay">
                                 <Link to={MapLink} className="cover-link"></Link>
                                 <div className="text">MAP</div>
@@ -87,7 +87,7 @@ const HomePage = () => {
                     </div>
                     <div className="col-lg-6">
                         <div className="chart-container rounded-2 p-3">
-                            <img className="map-img" src={lumiareValley} />
+                            <img className="map-img" src={lumiareValley} alt='Lumiare Valley'/>
                             <div className="overlay">
                                 <Link to={LocLink} className="cover-link"></Link>
                                 <div className="text">LOCATIONS</div>
