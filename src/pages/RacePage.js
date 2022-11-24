@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import { RACES } from '../../assets/shared/RACES';
-import { RaceIcon } from '../../utils/icon';
-import InnerMenu from '../../features/InnerMenu';
-import MultiRaceCards from '../../features/cards/MultiRaceCards';
-import SingRaceCard from '../../features/cards/SingRaceCard';
+import { RACES } from '../assets/shared/RACES';
+import { RaceIcon } from '../utils/icon';
+import InnerMenu from '../features/menus/InnerMenu';
+import MultiRaceCards from '../features/cards/MultiRaceCards';
+import SingRaceCard from '../features/cards/SingRaceCard';
 
 const RacePage = () => {
     return (

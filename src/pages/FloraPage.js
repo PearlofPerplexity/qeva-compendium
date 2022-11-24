@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import { FloraIcon } from '../../utils/icon';
-import { FLORA } from '../../assets/shared/FLORA';
-import InnerNav from '../../features/navs/InnerNav';
-import TxtCards from '../../features/cards/TxtCards';
-import BottomSmNav from '../../features/navs/BottomSmNav';
+import { FloraIcon } from '../utils/icon';
+import { FLORA } from '../assets/shared/FLORA';
+import InnerNav from '../features/navs/InnerNav';
+import TxtCards from '../features/cards/TxtCards';
+import BottomSmNav from '../features/navs/BottomSmNav';
 
 const PLFlora = () => {
     return (

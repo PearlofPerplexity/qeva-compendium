@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import { FaunaIcon } from '../../utils/icon';
-import { FAUNA } from '../../assets/shared/FAUNA';
-import InnerNav from '../../features/navs/InnerNav';
-import FaunaCard from '../../features/cards/FaunaCard';
-import TxtCards from '../../features/cards/TxtCards';
-import BottomSmNav from '../../features/navs/BottomSmNav';
+import { FaunaIcon } from '../utils/icon';
+import { FAUNA } from '../assets/shared/FAUNA';
+import InnerNav from '../features/navs/InnerNav';
+import FaunaCard from '../features/cards/FaunaCard';
+import TxtCards from '../features/cards/TxtCards';
+import BottomSmNav from '../features/navs/BottomSmNav';
 
 const OthrFauna = () => {
     return (

@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { LocIcon } from '../../utils/icon';
-import { LOCATIONS } from '../../assets/shared/LOCATIONS';
-import InnerExMenu from '../../features/InnerExMenu';
-import LocCard from '../../features/cards/LocCard';
+import { LocIcon } from '../utils/icon';
+import { LOCATIONS } from '../assets/shared/LOCATIONS';
+import InnerExMenu from '../features/menus/InnerExMenu';
+import LocCard from '../features/cards/LocCard';
 
 const LocPage = () => {
     return (

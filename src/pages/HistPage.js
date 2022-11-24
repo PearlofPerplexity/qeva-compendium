@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { HistIcon } from '../../utils/icon';
-import { HISTORY } from '../../assets/shared/HISTORY';
-import InnerHistMenu from '../../features/InnerHistMenu';
-import HistCard from '../../features/cards/HistCard';
+import { HistIcon } from '../utils/icon';
+import { HISTORY } from '../assets/shared/HISTORY';
+import InnerHistMenu from '../features/menus/InnerHistMenu';
+import HistCard from '../features/cards/HistCard';
 
 const HistPage = () => {
     return (

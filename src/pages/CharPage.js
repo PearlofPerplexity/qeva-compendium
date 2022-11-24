@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { CharIcon } from '../../utils/icon';
-import { CHARACTERS } from '../../assets/shared/CHARACTERS';
-import InnerNav from '../../features/navs/InnerNav';
-import CharCard from '../../features/cards/CharCard';
+import { CharIcon } from '../utils/icon';
+import { CHARACTERS } from '../assets/shared/CHARACTERS';
+import InnerNav from '../features/navs/InnerNav';
+import CharCard from '../features/cards/CharCard';
 
 const CharPage = () => {
     return (

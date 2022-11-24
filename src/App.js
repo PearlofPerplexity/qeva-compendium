@@ -8,14 +8,14 @@ import HomePage from './pages/HomePage';
 import BasicPage from './pages/BasicPage';
 import GemPage from './pages/gems/GemPage';
 import DivPage from './pages/divine/DivPage';
-import RacePage from './pages/races/RacePage';
-import DRacePage from './pages/draces/DRacePage';
-import ClassPage from './pages/classes/ClassPage';
-import CharPage from './pages/characters/CharPage';
-import FaunaPage from './pages/fauna/FaunaPage';
-import FloraPage from './pages/flora/FloraPage';
-import HistPage from './pages/history/HistPage';
-import LocPage from './pages/locations/LocPage';
+import RacePage from './pages/RacePage';
+import DRacePage from './pages/DRacePage';
+import ClassPage from './pages/ClassPage';
+import CharPage from './pages/CharPage';
+import FaunaPage from './pages/FaunaPage';
+import FloraPage from './pages/FloraPage';
+import HistPage from './pages/HistPage';
+import LocPage from './pages/LocPage';
 import BelowSpace from './components/BelowSpace';
 
 function App() {

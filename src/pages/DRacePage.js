@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { DRACES } from '../../assets/shared/DRACES';
-import { DRaceIcon } from '../../utils/icon';
-import InnerMenu from '../../features/InnerMenu';
-import SingRaceCard from '../../features/cards/SingRaceCard';
+import { DRACES } from '../assets/shared/DRACES';
+import { DRaceIcon } from '../utils/icon';
+import InnerMenu from '../features/menus/InnerMenu';
+import SingRaceCard from '../features/cards/SingRaceCard';
 
 const DRacePage = () => {
     return (

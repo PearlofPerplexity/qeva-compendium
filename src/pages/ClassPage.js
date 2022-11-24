@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import { CLASSES } from '../../assets/shared/CLASSES';
-import { ClassIcon } from '../../utils/icon';
-import InnerMenu from '../../features/InnerMenu';
-import ClassCard from '../../features/cards/ClassCard';
-import NoAffCard from '../../features/cards/NoAffCard';
+import { CLASSES } from '../assets/shared/CLASSES';
+import { ClassIcon } from '../utils/icon';
+import InnerMenu from '../features/menus/InnerMenu';
+import ClassCard from '../features/cards/ClassCard';
+import NoAffCard from '../features/cards/NoAffCard';
 
 const ClassPage = () => {
     return (
