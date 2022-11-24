@@ -11,6 +11,7 @@ export const HISTORY = [
         name: `Sparkling Era`,
         description: `The sparkling era encompasses the inception and shaping of the world before the first race of men were born.`,
         image: sparkling,
+        imageAlt: `Qeṽa Sparkling Era Map`,
         topics: [
             {
                 id: 0,
@@ -38,6 +39,7 @@ export const HISTORY = [
         name: `Quintessential Era`,
         description: `The quintessential era is the era of Qeṽa at its best when the veil of the void was secure and DIA's qualities flourished throughout the world.`,
         image: quint,
+        imageAlt: `Qeṽa Quintessential Era Map`,
         topics: [
             {
                 id: 0,
@@ -83,6 +85,7 @@ export const HISTORY = [
         name: `Divergent Era`,
         description: `The Divergent Era was marked by the creation of the different races, which led to the divergence of the eveile.`,
         image: divergent,
+        imageAlt: `Qeṽa Divergent Era Map`,
         topics: [
             {
                 id: 0,
@@ -129,6 +132,7 @@ export const HISTORY = [
         name: `Void Era`,
         description: `The Void Era was the darkest hour of Avlim when the dark Lord Ithmaar summoned void magic to drain Avlim of DIA's qualities in the world and the heart.`,
         image: voidage,
+        imageAlt: `Qeṽa Void Era Map`,
         topics: [
             {
                 id: 0,
@@ -144,6 +148,7 @@ export const HISTORY = [
         name: `Mortal Era`,
         description: `The mortal era began when DIA's Spirit filled a man and through this man cast out Ithmaar from Avlim. Because of this, the rule of Avlim was given to men`,
         image: divergent,
+        imageAlt: `Qeṽa Mortal Era Map`,
         topics: [
             {
                 id: 0,
@@ -159,6 +164,7 @@ export const HISTORY = [
         name: `Agate Above`,
         description: `Agate Above is the mythed afterlife of Qeṽa where DIA's attributes will be refilled in the World and all set right.`,
         image: agateAbove,
+        imageAlt: `Qeṽa Afterworld Map`,
         topics: [
             {
                 id: 0,

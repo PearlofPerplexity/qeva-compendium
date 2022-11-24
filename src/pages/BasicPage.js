@@ -13,7 +13,7 @@ const BasicPage = () => {
                 </div>
             </section>
             <div className="container-fluid">
-                {BASICS.map((topic) => {
+                {BASICS[0].topics.map((topic) => {
                     return (
                         <div className="col col-lg-10 col-xl-9 mt-4" key={topic.id}>
                             <div className="row align-items-center background-box rounded-2">

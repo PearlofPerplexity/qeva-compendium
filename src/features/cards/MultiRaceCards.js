@@ -4,7 +4,7 @@ import { RaceLink } from "../../utils/link";
 import BottomNav from "../BottomNav";
 
 const MultiRaceCards = (props) => {
-    const { name, heartStone, spawnStone, elden, lifespan, height, weight, language, government, foundedOrders, description, subtopics } = props.array;
+    const { name, heartStone, spawnStone, elden, lifespan, height, weight, language, government, foundedOrders, description, topics } = props.array;
 
     return (
         <>
@@ -45,14 +45,14 @@ const MultiRaceCards = (props) => {
                     </div>
                 </div>
             </div>
-            {subtopics.map((race) => {
-                const { id, name, nickname, residence, appearance, description, image } = race;
+            {topics.map((race) => {
+                const { id, name, nickname, residence, appearance, description, image, imageAlt } = race;
 
                 return (
                     <div className="col col-lg-10 col-xl-9 mt-4" key={id}>
                         <div className="row align-items-center background-box rounded-2">
                             <div className="mx-auto col-md-4 col-lg-2 md-fixed-width">
-                                <img className="card-img" src={image} alt="Card image cap" />
+                                <img className="card-img" src={image} alt={imageAlt} />
                             </div>
                             <div className="col p-0 fs-7">
                                 <div className="card p-4">

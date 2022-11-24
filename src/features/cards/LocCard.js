@@ -18,7 +18,7 @@ return (
                 <p className="card-text ps-3">{props.array.description}</p>
             </div>
             {props.array.image ? (
-                <img className='card-img' src={props.array.image} />
+                <img className='card-img' src={props.array.image} alt={props.array.imageAlt} />
             ) 
             : ('')}
         </div>
@@ -34,7 +34,7 @@ return (
                     <div className="align-items-center background-box rounded-2">
                         { topic.image ? (
                             <div className="mx-auto md-fixed-width">
-                                <img className="card-img" src={topic.image} alt="Card image cap" />
+                                <img className="card-img" src={topic.image} alt={topic.imageAlt} />
                             </div>
                         ) : ('') }
                         <div className=" p-0 fs-7">
@@ -63,14 +63,14 @@ return (
                                 <div id={collapseID} className="accordion-collapse collapse" aria-labelledby={headingID} data-bs-parent="#accordionLoc">
                                     <div className="accordion-body border border-0 p-3">
                                         {topic.subtopics.map((place) => {
-                                            const { id, name, race, cities, features, description, image } = place;
+                                            const { id, name, race, cities, features, description, image, imageAlt } = place;
     
                                             return (
                                                 <div className="mb-3 d-flex justify-content-center align-items-center container" key={id}>
                                                     <div className="row align-items-center rounded-2">
                                                         { place.image ? (
                                                             <div className="mx-auto col-md-4 col-lg-2 d-none d-md-block md-fixed-width">
-                                                                <img className="card-img" src={place.image} alt="Card image cap" />
+                                                                <img className="card-img" src={image} alt={imageAlt} />
                                                             </div>
                                                         ) : ('') }
                                                         <div className="col p-0">

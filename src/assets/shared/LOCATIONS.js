@@ -23,6 +23,7 @@ export const LOCATIONS = [
         name: `Avlim`,
         description: `The central continent of Qeṽa and the concentrated existence of all sentient life.`,
         image: avlim,
+        imageAlt: `Qeṽa Map of Avlim`,
         topics: [
             {
                 id: 0,
@@ -30,6 +31,7 @@ export const LOCATIONS = [
                 climate: `Semi-Arid`,
                 description: `This is the northwestern sector of Avlim, which is home to the race of men.`,
                 image: arvanon,
+                imageAlt: `Qeṽa Map of Arvañon`,
                 subtopics: [
                     {
                         id: 0,
@@ -71,6 +73,7 @@ export const LOCATIONS = [
                 climate: `Marine Coastal to Humid Continental`,
                 description: `Ouri is the declared home of the gnomes and halflings though men dwarves and elves all have their foothold in it. It is the largest region within Avlim and often the furthest from evil.`,
                 image: ouri,
+                imageAlt: `Qeṽa Map of Ouri`,
                 subtopics: [
                     {
                         id: 0,
@@ -87,7 +90,8 @@ export const LOCATIONS = [
                         cities: `Nalri`,
                         features: `Loch Ladish, Nadia Catedral, Farathain Mist`,
                         description: `The marine coastal climate of these lush greenlands make them cloudy, foggy and damp. This ever mist has drawn many tales that gnomekind have passed on for generations.`,
-                        image: farathain
+                        image: farathain,
+                        imageAlt: `Farathain`
                     },
                     {
                         id: 2,
@@ -120,7 +124,8 @@ export const LOCATIONS = [
                         cities: `None`,
                         features: `Inner sanctum filled with all the gems of DIA`,
                         description: `Agate is the sacred Island to the noble races. The ocean surrounding this slick surfaced crystal island are turbulent nearly all year outside of the summer and autumn equinox.`,
-                        image: agate
+                        image: agate,
+                        imageAlt: `Qeṽa's Island of Agate`
                     }
                 ]
             },
@@ -130,6 +135,7 @@ export const LOCATIONS = [
                 climate: `Semi-Arid`,
                 description: `The highlands of Alsthiavaire lie at a higher elevation, but share the semi-arid climate of Arvañon.`,
                 image: altiavaire,
+                imageAlt: `Qeṽa Map of Alsthiavaire`,
                 subtopics: [
                     {
                         id: 0,
@@ -138,7 +144,8 @@ export const LOCATIONS = [
                         cities: `Lumion, Tower of Afithem`,
                         features: `Lotus Lake`,
                         description: `The High mountains are the highest elevation in all of Avlim and are capped with snow throughout the year. They hold the original location of where the noble races communed with God. It continues to be the home of Asiame who prefer the low temperatures and oxygen levels.`,
-                        image: lumiare 
+                        image: lumiare,
+                        imageAlt: `Lumier Valley` 
                     },
                     {
                         id: 1,
@@ -172,6 +179,7 @@ export const LOCATIONS = [
                 climate: `Tropical`,
                 description: `Navalil is the southern wooded realms that originally belonged to men, but were garnered by elves.`,
                 image: navalil,
+                imageAlt: `Qeṽa Map of Navalil`,
                 subtopics: [
                     {
                         id: 0,
@@ -180,7 +188,8 @@ export const LOCATIONS = [
                         cities: `Brielle`,
                         features: `Catedral Brielle`,
                         description: `This is the heart of civilization and the capital of Avlim. Within its borders are the lushest and most abundant plant-life in all Avlim if not all of Qeṽa`,
-                        image: brielle
+                        image: brielle,
+                        imageAlt: `Catedral Brielle`
                     },
                     {
                         id: 1,
@@ -189,7 +198,8 @@ export const LOCATIONS = [
                         cities: `Eavanyo`,
                         features: `Yarvarwe (Cathedral of Bridges)`,
                         description: `Evyandil is an elven forest in the southwestern region of Avlim and contains like-lushness to Navenia. It's borders are heavily guarded as an exclusivley elven realm.`,
-                        image: eCloaks
+                        image: eCloaks,
+                        imageAlt: `Passage of the Elvish Cloaks`
                     },
                     {
                         id: 2,
@@ -206,7 +216,8 @@ export const LOCATIONS = [
                         cities: `Anuage, Vaiorse`,
                         features: `Sinothain Falls, Riovanye`,
                         description: `Vast tendrils of streams and rivers vine throughout this land more than others and for this the river elves love it and have settled there from the beginning.`,
-                        image: riovanye
+                        image: riovanye,
+                        imageAlt: `Catedral Riovanye`
                     },
                     {
                         id: 4,
@@ -224,6 +235,7 @@ export const LOCATIONS = [
                 climate: `Arid`,
                 description: `From the mountains to the canyons, nearly the whole land is cracked and dry`,
                 image: nagar,
+                imageAlt: `Qeṽa Map of Nagar`,
                 subtopics: [
                     {
                         id: 0,
@@ -232,7 +244,8 @@ export const LOCATIONS = [
                         cities: `Barenem, Barduin`,
                         features: `Indilë, The Bare Mountains`,
                         description: `Home to the most stubborn dwarves and original home of the aeoki, Mhindilin was once a field on the eastern border of Nagar. However, upon the aeoki genocide, DIA's tears have filled it and turned it into a swampy region, which is relatively unhabited besides its mountains to the north.`,
-                        image: barir
+                        image: barir,
+                        imageAlt: `The Bare Mountains`
                     },
                     {
                         id: 1,
@@ -241,7 +254,8 @@ export const LOCATIONS = [
                         cities: `Nagareth`,
                         features: `Desert, Oasis`,
                         description: `This is the dry and terrible deserts of northern Nagar; Home to the desert elves who withdrew from society  escape its hostility.`,
-                        image: oasis
+                        image: oasis,
+                        imageAlt: `Oasis of the Desert Elves`
                     },
                     {
                         id: 2,
@@ -258,7 +272,8 @@ export const LOCATIONS = [
                         cities: `None`,
                         features: `Tourmaline growing aggresively with tunneled caves within the island`,
                         description: `Arguthain is the sacred island to the dark armies. The tourmaline islands of Arguthain share the arid climate of Nagar.`,
-                        image: arguthain
+                        image: arguthain,
+                        imageAlt: `Qeṽa's Island of Arguthain`
                     }
                 ]
             }

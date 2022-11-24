@@ -13,14 +13,14 @@ export const TotalGemCount = DivGemCount + CardGemCount + IncGemCount;
 // RACE COUNTER
 let NobleRaceCount = 0
 for (const race of RACES) {
-    if ( race.hasOwnProperty('subtopics') ) {
-        NobleRaceCount += race.subtopics.length;
+    if ( race.hasOwnProperty('topics') ) {
+        NobleRaceCount += race.topics.length;
     } else {
         NobleRaceCount += 1;
     }
 }
 const DarkRaceCount = DRACES.length;
-const EtherRaceCount = DIVINE[2].types.length - 1; // minus 'the Great Demon'
+const EtherRaceCount = DIVINE[2].topics.length - 1; // minus 'the Great Demon'
 export const TotalRaceCount = NobleRaceCount + DarkRaceCount + EtherRaceCount;
 
 //CLASS COUNTER

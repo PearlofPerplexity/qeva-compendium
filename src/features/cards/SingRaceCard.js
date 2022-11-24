@@ -6,7 +6,7 @@ import BottomNav from "../BottomNav";
 // Used for Both Races & Dark Races with ternary operators handling differences below
 
 const SingRaceCard = (props) => {
-    const { image, name, heartStone, spawnStone, origin, elden, lifespan, height, weight, appearance, language, government, residence, foundedOrders, description } = props.array;
+    const { image, imageAlt, name, heartStone, spawnStone, origin, elden, lifespan, height, weight, appearance, language, government, residence, foundedOrders, description } = props.array;
 
     return (
     
@@ -20,7 +20,7 @@ const SingRaceCard = (props) => {
         <div className="col col-lg-10 col-xl-9 mt-4">
           <div className="row align-items-center background-box">
             <div className="mx-auto col-md-4 col-lg-2 sm-fixed-width">
-              <img className="card-img" src={image} alt="Card image cap" />
+              <img className="card-img" src={image} alt={imageAlt} />
             </div>
             <div className="col p-0 fs-7">
               <div className="card p-3 border-bottom-0">

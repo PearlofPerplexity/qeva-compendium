@@ -5,7 +5,7 @@ const DivEther = () => {
     return (
     <>
         <div className="container-fluid" id="accordionEth">
-            {DIVINE[2].types.map((eth) => {
+            {DIVINE[2].topics.map((eth) => {
             let headingID = 'heading' + eth.id;
             let collapseID = 'collapse' + eth.id;
             let dataTarget = '#collapse' + eth.id;
@@ -14,7 +14,7 @@ const DivEther = () => {
                 <div className="col col-lg-10 col-xl-9 mt-4" key={eth.id}>
                     <div className="row align-items-center background-box rounded-2">
                         <div className="mx-auto col-md-4 col-lg-2 d-none d-md-block md-fixed-width">
-                            <img className="card-img" src={eth.image} alt="Card image cap" />
+                            <img className="card-img" src={eth.image} alt={eth.imageAlt} />
                         </div>
                         <div className="col p-0 fs-7">
                             <div className="card p-3">

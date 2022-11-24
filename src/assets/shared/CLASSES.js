@@ -20,6 +20,7 @@ export const CLASSES = [
         sacredText: `Sa Siavana`,
         worldKnowledge: `High`,
         image: sentinel,
+        imageAlt: `Oracle Logo`,
         topics: [
             {
                 id: 0,
@@ -383,6 +384,7 @@ export const CLASSES = [
         sacredText: `SenSavye (From the Sentinels)`,
         worldKnowledge: `Medium`,
         image: caracadre,
+        imageAlt: `Caracadre Logo`,
         topics: [
             {
                 id: 0,
@@ -528,6 +530,7 @@ export const CLASSES = [
         sacredText: `SenSavye (From the Sentinels)`,
         worldKnowledge: `Medium`,
         image: avlimeth,
+        imageAlt: `Avlimeth Logo`,
         topics: [
             {
                 id: 0,
@@ -552,6 +555,7 @@ export const CLASSES = [
         sacredText: `Histories of Avlim`,
         worldKnowledge: `Medium-High`,
         image: elvishcloaks,
+        imageAlt: `Elvish Cloaks Logo`,
         topics: [
             {
                 id: 0,
@@ -571,6 +575,7 @@ export const CLASSES = [
         sacredText: `Thesáthsia`,
         worldKnowledge: `Medium-High`,
         image: avikin,
+        imageAlt: `Avikin Logo`,
         topics: [
             {
                 id: 0,
@@ -590,6 +595,7 @@ export const CLASSES = [
         sacredText: `None`,
         worldKnowledge: `Low`,
         image: ghostblade,
+        imageAlt: `Ghostblade Logo`,
         topics: [
             {
                 id: 0,
@@ -609,6 +615,7 @@ export const CLASSES = [
         sacredText: `None`,
         worldKnowledge: `Medium`,
         image: uncorrupted,
+        imageAlt: `Uncorrupted Logo`,
         topics: [
             {
                 id: 0,
@@ -628,6 +635,7 @@ export const CLASSES = [
         sacredText: `None`,
         worldKnowledge: `Low`,
         image: toppler,
+        imageAlt: `Toppler Logo`,
         topics: [
             {
                 id: 0,
@@ -647,6 +655,7 @@ export const CLASSES = [
         sacredText: `None`,
         worldKnowledge: `Medium`,
         image: feather,
+        imageAlt: `Order of the Feather Logo`,
         topics: [
             {
                 id: 0,

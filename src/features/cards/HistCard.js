@@ -14,7 +14,7 @@ const HistCard = (props) => {
                             <h3 className="mb-0 p-3">{props.array.name}</h3>
                         </div>
                         {props.array.image ? (
-                            <img className='card-img' src={props.array.image} />
+                            <img className='card-img' src={props.array.image} alt={props.array.imageAlt} />
                         ) 
                         : ('')}
                     </div>

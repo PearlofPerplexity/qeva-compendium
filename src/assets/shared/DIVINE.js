@@ -84,7 +84,7 @@ export const DIVINE = [
         id: 2,
         link: `/divine/ethereals`,
         name: `Ethereals`,
-        types: [
+        topics: [
             {
                 id: 0,
                 name: `Spirit`,
@@ -92,7 +92,8 @@ export const DIVINE = [
                 form: `Ethereal`,
                 influence: `Medium`,
                 description: `Spirits (or Haelas in the celestial tongue) are the original and intended form of all ethereals. They dwell and act from the ether as immortal beings and are perfectly aligned with DIA meaning they have never committed evil. However, this does not mean that they do the greatest good. Some are free of evil and still lazy, unfocused or simply untapped of their full potential.`,
-                image: spirit
+                image: spirit,
+                imageAlt: `Qeṽa Spirit`,
             },
             {
                 id: 1,
@@ -101,7 +102,8 @@ export const DIVINE = [
                 form: `Ethereal`,
                 influence: `High`,
                 description: `Seraphs or “Gran Haelas” are granted the highest respect among all spirits and are endowed with special gifts and responsibilities. You will recognize them at once if you ever see them. Wings hide their face and their feet and spread from their torso. They are so powerful they bring light to the physical world wherever they step. They are only matched by Gran Haellians in ethereal combat.`,
-                image: seraph
+                image: seraph,
+                imageAlt: `Qeṽa Seraph`,
             },
             {
                 id: 2,
@@ -110,7 +112,8 @@ export const DIVINE = [
                 form: `Physical`,
                 influence: `Low`,
                 description: `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their celestite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them mortal. They would look identical to humans if not for their luminescence. They are rare in Qeva and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
-                image: spectre
+                image: spectre,
+                imageAlt: `Qeṽa Spectre`,
             },
             {
                 id: 3,
@@ -119,7 +122,8 @@ export const DIVINE = [
                 form: `Ethereal`,
                 influence: `Medium`,
                 description: `Wraiths or Haellians maintain their immortal, spiritual existence and grip on celestite and yet have turned away from the pursuit of goodness and alignment with DIA. They work from the ether to oppose DIA and attack the physical beings who represent HIM. Their power derives from the void.`,
-                image: wraith
+                image: wraith,
+                imageAlt: `Qeṽa Wraith`,
             },
             {
                 id: 4,
@@ -128,7 +132,8 @@ export const DIVINE = [
                 form: `Ethereal`,
                 influence: `High`,
                 description: `There are some wraiths so powerful that they manifest a physical shadow when they are near. These are known as the shadow reapers or “Gran Haellians” and are high servants of the great demon. They are the greatest tests of the will beyond the great demon himself.`,
-                image: shadowReaper
+                image: shadowReaper,
+                imageAlt: `Qeṽa Shadow Reaper`,
             },
             {
                 id: 5,
@@ -137,7 +142,8 @@ export const DIVINE = [
                 form: `Physical`,
                 influence: `Low`,
                 description: `Like wraiths, Reapers (Muerarayas) oppose goodness and DIA, but unlike wraiths they take a physical form. They often take this form out of impatience to ravage DIA's creation in the ether and so are wild and savage when met, though some are able to subdue their bloodlust long enough to deceive. This being said, they prefer to take terrible shapes and even interbreed with orcs to create even more terrible creatures.`,
-                image: reaper
+                image: reaper,
+                imageAlt: `Qeṽa Reaper`,
             },
             {
                 id: 6,
@@ -146,7 +152,8 @@ export const DIVINE = [
                 form: `Ethereal & Physical`,
                 influence: `Very High`,
                 description: `Wraiths are not witless nor haphazard in their response to the ethereal's divine council. They are led by an evil one so great, he is not flippantly named or taunted. His tendrils you see, but rarely his face. The great demon he is called on the earth below and “Mentroso” in the ether above. They say he will turn your heart as cold as the void when you are near. You will lose any will to oppose him the second you fall under his shadow. Legend says he was once the greatest and most gifted spirit to reign the haelas and the whole ether and outerworld, but when he had pushed all the expanses of space, it was still not enough for him. He desired more; the rulership of Qeva and so he would find a way to achieve physical form alongside his ethereal form and have it for a short time.`,
-                image: demon
+                image: demon,
+                imageAlt: `The Great Demon of Qeṽa`,
             }
         ]
     },
@@ -163,7 +170,7 @@ export const DIVINE = [
             {
                 id: 1,
                 name: `Souls`,
-                description: `DIA is the god and creator of Qeva and has always existed. All who revere HIM write HIS name and pronouns (HE, HIM, HIS, HIMSELF) in uppercase letters.`,
+                description: `Souls are the immaterial existence of all sentient beings. They are immortal and therefore cannot be destroyed. They anatomically reside beside one's heart in what is called the soul chamber.`,
                 subtopics: [
                     {
                         id: 0,
@@ -189,7 +196,7 @@ export const DIVINE = [
                     },
                     {
                         id: 1,
-                        name: `celestite and the End of the World`,
+                        name: `Celestite and the End of the World`,
                         description: `As mentioned above, celestite's property of transmutation allows it to pass through time and space unbound. This makes it near impossible for an ethereal to recover once they have chosen physical form. However, it has an even greater impact on the world. As ethereals release celestite by taking physical form and sentients likewise release the celestite of their soul chambers throughout their life, gravity pulls these crystals toward the center of the world and the world grows increasingly invisible until the whole world ultimately becomes engulfed by it. Ironically, the witnessing of this growing invisibility in the very end quickens bloodshed and expedites the flow of celestite into the world. Only then is the veil be pulled back and all planes of existence united in the endworld at agate above. Conversely, while celestite grows stronger in the world, the physical gems grow weaker. This waning of gems allows the wraiths and other evils to enter into Avlim that used to be contained in outer continents.`
                     },
                     {
@@ -260,9 +267,9 @@ export const DIVINE = [
                         id: 7,
                         name: `Death`,
                         description: `When a physical being dies, the whole person is not annihilated. The soul divorces the body and continues to live. Unfettered by the physical body, the soul lifts upward into the ether, where the ethereals live and remain there until agate above. This does not mean they become ethereals, not in the slightest. They do not have the same mobility and agency as ethereals and can only watch the inner workings of the world peacefully from above. Some who are wise, describe their existence in the ether as clouds among birds. Ethereals are like birds who can fly throughout the ether and fly down to the earth below and do as they wish, while disembodied souls drift where the wind takes them, where DIA wishes them to see.`
-                    },
+                    }
                 ]
-            },
+            }
         ]
     }
 ];

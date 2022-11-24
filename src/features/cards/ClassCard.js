@@ -7,7 +7,7 @@ import BottomNav from "../BottomNav";
 // Used for Both Races & Dark Races with ternary operators handling differences below
 
 const ClassCard = (props) => {
-    const { image, name, quality, goal, race, primaryWeapon, sacredText, worldKnowledge } = props.array;
+    const { image, imageAlt, name, quality, goal, race, primaryWeapon, sacredText, worldKnowledge } = props.array;
 
     return (
     
@@ -17,7 +17,7 @@ const ClassCard = (props) => {
         <div className="col col-lg-10 col-xl-9 mt-4">
           <div className="row align-items-center background-box">
             <div className="mx-auto col-md-4 col-lg-2 sm-fixed-width">
-              <img className="card-img" src={image} alt="Card image cap" />
+              <img className="card-img" src={image} alt={imageAlt} />
             </div>
             <div className="col p-0 fs-7">
               <div className="card p-4 border-bottom-0">
@@ -36,7 +36,7 @@ const ClassCard = (props) => {
               <ul className="list-group list-group-flush">
                 <li className="list-group-item"><b>Goal</b> {goal}</li>
                 <li className="list-group-item"><b>Sacred Text</b> {sacredText}</li>
-                <li className="list-group-item"><b>worldKnowledge</b> {worldKnowledge}</li>
+                <li className="list-group-item"><b>World Knowledge</b> {worldKnowledge}</li>
                 <li className="list-group-item"><b>Possible Races</b> {race}</li>
                 <li className="list-group-item"><b>Primary Weapon</b> {primaryWeapon}</li>
               </ul>

@@ -14,7 +14,7 @@ const DivGem = () => {
                 <div className="col col-lg-10 col-xl-9 mt-4" key={gem.id}>
                     <div className="row align-items-center background-box rounded-2">
                         <div className="mx-auto col-md-4 col-lg-2 d-none d-md-block fixed-width">
-                            <img className="card-img" src={gem.image} alt="Card image cap" />
+                            <img className="card-img" src={gem.image} alt={gem.imageAlt} />
                         </div>
                         <div className="col p-0 fs-7">
                             <div className="card p-3">

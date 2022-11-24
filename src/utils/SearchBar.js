@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SearchIcon, CloseIcon } from "./icon";
+import { BASICS } from "../assets/shared/BASICS";
 import { CHARACTERS } from '../assets/shared/CHARACTERS';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { DIVINE } from '../assets/shared/DIVINE';
@@ -24,6 +25,7 @@ const SearchBar = () => {
 // 
 
     const allArrays = [
+        ...BASICS,
         ...CHARACTERS, 
         ...CLASSES, 
         ...DIVINE, 
@@ -92,7 +94,7 @@ const SearchBar = () => {
                         {filteredData.map((value, key) => (
                             filteredData.length === 0 ? ('') : (
                                 <Link className='dataItem' to={value.link} key={key} onClick={clearInput}>
-                                    <p>"{wordEntered}" found in {value.name}</p>
+                                    <p><em>"{wordEntered}"</em> found in <strong>{value.name}</strong></p>
                                 </Link>
                             )
                         ))}
