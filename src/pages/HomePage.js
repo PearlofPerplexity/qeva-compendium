@@ -41,36 +41,36 @@ const HomePage = () => {
 
             <section className="highlights mt-4">
                 <div className="row">
-                    <Link className="col-lg-4" to={GemLink}>
-                        <div className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+                    <div className="col-lg-4">
+                        <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3" to={GemLink}>
                             <i className="iconify fs-2" data-icon="twemoji:gem-stone"></i>
                             <div className="ms-3">
                                 <div className="d-flex align-items-center">
                                     <h3 className="mb-0">Gemstones</h3>
                                 </div>
                             </div>
-                        </div>
-                    </Link>
-                    <Link className="col-lg-4 covered-div" to={RaceLink}>
-                        <div className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+                        </Link>
+                    </div>
+                    <div className="col-lg-4 covered-div">
+                        <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3" to={RaceLink}>
                             <i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i>
                             <div className="ms-3">
                                 <div className="d-flex align-items-center">
                                     <h3 className="mb-0">Races</h3>
                                 </div>
                             </div>
-                        </div>
-                    </Link>
-                    <Link className="col-lg-4" to={ClassLink}>
-                        <div className="box d-flex rounded-2 align-items-center p-3">
+                        </Link>
+                    </div>
+                    <div className="col-lg-4" to={ClassLink}>
+                        <Link className="box d-flex rounded-2 align-items-center p-3">
                             <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
                             <div className="ms-3">
                                 <div className="d-flex align-items-center">
                                     <h3 className="mb-0">Classes</h3>
                                 </div>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                 </div>      
             </section>
 

@@ -22,7 +22,7 @@ import {
     MapIcon
 } from '../utils/icon';
 import { BasicLink } from '../utils/link';
-import Sidebar from '../features/Sidebar';
+import Sidebar from './Sidebar';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { DIVINE } from '../assets/shared/DIVINE';
 import { DRACES } from '../assets/shared/DRACES';
