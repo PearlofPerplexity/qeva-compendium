@@ -4,7 +4,7 @@ import {
     Nav,
     NavItem
 } from 'reactstrap';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const InnerExMenu = (props) => {
     return (
@@ -29,13 +29,15 @@ const InnerExMenu = (props) => {
                                                 <NavItem className='button'>
                                                     <NavLink className='nav-link text-nowrap text-center' to={type.link}>{type.name}</NavLink>
                                                 </NavItem>
-                                                    <div className='box text-center p-2 fst-italic'>
-                                                        {type.topics.map((props) => (
-                                                            <React.Fragment key={props.id}>
-                                                                <Link to=''>| {props.name} |</Link>
-                                                            </React.Fragment>
-                                                        ))}
-                                                    </div>
+                                                    {type.topics && (
+                                                        <div className='box text-center fst-italic pt-3'>
+                                                            {type.topics.map((props) => (
+                                                                <React.Fragment key={props.id}>
+                                                                    <p>{props.name}</p>
+                                                                </React.Fragment>
+                                                            ))}
+                                                        </div>
+                                                    )}
                                             </React.Fragment>
                                         );
                                     })}

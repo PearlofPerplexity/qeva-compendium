@@ -22,7 +22,7 @@ const InnerSmNav = (props) => {
                         <div className='d-flex align-items-center p-0 m-0'>
                             <Navbar dark className='container p-0 m-0' id='lgnav' expand='xs'>   
                                 <Nav className='tab row text-center p-0 m-0' style={{width: '100%'}} navbar>
-                                    <NavItem className='col-12 button' id='inactive'>
+                                    <NavItem className='col-12 button welcome'>
                                         <NavLink className='nav-link text-nowrap'  to='/' >Home</NavLink>
                                     </NavItem>
                                 </Nav>

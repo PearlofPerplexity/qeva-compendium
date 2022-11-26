@@ -1,6 +1,6 @@
-import LgInnerNav from "../navs/LgInnerNav";
 import { LocIcon } from "../../utils/icon";
 import { LocLink } from "../../utils/link";
+import LgInnerNav from "../navs/LgInnerNav";
 import TxtCards from "./TxtCards";
 import BottomNav from "../navs/BottomNav";
 
@@ -12,7 +12,7 @@ return (
 <div className="container-fluid">
 <section className="highlights mt-4">
     <div className="row">
-        <div className="col col-lg-10 col-xl-9 welcome">
+        <div className="col col-lg-10 col-xl-9">
             <div className="box mb-lg-0 p-3 card-body rounded-2">
                 <h3 className="mb-0 p-3">{props.array.name}</h3>
                 <p className="card-text ps-3">{props.array.description}</p>
@@ -107,7 +107,7 @@ return (
         <>
             <section className="highlights mt-4">
                 <div className="row">
-                    <div className="col col-lg-10 col-xl-9 welcome">
+                    <div className="col col-lg-10 col-xl-9">
                         <div className="box mb-lg-0 p-3 card-body rounded-2">
                             <h3 className="mb-0 p-3">History of {props.array.name}</h3>
                         </div>

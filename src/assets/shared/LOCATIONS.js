@@ -283,8 +283,7 @@ export const LOCATIONS = [
         id: 1,
         link: `/locations/malune`,
         name: `Malunë`,
-        description: ``,
-        topics: [],
+        description: `Malunë is the island of the elves; their southern sanctuary from the void and evils of Avlim, hidden by celestite and known only to their kind.`,
         hTopics: [
             {
                 id: 0,
@@ -341,9 +340,8 @@ export const LOCATIONS = [
         id: 2,
         link: `/locations/orcava`,
         name: `Orcaṽa`,
-        description: ``,
+        description: `Orcaṽa is the land, which broke northward and quickly took on a terribly cold climate, which drew the Asiame race to it.`,
         image: orcava,
-        topics: [],
         hTopics: [
             {
                 id: 0,
@@ -375,7 +373,7 @@ export const LOCATIONS = [
         id: 3,
         link: `/locations/baroach`,
         name: `Baroach`,
-        description: ``,
+        description: `Baroach are the lands of Nagar that broke eastward at the breaking of Qeva and become home to a nation of Ohri children.`,
         image: baroach,
         topics: [
             {
@@ -396,7 +394,7 @@ export const LOCATIONS = [
                         race: `Ohri`,
                         cities: `Uthaduhn`,
                         features: `Sea Caves`,
-                        description: `Home to the Ohri children in their separation from Avlim`
+                        description: `The Sea Caves of Uthaduhn was the first home to the Ohri children in their separation from Avlim. After the breaking of Qeva, the Ohri moved inward and made their dwelling there till their exodus southward.`
                     },
                     {
                         id: 1,
@@ -404,7 +402,7 @@ export const LOCATIONS = [
                         race: `Ohri`,
                         cities: `Untu`,
                         features: `Dry Caves`,
-                        description: `Another home to the Ohri children in their separation from Avlim`
+                        description: `The Caves of Untu were another home to the Ohri children, who broke away from the larger group of Ohri children. They re-established the way of the orc which they remembered from their parents.`
                     },
                     {
                         id: 2,
@@ -412,7 +410,7 @@ export const LOCATIONS = [
                         race: `Orc`,
                         cities: `Ouaruk`,
                         features: `Coastal Cliffs`,
-                        description: `Northwestern portion of Baroach`
+                        description: `Oril makes up the Northwestern portion of Baroach and was least inhabited of Baroach's mainland outside of the unlivable Avu Dunes.`
                     },
                     {
                         id: 3,
@@ -420,7 +418,7 @@ export const LOCATIONS = [
                         race: `None`,
                         cities: `None`,
                         features: `Eroding Islands`,
-                        description: `Called "The Unlived Isles" for never hosting any sentient cvilization.`
+                        description: `Called "The Unlived Isles" for never hosting any sentient cvilization. Like the shattered sea, these islands were highly erosive and acted as floating debris from the breaking of Qeva.`
                     }
                 ]
             },
@@ -572,7 +570,6 @@ export const LOCATIONS = [
         id: 4,
         link: `/locations/aguave`,
         name: `Aguavé`,
-        description: ``,
-        topics: []
+        description: `Aguavé is the lush land westward, which interacted little if at all with the affairs of Avlim and its people.`
     }
 ]

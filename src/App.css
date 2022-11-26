@@ -13,6 +13,7 @@
 	--dk-dark-bg: #313b48;
 	--dk-darker-bg: #2a323d;
 	--navbar-bg-color: #374969;
+	--navbar-bg-lt: #40567c;
 	--navbar-bg-dk: #2c3c56;
 	--sidebar-bg-color: #252d36;
 	--sidebar-width: 250px;
@@ -172,12 +173,16 @@ aside ul {
 /** --------------------------------
  -- welcome
 -------------------------------- */
-.welcome {
+.welcome, .intro {
 	color: var(--dk-gray-300);
 }
 
-.welcome .content, #inactive {
-	background-color: var(--navbar-bg-color);
+.welcome .content, .welcome {
+	background-color: var(--navbar-bg-color)!important;
+}
+
+.welcome:hover {
+	background-color: var(--navbar-bg-lt)!important;
 }
 
 .welcome p {

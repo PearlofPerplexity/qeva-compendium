@@ -13,30 +13,39 @@ import { HISTORY } from '../assets/shared/HISTORY';
 import { LOCATIONS } from '../assets/shared/LOCATIONS';
 import { RACES } from '../assets/shared/RACES';
 
+const allArrays = [
+    ...BASICS,
+    ...CHARACTERS,
+    ...CLASSES, 
+    ...DIVINE, 
+    ...DRACES, 
+    ...FAUNA,
+    ...FLORA,
+    ...GEMS,
+    ...HISTORY,
+    ...LOCATIONS,
+    ...RACES
+]
 
-const SearchBar = () => {
+// Flattens objects to single level
+const flatArray = (array) => {
+    let topics = [];
+    const flattenMembers = array.map(m => {
+      if (m.topics && m.topics.length) {
+        m.topics.map((topic) => {
+            topic.link = m.link;
+            return;
+        })
+        topics = [...topics, ...m.topics];
+      }
+      return m;
+    });
+    return flattenMembers.concat(topics.length ? flatArray(topics) : topics);
+  };
 
-// let tmp = [];
-// for (const sub in races.subtopics) {
-//     tmp.push(sub);
-// }
-// For (const sub in races.subtopics) {
-// Getting Nested Comments
-// 
+const data = flatArray(allArrays);
 
-    const allArrays = [
-        ...BASICS,
-        ...CHARACTERS, 
-        ...CLASSES, 
-        ...DIVINE, 
-        ...DRACES, 
-        ...FAUNA,
-        ...FLORA,
-        ...GEMS,
-        ...HISTORY,
-        ...LOCATIONS,
-        ...RACES
-    ]
+const SearchBar = () => {    
 
     // The Filtered State of the Array
     const [filteredData, setFilteredData] = useState([]);
@@ -46,15 +55,6 @@ const SearchBar = () => {
     const handleFilter = (event) => {
         const searchWord = event.target.value;
         setWordEntered(searchWord);
-
-        console.log('all arrays:', allArrays);
-
-        const data = allArrays;
-        // const data = allArrays.flatMap(
-        //     (element) => element.topics.subtopics
-        // );
-
-        console.log('data variable:', data);
 
         let newFilter = data.filter
         (value => {

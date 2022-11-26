@@ -23,5 +23,4 @@ export const ScrollIcon = 'uil uil-cloud-upload';
 
 // Search Icon
 export const SearchIcon = 'uil uil-search';
-export const CloseIcon = 'uil uil-multiply';
-    // Can also try 'uil uil-times'
+export const CloseIcon = 'uil uil-multiply'; // Can also try 'uil uil-times'
