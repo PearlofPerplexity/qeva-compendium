@@ -51,6 +51,7 @@ const SearchBar = () => {
     const [filteredData, setFilteredData] = useState([]);
     // The Value State of the Input Field
     const [wordEntered, setWordEntered] = useState("");
+    const [placeholder, setPlaceholder] = useState("Search Compendium...");
 
     const handleFilter = (event) => {
         const searchWord = event.target.value;
@@ -71,7 +72,13 @@ const SearchBar = () => {
 
     const clearInput = () => {
         setWordEntered([]);
+        setPlaceholder("Search Compendium...")
     };
+
+    const searchInput = () => {
+        setPlaceholder(wordEntered);
+        setWordEntered([]);
+    }
 
     return (
             <div className="searchbar rounded-2">
@@ -79,7 +86,7 @@ const SearchBar = () => {
                     <input 
                         type='text'
                         className='form-control border-0'
-                        placeholder="Search Compendium..."
+                        placeholder={placeholder}
                         value={wordEntered}
                         onChange={handleFilter}
                     />
@@ -93,7 +100,7 @@ const SearchBar = () => {
                     <div className="dataResult rounded-2">
                         {filteredData.map((value, key) => (
                             filteredData.length === 0 ? ('') : (
-                                <Link className='dataItem' to={value.link} key={key} onClick={clearInput}>
+                                <Link className='dataItem' to={value.link} key={key} onClick={searchInput}>
                                     <p><em>"{wordEntered}"</em> found in <strong>{value.name}</strong></p>
                                 </Link>
                             )

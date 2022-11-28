@@ -327,7 +327,7 @@ export const LOCATIONS = [
                         “You shall be the Guardian of this stone,” Silru said. “And you shall also be the Guardian of Malune. Let us take this stone and enchant our borders. Let us make the island invisible to all foreign eyes. We will welcome those who we welcome and turn away those we wish to turn away.” With that, Inofain took the stone and cloaked the Island in Invisibility. He wrapped the stone in leather and kept it in a satchel on his right hip. He became the gatekeeper to any who wished passage to Malune. His hand remained invisible for the rest of his days.`
                     },
                     {
-                        id: 5,
+                        id: 6,
                         name: `Inofain's Stone`,
                         year: `400 V.E.`,
                         description: `As time passed, Inofain noticed that more and more of his body began to disappear the longer he remained with the stone. Eventually, he would become a being of complete invisibility, a being of the ether.`

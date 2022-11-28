@@ -115,7 +115,7 @@ export const GEMS = [
                 imageAlt: `Qeṽa Tiger's Eye Gem`
             },
             {
-                id: 4,
+                id: 5,
                 name: `Moonstone`,
                 quality: `Life Breath`,
                 purpose: `Invoke Sentience`,
