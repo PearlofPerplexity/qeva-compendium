@@ -8,6 +8,13 @@ import ave from '../imgs/races/ave.png';
 import elder from '../imgs/races/eldar.png';
 import human from '../imgs/races/human.png';
 import halfElf from '../imgs/races/half-elf.png';
+import bdwarf from '../imgs/races/bdwarf.png';
+import tdwarf from '../imgs/races/tdwarf.png';
+import ggnome from '../imgs/races/ggnome.png';
+import bgnome from '../imgs/races/bgnome.png';
+import rgnome from '../imgs/races/rgnome.png';
+import osei from '../imgs/races/osei.png';
+import half from '../imgs/races/half.png';
 import aeoki from '../imgs/races/aeoki.png';
 import user from '../imgs/races/user.png';
 
@@ -18,6 +25,7 @@ Aviame
 Humans
 Osei
 Gnomes
+Dwarves
 Halflings
 Aeoki
 Arborums
@@ -38,7 +46,7 @@ export const RACES = [
         language: `Elvish`,
         government: `Republic`,
         foundedOrders: `Elvish Cloaks`,
-        description: `Elves were the first race to live in Qeva. They roamed the world and even the stars for a thousand years before the other races appeared. They are immortal therefore wisest of the races. They can be deciphered from men by their fair skin, and pointed ears. They are responsible for the cathedrals around Qeva mythed to be erected through divination and they are drawn to DIA's attributes in water and wood.`,
+        description: `Elves were the first race to live in Qeṽa. They roamed the world and even the stars for a thousand years before the other races appeared. They are immortal therefore wisest of the races. They can be deciphered from men by their fair skin, and pointed ears. They are responsible for the cathedrals around Qeṽa mythed to be erected through divination and they are drawn to DIA's attributes in water and wood.`,
         topics: [
             {
                 id: 0,
@@ -174,7 +182,7 @@ export const RACES = [
                 residence: `Brielle`,
                 appearance: `Each elden different`,
                 description: 
-                    `The Elden were the first nine created by Dia and from them all men were born. Their names are not all known, but nearly all are familiar with Amare, Xaradriel, Çairça and Nware. They were the only elves taught divination directly from DIA and so were commanded to oversee the sentinel order. Thus, they are said to be the wisest of all.`,
+                    `The Elden were the first nine created by Dia and from them all men were born. Their names are not all known, but nearly all are familiar with Amare, Xaradriel, Çairça and Nware. They were the only elves taught divination directly from DIA and so were commanded to oversee the oracle order. Thus, they are said to be the wisest of all.`,
                 image: elder,
                 imageAlt: `Qeṽa Elden`
             }
@@ -195,8 +203,8 @@ export const RACES = [
         government: `Theocracy`,
         residence: `None`,
         foundedOrders: `The Uncorrupted`,
-        description: `Among the known peoples of Avlim, the Ocra seem to be the only race without a homeland and without the guidance of an eldar. They have pale skin and a tall muscular build. They are nearly as stoic as the elves, but with a sharper sense of hardened character. Not surprisingly, they are not fast made friends, though they are rumored to be the kindest of strangers if approached. This temperament and body type matches their known recognition for being great warriors with unmatched discipline. They mix into the various lands of Qeva, often holding high military positions.`,
-        image: user,
+        description: `Among the known peoples of Avlim, the Ocra seem to be the only race without a homeland and without the guidance of an eldar. They have pale skin and a tall muscular build. They are nearly as stoic as the elves, but with a sharper sense of hardened character. Not surprisingly, they are not fast made friends, though they are rumored to be the kindest of strangers if approached. This temperament and body type matches their known recognition for being great warriors with unmatched discipline. They mix into the various lands of Qeṽa, often holding high military positions.`,
+        image: osei,
         imageAlt: `Qeṽa Osei`
     },
     {
@@ -222,7 +230,7 @@ export const RACES = [
                 appearance: `~Black Hair, White Skin`,
                 description: 
                     `The Dwarves of the west are dispersed in the Thrush mountains with their largest stronghold being in Haraduin. Acting as gatekeepers between Navalil and Ouri, they learned to have better relations with other races than eastern dwarves. They formed significant relationships with both halflings and elves.`,
-                image: user,
+                image: tdwarf,
                 imageAlt: `Qeṽa Dwarf of the Thrush Mountains`
             },
             {
@@ -232,7 +240,7 @@ export const RACES = [
                 appearance: `~Brown Hair, White Skin`,
                 description: 
                     `The eastern dwarves of the Bare Mountains are bread even harder than their western cousins and are not typically an amiable acquaintance. They reside in the barren lands of Shaole, where few things grow or last and their greatest city was Barahduil until it was overtaken by the dark armies. Now, any great gathering of western dwarves is hidden or eradicated and dispersed.`,
-                image: user,
+                image: bdwarf,
                 imageAlt: `Qeṽa Dwarf of the Bare Mountains`
             }
         ]
@@ -260,7 +268,7 @@ export const RACES = [
                 appearance: `Green Skin`,
                 description: 
                     `Green Gnomes can be found in Farathain, the southern region of Ouri below Fletcheren. Their greatest towns are Nalri in the wood and Nadia south of Loch Ladish. Unlike most sentient races, these Gnomes have a natural propensity for divination. Without any training, they begin forming minor illusions as children and progress in their skill from there.`,
-                image: user,
+                image: ggnome,
                 imageAlt: `Qeṽa Green Gnome`
             },
             {
@@ -270,7 +278,7 @@ export const RACES = [
                 appearance: `Blue Skin`,
                 description: 
                     `Blue Gnomes live on the island, Haven, southwest of Avlim with their greatest city being Amvil, city of bridges. They are the farthest removed from world events, though Haven was the primary refuge for all races during the reign of Ithmar and his void that brought on the age of darkness. Like green gnomes, they have a natural propensity for divination.`,
-                image: user,
+                image: bgnome,
                 imageAlt: `Qeṽa Blue Gnome`
             },
             {
@@ -280,7 +288,7 @@ export const RACES = [
                 appearance: `Red Skin`,
                 description: 
                     `Unlike green and blue gnomes, red gnomes do not have an ability to produce divination, but only magic. Also unlike other gnomes, they are unfriendly if not altogether hostile. No one seems to really know their source of origin, though most claim that they live in the uninhabited treelines of the thrush and bare mountains.`,
-                image: user,
+                image: rgnome,
                 imageAlt: `Qeṽa Red Gnome`
             }
         ]
@@ -300,8 +308,8 @@ export const RACES = [
         government: `Democracy`,
         residence: `Fletcheren`,
         foundedOrders: `The Topplers`,
-        description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the Eldar, Xaradriel and Sentinel, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for 75% of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
-        image: user,
+        description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the Eldar, Xaradriel and oracle, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for 75% of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
+        image: half,
         imageAlt: `Qeṽa Halfling`
     },
     {
@@ -318,7 +326,7 @@ export const RACES = [
         language: `Kigaul`,
         government: `Communal`,
         residence: `Mhindileth`,
-        description: `Rarely seen are the Aeoki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for divination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the sentinels, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
+        description: `Rarely seen are the Aeoki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for divination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the oracles, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
         image: aeoki,
         imageAlt: `Qeṽa Aeoki`
     },

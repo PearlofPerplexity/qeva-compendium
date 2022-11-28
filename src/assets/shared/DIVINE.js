@@ -40,7 +40,7 @@ export const DIVINE = [
             {
                 id: 3,
                 name: `Etherworld`,
-                description: `The etherworld or ether is the home of the ethereals. It is the layer of heaven in which all ethereals live and disembodied souls are pulled. It will be abolished at the coming of agate above, when DIA removes celestite from Qeva.`
+                description: `The etherworld or ether is the home of the ethereals. It is the layer of heaven in which all ethereals live and disembodied souls are pulled. It will be abolished at the coming of agate above, when DIA removes celestite from Qeṽa.`
             },
             {
                 id: 4,
@@ -63,7 +63,7 @@ export const DIVINE = [
             {
                 id: 0,
                 name: `True Divination`,
-                description: `Also known as True touch, true divination gives one unnatural power over non-sentient creation and it takes many forms. A diviner may be able to manipulate the elements by moving water, earth and air or by removing it from existence and pulling it into the void layer of heaven by a deep and dark divination known as void magic. It may interact with the ethereals through revelation or the body through healing. Its only limit that is known is its restriction from sentient beings. A sentient creation is untouchable by any type of divination. All forms can be developed and exploited as a diviner learns more about the extent of their power and imagines its possibilities. The Aeoki are the only natural wielders of True Divination and the sentinels are the only beings classically trained in it.`
+                description: `Also known as True touch, true divination gives one unnatural power over non-sentient creation and it takes many forms. A diviner may be able to manipulate the elements by moving water, earth and air or by removing it from existence and pulling it into the void layer of heaven by a deep and dark divination known as void magic. It may interact with the ethereals through revelation or the body through healing. Its only limit that is known is its restriction from sentient beings. A sentient creation is untouchable by any type of divination. All forms can be developed and exploited as a diviner learns more about the extent of their power and imagines its possibilities. The Aeoki are the only natural wielders of True Divination and the oracles are the only beings classically trained in it.`
             },
             {
                 id: 1,
@@ -114,7 +114,7 @@ export const DIVINE = [
                 alignment: `Good`,
                 form: `Physical`,
                 influence: `Low`,
-                description: `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their celestite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them mortal. They would look identical to humans if not for their luminescence. They are rare in Qeva and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
+                description: `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their celestite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them mortal. They would look identical to humans if not for their luminescence. They are rare in Qeṽa and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
                 image: spectre,
                 imageAlt: `Qeṽa Spectre`,
             },
@@ -154,7 +154,7 @@ export const DIVINE = [
                 alignment: `Evil`,
                 form: `Ethereal & Physical`,
                 influence: `Very High`,
-                description: `Wraiths are not witless nor haphazard in their response to the ethereal's divine council. They are led by an evil one so great, he is not flippantly named or taunted. His tendrils you see, but rarely his face. The great demon he is called on the earth below and “Mentroso” in the ether above. They say he will turn your heart as cold as the void when you are near. You will lose any will to oppose him the second you fall under his shadow. Legend says he was once the greatest and most gifted spirit to reign the haelas and the whole ether and outerworld, but when he had pushed all the expanses of space, it was still not enough for him. He desired more; the rulership of Qeva and so he would find a way to achieve physical form alongside his ethereal form and have it for a short time.`,
+                description: `Wraiths are not witless nor haphazard in their response to the ethereal's divine council. They are led by an evil one so great, he is not flippantly named or taunted. His tendrils you see, but rarely his face. The great demon he is called on the earth below and “Mentroso” in the ether above. They say he will turn your heart as cold as the void when you are near. You will lose any will to oppose him the second you fall under his shadow. Legend says he was once the greatest and most gifted spirit to reign the haelas and the whole ether and outerworld, but when he had pushed all the expanses of space, it was still not enough for him. He desired more; the rulership of Qeṽa and so he would find a way to achieve physical form alongside his ethereal form and have it for a short time.`,
                 image: demon,
                 imageAlt: `The Great Demon of Qeṽa`,
             }
@@ -168,7 +168,7 @@ export const DIVINE = [
             {
                 id: 0,
                 name: `DIA`,
-                description: `DIA is the god and creator of Qeva and has always existed. All who revere HIM write HIS name and pronouns (HE, HIM, HIS, HIMSELF) in uppercase letters.`
+                description: `DIA is the god and creator of Qeṽa and has always existed. All who revere HIM write HIS name and pronouns (HE, HIM, HIS, HIMSELF) in uppercase letters.`
             },
             {
                 id: 1,
@@ -212,17 +212,17 @@ export const DIVINE = [
             {
                 id: 3,
                 name: `Ethereals`,
-                description: `Ethereals live in Qeva like any other race, but they are born of the stone of invisibility by DIA himself and therefore cannot be seen. At least not by any ordinary means. They live in the etherworld, an invisible layer in the heavens above Qeva. They are not only immortal like Elves, but invincible in their ethereal form. They can suffer great wounds, mystical to the physical realm, but will always regain their strength.`,
+                description: `Ethereals live in Qeṽa like any other race, but they are born of the stone of invisibility by DIA himself and therefore cannot be seen. At least not by any ordinary means. They live in the etherworld, an invisible layer in the heavens above Qeṽa. They are not only immortal like Elves, but invincible in their ethereal form. They can suffer great wounds, mystical to the physical realm, but will always regain their strength.`,
                 subtopics: [
                     {
                         id: 0,
                         name: `Creation of Ethereals`,
-                        description: `When DIA created the elves, HE created the ethereals also in secret for the purpose of shepharding HIS creation. HE bore them out of the gem, celestite, which is the gem of invisibility and in so doing placed them in the etherworld, an invisible layer in the heavens of Qeva. They were beautiful like the elves and their skin glowed like the everstar. This layer of reality could only be witnessed by pure goodness and without it the ethereals' existence was beyond the curtain of fleshly eyes. The ethereals had free reign of the heavens and when they awoke, DIA sent them out to explore the universe and its many galaxies and planets. They did so with sweet songs and joy in their hearts. When the elves awoke, they were perfect and full of goodness and so when they looked into the sky, they saw the ethereals and confused them for stars flying wildly like fireflies deep in the night sky. To this day, there are some in Qeva who will look up into the night sky to test their heart of goodness and search for moving stars. What some call shooting stars as truly glimpses of the ethereals and the traces of deep goodness in one's own heart.`
+                        description: `When DIA created the elves, HE created the ethereals also in secret for the purpose of shepharding HIS creation. HE bore them out of the gem, celestite, which is the gem of invisibility and in so doing placed them in the etherworld, an invisible layer in the heavens of Qeṽa. They were beautiful like the elves and their skin glowed like the everstar. This layer of reality could only be witnessed by pure goodness and without it the ethereals' existence was beyond the curtain of fleshly eyes. The ethereals had free reign of the heavens and when they awoke, DIA sent them out to explore the universe and its many galaxies and planets. They did so with sweet songs and joy in their hearts. When the elves awoke, they were perfect and full of goodness and so when they looked into the sky, they saw the ethereals and confused them for stars flying wildly like fireflies deep in the night sky. To this day, there are some in Qeṽa who will look up into the night sky to test their heart of goodness and search for moving stars. What some call shooting stars as truly glimpses of the ethereals and the traces of deep goodness in one's own heart.`
                     },
                     {
                         id: 1,
                         name: `The Divine Counsel`,
-                        description: `Spirits are not without organization. Below DIA is the Divine Counsel, which is the spiritual equivalent to the sentinels. Its individual members are known as Seraphs and they command the spiritual armies who march in DIA's name.`
+                        description: `Spirits are not without organization. Below DIA is the Divine Counsel, which is the spiritual equivalent to the oracles. Its individual members are known as Seraphs and they command the spiritual armies who march in DIA's name.`
                     }
                 ]
             },
@@ -249,7 +249,7 @@ export const DIVINE = [
                     {
                         id: 3,
                         name: `Dreams`,
-                        description: `It is commonly said in the lands of Qeva that “dreams are the language of spirits.” This is one of the few adages among the superstitious that rings true. While the true language of ethereals is celestial, dreams are the most common way they attempt to speak to their physical counterparts due to their effectiveness for the soul is most awake and accessible. However, it is important to note that the dream language of spirits is far different from that of wraiths. Spirits can speak through dreams in three ways. They can share something: (1) True that has happened, (2) True that is happening (3) That ought to happen. Wraiths on the other hand share either (1) A distortion of something that has happened (2) A lie about something that is happening, (3) A temptation to do something evil. The manipulation of the wraith is obvious. They are so consumed by evil that they cannot abandon it. So then, the difficulty is not telling the difference between the two's voices, but choosing to listen to the spirit. Sentient hearts are drawn far more to distortion, lying and temptation making the language of wraiths much stronger. Note also that all dream speech requires a certain manipulation of memories and viewed experiences. Ethereals cannot show the mind anything it has not already seen. Furthermore, the older or stronger a memory in one's mind, the more difficult it is to manipulate. This does not mean that ethereals can read the mind or at least not easily. They can only check the mind's library as humans do when trying to remember something.`
+                        description: `It is commonly said in the lands of Qeṽa that “dreams are the language of spirits.” This is one of the few adages among the superstitious that rings true. While the true language of ethereals is celestial, dreams are the most common way they attempt to speak to their physical counterparts due to their effectiveness for the soul is most awake and accessible. However, it is important to note that the dream language of spirits is far different from that of wraiths. Spirits can speak through dreams in three ways. They can share something: (1) True that has happened, (2) True that is happening (3) That ought to happen. Wraiths on the other hand share either (1) A distortion of something that has happened (2) A lie about something that is happening, (3) A temptation to do something evil. The manipulation of the wraith is obvious. They are so consumed by evil that they cannot abandon it. So then, the difficulty is not telling the difference between the two's voices, but choosing to listen to the spirit. Sentient hearts are drawn far more to distortion, lying and temptation making the language of wraiths much stronger. Note also that all dream speech requires a certain manipulation of memories and viewed experiences. Ethereals cannot show the mind anything it has not already seen. Furthermore, the older or stronger a memory in one's mind, the more difficult it is to manipulate. This does not mean that ethereals can read the mind or at least not easily. They can only check the mind's library as humans do when trying to remember something.`
                     },
                     {
                         id: 4,
@@ -264,7 +264,7 @@ export const DIVINE = [
                     {
                         id: 6,
                         name: `Blessings & Curses`,
-                        description: `Blessings and curses are probably not what one would expect. In Qeva, one who is blessed is one who has been assigned a guardian spirit and one who is cursed is one who is haunted by a wraith. One who is blessed is one who is pure of heart and allows for a spirit's strong attachment. One who is cursed is one who has maintained a twisted mind and allowed a wraith to latch onto them like a parasite and harvest them for their evil and hatred. A cursed person may be capable of powerful deeds, but at the cost of their heart. The ethereals say that those who are blessed are unbound and those who are cursed are enslaved.`
+                        description: `Blessings and curses are probably not what one would expect. In Qeṽa, one who is blessed is one who has been assigned a guardian spirit and one who is cursed is one who is haunted by a wraith. One who is blessed is one who is pure of heart and allows for a spirit's strong attachment. One who is cursed is one who has maintained a twisted mind and allowed a wraith to latch onto them like a parasite and harvest them for their evil and hatred. A cursed person may be capable of powerful deeds, but at the cost of their heart. The ethereals say that those who are blessed are unbound and those who are cursed are enslaved.`
                     },
                     {
                         id: 7,

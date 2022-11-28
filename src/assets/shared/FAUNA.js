@@ -13,7 +13,7 @@ export const FAUNA = [
         id: 0,
         link: `/fauna/birds`,
         name: `Birds`,
-        description: `Birds play a large role in the world of Qeva and many form kinship with them. Among all the peoples of Qeva, the Aviame are alone in their kinship with birds. While the Caracadre have trained them as messengers and the elves learned their speech, only the Aviame have built a true relationship. The bond is so strong that flocks of bird will take direction and obey commands when called.They know the birds: their cares and worries, their coming and goings, their likes and dislikes. They know them better than even the eldar and care for them like their own. Here are a few notable birds and what is most well-know about them.`,
+        description: `Birds play a large role in the world of Qeṽa and many form kinship with them. Among all the peoples of Qeṽa, the Aviame are alone in their kinship with birds. While the Caracadre have trained them as messengers and the elves learned their speech, only the Aviame have built a true relationship. The bond is so strong that flocks of bird will take direction and obey commands when called.They know the birds: their cares and worries, their coming and goings, their likes and dislikes. They know them better than even the eldar and care for them like their own. Here are a few notable birds and what is most well-know about them.`,
         topics: [
             {
                 id: 0,
@@ -73,7 +73,7 @@ export const FAUNA = [
                 name: `Eagle`,
                 habitat: `Lakes & Rivers`,
                 home: `Navalil`,
-                description: `The eagle is the most majestic of birds and rules the heavens above the lands of Qeva. It is a solemn and dignified creature of few words, but still communes with the Avi when the need is dire or the heavens are quiet. Some believe the eagle is a manifestation of DIA, but all eagles deny this. To build a strong relationship with these beasts, you would be wise to choose your words carefully and not test them.`,
+                description: `The eagle is the most majestic of birds and rules the heavens above the lands of Qeṽa. It is a solemn and dignified creature of few words, but still communes with the Avi when the need is dire or the heavens are quiet. Some believe the eagle is a manifestation of DIA, but all eagles deny this. To build a strong relationship with these beasts, you would be wise to choose your words carefully and not test them.`,
                 image: eagle,
                 imageAlt: `Qeṽa Eagle`
             }
@@ -83,7 +83,7 @@ export const FAUNA = [
         id: 1,
         link: `/fauna/owls`,
         name: `Owls`,
-        description: `Like Birds, Owls play a similar role and among all the peoples of Qeva, the Athiame are alone in their kinship with owls. While Elves and Aviame, Caracadre commune with birds in the daytime, the Athiame are the only race to be awake at night and commune with owls - That is of course except to the dwarves who scarcely leave their mountains. The bond between owl and Athiame is strong and they know them and care for them like their own. In return, the owls care for them. Here are a few notable owls and what is most well-know about them.`,
+        description: `Like Birds, Owls play a similar role and among all the peoples of Qeṽa, the Athiame are alone in their kinship with owls. While Elves and Aviame, Caracadre commune with birds in the daytime, the Athiame are the only race to be awake at night and commune with owls - That is of course except to the dwarves who scarcely leave their mountains. The bond between owl and Athiame is strong and they know them and care for them like their own. In return, the owls care for them. Here are a few notable owls and what is most well-know about them.`,
         topics: [
             {
                 id: 0,

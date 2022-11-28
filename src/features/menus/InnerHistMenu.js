@@ -42,7 +42,7 @@ const InnerHistMenu = (props) => {
                                             </React.Fragment>
                                         );
                                     })}
-                                    <NavItem className='button' id="inactive">
+                                    <NavItem className='button welcome' id="inactive">
                                         <NavLink className='nav-link text-nowrap text-center' to='/'>Home</NavLink>
                                     </NavItem>
                                 </Nav>

@@ -13,6 +13,11 @@ export const FLORA = [
                 id: 1,
                 name: `Gravehand`,
                 description: `Plant that wraps itself loosly around a living thing`
+            },
+            {
+                id: 2,
+                name: `Thistleweed`,
+                description: `a dry thick-stalked plant, which looks dead by its yellow color. It's dryness make it a perfect for anyone looking to start a fire.`
             }
         ]
     },

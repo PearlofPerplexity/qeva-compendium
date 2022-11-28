@@ -4,12 +4,14 @@ import aquamarine from '../imgs/gems/aquamarine.png';
 import azurite from '../imgs/gems/azurite.png';
 import bismuth from '../imgs/gems/bismuth.png';
 import chryscocolla from '../imgs/gems/chrysocolla.png';
+import citrine from '../imgs/gems/citrine.png';
 import crocoite from '../imgs/gems/crocoite.png';
 import diamond from '../imgs/gems/diamond.png';
 import emerald from '../imgs/gems/emerald.png';
 import jade from '../imgs/gems/jade.png';
 import jasper from '../imgs/gems/jasper.png';
 import celestite from '../imgs/gems/celestite.png';
+import moonstone from '../imgs/gems/moonstone.png';
 import obsidian from '../imgs/gems/obsidian-1.png';
 import onyx from '../imgs/gems/onyx.png';
 import opal from '../imgs/gems/opal.png';
@@ -52,21 +54,21 @@ export const GEMS = [
                 smDescription: 
                     `Stone pulled down by Moriel from the Outerworld`,
                 description:
-                    `Tourmaline is the stone of immensity. At the beginning of time, DIA shattered it from his reflection, but it's quality could not be contained in Qeva. It flew past the planet and ever expanded and split into planets, stars and galaxies in the outstretch of space. Everyone beyond this world and its moon is crafted from Tourmaline. So then, when one eldar reached out in divination into space, it was tourmaline that fell from the sky. You are likely familiar with its presence on the far eastern island of Arguthain where the eldar, Moriel divined a meteor from the sky and shaped it into a fortress. Do not seek out this substance, sentinel. Yes it is powerful and the source of the Dark Armies' strength who resisted us at the ends of the east, but it cannot be bottled. It continues to multiply on Arguthain and the dark armies with it. It tempts warriors far and wide, but do not be so easily tricked. It is impossible to keep in balance with the other attributes and will only be to your destruction. It is a stone of divinity as no created sentient being can experience omnipotence nor omnipresence.`,
+                    `Tourmaline is the stone of immensity. At the beginning of time, DIA shattered it from his reflection, but it's quality could not be contained in Qeṽa. It flew past the planet and ever expanded and split into planets, stars and galaxies in the outstretch of space. Everyone beyond this world and its moon is crafted from Tourmaline. So then, when one eldar reached out in divination into space, it was tourmaline that fell from the sky. You are likely familiar with its presence on the far eastern island of Arguthain where the eldar, Moriel divined a meteor from the sky and shaped it into a fortress. Do not seek out this substance, oracle. Yes it is powerful and the source of the Dark Armies' strength who resisted us at the ends of the east, but it cannot be bottled. It continues to multiply on Arguthain and the dark armies with it. It tempts warriors far and wide, but do not be so easily tricked. It is impossible to keep in balance with the other attributes and will only be to your destruction. It is a stone of divinity as no created sentient being can experience omnipotence nor omnipresence.`,
                 image: tourmaline,
                 imageAlt: `Qeṽa Tourmaline Gem`
             },
             {
                 id: 1,
                 name: `Celestite`,
-                quality: `Invisibility`,
+                quality: `Holiness`,
                 purpose: `Divide the Heavenly Layers`,
                 originalLocation: `The Five Heavens beyond the natural world`,
                 notableLocations: `Malunë`,
                 smDescription: 
                     `Stone dropped by DIA at the parsing of invisibility`,
                 description:
-                    `Last is celestite, the stone of invisibility. It was the cinder of hope to humanity in the age of darkness at the expense of DIA Himself. As black polluted clouds covered the entire planet, it seemed that all bonds with DIA were lost. On the islands, there were no mountains high enough for the people to speak with God and no way to rise above the smoke. To remain in communion with his people, the good and gracious DIA spared a cut of his true essence of invisibility and bestowed it upon Avlim. With this parsing of His essence, DIA would be bound to a visible form for the remainder of eternity. At its parsing, a bit of celestite fell from the sky like a falling star. If it was not found at its fall, it will likely never be found for the stone itself is invisible. It is a stone of divinity as no created sentient being can experience all the layers of heavens hidden by the varieties of celestite.`,
+                    `Last is celestite, the stone of holiness. It was the cinder of hope to humanity in the age of darkness at the expense of DIA Himself. As black polluted clouds covered the entire planet, it seemed that all bonds with DIA were lost. On the islands, there were no mountains high enough for the people to speak with God and no way to rise above the smoke. To remain in communion with his people, the good and gracious DIA spared a cut of his true essence of invisibility and bestowed it upon Avlim. With this parsing of His essence, DIA would be bound to a visible form for the remainder of eternity. At its parsing, a bit of celestite fell from the sky like a falling star. If it was not found at its fall, it will likely never be found for the stone itself is invisible. It is a stone of divinity as no created sentient being can experience all the layers of heavens hidden by the varieties of celestite.`,
                 image: celestite,
                 imageAlt: `Qeṽa Celestite Gem`
             },
@@ -112,6 +114,20 @@ export const GEMS = [
                 image: tigersEye,
                 imageAlt: `Qeṽa Tiger's Eye Gem`
             },
+            {
+                id: 4,
+                name: `Moonstone`,
+                quality: `Life Breath`,
+                purpose: `Invoke Sentience`,
+                originalLocation: `Qeṽa's Three Moons`,
+                notableLocations: `Amare's Necklace`,
+                smDescription: 
+                    `Stone given to all the eveile at the beginning of the Divergent Age.`,
+                description:
+                    `Moonstone or the sentience stone is that which is elemental to creating all life. No sentient creation evil or good survives without it and no eldar nor oracle can create life without it. It can only be found on the moon of Qeṽa where the eveile, once walked and witnessed its silver glittering glow. Some creatures have been influenced by its nightly glow upon Qeṽa and taken to awaken during the night and sleep during the day. The Eldar, Amare is the only known keeper of moonstone on Qeṽa. For each Eldar was given a sentient stone to create, but Amare did not. It is a stone of divinity as no created sentient being can reconstruct life apart from DIA.`,
+                image: moonstone,
+                imageAlt: `Qeṽa Tiger's Eye Gem`
+            }
         ]
     },
     {
@@ -144,7 +160,7 @@ export const GEMS = [
                     `Stone given to Xaradriel to create Halflings`,
                 description:
                     `Second is citrine, which is joy, given to the eldar, Xaradriel to craft the halfling. Its red color is unmistakable in the earth and can be polished into a flawless orange gem. If you bind yourself to its nature, your joy will outlast any difficulty that comes before you. You will be the last to lose heart when the path darkens; an evergreen, ever-glad soul.`,
-                image: ruby,
+                image: citrine,
                 imageAlt: `Qeṽa Citrine Gem`
             },
             {
@@ -157,7 +173,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone given to Moriel to create Ohri`,
                 description:
-                    `There is then Amethyst, which is peace. It is purple in color and glitters even unpolished. This stone was opened by the dark lord, Moriel, to craft the races of the dark armies, but do not make the mistake to say that the stone is cursed. It is not in Amethyst's nature to be destructive. You, Sentinel can restore honor to an Amethyst gem by allowing the stone to draw oneself and others to DIA rather than oneself. With Amethyst you will be the eye of the hurricane, the calm of the storm.`,
+                    `There is then Amethyst, which is peace. It is purple in color and glitters even unpolished. This stone was opened by the dark lord, Moriel, to craft the races of the dark armies, but do not make the mistake to say that the stone is cursed. It is not in Amethyst's nature to be destructive. You, oracle can restore honor to an Amethyst gem by allowing the stone to draw oneself and others to DIA rather than oneself. With Amethyst you will be the eye of the hurricane, the calm of the storm.`,
                 image: amethyst,
                 imageAlt: `Qeṽa Amethyst Gem`
             },
@@ -223,7 +239,7 @@ export const GEMS = [
                 darkStone: `Violence`,
                 smDescription: 
                     `Stone given to Mhindil to bring Aeoki to sentience`,
-                description: `Turquoise is the stone of gentleness and it will be a part of your journey no matter the stone you select. Learn to recognize it before your journey to the crystal isle of Agate. Turquoise is blue-green in color and the only stone to radiate light and glow at night. It was given to the eldar, Mhindil, which she used to grant sentience to the small, intelligent Aeoki of the Arthadain Fields. The meekness of Turquoise cannot only lend one toward humility and softness, but also mask them in stealth. But these reasons are not why they are essential to the sentinel warrior. All stones reveal with color the bond of a warrior to their stone, but none more so than Turquoise and none need surveillance of character more so than the sentinels. For this reason, a turquoise edge lines ever Zanhari, the sword of the sentinel.`,
+                description: `Turquoise is the stone of gentleness and it will be a part of your journey no matter the stone you select. Learn to recognize it before your journey to the crystal isle of Agate. Turquoise is blue-green in color and the only stone to radiate light and glow at night. It was given to the eldar, Mhindil, which she used to grant sentience to the small, intelligent Aeoki of the Arthadain Fields. The meekness of Turquoise cannot only lend one toward humility and softness, but also mask them in stealth. But these reasons are not why they are essential to the oracle warrior. All stones reveal with color the bond of a warrior to their stone, but none more so than Turquoise and none need surveillance of character more so than the oracles. For this reason, a turquoise edge lines ever Zanhari, the sword of the oracle.`,
                 image: turquoise,
                 imageAlt: `Qeṽa Turquoise Gem`
             },
@@ -236,7 +252,7 @@ export const GEMS = [
                 darkStone: `Havoc`,
                 smDescription: 
                     `Stone given to Thelmiel to create Aviame`,
-                description: `Similar is Ruby, which is self-control. It is a deeper red than jasper granted to the eldar, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, Sentinel, prepare for the path of the Ruby.`,
+                description: `Similar is Ruby, which is self-control. It is a deeper red than jasper granted to the eldar, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
                 image: ruby,
                 imageAlt: `Qeṽa Ruby Gem`
             },
@@ -249,7 +265,7 @@ export const GEMS = [
                 darkStone: `Recklessness`,
                 smDescription: 
                     `Stone necessary to bring about sentience`,
-                description: `Opal is the stone of Wisdom, given to the original nine eveile and essential in creating them. In fact, if one is knowledgable enough, they can use this stone again to create life. This however, is a dangerous path, which only Moriel dared to attempt. It is what makes the noble races worthy to rule over all life in Qeva and capable of pursuing the face of Dia. Greater than the gift of knowledge, it allows one to discern and respond to knowledge rightly, decisively, and honorably. It is rare to find such a stone on Avlim and rarer still on any shores in Qeva. If you seek it, expect to find it nowhere else outside the walls of Agate.`,
+                description: `Opal is the stone of Wisdom, given to the original nine eveile and essential in creating them. In fact, if one is knowledgable enough, they can use this stone again to create sentience. When properly enacted on something with lifebreath, it can bring awareness to DIA and true reality. This however, is a dangerous path, which only Moriel dared to attempt. It is what makes the noble races worthy to rule over all life in Qeṽa and capable of pursuing the face of Dia. Greater than the gift of knowledge, it allows one to discern and respond to knowledge rightly, decisively, and honorably. It is rare to find such a stone on Avlim and rarer still on any shores in Qeṽa. If you seek it, expect to find it nowhere else outside the walls of Agate.`,
                 image: opal,
                 imageAlt: `Qeṽa Opal Gem`
             },
@@ -275,7 +291,7 @@ export const GEMS = [
                 darkStone: `Pride`,
                 smDescription:
                     `The penultimate stone, foundational to all other stones`,
-                description: `Greatest and rarest of all cardinal stones is the pearl of humility. Consider yourself the lowliest and vilest of sentience before DIA if you wish for it not to crumble in your hand. For it is brittler than fine glass and is mere myth among the noble races. No eldar was entrusted with it and no dwarf has been known to recover it from stone. It is white, circular and smooth as the surface of Qeva before the sprinkling of DIA's attributes. If ever you come across it, know this: the wielder of the pearl of humility is gifted with the attribute necessary to pursue and master all other attributes. However, the more one grows in the attributes, the more difficult this stone is to control, but the one who does will be among the most powerful warriors to walk Qeva.`,
+                description: `Greatest and rarest of all cardinal stones is the pearl of humility. Consider yourself the lowliest and vilest of sentience before DIA if you wish for it not to crumble in your hand. For it is brittler than fine glass and is mere myth among the noble races. No eldar was entrusted with it and no dwarf has been known to recover it from stone. It is white, circular and smooth as the surface of Qeṽa before the sprinkling of DIA's attributes. If ever you come across it, know this: the wielder of the pearl of humility is gifted with the attribute necessary to pursue and master all other attributes. However, the more one grows in the attributes, the more difficult this stone is to control, but the one who does will be among the most powerful warriors to walk Qeṽa.`,
                 image: pearl,
                 imageAlt: `Qeṽa Pearl`
             },
@@ -416,7 +432,7 @@ export const GEMS = [
                 darkStone: `Recklessness`,
                 smDescription: 
                     `Stone native to The High Mountains, meeting place with DIA`,
-                description: `Bismuth is the stone of intelligence, born out of Opal the cardinal stone of wisdom. It seems to heighten one's ability to recall information if one binds themself to it, but it does not hold the power to discern as Opal does. Guide those who seek it the high mountains, where we, the sentinels convene with Dia. Warn them of the harsh temperatures and grade of the climb. It is no small feat and many have fallen into icy graves before we could reach them.`,
+                description: `Bismuth is the stone of intelligence, born out of Opal the cardinal stone of wisdom. It seems to heighten one's ability to recall information if one binds themself to it, but it does not hold the power to discern as Opal does. Guide those who seek it the high mountains, where we, the oracles convene with Dia. Warn them of the harsh temperatures and grade of the climb. It is no small feat and many have fallen into icy graves before we could reach them.`,
                 image: bismuth,
                 imageAlt: `Qeṽa Bismuth Gem`
             },
@@ -461,12 +477,12 @@ export const GEMS = [
                     {
                         id: 0,
                         name: `Divine Stones`,
-                        description: `The Divine stones of DIA are those that are not native to Qeva as their reflective nature of DIA is too vast to be understood in our world. However, by divine allowance three have found their way into our world, but are not to be sought. This being said, evil forces are drawn to them in their desire to usurp DIA.`
+                        description: `The Divine stones of DIA are those that are not native to Qeṽa as their reflective nature of DIA is too vast to be understood in our world. However, by divine allowance three have found their way into our world, but are not to be sought. This being said, evil forces are drawn to them in their desire to usurp DIA.`
                     },
                     {
                         id: 1,
                         name: `Cardinal Stones`,
-                        description: `The cardinal stones are those stones which shattered from the mirror of his essence, sprinkled onto Qeva and divined to take shape into creation. Their properties are more difficult to perceive than incidental properites and are therefore seen as less valuable than incidental stones by the common person. They are found most abundantly in Agate and are sought most prominently by Sentinels.`
+                        description: `The cardinal stones are those stones which shattered from the mirror of his essence, sprinkled onto Qeṽa and divined to take shape into creation. Their properties are more difficult to perceive than incidental properites and are therefore seen as less valuable than incidental stones by the common person. They are found most abundantly in Agate and are sought most prominently by oracles.`
                     },
                     {
                         id: 2,
@@ -487,28 +503,65 @@ export const GEMS = [
             },
             {
                 id: 1,
+                name: `Grades of Gemstones`,
+                description: `Not all gemstones are created equal. A gem can vary by its quality in the areas of cut, color, clarity and carat (defined below). The purer a stone is in each of these areas, the greater its potential in relation to its attribute. The purest gems are found on the island of Agate, where the oracles receive their blessed stones from DIA. The purity of these stones aligned with the purity of the oracle's heart is what makes them the most powerful warriors in Avlim. Rarely do any other seekers of stones receive the chance to visit this island and therefore must settle for lesser gems and be mindful of quality when selecting their gems. The grading of gems has significant implications. It is the different grades of gems that allows for the separating of the heavenly layers. The purest celestite, veils DIA and a lesser grade veils the ethereals. Desdcending grades veil the other layers of heaven. It was by betraying his holiness that Moriel reached through the veil of the void and lifted it permitting evil into the world.`,
+                subtopics: [
+                    {
+                        id: 0,
+                        name: `Cut`,
+                        description: `Cut refers to the facets, symmetry, and reflective qualities of a gem. The better the cut, the more it will be able to reflect its quality and so open itself to power and sparkle in appearance. The quality of a cut is effected by the skill of the gemcutter who cut it. It can be perfected or corrected with the skill of a gemcutter.`
+                    },
+                    {
+                        id: 1,
+                        name: `Color`,
+                        description: `Color refers to the color or lack of color visible within the gem, The brighter the gem, the rarer it is in value. A gem's color is perhaps the most variable of the qualities as color is directly effected by the stone's alignment to its quality. If its seller or previous owner did not align to it, it will darken. If it lies in a region of evil, it will darken. Thankfully, this can be redeemed and a stone can be revivened to its full health again if alignment is achieved.`
+                    },
+                    {
+                        id: 2,
+                        name: `Clarity`,
+                        description: `Clarity is determined by the visibility of natural inclusions and imperfections within a gem. Gems with little to no inclusions are considered particularly rare and highly valued. Unlike 'color', this cannot be altered by its carrier.`
+                    },
+                    {
+                        id: 3,
+                        name: `Carat`,
+                        description: `Carat is the unit of measurement used to describe the weight of a gem. It is often the most visually apparent factor when comparing stones and like clarity cannot be altered.`
+                    },
+                ]
+            },
+            {
+                id: 2,
                 name: `Inception of Gemstones`,
-                description: `In the beginning, DIA molded molten obsidian into the shape of the earth. ABove it, HE spun into shape a mirror of HIMSELF in the form of a fluid, translucent orb. The orb reflected HIS essence in lesser yet brilliant colors. When HE saw that it was good, HE allowed the swirling orb to harden into crystal. Now DIA knew that his creation would not be able to comprehend his nature as a whole. And so he shattered the reflection of himself and the fragmented attributes sprinkled onto the earth into billions of gemstones; each one a particle of His character, an attribute of His essence. Thus began the sparkling age.`,
+                description: `In the beginning, DIA molded molten obsidian into the shape of the earth. Above it, HE spun into shape a mirror of HIMSELF in the form of a fluid, translucent orb. The orb reflected HIS essence in lesser yet brilliant colors. When HE saw that it was good, HE allowed the swirling orb to harden into crystal. Now DIA knew that his creation would not be able to comprehend his nature as a whole. And so he shattered the reflection of himself and the fragmented attributes sprinkled onto the earth into billions of gemstones; each one a particle of His character, an attribute of His essence. Thus began the sparkling age.`,
                 subtopics: [
                     {
                         id: 0,
                         name: `The Sparkling Age`,
                         description: `For a thousand years, the whole planet glittered from the brilliance of topaz, jade, emerald, diamonds, amethyst, blue sapphire and many more precious stones embedded in the soft ground. The ground itself became the dust of gems. When the time was right, a great heavenly host was created to tend to them. The attributes mixed with one another and took shape into air, trees, animals, insects, rivers and mountains. His steadfastness was pronounced in stone and his invisibility in air. His attribute of immensity never in fact reached the ground, but rather flew past the planet. It continued to expand and grow and break apart into more and more planets, stars, moons, meteors and galaxies. The music of DIA was shattered into separate sounds. What was once a single song was broken into the sound of waves, wind and the chirping of birds. DIA was delighted to see his creation find life and joy in his essence, but his chief creations were still before him. DIA collected gemstones from throughout the earth to form the first sentients, but none more so than opal, that is wisdom and diamond, that is love. Not all gemstones took shape into another creation. Some gemstones DIA alloted to keep their original form and these are the gemstones that are discussed here.`
+                    },
+                    {
+                        id: 1,
+                        name: `DIA's Reflection`,
+                        description: `The reflection DIA's image does not end at Qeṽa's cosmology. All creation can continue to align to DIA's image by aligning to their purpose. An amethyst crystal holds the purpose of peace and so must reflect peace to reflect DIA. A person who to this stone furthers its purpose. A sentient should aim to grow in all attributes, but this is no easy challenge. In fact it is said that only DIA can perfectly reflect all the qualities of the gemstones and so it is only when he takes physical form that it can be done andits brightness would be unfathomable. This of course is what happened with Alohir at the breaking of darkness and the end of the void era. The great warrior Alohir was possesed by DIA's spirit and even in this imperfect vessel, the light was so bright his fellow warriors had to look away.`
+                    },
+                    {
+                        id: 2,
+                        name: `The Allstone & the Island of Agate`,
+                        description: `When all the cardinal stones are present in one stone, it is called an allstone and creates a mirror to see DIA. With it, one is capable of one great act of power or looking through it and seeing DIA at the risk of becoming blind. There are only rare tales of those who have 'seen DIA and lived'. While all cardinal stones are present at the Island of Agate, the island itself is an allstone and incredible bright within. A visitng oracle must close their eyes when selecting a gem unless they wish to see DIA and be blind. They look for the color that calls them through their eyelids.`
                     }
                 ]
             },
             {
-                id: 2,
-                name: `Sentinels & Stones`,
-                description: `Sentinels seek a single cardinal stone in their path to become a sentinel. Through this one stone, they attempt to channel evey attribute of DIA. To decide on their stone, they ponder what attribute they cherish most and where DIA has fanned the passion within their heart. They then undergo a ceremony, which pertains traveling to the island of agate to obtain their chosen gem.`
-            },
-            {
                 id: 3,
-                name: `Caracadre & Stones`,
-                description: `Caracadre seek gems like sentinels, but far differently. Firstly, caracadre seek incidental gems rather than cardinal gems as their order has deemed them as more valuable. Secondly, caracadre ultimately seek to atune to multiple gems. While they atune to one at a time, their ultimate goal is to become a grand caracadre, an individual who masters at least seven incidental gems. They venture to the known locations of the gems and sometimes must undergo tests by those who protect the gems.`
+                name: `Oracles & Stones`,
+                description: `Oracles seek a single cardinal stone in their path to become an oracle. Through this one stone, they attempt to channel evey attribute of DIA. To decide on their stone, they ponder what attribute they cherish most and where DIA has fanned the passion within their heart. They then undergo a ceremony, which pertains traveling to the island of agate to obtain their chosen gem.`
             },
             {
                 id: 4,
+                name: `Caracadre & Stones`,
+                description: `Caracadre seek gems like oracles, but far differently. Firstly, caracadre seek incidental gems rather than cardinal gems as their order has deemed them as more valuable. Secondly, caracadre ultimately seek to atune to multiple gems. While they atune to one at a time, their ultimate goal is to become a grand caracadre, an individual who masters at least seven incidental gems. They venture to the known locations of the gems and sometimes must undergo tests by those who protect the gems.`
+            },
+            {
+                id: 5,
                 name: `Terminology`,
                 description: `Terminology for gemstones are flexible as knowledge of them varies. However, here is the most technical separation of terms.`,
                 subtopics: [

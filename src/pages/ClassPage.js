@@ -12,7 +12,7 @@ const ClassPage = () => {
                 <Route path='/' element={
                     <InnerMenu name='Classes' icon={ClassIcon} array={CLASSES} link='/' />
                 } />
-                <Route path='/sentinels' element={
+                <Route path='/oracles' element={
                     <ClassCard array={CLASSES[0]} left={CLASSES[9]} right={CLASSES[1]} />
                 } />
                 <Route path='/caracadre' element={
