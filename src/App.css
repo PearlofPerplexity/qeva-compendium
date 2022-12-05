@@ -541,3 +541,16 @@ aside ul {
 	cursor: pointer;
 	color: rgba(255, 255, 255, 0.75)
 }
+
+button[editext='edit-button'], button[editext='cancel-button'], button[editext='save-button'] {
+	border: none;
+	border-radius: 50%;
+	background-color: var(--navbar-bg-dk);
+}
+
+input, textarea {
+	color: var(--dk-gray-200);
+	background-color: var(--navbar-bg-dk);
+	border: none!important;
+	border-radius: 5px;
+}

@@ -34,7 +34,7 @@ const flatArray = (array) => {
       if (m.topics && m.topics.length) {
         m.topics.map((topic) => {
             topic.link = m.link;
-            return;
+            return
         })
         topics = [...topics, ...m.topics];
       }
