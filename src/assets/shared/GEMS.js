@@ -467,7 +467,7 @@ export const GEMS = [
     {
         id: 3,
         link: `/gems/overview`,
-        name: `Overview`,
+        name: `Gem Overview`,
         topics: [
             {
                 id: 0,
