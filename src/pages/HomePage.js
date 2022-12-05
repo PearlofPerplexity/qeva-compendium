@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import EdiText from 'react-editext';
 import { Link } from 'react-router-dom';
 import avlimMap from '../assets/imgs/maps/avlim-map.jpg';
 import lumiareValley from '../assets/imgs/locations/lumiare.jpg';
@@ -32,18 +30,12 @@ import {
     RaceIcon } from '../utils/icon';
 
 const HomePage = () => {
-    const [value, setValue] = useState('Browse the options below or click on the hamburger icon in the top right hand corner to see the full menu. May every blessing of DIA be upon you!');
-    
-    const handleSave = (val) => {
-        setValue(val);
-    };
-
     return (
         <div className="p-4">
             <div className="welcome">
                 <div className="content rounded-3 p-3">
                     <h1 className="fs-3">Welcome to the Qeṽa Compendium!</h1>
-                    <EdiText showButtonsOnHover type="textarea" value={value} onSave={handleSave} className="mb-0"></EdiText>
+                    <p className="mb-0">Browse the options below or click on the hamburger icon in the top right hand corner to see the full menu. Or learn the basics <Link to={BasicLink}>here</Link>. May every blessing of DIA be upon you!</p>
                 </div>
             </div>
 

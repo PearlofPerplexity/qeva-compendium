@@ -72,8 +72,12 @@ const SearchBar = () => {
 
     const clearInput = () => {
         setWordEntered([]);
-        setPlaceholder("Search Compendium...")
+        setPlaceholder("Search Compendium...");
     };
+
+    const focusInput = () => {
+        setPlaceholder("Search Compendium...")
+    }
 
     const searchInput = () => {
         setPlaceholder(wordEntered);
@@ -89,6 +93,7 @@ const SearchBar = () => {
                         placeholder={placeholder}
                         value={wordEntered}
                         onChange={handleFilter}
+                        onFocus={focusInput}
                     />
                     <div className="searchIcon d-flex align-items-center">
                         {wordEntered.length === 0 ? (

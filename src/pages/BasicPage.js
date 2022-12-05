@@ -1,14 +1,27 @@
+import React, { useState } from 'react';
+import EdiText from 'react-editext';
 import { BASICS } from "../assets/shared/BASICS";
 import { BasicIcon } from "../utils/icon";
 import InnerSmNav from "../features/navs/InnerSmNav";
 import BottomSmNav from '../features/navs/BottomSmNav';
 
 const BasicPage = () => {
+
+    const [basics, setBasics] = useState(    
+        BASICS[0].topics
+    );
+    
+    const handleSave = index => e => {
+        let newArr = [...basics];
+        newArr[index].description = e.value;
+        setBasics(newArr);
+    };
+
     return (
         <div className='py-2 px-3'>
             <InnerSmNav icon={BasicIcon} name="The Basics - What makes Qeṽa unique?" />
             <div className="container-fluid">
-                {BASICS[0].topics.map((topic) => {
+                {basics.map((topic, index) => {
                     return (
                         <div className="col col-lg-10 col-xl-9 mt-4" key={topic.id}>
                             <div className="row align-items-center background-box rounded-2">
@@ -16,9 +29,21 @@ const BasicPage = () => {
                                     <div className="card p-3">
                                         <div className="card-body">
                                             <h5 className="card-title fs-4">{topic.name}</h5>
-                                            <p className="card-text">
-                                            {topic.description}
-                                            </p>
+                                            <EdiText 
+                                                showButtonsOnHover
+                                                type="textarea"
+                                                value={topic.description}
+                                                onSave={handleSave(index)}
+                                                className='card-text'
+                                                inputProps={{
+                                                    style:{
+                                                        border: 'none',
+                                                        Height: 'auto'
+                                                    },
+                                                    rows: 7
+                                                }}
+                                            >
+                                            </EdiText>
                                         </div>
                                     </div>
                                 </div>

@@ -545,12 +545,11 @@ aside ul {
 button[editext='edit-button'], button[editext='cancel-button'], button[editext='save-button'] {
 	border: none;
 	border-radius: 50%;
-	background-color: var(--navbar-bg-dk);
+	background-color: var(--dk-gray-400);
 }
 
-input, textarea {
+content input, textarea {
 	color: var(--dk-gray-200);
-	background-color: var(--navbar-bg-dk);
-	border: none!important;
+	background-color: var(--dk-gray-600);
 	border-radius: 5px;
 }
