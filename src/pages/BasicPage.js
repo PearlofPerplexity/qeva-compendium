@@ -15,7 +15,7 @@ const BasicPage = () => {
     
     const handleSave = index => e => {
         let newArr = [...basics];
-        newArr[index].description = e.target.value;
+        newArr[index].description = e.value;
         setBasics(newArr);
     };
 
@@ -28,7 +28,7 @@ const BasicPage = () => {
                         <div className="col col-lg-10 col-xl-9 mt-4" key={topic.id}>
                             <div className="row align-items-center background-box rounded-2">
                                 <div className="col p-0 fs-7">
-                                    <div className="card p-3">
+                                    <div className="card py-3 ps-3">
                                         <div className="card-body">
                                             <h5 className="card-title fs-4">{topic.name}</h5>
                                             <EdiText 
