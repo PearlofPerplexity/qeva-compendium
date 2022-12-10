@@ -1,29 +1,30 @@
+import _ from "lodash";
 import React, { useState } from 'react';
 import EdiText from 'react-editext';
-import { BASICS } from "../assets/shared/BASICS";
 import { GEMS } from '../assets/shared/GEMS';
 import { DIVINE } from '../assets/shared/DIVINE';
 import { BasicIcon } from "../utils/icon";
 import InnerSmNav from "../features/navs/InnerSmNav";
 import BottomSmNav from '../features/navs/BottomSmNav';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectAllBasics, editBasics } from '../slices/basicsSlice';
 
 const BasicPage = () => {
+    const basics = useSelector(selectAllBasics);
 
-    const [basics, setBasics] = useState(    
-        BASICS[0].topics
-    );
+    const dispatch = useDispatch();
     
     const handleSave = index => e => {
-        let newArr = [...basics];
-        newArr[index].description = e.value;
-        setBasics(newArr);
+        let newArr = _.cloneDeep(basics);
+        newArr[0].topics[index].description = e;
+        dispatch(editBasics(newArr));
     };
 
     return (
         <div className='py-2 px-3'>
             <InnerSmNav icon={BasicIcon} name="The Basics - What makes Qeṽa unique?" />
             <div className="container-fluid">
-                {basics.map((topic, index) => {
+                {basics[0].topics.map((topic, index) => {
                     return (
                         <div className="col col-lg-10 col-xl-9 mt-4" key={topic.id}>
                             <div className="row align-items-center background-box rounded-2">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SearchIcon, CloseIcon } from "./icon";
-import { BASICS } from "../assets/shared/BASICS";
+// import { BASICS } from "../assets/shared/BASICS";
 import { CHARACTERS } from '../assets/shared/CHARACTERS';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { DIVINE } from '../assets/shared/DIVINE';
@@ -13,8 +13,10 @@ import { HISTORY } from '../assets/shared/HISTORY';
 import { LOCATIONS } from '../assets/shared/LOCATIONS';
 import { RACES } from '../assets/shared/RACES';
 
+
+
 const allArrays = [
-    ...BASICS,
+    // ...BASICS,
     ...CHARACTERS,
     ...CLASSES, 
     ...DIVINE, 
