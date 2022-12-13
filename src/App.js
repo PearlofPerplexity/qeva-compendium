@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Aside from './components/Aside';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
+import ToolPage from './pages/ToolPage';
 import BasicPage from './pages/BasicPage';
 import GemPage from './pages/gems/GemPage';
 import DivPage from './pages/divine/DivPage';
@@ -27,6 +28,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/tools' element={<ToolPage />} />
           <Route path='/about' element={<BasicPage />} />
           <Route path='/gems/*' element={<GemPage />} />
           <Route path='/divine/*' element={<DivPage />} />

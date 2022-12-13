@@ -1,15 +1,11 @@
+// json-server -H 0.0.0.0 --watch db.json -p 3001 -d 2000
+
 // WELCOME TO THE IMAGINATION STATION!
 
-object = [
-    {
-        id: 1,
-        name: 'object',
-        description: 'replace me'
-    }
-]
+// Carat
+// Clarity
+// Color
+// Cut
+// Shape
 
-console.log(object);
 
-object[0].description = "the";
-
-console.log(object);

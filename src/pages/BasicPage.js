@@ -1,5 +1,5 @@
 import _ from "lodash";
-import React, { useState } from 'react';
+import React from 'react';
 import EdiText from 'react-editext';
 import { GEMS } from '../assets/shared/GEMS';
 import { DIVINE } from '../assets/shared/DIVINE';

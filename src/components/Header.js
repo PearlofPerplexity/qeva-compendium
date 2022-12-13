@@ -8,6 +8,10 @@ import {
     Nav,
     NavItem,
     NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
 } from 'reactstrap';
 import { 
     BasicLink,
@@ -41,12 +45,25 @@ import SearchBar from '../utils/SearchBar';
 
 const Header = (args) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [menu, setMenu] = useState("Qeṽa Compendium");
 
     const toggle = () => setIsOpen(!isOpen);
+
+    const wikiToggle = () => setMenu("Qeṽa Compendium");
+    const toolToggle = () => setMenu("Qeṽa Tools");
     
     return (
         <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>
-            <NavbarBrand className="mx-3" href="/">Qeṽa Compendium</NavbarBrand>
+
+            <UncontrolledDropdown nav inNavbar className='fs-5 mx-3'>
+              <DropdownToggle nav caret>
+                {menu}
+              </DropdownToggle>
+              <DropdownMenu dark>
+                <DropdownItem href="/" onClick={wikiToggle}>Qeṽa Compendium</DropdownItem>
+                <DropdownItem href="/tools" onClick={toolToggle}>Qeṽa Tools</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <SearchBar />
 
             <NavbarToggler onClick={toggle} />

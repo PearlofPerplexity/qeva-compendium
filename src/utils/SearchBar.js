@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import _ from "lodash";
 import { Link } from "react-router-dom";
 import { SearchIcon, CloseIcon } from "./icon";
 // import { BASICS } from "../assets/shared/BASICS";
@@ -12,11 +13,13 @@ import { GEMS } from '../assets/shared/GEMS';
 import { HISTORY } from '../assets/shared/HISTORY';
 import { LOCATIONS } from '../assets/shared/LOCATIONS';
 import { RACES } from '../assets/shared/RACES';
+import { useSelector } from "react-redux";
+import { selectAllBasics } from "../slices/basicsSlice";
 
-
+const SearchBar = () => {    
 
 const allArrays = [
-    // ...BASICS,
+    ..._.cloneDeep(useSelector(selectAllBasics)),
     ...CHARACTERS,
     ...CLASSES, 
     ...DIVINE, 
@@ -46,8 +49,6 @@ const flatArray = (array) => {
   };
 
 const data = flatArray(allArrays);
-
-const SearchBar = () => {    
 
     // The Filtered State of the Array
     const [filteredData, setFilteredData] = useState([]);

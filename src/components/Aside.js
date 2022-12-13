@@ -35,11 +35,13 @@ import { HISTORY } from '../assets/shared/HISTORY';
 import { LOCATIONS } from '../assets/shared/LOCATIONS';
 import BelowSpace from './BelowSpace';
 
+
+
 function Aside() {
     const [open, setOpen] = useState('1');
     const toggle = (id) => {
       if (open === id) {
-        setOpen();
+        setOpen('0');
       } else {
         setOpen(id);
       }

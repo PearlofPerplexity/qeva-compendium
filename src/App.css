@@ -49,6 +49,10 @@ a:hover {
 	color: var(--dk-gray-400);
 }
 
+button.dropdown-item:active {
+	background-color: var(--navbar-bg-color);
+}
+
 div.covered-div {
 	position: relative;
   }
@@ -72,7 +76,7 @@ a.cover-link {
 	position: relative;
 }
 
-.searchbar, .searchbar input, .searchbar input:focus {
+.searchbar, .searchbar input, .searchbar input:focus, div > input.col  {
 	background-color: var(--navbar-bg-dk);
 	color: var(--dk-gray-200);
 }
@@ -134,6 +138,10 @@ a.cover-link {
 
 .sidebar ul li {
 	padding: 5px 25px;
+}
+
+li.dropdown.nav-item::marker {
+	content: none;
 }
 
 .sidebar ul > li > a {

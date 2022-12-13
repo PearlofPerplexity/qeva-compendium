@@ -11,7 +11,6 @@ export const basicsSlice = createSlice({
   reducers: {
     editBasics: (state, actions) => {
       state.basicsArray = actions.payload;
-      console.log(state.basicsArray[0].topics[0].description);
     }
   }
 })
