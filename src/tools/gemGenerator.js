@@ -16,10 +16,11 @@ const GemGenerator = () => {
     const [color, setColor] = useState("-");
     const [cut, setCut] = useState("-");
     const [value, setValue] = useState(0);
+    const [max, setMax] = useState(50);
 
 // Could input number into random function to limit the levels based on group's level
     const random100 = () => {
-        return Math.floor( Math.random() * 100) + 1;
+        return Math.floor( Math.random() * max) + 1;
     }
     const typeRand = () => {
         let typeNum = Math.floor( Math.random() * 27) + 1;
@@ -239,17 +240,22 @@ const GemGenerator = () => {
         setClarity("-");
         setColor("-");
         setCut("-");
+        setMax(50);
         setValue(0);
         toggle();
     }
 
     const valuer = (event) => {
         const caratNum = event.target.value;
-        console.log(caratNum);
-        console.log(carat);
         setValue((value) => value - (carat * 100));
         setCarat(caratNum);
         setValue((value) => value + (carat * 100));
+    }
+
+    const slider = (event) => {
+        const sliderNum = event.target.value;
+        setMax(sliderNum);
+        console.log(max);
     }
 
     return (
@@ -266,6 +272,10 @@ const GemGenerator = () => {
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="twemoji:gem-stone"></i> Gem Generator</ModalHeader>
                 <ModalBody>
                     <div className='box container'>
+                        <div className='row pb-3'>
+                            <h4 className='col text-start'>Level: {(max/5)} </h4>
+                            <input type="range" min='1' max='100' value={max} onChange={slider} className='col slider' />
+                        </div>
                         <div className='row'>
                             <h4 className='col text-start'>Stone: </h4>
                             <input type="text" className='col' value={type} readOnly />
