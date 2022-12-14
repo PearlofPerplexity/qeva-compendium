@@ -7,6 +7,24 @@ import {
     ModalFooter
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import brilliant from '../assets/imgs/gems/cut/brilliant.png';
+import cushion from '../assets/imgs/gems/cut/cushion.png';
+import emeraldCut from '../assets/imgs/gems/cut/emerald-cut.png';
+import french from '../assets/imgs/gems/cut/french.png';
+import lozenge from '../assets/imgs/gems/cut/lozenge.png';
+import marquise from '../assets/imgs/gems/cut/marquise.png';
+import oval from '../assets/imgs/gems/cut/oval.png';
+import pear from '../assets/imgs/gems/cut/pear.png';
+import peruzzi from '../assets/imgs/gems/cut/peruzzi.png';
+import portuguese from '../assets/imgs/gems/cut/portuguese.png';
+import princess from '../assets/imgs/gems/cut/princess.png';
+import radiant from '../assets/imgs/gems/cut/radiant.png';
+import single from '../assets/imgs/gems/cut/single.png';
+import trillion from '../assets/imgs/gems/cut/trillion.png';
+import uncut1 from '../assets/imgs/gems/cut/uncut1.png';
+import uncut2 from '../assets/imgs/gems/cut/uncut2.png';
+import uncut3 from '../assets/imgs/gems/cut/uncut3.png';
+import uncut4 from '../assets/imgs/gems/cut/uncut4.png';
 
 const GemGenerator = () => {
     
@@ -15,6 +33,7 @@ const GemGenerator = () => {
     const [clarity, setClarity] = useState("");
     const [color, setColor] = useState("");
     const [cut, setCut] = useState("");
+    const [cutImg, setCutImg] = useState();
     const [value, setValue] = useState(0);
     const [max, setMax] = useState(50);
 
@@ -24,7 +43,9 @@ const GemGenerator = () => {
 
     const gemColor = ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-    const gemCut = ["Uncut", "Round", "Princess", "Oval", "Marquise", "Emerald", "Pear", "Asscher", "Cushion", "Trillion", "Radiant"];
+    const gemCut = ["Uncut", "Single", "Brilliant", "Portuguese", "Princess", "Oval", "Marquise", "Emerald", "Pear", "Asscher", "Cushion", "Trillion", "Radiant", "Lozenge", "Peruzzi", "French"];
+
+    const uncutArray = [uncut1, uncut2, uncut3, uncut4];
 
     const random100 = () => {
         return Math.floor( Math.random() * max) + 1;
@@ -193,26 +214,49 @@ const GemGenerator = () => {
         if(cutNum <= 25) {
             setCut("Uncut");
             setValue((value) => value - 50);
-        } else if (cutNum <= 33) {
-            setCut("Round");
-        } else if (cutNum <= 41) {
-            setCut("Princess");
-        } else if (cutNum <= 49) {
-            setCut("Oval");
-        } else if (cutNum <= 57) {
-            setCut("Marquise");
-        } else if (cutNum <= 65) {
-            setCut("Emerald");
-        } else if (cutNum <= 73) {
-            setCut("Pear");
-        } else if (cutNum <= 81) {
-            setCut("Asscher");
-        } else if (cutNum <= 89) {
+            setCutImg(uncutArray[Math.floor(Math.random() * 3) + 1]);
+        } else if (cutNum <= 30) {
+            setCut("Brilliant");
+            setCutImg(brilliant);
+        } else if (cutNum <= 35) {
             setCut("Cushion");
-        } else if (cutNum <= 95) {
-            setCut("Trillion");
-        } else {
+            setCutImg(cushion);
+        } else if (cutNum <= 40) {
+            setCut("Emerald");
+            setCutImg(emeraldCut);
+        } else if (cutNum <= 45) {
+            setCut("French");
+            setCutImg(french);
+        } else if (cutNum <= 50) {
+            setCut("Lozenge");
+            setCutImg(lozenge);
+        } else if (cutNum <= 55) {
+            setCut("Marquise");
+            setCutImg(marquise);
+        } else if (cutNum <= 60) {
+            setCut("Oval");
+            setCutImg(oval);
+        } else if (cutNum <= 65) {
+            setCut("Pear");
+            setCutImg(pear);
+        } else if (cutNum <= 70) {
+            setCut("Peruzzi");
+            setCutImg(peruzzi);
+        } else if (cutNum <= 75) {
+            setCut("Portuguese");
+            setCutImg(portuguese);
+        } else if (cutNum <= 80) {
+            setCut("Princess");
+            setCutImg(princess);
+        } else if (cutNum <= 85) {
             setCut("Radiant");
+            setCutImg(radiant);
+        } else if (cutNum <= 92) {
+            setCut("Single");
+            setCutImg(single);
+        } else {
+            setCut("Trillion");
+            setCutImg(trillion);
         }
     }
     const gemRand = () => {
@@ -306,14 +350,29 @@ const GemGenerator = () => {
     const cutValuer = (event) => {
         const cutVal = event.target.value;
         function cutNum(val) {
-            if (val === "Uncut") return 50;
+            if (val.toLowerCase() === "uncut") return 50;
             else return 0;
         }
+        if (cutVal.toLowerCase() === "brilliant") setCutImg(brilliant);
+        else if (cutVal.toLowerCase() === "cushion") setCutImg(cushion);
+        else if (cutVal.toLowerCase() === "emerald") setCutImg(emeraldCut);
+        else if (cutVal.toLowerCase() === "french") setCutImg(french);
+        else if (cutVal.toLowerCase() === "lozenge") setCutImg(lozenge);
+        else if (cutVal.toLowerCase() === "marquise") setCutImg(marquise);
+        else if (cutVal.toLowerCase() === "oval") setCutImg(oval);
+        else if (cutVal.toLowerCase() === "pear") setCutImg(pear);
+        else if (cutVal.toLowerCase() === "peruzzi") setCutImg(peruzzi);
+        else if (cutVal.toLowerCase() === "portuguese") setCutImg(portuguese);
+        else if (cutVal.toLowerCase() === "princess") setCutImg(princess);
+        else if (cutVal.toLowerCase() === "radiant") setCutImg(radiant);
+        else if (cutVal.toLowerCase() === "single") setCutImg(single);
+        else if (cutVal.toLowerCase() === "trillion") setCutImg(trillion);
+        else setCutImg(uncutArray[Math.floor(Math.random() * 3) + 1]);;
+
         setValue((value) => value + (cutNum(cut)) - (cutNum(cutVal)));
         setCut(cutVal);
     }
     
-
     return (
         <div className="col-lg-4">
             <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
@@ -373,9 +432,12 @@ const GemGenerator = () => {
                             </datalist>
                         </div>
                         <div className='row'>
-                            <h4 className='col text-start'>Value: </h4>
+                            <h4 className='col text-start'>Cost: </h4>
                             <input className='col' value={`$ ${value}`} readOnly />
                         </div>
+                        {cut && gemCut.includes(cut) && (
+                            <img className='m-3 p-3' src={cutImg} style={{width:'150px'}} />
+                        )}
                     </div>
                 </ModalBody>
                 <ModalFooter>
