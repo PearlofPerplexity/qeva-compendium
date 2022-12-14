@@ -34,6 +34,7 @@ const GemGenerator = () => {
     const [color, setColor] = useState("");
     const [cut, setCut] = useState("");
     const [cutImg, setCutImg] = useState();
+    const [imgFilter, setImgFilter] = useState();
     const [value, setValue] = useState(0);
     const [max, setMax] = useState(50);
 
@@ -43,7 +44,7 @@ const GemGenerator = () => {
 
     const gemColor = ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-    const gemCut = ["Uncut", "Single", "Brilliant", "Portuguese", "Princess", "Oval", "Marquise", "Emerald", "Pear", "Asscher", "Cushion", "Trillion", "Radiant", "Lozenge", "Peruzzi", "French"];
+    const gemCut = ["Uncut", "Brilliant", "Cushion", "Emerald", "French", "Lozenge", "Marquise", "Oval", "Pear", "Peruzzi", "Portuguese", "Princess", "Radiant", "Single", "Trillion"];
 
     const uncutArray = [uncut1, uncut2, uncut3, uncut4];
 
@@ -88,6 +89,7 @@ const GemGenerator = () => {
                 break;
             case 12:
                 setType("Turquoise");
+                // 120deg
                 break;
             case 13:
                 setType("Ruby");
@@ -436,7 +438,9 @@ const GemGenerator = () => {
                             <input className='col' value={`$ ${value}`} readOnly />
                         </div>
                         {cut && gemCut.includes(cut) && (
-                            <img className='m-3 p-3' src={cutImg} style={{width:'150px'}} />
+                        <div id='img-holder'>
+                            <img className='m-3 p-3' id="gem-img" src={cutImg} style={{width:'150px'}} />
+                        </div>
                         )}
                     </div>
                 </ModalBody>

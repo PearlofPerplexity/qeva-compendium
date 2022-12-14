@@ -585,3 +585,7 @@ input.col.slider::-webkit-slider-thumb {
 	background: url('./assets/imgs/logos/caracadre.png');
 	cursor: pointer;
   }
+
+  /* #gem-img {
+	filter: sepia(13%) saturate(3207%) hue-rotate(0deg) brightness(95%) contrast(80%);
+  } */

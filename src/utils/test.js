@@ -2,10 +2,3 @@
 
 // WELCOME TO THE IMAGINATION STATION!
 
-// Carat
-// Clarity
-// Color
-// Cut
-// Shape
-
-
