@@ -34,7 +34,6 @@ const GemGenerator = () => {
     const [color, setColor] = useState("");
     const [cut, setCut] = useState("");
     const [cutImg, setCutImg] = useState();
-    const [imgFilter, setImgFilter] = useState();
     const [value, setValue] = useState(0);
     const [max, setMax] = useState(50);
 
@@ -119,7 +118,7 @@ const GemGenerator = () => {
                 setType("Jade");
                 break;
             case 22:
-                setType("Shungite");
+                setType("Jet");
                 break;
             case 23:
                 setType("Chryscocolla");

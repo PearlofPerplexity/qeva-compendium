@@ -21,7 +21,7 @@ import quartz from '../imgs/gems/quartz.png';
 import ruby from '../imgs/gems/ruby.png';
 import rutile from '../imgs/gems/rutile.png';
 import sapphire from '../imgs/gems/sapphire.png';
-import shungite from '../imgs/gems/shungite.png';
+import jet from '../imgs/gems/jet2.png';
 import tanzanite from '../imgs/gems/tanzanite.png';
 import tigersEye from '../imgs/gems/tigers-eye.png';
 import topaz from '../imgs/gems/topaz.png';
@@ -221,7 +221,7 @@ export const GEMS = [
                 id: 6,
                 name: `Onyx`,
                 quality: `Faithfulness`,
-                childStone: `Shungite (Loyalty)`,
+                childStone: `Jet (Loyalty)`,
                 syntheticStone: `Certainty`,
                 darkStone: `Faithless`,
                 smDescription: 
@@ -386,7 +386,7 @@ export const GEMS = [
             },
             {
                 id: 6,
-                name: `Shungite`,
+                name: `Jet`,
                 quality: `Loyalty`,
                 parentStone: `Onyx (Faithfulness)`,
                 syntheticStone: `Certainty`,
@@ -394,8 +394,8 @@ export const GEMS = [
                 smDescription: 
                     `Stone native to Arvañon, home of the Elves`,
                 description: `While faithfulness can be difficult to see and measure, loyalty is not. Musgravite is a dark purple, which often appears clear gray in its gem form.`,
-                image: shungite,
-                imageAlt: `Qeṽa Shungite Gem`
+                image: jet,
+                imageAlt: `Qeṽa Jet Gem`
             },
             {
                 id: 7,

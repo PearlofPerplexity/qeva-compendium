@@ -146,7 +146,7 @@ export const RACES = [
         link: `/races/humans`,
         name: `Humans`,
         heartStone: `Onyx (Faithfulness)`,
-        spawnStone: `Shungite (Loyalty)`,
+        spawnStone: `Jet (Loyalty)`,
         elden: `Çairça`,
         lifespan: `~120 yrs`,
         height: `5-6 ft`,
