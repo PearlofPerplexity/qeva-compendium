@@ -9,7 +9,6 @@ import crocoite from '../imgs/gems/crocoite.png';
 import diamond from '../imgs/gems/diamond.png';
 import emerald from '../imgs/gems/emerald.png';
 import jade from '../imgs/gems/jade.png';
-import jasper from '../imgs/gems/jasper.png';
 import celestite from '../imgs/gems/celestite.png';
 import moonstone from '../imgs/gems/moonstone.png';
 import obsidian from '../imgs/gems/obsidian-1.png';
@@ -21,13 +20,14 @@ import quartz from '../imgs/gems/quartz.png';
 import ruby from '../imgs/gems/ruby.png';
 import rutile from '../imgs/gems/rutile.png';
 import sapphire from '../imgs/gems/sapphire.png';
-import jet from '../imgs/gems/jet2.png';
+import jet from '../imgs/gems/jet.png';
 import tanzanite from '../imgs/gems/tanzanite.png';
 import tigersEye from '../imgs/gems/tigers-eye.png';
 import topaz from '../imgs/gems/topaz.png';
 import tourmaline from '../imgs/gems/tourmaline.png';
 import turquoise from '../imgs/gems/turquoise.png';
 import whitestone from '../imgs/gems/whitestone.png';
+import pruskite from '../imgs/gems/pruskite.png';
 
 /* INCLUDES:
 
@@ -199,8 +199,8 @@ export const GEMS = [
                 syntheticStone: `Deception`,
                 darkStone: `Wrath`,
                 smDescription: 
-                    `Stone given to Çairça to create Gnomes`,
-                description: `Sapphire, which is kindness, was given to the eldar, Çairça to craft the race of gnomes. You will recognize this stone as a clear dark blue in its raw form. You must visit the gnomes of Farathain to truly understand the selfless fashion of this attribute. Master it, and you will develop relationships with all the noble races and develop an empathy for your enemy that will lead to their demise.`,
+                    `Stone given to Nware to create Gnomes`,
+                description: `Sapphire, which is kindness, was given to the eldar, Nware to craft the race of gnomes. You will recognize this stone as a clear dark blue in its raw form. You must visit the gnomes of Farathain to truly understand the selfless fashion of this attribute. Master it, and you will develop relationships with all the noble races and develop an empathy for your enemy that will lead to their demise.`,
                 image: sapphire,
                 imageAlt: `Qeṽa Sapphire Gem`
             },
@@ -225,7 +225,7 @@ export const GEMS = [
                 syntheticStone: `Certainty`,
                 darkStone: `Faithless`,
                 smDescription: 
-                    `Stone given to Nware to create Elves`,
+                    `Stone given to Çairça to create Elves`,
                 description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the eldar, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
                 image: onyx,
                 imageAlt: `Qeṽa Onyx Gem`
@@ -247,12 +247,12 @@ export const GEMS = [
                 id: 8,
                 name: `Ruby`,
                 quality: `Self-Control`,
-                childStone: `Jasper (Dexterity)`,
+                childStone: `Pruskite (Dexterity)`,
                 syntheticStone: `Self-Focus`,
                 darkStone: `Havoc`,
                 smDescription: 
                     `Stone given to Thelmiel to create Aviame`,
-                description: `Similar is Ruby, which is self-control. It is a deeper red than jasper granted to the eldar, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
+                description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the eldar, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
                 image: ruby,
                 imageAlt: `Qeṽa Ruby Gem`
             },
@@ -412,16 +412,16 @@ export const GEMS = [
             },
             {
                 id: 8,
-                name: `Jasper`,
+                name: `Pruskite`,
                 quality: `Dexterity`,
                 parentStone: `Ruby (Self-Control)`,
                 syntheticStone: `Self-Focus`,
                 darkStone: `Havoc`,
                 smDescription: 
                     `Stone given to Thelmiel to create Aviame`,
-                description: `Jasper is the stone of dexterity, born out of Ruby, the cardinal stone of self-control. Much like the elves, the Aviame are protective of this stone and require those who seek it to pass a set of trials. Caracadre warriors are enrolled in the legendary Aviame school of archery and combatives. Caracadre must be willing to set aside their personal possessions and affairs for the unpredictable duration of time to become a honorary Avikain. If they ever choose to leave before their training is complete, they may never return. In the same way as the elves, these trials prepare the Caracadre to align with jasper.`,
-                image: jasper,
-                imageAlt: `Qeṽa Jasper Gem`
+                description: `pruskite is the stone of dexterity, born out of Ruby, the cardinal stone of self-control. Much like the elves, the Aviame are protective of this stone and require those who seek it to pass a set of trials. Caracadre warriors are enrolled in the legendary Aviame school of archery and combatives. Caracadre must be willing to set aside their personal possessions and affairs for the unpredictable duration of time to become a honorary Avikain. If they ever choose to leave before their training is complete, they may never return. In the same way as the elves, these trials prepare the Caracadre to align with pruskite.`,
+                image: pruskite,
+                imageAlt: `Qeṽa Pruskite Gem`
             },
             {
                 id: 9,
@@ -497,7 +497,7 @@ export const GEMS = [
                     {
                         id: 4,
                         name: `Synthetic Stones`,
-                        description: `Those who are knowledgable know that stones can also be "opened" or altered to become "synthetic" A synthetic stone allows an individual to tinker with the stone's property and adapt it to their purposes. For example, synthetic jasper is indulgence. It adapts the positive quality of joy to be misused for personal pleasure and indulgence. It is important to note than only cardinal stones can be synthesized. Divine stones are unopenable and incidental stones are not alterable.`
+                        description: `Those who are knowledgable know that stones can also be "opened" or altered to become "synthetic" A synthetic stone allows an individual to tinker with the stone's property and adapt it to their purposes. For example, synthetic pruskite is indulgence. It adapts the positive quality of joy to be misused for personal pleasure and indulgence. It is important to note than only cardinal stones can be synthesized. Divine stones are unopenable and incidental stones are not alterable.`
                     }
                 ]
             },
