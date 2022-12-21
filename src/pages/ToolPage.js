@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BasicLink } from '../utils/link';
-import GemGenerator from '../tools/gemGenerator';
+import GemGenerator from '../tools/GemGenerator';
+import CharacterSheet from '../tools/CharacterSheet';
 
 
 const ToolPage = () => {
@@ -18,16 +19,7 @@ const ToolPage = () => {
             <section className="highlights mt-4">
                 <div className="row">
                     <GemGenerator/>
-                    <div className="col-lg-4">
-                        <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
-                            <i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i>
-                            <div className="ms-3">
-                                <div className="d-flex align-items-center">
-                                    <h3 className="mb-0">Race Generator</h3>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
+                    <CharacterSheet/>
                     <div className="col-lg-4" >
                         <Link className="box d-flex rounded-2 align-items-center p-3">
                             <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>

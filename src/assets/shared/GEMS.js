@@ -378,7 +378,7 @@ export const GEMS = [
                 parentStone: `Emerald (Goodness)`,
                 syntheticStone: `Unbending`,
                 darkStone: `Evil`,
-                smDescription: 
+                smDescription:
                     `Stone native to the forests of Mahelos`,
                 description: `Trees have limited movement and limited volition, but they do listen. At their best, sentient trees are highly aware and the incidental stone of jade grows from their presence. It is a opaque, light green in color.`,
                 image: jade,
@@ -477,7 +477,7 @@ export const GEMS = [
                     {
                         id: 0,
                         name: `Divine Stones`,
-                        description: `The Divine stones of DIA are those that are not native to Qeṽa as their reflective nature of DIA is too vast to be understood in our world. However, by divine allowance three have found their way into our world, but are not to be sought. This being said, evil forces are drawn to them in their desire to usurp DIA.`
+                        description: `The Divine stones of DIA are those that are not native to Qeṽa as their reflective nature of DIA is too vast to be understood in our world. However, by divine allowance some have found their way into our world, but are not to be sought. This being said, evil forces are drawn to them in their desire to usurp DIA.`
                     },
                     {
                         id: 1,

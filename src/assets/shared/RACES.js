@@ -29,6 +29,7 @@ Dwarves
 Halflings
 Aeoki
 Arborums
+Dragons
 
 */
 
@@ -124,7 +125,7 @@ export const RACES = [
                 residence: `High Mountains, Orcaṽa`,
                 appearance: `White Hair & Skin`,
                 description: 
-                    `The Viame or Snow Avi or even High Aviame have a pale, white skin and blue lips. They live in the high mountains; most prevalently in the north ranges acting as a gatekeepers of Altiavaire. Beyond the normal tolerance of other Aviame, Tsiame are especially built for the cold so much so that some sailed north for inhabitable land after the Terracut.`,
+                    `The Asiame or Snow Avi or even High Aviame have pale white skin and hair. They live in the high mountains; most prevalently in the north ranges acting as a gatekeepers of Altiavaire. Beyond the normal tolerance of other Aviame, Asiame are especially built for the cold so much so that some sailed north for inhabitable land after the Terracut.`,
                 image: asiame,
                 imageAlt: `Qeṽa Asiame`
             },
@@ -359,7 +360,7 @@ export const RACES = [
         height: `Gargantuan`,
         weight: `3,000lbs`,
         appearance: `Various Colored-Scales & Wings`,
-        language: `Common, Dark Speech`,
+        language: `Common, Elvish, Dark Speech`,
         government: `None`,
         residence: `Varied`,
         description: `Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elder elves, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.`,

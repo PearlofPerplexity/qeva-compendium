@@ -43,7 +43,7 @@ const GemGenerator = () => {
 
     const gemColor = ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-    const gemCut = ["Uncut", "Brilliant", "Cushion", "Emerald", "French", "Lozenge", "Marquise", "Oval", "Pear", "Peruzzi", "Portuguese", "Princess", "Radiant", "Single", "Trillion"];
+    const gemCut = ["Uncut", "Brilliant", "Cushion", "Emerald", "Island", "Lozenge", "Marquise", "Oval", "Pear", "Peruzzi", "Portuguese", "Princess", "Radiant", "Single", "Trillion"];
 
     const uncutArray = [uncut1, uncut2, uncut3, uncut4];
 
@@ -226,7 +226,7 @@ const GemGenerator = () => {
             setCut("Emerald");
             setCutImg(emeraldCut);
         } else if (cutNum <= 45) {
-            setCut("French");
+            setCut("Island");
             setCutImg(french);
         } else if (cutNum <= 50) {
             setCut("Lozenge");
@@ -357,7 +357,7 @@ const GemGenerator = () => {
         if (cutVal.toLowerCase() === "brilliant") setCutImg(brilliant);
         else if (cutVal.toLowerCase() === "cushion") setCutImg(cushion);
         else if (cutVal.toLowerCase() === "emerald") setCutImg(emeraldCut);
-        else if (cutVal.toLowerCase() === "french") setCutImg(french);
+        else if (cutVal.toLowerCase() === "island") setCutImg(french);
         else if (cutVal.toLowerCase() === "lozenge") setCutImg(lozenge);
         else if (cutVal.toLowerCase() === "marquise") setCutImg(marquise);
         else if (cutVal.toLowerCase() === "oval") setCutImg(oval);
@@ -438,7 +438,7 @@ const GemGenerator = () => {
                         </div>
                         {cut && gemCut.includes(cut) && (
                         <div id='img-holder'>
-                            <img className='m-3 p-3' id="gem-img" src={cutImg} style={{width:'150px'}} />
+                            <img className='m-3 p-3' id="gem-img" src={cutImg} style={{width:'150px'}} alt="gem-cut-img"/>
                         </div>
                         )}
                     </div>

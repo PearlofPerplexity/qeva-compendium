@@ -1,10 +1,9 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -51,6 +50,14 @@ const Header = (args) => {
 
     const wikiToggle = () => setMenu("Qeṽa Compendium");
     const toolToggle = () => setMenu("Qeṽa Tools");
+
+    useEffect(() => {
+        if(window.location.pathname === '/tools') {
+            toolToggle();
+        } else {
+            wikiToggle();
+        }
+      });
     
     return (
         <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>

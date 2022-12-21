@@ -680,9 +680,9 @@ export const CLASSES = [
             {
                 id: 1,
                 name: `Acolyte`,
-                expertise: `The Unseen`,
+                expertise: `Arcana`,
                 equipment: `A Cut of Emerald`,
-                description: `The acolyte is well-versed in the spiritual realities of Qeṽa. They have discovered the true meaning of gems and the hidden realities of the ethereal realm. By pouring over old texts or pestering oracles, elves or cathedral keepers, they have uncovered secrets held only by a few. Though most believe in an unseen realm, they tend to trust their own experience and dismiss acolytes as fairy tale storytellers.`
+                description: `The acolyte is well-versed in the spiritual realities of Qeṽa. They have discovered the true meaning of gems and the hidden realities of the ethereal realm. By pouring over old texts or pestering oracles, elves or cathedral keepers, they have uncovered secrets held only by a few and they use this knowledge to pursue the art of divination. Though most believe in an unseen realm, they tend to trust physical crafts and their own experience dismissing acolytes as dreamers and fairy tale storytellers.`
             },
             {
                 id: 2,
