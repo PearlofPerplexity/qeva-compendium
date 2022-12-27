@@ -8,18 +8,22 @@ import {
     ModalFooter
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { useReactToPrint } from 'react-to-print';
 import CharacterSheet from './CharacterSheet';
 
 const CharacterCreator = () => {
     
     const [modal, setModal] = useState(false);
-
     const toggle = () => setModal(!modal);
-
     const reset = () => {
         toggle();
         console.clear();
     }
+
+    const componentRef = React.createRef();
+    const handlePrint = useReactToPrint({
+        content: () => componentRef.current,
+      });
 
     return (
         <div className="col-lg-4">
@@ -34,10 +38,10 @@ const CharacterCreator = () => {
             <Modal isOpen={modal} toggle={toggle} fullscreen>
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Character Sheet</ModalHeader>
                 <ModalBody>
-                    <CharacterSheet />
+                    <CharacterSheet ref={componentRef} />
                 </ModalBody>
                 <ModalFooter>
-                <Button color="primary">
+                <Button color="primary" onClick={handlePrint} >
                     Print
                 </Button>{' '}
                 <Button color="secondary" onClick={reset}>

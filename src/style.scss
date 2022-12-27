@@ -10,6 +10,20 @@ $small-box-width: 30px;
 $large-box-width: 70px;
 $score-height: 45px;
 
+@media print {
+  body {
+    background-color: white;
+  }
+  form.charsheet {
+    margin: 0px;
+    padding: 0px;
+
+    div.score input.stat, div.hp input, div.remaining input {
+      background-color: transparent!important;
+    }
+  }
+}
+
 form.charsheet {
   width: $sheet-width;
   right: 0;
@@ -145,7 +159,7 @@ form.charsheet {
   main {
     display: flex;
     justify-content: space-between;
-    margin-top: $gutter*2;
+    margin-top: $gutter;
    
     div.label-container, input.label-container {
       position: relative;
@@ -333,7 +347,7 @@ form.charsheet {
       }
 
       div.otherprofs textarea {
-        height: 25.75em;
+        height: 16em;
       }
     }
           
@@ -606,6 +620,7 @@ form.charsheet {
             
         textarea {
           border: 0;
+          height: 7.25em;
         }
       }
     }
@@ -801,7 +816,7 @@ form.charsheet {
         textarea {
           border: 0;
           padding: 5px;
-          height: 45.25em;
+          height: 37.5em;
         }
       }
     }
