@@ -21,6 +21,20 @@ $score-height: 45px;
     div.score input.stat, div.hp input, div.remaining input {
       background-color: transparent!important;
     }
+
+    section.features div {
+      border: none!important;
+
+      label {
+        position: absolute;
+        margin-left: 5em;
+        margin-bottom: -1.75em;
+      }
+
+      textarea {
+        height: 37.5em;
+      }
+    }
   }
 }
 
@@ -347,7 +361,7 @@ form.charsheet {
       }
 
       div.otherprofs textarea {
-        height: 16em;
+        height: 15em;
       }
     }
           
@@ -620,7 +634,7 @@ form.charsheet {
             
         textarea {
           border: 0;
-          height: 7.25em;
+          height: 6.25em;
         }
       }
     }
@@ -816,7 +830,7 @@ form.charsheet {
         textarea {
           border: 0;
           padding: 5px;
-          height: 37.5em;
+          height: 36.5em;
         }
       }
     }
