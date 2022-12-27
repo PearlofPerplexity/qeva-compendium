@@ -1,7 +1,9 @@
 import './App.css';
-import { Fragment } from 'react';
-import ScrollUp from './utils/scrollUp';
+import { Fragment, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import { fetchBasics } from './slices/basicsSlice';
+import ScrollUp from './utils/scrollUp';
 import Aside from './components/Aside';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
@@ -21,6 +23,13 @@ import MapPage from './pages/MapPage';
 import BelowSpace from './components/BelowSpace';
 
 function App() {
+  
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBasics());
+  }, [dispatch]);
+  
   return (
     <div className='App'>
       <Aside />

@@ -1,13 +1,16 @@
 import _ from "lodash";
 import React from 'react';
 import EdiText from 'react-editext';
+import { Col } from "reactstrap";
 import { GEMS } from '../assets/shared/GEMS';
 import { DIVINE } from '../assets/shared/DIVINE';
 import { BasicIcon } from "../utils/icon";
 import InnerSmNav from "../features/navs/InnerSmNav";
 import BottomSmNav from '../features/navs/BottomSmNav';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectAllBasics, editBasics } from '../slices/basicsSlice';
+import { selectAllBasics, updateBasics } from '../slices/basicsSlice';
+import Error from "../utils/Error";
+import Loading from "../utils/Loading";
 
 const BasicPage = () => {
     const basics = useSelector(selectAllBasics);
@@ -17,9 +20,29 @@ const BasicPage = () => {
     const handleSave = index => e => {
         let newArr = _.cloneDeep(basics);
         newArr[0].topics[index].description = e;
-        dispatch(editBasics(newArr));
+        dispatch(updateBasics(newArr));
     };
 
+    const isLoading = useSelector((state) => state.basics.isLoading);
+    const errMsg = useSelector((state) => state.basics.errMsg);
+
+if(isLoading) {
+    return (
+        <Col md='5' className='m-1'>
+            <Loading />
+        </Col>
+    );
+}
+
+if (errMsg) {
+    return (
+        <Col md='5' className='m-1'>
+            <Error errMsg={errMsg}/>
+        </Col>
+    );
+}
+
+if (basics && basics.length > 0) {
     return (
         <div className='py-2 px-3'>
             <InnerSmNav icon={BasicIcon} name="The Basics - What makes Qeṽa unique?" />
@@ -58,6 +81,13 @@ const BasicPage = () => {
             <BottomSmNav left={GEMS[3]} right={DIVINE[3]} />
         </div>
     );
+}
+return (
+    <Col md='5' className='m-1'>
+        There is no information available.
+    </Col>
+)
+
 }
 
 export default BasicPage;

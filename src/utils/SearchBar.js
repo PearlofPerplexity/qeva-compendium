@@ -38,8 +38,7 @@ const flatArray = (array) => {
     const flattenMembers = array.map(m => {
       if (m.topics && m.topics.length) {
         m.topics.map((topic) => {
-            topic.link = m.link;
-            return
+            return topic.link = m.link;
         })
         topics = [...topics, ...m.topics];
       }

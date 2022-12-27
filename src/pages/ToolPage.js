@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BasicLink } from '../utils/link';
 import GemGenerator from '../tools/GemGenerator';
-import CharacterSheet from '../tools/CharacterSheet';
+import CharacterCreator from '../tools/CharacterCreator';
+import '../style.css'
 
 
 const ToolPage = () => {
@@ -19,7 +20,7 @@ const ToolPage = () => {
             <section className="highlights mt-4">
                 <div className="row">
                     <GemGenerator/>
-                    <CharacterSheet/>
+                    <CharacterCreator/>
                     <div className="col-lg-4" >
                         <Link className="box d-flex rounded-2 align-items-center p-3">
                             <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>

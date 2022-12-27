@@ -8,6 +8,28 @@ import toppler from '../imgs/logos/topplers-white.png';
 import avlimeth from '../imgs/logos/helmsman-white.png';
 import feather from '../imgs/logos/feather.png';
 
+/* CLASSES: 
+
+oracles
+caracadre
+avlimeth
+elvish cloaks
+avikin
+ghost blades
+the uncorrupted
+the topplers
+order of the feather
+adventurer
+acolyte
+bard
+crafter
+druid
+fighter
+gemcutter
+scribe
+
+*/
+
 export const CLASSES = [
     {
         id: 0,

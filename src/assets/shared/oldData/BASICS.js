@@ -1,4 +1,4 @@
-import { BasicLink } from "../../utils/link";
+import { BasicLink } from "../../../utils/link";
 
 export const BASICS = [
     {
