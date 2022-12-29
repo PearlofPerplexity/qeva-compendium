@@ -9,6 +9,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import CharacterSheet from './CharacterSheet';
+import CharacterBuilder from './CharacterBuilder';
 
 const CharacterCreator = () => {
     
@@ -62,7 +63,7 @@ const CharacterCreator = () => {
             <Modal isOpen={modalOne} toggle={toggleOne} fullscreen>
                 <ModalHeader><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Character Builder</ModalHeader>
                 <ModalBody>
-                    {/* Insert Character Builder Form Component */}
+                    <CharacterBuilder />
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={toggle} >
