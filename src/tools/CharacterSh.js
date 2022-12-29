@@ -31,21 +31,11 @@ const CharacterCreator = () => {
 
 
     const [modal, setModal] = useState(false);
-    const [nestedModal, setNestedModal] = useState(false);
-    const [closeAll, setCloseAll] = useState(false);
     const toggle = () => setModal(!modal);
-    const toggleNested = () => {
-        setNestedModal(!nestedModal);
-        setCloseAll(false);
-    };
-    const toggleAll = () => {
-        setNestedModal(!nestedModal);
-        setCloseAll(true);
-    };
     const reset = () => {
         toggle();
         console.clear();
-    };
+    }
 
     const componentRef = React.createRef();
     const handlePrint = useReactToPrint({
@@ -68,31 +58,12 @@ const CharacterCreator = () => {
                     <CharacterSheet ref={componentRef} />
                 </ModalBody>
                 <ModalFooter>
-                <Button color="secondary" onClick={reset} >
-                    Back
-                </Button>{' '}
                 <Button color="primary" onClick={handlePrint} >
                     Print
                 </Button>{' '}
-                <Button color="danger" onClick={toggleNested}>
+                <Button color="secondary" onClick={reset}>
                     Cancel
                 </Button>
-                <Modal
-                    isOpen={nestedModal}
-                    toggle={toggleNested}
-                    onClosed={closeAll ? toggle : undefined}
-                >
-                    <ModalHeader>Wait!</ModalHeader>
-                    <ModalBody>Are you sure you want to cancel? Canceling will delete all progress.</ModalBody>
-                    <ModalFooter>
-                        <Button color="danger" onClick={toggleAll}>
-                            Yes, Cancel
-                        </Button>{' '}
-                        <Button color="secondary" onClick={toggleNested}>
-                            Go back
-                        </Button>
-                    </ModalFooter>
-                </Modal>
                 </ModalFooter>
             </Modal>
         </div>
