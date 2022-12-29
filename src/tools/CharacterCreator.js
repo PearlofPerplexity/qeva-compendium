@@ -30,23 +30,26 @@ const CharacterCreator = () => {
     */
 
 
+    const [modalOne, setModalOne] = useState(false);
+    const toggleOne = () => {
+        setModal(false);
+        setModalOne(true);
+    };
     const [modal, setModal] = useState(false);
     const [nestedModal, setNestedModal] = useState(false);
-    const [closeAll, setCloseAll] = useState(false);
-    const toggle = () => setModal(!modal);
+    const toggle = () => {
+        setModal(true);
+        setModalOne(false);
+    }
     const toggleNested = () => {
         setNestedModal(!nestedModal);
-        setCloseAll(false);
-    };
-    const toggleAll = () => {
-        setNestedModal(!nestedModal);
-        setCloseAll(true);
     };
     const reset = () => {
-        toggle();
+        setNestedModal(false);
+        setModal(false);
+        setModalOne(false);
         console.clear();
     };
-
     const componentRef = React.createRef();
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
@@ -54,7 +57,7 @@ const CharacterCreator = () => {
 
     return (
         <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
+            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggleOne}>
                 <i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
@@ -62,37 +65,50 @@ const CharacterCreator = () => {
                     </div>
                 </div>
             </Link>
+            <Modal isOpen={modalOne} toggle={toggleOne} fullscreen>
+                <ModalHeader><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Character Builder</ModalHeader>
+                <ModalBody>
+
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" onClick={toggle} >
+                        Build Character Sheet
+                    </Button>{' '}
+                    <Button color="danger" onClick={toggleNested}>
+                        Cancel
+                    </Button>   
+                </ModalFooter>
+            </Modal>
             <Modal isOpen={modal} toggle={toggle} fullscreen>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Character Sheet</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Character Builder</ModalHeader>
                 <ModalBody>
                     <CharacterSheet ref={componentRef} />
                 </ModalBody>
                 <ModalFooter>
-                <Button color="secondary" onClick={reset} >
-                    Back
-                </Button>{' '}
-                <Button color="primary" onClick={handlePrint} >
-                    Print
-                </Button>{' '}
-                <Button color="danger" onClick={toggleNested}>
-                    Cancel
-                </Button>
-                <Modal
-                    isOpen={nestedModal}
-                    toggle={toggleNested}
-                    onClosed={closeAll ? toggle : undefined}
-                >
-                    <ModalHeader>Wait!</ModalHeader>
-                    <ModalBody>Are you sure you want to cancel? Canceling will delete all progress.</ModalBody>
-                    <ModalFooter>
-                        <Button color="danger" onClick={toggleAll}>
-                            Yes, Cancel
-                        </Button>{' '}
-                        <Button color="secondary" onClick={toggleNested}>
-                            Go back
-                        </Button>
-                    </ModalFooter>
-                </Modal>
+                    <Button color="secondary" onClick={toggleOne} >
+                        Back
+                    </Button>{' '}
+                    <Button color="primary" onClick={handlePrint} >
+                        Print
+                    </Button>{' '}
+                    <Button color="danger" onClick={toggleNested}>
+                        Cancel
+                    </Button>
+                </ModalFooter>
+            </Modal>
+            <Modal
+                isOpen={nestedModal}
+                toggle={toggleNested}
+            >
+                <ModalHeader>WARNING!</ModalHeader>
+                <ModalBody>Are you sure you want to cancel? If you cancel now, you will lose all progress.</ModalBody>
+                <ModalFooter>
+                    <Button color="danger" onClick={reset}>
+                        Yes, Cancel
+                    </Button>{' '}
+                    <Button color="secondary" onClick={toggleNested}>
+                        Go back
+                    </Button>
                 </ModalFooter>
             </Modal>
         </div>
