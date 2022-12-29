@@ -31,19 +31,13 @@ const CharacterCreator = () => {
 
 
     const [modalOne, setModalOne] = useState(false);
-    const toggleOne = () => {
-        setModal(false);
-        setModalOne(true);
-    };
+    const toggleOneStart = () => setModalOne(true);
+    const toggleOne = () => setModal(false);
+
     const [modal, setModal] = useState(false);
     const [nestedModal, setNestedModal] = useState(false);
-    const toggle = () => {
-        setModal(true);
-        setModalOne(false);
-    }
-    const toggleNested = () => {
-        setNestedModal(!nestedModal);
-    };
+    const toggle = () => setModal(true);
+    const toggleNested = () => setNestedModal(!nestedModal);
     const reset = () => {
         setNestedModal(false);
         setModal(false);
@@ -57,7 +51,7 @@ const CharacterCreator = () => {
 
     return (
         <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggleOne}>
+            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggleOneStart}>
                 <i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
@@ -68,7 +62,7 @@ const CharacterCreator = () => {
             <Modal isOpen={modalOne} toggle={toggleOne} fullscreen>
                 <ModalHeader><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Character Builder</ModalHeader>
                 <ModalBody>
-
+                    {/* Insert Character Builder Form Component */}
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={toggle} >
