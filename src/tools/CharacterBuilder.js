@@ -211,9 +211,9 @@ const CharacterBuilder = () => {
         <div className="col text-center border-start border-bottom border-3 border-light rounded">
             <h2 className='mb-5'>Your Character: {charName}</h2>
             {allAbility === 0 ? (
-                <h5 className='text-success'>ABILITY SCORES ✓</h5>
+                <h5><strong className='text-success'>✓ </strong>ABILITY SCORES</h5>
             ) : (
-                <h5 className='text-danger'>ABILITY SCORES ✖</h5>
+                <h5><strong className='text-danger'>✖ </strong>ABILITY SCORES</h5>
             )}
             <div className='row'>
                 <p className='col-2'>STR: {strength}</p>
@@ -226,19 +226,19 @@ const CharacterBuilder = () => {
             {alignment && (
                 !alignment.includes('Evil') ? (
                     <div className='mb-3'>
-                        <h5><strong>ALIGNMENT: </strong>{alignment}</h5>
+                        <h5><strong className='text-success'>✓ </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
                         <p><strong>You can align to the following stones: </strong> Creator Stones, Moral Stones, Power Stones</p>
                     </div>
                 ) : (
                     <div className='mb-3'>
-                        <h5><strong>ALIGNMENT: </strong>{alignment}</h5>
+                        <h5><strong className='text-success'>✓ </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
                         <p><strong>You can align to the following stones: </strong> Power Stones, Synthetic Stones, Dark Stones</p>
                     </div>
                 )
             )}
             {!(Object.keys(raceCur).length === 0) && (
                     <div className=''>
-                        <h5><strong>RACE: </strong>{raceCur.name}</h5>
+                        <h5><strong className='text-success'>✓ </strong><strong>RACE: </strong>{raceCur.name}</h5>
                         <div className='row'>
                             <p className='col'><strong>lifespan: </strong>{raceCur.lifespan}</p>
                             <p className='col'><strong>size: </strong>{raceCur.size}</p>
@@ -247,13 +247,13 @@ const CharacterBuilder = () => {
                     </div>
             )}
             {subrace && (
-                <h5><strong>SUBRACE: </strong>{subrace}</h5>
+                <h5><strong className='text-success'>✓ </strong><strong>SUBRACE: </strong>{subrace}</h5>
             )}
             {!(Object.keys(classCur).length === 0) && (
-                <h5><strong>CLASS: </strong>{classCur.name}</h5>
+                <h5><strong className='text-success'>✓ </strong><strong>CLASS: </strong>{classCur.name}</h5>
             )}
             {subclass && (
-                <h5><strong>SUBCLASS: </strong>{subclass}</h5>
+                <h5><strong className='text-success'>✓ </strong><strong>SUBCLASS: </strong>{subclass}</h5>
             )}
         </div>
     </div>
