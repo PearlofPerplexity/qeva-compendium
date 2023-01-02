@@ -7,6 +7,7 @@ import {
   } from 'reactstrap';
 import { RACES } from "../assets/shared/RACES";
 import { CLASSES } from "../assets/shared/CLASSES";
+import { GEMS } from "../assets/shared/GEMS";
 
 // Create help badges showing different alignments, races, etc.
 
@@ -22,6 +23,8 @@ const CharacterBuilder = () => {
     const allAbility = 72 - strength - dexterity - constitution - intelligence - wisdom - charisma;
 
     const [alignment, setAlignment] = useState("");
+    const [gemAlignment, setGemAlignment] = useState("");
+
     const [raceCur, setRaceCur] = useState({});
     const [subrace, setSubrace] = useState("");
     const [subclass, setSubclass] = useState("");
@@ -45,7 +48,12 @@ const CharacterBuilder = () => {
         else setOpen(id);
     };
 
-    const handleAlignment = (e) => setAlignment(e.target.value);
+    const handleAlignment = (e) => {
+        setAlignment(e.target.value);
+        setGemAlignment('');
+    }
+    const handleGemAlignment = (e) => setGemAlignment(e.target.value);
+
     const handleRace = (e) => {
         if (e.target.value === '') {
             setRaceCur({});
@@ -138,42 +146,62 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='2'>Alignment</AccordionHeader>
                     <AccordionBody accordionId='2'>
-                    <select name='alignment' id="alignment-select" onChange={handleAlignment}>
-                        <option value="">--Select an Alignment--</option>
-                        <option value="Lawful Good">Lawful Good</option>
-                        <option value="Neutral Good">Neutral Good</option>
-                        <option value="Chaotic Good">Chaotic Good</option>
-                        <option value="Lawful Neutral">Lawful Neutral</option>
-                        <option value="Neutral">Neutral</option>
-                        <option value="Chaotic Neutral">Chaotic Neutral</option>
-                        <option value="Lawful Evil">Lawful Evil</option>
-                        <option value="Neutral Evil">Neutral Evil</option>
-                        <option value="Chaotic Evil">Chaotic Evil</option>
-                    </select>
+                        <select name='alignment' id="alignment-select" onChange={handleAlignment}>
+                            <option value="">--Select an Alignment--</option>
+                            <option value="Lawful Good">Lawful Good</option>
+                            <option value="Neutral Good">Neutral Good</option>
+                            <option value="Chaotic Good">Chaotic Good</option>
+                            <option value="Lawful Neutral">Lawful Neutral</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Chaotic Neutral">Chaotic Neutral</option>
+                            <option value="Lawful Evil">Lawful Evil</option>
+                            <option value="Neutral Evil">Neutral Evil</option>
+                            <option value="Chaotic Evil">Chaotic Evil</option>
+                        </select>
+                        {alignment && (
+                            <select name='gem-alignment' id='gem-alignment-select' onChange={handleGemAlignment}>
+                                <option value="">--Select a Gem to Pursue--</option>
+                                {[...GEMS[0].topics, ...GEMS[2].topics].map((gem) => (
+                                    <option value={gem.name} key={gem.id}>{gem.name} - {gem.quality}</option>
+                                ))}
+                                {!alignment.includes('Evil') ? (
+                                    <>
+                                        {GEMS[1].topics.map((gem) => (
+                                            <option value={gem.name} key={gem.id}>{gem.name} - {gem.quality}</option>
+                                        ))}
+                                    </>
+                                ) : (
+                                    <>
+                                        {GEMS[1].topics.map((gem) => (
+                                            <>
+                                                <option value={gem.syntheticStone} key={gem.id}>Refracted {gem.name} - {gem.syntheticStone}</option>
+                                                <option value={gem.darkStone} key={gem.id}>Dark {gem.name} - {gem.darkStone}</option>
+                                            </>
+                                        ))}
+                                    </>
+                                )}
+                            </select>
+                        )}
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionHeader targetId='3'>Race</AccordionHeader>
                     <AccordionBody accordionId='3'>
-                        <h2>Race</h2>
-                        <select name='races' className="mb-4" id='race-select' onChange={handleRace}>
+                        <select name='races' id='race-select' onChange={handleRace}>
                             <option value="">--Select a Race--</option>
                             {RACES.map((race) => (
                                 <option value={race.name} key={race.id}>{race.name}</option>
-                                ))}
+                            ))}
                         </select>
                         {raceCur && (
                             <>
                                 {raceCur.topics && (
-                                    <>
-                                        <h4>SubRace</h4>
-                                        <select name='subraces' className="mb-4" id='subrace-select' onChange={handleSubrace}>
-                                            <option value="">--Select Subrace--</option>
-                                            {raceCur.topics.map((subrace) => (
-                                                <option value={subrace.name} key={subrace.id}>{subrace.name}</option>
-                                            ))}
-                                        </select>
-                                    </>
+                                    <select name='subraces' id='subrace-select' onChange={handleSubrace}>
+                                        <option value="">--Select Subrace--</option>
+                                        {raceCur.topics.map((subrace) => (
+                                            <option value={subrace.name} key={subrace.id}>{subrace.name}</option>
+                                        ))}
+                                    </select>
                                 )}
                             </>
                         )}
@@ -182,8 +210,7 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='4'>Class</AccordionHeader>
                     <AccordionBody accordionId='4'>
-                        <h2>Class</h2>
-                        <select name='orders' className="mb-4" id='order-select' onChange={handleClass}>
+                        <select name='orders' id='order-select' onChange={handleClass}>
                             <option value="">--Select a Class--</option>
                             {CLASSES.map((order) => (
                                 <option value={order.name} key={order.id}>{order.name}</option>
@@ -193,9 +220,8 @@ const CharacterBuilder = () => {
                             <>
                                 {classCur.name === 'No Affiliation' && (
                                     <>
-                                        <h4>Subclass</h4>
                                         <select name='subclasses' id='subclass-select' onChange={handleSubclass}>
-                                            <option value="">--Select Subclass--</option>
+                                            <option value="">--Select a Subclass--</option>
                                             {classCur.topics.map((subclass) => (
                                                 <option value={subclass.name} key={subclass.id}>{subclass.name}</option>
                                             ))}
@@ -206,14 +232,27 @@ const CharacterBuilder = () => {
                         )}
                     </AccordionBody>
                 </AccordionItem>
+                <AccordionItem>
+                    <AccordionHeader targetId='5'>Background</AccordionHeader>
+                    <AccordionBody accordionId='5'>
+                        <p>Develop a character backstory and receive the following:</p>
+                        <ul className='ps-5 text-start list-group'>
+                            <li>2 Skill Proficiencies</li>
+                            <li>2 Tool Proficiencies or Languages</li>
+                            <li>2 Equipment Items</li>
+                        </ul>
+                    </AccordionBody>
+                </AccordionItem>
             </Accordion>
         </form>
         <div className="col text-center border-start border-bottom border-3 border-light rounded">
             <h2 className='mb-5'>Your Character: {charName}</h2>
             {allAbility === 0 ? (
                 <h5><strong className='text-success'>✓ </strong>ABILITY SCORES</h5>
-            ) : (
+            ) : allAbility === 72 ? (
                 <h5><strong className='text-danger'>✖ </strong>ABILITY SCORES</h5>
+            ) : (
+                <h5><strong className='text-warning'>... </strong>ABILITY SCORES</h5>
             )}
             <div className='row mb-4'>
                 <p className='col-2'>STR: {strength}</p>
@@ -223,22 +262,33 @@ const CharacterBuilder = () => {
                 <p className='col-2'>WIS: {wisdom}</p>
                 <p className='col-2'>CHA {charisma}</p>
             </div>
-            {alignment && (
+            {alignment && !gemAlignment && (
                 !alignment.includes('Evil') ? (
                     <div className='mb-5'>
-                        <h5><strong className='text-success'>✓ </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
+                        <h5><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
                         <p><strong>You can align to the following stones: </strong> Creator Stones, Moral Stones, Power Stones</p>
                     </div>
                 ) : (
                     <div className='mb-5'>
-                        <h5><strong className='text-success'>✓ </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
-                        <p><strong>You can align to the following stones: </strong> Power Stones, Synthetic Stones, Dark Stones</p>
+                        <h5><strong className='text-danger'>✖ </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
+                        <p><strong>You can align to the following stones: </strong> Creator Stones, Synthetic Stones, Dark Stones, Power Stones</p>
                     </div>
                 )
             )}
+            {alignment && gemAlignment && (
+                <div className='mb-5'>
+                    <h5><strong className='text-success'>✓ </strong><strong> ALIGNMENT: </strong>{alignment} | {gemAlignment}</h5>
+                </div>
+            )}
             {!(Object.keys(raceCur).length === 0) && (
                     <div className='mb-5'>
-                        <h5><strong className='text-success'>✓ </strong><strong>RACE: </strong>{raceCur.name}</h5>
+                        {raceCur.hasOwnProperty('topics') && !subrace ? (
+                            <h5><strong className='text-warning'>... </strong><strong>RACE: </strong>{raceCur.name}</h5>
+                        ) : subrace? (
+                            <h5><strong className='text-success'>✓ </strong><strong>RACE: </strong>{raceCur.name} | {subrace}</h5>
+                        ) : (
+                            <h5><strong className='text-success'>✓ </strong><strong>RACE: </strong>{raceCur.name}</h5>
+                        )}
                         <div className='row'>
                             <p className='col'><strong>lifespan: </strong>{raceCur.lifespan}</p>
                             <p className='col'><strong>size: </strong>{raceCur.size}</p>
@@ -246,19 +296,19 @@ const CharacterBuilder = () => {
                         </div>
                     </div>
             )}
-            {subrace && (
-                <div className='mb-5'>
-                    <h5><strong className='text-success'>✓ </strong><strong>SUBRACE: </strong>{subrace}</h5>
-                </div>
-            )}
             {!(Object.keys(classCur).length === 0) && (
                 <div className='mb-5'>
-                    <h5><strong className='text-success'>✓ </strong><strong>CLASS: </strong>{classCur.name}</h5>
-                </div>
-            )}
-            {subclass && (
-                <div className='mb-5'>
-                    <h5><strong className='text-success'>✓ </strong><strong>SUBCLASS: </strong>{subclass}</h5>
+                    {(classCur.topics[0].name === 'Adventurer') && !subclass ? (
+                        <h5><strong className='text-warning'>... </strong><strong>CLASS: </strong>{classCur.name}</h5>
+                    ) : subclass? (
+                        <h5><strong className='text-success'>✓ </strong><strong>CLASS: </strong>{classCur.name} | {subclass}</h5>
+                    ) : (
+                        <h5><strong className='text-success'>✓ </strong><strong>CLASS: </strong>{classCur.name}</h5>
+                    )}
+                    <div className='row'>
+                        <p className='col'><strong>Proficiencies: </strong>{raceCur.lifespan}</p>
+                        <p className='col'><strong>Languages: </strong>{raceCur.size}</p>
+                    </div>
                 </div>
             )}
         </div>

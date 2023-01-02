@@ -96,7 +96,7 @@ const CharacterCreator = () => {
                 toggle={toggleNested}
             >
                 <ModalHeader>WARNING!</ModalHeader>
-                <ModalBody>Are you sure you want to cancel? If you cancel now, you will lose all progress.</ModalBody>
+                <ModalBody>Are you sure you want to cancel? If you cancel now, all progress will be lost.</ModalBody>
                 <ModalFooter>
                     <Button color="danger" onClick={reset}>
                         Yes, Cancel
