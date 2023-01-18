@@ -302,13 +302,13 @@ const CharacterBuilder = () => {
             )}
             {!(Object.keys(raceCur).length === 0) ? (
                     <div className='mb-5'>
-                        {raceCur.hasOwnProperty('topics') && !subrace ? (
-                            <h5><strong className='text-warning'>... </strong><strong>RACE: </strong>{raceCur.name}</h5>
-                        ) : subrace? (
-                            <h5><strong className='text-success'>✓ </strong><strong>RACE: </strong>{raceCur.name} | {subrace}</h5>
-                        ) : (
-                            <h5><strong className='text-success'>✓ </strong><strong>RACE: </strong>{raceCur.name}</h5>
-                        )}
+                        <h5>
+                            {raceCur.hasOwnProperty('topics') && !subrace ? (
+                                <strong className='text-warning'>... </strong>
+                            ) : (<strong className='text-success'>✓ </strong>)
+                            }
+                            <strong>RACE: </strong>{raceCur.name} {subrace && ( '| ' + subrace)}
+                        </h5>
                         <div className='row'>
                             <p className='col'><strong>lifespan: </strong>{raceCur.lifespan}</p>
                             <p className='col'><strong>size: </strong>{raceCur.size}</p>
@@ -320,13 +320,13 @@ const CharacterBuilder = () => {
             )}
             {!(Object.keys(classCur).length === 0) ? (
                 <div className='mb-5'>
-                    {(classCur.topics[0].name === 'Adventurer') && !subclass ? (
-                        <h5><strong className='text-warning'>... </strong><strong>CLASS: </strong>{classCur.name}</h5>
-                    ) : subclass? (
-                        <h5><strong className='text-success'>✓ </strong><strong>CLASS: </strong>{classCur.name} | {subclass}</h5>
-                    ) : (
-                        <h5><strong className='text-success'>✓ </strong><strong>CLASS: </strong>{classCur.name}</h5>
-                    )}
+                    <h5>
+                        {(classCur.topics[0].name === 'Adventurer') && !subclass ? (
+                            <strong className='text-warning'>... </strong>
+                        ) : (<strong className='text-success'>✓ </strong>)
+                        }
+                        <strong>CLASS: </strong>{classCur.name} {subclass && ('| ' + subclass)}
+                    </h5>
                     <div className='row'>
                         <p className='col'><strong>Proficiencies: </strong>{raceCur.lifespan}</p>
                         <p className='col'><strong>Languages: </strong>{raceCur.size}</p>
