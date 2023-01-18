@@ -12,8 +12,10 @@ import { GEMS } from "../assets/shared/GEMS";
 // Create help badges showing different alignments, races, etc.
 
 const CharacterBuilder = () => {
+    // Character Name
     const [charName, setCharName] = useState("");
     
+    // Ability Scores
     const [strength, setStrength] = useState("");
     const [dexterity, setDexterity] = useState("");
     const [constitution, setConstitution] = useState("");
@@ -21,6 +23,14 @@ const CharacterBuilder = () => {
     const [wisdom, setWisdom] = useState("");
     const [charisma, setCharisma] = useState("");
     const allAbility = 72 - strength - dexterity - constitution - intelligence - wisdom - charisma;
+
+    // Ability Score Modifiers
+    const strMod = Math.floor((strength - 10) / 2);
+    const dexMod = Math.floor((dexterity - 10) / 2);
+    const conMod = Math.floor((constitution - 10) / 2);
+    const intMod = Math.floor((intelligence - 10) / 2);
+    const wisMod = Math.floor((wisdom - 10) / 2);
+    const chaMod = Math.floor((charisma - 10) / 2);
 
     const [alignment, setAlignment] = useState("");
     const [gemAlignment, setGemAlignment] = useState("");
@@ -247,22 +257,29 @@ const CharacterBuilder = () => {
         </form>
         <div className="col text-center border-start border-bottom border-3 border-light rounded">
             <h2 className='mb-5'>Your Character: {charName}</h2>
-            {allAbility === 0 ? (
-                <h5><strong className='text-success'>✓ </strong>ABILITY SCORES</h5>
-            ) : allAbility === 72 ? (
-                <h5><strong className='text-danger'>✖ </strong>ABILITY SCORES</h5>
-            ) : (
-                <h5><strong className='text-warning'>... </strong>ABILITY SCORES</h5>
-            )}
-            <div className='row mb-4'>
+            <h5>
+                {allAbility === 0 ? (<strong className='text-success'>✓ </strong>)
+                : allAbility === 72 ? (<strong className='text-danger'>! </strong>)
+                : (<strong className='text-warning'>... </strong>)}
+                <strong>ABILITY SCORES</strong>
+            </h5>
+            <div className='row'>
                 <p className='col-2'>STR: {strength}</p>
                 <p className='col-2'>DEX: {dexterity}</p>
                 <p className='col-2'>CON: {constitution}</p>
                 <p className='col-2'>INT: {intelligence}</p>
                 <p className='col-2'>WIS: {wisdom}</p>
-                <p className='col-2'>CHA {charisma}</p>
+                <p className='col-2'>CHA: {charisma}</p>
             </div>
-            {alignment && !gemAlignment && (
+            <div className='row mb-4'>
+                {strMod !== -5 && (<p className='col-2'>{strMod}</p>)} 
+                {dexMod !== -5 && (<p className='col-2'>{dexMod}</p>)} 
+                {conMod !== -5 && (<p className='col-2'>{conMod}</p>)} 
+                {intMod !== -5 && (<p className='col-2'>{intMod}</p>)} 
+                {wisMod !== -5 && (<p className='col-2'>{wisMod}</p>)} 
+                {chaMod !== -5 && (<p className='col-2'>{chaMod}</p>)}
+            </div>
+            {alignment && !gemAlignment ? (
                 !alignment.includes('Evil') ? (
                     <div className='mb-5'>
                         <h5><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
@@ -270,17 +287,20 @@ const CharacterBuilder = () => {
                     </div>
                 ) : (
                     <div className='mb-5'>
-                        <h5><strong className='text-danger'>✖ </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
+                        <h5><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
                         <p><strong>You can align to the following stones: </strong> Creator Stones, Synthetic Stones, Dark Stones, Power Stones</p>
                     </div>
                 )
-            )}
-            {alignment && gemAlignment && (
+            ) :  alignment && gemAlignment ? (
                 <div className='mb-5'>
                     <h5><strong className='text-success'>✓ </strong><strong> ALIGNMENT: </strong>{alignment} | {gemAlignment}</h5>
                 </div>
+            ) : (
+                <div className='mb-5'>
+                    <h5><strong className='text-danger'>! </strong><strong> ALIGNMENT: </strong></h5>
+                </div>
             )}
-            {!(Object.keys(raceCur).length === 0) && (
+            {!(Object.keys(raceCur).length === 0) ? (
                     <div className='mb-5'>
                         {raceCur.hasOwnProperty('topics') && !subrace ? (
                             <h5><strong className='text-warning'>... </strong><strong>RACE: </strong>{raceCur.name}</h5>
@@ -295,8 +315,10 @@ const CharacterBuilder = () => {
                             <p className='col'><strong>speed: </strong>{raceCur.speed}</p>
                         </div>
                     </div>
+            ) : (
+                <h5 className='mb-5'><strong className='text-danger'>! </strong><strong>RACE: </strong></h5>
             )}
-            {!(Object.keys(classCur).length === 0) && (
+            {!(Object.keys(classCur).length === 0) ? (
                 <div className='mb-5'>
                     {(classCur.topics[0].name === 'Adventurer') && !subclass ? (
                         <h5><strong className='text-warning'>... </strong><strong>CLASS: </strong>{classCur.name}</h5>
@@ -310,6 +332,8 @@ const CharacterBuilder = () => {
                         <p className='col'><strong>Languages: </strong>{raceCur.size}</p>
                     </div>
                 </div>
+            ) : (
+                <h5 className='mb-5'><strong className='text-danger'>! </strong><strong>CLASS: </strong></h5>
             )}
         </div>
     </div>
