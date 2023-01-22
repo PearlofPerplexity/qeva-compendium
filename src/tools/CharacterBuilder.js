@@ -85,11 +85,11 @@ const CharacterBuilder = () => {
 
     return (
 
-<div className="container">
-    <div className="row">
-        <form className="col text-center">
-            <h2 className='mb-5'>Your Builder</h2>
-            <div className='mb-3'>
+<div className="container-fluid">
+    <div className="row row-height">
+        <form className="col text-center char-overflow">
+            <h2>Your Builder</h2>
+            <div className='mb-2 char-name-input'>
                 <label>Character Name&nbsp;</label>
                 <input type='text' value={charName} onChange={nameValuer} />
             </div>
@@ -156,7 +156,7 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='2'>Alignment</AccordionHeader>
                     <AccordionBody accordionId='2'>
-                        <select name='alignment' id="alignment-select" onChange={handleAlignment}>
+                        <select name='alignment' className="charPicklist" id="alignment-select" onChange={handleAlignment}>
                             <option value="">--Select an Alignment--</option>
                             <option value="Lawful Good">Lawful Good</option>
                             <option value="Neutral Good">Neutral Good</option>
@@ -168,8 +168,9 @@ const CharacterBuilder = () => {
                             <option value="Neutral Evil">Neutral Evil</option>
                             <option value="Chaotic Evil">Chaotic Evil</option>
                         </select>
+                        <button type="button" className="btn"><i className="uil uil-info-circle"></i></button>
                         {alignment && (
-                            <select name='gem-alignment' id='gem-alignment-select' onChange={handleGemAlignment}>
+                            <select name='gem-alignment' className="charPicklist" id='gem-alignment-select' onChange={handleGemAlignment}>
                                 <option value="">--Select a Gem to Pursue--</option>
                                 {[...GEMS[0].topics, ...GEMS[2].topics].map((gem) => (
                                     <option value={gem.name} key={gem.id}>{gem.name} - {gem.quality}</option>
@@ -197,7 +198,7 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='3'>Race</AccordionHeader>
                     <AccordionBody accordionId='3'>
-                        <select name='races' id='race-select' onChange={handleRace}>
+                        <select name='races' className="charPicklist" id='race-select' onChange={handleRace}>
                             <option value="">--Select a Race--</option>
                             {RACES.map((race) => (
                                 <option value={race.name} key={race.id}>{race.name}</option>
@@ -206,7 +207,7 @@ const CharacterBuilder = () => {
                         {raceCur && (
                             <>
                                 {raceCur.topics && (
-                                    <select name='subraces' id='subrace-select' onChange={handleSubrace}>
+                                    <select name='subraces' className="charPicklist" id='subrace-select' onChange={handleSubrace}>
                                         <option value="">--Select Subrace--</option>
                                         {raceCur.topics.map((subrace) => (
                                             <option value={subrace.name} key={subrace.id}>{subrace.name}</option>
@@ -220,7 +221,7 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='4'>Class</AccordionHeader>
                     <AccordionBody accordionId='4'>
-                        <select name='orders' id='order-select' onChange={handleClass}>
+                        <select name='orders' className="charPicklist" id='order-select' onChange={handleClass}>
                             <option value="">--Select a Class--</option>
                             {CLASSES.map((order) => (
                                 <option value={order.name} key={order.id}>{order.name}</option>
@@ -230,7 +231,7 @@ const CharacterBuilder = () => {
                             <>
                                 {classCur.name === 'No Affiliation' && (
                                     <>
-                                        <select name='subclasses' id='subclass-select' onChange={handleSubclass}>
+                                        <select name='subclasses' className="charPicklist" id='subclass-select' onChange={handleSubclass}>
                                             <option value="">--Select a Subclass--</option>
                                             {classCur.topics.map((subclass) => (
                                                 <option value={subclass.name} key={subclass.id}>{subclass.name}</option>
@@ -255,9 +256,9 @@ const CharacterBuilder = () => {
                 </AccordionItem>
             </Accordion>
         </form>
-        <div className="col text-center border-start border-bottom border-3 border-light rounded">
+        <div className="col text-center border-start border-3 border-light rounded char-overflow">
             <h2 className='mb-5'>Your Character: {charName}</h2>
-            <h5>
+            <h5 className='char-build-title'>
                 {allAbility === 0 ? (<strong className='text-success'>✓ </strong>)
                 : allAbility === 72 ? (<strong className='text-danger'>! </strong>)
                 : (<strong className='text-warning'>... </strong>)}
@@ -279,30 +280,32 @@ const CharacterBuilder = () => {
                 {wisMod !== -5 && (<p className='col-2'>{wisMod}</p>)} 
                 {chaMod !== -5 && (<p className='col-2'>{chaMod}</p>)}
             </div>
+            <div className='mb-5'>
             {alignment && !gemAlignment ? (
                 !alignment.includes('Evil') ? (
-                    <div className='mb-5'>
-                        <h5><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
+                    <>
+                        <h5 className='char-build-title'><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
                         <p><strong>You can align to the following stones: </strong> Creator Stones, Moral Stones, Power Stones</p>
-                    </div>
+                    </>
                 ) : (
-                    <div className='mb-5'>
-                        <h5><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
+                    <>
+                        <h5 className='char-build-title'><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
                         <p><strong>You can align to the following stones: </strong> Creator Stones, Synthetic Stones, Dark Stones, Power Stones</p>
-                    </div>
+                    </>
                 )
             ) :  alignment && gemAlignment ? (
-                <div className='mb-5'>
-                    <h5><strong className='text-success'>✓ </strong><strong> ALIGNMENT: </strong>{alignment} | {gemAlignment}</h5>
-                </div>
+                <>
+                    <h5 className='char-build-title'><strong className='text-success'>✓ </strong><strong> ALIGNMENT: </strong>{alignment} | {gemAlignment}</h5>
+                </>
             ) : (
-                <div className='mb-5'>
-                    <h5><strong className='text-danger'>! </strong><strong> ALIGNMENT: </strong></h5>
-                </div>
+                <>
+                    <h5 className='char-build-title'><strong className='text-danger'>! </strong><strong> ALIGNMENT: </strong></h5>
+                </>
             )}
+            </div>
             {!(Object.keys(raceCur).length === 0) ? (
                     <div className='mb-5'>
-                        <h5>
+                        <h5 className='char-build-title'>
                             {raceCur.hasOwnProperty('topics') && !subrace ? (
                                 <strong className='text-warning'>... </strong>
                             ) : (<strong className='text-success'>✓ </strong>)
@@ -316,11 +319,11 @@ const CharacterBuilder = () => {
                         </div>
                     </div>
             ) : (
-                <h5 className='mb-5'><strong className='text-danger'>! </strong><strong>RACE: </strong></h5>
+                <h5 className='mb-5 char-build-title'><strong className='text-danger'>! </strong><strong>RACE: </strong></h5>
             )}
             {!(Object.keys(classCur).length === 0) ? (
                 <div className='mb-5'>
-                    <h5>
+                    <h5 className='char-build-title'>
                         {(classCur.topics[0].name === 'Adventurer') && !subclass ? (
                             <strong className='text-warning'>... </strong>
                         ) : (<strong className='text-success'>✓ </strong>)
@@ -333,7 +336,7 @@ const CharacterBuilder = () => {
                     </div>
                 </div>
             ) : (
-                <h5 className='mb-5'><strong className='text-danger'>! </strong><strong>CLASS: </strong></h5>
+                <h5 className='mb-5 char-build-title'><strong className='text-danger'>! </strong><strong>CLASS: </strong></h5>
             )}
         </div>
     </div>

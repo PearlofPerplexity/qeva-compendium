@@ -28,7 +28,7 @@ const MapPage = () => {
                 </div>
                 <Modal isOpen={modal} toggle={toggle} fullscreen>
                     <ModalBody>
-                        <button onClick={toggle} style={{ backgroundColor: 'red', color: 'white' }} >
+                        <button onClick={toggle} style={{color: 'white' }} >
                             Press 'ESC' or <i className={CloseIcon} ></i> to close
                         </button>
                         <Magnifier

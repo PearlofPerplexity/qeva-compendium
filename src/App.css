@@ -115,8 +115,8 @@ a.cover-link {
 }
 
 .sidebar .search {
-	padding: 0px 10px !important;
-	margin: 10px 10px 0px 10px !important;
+	padding: 0px 10px;
+	margin: 10px 10px 0px 10px;
 	border: 1px solid var(--dk-gray-400);
 	border-radius: 0.5rem;
 }
@@ -165,10 +165,10 @@ aside .accordion-button:hover {
 }
 
 aside .accordion-body,
-aside .accordion-button,
+aside div.accordion div.accordion-item h2.accordion-header button.accordion-button,
 aside .accordion,
 .basic-btn {
- background-color: var(--sidebar-bg-colo) !important;
+ background-color: var(--sidebar-bg-color);
  --bs-accordion-border-color: none;
  color: var(--dk-gray-400);
  padding: 10px;
@@ -186,11 +186,13 @@ aside ul {
 }
 
 .welcome .content, .welcome {
-	background-color: var(--navbar-bg-color)!important;
+	background-color: var(--navbar-bg-color);
+	/* important */
 }
 
 .welcome:hover {
-	background-color: var(--navbar-bg-lt)!important;
+	background-color: var(--navbar-bg-lt);
+	/* important */
 }
 
 .welcome p {
@@ -512,12 +514,14 @@ aside ul {
 }
 
 .background-box, .accordion-body {
-	background-color: var(--dk-gray-800) !important;
+	background-color: var(--dk-gray-800);
+	/* ^was important */
 	color: var(--dk-gray-200);
 }
 
-.accordion-button {
-	background-color: var(--dk-dark-bg) !important;
+div.accordion button.accordion-button {
+	background-color: var(--dk-dark-bg);
+	/* ^was important */
 	color: var(--dk-gray-200);
 }
 
@@ -531,11 +535,13 @@ aside ul {
 }
 
 .accordion-item {
-	background-color: rgb(0, 0, 0, 0) !important;
+	background-color: rgb(0, 0, 0, 0);
+	/* ^was important */
 }
 
 .modal-content, .modal-body button {
-	background-color: var(--dk-gray-900)!important;
+	background-color: var(--dk-gray-900);
+	/* ^was important */
 	color: var(--dk-gray-200);
 	text-align: end;
 }
@@ -589,3 +595,30 @@ input.col.slider::-webkit-slider-thumb {
   /* #gem-img {
 	filter: sepia(13%) saturate(3207%) hue-rotate(0deg) brightness(95%) contrast(80%);
   } */
+
+  /* CHARACTER BUILDER */
+  div.accordion-body select.charPicklist, 
+  div.char-name-input input {
+	  border-radius: 50px;
+	  border: none;
+	  padding: 5px 10px;
+	  margin: 5px;
+	  color: var(--dk-gray-300);
+	  background-color: var(--navbar-bg-lt);
+	  /* ^was important */
+  }
+
+  .char-build-title {
+	background-color: var(--dk-dark-bg);
+	border-radius: 50px 50px 0px 0px;
+	padding: 5px 10px;
+  }
+
+  .row-height {
+	height: 80vh;
+  }
+
+  .char-overflow {
+  	height: 100%;
+  	overflow-y: scroll;
+  }
