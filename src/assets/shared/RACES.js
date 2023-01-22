@@ -49,7 +49,8 @@ export const RACES = [
         government: `Republic`,
         foundedOrders: `Elvish Cloaks`,
         description: `Elves were the first race to live in Qeṽa. They roamed the world and even the stars for a thousand years before the other races appeared. They are immortal therefore wisest of the races. They can be deciphered from men by their fair skin, and pointed ears. They are responsible for the cathedrals around Qeṽa mythed to be erected through divination and they are drawn to DIA's attributes in water and wood.`,
-        speed: 25,
+        image: wood,
+        speed: 30,
         size: 'medium',
         dexterity: 2,
         onyx: 5,
@@ -104,6 +105,8 @@ export const RACES = [
         government: `Autocracy`,
         foundedOrders: `Avikin, Ghost Blades`,
         description: `Aviame or Avi are a race under the guidance of the eldar, Nware. They are the most similar in build to elves, but easily identifiable from them by their shades of skin color and face markings. While Avis live longer than most, they are not immortal and few age past a century. They tend to prefer mountainous regions where the air is thinner and the temperature colder as their bodies have a higher tolerance for the cold.`,
+        image: lumiare,
+        speed: 30,
         topics: [
             {
                 id: 0,
@@ -166,6 +169,8 @@ export const RACES = [
         government: `Republic`,
         foundedOrders: `Caracadre, Helmsmen`,
         description: `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
+        image: human,
+        speed: 30,
         topics: [
             {
                 id: 0,
@@ -217,6 +222,7 @@ export const RACES = [
         foundedOrders: `The Uncorrupted`,
         description: `Among the known peoples of Avlim, the Ocra seem to be the only race without a homeland and without the guidance of an eldar. They have pale skin and a tall muscular build. They are nearly as stoic as the elves, but with a sharper sense of hardened character. Not surprisingly, they are not fast made friends, though they are rumored to be the kindest of strangers if approached. This temperament and body type matches their known recognition for being great warriors with unmatched discipline. They mix into the various lands of Qeṽa, often holding high military positions.`,
         image: osei,
+        speed: 30,
         imageAlt: `Qeṽa Osei`
     },
     {
@@ -235,6 +241,8 @@ export const RACES = [
         residence: `Within Mountain & Rock`,
         foundedOrders: `Gemcutters`,
         description: `If you are looking for skilled craftsmen, look no further than the dwarves. In their great mountain halls, they have mastered the crafting of metal and stone. With their thick beards and stout stature standing at 4 feet tall, they appear as tough as the stone they cut and metal they beat. They are slower to trust, but more loyal than any when their trust is gained. Their lifespan can reach up to half a century though most live to about 400 years.`,
+        image: tdwarf,
+        speed: 25,
         topics: [
             {
                 id: 0,
@@ -274,6 +282,8 @@ export const RACES = [
         residence: `Greenlands`,
         foundedOrders: `Order of the Feather`,
         description: `The Gnomes are some of the least involved in world events. They are 4-5 feet tall with long pointy ears and a unique face. Like halflings, they have little affinity for glory in war, but unlike halflings they are positioned to avoid it. Their settlements are greatly distanced from Shaole and buffered by mountains, oceans and surrounding nations. Removed from conflict, they find tranquility in the trades of leatherwork and fishing, though a spark of curiosity inspires many to become travelers and adventurers. The Eldar, Çairça watches over them.`,
+        image: ggnome,
+        speed: 25,
         topics: [
             {
                 id: 0,
@@ -325,6 +335,7 @@ export const RACES = [
         foundedOrders: `The Topplers`,
         description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the Eldar, Xaradriel and oracle, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for 75% of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
         image: half,
+        speed: 25,
         imageAlt: `Qeṽa Halfling`
     },
     {
@@ -344,6 +355,7 @@ export const RACES = [
         residence: `Mhindileth`,
         description: `Rarely seen are the Aeoki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for divination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the oracles, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
         image: aeoki,
+        speed: 20,
         imageAlt: `Qeṽa Aeoki`
     },
     {
@@ -363,6 +375,7 @@ export const RACES = [
         residence: `Mahelos`,
         description: `It was revealed later in history that some of the flora had become sentient. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are shy folk and do not carry out business like other races. They seem to see themselves as more plant than people and keep to themselves in their forests, gravitating to the center of the forest.`,
         image: user,
+        speed: 30,
         imageAlt: `Qeṽa Arborum`
     },
     {
@@ -382,6 +395,7 @@ export const RACES = [
         residence: `Varied`,
         description: `Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elder elves, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.`,
         image: user,
+        speed: 50,
         imageAlt: `Qeṽa Dragon`
     }
 ];

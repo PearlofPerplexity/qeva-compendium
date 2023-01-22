@@ -35,7 +35,7 @@ const GemGenerator = () => {
     const [cut, setCut] = useState("");
     const [cutImg, setCutImg] = useState();
     const [value, setValue] = useState(0);
-    const [max, setMax] = useState(50);
+    const [max, setMax] = useState(25);
 
     const gemTypes = ["Tourmaline", "Obsidian", "Aquamarine", "Tiger's Eye", "Diamond", "Citrine", "Amethyst", "Pyrite", "Sapphire", "Emerald", "Onyx", "Turquoise", "Ruby", "Opal", "Topaz", "Quartz", "Crocoite", "Azurite", "Rutile", "Tanzanite", "Jade", "Shungite", "Chryscocolla", "Jasper", "Bismuth", "Amber", "Whitestone"];
 
@@ -279,7 +279,7 @@ const GemGenerator = () => {
         setClarity("");
         setColor("");
         setCut("");
-        setMax(50);
+        setMax(25);
         setValue(0);
         toggle();
         console.clear();

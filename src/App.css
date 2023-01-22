@@ -622,3 +622,32 @@ input.col.slider::-webkit-slider-thumb {
   	height: 100%;
   	overflow-y: scroll;
   }
+
+  div.row img.border {
+	max-width: 50%;
+  }
+
+  .modbox>div {
+	  display: flex;
+	  align-items: center;
+  }
+
+  .modbox>div label {
+	  font-size: 15px;
+	  width: 50px;
+	  text-align: center;
+	  padding-top: 5px;
+	  padding-bottom: 5px;
+  }
+
+  .modbox div input {
+	  height: 40px;
+	  color: var(--dk-gray-300);
+	  width: 60px;
+	  border-radius: 15px;
+	  border: 1px solid var(--dk-gray-400);
+	  background-color: var(--navbar-bg-lt);
+	  text-align: center;
+	  font-size: 25px;
+  }
+

@@ -200,19 +200,19 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     <section>
     <section className="combat">
         <div className="armorclass">
-        <div>
-            <label htmlFor="ac">Armor Class</label><input name="ac" placeholder="10" type="text" />
-        </div>
+            <div>
+                <label htmlFor="ac">Armor Class</label><input name="ac" placeholder="10" type="text" />
+            </div>
         </div>
         <div className="initiative">
-        <div>
-            <label htmlFor="initiative">Initiative</label><input name="initiative" placeholder="+0" type="text" />
-        </div>
+            <div>
+                <label htmlFor="initiative">Initiative</label><input name="initiative" placeholder="+0" type="text" />
+            </div>
         </div>
         <div className="speed">
-        <div>
-            <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" />
-        </div>
+            <div>
+                <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" />
+            </div>
         </div>
         <div className="hp">
         <div className="regular">
