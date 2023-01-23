@@ -271,7 +271,7 @@ const NPCGenerator = () => {
                     Generate
                 </Button>{' '}
                 <Button color="secondary" onClick={reset}>
-                    Cancel
+                    Close
                 </Button>
                 </ModalFooter>
             </Modal>

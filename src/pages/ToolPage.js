@@ -4,6 +4,9 @@ import { BasicLink } from '../utils/link';
 import GemGenerator from '../tools/GemGenerator';
 import CharacterCreator from '../tools/CharacterCreator';
 import NPCGenerator from '../tools/NPCGenerator';
+import AlignmentChart from '../tools/AlignmentChart';
+import RaceChart from '../tools/RaceChart';
+import ClassChart from '../tools/ClassChart';
 import '../style.css'
 
 
@@ -19,17 +22,17 @@ const ToolPage = () => {
             </div>
             <section className="highlights mt-4">
                 <div className="row">
-                    <GemGenerator/>
-                    <CharacterCreator/>
+                    <GemGenerator />
+                    <CharacterCreator />
                     <NPCGenerator />
                 </div>      
             </section>
             <section className="highlights mt-4">
-                <table>
-                    <tr>
-                        <th></th>
-                    </tr>
-                </table>
+                <div className='row'>
+                    <AlignmentChart />
+                    <RaceChart />
+                    <ClassChart />
+                </div>
             </section>
         </div>
     );
