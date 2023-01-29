@@ -665,7 +665,16 @@ input.col.slider::-webkit-slider-thumb {
 	cursor: pointer;
   }
 
+  table.table td.cardinal:hover {
+	background-color: var(--navbar-bg-lt);
+	color: var(--dk-gray-200);
+  }
+
   table.table thead {
 	background-color: var(--navbar-bg-lt);
 	color: var(--dk-gray-200)
+  }
+
+  table.table tbody tr td[colSpan="6"] a {
+	color: blue;
   }

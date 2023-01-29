@@ -109,7 +109,7 @@ const AlignmentChart = () => {
                             </Offcanvas>
                         </div>
                         <div className='col-8'>
-                            <table className="table table-striped">
+                            <table className="table table-hover table-striped">
                                 <thead>
                                     <tr>
                                         <th scope="col"></th>
@@ -165,7 +165,7 @@ const AlignmentChart = () => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
-                        <table className="table table-responsive table-striped align-middle">
+                        <table className="table table-hover table-responsive table-striped align-middle">
                             <thead>
                                 <tr>
                                     <th scope='col'>Alignment Pts</th>
@@ -261,7 +261,7 @@ const AlignmentChart = () => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
-                        <table className="table table-striped align-middle">
+                        <table className="table table-hover table-striped align-middle">
                             <thead>
                                 <tr>
                                     <th scope="col">LVL</th>
@@ -301,7 +301,7 @@ const AlignmentChart = () => {
                                 🛈
                             </Button>
                         </h3>
-                        <table className="table table-striped align-middle">
+                        <table className="table table-hover table-striped align-middle">
                             <thead>
                                 <tr>
                                     <th scope="col">LVL</th>
@@ -334,7 +334,7 @@ const AlignmentChart = () => {
                                         <tr>
                                             {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
                                                 <td colSpan='6'>
-                                                    <em>{detail}</em>
+                                                    <em>{detail}</em><a onClick={() => setDetail("")}>&nbsp;reset</a>
                                                 </td>
                                             ) : (<td colSpan='6'></td>)
                                             }
@@ -350,7 +350,7 @@ const AlignmentChart = () => {
                                 🛈
                             </Button>
                         </h3>
-                        <table className="table table-striped align-middle">
+                        <table className="table table-hover table-striped align-middle">
                             <thead>
                                 <tr>
                                     <th scope="col">Gemstone</th>
