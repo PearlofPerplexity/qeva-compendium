@@ -87,7 +87,7 @@ a.cover-link {
 	margin-left: 10px;
 }
 
-#clearBtn {
+#clearBtn, a {
 	cursor: pointer;
 }
 
@@ -650,6 +650,17 @@ input.col.slider::-webkit-slider-thumb {
   }
 
   /* TOOL TABLES */
+  table.table, table.table tr td + td, table.table tr th {
+	border: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+  }
+
   table.table {
-	color: white;
+	background-color: white;
+	color: black;
+  }
+
+  table.table td.cardinal {
+	cursor: pointer;
   }

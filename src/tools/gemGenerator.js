@@ -380,12 +380,12 @@ const GemGenerator = () => {
                 <i className="iconify fs-2" data-icon="twemoji:gem-stone"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Gem Generator</h3>
+                        <h3 className="mb-0">Gem Calculator</h3>
                     </div>
                 </div>
             </Link>
             <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="twemoji:gem-stone"></i> Gem Generator</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="twemoji:gem-stone"></i> Gem Calculator</ModalHeader>
                 <ModalBody>
                     <div className='box container'>
                         <div className='row pb-3'>

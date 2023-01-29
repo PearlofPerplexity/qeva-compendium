@@ -147,7 +147,39 @@ export const GEMS = [
                 description:
                     `First is the diamond, which is love; least understood and greatest among the cardinal stones given to the eldar. It is mostly white when cut from the earth, but clear in its purest form. It binds us all together through the garnering of all stones. Without it, all attributes are meaningless and apart from the others it is indescribable. To the Eldest, Amare, was this stone entrusted. He chose to bury it in the forest of Malune and it flourished into a paradise that all shall share in at the coming of Agate above. This self-sacrificial act of Amare is prominent in the diamond.`,
                 image: diamond,
-                imageAlt: `Qeṽa Diamond Gem`
+                imageAlt: `Qeṽa Diamond Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Curse Lift",
+                        description: "Lift the curse placed on a person, object or 20ft. radius of land | CON Save:15"
+                    },
+                    {
+                        id: 1, 
+                        name: "Ethereal Armor",
+                        description: "You have advantage on saving throws against ethereal attack"
+                    },
+                    {
+                        id: 2, 
+                        name: "Sacrifice",
+                        description: "Reassign any amount of damage on another being to yourself"
+                    },
+                    {
+                        id: 3, 
+                        name: "Shield",
+                        description: "Anyone within a 20 ft radius of you receives +1 to their AC"
+                    },
+                    {
+                        id: 4, 
+                        name: "Deliverance",
+                        description: "Pale a sentient evil creature and make them good | CON Save:15"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the diamond stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 1,
@@ -161,7 +193,39 @@ export const GEMS = [
                 description:
                     `Second is citrine, which is joy, given to the eldar, Xaradriel to craft the halfling. Its red color is unmistakable in the earth and can be polished into a flawless orange gem. If you bind yourself to its nature, your joy will outlast any difficulty that comes before you. You will be the last to lose heart when the path darkens; an evergreen, ever-glad soul.`,
                 image: citrine,
-                imageAlt: `Qeṽa Citrine Gem`
+                imageAlt: `Qeṽa Citrine Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Nostalgia",
+                        description: "Recall any positive memory from your own past"
+                    },
+                    {
+                        id: 1, 
+                        name: "Empathy",
+                        description: "Recall any positive memory from someone you touch"
+                    },
+                    {
+                        id: 2, 
+                        name: "Antiquity",
+                        description: "Recall any positive memory from the ground of a location"
+                    },
+                    {
+                        id: 3, 
+                        name: "Memoir",
+                        description: "Recall any positive memory from an object you touch"
+                    },
+                    {
+                        id: 4, 
+                        name: "Echo",
+                        description: "Recall any positive memory at will"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the citrine stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 2,
@@ -175,7 +239,39 @@ export const GEMS = [
                 description:
                     `There is then Amethyst, which is peace. It is purple in color and glitters even unpolished. This stone was opened by the dark lord, Moriel, to craft the races of the dark armies, but do not make the mistake to say that the stone is cursed. It is not in Amethyst's nature to be destructive. You, oracle can restore honor to an Amethyst gem by allowing the stone to draw oneself and others to DIA rather than oneself. With Amethyst you will be the eye of the hurricane, the calm of the storm.`,
                 image: amethyst,
-                imageAlt: `Qeṽa Amethyst Gem`
+                imageAlt: `Qeṽa Amethyst Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Speak with Beasts",
+                        description: "Use Speak with Animals on any creature you touch"
+                    },
+                    {
+                        id: 1, 
+                        name: "Treespeech",
+                        description: "Use Speak with Animals on any vegetation you touch."
+                    },
+                    {
+                        id: 2, 
+                        name: "Disarm",
+                        description: "Maximize an NPC's attitude toward you"
+                    },
+                    {
+                        id: 3, 
+                        name: "Tales of the Land",
+                        description: "Speak with earth upon touch"
+                    },
+                    {
+                        id: 4, 
+                        name: "Celestial Tongue",
+                        description: "You can comprehend the speech of ethereals"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the amethyst stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 3,
@@ -189,7 +285,39 @@ export const GEMS = [
                 description:
                     `Pyrite glitters gold in the tunnels of the dwarves. It is patience as the dwarves are patient in their mining of fine minerals. It was given to the eldar, Ferthrui to form the dwarves in the thrush mountains and is easily confused with gold. So then, there is great wisdom in carrying the lesser stone of Gold in one's possession to compare it to the far more valuable, Pyrite. It grants one the patience to see long-term goals and rewards to fruition.`,
                 image: pyrite,
-                imageAlt: `Qeṽa Pyrite Gem`
+                imageAlt: `Qeṽa Pyrite Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Kin's Blood",
+                        description: "You can grow Rutile crystal (0.5 carat/day)"
+                    },
+                    {
+                        id: 1, 
+                        name: "Kin's Craft",
+                        description: "You can pressurize rock to create pyrite (0.1 carat/day)"
+                    },
+                    {
+                        id: 2, 
+                        name: "Pickman",
+                        description: "You can grow any incidental stone (0.05 carat/day)"
+                    },
+                    {
+                        id: 3, 
+                        name: "Master Jeweler",
+                        description: "You can pressurize rock to create any cardinal stone (0.025 carat/day)"
+                    },
+                    {
+                        id: 4, 
+                        name: "Stoneseer",
+                        description: "You can pressurize rock to create a divine stone (0.01 carat/day)"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the pyrite stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 4,
@@ -202,7 +330,39 @@ export const GEMS = [
                     `Stone given to Nware to create Gnomes`,
                 description: `Sapphire, which is kindness, was given to the eldar, Nware to craft the race of gnomes. You will recognize this stone as a clear dark blue in its raw form. You must visit the gnomes of Farathain to truly understand the selfless fashion of this attribute. Master it, and you will develop relationships with all the noble races and develop an empathy for your enemy that will lead to their demise.`,
                 image: sapphire,
-                imageAlt: `Qeṽa Sapphire Gem`
+                imageAlt: `Qeṽa Sapphire Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Random Act",
+                        description: "Know the desires of a random being within 60 ft that you can supply"
+                    },
+                    {
+                        id: 1, 
+                        name: "Needy",
+                        description: "Know another being's needs. This also adds +2 to medicine checks"
+                    },
+                    {
+                        id: 2, 
+                        name: "Intuition",
+                        description: "Know another being's desires. This also adds +2 to performance checks"
+                    },
+                    {
+                        id: 3, 
+                        name: "Empath",
+                        description: "Know another being's sentiments."
+                    },
+                    {
+                        id: 4, 
+                        name: "Key to the Heart",
+                        description: "Know both a being's needs/desires and a way to resolve them"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the sapphire stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 5,
@@ -215,7 +375,39 @@ export const GEMS = [
                     `Stone given to Arboriul to bring Trees to sentience`,
                 description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the eldar, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
                 image: emerald,
-                imageAlt: `Qeṽa Emerald Gem`
+                imageAlt: `Qeṽa Emerald Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Interstellar Sight",
+                        description: "You can see through smoke, fog and any atmospheric obscurance"
+                    },
+                    {
+                        id: 1, 
+                        name: "Spy for Illusions",
+                        description: "You can tell illusion from reality"
+                    },
+                    {
+                        id: 2, 
+                        name: "Heavenly Visions",
+                        description: "You can see the doings of spirits and wraiths in the ethereal plane"
+                    },
+                    {
+                        id: 3, 
+                        name: "Blinding Light",
+                        description: "Blind an enemy with a keyhole of light from the everworld"
+                    },
+                    {
+                        id: 4, 
+                        name: "Void Resilience",
+                        description: "You have immunity to void damage"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the emerald stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 6,
@@ -228,7 +420,39 @@ export const GEMS = [
                     `Stone given to Çairça to create Elves`,
                 description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the eldar, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
                 image: onyx,
-                imageAlt: `Qeṽa Onyx Gem`
+                imageAlt: `Qeṽa Onyx Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "LVL 1 Divination",
+                        description: "Size: 5ft cube, Range: 15ft"
+                    },
+                    {
+                        id: 1, 
+                        name: "LVL 2 Divination",
+                        description: "Size: 10ft cube, Range: 30ft"
+                    },
+                    {
+                        id: 2, 
+                        name: "Second Path",
+                        description: "Choose a secondary path of divination"
+                    },
+                    {
+                        id: 3, 
+                        name: "LVL 3 Divination",
+                        description: "Size: 15ft cube, Range: 60ft"
+                    },
+                    {
+                        id: 4, 
+                        name: "LVL 4 Divination",
+                        description: "Size: 20ft cube, Range: 120ft"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the onyx stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 7,
@@ -241,7 +465,39 @@ export const GEMS = [
                     `Stone given to Mhindil to bring Aeoki to sentience`,
                 description: `Turquoise is the stone of gentleness and it will be a part of your journey no matter the stone you select. Learn to recognize it before your journey to the crystal isle of Agate. Turquoise is blue-green in color and the only stone to radiate light and glow at night. It was given to the eldar, Mhindil, which she used to grant sentience to the small, intelligent Aeoki of the Arthadain Fields. The meekness of Turquoise cannot only lend one toward humility and softness, but also mask them in stealth. But these reasons are not why they are essential to the oracle warrior. All stones reveal with color the bond of a warrior to their stone, but none more so than Turquoise and none need surveillance of character more so than the oracles. For this reason, a turquoise edge lines ever Zanhari, the sword of the oracle.`,
                 image: turquoise,
-                imageAlt: `Qeṽa Turquoise Gem`
+                imageAlt: `Qeṽa Turquoise Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Healing Spirit",
+                        description: "You can cast the healing spirit spell"
+                    },
+                    {
+                        id: 1, 
+                        name: "Preparation",
+                        description: "You can grant up to 6 members in your party, 5 temporary hit points that will last 1 minute."
+                    },
+                    {
+                        id: 2, 
+                        name: "Mass Cure Wounds",
+                        description: "You can cast the Mass Cure Wounds spell"
+                    },
+                    {
+                        id: 3, 
+                        name: "Power Word Heal",
+                        description: "You can cast the Power Word Heal spell"
+                    },
+                    {
+                        id: 4, 
+                        name: "Mass Heal",
+                        description: "You can cast the Mass Heal spell"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the turquoise stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 8,
@@ -254,7 +510,39 @@ export const GEMS = [
                     `Stone given to Thelmiel to create Aviame`,
                 description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the eldar, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
                 image: ruby,
-                imageAlt: `Qeṽa Ruby Gem`
+                imageAlt: `Qeṽa Ruby Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Stillness of Mind",
+                        description: "As a bonus action, you can end one Effect on yourself that is causing you to be Charmed or Frightened"
+                    },
+                    {
+                        id: 1, 
+                        name: "Nimble",
+                        description: "You have the evasion feat"
+                    },
+                    {
+                        id: 2, 
+                        name: "Deft Hands",
+                        description: "You have the Deflect Missiles feat"
+                    },
+                    {
+                        id: 3, 
+                        name: "Dual-Wield",
+                        description: "You can dual wield, making two attack strikes for up to 1 minute"
+                    },
+                    {
+                        id: 4, 
+                        name: "Master of Dexterity",
+                        description: "You can dash, dodge, disengage and attack all in the same turn"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the ruby stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 9,
@@ -267,7 +555,39 @@ export const GEMS = [
                     `Stone necessary to bring about sentience`,
                 description: `Opal is the stone of Wisdom, given to the original nine eveile and essential in creating them. In fact, if one is knowledgable enough, they can use this stone again to create sentience. When properly enacted on something with lifebreath, it can bring awareness to DIA and true reality. This however, is a dangerous path, which only Moriel dared to attempt. It is what makes the noble races worthy to rule over all life in Qeṽa and capable of pursuing the face of Dia. Greater than the gift of knowledge, it allows one to discern and respond to knowledge rightly, decisively, and honorably. It is rare to find such a stone on Avlim and rarer still on any shores in Qeṽa. If you seek it, expect to find it nowhere else outside the walls of Agate.`,
                 image: opal,
-                imageAlt: `Qeṽa Opal Gem`
+                imageAlt: `Qeṽa Opal Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Angelic Decree",
+                        description: "Seek ethereal counsel. The stone will pull in the direction they bid you go"
+                    },
+                    {
+                        id: 1, 
+                        name: "Wisdom Sense",
+                        description: "Seek DIA's counsel on a course of action. You will receive a distinct, one-word feeling"
+                    },
+                    {
+                        id: 2, 
+                        name: "Enlighten",
+                        description: "Distill insight into another sentient being no matter their distance or attitude"
+                    },
+                    {
+                        id: 3, 
+                        name: "Noticer",
+                        description: "An insight or perception will reveal itself to you that will give you wisdom on the best course of action"
+                    },
+                    {
+                        id: 4, 
+                        name: "Eyes Open",
+                        description: "Bring anything to sentience allowing it a deeper ability to communicate with you"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the opal stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 10,
@@ -280,7 +600,39 @@ export const GEMS = [
                     `Stone ungiven, but inherent to the will of all sentience`,
                 description: `Topaz is the stone of hope, least recognizable amongst all stones, yet unmatched in the darkest hour. Though its natural state shares the honey yellow color of amber, it can take on many colors in the spectrum, but the one with hope will recognize it. Maintain hope and this stone will spirit you no matter the depth of difficulty or length of battle. Interestingly it has been found that anyone bonded to topaz is also bound to amber.`,
                 image: topaz,
-                imageAlt: `Qeṽa Topaz Gem`
+                imageAlt: `Qeṽa Topaz Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Fate",
+                        description: "Search your future for positive possibilities"
+                    },
+                    {
+                        id: 1, 
+                        name: "Fortune",
+                        description: "Search another's future for positive possibilities"
+                    },
+                    {
+                        id: 2, 
+                        name: "Destiny",
+                        description: "Search the future of the ground where you stand"
+                    },
+                    {
+                        id: 3, 
+                        name: "Endstate",
+                        description: "Search the future of an object"
+                    },
+                    {
+                        id: 4, 
+                        name: "Crystal Ball",
+                        description: "Search the future at will"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the topaz stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
             {
                 id: 11,
@@ -293,7 +645,39 @@ export const GEMS = [
                     `The penultimate stone, foundational to all other stones`,
                 description: `Greatest and rarest of all cardinal stones is the pearl of humility. Consider yourself the lowliest and vilest of sentience before DIA if you wish for it not to crumble in your hand. For it is brittler than fine glass and is mere myth among the noble races. No eldar was entrusted with it and no dwarf has been known to recover it from stone. It is white, circular and smooth as the surface of Qeṽa before the sprinkling of DIA's attributes. If ever you come across it, know this: the wielder of the pearl of humility is gifted with the attribute necessary to pursue and master all other attributes. However, the more one grows in the attributes, the more difficult this stone is to control, but the one who does will be among the most powerful warriors to walk Qeṽa.`,
                 image: pearl,
-                imageAlt: `Qeṽa Pearl`
+                imageAlt: `Qeṽa Pearl`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Humble Beginnings",
+                        description: "Your pearl is vulnerable to cracking"
+                    },
+                    {
+                        id: 1, 
+                        name: "Strong Foundation",
+                        description: "Your pearl is hardened and uncrackable"
+                    },
+                    {
+                        id: 2, 
+                        name: "Less of Self",
+                        description: "You have mastery over whitestone"
+                    },
+                    {
+                        id: 3, 
+                        name: "Caretaker",
+                        description: "You can hold any stone without affecting its color"
+                    },
+                    {
+                        id: 4, 
+                        name: "Grandmaster",
+                        description: "You have mastery over all the cardinal stones"
+                    },
+                    {
+                        id: 5, 
+                        name: "Unity",
+                        description: "You are one with the pearl. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                    }
+                ]
             },
         ]
     },
