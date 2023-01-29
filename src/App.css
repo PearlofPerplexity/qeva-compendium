@@ -664,3 +664,8 @@ input.col.slider::-webkit-slider-thumb {
   table.table td.cardinal {
 	cursor: pointer;
   }
+
+  table.table thead {
+	background-color: var(--navbar-bg-lt);
+	color: var(--dk-gray-200)
+  }

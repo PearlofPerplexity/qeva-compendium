@@ -56,7 +56,14 @@ export const GEMS = [
                 description:
                     `Tourmaline is the stone of immensity. At the beginning of time, DIA shattered it from his reflection, but it's quality could not be contained in Qeṽa. It flew past the planet and ever expanded and split into planets, stars and galaxies in the outstretch of space. Everyone beyond this world and its moon is crafted from Tourmaline. So then, when one eldar reached out in divination into space, it was tourmaline that fell from the sky. You are likely familiar with its presence on the far eastern island of Arguthain where the eldar, Moriel divined a meteor from the sky and shaped it into a fortress. Do not seek out this substance, oracle. Yes it is powerful and the source of the Dark Armies' strength who resisted us at the ends of the east, but it cannot be bottled. It continues to multiply on Arguthain and the dark armies with it. It tempts warriors far and wide, but do not be so easily tricked. It is impossible to keep in balance with the other attributes and will only be to your destruction. It is a stone of divinity as no created sentient being can experience omnipotence nor omnipresence.`,
                 image: tourmaline,
-                imageAlt: `Qeṽa Tourmaline Gem`
+                imageAlt: `Qeṽa Tourmaline Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Amplification",
+                        description: "On a successful attack, add damage equal to the selected power level"
+                    }
+                ]
             },
             {
                 id: 1,
@@ -70,7 +77,14 @@ export const GEMS = [
                 description:
                     `Last is celestite, the stone of holiness. It was the cinder of hope to humanity in the age of darkness at the expense of DIA Himself. As black polluted clouds covered the entire planet, it seemed that all bonds with DIA were lost. On the islands, there were no mountains high enough for the people to speak with God and no way to rise above the smoke. To remain in communion with his people, the good and gracious DIA spared a cut of his true essence of invisibility and bestowed it upon Avlim. With this parsing of His essence, DIA would be bound to a visible form for the remainder of eternity. At its parsing, a bit of celestite fell from the sky like a falling star. If it was not found at its fall, it will likely never be found for the stone itself is invisible. It is a stone of divinity as no created sentient being can experience all the layers of heavens hidden by the varieties of celestite.`,
                 image: celestite,
-                imageAlt: `Qeṽa Celestite Gem`
+                imageAlt: `Qeṽa Celestite Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Unknown",
+                        description: "No Description available..."
+                    }
+                ]
             },
             {
                 id: 2,
@@ -84,7 +98,14 @@ export const GEMS = [
                 description:
                     `When DIA made the decision to create time and space, it began with total solitude. Before any of the other attributes were formed in the translucent orb above the earth, he heated the obsidian till it was molten and shaped it into the earth. When the crust hardened is when he began shaping the other attributes. As the years continued, obsidian broke through to the surface in volcanoes in its molten form. It then hardened as volcanic glass; notably Mount Sakur in Avlim. The eldar know of this for DIA has told them, but they do not share this information with others. Rather, they allow the people of Avlim to keep their superstitions. The noble people avoid the gem, because it is black like the dark stones, which oppose DIA. The Eldar do not enlighten them because obsidian was intended by DIA to be left alone. It is a gem of solitude and if parties venture to find it, it will lose its quality or worse, be abused as it easily is. Nonetheless, still some learn the secret and venture to Sakur. DIA nor the Eldars condemn them as it is a profound blessing if used correctly. However, overall, the gem is not to be sought. It is a stone of divinity as no created sentient being can experience true sole-existence.`,
                 image: obsidian,
-                imageAlt: `Qeṽa Obsidian Gem`
+                imageAlt: `Qeṽa Obsidian Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Restoration",
+                        description: "Spend a short rest in solitude and add temporary hit points equal to the selected power level"
+                    }
+                ]
             },
             {
                 id: 3,
@@ -98,7 +119,14 @@ export const GEMS = [
                 description:
                     `Aquamarine is the sister stone of obsidian as it carries the opposite quality, yet still works hand-in-hand with obsidian. After DIA formed the earth, which was obsidian, he formed the other qualities in a translucent orb. The orb and all its attributes were held together by fluid aquamarine, which was the reason DIA created time and space. When Dia shattered the orb, it was the first to take shape as water on the earth. aquamrine, did not stabilize and harden like obsidian, because fellowship is far more fluid than solitude. It relies on the feelings and actions of others. Aquamarine, remains at the bottom of oceans and riverbeds and the deeper one swims, the stronger the aquamrine. The river elves have the strongest of bonds and were drawn to its quality in water. It turned their eyes blue and brought them together. It remains a tradition for a river elf to dive to the bottom of a river bed and retrieve the aquamarine stone. It is the only divine stone intended to be collected and shared with DIA. It does not darken as it is a reminder of DIA's ever-presence and offer of fellowship. It is a stone of divinity as no created sentient being can experience fellowship within oneself. When left out of water, the gem dries and does not show its true color.`,
                 image: aquamarine,
-                imageAlt: `Qeṽa Aquamarine Gem`
+                imageAlt: `Qeṽa Aquamarine Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Bonds of Friendship",
+                        description: "For one round, all party members including you and your allies will receive a bonus equal to the selected power level on their first roll"
+                    }
+                ]
             },
             {
                 id: 4,
@@ -112,7 +140,14 @@ export const GEMS = [
                 description:
                     `Tiger's eye is a golden stone with black stripes and thus rightly earns its name. Since it is the stone of creativity, it draws intrigue and creative ideas about its true properties and purposes. Those who are superstitious believe it to be the stone of luck, while those who consider themselves holy consider it the stone of blessing. It's true property, however, is creativity and naturally spurs this quality in those who seek it. Notably, it enables to practice soul flying in their REM sleep. However, without the stone of goodness, this soul-flying is often clouded by hallucinetic qualities. Thus, those who hold it, often have strange dreams or strange soul-flying experiences. It is a stone of divinity as all created sentient beings' creativity relies on a previous source, while DIA's does not.`,
                 image: tigersEye,
-                imageAlt: `Qeṽa Tiger's Eye Gem`
+                imageAlt: `Qeṽa Tiger's Eye Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Compose",
+                        description: "Using other gemstones, create a new creation. It cannot be made animate without moonstone and its size must fit within the square feet equal to the selected power level"
+                    }
+                ]
             },
             {
                 id: 5,
@@ -126,7 +161,14 @@ export const GEMS = [
                 description:
                     `Moonstone or the sentience stone is that which is elemental to creating all life. No sentient creation evil or good survives without it and no eldar nor oracle can create life without it. It can only be found on the moon of Qeṽa where the eveile, once walked and witnessed its silver glittering glow. Some creatures have been influenced by its nightly glow upon Qeṽa and taken to awaken during the night and sleep during the day. The Eldar, Amare is the only known keeper of moonstone on Qeṽa. For each Eldar was given a sentient stone to create, but Amare did not. It is a stone of divinity as no created sentient being can reconstruct life apart from DIA.`,
                 image: moonstone,
-                imageAlt: `Qeṽa Tiger's Eye Gem`
+                imageAlt: `Qeṽa Tiger's Eye Gem`,
+                lvls: [
+                    {
+                        id: 0, 
+                        name: "Heartbeat",
+                        description: "Breath life into anything that is inanimate. The target's hit points will equal your selected power level"
+                    }
+                ]
             }
         ]
     },
@@ -698,7 +740,8 @@ export const GEMS = [
                 description:
                     `Quartz is the stone of strength, born out of diamond, the cardinal stone of love. When given the choice between love and strength, few choose love. This stone is found on the eastern rim where Malunë broke from Navalil.`,
                 image: quartz,
-                imageAlt: `Qeṽa Quartz Gem`
+                imageAlt: `Qeṽa Quartz Gem`,
+                lvls: ["+1 STR or Attack", "+3 STR or Attack", "+5 STR or Attack", "+8 STR or Attack", "+10 STR or Attack"]
             },
             {
                 id: 1,
@@ -712,7 +755,8 @@ export const GEMS = [
                 description:
                     `Crocoite is the stone of happiness, which is born out of citrine, the cardinal stone of joy given to the eldar, Xaradriel at the inception of the divergent age. Thus, crocoite is most abundantly found in the Fletchering Hills, the home of Xaradriel's creation, the halfling. Their kind are willing to part with it for a price. It is a mere reflection of citrine as citrine is a mere reflection of Dia. Crocoite struggles to maintain the same longevity as citrine, but rather has the temptation of short-term potency. For this reason, many abuse it as a narcotic and quickly deplete its essence without supplementing it with their own joy. If a warrior would align themselves to crocoite with their own joy, they would receive a lesser blessing of citrine.`,
                 image: crocoite,
-                imageAlt: `Qeṽa Crocoite Gem`
+                imageAlt: `Qeṽa Crocoite Gem`,
+                lvls: ["+5 Death Save", "+10 Death Save", "+5 Speed", "1 Guaranteed Death Save", "+10 Speed"]
             },
             {
                 id: 2,
@@ -726,7 +770,8 @@ export const GEMS = [
                 description:
                     `Azurite is the stone of charisma, which is born out of Amethyst, the cardinal stone of peace given to the eldar, Moriel. Thus, it grows abundantly in the dangerous regions of the grave mountains and Akukar canyon. The dark races are too diminished in sentience to make use of it and pay no attention to it though its power is rooted in Amethyst and can provide a persuasive and charming kind of peace. You must warn the caracadre who venture there of the peril of such a quest. Few who wander into Shaole ever return.`,
                 image: azurite,
-                imageAlt: `Qeṽa Azurite Gem`
+                imageAlt: `Qeṽa Azurite Gem`,
+                lvls: ["+1 CHA", "+3 CHA", "+5 CHA", "+8 CHA", "+10 CHA"]
             },
             {
                 id: 3,
@@ -740,7 +785,8 @@ export const GEMS = [
                 description:
                     `Rutile is the stone of endurance, which finds life from the cardinal stone, pyrite. It is dull yellow and shoots out of stone like hardened wheat. It grows from the axe-carved tunnels of the dwarven mines in the Thrush mountains. To them it is a nuisance, but to others it promises an endurance of mind and body.`,
                 image: rutile,
-                imageAlt: `Qeṽa Rutile Gem`
+                imageAlt: `Qeṽa Rutile Gem`,
+                lvls: ["+1 HP", "+3 HP", "+5 HP", "+8 HP", "+10 HP"]
             },
             {
                 id: 4,
@@ -753,7 +799,8 @@ export const GEMS = [
                     `Stone native to Haven, home of the Gnomes`,
                 description: `The greatest kindness is truth, found in the blue stone of tanzanite. At their best, a gnome is both kind and truthful and that is the hearty welcome one often receives in Haven.`,
                 image: tanzanite,
-                imageAlt: `Qeṽa Tanzanite Gem`
+                imageAlt: `Qeṽa Tanzanite Gem`,
+                lvls: ["+3 Insight", "+6 Insight", "+9 Insight", "+12 Insight", "+15 Insight"]
             },
             {
                 id: 5,
@@ -766,7 +813,8 @@ export const GEMS = [
                     `Stone native to the forests of Mahelos`,
                 description: `Trees have limited movement and limited volition, but they do listen. At their best, sentient trees are highly aware and the incidental stone of jade grows from their presence. It is a opaque, light green in color.`,
                 image: jade,
-                imageAlt: `Qeṽa Jade Gem`
+                imageAlt: `Qeṽa Jade Gem`,
+                lvls: ["+3 Perception", "+6 Perception", "+9 Perception", "+12 Perception", "+15 Perception"]
             },
             {
                 id: 6,
@@ -779,7 +827,8 @@ export const GEMS = [
                     `Stone native to Arvañon, home of the Elves`,
                 description: `While faithfulness can be difficult to see and measure, loyalty is not. Musgravite is a dark purple, which often appears clear gray in its gem form.`,
                 image: jet,
-                imageAlt: `Qeṽa Jet Gem`
+                imageAlt: `Qeṽa Jet Gem`,
+                lvls: ["+2 TOP ABILITY from ally present", "+4 TOP ABILITY from ally present", "+6 TOP ABILITY from ally present", "+9 TOP ABILITY from ally present", "+11 TOP ABILITY from ally present"]
             },
             {
                 id: 7,
@@ -792,7 +841,8 @@ export const GEMS = [
                     `Stone native to Mhindileth, home of the Aeoki`,
                 description: `A gentle foot is a stealthy foot. Though Chryscocolla does not glow like turquoise, it shares its teal hue. Chryscocolla is hidden away in the tunnels of Mhindeleth and grows alongside its parent stone turquoise.`,
                 image: chryscocolla,
-                imageAlt: `Qeṽa Chryscocolla Gem`
+                imageAlt: `Qeṽa Chryscocolla Gem`,
+                lvls: ["+3 Stealth", "+6 Stealth", "+9 Stealth", "+12 Stealth", "+15 Stealth"]
             },
             {
                 id: 8,
@@ -805,7 +855,8 @@ export const GEMS = [
                     `Stone given to Thelmiel to create Aviame`,
                 description: `pruskite is the stone of dexterity, born out of Ruby, the cardinal stone of self-control. Much like the elves, the Aviame are protective of this stone and require those who seek it to pass a set of trials. Caracadre warriors are enrolled in the legendary Aviame school of archery and combatives. Caracadre must be willing to set aside their personal possessions and affairs for the unpredictable duration of time to become a honorary Avikain. If they ever choose to leave before their training is complete, they may never return. In the same way as the elves, these trials prepare the Caracadre to align with pruskite.`,
                 image: pruskite,
-                imageAlt: `Qeṽa Pruskite Gem`
+                imageAlt: `Qeṽa Pruskite Gem`,
+                lvls: ["+1 DEX or INIT", "+3 DEX or INIT", "+5 DEX or INIT", "+8 DEX or INIT", "+10 DEX or INIT"]
             },
             {
                 id: 9,
@@ -818,7 +869,8 @@ export const GEMS = [
                     `Stone native to The High Mountains, meeting place with DIA`,
                 description: `Bismuth is the stone of intelligence, born out of Opal the cardinal stone of wisdom. It seems to heighten one's ability to recall information if one binds themself to it, but it does not hold the power to discern as Opal does. Guide those who seek it the high mountains, where we, the oracles convene with Dia. Warn them of the harsh temperatures and grade of the climb. It is no small feat and many have fallen into icy graves before we could reach them.`,
                 image: bismuth,
-                imageAlt: `Qeṽa Bismuth Gem`
+                imageAlt: `Qeṽa Bismuth Gem`,
+                lvls: ["+1 INT", "+3 INT", "+5 INT", "+8 INT", "+10 INT"]
             },
             {
                 id: 10,
@@ -831,7 +883,8 @@ export const GEMS = [
                     `Stone native to Navalil, the heart of Avlim`,
                 description: `Amber is the stone of constitution, born out of Moonstone, the divine stone of sentience. While Moonstone is inseparable from sentient nature, amber has an effect on one';s mental and physical health and vitality. It is a honey-yellow stone that grows from the heart of all sentient life, Brielle, the land of the Elves. The Elves do not treat the substance lightly and keep it under guard at Cathedral Brielle in the Great library of stones. The Caracadre who seeks it must pass the trials of the Elves who test the character of the Caracadre. These tests are not designed to weed out unworthy candidates, but rather make one worthy to align with the stone and prepare them as a Caracadre.`,
                 image: amber,
-                imageAlt: `Qeṽa Amber Gem`
+                imageAlt: `Qeṽa Amber Gem`,
+                lvls: ["+1 CON or AC", "+3 CON or AC", "+5 CON or AC", "+8 CON or AC", "+10 CON or AC"]
             },
             {
                 id: 11,
@@ -844,7 +897,8 @@ export const GEMS = [
                     `Stone native to the limestone cliffs of southwestern Avlim`,
                 description: `Whitestone is a white chalky limestone, which is found as the primary rock in the southwestern cliffs (including the mirror cliffs on Haven originally apart of Avlim). It is truly the stone of selflness as it garners the least respect of all stones by far. If one follows it's quality long enough, it will solidify into pearl.`,
                 image: whitestone,
-                imageAlt: `Qeṽa Whitestone`
+                imageAlt: `Qeṽa Whitestone`,
+                lvls: ["+1 ABILItY to other", "+3 ABILItY to other", "+5 ABILItY to other", "+8 ABILItY to other", "+10 ABILItY to other"]
             }
         ]
     },

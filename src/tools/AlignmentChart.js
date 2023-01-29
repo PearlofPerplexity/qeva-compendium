@@ -142,14 +142,14 @@ const AlignmentChart = () => {
                         </div>
                     </div>
                     <div className='row text-center mb-4'>
-                        <h3>Gem Quality
+                        <h3>Gemstone Quality
                             <Button className='text-center info' onClick={qualityToggle}>
                                 🛈
                             </Button>
                         </h3>
                         <Offcanvas isOpen={quality} toggle={qualityToggle} direction={'end'}>
                             <OffcanvasHeader toggle={qualityToggle}>
-                            Gem Quality
+                            Gemstone Quality
                             </OffcanvasHeader>
                             <OffcanvasBody>
                                 <p>
@@ -157,7 +157,7 @@ const AlignmentChart = () => {
                                 </p>
                                 <h5>Power Containment</h5>
                                 <p>
-                                Power containment describes the amount of total alignment points a gem can hold (ex. a player at level 3 can wield all gems with color "K" and below. If the player has a gem with color "J", it will hold 7 alignment points). Gems' alignment points refresh at every short rest for cardinal stones, every long rest for incidental stones and never for divine stones. A player can increase a gem's alignment by aligning to its quality. Oppositely, they will decrease its quality by going against its quality. A gem's alignment points will not refresh if the gem is drawn down to 0 alignment points.
+                                Power containment describes the amount of total alignment points a gem can hold (ex. a player at level 3 can wield all gems with color "K" and below. If the player has a gem with color "J", it will hold 7 alignment points). Gems' alignment points refresh at every short rest for moral stones, every long rest for power stones and never for divine stones. A player can increase a gem's alignment by aligning to its quality. Oppositely, they will decrease its quality by going against its quality. A gem's alignment points will not refresh if the gem is drawn down to 0 alignment points.
                                 </p>
                                 <h5>Power Output</h5>
                                 <p>
@@ -169,8 +169,8 @@ const AlignmentChart = () => {
                             <thead>
                                 <tr>
                                     <th scope='col'>Alignment Pts</th>
-                                    {gemPoints.map((point) => (
-                                        <td>{point}</td>
+                                    {gemPoints.map((point, index) => (
+                                        <td key={index}>{point}</td>
                                     ))}
                                 </tr>
                             </thead>
@@ -195,8 +195,8 @@ const AlignmentChart = () => {
                                 </tr>
                                 <tr>
                                     <th scope='col'>Color</th>
-                                    {gemColor.map((color) => (
-                                        <td>{color}</td>
+                                    {gemColor.map((color, index) => (
+                                        <td key={index}>{color}</td>
                                     ))}
                                 </tr>
                                 <tr>
@@ -218,26 +218,26 @@ const AlignmentChart = () => {
                                 </tr>
                                 <tr>
                                     <th scope="col">Carat</th>
-                                    {gemCarat.map((carat) => (
-                                        <td>{carat}</td>
+                                    {gemCarat.map((carat, index) => (
+                                        <td key={index}>{carat}</td>
                                     ))}
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div className='row text-center mb-4'>
-                    <h3>Gem Alignment
+                        <h3>Power Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
                                 🛈
                             </Button>
                         </h3>
                         <Offcanvas isOpen={align} toggle={alignToggle} direction={'end'}>
                             <OffcanvasHeader toggle={alignToggle}>
-                            Gem Alignment
+                            Gem Alignment - Choose Your Stone!
                             </OffcanvasHeader>
                             <OffcanvasBody>
                                 <p>
-                                While gem quality describes the power capacity of the gem itself, gem alignment describes the steps a player can take to align to it. 
+                                While gemstone quality describes the power capacity of the gem itself, gem alignment describes the steps a player can take to align to it. 
                                 </p>
                                 <h5>Levels</h5>
                                 <p>
@@ -245,15 +245,15 @@ const AlignmentChart = () => {
                                 </p>
                                 <h5>Alignment Points</h5>
                                 <p>
-                                See "Gem Quality" for more information on alignment points.
+                                See "Gemstone Quality" for more information on alignment points.
                                 </p>
-                                <h5>Incidental Stones</h5>
+                                <h5>Power Stones</h5>
                                 <p>
-                                Incidental Stones refresh at every long rest.
+                                Power stones refresh at every long rest. The ability modifiers described here can only be used for a single roll and only one modifier can be used per roll.
                                 </p>
-                                <h5>Cardinal Stones</h5>
+                                <h5>Moral Stones</h5>
                                 <p>
-                                Cardinal Stones refresh at every short rest. Click on an ability in the chart to reveal its description.
+                                Moral Stones refresh at every short rest. Click on an ability in the chart to reveal its description.
                                 </p>
                                 <h5>Divine Stones</h5>
                                 <p>
@@ -261,6 +261,46 @@ const AlignmentChart = () => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
+                        <table className="table table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">LVL</th>
+                                    <td>lvl 1</td>
+                                    <td>lvl 3</td>
+                                    <td>lvl 5</td>
+                                    <td>lvl 8</td>
+                                    <td>lvl 10</td>
+                                    <td>lvl 20</td>
+                                </tr>
+                                <tr className='align-middle'>
+                                    <th scope="col">Alignment Pts</th>
+                                    <td>2pts</td>
+                                    <td>5pts</td>
+                                    <td>8pts</td>
+                                    <td>10pts</td>
+                                    <td>15pts</td>
+                                    <td>-</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {GEMS[2].topics.map((gem) => (
+                                    <tr key={gem.id}>
+                                        <th scope='col'>{gem.name} ({gem.quality})</th>
+                                        {gem.lvls && (gem.lvls.map((level, index) => (
+                                            <td key={index}>{level}</td>
+                                        )))}
+                                        <td>Combine Modifiers</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='row text-center mb-4'>
+                        <h3>Moral Stone Alignment
+                            <Button className='text-center info' onClick={alignToggle}>
+                                🛈
+                            </Button>
+                        </h3>
                         <table className="table table-striped align-middle">
                             <thead>
                                 <tr>
@@ -292,10 +332,39 @@ const AlignmentChart = () => {
                                             )))}
                                         </tr>
                                         <tr>
-                                            {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (<td colSpan='6'><em><stron>{detail}</stron></em></td>) : (<td colSpan='6'></td>)
+                                            {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
+                                                <td colSpan='6'>
+                                                    <em>{detail}</em>
+                                                </td>
+                                            ) : (<td colSpan='6'></td>)
                                             }
                                         </tr>
                                     </React.Fragment>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='row text-center mb-4'>
+                        <h3>Divine Stone Alignment
+                            <Button className='text-center info' onClick={alignToggle}>
+                                🛈
+                            </Button>
+                        </h3>
+                        <table className="table table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Gemstone</th>
+                                    <td colSpan='1'>Ability</td>
+                                    <td colSpan='5'>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {GEMS[0].topics.map((gem) => (
+                                    <tr key={gem.id}>
+                                        <th scope='col'>{gem.name} ({gem.quality})</th>
+                                        <td colSpan='1'>{gem.lvls[0].name}</td>
+                                        <td colSpan='5'>{gem.lvls[0].description}</td>
+                                    </tr>
                                 ))}
                             </tbody>
                         </table>
