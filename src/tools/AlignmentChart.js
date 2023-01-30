@@ -23,14 +23,22 @@ const AlignmentChart = () => {
 
     const gemCarat = [0.05, 0.1, 0.15, 0.2, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 4.5, 5.25, 6, 7.25, 8.25, 9];
 
+    const lvls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
+    const [title, setTitle] = useState('');
     const [detail, setDetail] = useState('');
 
     const abilityInfo = (e) => {
+        setTitle(e.name);
         setDetail(e.description);
-        console.log(detail);
+    }
+
+    const abilityInfoReset = () => {
+        setTitle("");
+        setDetail("");
     }
 
     const [moral, setMoral] = useState(false);
@@ -261,7 +269,7 @@ const AlignmentChart = () => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
-                        <table className="table table-hover table-striped align-middle">
+                        <table className="table table-hover align-middle">
                             <thead>
                                 <tr>
                                     <th scope="col">LVL</th>
@@ -301,7 +309,7 @@ const AlignmentChart = () => {
                                 🛈
                             </Button>
                         </h3>
-                        <table className="table table-hover table-striped align-middle">
+                        <table className="table table-striped align-middle">
                             <thead>
                                 <tr>
                                     <th scope="col">LVL</th>
@@ -334,7 +342,7 @@ const AlignmentChart = () => {
                                         <tr>
                                             {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
                                                 <td colSpan='6'>
-                                                    <em>{detail}</em><a onClick={() => setDetail("")}>&nbsp;reset</a>
+                                                    <em><strong>{title}: </strong>{detail}</em><a onClick={abilityInfoReset}>&nbsp;reset</a>
                                                 </td>
                                             ) : (<td colSpan='6'></td>)
                                             }
@@ -350,20 +358,36 @@ const AlignmentChart = () => {
                                 🛈
                             </Button>
                         </h3>
-                        <table className="table table-hover table-striped align-middle">
+                        <table className="table table-hover align-middle">
                             <thead>
                                 <tr>
-                                    <th scope="col">Gemstone</th>
+                                    <th scope="col" colSpan='4'>Level</th>
+                                    {lvls.map((power, index) => (
+                                        <td key={index}>{power}</td>
+                                    ))}
+                                </tr>
+                                <tr>
+                                    <th scope="col" colSpan='4'>Level Modifiers</th>
+                                    {lvls.map((power, index) => (
+                                        <td key={index}>+{power}</td>
+                                    ))}
+                                </tr>
+                                <tr>
+                                    <th scope='col' colSpan='4'>Power Level Roll / Wager</th>
+                                    <td colSpan='22'><strong>1. </strong>Wager a power level (2-20) <strong>2. </strong>Roll D20 +LVL MOD. <strong>3. </strong>If the roll &#8805; power level, wield ability at power level</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" colSpan='2'>Gemstone</th>
                                     <td colSpan='1'>Ability</td>
-                                    <td colSpan='5'>Description</td>
+                                    <td colSpan='21'>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 {GEMS[0].topics.map((gem) => (
                                     <tr key={gem.id}>
                                         <th scope='col'>{gem.name} ({gem.quality})</th>
-                                        <td colSpan='1'>{gem.lvls[0].name}</td>
-                                        <td colSpan='5'>{gem.lvls[0].description}</td>
+                                        <td colSpan='2'>{gem.lvls[0].name}</td>
+                                        <td colSpan='21'>{gem.lvls[0].description}</td>
                                     </tr>
                                 ))}
                             </tbody>
