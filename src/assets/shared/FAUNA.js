@@ -123,6 +123,11 @@ export const FAUNA = [
                 id: 0,
                 name: `Insects`,
                 description: `One does not have to see an ethereal to know that they are near. Curiously enough, the insect world is drawn toward them. Butterflies flutter around a strong presence of spirits, while gnats, locusts and centipedes swarm around reapers and wraiths. Though the secret of this connection is locked in the mind of DIA, reason would suggest that these butterflies expect something sweet to drink, while the latter expect some dead and rotten to scavenge. Insects, while many times deemed a nuisance, are the only physical creatures who are known to have a scent for the spiritual realm. The only exception to this is the hummingbird, which will smell the strong presence of a spirit.`
+            },
+            {
+                id: 1,
+                name: 'Dragons',
+                description: 'Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elder elves, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.'
             }
         ]
     }

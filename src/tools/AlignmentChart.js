@@ -342,7 +342,7 @@ const AlignmentChart = () => {
                                         <tr>
                                             {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
                                                 <td colSpan='6'>
-                                                    <em><strong>{title}: </strong>{detail}</em><a onClick={abilityInfoReset}>&nbsp;reset</a>
+                                                    <em><strong>{title}: </strong>{detail}</em><a onClick={abilityInfoReset}>reset</a>
                                                 </td>
                                             ) : (<td colSpan='6'></td>)
                                             }
@@ -361,20 +361,20 @@ const AlignmentChart = () => {
                         <table className="table table-hover align-middle">
                             <thead>
                                 <tr>
-                                    <th scope="col" colSpan='4'>Level</th>
+                                    <th scope="col" colSpan='4'>Alignment Level</th>
                                     {lvls.map((power, index) => (
                                         <td key={index}>{power}</td>
                                     ))}
                                 </tr>
                                 <tr>
-                                    <th scope="col" colSpan='4'>Level Modifiers</th>
+                                    <th scope="col" colSpan='4'>Level Modifiers (LVL MOD)</th>
                                     {lvls.map((power, index) => (
                                         <td key={index}>+{power}</td>
                                     ))}
                                 </tr>
                                 <tr>
-                                    <th scope='col' colSpan='4'>Power Level Roll / Wager</th>
-                                    <td colSpan='22'><strong>1. </strong>Wager a power level (2-20) <strong>2. </strong>Roll D20 +LVL MOD. <strong>3. </strong>If the roll &#8805; power level, wield ability at power level</td>
+                                    <th scope='col' colSpan='4'>PWR LVL Wager / Roll</th>
+                                    <td colSpan='22'><strong>1. </strong>Wager a number (2-20). This is your PWR LVL. <strong>2. </strong>Roll D20 + LVL MOD. <strong>3. </strong>If the roll &#8805; PWR LVL, wield ability at PWR LVL</td>
                                 </tr>
                                 <tr>
                                     <th scope="col" colSpan='2'>Gemstone</th>

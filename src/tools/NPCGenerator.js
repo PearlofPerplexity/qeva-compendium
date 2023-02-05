@@ -111,8 +111,8 @@ const NPCGenerator = () => {
     }
 
     const raceRand = () => {
-        // -2 Removes Dragon & accounts for id's starting at 0
-        const raceLGTH = RACES.length - 2;
+        // -1 Removes accounts for id's starting at 0
+        const raceLGTH = RACES.length - 1;
         let raceNum = Math.floor( Math.random() * raceLGTH) + 1;
         for (let i=0; i<=raceLGTH; i++) {
             if (raceNum === i) {
@@ -171,7 +171,7 @@ const NPCGenerator = () => {
     return (
         <div className="col-lg-4">
             <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
-                <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
+                <i className="iconify fs-2" data-icon="emojione:crossed-swords"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
                         <h3 className="mb-0">NPC Generator</h3>
@@ -179,7 +179,7 @@ const NPCGenerator = () => {
                 </div>
             </Link>
             <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i> NPC Generator</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="emojione:crossed-swords"></i> NPC Generator</ModalHeader>
                 <ModalBody>
                     <div className='box container'>
                         <div className='row pb-3'>

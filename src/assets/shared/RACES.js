@@ -52,12 +52,10 @@ export const RACES = [
         description: `Elves were the first race to live in Qeṽa. They roamed the world and even the stars for a thousand years before the other races appeared. They are immortal therefore wisest of the races. They can be deciphered from men by their fair skin, and pointed ears. They are responsible for the cathedrals around Qeṽa mythed to be erected through divination and they are drawn to DIA's attributes in water and wood.`,
         image: wood,
         speed: 30,
-        size: 'medium',
-        dexterity: 2,
-        onyx: 5,
-        jet: 5,
-        proficient: ['longsword, shortsword, shortbow, longbow'],
-        languages: ['common, elvish'],
+        size: 'M',
+        dex: '+2',
+        proficiencies: ['longsword', 'shortsword', 'shortbow', 'longbow'],
+        languages: ['common', 'elvish'],
         topics: [
             {
                 id: 0,
@@ -108,6 +106,10 @@ export const RACES = [
         description: `Aviame or Avi are a race under the guidance of the eldar, Nware. They are the most similar in build to elves, but easily identifiable from them by their shades of skin color and face markings. While Avis live longer than most, they are not immortal and few age past a century. They tend to prefer mountainous regions where the air is thinner and the temperature colder as their bodies have a higher tolerance for the cold.`,
         image: lumiare,
         speed: 30,
+        size: 'M',
+        dex: '+2',
+        proficiencies: ['longsword', 'shortsword', 'shortbow', 'longbow'],
+        languages: ['common', 'lumiare'],
         topics: [
             {
                 id: 0,
@@ -172,6 +174,15 @@ export const RACES = [
         description: `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
         image: human,
         speed: 30,
+        size: 'M',
+        str: '+1',
+        dex: '+1',
+        con: '+1',
+        int: '+1',
+        wis: '+1',
+        cha: '+1',
+        proficiencies: ['-'],
+        languages: ['common', 'one other language'],
         topics: [
             {
                 id: 0,
@@ -223,8 +234,30 @@ export const RACES = [
         foundedOrders: `The Uncorrupted`,
         description: `Among the known peoples of Avlim, the Ocra seem to be the only race without a homeland and without the guidance of an eldar. They have pale skin and a tall muscular build. They are nearly as stoic as the elves, but with a sharper sense of hardened character. Not surprisingly, they are not fast made friends, though they are rumored to be the kindest of strangers if approached. This temperament and body type matches their known recognition for being great warriors with unmatched discipline. They mix into the various lands of Qeṽa, often holding high military positions.`,
         image: osei,
+        imageAlt: `Qeṽa Osei`,
         speed: 30,
-        imageAlt: `Qeṽa Osei`
+        size: 'M',
+        str: '+2',
+        con: '+1',
+        proficiencies: ['Intimidation'],
+        languages: ['common', 'orc'],
+        abilities: [
+            {
+                id: 0,
+                name: 'Unbreakable',
+                description: "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest."
+            },
+            {
+                id: 1,
+                name: "Darkvision",
+                description: "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            },
+            {
+                id: 2,
+                name: "Savage Attacks",
+                description: "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+            }
+        ]
     },
     {
         id: 4,
@@ -244,6 +277,27 @@ export const RACES = [
         description: `If you are looking for skilled craftsmen, look no further than the dwarves. In their great mountain halls, they have mastered the crafting of metal and stone. With their thick beards and stout stature standing at 4 feet tall, they appear as tough as the stone they cut and metal they beat. They are slower to trust, but more loyal than any when their trust is gained. Their lifespan can reach up to half a century though most live to about 400 years.`,
         image: tdwarf,
         speed: 25,
+        size: 'M',
+        con: '+2',
+        proficiencies: ['battleaxe', 'handaxe', 'light hammer', 'warhammer','artisan tools of your choice'],
+        languages: ['common', 'dwarvish'],
+        abilities: [
+            {
+                id: 0,
+                name: 'Superior Darkvision',
+                description: "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            },
+            {
+                id: 1,
+                name: "Dwarven Resilience",
+                description: "You have advantage on saving throws against poison, and you have resistance against poison damage."
+            },
+            {
+                id: 2,
+                name: "Stonecunning",
+                description: "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+            }
+        ],
         topics: [
             {
                 id: 0,
@@ -285,6 +339,22 @@ export const RACES = [
         description: `The Gnomes are some of the least involved in world events. They are 4-5 feet tall with long pointy ears and a unique face. Like halflings, they have little affinity for glory in war, but unlike halflings they are positioned to avoid it. Their settlements are greatly distanced from Shaole and buffered by mountains, oceans and surrounding nations. Removed from conflict, they find tranquility in the trades of leatherwork and fishing, though a spark of curiosity inspires many to become travelers and adventurers. The Eldar, Çairça watches over them.`,
         image: ggnome,
         speed: 25,
+        size: 'S',
+        int: '+2',
+        proficiencies: ['-'],
+        languages: ['common', 'gnomish'],
+        abilities: [
+            {
+                id: 0,
+                name: 'Natural Illusionist',
+                description: "You know the minor illusion cantrip. Intelligence is your Spellcasting ability for it.  Every one foot of illusion requires +1 dice roll (ex. a 15 sq ft. illusion requires an intelligence roll of 15+)."
+            },
+            {
+                id: 1,
+                name: "Fey Ancestry",
+                description: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+            }
+        ],
         topics: [
             {
                 id: 0,
@@ -337,6 +407,27 @@ export const RACES = [
         description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the Eldar, Xaradriel and oracle, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for 75% of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
         image: half,
         speed: 25,
+        size: 'S',
+        dex: '+2',
+        proficiencies: ['-'],
+        languages: ['common', 'halfling'],
+        abilities: [
+            {
+                id: 0,
+                name: 'Lucky',
+                description: "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+            },
+            {
+                id: 1,
+                name: "Brave",
+                description: "You have advantage on saving throws against being frightened."
+            },
+            {
+                id: 2,
+                name: "Halfling Nimbleness",
+                description: "You can move through the space of any creature that is of a size larger than yours."
+            }
+        ],
         imageAlt: `Qeṽa Halfling`
     },
     {
@@ -357,6 +448,23 @@ export const RACES = [
         description: `Rarely seen are the Aeoki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for divination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the oracles, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
         image: aeoki,
         speed: 20,
+        size: 'S',
+        dex: '+1',
+        cha: '+2',
+        proficiencies: ['-'],
+        languages: ['*lumiare', 'kigaul'],
+        abilities: [
+            {
+                id: 0,
+                name: 'Darkvision',
+                description: "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            },
+            {
+                id: 1,
+                name: "Fey Ancestry",
+                description: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+            }
+        ],
         imageAlt: `Qeṽa Aeoki`
     },
     {
@@ -377,26 +485,38 @@ export const RACES = [
         description: `It was revealed later in history that some of the flora had become sentient. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are shy folk and do not carry out business like other races. They seem to see themselves as more plant than people and keep to themselves in their forests, gravitating to the center of the forest.`,
         image: treefolk,
         speed: 30,
+        size: 'M',
+        str: '+1',
+        con: '+2',
+        proficiencies: ['-'],
+        languages: ['*elvish', '*lumiare', 'speak with plants'],
+        abilities: [
+            {
+                id: 0,
+                name: 'Barkskin',
+                description: "Treefolk's bark-like skin provides them with natural protection. A Treefolk's Armor Class equals 14 + their Dexterity modifier + their Constitution modifier. They also have resistance to bludgeoning damage."
+            },
+            {
+                id: 1,
+                name: "Take Root",
+                description: "Treefolk do not sleep, but they must put down roots each night and enter a semi-conscious dormant state for at least 4 hours. Treefolk can take root in sand, dirt, mud, loose gravel or similar material; but not worked stone or bare rock. While rooted, a Treefolk's speed becomes 0, and they become immune to both the prone condition and any form of forced movement, but have disadvantage on Dexterity saving throws. You can take root and unroot as an action. Taking root adds +2 to every dice roll and gives you advantage on any save or ability check to resist forced movement."
+            },
+            {
+                id: 2,
+                name: "Flammable",
+                description: "Treefolk have vulnerability to fire damage. Treefolk are weak to fire, and burn easily.",
+            },
+            {
+                id: 3,
+                name: "Tremor",
+                description: "When rooted, medium size creatures and above within 100 feet of you must achieve a 15+ Stealth check or be detected."
+            },
+            {
+                id: 4,
+                name: "Regrowth",
+                description: "Whenever your health drops below 0, you lose a tree branch/limb. The number of points you drop below zero equals the number of days it will require to regrow the limb. During the healing process, you have disadvantage on attacks with two-handed weapons."
+            }
+        ],
         imageAlt: `Qeṽa Arborum`
-    },
-    {
-        id: 9,
-        link: `/races/dragons`,
-        name: `Dragons`,
-        singName: "Dragon",
-        heartStone: `Tourmaline (Immensity)`,
-        spawnStone: `Bismuth (Intelligence)`,
-        elden: `Moriel`,
-        lifespan: `~10,000 yrs`,
-        height: `Gargantuan`,
-        weight: `3,000lbs`,
-        appearance: `Various Colored-Scales & Wings`,
-        language: `Common, Elvish, Dark Speech`,
-        government: `None`,
-        residence: `Varied`,
-        description: `Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elder elves, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.`,
-        image: user,
-        speed: 50,
-        imageAlt: `Qeṽa Dragon`
     }
 ];
