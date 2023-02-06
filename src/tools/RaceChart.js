@@ -20,6 +20,9 @@ const RaceChart = () => {
     const [info, setInfo] = useState(false);
     const infoToggle = () => setInfo(!info);
 
+    const [checkbox, setCheckbox] = useState(false);
+    const checkboxToggle = () => setCheckbox(!checkbox);
+
     const [title, setTitle] = useState("Ability");
     const [detail, setDetail] = useState("Click on an ability above to see it's description.");
     const detailToggle = (e) => {
@@ -33,6 +36,9 @@ const RaceChart = () => {
 
     const reset = () => {
         toggle();
+        setTitle("Ability");
+        setDetail("Click on an ability above to see it's description.");
+        setCheckbox(false);
         console.clear();
     }
 
@@ -57,7 +63,7 @@ const RaceChart = () => {
                             </Button>                            
                         </h3>
                         <p>
-                            <input name="subraces" type="checkbox" />
+                            <input name="subraces" type="checkbox" onClick={checkboxToggle} />
                             <label htmlFor="subraces">&nbsp;View Subraces</label>
                         </p>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
@@ -94,7 +100,7 @@ const RaceChart = () => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
-                        <table className="table table-hover align-middle">
+                        <table className="table table-hover table-sticky align-middle">
                             <thead>
                                 <tr className='align-middle'>
                                     <th>Race</th>
@@ -128,32 +134,62 @@ const RaceChart = () => {
                                             <td>{race.proficiencies.join(', ')}</td>
                                             <td>
                                                 {race.abilities && race.abilities.map(a => (
-                                                    <a onClick={() => detailToggle(a)}>{a.name}, </a>
+                                                    <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
                                                 ))}
                                             </td>
                                         </tr>
+                                        {race.topics && checkbox && (
+                                            <tr className='table table-container table-hover'>
+                                                <td colSpan='12'>
+                                                    <table className='table'>
+                                                        <thead>
+                                                            <tr className='align-middle'>
+                                                                <th>Subrace</th>
+                                                                <td>STR</td>
+                                                                <td>DEX</td>
+                                                                <td>CON</td>
+                                                                <td>INT</td>
+                                                                <td>WIS</td>
+                                                                <td>CHA</td>
+                                                                <td>ANY</td>
+                                                                <td>Abilities</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {race.topics.map(subrace => (
+                                                                <tr className='align-middle'>
+                                                                    <th>{subrace.name}</th>
+                                                                    <td>{subrace.str}</td>
+                                                                    <td>{subrace.dex}</td>
+                                                                    <td>{subrace.con}</td>
+                                                                    <td>{subrace.int}</td>
+                                                                    <td>{subrace.wis}</td>
+                                                                    <td>{subrace.cha}</td>
+                                                                    <td>{subrace.any}</td>
+                                                                    <td>
+                                                                        {subrace.abilities && subrace.abilities.map(a => (
+                                                                            <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
+                                                                        ))}
+                                                                    </td>
+                                                                </tr>
+                                                            ))}
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        )}
                                     </React.Fragment>
                                 ))}
-                                <tr>
-                                    <th className='align-middle'><em>{title}</em></th>
-                                    <td className='align-middle' colSpan='10'><em>{detail}</em></td>
-                                    <td className='align-middle cardinal'><a  onClick={detailReset}>Reset</a></td>
-                                </tr>
                             </tbody>
-                        </table>
-                        <table className='table rounded'>
-                            <thead>
-                                <tr>
-                                    <th className='align-middle'><em>{title}</em></th>
-                                    <td className='align-middle' colSpan='8'><em>{detail}</em></td>
-                                    <td className='align-middle cardinal'><a  onClick={detailReset}>Reset</a></td>
-                                </tr>
-                            </thead>
                         </table>
                     </div>
                 </div>
                 </ModalBody>
                 <ModalFooter>
+                    <p className='text-start'><strong>{title.toUpperCase()}: </strong><em>{detail}</em></p>
+                    <Button color="secondary" onClick={detailReset}>
+                        Reset
+                    </Button>
                     <Button color="secondary" onClick={reset}>
                         Close
                     </Button>

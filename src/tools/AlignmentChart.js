@@ -342,7 +342,7 @@ const AlignmentChart = () => {
                                         <tr>
                                             {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
                                                 <td colSpan='6'>
-                                                    <em><strong>{title}: </strong>{detail}</em><a onClick={abilityInfoReset}>reset</a>
+                                                    <em><strong>{title}: </strong>{detail} </em><a onClick={abilityInfoReset}>reset</a>
                                                 </td>
                                             ) : (<td colSpan='6'></td>)
                                             }

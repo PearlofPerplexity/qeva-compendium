@@ -65,7 +65,26 @@ export const RACES = [
                 description: 
                     `Wood elves are drawn to trees and so reside in forests where plantlife is abundant. They maintain the oldest and most central city of civilization, which is Brielle in the forest of Navenia. Other great cities include Eavano in Evendil, as well as Linda and Nalri in the west. They are traditionally vegetarian and perceptive to the nature of forest environments and plants.`,
                 image: wood,
-                imageAlt: `Qeṽa Wood Elf`
+                imageAlt: `Qeṽa Wood Elf`,
+                wis: '+1',
+                proficiencies: [''],
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Nightvision',
+                        description: "You can see in darkness under an open sky up to 60 ft."
+                    },
+                    {
+                        id: 1,
+                        name: "Fleet of Foot",
+                        description: "Your base walking speed increases to 35 feet."
+                    },
+                    {
+                        id: 2,
+                        name: "Mask of the Wild",
+                        description: "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+                    }
+                ]
             },
             {
                 id: 1,
@@ -75,7 +94,20 @@ export const RACES = [
                 description: 
                     `River elves are those that are drawn most to flowing water and so build their cities adjacent to rivers. Their greatest cities are Thelos on the Silver river, Anuage on the Dundili, Vaiorse on the Oulaire, Eteala on the Neale and Helos on the Miolaire before the wood was cursed. They are traditionally pescatarian and perceptive to the nature of water.`,
                 image: river,
-                imageAlt: `Qeṽa River Elf`
+                imageAlt: `Qeṽa River Elf`,
+                int: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Swim',
+                        description: "You maintain same visibility underwater as on land and speed if not wearing metal armor. You have 2x lung capacity under water."
+                    },
+                    {
+                        id: 1,
+                        name: "Flow",
+                        description: "When attuned to the gem, aquamarine and standing in a body of water, you can cast control water on that body of water."
+                    }
+                ]
             },
             {
                 id: 2,
@@ -85,7 +117,20 @@ export const RACES = [
                 description: 
                     `Desert elves are those who withdrew from society to seek separation from the growing hostility in Avlim. They found seclusion in the northeastern deserts of Shaole, in an oasis they've hidden by illusions. Though their community was built on passivism, there are still those among them who reenter society to play a role in the events of history.`,
                 image: desert,
-                imageAlt: `Qeṽa Desert Elf`
+                imageAlt: `Qeṽa Desert Elf`,
+                con: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Sandstep',
+                        description: "Your travel speed is not hindered by difficult terrain."
+                    },
+                    {
+                        id: 1,
+                        name: "Minor Illusion",
+                        description: "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again. Every one foot of illusion requires +1 dice roll (ex. a 15 sq ft. illusion requires an intelligence roll of 15+)."
+                    }
+                ]
             }
         ]
     },
@@ -120,7 +165,20 @@ export const RACES = [
                 description: 
                     `The Lumiare or Autumn Avi have a tanish, orange tint to their skin, dark purple lips and black markings on their face. Their greatest city is Lumion in the Anduir valley of Altiavaire, though their kind can be found scattered throughout the mid-north. Unlike elves, they have a sense for mountainous terrain and wildlife. They are best known for their legendary mountain warfare school and companionship with birds.`,
                 image: lumiare,
-                imageAlt: `Qeṽa Lumiare Aviame`
+                imageAlt: `Qeṽa Lumiare Aviame`,
+                wis: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Acclimated to Low Peaks',
+                        description: "Aviame do not have to attempt the Fortitude save in low peak or high pass mountain travel."
+                    },
+                    {
+                        id: 1,
+                        name: "Songbird",
+                        description: "You have a relationship with all birdkind and many are loyal to you. You can speak to birds and sometimes command them."
+                    }
+                ]
             },
             {
                 id: 1,
@@ -131,7 +189,25 @@ export const RACES = [
                 description: 
                     `The Athiame or “Night Avi” were degradingly called the Athmari after the Athiame-born tyrant, Ithmar reigned ruthlessly over Avlim in the age of darkness. This tie to the dark armies would scar their reputation as many of the noble races would compare their dark skin to the gray skin of orcs, declaring them as untrustworthy. Thus, the Athiame would lock themselves in the Athiari cliffs, guarded by their greatly feared order of the ghost blades.`,
                 image: athiame,
-                imageAlt: `Qeṽa Athiame`
+                imageAlt: `Qeṽa Athiame`,
+                dex: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Acclimated to High Mountain Passes',
+                        description: "You do not have to attempt the Fortitude save in high pass mountain travel."
+                    },
+                    {
+                        id: 1,
+                        name: "Owlhoot",
+                        description: "You have a relationship with all owlkind and many are loyal to you. You can speak to owls and sometimes command them."
+                    },
+                    {
+                        id: 2,
+                        name: "Darkvision",
+                        description: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+                    }
+                ]
             },
             {
                 id: 2,
@@ -142,7 +218,20 @@ export const RACES = [
                 description: 
                     `The Asiame or Snow Avi or even High Aviame have pale white skin and hair. They live in the high mountains; most prevalently in the north ranges acting as a gatekeepers of Altiavaire. Beyond the normal tolerance of other Aviame, Asiame are especially built for the cold so much so that some sailed north for inhabitable land after the Terracut.`,
                 image: asiame,
-                imageAlt: `Qeṽa Asiame`
+                imageAlt: `Qeṽa Asiame`,
+                int: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Acclimated to High Peaks',
+                        description: "You do not have to attempt the Fortitude save in any mountain travel including high peaks."
+                    },
+                    {
+                        id: 1,
+                        name: "Prophet",
+                        description: "Given the Asiame's history and heritage, ethereals are more likely to speak with you than most. Asiame can signal for a dream from the ethereal realm and have proficiency in interpreting these dreams. DREAMS: The noble races call dreams the 'speech of spirits' for it is the most common way ethereals communicate to physical beings. In order to receive a dream or vision, one must sleep in a place distanced from evil."
+                    }
+                ]
             },
             {
                 id: 3,
@@ -153,7 +242,21 @@ export const RACES = [
                 description: 
                     `Aves are a half elf, half aviame race. Though they are given a warm welcome in Altiavaire and Navalil and experience the best of Elven and Aviame hospitality, they are not well-trusted among the other races. Along with their kind being rare, their often calico complexion sparks others races to distrust them and distance themselves. They are not numerous enough to have their own cities, but rather mix in with the elven and aviame population. They carry themselves like their parent races and do not often venture west.`,
                 image: ave,
-                imageAlt: `Qeṽa Ave`
+                imageAlt: `Qeṽa Ave`,
+                cha: '+1',
+                any: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Acclimated to High Mountain Passes',
+                        description: "You do not have to attempt the Fortitude save in high pass mountain travel."
+                    },
+                    {
+                        id: 2,
+                        name: "Nightvision",
+                        description: "You can see in darkness under an open sky up to 60 ft."
+                    }
+                ]
             }
         ]
     },
@@ -175,12 +278,6 @@ export const RACES = [
         image: human,
         speed: 30,
         size: 'M',
-        str: '+1',
-        dex: '+1',
-        con: '+1',
-        int: '+1',
-        wis: '+1',
-        cha: '+1',
         proficiencies: ['-'],
         languages: ['common', 'one other language'],
         topics: [
@@ -192,7 +289,13 @@ export const RACES = [
                 description: 
                     `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
                 image: human,
-                imageAlt: `Qeṽa Human`
+                imageAlt: `Qeṽa Human`,
+                str: '+1',
+                dex: '+1',
+                con: '+1',
+                int: '+1',
+                wis: '+1',
+                cha: '+1'
             },
             {
                 id: 1,
@@ -202,7 +305,21 @@ export const RACES = [
                 description: 
                     `Half-elves are half-human and half-elf and they are indistinguishable from either race depending on the genes they inherent. They walk among both races nearly unnoticed with only the most perceptive recognizing their irregularity. Some half-elves do not even know their heritage until they outlive their human counterparts or begin to show the signs of mortality. Half-elves live for around a century, depending on the purity of their elven bloodline.`,
                 image: halfElf,
-                imageAlt: `Qeṽa Half Elf`
+                imageAlt: `Qeṽa Half Elf`,
+                cha: '+2',
+                any: '+2',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Nightvision',
+                        description: "You can see in darkness under an open sky up to 60 ft."
+                    },
+                    {
+                        id: 1,
+                        name: "Skill Versatility",
+                        description: "You gain proficiency in two skills of your choice."
+                    }
+                ]
             },
             {
                 id: 2,
@@ -307,7 +424,15 @@ export const RACES = [
                 description: 
                     `The Dwarves of the west are dispersed in the Thrush mountains with their largest stronghold being in Haraduin. Acting as gatekeepers between Navalil and Ouri, they learned to have better relations with other races than eastern dwarves. They formed significant relationships with both halflings and elves.`,
                 image: tdwarf,
-                imageAlt: `Qeṽa Dwarf of the Thrush Mountains`
+                imageAlt: `Qeṽa Dwarf of the Thrush Mountains`,
+                wis: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Dwarven Toughness',
+                        description: "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+                    }
+                ]
             },
             {
                 id: 1,
@@ -317,7 +442,15 @@ export const RACES = [
                 description: 
                     `The eastern dwarves of the Bare Mountains are bread even harder than their western cousins and are not typically an amiable acquaintance. They reside in the barren lands of Shaole, where few things grow or last and their greatest city was Barahduil until it was overtaken by the dark armies. Now, any great gathering of western dwarves is hidden or eradicated and dispersed.`,
                 image: bdwarf,
-                imageAlt: `Qeṽa Dwarf of the Bare Mountains`
+                imageAlt: `Qeṽa Dwarf of the Bare Mountains`,
+                str: '+2',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Dwarven Armor Training',
+                        description: "You have proficiency with light and medium armor."
+                    }
+                ]
             }
         ]
     },
@@ -364,7 +497,20 @@ export const RACES = [
                 description: 
                     `Green Gnomes can be found in Farathain, the southern region of Ouri below Fletcheren. Their greatest towns are Nalri in the wood and Nadia south of Loch Ladish. Unlike most sentient races, these Gnomes have a natural propensity for divination. Without any training, they begin forming minor illusions as children and progress in their skill from there.`,
                 image: ggnome,
-                imageAlt: `Qeṽa Green Gnome`
+                imageAlt: `Qeṽa Green Gnome`,
+                wis: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Speak with Small Beasts',
+                        description: "Through Sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest Gnomes love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other Creatures as beloved pets."
+                    },
+                    {
+                        id: 1,
+                        name: 'Dancing Lights',
+                        description: "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. Each light sheds light in a 10-foot radius. As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range."
+                    }
+                ]
             },
             {
                 id: 1,
@@ -374,7 +520,20 @@ export const RACES = [
                 description: 
                     `Blue Gnomes live on the island, Haven, southwest of Avlim with their greatest city being Amvil, city of bridges. They are the farthest removed from world events, though Haven was the primary refuge for all races during the reign of Ithmar and his void that brought on the age of darkness. Like green gnomes, they have a natural propensity for divination.`,
                 image: bgnome,
-                imageAlt: `Qeṽa Blue Gnome`
+                imageAlt: `Qeṽa Blue Gnome`,
+                dex: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: "Artificer's Lore",
+                        description: "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+                    },
+                    {
+                        id: 1,
+                        name: 'Tinker',
+                        description: "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a small mechanical device (AC 5, 1 hp). Successful creation of the device requires a 16+ Dexterity roll. On a failed roll you can spend an additional 1 hour and 2 gp to reattempt. You can make no more than five attempts per day."
+                    }
+                ]
             },
             {
                 id: 2,
@@ -384,7 +543,25 @@ export const RACES = [
                 description: 
                     `Unlike green and blue gnomes, red gnomes do not have an ability to produce divination, but only magic. Also unlike other gnomes, they are unfriendly if not altogether hostile. No one seems to really know their source of origin, though most claim that they live in the uninhabited treelines of the thrush and bare mountains.`,
                 image: rgnome,
-                imageAlt: `Qeṽa Red Gnome`
+                imageAlt: `Qeṽa Red Gnome`,
+                con: '+1',
+                abilities: [
+                    {
+                        id: 0,
+                        name: "Dark Vision",
+                        description: "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+                    },
+                    {
+                        id: 1,
+                        name: 'Lights Out',
+                        description: "You can remove all artificial light in a room or area within a 200ft. radius."
+                    },
+                    {
+                        id: 2,
+                        name: "Dabbler with Darkness",
+                        description: "You cannot align to cardinal gems in their natural state, but only in their synthetic form. You can align to incidental gems in all forms."
+                    }
+                ]
             }
         ]
     },

@@ -669,9 +669,12 @@ input.col.slider::-webkit-slider-thumb {
 	background-color: var(--dk-gray-300);
   }
 
-  table.table thead, table.table thead {
+  table.table thead {
 	background-color: var(--navbar-bg-lt);
 	color: var(--dk-gray-200);
+  }
+
+  table.table-sticky thead {
 	position: sticky;
 	top: -19px;
   }
@@ -679,3 +682,6 @@ input.col.slider::-webkit-slider-thumb {
   table.table tbody tr td[colSpan="6"] a {
 	color: blue;
   }
+
+  .table-container {
+background-color: var(--navbar-bg-color);  }
