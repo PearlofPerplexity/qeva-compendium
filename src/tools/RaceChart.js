@@ -121,7 +121,7 @@ const RaceChart = () => {
                                 {RACES.map(race => (
                                     <React.Fragment key={race.id}>
                                         <tr className='align-middle'>
-                                            <th>{race.name}</th>
+                                            <th>{race.singName}</th>
                                             <td>{race.size}</td>
                                             <td>{race.speed}</td>
                                             <td>{race.str}</td>
@@ -158,7 +158,7 @@ const RaceChart = () => {
                                                         <tbody>
                                                             {race.topics.map(subrace => (
                                                                 <tr className='align-middle'>
-                                                                    <th>{subrace.name}</th>
+                                                                    <th>{subrace.singName}</th>
                                                                     <td>{subrace.str}</td>
                                                                     <td>{subrace.dex}</td>
                                                                     <td>{subrace.con}</td>
@@ -182,6 +182,7 @@ const RaceChart = () => {
                                 ))}
                             </tbody>
                         </table>
+                        <p>* this race can understand this language, but not speak it.</p>
                     </div>
                 </div>
                 </ModalBody>

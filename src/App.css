@@ -476,7 +476,7 @@ aside ul {
 	background-color: var(--navbar-bg-color);
 }
 
-.card, .list-group-item {
+.card, .card .list-group-item {
 	color: var(--dk-gray-300);
 	background-color: var(--dk-dark-bg);
 }
@@ -684,4 +684,11 @@ input.col.slider::-webkit-slider-thumb {
   }
 
   .table-container {
-background-color: var(--navbar-bg-color);  }
+	background-color: var(--navbar-bg-color);  
+  }
+
+  table.table .list-group .list-group-item {
+	text-decoration: none;
+	background: none;
+	position: static;
+  }

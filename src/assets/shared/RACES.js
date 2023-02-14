@@ -60,6 +60,7 @@ export const RACES = [
             {
                 id: 0,
                 name: `Wood Elves`,
+                singName: "Wood Elf",
                 residence: `Forests of Navenia & Navalil`,
                 appearance: `Gold Hair & White Skin`,
                 description: 
@@ -89,6 +90,7 @@ export const RACES = [
             {
                 id: 1,
                 name: `River Elves`,
+                singName: "River Elf",
                 residence: `Miolaire & Dundili Rivers`,
                 appearance: `Black Hair & White Skin`,
                 description: 
@@ -112,6 +114,7 @@ export const RACES = [
             {
                 id: 2,
                 name: `Desert Elves`,
+                singName: "Desert Elf",
                 residence: `Miolaire & Dundili Rivers`,
                 appearance: `Gold Hair & Tan Skin`,
                 description: 
@@ -159,6 +162,7 @@ export const RACES = [
             {
                 id: 0,
                 name: `Lumiare`,
+                singName: "Autumn Avi",
                 nickname: `Autumn Avi`,
                 residence: `Mountains of Altiavaire`,
                 appearance: `Black Hair & Tangerine Skin`,
@@ -183,6 +187,7 @@ export const RACES = [
             {
                 id: 1,
                 name: `Athiame`,
+                singName: "Night Avi",
                 nickname: `Night Avi`,
                 residence: `Athvari Cliffs`,
                 appearance: `White Hair & Black Skin`,
@@ -212,6 +217,7 @@ export const RACES = [
             {
                 id: 2,
                 name: `Asiame`,
+                singName: "Snow Avi",
                 nickname: `Snow Avi`,
                 residence: `High Mountains, Orcaṽa`,
                 appearance: `White Hair & Skin`,
@@ -236,6 +242,7 @@ export const RACES = [
             {
                 id: 3,
                 name: `Half-Aviame, Half-Elf`,
+                singName: "Ave",
                 nickname: `Aves`,
                 residence: `Elven & Aviame Communities`,
                 appearance: `White Hair & Calico Skin`,
@@ -284,6 +291,7 @@ export const RACES = [
             {
                 id: 0,
                 name: `Humans`,
+                singName: "Human",
                 residence: `Arvañon`,
                 appearance: `Varied Hair & Skin`,
                 description: 
@@ -300,6 +308,7 @@ export const RACES = [
             {
                 id: 1,
                 name: `Half-Elves`,
+                singName: "Half-Elf",
                 residence: `Elven & Human Communities`,
                 appearance: `Eyes the color of their elven parent`,
                 description: 
@@ -324,6 +333,7 @@ export const RACES = [
             {
                 id: 2,
                 name: `Elden`,
+                singName: "Elden",
                 residence: `Brielle`,
                 appearance: `Each elden different`,
                 description: 
@@ -419,6 +429,7 @@ export const RACES = [
             {
                 id: 0,
                 name: `Thrauldem's Folk`,
+                singName: "Thrush Mtn Dwarf",
                 residence: `Thursh Mountains`,
                 appearance: `~Black Hair, White Skin`,
                 description: 
@@ -437,6 +448,7 @@ export const RACES = [
             {
                 id: 1,
                 name: `Narduhelm's Folk`,
+                singName: "Bare Mtn Dwarf",
                 residence: `Bare Mountains`,
                 appearance: `~Brown Hair, White Skin`,
                 description: 
@@ -492,6 +504,7 @@ export const RACES = [
             {
                 id: 0,
                 name: `Green Gnomes`,
+                singName: "Green Gnome",
                 residence: `Farathain`,
                 appearance: `Green Skin`,
                 description: 
@@ -515,6 +528,7 @@ export const RACES = [
             {
                 id: 1,
                 name: `Blue Gnomes`,
+                singName: "Blue Gnome",
                 residence: `Haven`,
                 appearance: `Blue Skin`,
                 description: 
@@ -538,6 +552,7 @@ export const RACES = [
             {
                 id: 2,
                 name: `Red Gnomes`,
+                singName: "Red Gnome",
                 residence: `Baroach, Bare Mountains`,
                 appearance: `Red Skin`,
                 description: 
