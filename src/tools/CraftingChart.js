@@ -424,7 +424,7 @@ const concoctions = [
     }
 ];
 
-const RaceChart = () => {
+const CraftingChart = () => {
     
     const [selectedIngredients, setSelectedIngredients] = useState(ingredients);
 
@@ -444,10 +444,11 @@ const RaceChart = () => {
     const handlePotionType = (e) => {
         if (e.target.value === 'all') {
             setSelectedPotionTypes(concoctions);
-            setSelectedPotions(concoctions);
+            setSelectedPotions(selectedPotionIngredients);
         } else {
+            const newTypes = concoctions.filter(potion => potion.type === e.target.value);
             const newPotions = selectedPotionIngredients.filter(potion => potion.type === e.target.value);
-            setSelectedPotionTypes(newPotions);
+            setSelectedPotionTypes(newTypes);
             setSelectedPotions(newPotions);
         }
     }
@@ -456,14 +457,17 @@ const RaceChart = () => {
     const [potionIngredients, setPotionIngredients] = useState([]);
 
     const handlePotionIngredients = (e) => {
-        if (e.target.value === 'all') {
+        if (potionIngredients.includes(e.target.value)) {
+            alert('You have already added this ingredient!')
+        } else if (e.target.value === 'all') {
             setSelectedPotionIngredients(concoctions);
-            setSelectedPotions(concoctions);
+            setSelectedPotions(selectedPotionTypes);
             setPotionIngredients([]);
         } else {
             const newIngredients = [...potionIngredients, e.target.value];
+            const newPIs = concoctions.filter(array => newIngredients.some(ingredient => array.ingredients.includes(ingredient)));
             const newPotions = selectedPotionTypes.filter(array => newIngredients.some(ingredient => array.ingredients.includes(ingredient)));
-            setSelectedPotionIngredients(newPotions);
+            setSelectedPotionIngredients(newPIs);
             setSelectedPotions(newPotions);
             setPotionIngredients(newIngredients);
         }
@@ -472,11 +476,12 @@ const RaceChart = () => {
     const removePotionIngredient = (e) => {
         const newIngredients = potionIngredients.filter(event => event !== e.target.ariaLabel);
         if (newIngredients.length === 0) {
-            setSelectedPotionIngredients(selectedPotionTypes);
+            setSelectedPotionIngredients(concoctions);
             setSelectedPotions(selectedPotionTypes);
         } else {
+            const newPIs = concoctions.filter(array => newIngredients.some(ingredient => array.ingredients.includes(ingredient)));
             const newPotions = selectedPotionTypes.filter(array => newIngredients.some(ingredient => array.ingredients.includes(ingredient)));
-            setSelectedPotionIngredients(newPotions);
+            setSelectedPotionIngredients(newPIs);
             setSelectedPotions(newPotions);
         }
         setPotionIngredients(newIngredients);
@@ -544,7 +549,7 @@ const RaceChart = () => {
                             <thead>
                                 <tr className='align-middle'>
                                     <td>D{selectedIngredients.length}</td>
-                                    <td>Name</td>
+                                    <th>Name</th>
                                     <td>
                                         <select name='locs' className="ms-2 charPicklist text-center" id='locs-select' onChange={handleLocation}>
                                             <option value="all">Location</option>
@@ -561,7 +566,7 @@ const RaceChart = () => {
                                     <React.Fragment key={ing.id}>
                                         <tr className='align-middle'>
                                             <td>{ing.id}</td>
-                                            <td>{ing.name}</td>
+                                            <th>{ing.name}</th>
                                             <td>{ing.location.join(', ')}</td>
                                             <td>{ing.description}</td>
                                         </tr>
@@ -664,4 +669,4 @@ const RaceChart = () => {
     );
 }
 
-export default RaceChart;
+export default CraftingChart;

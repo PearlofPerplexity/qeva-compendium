@@ -16,7 +16,9 @@ const RaceChart = () => {
     
     const [selectedRaces, setSelectedRaces] = useState(RACES);
     const handleRace = (e) => {
-        if (e.target.value === 'all') {
+        if ((RACES.length !== selectedRaces.length) && selectedRaces.find(race => race.name === e.target.value)) {
+            alert('You have already added this race!');
+        } else if (e.target.value === 'all') {
             setSelectedRaces(RACES);
         } else {
             const curRace = RACES.filter(event => event.name === e.target.value)

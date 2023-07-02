@@ -19,7 +19,9 @@ const ClassChart = () => {
     
     const [selectedClasses, setSelectedClasses] = useState(dndClasses);
     const handleClass = (e) => {
-        if (e.target.value === 'all') {
+        if ((dndClasses.length !== selectedClasses.length) && selectedClasses.find(cl => cl.name === e.target.value)) {
+            alert('You have already added this class!');
+        } else if (e.target.value === 'all') {
             setSelectedClasses(dndClasses);
         } else {
             const curClass = dndClasses.filter(event => event.name === e.target.value)
