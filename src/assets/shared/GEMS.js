@@ -198,13 +198,13 @@ export const GEMS = [
                     },
                     {
                         id: 1, 
-                        name: "Ethereal Armor",
-                        description: "You have advantage on saving throws against ethereal attack"
+                        name: "Sacrifice",
+                        description: "Reassign any amount of damage on another being to yourself"
                     },
                     {
                         id: 2, 
-                        name: "Sacrifice",
-                        description: "Reassign any amount of damage on another being to yourself"
+                        name: "Ethereal Armor",
+                        description: "You have advantage on both ethereal & physical attacks against you for 1 minute"
                     },
                     {
                         id: 3, 
@@ -240,27 +240,27 @@ export const GEMS = [
                     {
                         id: 0, 
                         name: "Nostalgia",
-                        description: "Recall any positive memory from your own past"
+                        description: "Recall any memory from your own past. *Memory must contain an element of joy."
                     },
                     {
                         id: 1, 
                         name: "Empathy",
-                        description: "Recall any positive memory from someone you touch"
+                        description: "Recall any memory from someone you touch. *Memory must contain an element of joy."
                     },
                     {
                         id: 2, 
                         name: "Antiquity",
-                        description: "Recall any positive memory from the ground of a location"
+                        description: "Recall any memory from the ground. *Memory must contain an element of joy."
                     },
                     {
                         id: 3, 
                         name: "Memoir",
-                        description: "Recall any positive memory from an object you touch"
+                        description: "Recall any positive memory from an object you touch. *Memory must contain an element of joy."
                     },
                     {
                         id: 4, 
                         name: "Echo",
-                        description: "Recall any positive memory at will"
+                        description: "Recall any memory from any source at will. *Memory must contain an element of joy"
                     },
                     {
                         id: 5, 

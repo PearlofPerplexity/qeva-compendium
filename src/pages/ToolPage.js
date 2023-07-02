@@ -7,6 +7,9 @@ import NPCGenerator from '../tools/NPCGenerator';
 import AlignmentChart from '../tools/AlignmentChart';
 import RaceChart from '../tools/RaceChart';
 import ClassChart from '../tools/ClassChart';
+import CraftingChart from '../tools/CraftingChart';
+import GemcutterChart from '../tools/GemcutterChart';
+import FightingStyles from '../tools/FightStyleChart';
 import '../style.css'
 
 
@@ -32,6 +35,13 @@ const ToolPage = () => {
                     <AlignmentChart />
                     <RaceChart />
                     <ClassChart />
+                </div>
+            </section>
+            <section className="highlights mt-4">
+                <div className='row'>
+                    <GemcutterChart />
+                    <CraftingChart />
+                    <FightingStyles />
                 </div>
             </section>
         </div>

@@ -1,4 +1,5 @@
-// ICONS SOURCE: https://iconscout.com/unicons/explore/line
+// OUTLINE ICONS SOURCE: https://iconscout.com/unicons/explore/line
+// OTHER ICONS SOURCE: https://icon-sets.iconify.design/
 
 // Menu Icons
 export const BasicIcon = 'uil-comment-info';

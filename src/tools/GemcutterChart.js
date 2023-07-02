@@ -63,43 +63,26 @@ const RaceChart = () => {
     return (
         <div className="col-lg-4">
             <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
-                <i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i>
+                <i className="iconify fs-2" data-icon="fxemoji:ring"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Race Chart</h3>
+                        <h3 className="mb-0">Gemcutter Chart</h3>
                     </div>
                 </div>
             </Link>
             <Modal isOpen={modal} toggle={toggle} fullscreen>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Race Chart</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="fxemoji:ring"></i> Gemcutter Chart</ModalHeader>
                 <ModalBody>
                 <div className='container'>
                     <div className='row text-center mb-4'>
-                        <h3>Races
+                        <h3>Gemcutting
                             <Button className='text-center info' onClick={infoToggle}>
                                 🛈
                             </Button>                            
                         </h3>
-                        <p className='text-center'>
-                            <select name='races' className="ms-2 charPicklist" id='race-select' onChange={handleRace}>
-                                <option value="all">--Select Races--</option>
-                                {RACES.map((race) => (
-                                    <option value={race.name} key={race.id}>{race.name}</option>
-                                ))}
-                            </select>
-                            {(RACES.length !== selectedRaces.length) && selectedRaces.map((e, index) => (
-                                <a key={index} aria-label={e.name} className='charPicklist' onClick={removeClass}>
-                                    {e.name} x
-                                </a>
-                            ))}
-                        </p>
-                        <p>
-                            <input name="subraces" type="checkbox" onClick={checkboxToggle} />
-                            <label htmlFor="subraces">&nbsp;View Subraces</label>
-                        </p>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
                             <OffcanvasHeader toggle={infoToggle}>
-                            Races
+                            Gemcutting
                             </OffcanvasHeader>
                             <OffcanvasBody>
                                 <p>

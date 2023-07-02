@@ -7,6 +7,7 @@ import uncorrupted from '../imgs/logos/uncorrupted-white.png';
 import toppler from '../imgs/logos/topplers-white.png';
 import avlimeth from '../imgs/logos/helmsman-white.png';
 import feather from '../imgs/logos/feather.png';
+import { DNDLEVELS } from './DNDLEVELS';
 
 /* CLASSES: 
 
@@ -48,6 +49,7 @@ export const CLASSES = [
         weapon_prof: ["Zanhari Sword"],
         saving_throw_prof: ["Dexterity", "Wisdom"],
         skill_prof: ["Dexterity", "Wisdom", "Religion"],
+        //lvls: DNDLEVELS.oracles,
         topics: [
             {
                 id: 0,
@@ -419,6 +421,7 @@ export const CLASSES = [
         tool_prof: ["gemstones"],
         saving_throw_prof: ["Strength", "Constitution"],
         skill_prof: ["Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival"],
+        lvls: DNDLEVELS.caracadre,
         topics: [
             {
                 id: 0,
@@ -629,6 +632,7 @@ export const CLASSES = [
         weapon_prof: ["Simple", "Ranged"],
         saving_throw_prof: ["Dexterity"],
         skill_prof: ["Acrobatics", "Perception"],
+        lvls: DNDLEVELS.avikin,
         topics: [
             {
                 id: 0,
@@ -656,6 +660,7 @@ export const CLASSES = [
         tool_prof: ["Thieve's tools"],
         saving_throw_prof: ["Dexterity", "Intelligence"],
         skill_prof: ["Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth"],
+        lvls: DNDLEVELS.ghostBlades,
         topics: [
             {
                 id: 0,
@@ -682,6 +687,7 @@ export const CLASSES = [
         weapon_prof: ["Shields", "Simple & martial weapons","Ranged weapons"],
         saving_throw_prof: ["Dexterity"],
         skill_prof: ["Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival"],
+        lvls: DNDLEVELS.uncorrupted,
         topics: [
             {
                 id: 0,
@@ -708,6 +714,7 @@ export const CLASSES = [
         weapon_prof: ["Simple weapons","Ranged weapons"],
         saving_throw_prof: ["Dexterity"],
         skill_prof: [ "Choose two from Nature, Stealth, Medicine, History, Investigation"],
+        lvls: DNDLEVELS.topplers,
         topics: [
             {
                 id: 0,
@@ -760,6 +767,7 @@ export const CLASSES = [
                 weapon_prof: ["Choose 1 Simple","1 martial", "1 ranged"],
                 saving_throw_prof: ["Choose 1"],
                 skill_prof: ["Choose 2 skills"],
+                topics: []
             },
             {
                 id: 1,
@@ -776,7 +784,7 @@ export const CLASSES = [
             {
                 id: 2,
                 name: `Bard`,
-                quality: 'Musician',
+                quality: 'Performer',
                 expertise: `Town Talk`,
                 description: `Whether they are versed in battle or not, the bard travels the adulterated lands of Avlim with instrument in hand to inspire their own songs, or write about the heroic ventures of others.`,
                 hitDie: 'd8',

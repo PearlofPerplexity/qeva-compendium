@@ -38,6 +38,11 @@ export const ALIGNMENTS = [
                 id: 2,
                 name: "Evil",
                 description: "Characters aligned with Evil will eliminate others, cause them harm and make them miserable. They do not feel remorse for their actions and will take down anyone, whether those people are innocent or not. Characters may be aligned with Evil for many different reasons. For example, it could be because they follow an Evil deity, they work for an Evil master, or because they enjoy it."
+            },
+            {
+                id: 3,
+                name: "Ramifications",
+                description: "Only good and neutral alignments can wield the natural gemstones and crystals."
             }
         ]
     },

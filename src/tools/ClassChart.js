@@ -14,8 +14,26 @@ import { CLASSES } from '../assets/shared/CLASSES';
 
 const dndClasses = [...CLASSES.slice(0,8), ...CLASSES[9].topics];
 
+
 const ClassChart = () => {
     
+    const [selectedClasses, setSelectedClasses] = useState(dndClasses);
+    const handleClass = (e) => {
+        if (e.target.value === 'all') {
+            setSelectedClasses(dndClasses);
+        } else {
+            const curClass = dndClasses.filter(event => event.name === e.target.value)
+            if (selectedClasses.length === dndClasses.length) setSelectedClasses(curClass);
+            else setSelectedClasses([...selectedClasses, ...curClass]);
+        }
+    }
+    const removeClass = (e) => {
+        console.log(e.target.ariaLabel);
+        const curClasses = selectedClasses.filter(event => event.name !== e.target.ariaLabel);
+        if (curClasses.length === 0) setSelectedClasses(dndClasses);
+        else setSelectedClasses(curClasses);
+    }
+
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
@@ -25,21 +43,22 @@ const ClassChart = () => {
     const [checkbox, setCheckbox] = useState(false);
     const checkboxToggle = () => setCheckbox(!checkbox);
 
-    const [title, setTitle] = useState("Ability");
-    const [detail, setDetail] = useState("Click on an ability above to see it's description.");
+    const [title, setTitle] = useState("See Description");
+    const [detail, setDetail] = useState("Click on an ability, feature, cantrip or spell above to see its description.");
     const detailToggle = (e) => {
         setTitle(e.name);
         setDetail(e.description);
     }
     const detailReset = () => {
-        setTitle("Ability");
-        setDetail("Click on an ability above to see it's description.");
+        setTitle("See Description");
+        setDetail("Click on an ability, feature, cantrip or spell above to see its description.");
     }
 
     const reset = () => {
         toggle();
-        setTitle("Ability");
-        setDetail("Click on an ability above to see it's description.");
+        setTitle("See Description");
+        setDetail("Click on an ability, feature, cantrip or spell above to see its description.");
+        setSelectedClasses(dndClasses);
         setCheckbox(false);
         console.clear();
     }
@@ -64,6 +83,19 @@ const ClassChart = () => {
                                 🛈
                             </Button>                            
                         </h3>
+                        <p className='text-center'>
+                            <select name='classes' className="ms-2 charPicklist" id='class-select' onChange={handleClass}>
+                                <option value="all">--Select Classes--</option>
+                                {dndClasses.map((classOpt) => (
+                                    <option value={classOpt.name} key={classOpt.id}>{classOpt.name}</option>
+                                ))}
+                            </select>
+                            {(dndClasses.length !== selectedClasses.length) && selectedClasses.map((e, index) => (
+                                <a key={index} aria-label={e.name} className='charPicklist' onClick={removeClass}>
+                                    {e.name} x
+                                </a>
+                            ))}
+                        </p>
                         <p>
                             <input name="classLvls" type="checkbox" onClick={checkboxToggle} />
                             <label htmlFor="classLvls">&nbsp;View Class Levels</label>
@@ -102,7 +134,7 @@ const ClassChart = () => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
-                        <table className="table table-hover table-sticky align-middle">
+                        <table className="table table-hover align-middle">
                             <thead>
                                 <tr className='align-middle'>
                                     <th>Class</th>
@@ -110,30 +142,22 @@ const ClassChart = () => {
                                     <td>Hit Die</td>
                                     <td>Equipment</td>
                                     <td>Proficiencies</td>
-                                    <td>Abilities</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                {dndClasses.map(cl => (
-                                    <React.Fragment key={cl.id}>
+                                {selectedClasses.map((cl, index) => (
+                                    <React.Fragment key={index}>
                                         <tr className='align-middle'>
                                             <th>{cl.name}</th>
                                             <td>{cl.quality}</td>
                                             <td>{cl.hitDie}</td>
                                             <td>{cl.equipment.join(', ')}</td>
                                             <td>
-                                                <ul className='list-group list-group-flush text-start'>
-                                                    <li className='list-group-item'><strong>Armor: </strong>{cl.armor_prof ? cl.armor_prof.join(', ') : ('none')}</li>
-                                                    <li className='list-group-item'><strong>Weapons: </strong>{cl.weapon_prof ? cl.weapon_prof.join(', ') : ('none')}</li>
-                                                    <li className='list-group-item'><strong>Tool: </strong>{cl.tool_prof ? cl.tool_prof.join(', ') : ('none')}</li>
-                                                    <li className='list-group-item'><strong>Saving Throws: </strong>{cl.saving_throw_prof ? cl.saving_throw_prof.join(', ') : ('none')}</li>
-                                                    <li className='list-group-item'><strong>Skills: </strong>{cl.skill_prof ? cl.skill_prof.join(', ') : ('none')}</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                {cl.abilities && cl.abilities.map(a => (
-                                                    <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
-                                                ))}
+                                                <strong>Armor: </strong>{cl.armor_prof ? cl.armor_prof.join(', ') : ('none')}, 
+                                                <strong>Weapons: </strong>{cl.weapon_prof ? cl.weapon_prof.join(', ') : ('none')}, 
+                                                <strong>Tool: </strong>{cl.tool_prof ? cl.tool_prof.join(', ') : ('none')}, 
+                                                <strong>Saving Throws: </strong>{cl.saving_throw_prof ? cl.saving_throw_prof.join(', ') : ('none')}, 
+                                                <strong>Skills: </strong>{cl.skill_prof ? cl.skill_prof.join(', ') : ('none')}
                                             </td>
                                         </tr>
                                         {cl.topics && checkbox && (
@@ -145,22 +169,37 @@ const ClassChart = () => {
                                                                 <th>LVL</th>
                                                                 <td>Proficiency Bonus</td>
                                                                 <td>Features</td>
-                                                                <td>Cantrips Known</td>
+                                                                {cl.lvls && cl.lvls.some(lvl => lvl.hasOwnProperty('trackables')) && (
+                                                                <td>Trackables</td>
+                                                                )}
+                                                                {cl.lvls && cl.lvls.some(lvl => lvl.hasOwnProperty('spells')) && (
                                                                 <td>Spells Known</td>
+                                                                )}
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            {cl.lvls && cl.lvls.map(subrace => (
-                                                                <tr className='align-middle'>
-                                                                    <th>{subrace.name}</th>
-                                                                    <td>{subrace.str}</td>
-                                                                    <td>{subrace.dex}</td>
-                                                                    <td>{subrace.con}</td>
+                                                            {cl.lvls && cl.lvls.map(lvl => (
+                                                                <tr key={lvl.id} className='align-middle'>
+                                                                    <th>{lvl.id}</th>
+                                                                    <td>{lvl.prof_bonus}</td>
                                                                     <td>
-                                                                        {subrace.abilities && subrace.abilities.map(a => (
-                                                                            <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
+                                                                        {lvl.features && lvl.features.map(a => (
+                                                                            <a key={a.id} onClick={() => detailToggle(a)}>
+                                                                                {a.id === 0 ? '' : ', '}{a.name}
+                                                                            </a>
                                                                         ))}
                                                                     </td>
+                                                                    {lvl.trackables && (
+                                                                        <td>{lvl.trackables.join(", ")}</td>
+                                                                    )}
+                                                                    {lvl.spells && (
+                                                                        <td>{lvl.spells.map(a => (
+                                                                            <a key={a.id} onClick={() => detailToggle(a)}>
+                                                                                {a.id === 0 ? '' : ', '}{a.name} 
+                                                                            </a>
+                                                                        ))}
+                                                                        </td>
+                                                                    )}
                                                                 </tr>
                                                             ))}
                                                         </tbody>
