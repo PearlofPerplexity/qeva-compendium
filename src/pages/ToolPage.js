@@ -9,7 +9,9 @@ import RaceChart from '../tools/RaceChart';
 import ClassChart from '../tools/ClassChart';
 import CraftingChart from '../tools/CraftingChart';
 import GemcutterChart from '../tools/GemcutterChart';
+import GrenadierChart from '../tools/GrenadierChart';
 import FightingStyles from '../tools/FightStyleChart';
+import CraftGenerator from '../tools/CraftingGenerator';
 import '../style.css'
 
 
@@ -42,6 +44,12 @@ const ToolPage = () => {
                     <GemcutterChart />
                     <CraftingChart />
                     <FightingStyles />
+                </div>
+            </section>
+            <section className="highlights mt-4">
+                <div className='row'>
+                    <GrenadierChart />
+                    <CraftGenerator />
                 </div>
             </section>
         </div>

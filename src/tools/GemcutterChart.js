@@ -10,53 +10,177 @@ import {
     OffcanvasHeader
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { RACES } from '../assets/shared/RACES';
+import brilliant from '../assets/imgs/gems/cut/brilliant.png';
+import cushion from '../assets/imgs/gems/cut/cushion.png';
+import emeraldCut from '../assets/imgs/gems/cut/emerald-cut.png';
+import french from '../assets/imgs/gems/cut/french.png';
+import lozenge from '../assets/imgs/gems/cut/lozenge.png';
+import marquise from '../assets/imgs/gems/cut/marquise.png';
+import oval from '../assets/imgs/gems/cut/oval.png';
+import pear from '../assets/imgs/gems/cut/pear.png';
+import peruzzi from '../assets/imgs/gems/cut/peruzzi.png';
+import portuguese from '../assets/imgs/gems/cut/portuguese.png';
+import princess from '../assets/imgs/gems/cut/princess.png';
+import radiant from '../assets/imgs/gems/cut/radiant.png';
+import single from '../assets/imgs/gems/cut/single.png';
+import trillion from '../assets/imgs/gems/cut/trillion.png';
+import uncut1 from '../assets/imgs/gems/cut/uncut1.png';
 
-const RaceChart = () => {
-    
-    const [selectedRaces, setSelectedRaces] = useState(RACES);
-    const handleRace = (e) => {
-        if (e.target.value === 'all') {
-            setSelectedRaces(RACES);
-        } else {
-            const curRace = RACES.filter(event => event.name === e.target.value)
-            if (selectedRaces.length === RACES.length) setSelectedRaces(curRace);
-            else setSelectedRaces([...selectedRaces, ...curRace]);
-        }
+const gemClarity = ["FL", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "SI3", "I1", "I2", "I3"];
+
+const gemColor = ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+const gemCuts = [
+    {
+        id: 0,
+        name: 'Uncut',
+        image: uncut1,
+        dc: 5,
+        daysToCut: 1,
+        price: 25
+    },
+    {
+        id: 1,
+        name: 'Brilliant',
+        image: brilliant,
+        dc: 16,
+        daysToCut: 30,
+        price: 475
+    },
+    {
+        id: 2,
+        name: 'Cushion',
+        image: cushion,
+        dc: 16,
+        daysToCut: 30,
+        price: 460
+    },
+    {
+        id: 3,
+        name: 'Emerald',
+        image: emeraldCut,
+        dc: 12,
+        daysToCut: 14,
+        price: 260
+    },
+    {
+        id: 4,
+        name: 'Island',
+        image: french,
+        dc: 14,
+        daysToCut: 7,
+        price: 210
+    },
+    {
+        id: 5,
+        name: 'Lozenge',
+        image: lozenge,
+        dc: 12,
+        daysToCut: 10,
+        price: 222
+    },
+    {
+        id: 6,
+        name: 'Marquise',
+        image: marquise,
+        dc: 16,
+        daysToCut: 35,
+        price: 510
+    },
+    {
+        id: 7,
+        name: 'Oval',
+        image: oval,
+        dc: 16,
+        daysToCut: 35,
+        price: 500
+    },
+    {
+        id: 8,
+        name: 'Pear',
+        image: pear,
+        dc: 16,
+        daysToCut: 25,
+        price: 425
+    },
+    {
+        id: 9,
+        name: 'Peruzzi',
+        image: peruzzi,
+        dc: 18,
+        daysToCut: 40,
+        price: 580
+    },
+    {
+        id: 10,
+        name: 'Portuguese',
+        image: portuguese,
+        dc: 17,
+        daysToCut: 60,
+        price: 1500
+    },
+    {
+        id: 11,
+        name: 'Princess',
+        image: princess,
+        dc: 18,
+        daysToCut: 40,
+        price: 725
+    },
+    {
+        id: 12,
+        name: 'Radiant',
+        image: radiant,
+        dc: 18,
+        daysToCut: 40,
+        price: 690
+    },
+    {
+        id: 13,
+        name: 'Single',
+        image: single,
+        dc: 10,
+        daysToCut: 7,
+        price: 100
+    },
+    {
+        id: 14,
+        name: 'Trillion',
+        image: trillion,
+        dc: 18,
+        daysToCut: 25,
+        price: 450
     }
-    const removeClass = (e) => {
-        console.log(e.target.ariaLabel);
-        const curRaces = selectedRaces.filter(event => event.name !== e.target.ariaLabel);
-        if (curRaces.length === 0) setSelectedRaces(RACES);
-        else setSelectedRaces(curRaces);
-    }
-    
+];
+
+const GemcutterChart = () => {
+        
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
     const [info, setInfo] = useState(false);
     const infoToggle = () => setInfo(!info);
 
-    const [checkbox, setCheckbox] = useState(false);
-    const checkboxToggle = () => setCheckbox(!checkbox);
+    const [cuts, setCuts] = useState(gemCuts);
+    const [filter, setFilter] = useState(false);
+    const filterToggle = () => setFilter(!filter);
 
-    const [title, setTitle] = useState("Ability");
-    const [detail, setDetail] = useState("Click on an ability above to see it's description.");
-    const detailToggle = (e) => {
-        setTitle(e.name);
-        setDetail(e.description);
-    }
-    const detailReset = () => {
-        setTitle("Ability");
-        setDetail("Click on an ability above to see it's description.");
+    const sortByValue = (property) => {
+        let newCuts;
+        if (filter) {
+            newCuts = cuts.sort((a, b) => b[property] - a[property]);
+        } else {
+            newCuts = cuts.sort((a, b) => a[property] - b[property]);
+        }
+        setCuts(newCuts);
+        filterToggle();
     }
 
     const reset = () => {
         toggle();
-        setTitle("Ability");
-        setDetail("Click on an ability above to see it's description.");
-        setSelectedRaces(RACES);
-        setCheckbox(false);
+        setInfo(false);
+        setFilter(false);
+        setCuts(gemCuts);
         console.clear();
     }
 
@@ -71,140 +195,86 @@ const RaceChart = () => {
                 </div>
             </Link>
             <Modal isOpen={modal} toggle={toggle} fullscreen>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="fxemoji:ring"></i> Gemcutter Chart</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="fxemoji:ring"></i> Gemcutting Chart</ModalHeader>
                 <ModalBody>
                 <div className='container'>
                     <div className='row text-center mb-4'>
-                        <h3>Gemcutting
+                        <h3>Gemcutting Upgrades
                             <Button className='text-center info' onClick={infoToggle}>
                                 🛈
                             </Button>                            
                         </h3>
+                        <p>Each upgrade, select 3 of the following:</p>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
                             <OffcanvasHeader toggle={infoToggle}>
                             Gemcutting
                             </OffcanvasHeader>
                             <OffcanvasBody>
                                 <p>
-                                This table includes all the playable races within Qeṽa.
-                                </p>
-                                <h5>Size</h5>
-                                <p>
-                                Size is the general size of the race. S = 'Small', M = Medium, L = 'Large'.
-                                </p>
-                                <h5>Speed</h5>
-                                <p>
-                                Speed is the maximum distance a character can travel within a turn and is calculated in feet.
-                                </p>
-                                <h5>Ability Scores</h5>
-                                <p>
-                                'STR' (Strength), 'DEX' (Dexterity), 'CON' (Constitution), 'INT' (Intelligence), 'WIS' (Wisdom), 'CHA' (Charisma) are the ability scores that serve as the basis for ability rolls. This table shows the racial bonuses to these ability scores.
-                                </p>
-                                <h5>Languages</h5>
-                                <p>
-                                Here, the table shows the languages in which each race is fluent. '*' means the race can understand this language, but not speak it.
-                                </p>
-                                <h5>Proficiencies</h5>
-                                <p>
-                                Proficiency is a bonus added to skill checks, saving throws, or attacks for skills that a character is proficient in.  All level 1 characters, regardless of class or race, get a +2 proficiency bonus. At level 5, the bonus increases to +3.
-                                </p>
-                                <h5>Abilities</h5>
-                                <p>
-                                Abilities are unique actions held by a race. Click on an ability and view the window below the table to view the ability's description.
+                                This table includes a list of all cuts taught in the gemcutter trade.
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
                         <table className="table table-hover table-sticky align-middle">
                             <thead>
                                 <tr className='align-middle'>
-                                    <th>Race</th>
-                                    <td>Size</td>
-                                    <td>Speed</td>
-                                    <td>STR</td>
-                                    <td>DEX</td>
-                                    <td>CON</td>
-                                    <td>INT</td>
-                                    <td>WIS</td>
-                                    <td>CHA</td>
-                                    <td>Languages</td>
-                                    <td>Proficiencies</td>
-                                    <td>abilities</td>
+                                    <td>New Cut</td>
+                                    <td>Skill Development</td>
+                                    <td>Expediency</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                {selectedRaces.map(race => (
-                                    <React.Fragment key={race.id}>
+                                <tr className='align-middle'>
+                                    <td>
+                                        Select or invent <strong>1 additional cut</strong> to craft.
+                                    </td>
+                                    <td><strong>-1 DC</strong> to a currently mastered cut.</td>
+                                    <td><strong>-5 days </strong> to cut a currently mastered cut. </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Types of Cuts</h3>
+                        <table className="table table-hover table-sticky align-middle">
+                            <thead>
+                                <tr className='align-middle'>
+                                    <td>♢</td>
+                                    <th>Name</th>
+                                    <td>
+                                        <a onClick={() => sortByValue('dc')}>
+                                            Quality (DC) ⇅
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a onClick={() => sortByValue('daysToCut')}>
+                                            Days to Cut ⇅
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a onClick={() => sortByValue('price')}>
+                                            Price ⇅
+                                        </a>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {cuts.map(gem => (
+                                    <React.Fragment key={gem.id}>
                                         <tr className='align-middle'>
-                                            <th>{race.singName}</th>
-                                            <td>{race.size}</td>
-                                            <td>{race.speed}</td>
-                                            <td>{race.str}</td>
-                                            <td>{race.dex}</td>
-                                            <td>{race.con}</td>
-                                            <td>{race.int}</td>
-                                            <td>{race.wis}</td>
-                                            <td>{race.cha}</td>
-                                            <td>{race.languages.join(', ')}</td>
-                                            <td>{race.proficiencies.join(', ')}</td>
-                                            <td>
-                                                {race.abilities && race.abilities.map(a => (
-                                                    <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
-                                                ))}
-                                            </td>
+                                            <th><img src={gem.image} className='card-img' style={{width: '50px'}} /></th>
+                                            <th>{gem.name}</th>
+                                            <td>{gem.dc}</td>
+                                            <td>{gem.daysToCut}</td>
+                                            <td>{gem.price}</td>
                                         </tr>
-                                        {race.topics && checkbox && (
-                                            <tr className='table table-container table-hover'>
-                                                <td colSpan='12'>
-                                                    <table className='table'>
-                                                        <thead>
-                                                            <tr className='align-middle'>
-                                                                <th>Subrace</th>
-                                                                <td>STR</td>
-                                                                <td>DEX</td>
-                                                                <td>CON</td>
-                                                                <td>INT</td>
-                                                                <td>WIS</td>
-                                                                <td>CHA</td>
-                                                                <td>ANY</td>
-                                                                <td>Abilities</td>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            {race.topics.map(subrace => (
-                                                                <tr className='align-middle'>
-                                                                    <th>{subrace.singName}</th>
-                                                                    <td>{subrace.str}</td>
-                                                                    <td>{subrace.dex}</td>
-                                                                    <td>{subrace.con}</td>
-                                                                    <td>{subrace.int}</td>
-                                                                    <td>{subrace.wis}</td>
-                                                                    <td>{subrace.cha}</td>
-                                                                    <td>{subrace.any}</td>
-                                                                    <td>
-                                                                        {subrace.abilities && subrace.abilities.map(a => (
-                                                                            <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
-                                                                        ))}
-                                                                    </td>
-                                                                </tr>
-                                                            ))}
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        )}
                                     </React.Fragment>
                                 ))}
                             </tbody>
                         </table>
-                        <p>* this race can understand this language, but not speak it.</p>
+                        <p>* Every time you attempt a new cut, the carat drops one level</p>
                     </div>
                 </div>
                 </ModalBody>
                 <ModalFooter>
-                    <p className='text-start'><strong>{title.toUpperCase()}: </strong><em>{detail}</em></p>
-                    <Button color="secondary" onClick={detailReset}>
-                        Reset
-                    </Button>
                     <Button color="secondary" onClick={reset}>
                         Close
                     </Button>
@@ -214,4 +284,4 @@ const RaceChart = () => {
     );
 }
 
-export default RaceChart;
+export default GemcutterChart;

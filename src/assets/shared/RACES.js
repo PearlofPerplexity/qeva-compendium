@@ -423,6 +423,11 @@ export const RACES = [
                 id: 2,
                 name: "Stonecunning",
                 description: "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+            },
+            {
+                id: 3,
+                name: "Soul Note",
+                description: "Every dwarf has what is called a soul note. It is a specific note on the scale that they can find with impeccable consistency. Dwarves learn each other's soul note and can identify each other from long distances and with little context. It is the deepest form of communication between dwarves and they can pick up on nuances within the tone."
             }
         ],
         topics: [
