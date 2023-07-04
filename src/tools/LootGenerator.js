@@ -171,7 +171,7 @@ const ingredients = [
     }
 ];
 
-const QualityArray: Array<ItemQuality> = [
+const QualityArray = [
     "common",
     "uncommon",
     "rare",
