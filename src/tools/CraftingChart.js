@@ -441,7 +441,75 @@ const concoctions = [
             ingredients[16].name
         ],
         price: 200
-    }
+    },
+    {
+        id: 24,
+        name: "Solid-state Brew",
+        type: 'Meddling',
+        description: "You change the composition of a solid material or object into another solid-form.",
+        ingredients: [
+            ingredients[6].name,
+            ingredients[15].name
+        ],
+        price: 200
+    },
+    {
+        id: 25,
+        name: "Water Brew",
+        type: 'Meddling',
+        description: "You change a body of liquid into pure water.",
+        ingredients: [
+            ingredients[7].name,
+            ingredients[14].name
+        ],
+        price: 350
+    },
+    {
+        id: 26,
+        name: "Leeching Solution Brew",
+        type: 'Meddling',
+        description: "You change a body of water into another liquid (liquid required to craft).",
+        ingredients: [
+            ingredients[8].name,
+            ingredients[13].name
+        ],
+        price: 250
+    },
+    {
+        id: 27,
+        name: "Pollution",
+        type: 'Meddling',
+        description: "The atmosphere within a 20-ft radius fills with a gas concocted to the  color and texture specifications of your choice for 4 hours. It may be pitch black, smoke-like or a vibrant color.",
+        ingredients: [
+            ingredients[9].name,
+            ingredients[12].name
+        ],
+        price: 75
+    },
+    {
+        id: 28,
+        name: "Sprouting",
+        type: 'Meddling',
+        description: "You can transform a stone into its creation equivalent.",
+        ingredients: [
+            ingredients[6].name,
+            ingredients[15].name,
+            "Tiger's Eye"
+        ],
+        price: 2000
+    },
+    {
+        id: 29,
+        name: "Crystaline Devolution",
+        type: 'Meddling',
+        description: "You can transform an object into crystal (specifically, the crystals that compose it)",
+        ingredients: [
+            ingredients[6].name,
+            ingredients[15].name,
+            "Tiger's Eye"
+        ],
+        price: 5000
+    },
 ];
 
 const CraftingChart = () => {
@@ -648,6 +716,7 @@ const CraftingChart = () => {
                                             <option value='Healing' >Healing</option>
                                             <option value='Amplification' >Amplification</option>
                                             <option value='Harm' >Harm</option>
+                                            <option value='Meddling' >Meddling</option>
                                         </select>
                                     </td>
                                     <td>Effect</td>

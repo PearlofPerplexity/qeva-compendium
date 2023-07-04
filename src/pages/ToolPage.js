@@ -12,6 +12,7 @@ import GemcutterChart from '../tools/GemcutterChart';
 import GrenadierChart from '../tools/GrenadierChart';
 import FightingStyles from '../tools/FightStyleChart';
 import CraftGenerator from '../tools/CraftingGenerator';
+import LootGenerator from '../tools/LootGenerator';
 import '../style.css'
 
 
@@ -50,6 +51,7 @@ const ToolPage = () => {
                 <div className='row'>
                     <GrenadierChart />
                     <CraftGenerator />
+                    <LootGenerator />
                 </div>
             </section>
         </div>

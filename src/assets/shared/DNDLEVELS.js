@@ -408,13 +408,13 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Unarmoredd Defense',
+                    name: 'Unarmored Defense',
                     description: 'While you are wearing light or no armor and not wielding a shield, your AC equal 10 + your Dexterity modifier + your Wisdom modifier.'
                 },
                 {
                     id: 1,
                     name: 'Ranged Arts',
-                    description: "You can use Dexterity instead of Strength for the attack and damage rolIs of your attacks. Also, When you use the attack action with a bow on your turn, you can make the same attack as a bonus action."
+                    description: "You can use Dexterity instead of Strength for the attack and damage rolIs of your ranged attacks. Also, When you use the attack action with a bow on your turn, you can make the same attack as a bonus action."
                 }
             ],
             trackables: ["Ki: 0", "UM: +0"],
@@ -1021,21 +1021,618 @@ export const DNDLEVELS = {
             ],
         },
     ],
+    /* ---------- NEXT CLASS -------------------- ADVENTURER ---------- */
+    adventurer: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Select Feats (2)',
+                    description: "Though not a standard route, you've forged a new path that has led you to cross with other trades. Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master “Nimble dodge”, a Level 10 Toppler feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot take the gemcutter's “Master of Divine Stones” feat if you have not already mastered moral and power stones)."
+                },
+                {
+                    id: 1,
+                    name: 'Weapon Proficiency (2)',
+                    description: "Select 1 simple weapon, 1 martial weapon and 1 ranged weapon that you will have proficiency with."
+                },
+                {
+                    id: 1,
+                    name: 'Skill Proficiency (2)',
+                    description: "Select 2 skill to be proficient in."
+                },
+            ],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: "Select a feats",
+                    description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
+                }
+            ],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: "Select feats (2)",
+                    description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
+                },
+                {
+                    id: 1,
+                    name: 'Extra Attack',
+                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                },
+            ],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: "Select a feat",
+                    description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
+                }
+            ],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: "Select a feat",
+                    description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
+                }
+            ],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+    ],
+    /* ---------- NEXT CLASS -------------------- CRAFTER ---------- */
+    crafter: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Tools of the Trade',
+                    description: "You gain proficiency with Alchemist supplies and one lot of your choice (Herbalism kit, healer's kit or poisoner's kit)"
+                },
+                {
+                    id: 1,
+                    name: 'Gatherer',
+                    description: "You have the ability to gather your own natural ingredients. You can use your expertise to find 1 specific ingredient / day OR 5 random ingredients (see chart). You can use 1 of these random resources to provide yourself food for the day."
+                }
+            ],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Primary Domain',
+                    description: 'Select a domain from the crafting table (Healing, Amplification, Meddling or Damage). You are an expert in this domain. Whenever you select this domain for future expertise, you gain 3 instead of 2 concoctions. You also have a keen sense for these ingredients. You can recognize when another creature is using a concoction you have mastered.'
+                }
+            ],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'SELECT AN UPGRADE',
+                    description: 'New Concoction OR Expertise'
+                },
+                {
+                    id: 1,
+                    name: 'New Concoction',
+                    description: 'Select a domain and 2 concoctions within that domain. You can now craft and wield these concoctions. Concoctions risk ill effects if used in combination (unless compatibility is specified).'
+                },
+                {
+                    id: 2,
+                    name: 'Expertise',
+                    description: 'Select 1 already mastered concoction to improve. Improvements are made in the following way: (1) If DC, Add +2 DC, (2) If dice roll, add 1 die doll (3) If skill improvement, add +2 (4) If single instance, +1 instance (5) Else see DM.'
+                },
+            ],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Extra Attack',
+                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                },
+                {
+                    id: 1,
+                    name: 'Adept Physician',
+                    description: 'You have advantage on medicine checks.'
+                }
+            ],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'SELECT AN UPGRADE',
+                    description: 'New Concoction OR Expertise'
+                },
+                {
+                    id: 1,
+                    name: 'New Concoction',
+                    description: 'Select a domain and 2 concoctions within that domain. You can now craft and wield these concoctions. Concoctions risk ill effects if used in combination (unless compatibility is specified).'
+                },
+                {
+                    id: 2,
+                    name: 'Expertise',
+                    description: 'Select 1 already mastered concoction to improve. Improvements are made in the following way: (1) If DC, Add +2 DC, (2) If dice roll, add 1 die doll (3) If skill improvement, add +2 (4) If single instance, +1 instance (5) Else see DM.'
+                },
+            ],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Gathering Improvement',
+                    description: 'You can now find 2 rare resources, or 10 random ingredients per day.'
+                }
+            ],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'SELECT AN UPGRADE',
+                    description: 'New Concoction OR Expertise'
+                },
+                {
+                    id: 1,
+                    name: 'New Concoction',
+                    description: 'Select a domain and 2 concoctions within that domain. You can now craft and wield these concoctions. Concoctions risk ill effects if used in combination (unless compatibility is specified).'
+                },
+                {
+                    id: 2,
+                    name: 'Expertise',
+                    description: 'Select 1 already mastered concoction to improve. Improvements are made in the following way: (1) If DC, Add +2 DC, (2) If dice roll, add 1 die doll (3) If skill improvement, add +2 (4) If single instance, +1 instance (5) Else see DM.'
+                },
+            ],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Gardener',
+                    description: 'You can grow your own resources. Each resource takes 7 days to mature. You can manage a maximum of 10 resources in your garden. You must first obtain a seed of a resource before growing it.'
+                }
+            ],
+        },
+    ],
+    /* ---------- NEXT CLASS -------------------- GEMCUTTER ---------- */
+    gemcutter: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Tools of the Trade',
+                    description: "You are proficient with the Jeweler's kit. The kit includes a device known as a “rock trap”, which contains and stabilizes the quality of a stone even if the carrier goes against its quality. You know this device so well, you are able to build it when needed."
+                },
+                {
+                    id: 1,
+                    name: 'Licensed Lapidary',
+                    description: "You are trained to acquire, cut and appraise stones and can pursue different levels of quality and types of cuts. Every time you attempt a new cut, the carat drops one level."
+                },
+                {
+                    id: 2,
+                    name: 'Expertise',
+                    description: "Select three cuts from the Gemcutter's chart to master."
+                },
+            ],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Mastery over Power Stones',
+                    description: 'Your roll with advantage when crafting power stones.'
+                }
+            ],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Expertise Improvement',
+                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                }
+            ],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Expertise Improvement',
+                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                },
+                {
+                    id: 1,
+                    name: 'Stone Explorer',
+                    description: 'You have become familiar with stones and their natural locations. Succeed on a 16 INT DC to mine for local stones.'
+                }
+            ],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                },
+                {
+                    id: 1,
+                    name: 'Mastery over Moral Stones',
+                    description: 'Your roll with advantage when crafting moral stones.'
+                }
+            ],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Expertise Improvement',
+                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                }
+            ],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                },
+                {
+                    id: 1,
+                    name: 'Restorer',
+                    description: "You have fine tuned your rock trap so that it not only maintains a gem's qualities, but restores them. You can restore a gemstone's color or repair cracking from an unbound stone"
+                }
+            ],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Expertise Improvement',
+                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                },
+                {
+                    id: 1,
+                    name: 'Precision',
+                    description: 'You have become so skilled in your art that you can cut a gem without the carat being affected. Carat will only reduce on re-cuts (Gems that have already been cut) and critical DC failures.'
+                }
+            ],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Mastery over Divine Stones',
+                    description: 'Your roll with advantage when crafting divine stones.'
+                }
+            ],
+        },
+    ],
+    /* ---------- NEXT CLASS -------------------- GEMCUTTER ---------- */
+    gemcutter: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Studious',
+                    description: "You know how to absorb information at an accelerated rate. You can gain skill and tool proficiencies and learn languages once you have read three books related to the skill, tool, or language in question and after you have written down personal notes on each of these texts."
+                },
+                {
+                    id: 1,
+                    name: 'Speed Reader',
+                    description: "You can whizz through your reading at lightning pace. Over the course of a long rest, you can read an entire book and take comprehensive notes on what you have read."
+                },
+                {
+                    id: 2,
+                    name: 'Weak',
+                    description: "Your time spent behind a book cover has left you physically infirm in comparison to your fellow adventurers. Whenever you make a Strength or Constitution saving throw, you roll at disadvantage."
+                },
+            ]
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Lore',
+                    description: "You can draw upon your vast knowledge of the world's lore. Your access to this ability is represented by a number of lore points. Your scribe level determines the number of lore points you have. Your scribe level determines the number of lore points you have, as shown in the Lore Points column of the Scribe table. You spend these points in order to use certain features of being a scribe. You start knowing 3 such features: Appraisal, Examination, and Spell Anticipation. Lore points replenish at the end of a long rest."
+                },
+                {
+                    id: 1,
+                    name: 'Appraisal',
+                    description: "If you have read and made notes on 3 books related to magical items, you gain the ability to appraise magic items or magic imbued objects. As an action you can spend a lore point to learn the history and properties of the object and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it."
+                },
+                {
+                    id: 2,
+                    name: 'Examination',
+                    description: "If you have read and made notes on 3 books related to puzzles and logic, you can spend a lore point to gain a clue to any puzzling situation in which you find yourself as an action. If this is not applicable, you can spend the lore point to automatically succeed on an Investigation check."
+                },
+                {
+                    id: 3,
+                    name: 'Spell Anticipation',
+                    description: "If you have read and taken notes on three books related to magical spells, you gain an uncanny ability to foresee incoming magical damage. Whenever a spell forces you or any creature within 20ft of your position to make a saving throw, as a reaction you can spend 1 lore point to lower the DC by an amount equal to your scribe level."
+                },
+            ]
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Weak Points',
+                    description: 'Having studied the type of creature within your line of sight and thereby learned of its flaws, as a bonus action, you can spend 3 lore points to learn the Armor Class and any resistances, immunities, and weaknesses of the creature.'
+                },
+                {
+                    id: 1,
+                    name: 'Foresight',
+                    description: 'Your studies allow you to predict the maneuvers of the creatures when in the field. As a bonus action, you can spend 2 lore points to learn any actions or bonus actions that a single creature within your line of sight will do within the next 6 seconds (next round).'
+                },
+                {
+                    id: 2,
+                    name: 'Situational Report',
+                    description: 'You can notice how much vigor a creature has left in it. You can spend 1 lore point as a bonus action to learn the remaining HP of a single creature within your line of sight.'
+                },
+            ]
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Book Throwing',
+                    description: 'You gain a seemingly endless supply of miscellaneous books that can be thrown as an attack in a pinch. You can spend a lore point to throw a single book weighing 1lb. You have proficiency when throwing these books and each one counts as an improvised weapon, dealing 1d4 bludgeoning damage + proficiency bonus. They can be thrown at a range of 20/60.'
+                }
+            ]
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                },
+                {
+                    id: 1,
+                    name: 'Invigorating History',
+                    description: 'You can rouse your allies with your words, reminding them of their heroic deeds or of any other moments that the party has shared together. By spending an action and your remaining lore points, you can invigorate any allies within 20ft of your position, giving them an amount of temporary hit points equal to 1d6 + scribe level.'
+                }
+            ]
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Weak Points Improvement',
+                    description: 'Your use of the Weak Points feature allows you to also detect the highest and lowest statistic of the creature you have targeted.'
+                }
+            ]
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Plead',
+                    description: 'As long as you can speak, once per long rest you can use a reaction to halve any incoming melee damage to you or a single ally within 20ft of your position.'
+                }
+            ]
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ]
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Advanced Note-Taking',
+                    description: "Your scribal abilities become second nature, allowing you to constantly note down features of any environment that you traverse. From now on, as long as you possess writing tools and parchment, you can never get lost when in enclosed environments such as dungeons or caves. You are always aware of the direction of any paths that you have traveled on and you can always find the quickest exit using these paths."
+                }
+            ]
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Foresight Improvement',
+                    description: 'The Foresight feature now also grants you knowledge of any movement the creature will take within the next 6 seconds.'
+                }
+            ]
+        },
+    ],
 
-    // CARACADRE CLASS LEVELS
+    //NEXT CLASSES
     // AVLIMETH CLASS LEVELS
     // ELVISH CLOAKS CLASS LEVELS
-    // AVIKIN CLASS LEVELS
-    // GHOST BLADES CLASS LEVELS
-    // THE UNCORRUPTED CLASS LEVELS
-    // THE TOPPLERS CLASS LEVELS
     // ORDER OF THE FEATHER CLASS LEVELS
-    // ADVENTURER CLASS LEVELS
     // ACOLYTE CLASS LEVELS
     // BARD CLASS LEVELS
-    // CRAFTER CLASS LEVELS
     // DRUID CLASS LEVELS
     // FIGHTER CLASS LEVELS
-    // GEMCUTTER CLASS LEVELS
-    // SCRIBE CLASS LEVELS
 }

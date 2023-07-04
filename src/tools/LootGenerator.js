@@ -171,7 +171,277 @@ const ingredients = [
     }
 ];
 
-const CraftGenerator = () => {
+const QualityArray: Array<ItemQuality> = [
+    "common",
+    "uncommon",
+    "rare",
+    "epic",
+    "legendary",
+];
+
+const commonItemArray = [
+    'Empty Barrel',
+    'Bag of Coins',
+    'Bottle of Gin',
+    'Writing Paper',
+    'Silver Necklace',
+    'Scroll of Secrets',
+    'Iron Key',
+    'Lucky Dice',
+    'Lockpick Set',
+    'Torch',
+    'Cloth Rags',
+    'Map Fragment',
+    'Fishing Net',
+    'Cooking Pot',
+    'Flint and Steel',
+    'Fur Cloak',
+    'Quill and Ink',
+    'Sack of Flour',
+    'Iron Nails',
+    'Wooden Bowl',
+    'Hand Mirror',
+    'Glass Bottle',
+    'Wax Candle',
+    'Rope (50 feet)',
+    'Whetstone',
+    'Chalk Set',
+    'Traveler\'s Clothes',
+    'Herbal Medicine Kit',
+    'Leather Gloves',
+    'Wooden Tankard',
+    'Playing Cards',
+    'Crowbar',
+    'Spool of String',
+    'Hammer',
+    'Tinderbox',
+    'Pouch of Marbles',
+    'Iron Spike',
+    'Rations (1 day)',
+    'Holy Oracle Pendent',
+    'Mess Kit',
+    'Soap',
+    'Climbing Pitons',
+    'Wooden Bedroll',
+    'Water Flask',
+    'Iron Pot',
+    'Silver Spoon',
+    'Ink Pen',
+    'Bag of Seeds',
+    'Worn Boots',
+    'Glass Flask',
+    'Small Bell',
+    'Cooking Spices',
+    'Paintbrush',
+    'Small Sewing Kit',
+    'Copper Bracelet',
+    'Dice Bag',
+    'Wooden Spoon',
+    'Glass Jar',
+    'Charcoal',
+    'Bundle of Herbs',
+    'Worn Hat',
+    'Clay Pipe',
+    'Deck of Playing Cards',
+    'Silver Coin',
+    'Iron Dagger',
+    'Wooden Plate',
+    'Sealing Wax',
+    'Cookbook',
+    'Sewing Needle',
+    'Iron Chain',
+    'Wooden Cup',
+    'Hourglass',
+    'Bottle of Ink',
+    'Box of Matches',
+    'Bird Whistle',
+    'Small Lock',
+    'Brass Key',
+    'Wooden Flute',
+    'Metal File',
+    'Empty Scroll Case',
+    'Parchment Sheets',
+    'Embroidered Handkerchief',
+    'Wooden Chess Set',
+    'Glass Prism',
+    'Tobacco Pouch',
+    'Silver Ring',
+    'Inscribed Stone',
+    'Bag of Marbles',
+    'Sewing Thread',
+    'Iron Fork',
+    'Wooden Comb',
+    'Wax Seal Stamp',
+    'Folding Fan',
+    'Iron Spatula',
+    'Fancy Hat',
+    'Pouch of Copper Coins',
+    'Empty Waterskin',
+    'Iron Dagger',
+    'Sack of Wheat',
+    'Cloth Bandages',
+    'Woolen Blanket',
+    'Wagon Wheel',
+    'Wooden Stool',
+    'Clay Mug',
+    'Bundle of Firewood',
+    'Copper Bracelet',
+    'Hemp Rope (50 feet)',
+    'Wooden Bowl',
+    'Carved Wooden Figurine',
+    'Pewter Tankard',
+    'Jar of Pickles',
+    'Iron Key',
+    'Wax Candle',
+    'Pair of Leather Gloves',
+    'Set of Wooden Blocks',
+    'Sewing Kit',
+    'Horn Comb',
+    'Spool of Thread',
+    'Bag of Marbles',
+    'Brass Compass',
+    'Mason Jar',
+    'Patchwork Quilt',
+    'Set of Bone Dice',
+    'Bar of Soap',
+    'Bundle of Dried Herbs',
+    'Bottle of Vinegar',
+    'Cotton Socks',
+    'Hand Mirror',
+    'Stack of Playing Cards',
+    'Bundle of Straw',
+    'Iron Cooking Pot',
+    'Glass Bottle',
+    'Jar of Honey',
+    'Pair of Spectacles',
+    'Wooden Spoon',
+    'Jar of Homemade Jam',
+    'Bundle of Incense Sticks',
+    'Silver Coin',
+    'Iron Tongs',
+    'Mug of Ale',
+    'Small Lock',
+    'Wooden Flute',
+    'Copper Wire',
+    'Box of Chalk',
+    'Small Whistle',
+    'Wicker Basket',
+    'Bundle of Wheat Stalks',
+    'Iron Bell',
+    'Satchel of Herbs',
+    'Pottery Mug',
+    'Set of Metal Files',
+    'Piece of Chalkboard',
+    'Bundle of Feathers',
+    'Pair of Leather Boots',
+    'Carved Wooden Bowl',
+    'Bundle of Firecrackers',
+    'Patch of Leather',
+    'Jar of Ink',
+    'Pewter Spoon',
+    'Set of Wooden Spoons',
+    'Copper Bracelet',
+    'Bundle of String',
+    'Pair of Mittens',
+    'Clay Pipe',
+    'Bundle of Willow Branches',
+    'Wooden Yo-yo',
+    'Bag of Marbles',
+    'Bottle of Perfume',
+    'Woven Basket',
+    'Set of Brass Keys',
+    'Pair of Knitted Socks',
+    'Wooden Toy Sword',
+    'Quill Pen',
+    'Bundle of Candles',
+    'Copper Ring',
+    'Set of Carving Tools',
+    'Piece of Parchment',
+    'Jar of Olives',
+    'Small Lockpick Set',
+    'Jar of Dried Fruit',
+    'Pair of Leather Gloves',
+    'Wooden Toy Boat',
+    'Iron Nail',
+    'Bundle of Straw',
+    'Glass Jar',
+    'Wicker Basket',
+    'Set of Wooden Hangers',
+    'Piece of Colored Glass',
+    'Jar of Almonds',
+    'Wooden Comb',
+    'Bundle of Rope (50 feet)',
+    'Pewter Figurine',
+    'Pair of Dice'      
+];
+
+const uncommonItemArray = [
+    'Club',
+    'Dagger',
+    'Greatclub',
+    'Handaxe',
+    'Javelin',
+    'Light hammer',
+    'Mace',
+    'Quarterstaff',
+    'Sickle',
+    'Spear',
+    'Light crossbow',
+    'Dart',
+    'Shortbow',
+    'Sling',
+    'Battleaxe',
+    'Flail',
+    'Glaive',
+    'Greataxe',
+    'Greatsword',
+    'Halberd',
+    'Lance',
+    'Longsword',
+    'Maul',
+    'Morningstar',
+    'Pike',
+    'Rapier',
+    'Scimitar',
+    'Shortsword',
+    'Trident',
+    'War pick',
+    'Warhammer',
+    'Whip',
+    'Blowgun',
+    'Hand crossbow',
+    'Heavy crossbow',
+    'Longbow',
+    'Net',
+    'Padded Armor',
+    'Leather Armor',
+    'Studded Leather Armor',
+    'Hide Armor',
+    'Chain Shirt',
+    'Scale Mail',
+    'Breastplate',
+    'Half Plate',
+    'Ring Mail',
+    'Chain Mail',
+    'Splint Armor',
+    'Plate Armor',
+    'Shield'
+];
+
+const rareItemArray = [
+    "Obsidian", "Aquamarine", "Diamond", "Citrine", "Amethyst", "Pyrite", "Sapphire", "Emerald", "Onyx", "Turquoise", "Ruby", "Opal", "Topaz", "Quartz", "Crocoite", "Azurite", "Rutile", "Tanzanite", "Jade", "Shungite", "Chryscocolla", "Jasper", "Bismuth", "Amber", "Whitestone"
+];
+
+const epicItemArray = [
+    "Tourmaline", "Tiger's Eye", "Celestite"
+];
+
+const legendaryItemArray = [
+    "Zanhari Blade", "Pearl", "Sa Siavana"
+];
+
+  
+const LootGenerator = () => {
     
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -184,7 +454,7 @@ const CraftGenerator = () => {
         setIngredientResults([]);
     }
 
-    const [sparsity, setSparsity] = useState(25);
+    const [sparsity, setSparsity] = useState(5);
     const slider = (e) => {
         const sliderNum = e.target.value;
         setSparsity(sliderNum);
@@ -246,32 +516,23 @@ const CraftGenerator = () => {
     return (
         <div className="col-lg-4">
             <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
-                <i className="iconify fs-2" data-icon="twemoji:herb"></i>
+                <i className="iconify fs-2" data-icon="noto:coin"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Craft Generator</h3>
+                        <h3 className="mb-0">Loot Generator</h3>
                     </div>
                 </div>
             </Link>
             <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="twemoji:herb"></i> Craft Generator</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:coin"></i> Loot Generator</ModalHeader>
                 <ModalBody>
                     <div className='box container'>
                         <div className='row pb-3'>
-                            <h4 className='col text-start'>Sparsity: {sparsity}% </h4>
-                            <input type="range" step='5' min='5' max='95' value={sparsity} onChange={slider} className='col slider' />
+                            <h4 className='col text-start'>Class Level: {sparsity} </h4>
+                            <input type="range" step='1' min='1' max='10' value={sparsity} onChange={slider} className='col slider' />
                         </div>
                         <div className='row mb-3'>
-                            <h4 className='col text-start'>Location: </h4>
-                            <select name='locs' className="col ms-2 charPicklist" id='locs-select' onChange={handleLocation}>
-                                <option value="all">All</option>
-                                <option value='Cave' >Cave</option>
-                                <option value='Field' >Field</option>
-                                <option value='Forest' >Forest</option>
-                            </select>
-                        </div>
-                        <div className='row mb-3'>
-                            <h4 className='col text-start'>Number: </h4>
+                            <h4 className='col text-start'># of Items: </h4>
                             <input className='col' type="number" value={number} onChange={handleNumber} />
                         </div>
                         <div className='row mb-3'>
@@ -295,4 +556,4 @@ const CraftGenerator = () => {
     );
 }
 
-export default CraftGenerator;
+export default LootGenerator;
