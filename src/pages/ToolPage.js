@@ -13,6 +13,7 @@ import GrenadierChart from '../tools/GrenadierChart';
 import FightingStyles from '../tools/FightStyleChart';
 import CraftGenerator from '../tools/CraftingGenerator';
 import LootGenerator from '../tools/LootGenerator';
+import TravelGenerator from '../tools/TravelGenerator';
 import '../style.css'
 
 
@@ -52,6 +53,11 @@ const ToolPage = () => {
                     <GrenadierChart />
                     <CraftGenerator />
                     <LootGenerator />
+                </div>
+            </section>
+            <section className="highlights mt-4">
+                <div className='row'>
+                    <TravelGenerator />
                 </div>
             </section>
         </div>

@@ -8,175 +8,93 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const ingredients = [
-    {
-        id: 0,
-        name: 'Alfirin',
-        location: ['Field', 'Forest'],
-        description: '(Never-fade) A delicate bell-shaped, golden flower.',
-        rarity: 0,
-        cost: 17
-    },
-    {
-        id: 1,
-        name: 'Arthrif',
-        location: ['Field', 'Forest'],
-        description: '(Noble-bark) A thin silver-grey tree bark.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 2,
-        name: 'Carandol',
-        location: ['Forest', 'Cave'],
-        description: '(Red Cap) A small mushroom with a brilliant red cap.',
-        rarity: 0,
-        cost: 13
-    },
-    {
-        id: 3,
-        name: 'Elanor',
-        location: ['Field', 'Forest'],
-        description: '(Sun-star) A small, golden, star-shaped flower.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 4,
-        name: 'Gwinuial',
-        location: ['Field', 'Forest'],
-        description: '(Twilight Vine) A low creeper with tiny blooms resembling dim stars.',
-        rarity: 0,
-        cost: 22
-    },
-    {
-        id: 5,
-        name: 'Hithlas',
-        location: ['Field', 'Forest'],
-        description: '(Mist-leaf) A small bush with grey-green leaves.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 6,
-        name: 'Morthond',
-        location: ['Field', 'Forest'],
-        description: '(Black Root) A dark, many-lobed tuber.',
-        rarity: 0,
-        cost: 18
-    },
-    {
-        id: 7,
-        name: 'Niphredil',
-        location: ['Field', 'Forest'],
-        description: '(Snowdrop) A pale white flower atop a slender green stalk.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 8,
-        name: 'Remmenthond',
-        location: ['Field', 'Forest'],
-        description: '(Tangle Root) A cluster of thin, densely-intertwined roots.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 9,
-        name: 'Grange Wilt',
-        location: ['Field', 'Forest'],
-        description: '(Winterthorn) A hardy shrub bearing many prickly leaves.',
-        rarity: 0,
-        cost: 11
-    },
-    {
-        id: 10,
-        name: 'Simbelmyne',
-        location: ['Field', 'Forest'],
-        description: '(Evermind) A small, low growing, white flower found in clusters.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 11,
-        name: 'Athelas',
-        location: ['Field', 'Forest'],
-        description: '(Kingsfoil) green leaves small white blossoms.',
-        rarity: 0,
-        cost: 10
-    },
-    {
-        id: 12,
-        name: 'Lothrond',
-        location: ['Cave'],
-        description: '(Cave-flower) A fungus with a colorful cap which grows in separate segments reminiscent of the petals of a flower.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 13,
-        name: 'Meluinen',
-        location: ['Cave'],
-        description: '(Sweet-water) Crystal clear mineral water.',
-        rarity: 0,
-        cost: 20
-    },
-    {
-        id: 14,
-        name: 'Naugrimbas',
-        location: ['Cave'],
-        description: '(Dwarf-bread) A bloated, unappealing mushroom; edible, but foul. Often used by dwarves as an emergency ration.',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 15,
-        name: 'Naurivor',
-        location: ['Cave'],
-        description: '(Flame Crystal) Tiny, fiery-red crystals.',
-        rarity: 0,
-        cost: 20
-    },
-    {
-        id: 16,
-        name: 'Orchamarth',
-        location: ['Cave'],
-        description: '(Orc-bane) A sickly-looking fungus which often proves deadly to those who handle it improperly.',
-        rarity: 0,
-        cost: 16
-    },
-    {
-        id: 17,
-        name: 'Thornheart',
-        location: ['Forest'],
-        description: 'Weed that grows in the upper hills of the grave mountains',
-        rarity: 0,
-        cost: 10
-    },
-    {
-        id: 18,
-        name: 'Dexel',
-        location: ['Forest'],
-        description: 'Mountain flower',
-        rarity: 0,
-        cost: 15
-    },
-    {
-        id: 19,
-        name: 'Teepsod',
-        location: ['Cave'],
-        description: 'Deep Cave Moss',
-        rarity: 0,
-        cost: 12
-    }
-];
-
-const QualityArray = [
+const qualityArray = [
     "common",
     "uncommon",
     "rare",
     "epic",
     "legendary",
+];
+
+const lootAdjectives = [
+    'Brittle',
+    'Intricate',
+    'Worn',
+    'New',
+    'Old',
+    'Polished',
+    'Engraved',
+    'Mysterious',
+    'Fragile',
+    'Weathered',
+    'Ornate',
+    'Sleek',
+    'Dull',
+    'Ancient',
+    'Delicate',
+    'Sturdy',
+    'Exquisite',
+    'Faded',
+    'Elegant',
+    'Rough',
+    'Unusual',
+    'Opulent',
+    'Simple',
+    'Enchanted',
+    'Mundane',
+    'Embroidered',
+    'Jeweled',
+    'Singed',
+    'Tarnished',
+    'Untarnished',
+    'Practical',
+    'Mysterious',
+    'Worn-out',
+    'Well-crafted',
+    'Filigreed',
+    'Stained',
+    'Whispering',
+    'Wicked',
+    'Dusty',
+    'Etched',
+    'Gilded',
+    'Scarred',
+    'Unassuming',
+    'Chipped',
+    'Lustrous',
+    'Resilient',
+    'Antique',
+    'Charming',
+    'Rugged',
+    'Gleaming',
+    'Arcane',
+    'Cracked',
+    'Resplendent',
+    'Patchwork',
+    'Wrinkled',
+    'Refined',
+    'Heavy',
+    'Majestic',
+    'Modest',
+    'Reliable',
+    'Tattered',
+    'Vibrant',
+    'Cursed',
+    'Blessed',
+    'Silent',
+    'Venerable',
+    'Unbreakable',
+    'Austere',
+    'Timeless',
+    'Hallowed',
+    'Primal',
+    'Serene',
+    'Noble',
+    'Shimmering',
+    'Stark',
+    'Spectral',
+    'Wild',
+    'Vivid',
 ];
 
 const commonItemArray = [
@@ -217,7 +135,7 @@ const commonItemArray = [
     'Tinderbox',
     'Pouch of Marbles',
     'Iron Spike',
-    'Rations (1 day)',
+    'Ration',
     'Holy Oracle Pendent',
     'Mess Kit',
     'Soap',
@@ -448,69 +366,70 @@ const LootGenerator = () => {
 
     const reset = () => {
         toggle();
-        setSparsity(25);
-        setSelectedIngredients(ingredients);
-        setNumber(5);
-        setIngredientResults([]);
+        setLevel(5);
+        setNumber(10);
+        setLootResults([]);
+        setLootCoins();
     }
 
-    const [sparsity, setSparsity] = useState(5);
+    const [level, setLevel] = useState(5);
     const slider = (e) => {
         const sliderNum = e.target.value;
-        setSparsity(sliderNum);
+        setLevel(sliderNum);
     }
 
-    const [selectedIngredients, setSelectedIngredients] = useState(ingredients);
-    const handleLocation = (e) => {
-        if (e.target.value === 'all') {
-            setSelectedIngredients(ingredients);
-        } else {
-            const curIngredients = ingredients.filter(ingredient => ingredient.location.includes(e.target.value));
-            setSelectedIngredients(curIngredients);
-            console.log(curIngredients);
-        }
-    }
-
-    const [number, setNumber] = useState(5);
+    const [number, setNumber] = useState(10);
     const handleNumber = (e) => {
         setNumber(e.target.value);
     }
 
-    const [ingredientResults, setIngredientResults] = useState([]);
+    const [lootCoins, setLootCoins] = useState();
+    const [lootResults, setLootResults] = useState([]);
     const ingredientGen = () => {
-        const sparseFactor = 1 + (sparsity / 50);
-        const ingredientArray = [];
+        const lootArray = [];
+        const qualityRandLength = qualityArray.length * 200
         for (let i = 0; i < number; i++) {
-            // + 5 adds room for forager to find nothing
-            const randNum = Math.floor( Math.random() * (selectedIngredients.length * sparseFactor));
-            let newIngredient;
-            // if number is not in array, create a 'nothing' category
-            if (selectedIngredients[randNum]) {
-                newIngredient = selectedIngredients[randNum];
-            } else {
-                newIngredient = {
-                    id: ingredients.length,
-                    name: 'Nothing'
-                };
+            
+            let randNum, randAdj, randItem, newItem, lootItem;
+            
+            //GENERATE NUMBER found
+            randNum = Math.floor( Math.random() * (5)) + 1;
+            //GENERATE LOOT ADJECTIVE
+            const randAdjNum = Math.floor( Math.random() * (lootAdjectives.length));
+            randAdj = lootAdjectives[randAdjNum];
+            
+            //GENERATE LOOT QUALITY & ITEM
+            const randQual = Math.floor( Math.random() * (qualityRandLength));
+            switch (true) {
+                case (randQual < (qualityRandLength * 0.5)):
+                    randItem = Math.floor( Math.random() * (commonItemArray.length));
+                    newItem = commonItemArray[randItem];
+                    break;
+                case (randQual < (qualityRandLength * 0.75)):
+                    randItem = Math.floor( Math.random() * (uncommonItemArray.length));
+                    newItem = uncommonItemArray[randItem];
+                    break;
+                case (randQual < (qualityRandLength * 0.9)):
+                    randItem = Math.floor( Math.random() * (rareItemArray.length));
+                    newItem = rareItemArray[randItem];
+                    break;
+                case (randQual < (qualityRandLength * 0.99)):
+                    randItem = Math.floor( Math.random() * (epicItemArray.length));
+                    newItem = epicItemArray[randItem];
+                    break;
+                default:
+                    randItem = Math.floor( Math.random() * (legendaryItemArray.length));
+                    newItem = legendaryItemArray[randItem];
+                    break;
             }
-
-            let ingredientExists = undefined;
-            if (ingredientArray.length > 0) {
-                ingredientExists = ingredientArray.find(ing => ing.name === newIngredient.name);
-            }
-            if (ingredientExists) {
-                const index = ingredientExists.id;
-                ingredientArray[index].quantity = ingredientArray[index].quantity + 1;
-            } else {
-                const arrayItem = {
-                    id: (ingredientArray.length),
-                    name: newIngredient.name,
-                    quantity: 1
-                };
-                ingredientArray.push(arrayItem);
-            }
+            lootItem = `${randAdj} ${newItem} (${randNum})`;
+            //PUSH LOOT ITEM TO ARRAY
+            lootArray.push(lootItem);
         }
-        setIngredientResults(ingredientArray);
+        setLootResults(lootArray);
+
+        const randCoins = Math.floor( Math.random() * (100)) + 1;
+        setLootCoins(randCoins);
     }
     
     return (
@@ -528,8 +447,8 @@ const LootGenerator = () => {
                 <ModalBody>
                     <div className='box container'>
                         <div className='row pb-3'>
-                            <h4 className='col text-start'>Class Level: {sparsity} </h4>
-                            <input type="range" step='1' min='1' max='10' value={sparsity} onChange={slider} className='col slider' />
+                            <h4 className='col text-start'>Class Level: {level} </h4>
+                            <input type="range" step='1' min='1' max='10' disabled value={level} onChange={slider} className='col slider' />
                         </div>
                         <div className='row mb-3'>
                             <h4 className='col text-start'># of Items: </h4>
@@ -537,9 +456,7 @@ const LootGenerator = () => {
                         </div>
                         <div className='row mb-3'>
                             <h4 className='col text-start'>Results: </h4>
-                            {ingredientResults.length > 0 && ingredientResults.map(i => (
-                                <span className='fs-5'><strong>{i.quantity}</strong> {i.name}</span>
-                            ))}
+                            {lootCoins && `${lootCoins} Carats, `}{lootResults.join(', ')}
                         </div>
                     </div>
                 </ModalBody>
