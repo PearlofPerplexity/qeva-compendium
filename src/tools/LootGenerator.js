@@ -290,7 +290,8 @@ const commonItemArray = [
     'Wooden Comb',
     'Bundle of Rope (50 feet)',
     'Pewter Figurine',
-    'Pair of Dice'      
+    'Pair of Dice',
+    'Plants for crafting'      
 ];
 
 const uncommonItemArray = [
@@ -428,8 +429,12 @@ const LootGenerator = () => {
         }
         setLootResults(lootArray);
 
-        const randCoins = Math.floor( Math.random() * (100)) + 1;
-        setLootCoins(randCoins);
+        const randCts = Math.floor( Math.random() * (100)) + 1;
+        const randKs = Math.floor( Math.random() * (100)) + 1;
+        setLootCoins({
+            carats: randCts,
+            karats: randKs
+        });
     }
     
     return (
@@ -456,7 +461,7 @@ const LootGenerator = () => {
                         </div>
                         <div className='row mb-3'>
                             <h4 className='col text-start'>Results: </h4>
-                            {lootCoins && `${lootCoins} Carats, `}{lootResults.join(', ')}
+                            {lootCoins && `Coins: ${lootCoins.carats}ct, ${lootCoins.karats}k, `}{lootResults.join(', ')}
                         </div>
                     </div>
                 </ModalBody>

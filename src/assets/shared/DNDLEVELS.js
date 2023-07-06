@@ -1463,8 +1463,8 @@ export const DNDLEVELS = {
             ],
         },
     ],
-    /* ---------- NEXT CLASS -------------------- GEMCUTTER ---------- */
-    gemcutter: [
+    /* ---------- NEXT CLASS -------------------- SCRIBE ---------- */
+    scribe: [
         {
             // LEVEL 1
             id: 1,
@@ -1626,6 +1626,174 @@ export const DNDLEVELS = {
             ]
         },
     ],
+    /* ---------- NEXT CLASS -------------------- FIGHTER ---------- */
+    fighter: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'SELECT A FIGHTING STYLE',
+                    description: 'See the Fighting Style chart and select a style.'
+                },
+                {
+                    id: 1,
+                    name: 'Second Wind',
+                    description: 'You have a limited well of stamina that you can draw on to protect Yourself from harm. On your turn, you can use a bonus action to regain hit points equal to ld10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.'
+                },
+            ],
+            trackables: ["Superiority Dice: 0"],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Action Surge',
+                    description: "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
+                }
+            ],
+            trackables: ["Superiority Dice: 0"],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Martial Archetype',
+                    description: 'At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. Choose Champion or Battle Master. The archetype you choose grants you features at 3rd, 7th & 10th level.'
+                },
+                {
+                    id: 1,
+                    name: 'CHAMPION: Improved Critical',
+                    description: 'Your weapon attacks score a critical hit on a roll of 19 or 20.'
+                },
+                {
+                    id: 2,
+                    name: 'BATTLE MASTER: Student of War',
+                    description: "you gain proficiency with one type of artisan's tools of your choice."
+                },
+                {
+                    id: 3,
+                    name: 'BATTLE MASTER: 3 Maneuvers',
+                    description: "You learn three maneuvers of your choice from the fighting manuevers chart found in the 'Fighting Styles' tool. Manuevers are used by expending superiority dice."
+                },
+                {
+                    id: 4,
+                    name: 'BATTLE MASTER: 4 Superiority Dice',
+                    description: "You have four superiority dice, which are d8s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest."
+                }
+            ],
+            trackables: ["Superiority Dice: 4"],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+            trackables: ["Superiority Dice: 4"],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Extra Attack',
+                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                }
+            ],
+            trackables: ["Superiority Dice: 4"],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+            trackables: ["Superiority Dice: 4"],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'CHAMPION: Remarkable Athlete',
+                    description: "Starting at 7th level, you can add half yotlr proficiency bonus (round up) to any Strength, Dexterity, or Constitutioo check you make that doesn't already use your proficiency bonus. In addition, when you makc a running longjump, the distance you can cover increases by a number of feet equal to yotlr Strength modifier."
+                },
+                {
+                    id: 1,
+                    name: 'BATTLE MASTER: Know Your Enemy',
+                    description: "If you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics ofyour choice: STR score, DEX score, CON score or AC"
+                },
+            ],
+            trackables: ["Superiority Dice: 4"],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+            trackables: ["Superiority Dice: 5"],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Indomitable',
+                    description: "Beginning at 9th leveI, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+                }
+            ],
+            trackables: ["Superiority Dice: 5"],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'CHAMPION: Secondary Fighting Style',
+                    description: 'you can choose a second option from the Fighting Style chart.'
+                },
+                {
+                    id: 1,
+                    name: 'BATTLE MASTER: Improved Combat Superiority',
+                    description: 'Your superiority dice turn into d10s.'
+                }
+            ],
+            trackables: ["Superiority Dice: 5"],
+        },
+    ],
 
     //NEXT CLASSES
     // AVLIMETH CLASS LEVELS
@@ -1634,5 +1802,4 @@ export const DNDLEVELS = {
     // ACOLYTE CLASS LEVELS
     // BARD CLASS LEVELS
     // DRUID CLASS LEVELS
-    // FIGHTER CLASS LEVELS
 }

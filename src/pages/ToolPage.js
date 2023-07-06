@@ -10,7 +10,7 @@ import ClassChart from '../tools/ClassChart';
 import CraftingChart from '../tools/CraftingChart';
 import GemcutterChart from '../tools/GemcutterChart';
 import GrenadierChart from '../tools/GrenadierChart';
-import FightingStyles from '../tools/FightStyleChart';
+import FightingChart from '../tools/FightingChart';
 import CraftGenerator from '../tools/CraftingGenerator';
 import LootGenerator from '../tools/LootGenerator';
 import TravelGenerator from '../tools/TravelGenerator';
@@ -45,7 +45,7 @@ const ToolPage = () => {
                 <div className='row'>
                     <GemcutterChart />
                     <CraftingChart />
-                    <FightingStyles />
+                    <FightingChart />
                 </div>
             </section>
             <section className="highlights mt-4">

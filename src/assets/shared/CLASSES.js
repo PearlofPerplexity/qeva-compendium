@@ -842,6 +842,7 @@ export const CLASSES = [
                 saving_throw_prof: ["Strength", "Constitution"],
                 skill_prof: ["Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival"],
                 topics: [],
+                lvls: DNDLEVELS.fighter,
             },
             {
                 id: 6,
