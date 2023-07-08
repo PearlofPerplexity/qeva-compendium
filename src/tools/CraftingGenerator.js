@@ -178,13 +178,13 @@ const CraftGenerator = () => {
 
     const reset = () => {
         toggle();
-        setSparsity(25);
+        setSparsity(20);
         setSelectedIngredients(ingredients);
         setNumber(5);
         setIngredientResults([]);
     }
 
-    const [sparsity, setSparsity] = useState(25);
+    const [sparsity, setSparsity] = useState(20);
     const slider = (e) => {
         const sliderNum = e.target.value;
         setSparsity(sliderNum);
@@ -258,8 +258,8 @@ const CraftGenerator = () => {
                 <ModalBody>
                     <div className='box container'>
                         <div className='row pb-3'>
-                            <h4 className='col text-start'>Sparsity: {sparsity}% </h4>
-                            <input type="range" step='5' min='5' max='95' value={sparsity} onChange={slider} className='col slider' />
+                            <h4 className='col text-start'>Sparsity: {sparsity}% (D10)</h4>
+                            <input type="range" step='10' min='10' max='90' value={sparsity} onChange={slider} className='col slider' />
                         </div>
                         <div className='row mb-3'>
                             <h4 className='col text-start'>Location: </h4>

@@ -224,7 +224,7 @@ const FightingStyleChart = () => {
                                 ))}
                             </tbody>
                         </table>
-                        <h3 className='mt-3'>Fighting Maneuvers</h3>
+                        <h3 className='mt-5'>Fighting Maneuvers</h3>
                         <table className="table table-hover table-sticky align-middle">
                             <thead>
                                 <tr className='align-middle'>

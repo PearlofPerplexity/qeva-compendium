@@ -2,6 +2,7 @@ import user from '../imgs/races/user.png';
 import orc from '../imgs/races/orc.png';
 import husk from '../imgs/races/husk.png';
 import ronin from '../imgs/races/ronin.png';
+import wraith from '../imgs/ethereal/wraith.png';
 
 /* INCLUDES:
 
@@ -102,5 +103,22 @@ export const DRACES = [
         description: `Wraiths who become reapers can take many physical forms. The spawns of these reapers are mongrels and can even breed with one another to take other inventive shapes, though usually they are solitary creatures. They live for hate, destruction and evil and few survive their presence.`,
         image: user,
         imageAlt: `Qeṽa Mongrel`
-    }
+    },
+    {
+        id: 5,
+        link: `/dark-races/wraiths`,
+        name: `Wraiths`,
+        origin: `Created by DIA`,
+        heartStone: `Black Celestite`,
+        elden: `The Great Demon`,
+        lifespan: `Immortal`,
+        size: `Medium`,
+        appearance: `Invisible`,
+        language: `Dark Speech, Ethereal`,
+        government: `None`,
+        residence: `The Etherworld`,
+        description: `Wraiths or Haellians maintain their immortal, spiritual existence and grip on a dark side of celestite and yet have turned away from the pursuit of goodness and alignment with DIA. They work from the ether to oppose DIA and attack the physical beings who represent HIM. Their power derives from the void.`,
+        image: wraith,
+        imageAlt: `Qeṽa Wraith`
+    },
 ];

@@ -17,6 +17,7 @@ import osei from '../imgs/races/osei.png';
 import half from '../imgs/races/half.png';
 import aeoki from '../imgs/races/aeoki.png';
 import treefolk from '../imgs/races/treefolk.png';
+import spirit from '../imgs/ethereal/spirit.png';
 import user from '../imgs/races/user.png';
 
 /* INCLUDES:
@@ -715,5 +716,53 @@ export const RACES = [
             }
         ],
         imageAlt: `Qeṽa Arborum`
+    },
+    {
+        id: 9,
+        link: `/races/ethereals`,
+        name: `Ethereals`,
+        singName: "Ethereal",
+        heartStone: `Celestite (Holiness)`,
+        spawnStone: `None`,
+        elden: `DIA`,
+        lifespan: `Immortal`,
+        height: `7-8 ft`,
+        weight: `Weightless`,
+        appearance: `Invisible`,
+        language: `Celestial`,
+        government: `Theocracy`,
+        residence: `The Etherworld`,
+        description: `Spirits (or Haelas in the celestial tongue) are the original and intended form of all ethereals. They dwell and act from the ether as immortal beings and are perfectly aligned with DIA meaning they have never committed evil. However, this does not mean that they do the greatest good. Some are free of evil and still lazy, unfocused or simply untapped of their full potential.`,
+        image: spirit,
+        speed: 30,
+        size: 'M',
+        wis: '+2',
+        dex: '+2',
+        cha: '+2',
+        proficiencies: ['-'],
+        languages: ['celestial', '*all'],
+        abilities: [
+            {
+                id: 0,
+                name: 'Truesight',
+                description: "You can see in normal and magical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them. Furthermore, the creature can see into the Ethereal Plane."
+            },
+            {
+                id: 1,
+                name: "Communion",
+                description: "Spirits don't need to sleep. Instead, they enter a state of prayer, remaining semiconscious, for 2 hours a day. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+            },
+            {
+                id: 2,
+                name: "Bless",
+                description: "If a physical being reflects a quality of DIA, you have the ability to amplify it. You can add proficiency to any roll attached to such a quality in an individual."
+            },
+            {
+                id: 3,
+                name: "Read Thoughts",
+                description: "In their truesight, spirits can see beyond physical things. They can see into the soul. As a spirit, once per day you can enter the mind of a physical being."
+            }
+        ],
+        imageAlt: `Qeṽa Ethereal`
     }
 ];

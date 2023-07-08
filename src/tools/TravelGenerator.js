@@ -76,7 +76,28 @@ const travelArray = [
     "Players were travelling in the wrong direction. Add a day of travel to your journey.",
     "An owl hoot is heard in the night",
     "Players discuss their line of work before becoming adventurers",
-    "Player come upon a hoard of treasure; but it smells of husk. Weapons must be cleaned before use or they will be used at disadvantage"
+    "Player come upon a hoard of treasure; but it smells of husk. Weapons must be cleaned before use or they will be used at disadvantage",
+    "A smiling roadside merchant roasts rats, frogs, and squirrels on sticks. He offers a bite to the PCs.",
+    "Two guards hold a wanted poster. They carefully studies the party as they pass by.",
+    "A lush garden is filled with ripe vegetables is nearby. A sign is hung at its entrance reading 'No Trespassing'",
+    "A bridle ties a well-groomed speckled horse to a nearby tree. The horse is fitted with an elegant but empty saddle.",
+    "A homeless bard asks for a lift to the nearest inn. The bard is an ethereal.",
+    "A stub of paper lies on the ground. It lists 3 ingredients for a concoction on it, with a recipe of how to prepare it. The concoction produces an unusual ability.",
+    "As bandits attack, the PCs realize a friend of theirs is among the robbers.",
+    "An orc younling runs out from the brush, suprised to see you.",
+    "A parchment of paper is stuck in to the tree reading 'The Keys to Life: Love, Hope & Charity. Humble ears hear'. It has a strange good feeling to it, written in ethereal pen.",
+    "The group happens upon two caracadre faction groups arguing in the middle of the road.",
+    "A husk on fire runs through the party's camp. He was lit by his own people.",
+    "An overturned rowboat sits on the side of the road. There is no river or stream nearby. Under the rowboat is an entrance to a lair.",
+    "A group of guardsmen hang wanted posters on trees. One face looks familiar to a PC.",
+    "A cathedral glitters in the distance",
+    "As the road passes through a hilly region, you spy a cave, from which can be heard the voice of a single note. If dwarven, they will recognize it as the soul note of a dwarven lass.",
+    "A bounty hunter pulls out a poster of the man he is hunting. He asks for their help.",
+    "A man offers to give them shelter in his farm. He appears nepharious. If they stay, the group wakes up to a husk pillaging through their material. The man is gone.",
+    "A caracadre party joins your encampment. An attractive maiden is with them and flirts with you.",
+    "Three orc youth are torturing a bird.",
+    "A vial of liquid lies on the ground, unidentifiable to the group. The vial is filled with a special blend of truth serum that enables them to know the answer to a question and say it. If the party member lies, they go unconcious for 3 days and wake up without its abilities.",
+    "A set of broken shackles is hidden at the base of a tree."
 ];
   
 const TravelGenerator = () => {
@@ -90,6 +111,11 @@ const TravelGenerator = () => {
         setTravelItem("");
     }
 
+    const [number, setNumber] = useState(10);
+    const handleNumber = (e) => {
+        setNumber(e.target.value);
+    }
+
     const [level, setLevel] = useState(5);
     const slider = (e) => {
         const sliderNum = e.target.value;
@@ -98,6 +124,24 @@ const TravelGenerator = () => {
 
     const [travelItem, setTravelItem] = useState("");
     const travelGen = () => {
+        
+        const randTravelNum = number - 1;
+        const arrayLength = travelArray.length;
+        const arrayHalfRemainder = (100 - travelArray.length) / 2;
+
+        switch (true) {
+            case (randTravelNum < arrayLength):
+                setTravelItem(travelArray[randTravelNum]);
+                break;
+            case (randTravelNum < (arrayLength + arrayHalfRemainder)):
+                setTravelItem('The Night passes without event.');
+                break;
+            default:
+                setTravelItem("DM's Choice");
+                break;
+        }
+
+        /*
         const arrayLength = (travelArray.length * 3);
         const randTravelNum = Math.floor( Math.random() * (arrayLength));
         const randTravelIndex = Math.floor(randTravelNum / 3);
@@ -113,7 +157,7 @@ const TravelGenerator = () => {
                 setTravelItem("DM's Choice");
                 break;
         }
-
+        */
     }
     
     return (
@@ -130,6 +174,10 @@ const TravelGenerator = () => {
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="flat-color-icons:night-landscape"></i> Travel Generator</ModalHeader>
                 <ModalBody>
                     <div className='box container'>
+                        <div className='row mb-3'>
+                            <h4 className='col text-start'>D100 Roll: </h4>
+                            <input className='col' type="number" value={number} onChange={handleNumber} />
+                        </div>
                         <div className='row mb-3 text-start'>
                             <h4>Results: </h4>
                             <p>{travelItem}</p>

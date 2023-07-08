@@ -438,7 +438,7 @@ const GemGenerator = () => {
                         </div>
                         {cut && gemCut.includes(cut) && (
                         <div id='img-holder'>
-                            <img className='pt-2' id="gem-img" src={cutImg} style={{width:'150px'}} alt="gem-cut-img"/>
+                            <img className='pt-2' id="gem-img" src={cutImg} style={{width:'50px'}} alt="gem-cut-img"/>
                         </div>
                         )}
                     </div>
