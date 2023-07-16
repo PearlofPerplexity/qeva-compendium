@@ -7,7 +7,7 @@ Overview
 
 */
 
-export const GEMS = [
+export const DGEMS = [
     {
         id: 0,
         link: `/gems/unbound`,
@@ -66,7 +66,7 @@ export const GEMS = [
                     {
                         id: 0, 
                         name: "Nostalgia ɸ",
-                        description: "Recall any memory from your own past."
+                        description: "Recall any memory from your own past and touch 1 creature to make them re-live it."
                     },
                     {
                         id: 1, 
@@ -497,7 +497,7 @@ export const GEMS = [
                     },
                     {
                         id: 3, 
-                        name: "Exposed",
+                        name: "Expose",
                         description: "Anyone within a 20 ft radius of you drops -1 to their AC"
                     },
                     {
@@ -515,7 +515,7 @@ export const GEMS = [
             {
                 id: 1,
                 name: `Black Citrine`,
-                quality: `Aestheticism`,
+                quality: `Asceticism`,
                 smDescription: ``,
                 description: ``,
                 image: '',
@@ -523,28 +523,28 @@ export const GEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Nostalgia",
-                        description: "Recall any memory from your own past. *Memory must contain an element of joy."
+                        name: "Nightmare",
+                        description: "Recall any painful memory from your own past and touch 1 creature to make them re-live it. When you do, your life mission becomes clearer and you can go 7 days without food."
                     },
                     {
                         id: 1, 
-                        name: "Empathy",
-                        description: "Recall any memory from someone you touch. *Memory must contain an element of joy."
+                        name: "Schadenfreude",
+                        description: "Recall any painful memory from someone you touch. When you do, you learn their weakness and they have disadvantage on wisdom saving throws against you." 
                     },
                     {
                         id: 2, 
-                        name: "Antiquity",
-                        description: "Recall any memory from the ground. *Memory must contain an element of joy."
+                        name: "Atrocity",
+                        description: "Recall any memory from the ground. *Memory must contain an element of pain. You know the worsts of your environment and go a night without sleep and proficiency in perception."
                     },
                     {
                         id: 3, 
-                        name: "Memoir",
-                        description: "Recall any positive memory from an object you touch. *Memory must contain an element of joy."
+                        name: "Hex",
+                        description: "Recall any negative memory from an object you touch. *Memory must contain an element of pain. The bubbling of pain & evil to the surface allows it to be cursed."
                     },
                     {
                         id: 4, 
-                        name: "Echo",
-                        description: "Recall any memory from any source at will. *Memory must contain an element of joy"
+                        name: "Trauma",
+                        description: "Recall any memory from any source at will. *Memory must contain an element of pain. You can go without food, water and shelter for one day."
                     },
                     {
                         id: 5, 
@@ -564,13 +564,13 @@ export const GEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Speak with Beasts",
-                        description: "Use Speak with Animals on any creature you touch"
+                        name: "Babel",
+                        description: ""
                     },
                     {
                         id: 1, 
-                        name: "Treespeech",
-                        description: "Use Speak with Animals on any vegetation you touch."
+                        name: "Babel",
+                        description: "A creature must succeed on a DC 13 WIS Saving throw or forget one language."
                     },
                     {
                         id: 2, 
@@ -605,23 +605,23 @@ export const GEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Kin's Blood",
-                        description: "You can grow Rutile crystal (0.5 carat/day)"
+                        name: "Corruption",
+                        description: "You are one with the black pyrite. You no longer need a physical gem to access its powers. Touch is no longer required. You lose this connection whenever you show patience."
                     },
                     {
                         id: 1, 
-                        name: "Kin's Craft",
-                        description: "You can pressurize rock to create pyrite (0.1 carat/day)"
+                        name: "Anticipate",
+                        description: "You can anticipate your enemy's next move. If you are correct, they attack at disadvantage. If you are wrong they attack at advantage."
                     },
                     {
                         id: 2, 
-                        name: "Pickman",
-                        description: "You can grow any incidental stone (0.05 carat/day)"
+                        name: "Jump",
+                        description: "Your initiative is 20"
                     },
                     {
                         id: 3, 
-                        name: "Master Jeweler",
-                        description: "You can pressurize rock to create any cardinal stone (0.025 carat/day)"
+                        name: "Rapport",
+                        description: "You can convine an NPC to join your party"
                     },
                     {
                         id: 4, 
@@ -630,8 +630,8 @@ export const GEMS = [
                     },
                     {
                         id: 5, 
-                        name: "Corruption",
-                        description: "You are one with the black pyrite. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        name: "Full Corruption",
+                        description: "Stone ability rolls are automatically 20."
                     }
                 ]
             },
@@ -687,28 +687,28 @@ export const GEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Interstellar Sight",
-                        description: "You can see through smoke, fog and any atmospheric obscurance"
+                        name: "Interstellar Obscurance",
+                        description: "You can create smoke, fog and any atmospheric obscurance"
                     },
                     {
                         id: 1, 
-                        name: "Spy for Illusions",
-                        description: "You can tell illusion from reality"
+                        name: "Illusor",
+                        description: "You can create illusions in the etterworld."
                     },
                     {
                         id: 2, 
-                        name: "Heavenly Visions",
-                        description: "You can see the doings of spirits and wraiths in the ethereal plane"
+                        name: "Devilish Whisper",
+                        description: "You can hear and understand the language of wraiths"
                     },
                     {
                         id: 3, 
-                        name: "Blinding Light",
-                        description: "Blind an enemy with a keyhole of light from the everworld"
+                        name: "Void",
+                        description: "You can open a pathway to the void and remove any element (earth, water, air, fire) from a 5ft square. This includes metaphysical elements (hope, joy, etc.) once the next level is unlocked."
                     },
                     {
                         id: 4, 
-                        name: "Void Resilience",
-                        description: "You have immunity to void damage"
+                        name: "Blackhole",
+                        description: "Your knowledge of the void has grown. You can remove any physical (earth, water, air, etc.) or metaphysical (hope, joy, etc.) element from a 20ft square."
                     },
                     {
                         id: 5, 

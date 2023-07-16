@@ -36,6 +36,20 @@ const GemGenerator = () => {
     const [cutImg, setCutImg] = useState();
     const [value, setValue] = useState(0);
     const [max, setMax] = useState(25);
+    const [maxPower, setMaxPower] = useState({
+        maxPwrCon: 14, // MAX POWER CONTAINMENT
+        maxPwrOut: 0, // MAX POWER OUTPUT
+        caratPts: 0,
+        clarityPts: 0,
+        colorPts: 0,
+        cutPts: 0,
+    });
+    const maxPwrArray = {
+        caratPts: 0,
+        clarityPts: 0,
+        colorPts: 0,
+        cutPts: 0,
+    };
 
     const gemTypes = ["Tourmaline", "Celestite", "Obsidian", "Aquamarine", "Tiger's Eye", "Diamond", "Citrine", "Amethyst", "Pyrite", "Sapphire", "Emerald", "Onyx", "Turquoise", "Ruby", "Opal", "Topaz", "Quartz", "Crocoite", "Azurite", "Rutile", "Tanzanite", "Jade", "Shungite", "Chryscocolla", "Jasper", "Bismuth", "Amber", "Whitestone"];
 
@@ -141,23 +155,31 @@ const GemGenerator = () => {
     }
     const caratRand = () => {
         let caratNum = random100() / 10;
-        setCarat(Math.round(caratNum * 4) / 4);
+        let caratInput = Math.round(caratNum * 4) / 4;
+        if (caratInput === 0) caratInput = 0.01;
+        setCarat(caratInput);
         setValue((value) => value + (carat * 100));
+        //Set the Carat MAX POWER OUTPUT
+        maxCaratPowerValuer(caratInput);
     }
     const clarityRand = () => {
         let clarityNum = random100();
+        let clarityVal;
         setValue((value) => value + (100 - clarityNum) * 3);
         if(clarityNum === 1) setClarity("FL");
-        else if (clarityNum <= 3) setClarity("VVS1");
-        else if (clarityNum <= 6) setClarity("VVS2");
-        else if (clarityNum <= 11) setClarity("VS1");
-        else if (clarityNum <= 18) setClarity("VS2");
-        else if (clarityNum <= 27) setClarity("SI1");
-        else if (clarityNum <= 38) setClarity("SI2");
-        else if (clarityNum <= 51) setClarity("SI3");
-        else if (clarityNum <= 66) setClarity("I1");
-        else if (clarityNum <= 83) setClarity("I2");
-        else setClarity("I3");
+        else if (clarityNum <= 3) clarityVal = "VVS1";
+        else if (clarityNum <= 6) clarityVal = "VVS2";
+        else if (clarityNum <= 11) clarityVal = "VS1";
+        else if (clarityNum <= 18) clarityVal = "VS2";
+        else if (clarityNum <= 27) clarityVal = "SI1";
+        else if (clarityNum <= 38) clarityVal = "SI2";
+        else if (clarityNum <= 51) clarityVal = "SI3";
+        else if (clarityNum <= 66) clarityVal = "I1";
+        else if (clarityNum <= 83) clarityVal = "I2";
+        else clarityVal = "I3";
+
+        setClarity(clarityVal);
+        maxClarityPowerValuer(clarityVal);
     }
     const colorRand = () => {
         let colorNum = random100();
@@ -267,6 +289,21 @@ const GemGenerator = () => {
         caratRand();
         colorRand();
         cutRand();
+        if(maxPwrArray.caratPts >= maxPwrArray.clarityPts) {
+            setMaxPower({
+                ...maxPower, 
+                maxPwrOut: maxPwrArray.caratPts,
+                caratPts: maxPwrArray.caratPts,
+                clarityPts: maxPwrArray.clarityPts,
+            });
+        } else {
+            setMaxPower({
+                ...maxPower, 
+                maxPwrOut: maxPwrArray.clarityPts,
+                caratPts: maxPwrArray.caratPts,
+                clarityPts: maxPwrArray.clarityPts, 
+            });
+        }
     }
     
     const [modal, setModal] = useState(false);
@@ -281,6 +318,14 @@ const GemGenerator = () => {
         setCut("");
         setMax(25);
         setValue(0);
+        setMaxPower({
+            maxPwrCon: 14,
+            maxPwrOut: 0,
+            caratPts: 0,
+            clarityPts: 0,
+            colorPts: 0,
+            cutPts: 0,
+        });
         toggle();
         console.clear();
     }
@@ -288,6 +333,7 @@ const GemGenerator = () => {
     const slider = (event) => {
         const sliderNum = event.target.value;
         setMax(sliderNum);
+        maxPowerContainmentValuer(sliderNum);
     }
     const typeValuer = (event) => {
         const typeVal = event.target.value;
@@ -297,6 +343,23 @@ const GemGenerator = () => {
         const caratVal = event.target.value;
         setValue((value) => value - (carat * 100) + (caratVal * 100));
         setCarat(caratVal);
+        console.log('caratPts: ' + maxPwrArray.caratPts);
+        console.log('clarityPts: ' + maxPwrArray.clarityPts);
+        maxCaratPowerValuer(caratVal);
+        console.log(maxPwrArray);
+        if(maxPwrArray.caratPts >= maxPower.clarityPts) {
+            setMaxPower({
+                ...maxPower, 
+                maxPwrOut: maxPwrArray.caratPts,
+                caratPts: maxPwrArray.caratPts,
+            });
+        } else {
+            setMaxPower({
+                ...maxPower, 
+                maxPwrOut: maxPower.clarityPts,
+                caratPts: maxPwrArray.caratPts,
+            });
+        }
     }
     const clarityValuer = (event) => {
         const clarityVal = event.target.value;
@@ -316,6 +379,21 @@ const GemGenerator = () => {
         }
         setValue((value) => value - ((100 - clarityNum(clarity)) * 3) + ((100 - clarityNum(clarityVal)) * 3));
         setClarity(clarityVal);
+
+        maxClarityPowerValuer(clarityVal);
+        if(maxPower.caratPts >= maxPwrArray.clarityPts) {
+            setMaxPower({
+                ...maxPower, 
+                maxPwrOut: maxPower.caratPts,
+                clarityPts: maxPwrArray.clarityPts,
+            });
+        } else {
+            setMaxPower({
+                ...maxPower, 
+                maxPwrOut: maxPwrArray.clarityPts,
+                clarityPts: maxPwrArray.clarityPts, 
+            });
+        }
     }
     const colorValuer = (event) => {
         const colorVal = event.target.value;
@@ -372,6 +450,192 @@ const GemGenerator = () => {
 
         setValue((value) => value + (cutNum(cut)) - (cutNum(cutVal)));
         setCut(cutVal);
+    }
+    const maxCaratPowerValuer = (caratInput) => {
+        switch (true) {
+            case (caratInput <= 0.05):
+                maxPwrArray.caratPts = 1;
+                break;
+            case (caratInput <= 0.1):
+                maxPwrArray.caratPts = 2;
+                break;
+            case (caratInput <= 0.15):
+                maxPwrArray.caratPts = 3;
+                break;
+            case (caratInput <= 0.2):
+                maxPwrArray.caratPts = 4;
+                break;
+            case (caratInput <= 0.25):
+                maxPwrArray.caratPts = 5;
+                break;
+            case (caratInput <= 0.35):
+                maxPwrArray.caratPts = 6;
+                break;
+            case (caratInput <= 0.45):
+                maxPwrArray.caratPts = 7;
+                break;
+            case (caratInput <= 0.55):
+                maxPwrArray.caratPts = 8;
+                break;
+            case (caratInput <= 0.65):
+                maxPwrArray.caratPts = 9;
+                break;
+            case (caratInput <= 0.75):
+                maxPwrArray.caratPts = 10;
+                break;
+            case (caratInput <= 1):
+                maxPwrArray.caratPts = 11;
+                break;
+            case (caratInput <= 1.25):
+                maxPwrArray.caratPts = 12;
+                break;
+            case (caratInput <= 1.5):
+                maxPwrArray.caratPts = 13;
+                break;
+            case (caratInput <= 1.75):
+                maxPwrArray.caratPts = 14;
+                break;
+            case (caratInput <= 2):
+                maxPwrArray.caratPts = 15;
+                break;
+            case (caratInput <= 2.5):
+                maxPwrArray.caratPts = 16;
+                break;
+            case (caratInput <= 3):
+                maxPwrArray.caratPts = 17;
+                break;
+            case (caratInput <= 3.5):
+                maxPwrArray.caratPts = 18;
+                break;
+            case (caratInput <= 4):
+                maxPwrArray.caratPts = 19;
+                break;
+            case (caratInput <= 4.5):
+                maxPwrArray.caratPts = 20;
+                break;
+            case (caratInput <= 5.25):
+                maxPwrArray.caratPts = 21;
+                break;
+            case (caratInput <= 6):
+                maxPwrArray.caratPts = 22;
+                break;
+            case (caratInput <= 7.25):
+                maxPwrArray.caratPts = 23;
+                break;
+            case (caratInput <= 8.25):
+                maxPwrArray.caratPts = 24;
+                break;
+            default:
+                maxPwrArray.caratPts = 30;
+                break;
+        }
+    }
+    const maxClarityPowerValuer = (clarityInput) => {
+        switch (clarityInput) {
+            case 'I3':
+                maxPwrArray.clarityPts = 2;
+                break;
+            case 'I2':
+                maxPwrArray.clarityPts = 5;
+                break;
+            case 'I1':
+                maxPwrArray.clarityPts = 8;
+                break;
+            case 'SI3':
+                maxPwrArray.clarityPts = 11;
+                break;
+            case 'SI2':
+                maxPwrArray.clarityPts = 14;
+                break;
+            case 'SI1':
+                maxPwrArray.clarityPts = 16;
+                break;
+            case 'VS2':
+                maxPwrArray.clarityPts = 18;
+                break;
+            case 'VS1':
+                maxPwrArray.clarityPts = 20;
+                break;
+            case 'VVS2':
+                maxPwrArray.clarityPts = 22;
+                break;
+            case 'VVS1':
+                maxPwrArray.clarityPts = 23;
+                break;
+            case 'FL':
+                maxPwrArray.clarityPts = 30;
+                break;
+        }        
+    }
+    const maxPowerContainmentValuer = (sliderNum) => {
+        const level = sliderNum / 5;
+        let pwrCon;
+        switch (true) {
+            case (level <= 1):
+                pwrCon = 2;
+                break;
+            case (level <= 2):
+                pwrCon = 5;
+                break;
+            case (level <= 3):
+                pwrCon = 8;
+                break;
+            case (level <= 4):
+                pwrCon = 11;
+                break;
+            case (level <= 5):
+                pwrCon = 14;
+                break;
+            case (level <= 6):
+                pwrCon = 16;
+                break;
+            case (level <= 7):
+                pwrCon = 18;
+                break;
+            case (level <= 8):
+                pwrCon = 20;
+                break;
+            case (level <= 9):
+                pwrCon = 22;
+                break;
+            case (level <= 10):
+                pwrCon = 23;
+                break;
+            case (level <= 11):
+                pwrCon = 24;
+                break;
+            case (level <= 12):
+                pwrCon = 25;
+                break;
+            case (level <= 13):
+                pwrCon = 26;
+                break;
+            case (level <= 14):
+                pwrCon = 27;
+                break;
+            case (level <= 15):
+                pwrCon = 28;
+                break;
+            case (level <= 16):
+                pwrCon = 29;
+                break;
+            case (level <= 17):
+                pwrCon = 30;
+                break;
+            case (level <= 18):
+                pwrCon = 31;
+                break;
+            case (level <= 19):
+                pwrCon = 32;
+                break;
+            default:
+                pwrCon = 33;
+                break;
+        }
+        setMaxPower({
+            ...maxPower, 
+            maxPwrCon: pwrCon,
+        });
     }
     
     return (
@@ -435,6 +699,14 @@ const GemGenerator = () => {
                         <div className='row'>
                             <h4 className='col text-start'>Cost: </h4>
                             <input className='col' value={`$ ${value}`} readOnly />
+                        </div>
+                        <div className='row'>
+                            <h6 className='col text-start'>MAX PWR Containment: </h6>
+                            <input className='col' value={maxPower.maxPwrCon} readOnly />
+                        </div>
+                        <div className='row'>
+                            <h6 className='col text-start'>MAX PWR Output: </h6>
+                            <input className='col' value={maxPower.maxPwrOut} readOnly />
                         </div>
                         {cut && gemCut.includes(cut) && (
                         <div id='img-holder'>

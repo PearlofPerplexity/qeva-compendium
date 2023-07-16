@@ -12,6 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 import { ALIGNMENTS } from '../assets/shared/ALIGNMENTS';
 import { GEMS } from '../assets/shared/GEMS';
+import { DGEMS } from '../assets/shared/DGEMS';
 
 const AlignmentChart = () => {
     
@@ -267,6 +268,11 @@ const AlignmentChart = () => {
                                 <p>
                                 Divine stones do not operate like other stones. They can only be used once and can prove difficult to wield. To wield a divine stone's power, one must select the power level they want to wield at (2-20). They then roll a gemstone saving throw (D20) and add their alignment level to it. If their saving throw is above or equal to the power level number, they will wield the stone successfully at that power level. If not, the power is still unleashed, but not within the control of the wielder. Rolling a 1 is an automatic failure.
                                 </p>
+                                <h5>Unbound Stones</h5>
+                                <p>Unbound stones are the cardinal stones when unbound by the other stones. Unbound, they are at the height of their power, but it comes at a price. Not only do the stones go against DIA, but they prevent a person from aligning with any other stone.</p>
+                                <h5>Dark Stones</h5>
+                                <p>Dark stones are cardinal stones in their darkened state and are their antithesis. They produce the opposite qualities, qualities, which oppose DIA.</p>
+                                <p></p>
                             </OffcanvasBody>
                         </Offcanvas>
                         <table className="table table-hover align-middle">
@@ -389,6 +395,106 @@ const AlignmentChart = () => {
                                         <td colSpan='2'>{gem.lvls[0].name}</td>
                                         <td colSpan='21'>{gem.lvls[0].description}</td>
                                     </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='row text-center mb-4'>
+                        <h3>Unbound Stone Alignment
+                            <Button className='text-center info' onClick={alignToggle}>
+                                🛈
+                            </Button>
+                        </h3>
+                        <table className="table table-dark text-light table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">LVL</th>
+                                    <td>lvl 1</td>
+                                    <td>lvl 3</td>
+                                    <td>lvl 5</td>
+                                    <td>lvl 8</td>
+                                    <td>lvl 10</td>
+                                    <td>lvl 20</td>
+                                </tr>
+                                <tr className='align-middle'>
+                                    <th scope="col">Alignment Pts</th>
+                                    <td>2pts</td>
+                                    <td>5pts</td>
+                                    <td>8pts</td>
+                                    <td>10pts</td>
+                                    <td>15pts</td>
+                                    <td>-</td>
+                                </tr>
+                            </thead>
+                            {/* UNBOUND GEMS */}
+                            <tbody className=''>
+                                {DGEMS[0].topics.map((gem) => (
+                                    <React.Fragment key={gem.id}>
+                                        <tr>
+                                            <th scope='col' rowSpan='2'>{gem.name} ({gem.quality})</th>
+                                            {gem.lvls && (gem.lvls.map((level) => (
+                                                <td key={level.id} className='cardinal' onClick={() => abilityInfo(level)}>{level.name}</td>
+                                            )))}
+                                        </tr>
+                                        <tr>
+                                            {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
+                                                <td colSpan='6'>
+                                                    <em><strong>{title}: </strong>{detail} </em><a onClick={abilityInfoReset}>reset</a>
+                                                </td>
+                                            ) : (<td colSpan='6'></td>)
+                                            }
+                                        </tr>
+                                    </React.Fragment>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='row text-center mb-4'>
+                        <h3>Dark Stone Alignment
+                            <Button className='text-center info' onClick={alignToggle}>
+                                🛈
+                            </Button>
+                        </h3>
+                        <table className="table table-dark text-light table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">LVL</th>
+                                    <td>lvl 1</td>
+                                    <td>lvl 3</td>
+                                    <td>lvl 5</td>
+                                    <td>lvl 8</td>
+                                    <td>lvl 10</td>
+                                    <td>lvl 20</td>
+                                </tr>
+                                <tr className='align-middle'>
+                                    <th scope="col">Alignment Pts</th>
+                                    <td>2pts</td>
+                                    <td>5pts</td>
+                                    <td>8pts</td>
+                                    <td>10pts</td>
+                                    <td>15pts</td>
+                                    <td>-</td>
+                                </tr>
+                            </thead>
+                            {/* DARK GEMS */}
+                            <tbody className=''>
+                                {DGEMS[1].topics.map((gem) => (
+                                    <React.Fragment key={gem.id}>
+                                        <tr>
+                                            <th scope='col' rowSpan='2'>{gem.name} ({gem.quality})</th>
+                                            {gem.lvls && (gem.lvls.map((level) => (
+                                                <td key={level.id} className='cardinal' onClick={() => abilityInfo(level)}>{level.name}</td>
+                                            )))}
+                                        </tr>
+                                        <tr>
+                                            {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
+                                                <td colSpan='6'>
+                                                    <em><strong>{title}: </strong>{detail} </em><a onClick={abilityInfoReset}>reset</a>
+                                                </td>
+                                            ) : (<td colSpan='6'></td>)
+                                            }
+                                        </tr>
+                                    </React.Fragment>
                                 ))}
                             </tbody>
                         </table>

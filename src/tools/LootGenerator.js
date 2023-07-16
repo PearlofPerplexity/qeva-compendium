@@ -461,7 +461,7 @@ const LootGenerator = () => {
                         </div>
                         <div className='row mb-3'>
                             <h4 className='col text-start'>Results: </h4>
-                            {lootCoins && `Coins: ${lootCoins.carats}ct, ${lootCoins.karats}k, `}{lootResults.join(', ')}
+                            {lootCoins && `Coins: ${lootCoins.carats}ct (carats), ${lootCoins.karats}k (karats), `}{lootResults.join(', ')}
                         </div>
                     </div>
                 </ModalBody>

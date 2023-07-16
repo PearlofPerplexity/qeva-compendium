@@ -229,7 +229,7 @@ export const GEMS = [
                 quality: `Joy`,
                 childStone: `Crocoite (Happiness)`,
                 syntheticStone: `Indulgence`,
-                darkStone: `Aestheticism`,
+                darkStone: `Asceticism`,
                 smDescription: 
                     `Stone given to Xaradriel to create Halflings`,
                 description:
@@ -749,7 +749,7 @@ export const GEMS = [
                 quality: `Happiness`,
                 parentStone: `Citrine (Joy)`,
                 syntheticStone: `Indulgence`,
-                darkStone: `Aestheticism`,
+                darkStone: `Asceticism`,
                 smDescription: 
                     `Stone native to Fletcheren, home of the Halflings.`,
                 description:
