@@ -35,21 +35,25 @@ const GemGenerator = () => {
     const [cut, setCut] = useState("");
     const [cutImg, setCutImg] = useState();
     const [value, setValue] = useState(0);
-    const [max, setMax] = useState(25);
+    //const [max, setMax] = useState(25);
+    const [lvl, setLvl] = useState(5);
     const [maxPower, setMaxPower] = useState({
         maxPwrCon: 14, // MAX POWER CONTAINMENT
         maxPwrOut: 0, // MAX POWER OUTPUT
         caratPts: 0,
         clarityPts: 0,
         colorPts: 0,
-        cutPts: 0,
+        cutPtCon: 0,
+        cutPtOut: 0,
     });
     const maxPwrArray = {
         caratPts: 0,
         clarityPts: 0,
         colorPts: 0,
-        cutPts: 0,
+        cutPtCon: 0,
+        cutPtOut: 0,
     };
+    const [lvlQualified, setLvlQualified] = useState(true);
 
     const gemTypes = ["Tourmaline", "Celestite", "Obsidian", "Aquamarine", "Tiger's Eye", "Diamond", "Citrine", "Amethyst", "Pyrite", "Sapphire", "Emerald", "Onyx", "Turquoise", "Ruby", "Opal", "Topaz", "Quartz", "Crocoite", "Azurite", "Rutile", "Tanzanite", "Jade", "Shungite", "Chryscocolla", "Jasper", "Bismuth", "Amber", "Whitestone"];
 
@@ -62,7 +66,8 @@ const GemGenerator = () => {
     const uncutArray = [uncut1, uncut2, uncut3, uncut4];
 
     const random100 = () => {
-        return Math.floor( Math.random() * max) + 1;
+        //return Math.floor( Math.random() * max) + 1;
+        return Math.floor( Math.random() * 100) + 1;
     }
     const typeRand = () => {
         let typeNum = Math.floor( Math.random() * 27) + 1;
@@ -182,105 +187,114 @@ const GemGenerator = () => {
         maxClarityPowerValuer(clarityVal);
     }
     const colorRand = () => {
+        let colorVal_R;
         let colorNum = random100();
         setValue((value) => value + (100 - colorNum) * 3);
         if(colorNum === 1) {
-            setColor("D");
+            colorVal_R = "D";
         } else if (colorNum <= 3) {
-            setColor("E");
+            colorVal_R = "E";
         } else if (colorNum <= 5) {
-            setColor("F");
+            colorVal_R = "F";
         } else if (colorNum <= 8) {
-            setColor("G");
+            colorVal_R = "G";
         } else if (colorNum <= 11) {
-            setColor("H");
+            colorVal_R = "H";
         } else if (colorNum <= 14) {
-            setColor("I");
+            colorVal_R = "I";
         } else if (colorNum <= 17) {
-            setColor("J");
+            colorVal_R = "J";
         } else if (colorNum <= 21) {
-            setColor("K");
+            colorVal_R = "K";
         } else if (colorNum <= 25) {
-            setColor("L");
+            colorVal_R = "L";
         } else if (colorNum <= 30) {
-            setColor("M");
+            colorVal_R = "M";
         } else if (colorNum <= 35) {
-            setColor("N");
+            colorVal_R = "N";
         } else if (colorNum <= 40) {
-            setColor("O");
+            colorVal_R = "O";
         } else if (colorNum <= 45) {
-            setColor("P");
+            colorVal_R = "P";
         } else if (colorNum <= 50) {
-            setColor("Q");
+            colorVal_R = "Q";
         } else if (colorNum <= 55) {
-            setColor("R");
+            colorVal_R = "R";
         } else if (colorNum <= 61) {
-            setColor("S");
+            colorVal_R = "S";
         } else if (colorNum <= 67) {
-            setColor("T");
+            colorVal_R = "T";
         } else if (colorNum <= 73) {
-            setColor("U");
+            colorVal_R = "U";
         } else if (colorNum <= 79) {
-            setColor("V");
+            colorVal_R = "V";
         } else if (colorNum <= 85) {
-            setColor("W");
+            colorVal_R = "W";
         } else if (colorNum <= 91) {
-            setColor("X");
+            colorVal_R = "X";
         } else if (colorNum <= 97) {
-            setColor("Y");
+            colorVal_R = "Y";
         } else {
-            setColor("Z");
+            colorVal_R = "Z";
         }
+
+        //const lvlNum = Math.floor(max / 5);
+        setColor(colorVal_R);
+        levelQualValuer(lvl, colorVal_R);
     }
     const cutRand = () => {
         let cutNum = Math.floor( Math.random() * 100) + 1;
+        let cutVal;
         if(cutNum <= 25) {
-            setCut("Uncut");
+            cutVal = "Uncut";
             setValue((value) => value - 50);
             setCutImg(uncutArray[Math.floor(Math.random() * 3) + 1]);
         } else if (cutNum <= 30) {
-            setCut("Brilliant");
+            cutVal = "Brilliant";
             setCutImg(brilliant);
         } else if (cutNum <= 35) {
-            setCut("Cushion");
+            cutVal = "Cushion";
             setCutImg(cushion);
         } else if (cutNum <= 40) {
-            setCut("Emerald");
+            cutVal = "Emerald";
             setCutImg(emeraldCut);
         } else if (cutNum <= 45) {
-            setCut("Island");
+            cutVal = "Island";
             setCutImg(french);
         } else if (cutNum <= 50) {
-            setCut("Lozenge");
+            cutVal = "Lozenge";
             setCutImg(lozenge);
         } else if (cutNum <= 55) {
-            setCut("Marquise");
+            cutVal = "Marquise";
             setCutImg(marquise);
         } else if (cutNum <= 60) {
-            setCut("Oval");
+            cutVal = "Oval";
             setCutImg(oval);
         } else if (cutNum <= 65) {
-            setCut("Pear");
+            cutVal = "Pear";
             setCutImg(pear);
         } else if (cutNum <= 70) {
-            setCut("Peruzzi");
+            cutVal = "Peruzzi";
             setCutImg(peruzzi);
         } else if (cutNum <= 75) {
-            setCut("Portuguese");
+            cutVal = "Portuguese";
             setCutImg(portuguese);
         } else if (cutNum <= 80) {
-            setCut("Princess");
+            cutVal = "Princess";
             setCutImg(princess);
         } else if (cutNum <= 85) {
-            setCut("Radiant");
+            cutVal = "Radiant";
             setCutImg(radiant);
         } else if (cutNum <= 92) {
-            setCut("Single");
+            cutVal = "Single";
             setCutImg(single);
         } else {
-            setCut("Trillion");
+            cutVal = "Trillion";
             setCutImg(trillion);
         }
+
+        setCut(cutVal);
+        cutPointValuer(cutVal);
     }
     const gemRand = () => {
         setValue(0);
@@ -289,19 +303,26 @@ const GemGenerator = () => {
         caratRand();
         colorRand();
         cutRand();
+        let powerOutput;
         if(maxPwrArray.caratPts >= maxPwrArray.clarityPts) {
+            powerOutput = maxPwrArray.caratPts + maxPwrArray.cutPtOut;
             setMaxPower({
                 ...maxPower, 
-                maxPwrOut: maxPwrArray.caratPts,
+                maxPwrOut: powerOutput,
                 caratPts: maxPwrArray.caratPts,
                 clarityPts: maxPwrArray.clarityPts,
+                cutPtCon: maxPwrArray.cutPtCon,
+                cutPtOut: maxPwrArray.cutPtOut,
             });
         } else {
+            powerOutput = maxPwrArray.clarityPts + maxPwrArray.cutPtOut;
             setMaxPower({
                 ...maxPower, 
-                maxPwrOut: maxPwrArray.clarityPts,
+                maxPwrOut: powerOutput,
                 caratPts: maxPwrArray.caratPts,
-                clarityPts: maxPwrArray.clarityPts, 
+                clarityPts: maxPwrArray.clarityPts,
+                cutPtCon: maxPwrArray.cutPtCon,
+                cutPtOut: maxPwrArray.cutPtOut,
             });
         }
     }
@@ -316,24 +337,35 @@ const GemGenerator = () => {
         setClarity("");
         setColor("");
         setCut("");
-        setMax(25);
+        setLvl(5);
+        //setMax(25);
         setValue(0);
+        setLvlQualified(true);
         setMaxPower({
             maxPwrCon: 14,
             maxPwrOut: 0,
             caratPts: 0,
             clarityPts: 0,
             colorPts: 0,
-            cutPts: 0,
+            cutPtCon: 0,
+            cutPtOut: 0,
         });
+        maxPwrArray.caratPts = 0;
+        maxPwrArray.clarityPts = 0;
+        maxPwrArray.colorPts = 0;
+        maxPwrArray.cutPtCon = 0;
+        maxPwrArray.cutPtOut = 0;
         toggle();
         console.clear();
     }
 
     const slider = (event) => {
         const sliderNum = event.target.value;
-        setMax(sliderNum);
+        //const lvlNum = Math.floor(sliderNum / 5);
+        //setMax(sliderNum);
+        setLvl(sliderNum);
         maxPowerContainmentValuer(sliderNum);
+        levelQualValuer(sliderNum, color);
     }
     const typeValuer = (event) => {
         const typeVal = event.target.value;
@@ -343,20 +375,20 @@ const GemGenerator = () => {
         const caratVal = event.target.value;
         setValue((value) => value - (carat * 100) + (caratVal * 100));
         setCarat(caratVal);
-        console.log('caratPts: ' + maxPwrArray.caratPts);
-        console.log('clarityPts: ' + maxPwrArray.clarityPts);
         maxCaratPowerValuer(caratVal);
-        console.log(maxPwrArray);
+        let powerOutput;
         if(maxPwrArray.caratPts >= maxPower.clarityPts) {
+            powerOutput = maxPwrArray.caratPts + maxPower.cutPtOut;
             setMaxPower({
                 ...maxPower, 
-                maxPwrOut: maxPwrArray.caratPts,
+                maxPwrOut: powerOutput,
                 caratPts: maxPwrArray.caratPts,
             });
         } else {
+            powerOutput = maxPower.clarityPts + maxPower.cutPtOut;
             setMaxPower({
                 ...maxPower, 
-                maxPwrOut: maxPower.clarityPts,
+                maxPwrOut: powerOutput,
                 caratPts: maxPwrArray.caratPts,
             });
         }
@@ -381,22 +413,25 @@ const GemGenerator = () => {
         setClarity(clarityVal);
 
         maxClarityPowerValuer(clarityVal);
+        let powerOutput;
         if(maxPower.caratPts >= maxPwrArray.clarityPts) {
+            powerOutput = maxPower.caratPts + maxPower.cutPtOut;
             setMaxPower({
-                ...maxPower, 
-                maxPwrOut: maxPower.caratPts,
+                ...maxPower,
+                maxPwrOut: powerOutput,
                 clarityPts: maxPwrArray.clarityPts,
             });
         } else {
+            powerOutput = maxPwrArray.clarityPts + maxPower.cutPtOut;
             setMaxPower({
                 ...maxPower, 
-                maxPwrOut: maxPwrArray.clarityPts,
-                clarityPts: maxPwrArray.clarityPts, 
+                maxPwrOut: powerOutput,
+                clarityPts: maxPwrArray.clarityPts,
             });
         }
     }
     const colorValuer = (event) => {
-        const colorVal = event.target.value;
+        const colorVal_V = event.target.value;
         function colorNum(val) {
             if (val === "D") return 1;
             else if (val === "E") return 3;
@@ -423,8 +458,11 @@ const GemGenerator = () => {
             else if (val === "Z") return 99;
             else return 100;
         }
-        setValue((value) => value - ((100 - colorNum(color)) * 3) + ((100 - colorNum(colorVal)) * 3));
-        setColor(colorVal);
+        setValue((value) => value - ((100 - colorNum(color)) * 3) + ((100 - colorNum(colorVal_V)) * 3));
+        setColor(colorVal_V);
+        //let lvlNum = Math.floor(max / 5);
+        levelQualValuer(lvl, colorVal_V);
+
     }
     const cutValuer = (event) => {
         const cutVal = event.target.value;
@@ -450,6 +488,18 @@ const GemGenerator = () => {
 
         setValue((value) => value + (cutNum(cut)) - (cutNum(cutVal)));
         setCut(cutVal);
+        cutPointValuer(event.target.value); //cutPointValuer is not in lowercase
+
+        let powerOutput = maxPower.maxPwrOut - maxPower.cutPtOut + maxPwrArray.cutPtOut;
+        let powerContainment = maxPower.maxPwrCon - maxPower.cutPtCon + maxPwrArray.cutPtCon;
+        setMaxPower({
+            ...maxPower, 
+            maxPwrOut: powerOutput,
+            maxPwrCon: powerContainment,
+            cutPtCon: maxPwrArray.cutPtCon,
+            cutPtOut: maxPwrArray.cutPtOut,
+        });
+        
     }
     const maxCaratPowerValuer = (caratInput) => {
         switch (true) {
@@ -632,10 +682,128 @@ const GemGenerator = () => {
                 pwrCon = 33;
                 break;
         }
+        let powerContainment = pwrCon + maxPower.cutPtCon;
         setMaxPower({
             ...maxPower, 
-            maxPwrCon: pwrCon,
+            maxPwrCon: powerContainment,
         });
+    }
+    const cutPointValuer = (cutVal) => {
+        switch (cutVal) {
+            case "Uncut":
+                maxPwrArray.cutPtCon = 0;
+                maxPwrArray.cutPtOut = 0;
+                break;
+            case "Single":
+                maxPwrArray.cutPtCon = 1;
+                maxPwrArray.cutPtOut = 1;
+                break;
+            case "Emerald":
+                maxPwrArray.cutPtCon = 1;
+                maxPwrArray.cutPtOut = 2;
+                break;
+            case "Lozenge":
+                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtOut = 1;
+                break;
+            case "Island":
+                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtOut = 2;
+                break;
+            case "Marquise":
+                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtOut = 4;
+                break;
+            case "Oval":
+                maxPwrArray.cutPtCon = 4;
+                maxPwrArray.cutPtOut = 2;
+                break;
+            case "Brilliant":
+                maxPwrArray.cutPtCon = 3;
+                maxPwrArray.cutPtOut = 3;
+                break;
+            case "Cushion":
+                maxPwrArray.cutPtCon = 5;
+                maxPwrArray.cutPtOut = 1;
+                break;
+            case "Pear":
+                maxPwrArray.cutPtCon = 1;
+                maxPwrArray.cutPtOut = 5;
+                break;
+            case "Princess":
+                maxPwrArray.cutPtCon = 5;
+                maxPwrArray.cutPtOut = 3;
+                break;
+            case "Radiant":
+                maxPwrArray.cutPtCon = 4;
+                maxPwrArray.cutPtOut = 4;
+                break;
+            case "Peruzzi":
+                maxPwrArray.cutPtCon = 3;
+                maxPwrArray.cutPtOut = 5;
+                break;
+            case "Trillion":
+                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtOut = 6;
+                break;
+            case "Portuguese":
+                maxPwrArray.cutPtCon = 5;
+                maxPwrArray.cutPtOut = 5;
+                break;
+            default:
+                break;
+        }
+    }
+    const levelQualValuer = (level, _color) => {
+        // assign a PT value
+        let pts;
+        if (_color === "D") pts = 1;
+        else if (_color === "E") pts = 2;
+        else if (_color === "F") pts = 3;
+        else if (_color === "G") pts = 4;
+        else if (_color === "H") pts = 5;
+        else if (_color === "I") pts = 6;
+        else if (_color === "J") pts = 7;
+        else if (_color === "K") pts = 8;
+        else if (_color === "L") pts = 9;
+        else if (_color === "M") pts = 10;
+        else if (_color === "N") pts = 11;
+        else if (_color === "O") pts = 12;
+        else if (_color === "P") pts = 13;
+        else if (_color === "Q") pts = 14;
+        else if (_color === "R") pts = 15;
+        else if (_color === "S") pts = 16;
+        else if (_color === "T") pts = 17;
+        else if (_color === "U") pts = 18;
+        else if (_color === "V") pts = 19;
+        else if (_color === "W") pts = 20;
+        else if (_color === "X") pts = 21;
+        else if (_color === "Y") pts = 22;
+        else if (_color === "Z") pts = 23;
+
+        if (level === 1 && pts > 2) {
+            setLvlQualified(false);
+        } else if (level === 2 && pts > 5) {
+            setLvlQualified(false);
+        } else if (level === 3 && pts > 8) {
+            setLvlQualified(false);
+        } else if (level === 4 && pts > 11) {
+            setLvlQualified(false);
+        } else if (level === 5 && pts > 14) {
+            setLvlQualified(false);
+        } else if (level === 6 && pts > 16) {
+            setLvlQualified(false);
+        } else if (level === 7 && pts > 18) {
+            setLvlQualified(false);
+        } else if (level === 8 && pts > 20) {
+            setLvlQualified(false);
+        } else if (level === 9 && pts > 22) {
+            setLvlQualified(false);
+        } else if (level === 10 && pts > 23) {
+            setLvlQualified(false);
+        } else {
+            setLvlQualified(true);
+        }
     }
     
     return (
@@ -653,8 +821,13 @@ const GemGenerator = () => {
                 <ModalBody>
                     <div className='box container'>
                         <div className='row pb-3'>
-                            <h4 className='col text-start'>Level: {(max/5)} </h4>
-                            <input type="range" min='1' max='100' value={max} onChange={slider} className='col slider' />
+                            <h4 className='col text-start'>Level: {lvl} </h4>
+                            <input type="range" min='1' step='1' max='20' value={lvl} onChange={slider} className='col slider' />
+                        </div>
+                        <div className='row'>
+                            {!lvlQualified && (
+                                <p className='text-danger'>You are not qualified to wield this stone</p>
+                            )}
                         </div>
                         <div className='row'>
                             <h4 className='col text-start'>Stone: </h4>

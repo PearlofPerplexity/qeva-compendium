@@ -115,7 +115,7 @@ const gemCuts = [
         id: 10,
         name: 'Portuguese',
         image: portuguese,
-        dc: 17,
+        dc: 20,
         daysToCut: 60,
         price: 1500
     },
