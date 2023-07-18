@@ -360,7 +360,7 @@ const GemGenerator = () => {
     }
 
     const slider = (event) => {
-        const sliderNum = event.target.value;
+        const sliderNum = parseInt(event.target.value);
         //const lvlNum = Math.floor(sliderNum / 5);
         //setMax(sliderNum);
         setLvl(sliderNum);
@@ -618,7 +618,8 @@ const GemGenerator = () => {
         }        
     }
     const maxPowerContainmentValuer = (sliderNum) => {
-        const level = sliderNum / 5;
+        // const level = sliderNum / 5;
+        const level = sliderNum;
         let pwrCon;
         switch (true) {
             case (level <= 1):
@@ -754,7 +755,7 @@ const GemGenerator = () => {
                 break;
         }
     }
-    const levelQualValuer = (level, _color) => {
+    const levelQualValuer = (_level, _color) => {
         // assign a PT value
         let pts;
         if (_color === "D") pts = 1;
@@ -781,27 +782,43 @@ const GemGenerator = () => {
         else if (_color === "Y") pts = 22;
         else if (_color === "Z") pts = 23;
 
-        if (level === 1 && pts > 2) {
+        console.log('_level: ' + _level);
+        console.log('_level: ' + typeof _level);
+        console.log('pts: ' + pts);
+        console.log('pts: ' + typeof pts);
+
+        if (_level === 1 && pts > 2) {
             setLvlQualified(false);
-        } else if (level === 2 && pts > 5) {
+            return;
+        } else if (_level === 2 && pts > 5) {
             setLvlQualified(false);
-        } else if (level === 3 && pts > 8) {
+            return;
+        } else if (_level === 3 && pts > 8) {
             setLvlQualified(false);
-        } else if (level === 4 && pts > 11) {
+            return;
+        } else if (_level === 4 && pts > 11) {
             setLvlQualified(false);
-        } else if (level === 5 && pts > 14) {
+            return;
+        } else if (_level === 5 && pts > 14) {
             setLvlQualified(false);
-        } else if (level === 6 && pts > 16) {
+            return;
+        } else if (_level === 6 && pts > 16) {
             setLvlQualified(false);
-        } else if (level === 7 && pts > 18) {
+            return;
+        } else if (_level === 7 && pts > 18) {
             setLvlQualified(false);
-        } else if (level === 8 && pts > 20) {
+            return;
+        } else if (_level === 8 && pts > 20) {
             setLvlQualified(false);
-        } else if (level === 9 && pts > 22) {
+            return;
+        } else if (_level === 9 && pts > 22) {
             setLvlQualified(false);
-        } else if (level === 10 && pts > 23) {
+            return;
+        } else if (_level === 10 && pts > 23) {
             setLvlQualified(false);
+            return;
         } else {
+            console.log('why?');
             setLvlQualified(true);
         }
     }
@@ -822,7 +839,7 @@ const GemGenerator = () => {
                     <div className='box container'>
                         <div className='row pb-3'>
                             <h4 className='col text-start'>Level: {lvl} </h4>
-                            <input type="range" min='1' step='1' max='20' value={lvl} onChange={slider} className='col slider' />
+                            <input type="range" min={1} step={1} max={20} value={lvl} onChange={slider} className='col slider' />
                         </div>
                         <div className='row'>
                             {!lvlQualified && (

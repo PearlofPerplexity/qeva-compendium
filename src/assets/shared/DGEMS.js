@@ -564,28 +564,28 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Babel",
-                        description: ""
+                        name: "Voiceless",
+                        description: "A creature is unable to speak for one round."
                     },
                     {
                         id: 1, 
                         name: "Babel",
-                        description: "A creature must succeed on a DC 13 WIS Saving throw or forget one language."
+                        description: "A creature must succeed on a DC 13 WIS Saving throw or forget one language for an hour."
                     },
                     {
                         id: 2, 
-                        name: "Disarm",
-                        description: "Maximize an NPC's attitude toward you"
+                        name: "AutoImmune",
+                        description: "Minimize an NPC's attitude toward their party."
                     },
                     {
                         id: 3, 
-                        name: "Tales of the Land",
-                        description: "Speak with earth upon touch"
+                        name: "Bone Dry",
+                        description: "Convince the land to spurn its hosts. It will not produce sustenance."
                     },
                     {
                         id: 4, 
-                        name: "Celestial Tongue",
-                        description: "You can comprehend the speech of ethereals"
+                        name: "Celestial Confusion",
+                        description: "You can mask the presence of a wraith as a spirit. A creature must pass a 15 DC Religion check or be persuaded."
                     },
                     {
                         id: 5, 
@@ -646,28 +646,28 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Random Act",
-                        description: "Know the weaknesses of a random being within 60 ft that you can supply"
+                        name: "Lone Deer",
+                        description: "Know the weakness of a random being within 60 ft that you can leverage."
                     },
                     {
                         id: 1, 
                         name: "Needy",
-                        description: "Know another being's needs. This also adds +2 to medicine checks"
+                        description: "Know another being's vulnerabilities in battle. This adds +2 to an attack."
                     },
                     {
                         id: 2, 
-                        name: "Intuition",
-                        description: "Know another being's desires. This also adds +2 to performance checks"
+                        name: "Temptation",
+                        description: "Know another being's desires. This also adds +2 to persuasion checks"
                     },
                     {
                         id: 3, 
-                        name: "Empath",
-                        description: "Know another being's sentiments."
+                        name: "Passion",
+                        description: "Know another being's passions and true intentions."
                     },
                     {
                         id: 4, 
-                        name: "Key to the Heart",
-                        description: "Know both a being's needs/desires and a way to resolve them"
+                        name: "Groin of the Heart",
+                        description: "Know a being's vulnerabilities and temptations and and how to exploit them."
                     },
                     {
                         id: 5, 
@@ -728,12 +728,12 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "LVL 1 Divination",
+                        name: "LVL 1 Void Magic",
                         description: "Size: 5ft cube, Range: 15ft"
                     },
                     {
                         id: 1, 
-                        name: "LVL 2 Divination",
+                        name: "LVL 2 Void Magic",
                         description: "Size: 10ft cube, Range: 30ft"
                     },
                     {
@@ -743,12 +743,12 @@ export const DGEMS = [
                     },
                     {
                         id: 3, 
-                        name: "LVL 3 Divination",
+                        name: "LVL 3 Void Magic",
                         description: "Size: 15ft cube, Range: 60ft"
                     },
                     {
                         id: 4, 
-                        name: "LVL 4 Divination",
+                        name: "LVL 4 Void Magic",
                         description: "Size: 20ft cube, Range: 120ft"
                     },
                     {
@@ -769,28 +769,28 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Healing Spirit",
-                        description: "You can cast the healing spirit spell"
+                        name: "Torchered Soul",
+                        description: "You can cast the healing spirit spell, but instead of healing, it brings damage."
                     },
                     {
                         id: 1, 
-                        name: "Preparation",
-                        description: "You can grant up to 6 members in your party, 5 temporary hit points that will last 1 minute."
+                        name: "Cripple",
+                        description: "You remove -5 temporary hit points from 6 creatures for 1 minute."
                     },
                     {
                         id: 2, 
-                        name: "Mass Cure Wounds",
-                        description: "You can cast the Mass Cure Wounds spell"
+                        name: "Mass Gouge Wounds",
+                        description: "You can cast the Mass Cure Wounds spell, but insttead of healing, it brings damage."
                     },
                     {
                         id: 3, 
-                        name: "Power Word Heal",
-                        description: "You can cast the Power Word Heal spell"
+                        name: "Power Word of Pain",
+                        description: "You can cast the Power Word Heal spell, but instead of healing, it brings damage."
                     },
                     {
                         id: 4, 
-                        name: "Mass Heal",
-                        description: "You can cast the Mass Heal spell"
+                        name: "Mass Void",
+                        description: "You can cast the Mass Heal spell, but instead of healing, it brings damage."
                     },
                     {
                         id: 5, 
@@ -810,28 +810,28 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Stillness of Mind",
-                        description: "As a bonus action, you can end one Effect on yourself that is causing you to be Charmed or Frightened"
+                        name: "Craze of Mind",
+                        description: "You are wild. You can push past any Effect on yourself for one round or action."
                     },
                     {
                         id: 1, 
-                        name: "Nimble",
-                        description: "You have the evasion feat"
+                        name: "Charger",
+                        description: "If you move at least 10 feet in a straight line immediately before taking this bonus action, you either gain a +5 bonus to the attackls damage roll or push the target up to 10 feet away from you (if you choose to shove and you succeed)."
                     },
                     {
                         id: 2, 
-                        name: "Deft Hands",
-                        description: "You have the Deflect Missiles feat"
+                        name: "Fury",
+                        description: "You can fire three arrows at once."
                     },
                     {
                         id: 3, 
-                        name: "Dual-Wield",
-                        description: "You can dual wield, making two attack strikes for up to 1 minute"
+                        name: "Tornado",
+                        description: "You can attack all enemies within a 5ft radius."
                     },
                     {
                         id: 4, 
-                        name: "Master of Dexterity",
-                        description: "You can dash, dodge, disengage and attack all in the same turn"
+                        name: "Devil",
+                        description: "You must use the dash, dodge, disengage and attack all in the same turn. You must expend all feet in your dash action. You attack every creature that comes in your path. Each time you attack, you remove -1 from your attack roll."
                     },
                     {
                         id: 5, 
@@ -851,28 +851,28 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Angelic Decree",
-                        description: "Seek ethereal counsel. The stone will pull in the direction they bid you go"
+                        name: "Ante",
+                        description: "You can gamble with your blows. Roll a d4. If you roll a d2 or higher, you add + 1 to your attack roll. If you roll a 1, you remove -1 from your defense for one round."
                     },
                     {
                         id: 1, 
-                        name: "Wisdom Sense",
-                        description: "Seek DIA's counsel on a course of action. You will receive a distinct, one-word feeling"
+                        name: "Gamble",
+                        description: "You can gamble with your blows. Roll a d12. If you roll a d7 or higher, you have advantage on your attack. If you roll lower, you have disadvantage on defense for one round."
                     },
                     {
                         id: 2, 
-                        name: "Enlighten",
-                        description: "Distill insight into another sentient being no matter their distance or attitude"
+                        name: "Parlay",
+                        description: "You can double down on a failed ability roll. Roll another d12. If it succeeds (1 + original required roll), you face double the rewards of the earlier ability."
                     },
                     {
                         id: 3, 
-                        name: "Noticer",
-                        description: "An insight or perception will reveal itself to you that will give you wisdom on the best course of action"
+                        name: "Push",
+                        description: "A blow for a blow. If an enemy strikes you, roll a D20. Roll a D12 or higher and that enemy receives the same damage."
                     },
                     {
                         id: 4, 
-                        name: "Eyes Open",
-                        description: "Bring anything to sentience allowing it a deeper ability to communicate with you"
+                        name: "All In",
+                        description: "You attack any opponent. If it succeeds, the enemy is vanquished. If it fails, you make a fatal error and any successful attack on you that round will kill you."
                     },
                     {
                         id: 5, 
@@ -892,22 +892,22 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Fate",
-                        description: "Search your future for positive possibilities"
+                        name: "Fatal Fate",
+                        description: "Search your future for negative possibilities"
                     },
                     {
                         id: 1, 
-                        name: "Fortune",
-                        description: "Search another's future for positive possibilities"
+                        name: "Bleak Fortunes",
+                        description: "Search another's future for negative possibilities"
                     },
                     {
                         id: 2, 
-                        name: "Destiny",
+                        name: "Dystopia",
                         description: "Search the future of the ground where you stand"
                     },
                     {
                         id: 3, 
-                        name: "Endstate",
+                        name: "Evil Days Ahead",
                         description: "Search the future of an object"
                     },
                     {
@@ -934,28 +934,28 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Humble Beginnings",
-                        description: "Your pearl is vulnerable to cracking"
+                        name: "Confidence",
+                        description: "On your next level-up, you can select two other stones to master instead of one. This ability can only be used once."
                     },
                     {
                         id: 1, 
-                        name: "Strong Foundation",
-                        description: "Your pearl is hardened and uncrackable"
+                        name: "Brittle",
+                        description: "You can move any stone 1 level up, before a level-up. However, this makes it brittle. Any stone you use will immediately blacken if it's quality is opposed or a gem roll is failed."
                     },
                     {
                         id: 2, 
-                        name: "Less of Self",
-                        description: "You have mastery over whitestone"
+                        name: "Self",
+                        description: "You can use the power of any other person's stone's for once action. Once you use it, it blackens. This only applies if you align to it without fail for as long as you hold it."
                     },
                     {
                         id: 3, 
-                        name: "Caretaker",
-                        description: "You can hold any stone without affecting its color"
+                        name: "Grandmaster",
+                        description: "You can master all the cardinal stones. If you fail a gem ability roll in any of them or oppose their qualities, all stones you have chosen to master are blackened and return to level 1."
                     },
                     {
                         id: 4, 
-                        name: "Grandmaster",
-                        description: "You have mastery over all the cardinal stones"
+                        name: "Reign",
+                        description: "You can challenge the Great Demon. If your following of wraiths is strong enough, you will take his place as ruler of their kind in the ether."
                     },
                     {
                         id: 5, 
