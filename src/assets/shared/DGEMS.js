@@ -820,7 +820,7 @@ export const DGEMS = [
                     },
                     {
                         id: 2, 
-                        name: "Fury",
+                        name: "Firestorm",
                         description: "You can fire three arrows at once."
                     },
                     {
@@ -892,7 +892,7 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "Fatal Fate",
+                        name: "Fatal",
                         description: "Search your future for negative possibilities"
                     },
                     {
@@ -940,7 +940,7 @@ export const DGEMS = [
                     {
                         id: 1, 
                         name: "Brittle",
-                        description: "You can move any stone 1 level up, before a level-up. However, this makes it brittle. Any stone you use will immediately blacken if it's quality is opposed or a gem roll is failed."
+                        description: "You can move any stone 1 level up, before a level-up. However, this makes it vulerable. Any stone you use will immediately blacken if it's quality is opposed or a gem roll is failed."
                     },
                     {
                         id: 2, 
@@ -963,7 +963,7 @@ export const DGEMS = [
                         description: "You are one with the black pearl. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
                     }
                 ]
-            },
+            }
         ]
     }
 ];

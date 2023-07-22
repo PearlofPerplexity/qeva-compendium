@@ -13,10 +13,9 @@ const HistCard = (props) => {
                         <div className="box d-flex align-items-center mb-lg-0 p-3">
                             <h3 className="mb-0 p-3">{props.array.name}</h3>
                         </div>
-                        {props.array.image ? (
+                        {props.array.image && (
                             <img className='card-img' src={props.array.image} alt={props.array.imageAlt} />
-                        ) 
-                        : ('')}
+                        )}
                     </div>
                 </div>
             </section>
@@ -31,7 +30,7 @@ const HistCard = (props) => {
                                             <h5 className="card-title fs-4">{topic.name}</h5>
                                             <p>{topic.year}</p>
                                             <p className="card-text">{topic.description}</p>
-                                            {topic.subtopics ? (
+                                            {topic.subtopics && (
                                                 topic.subtopics.map((props) => {
                                                     return (
                                                         <p key={props.id}>
@@ -39,8 +38,7 @@ const HistCard = (props) => {
                                                             {props.description}
                                                         </p>
                                                     )
-                                                })
-                                                ) : ( '' )
+                                                }))
                                             }
                                         </div>
                                     </div>

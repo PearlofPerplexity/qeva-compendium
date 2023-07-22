@@ -7,6 +7,15 @@ import uncorrupted from '../imgs/logos/uncorrupted-white.png';
 import toppler from '../imgs/logos/topplers-white.png';
 import avlimeth from '../imgs/logos/helmsman-white.png';
 import feather from '../imgs/logos/feather.png';
+import genograve from '../imgs/genograve.png';
+import initiate from '../imgs/classes/initiate-white.png';
+import _caracadre from '../imgs/classes/_caracadre-white.png';
+import cadre from '../imgs/classes/cadre-white.png';
+import kikadre from '../imgs/classes/kikadre-white.png';
+import krykadre from '../imgs/classes/krykadre-white.png';
+import masqadre from '../imgs/classes/masqadre-white.png';
+import maulQadre from '../imgs/classes/maulQadre-white.png';
+import grandCaracadre from '../imgs/classes/grandCaracadre.png';
 import { DNDLEVELS } from './DNDLEVELS';
 
 /* CLASSES: 
@@ -462,7 +471,70 @@ export const CLASSES = [
             },
             {
                 id: 4,
-                name: `Pathways`,
+                name: `Ranks`,
+                description: ``,
+                subtopics: [
+                    {
+                        id: 0,
+                        name: 'Initiate',
+                        description: `This Caracadre has pledged themself to the creed, but has not yet bonded to a stone.`,
+                        image: initiate,
+                        imageAlt: `caracadre initiate rank`
+                    },
+                    {
+                        id: 1,
+                        name: 'Caracadre',
+                        description: `Mastery of one stone. (Though the term, “Caracadre” applies to any of this order.)`,
+                        image: _caracadre,
+                        imageAlt: `caracadre rank`
+                    },
+                    {
+                        id: 2,
+                        name: 'Cadre',
+                        description: `Mastery of two stones`,
+                        image: cadre,
+                        imageAlt: `cadre (caracadre) rank`
+                    },
+                    {
+                        id: 3,
+                        name: 'Kikadre',
+                        description: `Mastery of three stones`,
+                        image: kikadre,
+                        imageAlt: `kikadre (caracadre) rank`
+                    },
+                    {
+                        id: 4,
+                        name: 'Krykadre',
+                        description: `Mastery of four stones`,
+                        image: krykadre,
+                        imageAlt: `krykadre (caracadre) rank`
+                    },
+                    {
+                        id: 5,
+                        name: 'Masqadre',
+                        description: `Mastery of five stones`,
+                        image: masqadre,
+                        imageAlt: `masqadre (caracadre) rank`
+                    },
+                    {
+                        id: 6,
+                        name: 'Maul Qadre',
+                        description: `Mastery of six stones`,
+                        image: maulQadre,
+                        imageAlt: `maul qadre (caracadre) rank`
+                    },
+                    {
+                        id: 7,
+                        name: 'Grand Qaraqadre',
+                        description: `Mastery of all seven stones`,
+                        image: grandCaracadre,
+                        imageAlt: `grand caracadre rank`
+                    },
+                ]
+            },
+            {
+                id: 5,
+                name: `Factions`,
                 description: `The order of the caracadre is so large that it splits and takes many forms. It is possible for a caracadre to abide by one, many or none of the features below:`,
                 subtopics: [
                     {
@@ -477,38 +549,33 @@ export const CLASSES = [
                     },
                     {
                         id: 2,
-                        name: `Oathed Caracadre`,
-                        description: `An oathed caracadre is one who wishes to take an oath before DIA and a devote themselves further to HIM beyond the stones themselves. To accomplish this, such caracadre would travel to Agate during the summer or autumn equinox - the only days the waters were calm enough to attempt the journey. On the slick surface of Agate, they would recite the oracle oath and bind themselves to DIA.`
-                    },
-                    {
-                        id: 3,
                         name: `The Sisterhood`,
                         description: `Females are less common in the sojourning vigilante world of the caracadre so when a female caracadre finds another, it is a unique bond. Born out of this bond, is the sisterhood, which is a collective of women caracadre. Some travel together, while others alone greeting each other only by bird and crossing paths.`
                     },
                     {
-                        id: 4,
+                        id: 3,
                         name: `Dark Caracadre`,
                         description: `Unfortunately, Dark caracadre there came to be also. Instead of mastering the stones, they learned to open and synthesize stones and bend them to their will.`
                     },
                 ]
             },
             {
-                id: 5,
+                id: 6,
                 name: `Mastery of Stones`,
                 description: `Few caracadre ever mastered more than one stone which was a feat in itself. To master one stone was to be worthy of it, bond with it, master its qualities and maintain the bond. Those who tried to cheat the stone would watch the stone slowly dim to darkness. It is for these reasons that the Caracadre were careful in their selection of stone. A chosen stone was kept close - either set into a weapon, in a ring or hung around the neck.`
             },
             {
-                id: 6,
+                id: 7,
                 name: `The Grand Caracadre`,
                 description: `To become a Grand Caracadre was the goal of most, for a Grand Caracadre was one who mastered all seven incidental stones. Such a master of stones was rarer than even the oracles whose greatness they rivaled, despite no affinity to divination. They were quicker and lighter than the wind wielded by the oracles and stronger than the crystals they carried. A grand caracadre was given equal status of an oracle and welcomed within their ranks and sacred spaces.`
             },
             {
-                id: 7,
+                id: 8,
                 name: `The Crested Caracara`,
                 description: `The name “Caracadre is derived from the two words “caracara” and “cadre”. A cadre is one specially trained for a profession. In suit, the caracadre's unique set of skills make them specially equipped for a singular task: to protect the marginalized in the far reaches of society. The Crested “Caracara” is a bird of prey; the only bird brave enough to fly over the black shores of Avlim (besides the wretched vulture). The caracadre see themselves as keeping a watchful eye over the noble races and preying on those who do evil - even in places where it is darkest. The caracadre do not look solely to the crested caracara for their name, but also for their aid. Over the years, the caracadre have trained the caracara to strike down small prey and carry written messages in their talons. One must but offer the birds a token of friendship and then set auditory markers: a marker for themselves and a marker for those they wish to find. It is an amicable relationship between the two beyond the puncture wounds the bird leaves in the cadre's arm. This being said there is healthy mutual respect as they both seem to understand each other as fierce hunters.`
             },
             {
-                id: 8,
+                id: 9,
                 name: `Song of the Caracadre`,
                 description: `The song of the caracadre is a song often sung by homesick caracadre traveling through the harsher lands of Qeṽa.`,
                 subtopics: [
@@ -584,7 +651,41 @@ export const CLASSES = [
             {
                 id: 1,
                 name: `The Genogravé`,
-                description: `There are many methods for a watcher to select a stone. They may visit an acolyte or they may read the stone descriptions in the texts of the SenSavye. They may even decide based on instinct. However, the method recommended by the oracles is to consult the Genogravé. The Genogravé is a painting, which can be found in every eldar cathedral in Avlim and the outer isles. Though they depict the same scene, each Genogravé depicts it differently. The oracles say a caracadre ought to sit before the painting and ask themselves, “What resonates with you in the painting?” Within the painting are powerful notes of every stone and these notes draw out the emotions of the viewer. Some argue and most avlimeth affirm that it is the emotional piece of art ever created and likely so because it is inspired by DIA HIMSELF. The attribute the viewer is drawn to is the attribute they ought to pursue. An initiate may do this to select their first stone or a caracadre may do it to identify their next stone.`
+                description: `There are many methods for a watcher to select a stone. They may visit an acolyte or they may read the stone descriptions in the texts of the SenSavye. They may even decide based on instinct. However, the method recommended by the oracles is to consult the Genogravé. The Genogravé is a painting, which can be found in every eldar cathedral in Avlim and the outer isles. Though they depict the same scene, each Genogravé depicts it differently. The oracles say a caracadre ought to sit before the painting and ask themselves, “What resonates with you in the painting?” Within the painting are powerful notes of every stone and these notes draw out the emotions of the viewer. Some argue and most avlimeth affirm that it is the emotional piece of art ever created and likely so because it is inspired by DIA HIMSELF. The attribute the viewer is drawn to is the attribute they ought to pursue. An initiate may do this to select their first stone or a caracadre may do it to identify their next stone.`,
+                image: genograve,
+                imageAlt: `Genograve painting`
+            },
+            {
+                id: 2,
+                name: `Pathways`,
+                description: ``,
+                subtopics: [
+                    {
+                        id: 0,
+                        name: `Tour of the Guard`,
+                        description: `All Avlimeth, no matter their calling must take a tour of the guard, to cement their position as an avlimeth. THis tour of the guard is one year spent in Avlim devoting themselves to justice in Avlim. Most take multiple tour of duties, but only one is required. Any tour of the guard must be followed by a month of rest, which they call a "breath".`
+                    },
+                    {
+                        id: 1,
+                        name: `Watchmen`,
+                        description: `A watchmen takes watch over a cathedral. They are different than then thenyls, which are the priamry guardians of cathedrals; haelas or spirits, which have surrendered their invisibility to take eternal guard over a cathedral. Avlimeth dedicated as watchmen join them in tending to the cathedrals.`
+                    },
+                    {
+                        id: 3,
+                        name: `Lone Oathed Avlimeth`,
+                        description: `An oathed avlimeth is one who wishes to take an oath before DIA and a devote themselves further to HIM beyond the stones themselves. To accomplish this, such avlimeth would travel to Agate during the summer or autumn equinox - the only days the waters were calm enough to attempt the journey. On the slick surface of Agate, they would recite the oracle oath and bind themselves to DIA. The nature of their oath makes them unlikely companions as they are so bent on their oath they will not hesitate to abandon their kin when it calls.`
+                    },
+                    {
+                        id: 4,
+                        name: `Eduël`,
+                        description: `The Eduël believe that life requires balace. Without darkness there is no light. An eduël who masters a moral stone seeks another who has mastered its dark counterpart. They then travel together and never leave each other's side. They believe such a bond is necessary to keep balance in the world.`   
+                    },
+                    {
+                        id: 5,
+                        name: `Dark Avlimeth`,
+                        description: `Unfortunately, Dark avlimeth there are also. Instead of mastering the stones, they delve into their darkness, believing more could be accomplished through evil than good. In some cases, an avlimeth is so convinced they see evil when they look upon the Genogravé that they believe they are destine to pursue it.`
+                    },
+                ]
             }
         ]
     },

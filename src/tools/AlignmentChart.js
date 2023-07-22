@@ -16,14 +16,11 @@ import { DGEMS } from '../assets/shared/DGEMS';
 
 const AlignmentChart = () => {
     
-    const gemPoints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, "+1", 33];
-    
-    // const gemClarity = ["I", "I3", "I2", "I1", "SI3", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL"];
-
-    const gemColor = ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "", ""];
-
-    const gemCarat = [0.05, 0.1, 0.15, 0.2, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 4.5, 5.25, 6, 7.25, 8.25, 9];
-
+    // const gemPoints20 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20];
+    const gemPoints40 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, '...', 30, '...', 40];
+    const gemClarity = ["I", "I3", "I2", "I1", "SI3", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL"];
+    const gemColor = ["Z","Y","X","W","V","U","T","S","R","Q","P","O","N","M","L","K","J","I","H","G","F","E","D",""];
+    const gemCarat = [0.05, 0.1, 0.15, 0.2, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 2.75, 3, 3.25, 3.5, '...', 4.75, '...', 6];
     const lvls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
     const [modal, setModal] = useState(false);
@@ -52,9 +49,186 @@ const AlignmentChart = () => {
     const qualityToggle = () => setQuality(!quality);
     const alignToggle = () => setAlign(!align);
 
+    const [gem, setGem] = useState({
+        lvl: 1,
+        carat: 0.1,
+        containmentPts: 2,
+        color: "Z",
+        clarity: "I",
+        outputPts: 1,
+    });
+
+    const handleClarity = (clarity) => {
+        let alignPts, _color;
+        switch (clarity) {
+            case "I":
+                alignPts = 1;
+                _color = "Z";
+                break;
+            case "I3":
+                alignPts = 3;
+                _color = "X";
+                break;
+            case "I2":
+                alignPts = 5;
+                _color = "V";
+                break;
+            case "I1":
+                alignPts = 7;
+                _color = "T";
+                break;
+            case "SI3":
+                alignPts = 9;
+                _color = "R";
+                break;
+            case "SI2":
+                alignPts = 11;
+                _color = "P";
+                break;
+            case "SI1":
+                alignPts = 13;
+                _color = "N";
+                break;
+            case "VS2":
+                alignPts = 15;
+                _color = "L";
+                break;
+            case "VS1":
+                alignPts = 17;
+                _color = "J";
+                break;
+            case "VVS2":
+                alignPts = 19;
+                _color = "H";
+                break;
+            case "VVS1":
+                alignPts = 25;
+                _color = "F";
+                break;
+            case "FL":
+                alignPts = 35;
+                _color = "D";
+                break;
+        }
+        setGem({
+            ...gem,
+            outputPts: alignPts,
+            clarity: clarity,
+            color: _color,
+        });
+    }
+
+    const handleCarat = (carat) => {
+        let alignPts, _lvl;
+        switch (carat) {
+            case 0.05:
+                alignPts = 1;
+                _lvl = 1;
+                break;
+            case 0.1:
+                alignPts = 2;
+                _lvl = 1;
+                break;
+            case 0.15:
+                alignPts = 3;
+                _lvl = 2;
+                break;
+            case 0.2:
+                alignPts = 4;
+                _lvl = 2;
+                break;
+            case 0.25:
+                alignPts = 5;
+                _lvl = 3;
+                break;
+            case 0.35:
+                alignPts = 6;
+                _lvl = 3;
+                break;
+            case 0.45:
+                alignPts = 7;
+                _lvl = 4;
+                break;
+            case 0.55:
+                alignPts = 8;
+                _lvl = 4;
+                break;
+            case 0.65:
+                alignPts = 9;
+                _lvl = 5;
+                break;
+            case 0.75:
+                alignPts = 10;
+                _lvl = 5;
+                break;
+            case 1:
+                alignPts = 11;
+                _lvl = 6;
+                break;
+            case 1.25:
+                alignPts = 12;
+                _lvl = 6;
+                break;
+            case 1.5:
+                alignPts = 13;
+                _lvl = 7;
+                break;
+            case 1.75:
+                alignPts = 14;
+                _lvl = 7;
+                break;
+            case 2:
+                alignPts = 15;
+                _lvl = 8;
+                break;
+            case 2.5:
+                alignPts = 16;
+                _lvl = 8;
+                break;
+            case 2.75:
+                alignPts = 17;
+                _lvl = 9;
+                break;
+            case 3:
+                alignPts = 18;
+                _lvl = 9;
+                break;
+            case 3.25:
+                alignPts = 19;
+                _lvl = 10;
+                break;
+            case 3.5:
+                alignPts = 20;
+                _lvl = 10;
+                break;
+            case 4.75:
+                alignPts = 30;
+                _lvl = 15;
+                break;
+            case 6:
+                alignPts = 40;
+                _lvl = 20;
+                break;
+        }
+        setGem({
+            ...gem,
+            containmentPts: alignPts,
+            carat: carat,
+            lvl: _lvl,
+        });
+    }
+
     const reset = () => {
         toggle();
-        setDetail("")
+        setDetail("");
+        setGem({
+            lvl: 1,
+            carat: 0.1,
+            containmentPts: 2,
+            color: "Z",
+            clarity: "I",
+            outputPts: 1,
+        });
         console.clear();
     }
 
@@ -174,61 +348,73 @@ const AlignmentChart = () => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
+                        <div className='row text-center'>
+                            <h6 className='col'><strong>CARAT: {gem.carat}</strong></h6>
+                            <p className='col'>Req. Level: {gem.lvl}</p>
+                            <p className='col'>Containment Pts: {gem.containmentPts}</p>
+                            <h6 className='col'><strong>CLARITY: {gem.clarity}</strong></h6>
+                            <p className='col'>Req. Color: {gem.color}</p>
+                            <p className='col'>Output Pts: {gem.outputPts}</p>
+                        </div>
+                        <div className='row text-center'>
+                        </div>
                         <table className="table table-hover table-responsive table-striped align-middle">
                             <thead>
                                 <tr>
+                                    <th colSpan="25">MAX Power &#40;Pts&#41; Containment</th>
+                                </tr>
+                                <tr>
                                     <th scope='col'>Alignment Pts</th>
-                                    {gemPoints.map((point, index) => (
-                                        <td key={index}>{point}</td>
+                                    {gemPoints40.map((point, index) => (
+                                        <td scope='col' key={index}>{point}</td>
+                                    ))}
+                                </tr>
+                                <tr>
+                                    <th scope="col">Req. LVL</th>
+                                    <td colSpan="2 table-active">lvl 1</td>
+                                    <td colSpan="2">lvl 2</td>
+                                    <td colSpan="2">lvl 3</td>
+                                    <td colSpan="2">lvl 4</td>
+                                    <td colSpan="2">lvl 5</td>
+                                    <td colSpan="2">lvl 6</td>
+                                    <td colSpan="2">lvl 7</td>
+                                    <td colSpan="2">lvl 8</td>
+                                    <td colSpan="2">9</td>
+                                    <td colSpan="2">10</td>
+                                    <td colSpan="2">15</td>
+                                    <td colSpan="2">20</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">Carat</th>
+                                    {gemCarat.map((carat, index) => (
+                                        <td key={index} className='cardinal' onClick={() => handleCarat(carat)}>{carat}</td>
+                                    ))}
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th colSpan="25">MAX Power &#40;Pts&#41; Output </th>
+                                </tr>
+                                <tr>
+                                    <th scope='col'>Alignment Pts</th>
+                                    {gemPoints40.map((point, index) => (
+                                        <td colSpan='' key={index}>{point}</td>
+                                    ))}
+                                </tr>
+                                <tr>
+                                    <th scope='col'>Req. Color</th>
+                                    {gemColor.map((color, index) => (
+                                        <td key={index}>{color}</td>
                                     ))}
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th colSpan="26">MAX Power &#40;Pts&#41; Containment</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">LVL</th>
-                                    <td colSpan="2 table-active">lvl 1</td>
-                                    <td colSpan="3">lvl 2</td>
-                                    <td colSpan="3">lvl 3</td>
-                                    <td colSpan="3">lvl 4</td>
-                                    <td colSpan="3">lvl 5</td>
-                                    <td colSpan="2">lvl 6</td>
-                                    <td colSpan="2">lvl 7</td>
-                                    <td colSpan="2">lvl 8</td>
-                                    <td colSpan="2">lvl 9</td>
-                                    <td>10</td>
-                                    <td>...</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <th scope='col'>Color</th>
-                                    {gemColor.map((color, index) => (
-                                        <td key={index}>{color}</td>
-                                    ))}
-                                </tr>
-                                <tr>
-                                    <th colSpan="26">MAX Power &#40;Pts&#41; Output </th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Clarity</th>
-                                    <td colSpan="2">I3</td>
-                                    <td colSpan="3">I2</td>
-                                    <td colSpan="3">I1</td>
-                                    <td colSpan="3">SI3</td>
-                                    <td colSpan="3">SI2</td>
-                                    <td colSpan="2">SI1</td>
-                                    <td colSpan="2">VS2</td>
-                                    <td colSpan="2">VS1</td>
-                                    <td colSpan="2">VVS2</td>
-                                    <td colSpan="1">VVS1</td>
-                                    <td colSpan="2">FL</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Carat</th>
-                                    {gemCarat.map((carat, index) => (
-                                        <td key={index}>{carat}</td>
+                                    <th scope='col'>Clarity</th>
+                                    {gemClarity.map((clar, index) => (
+                                        <td colSpan='2' key={index} className='cardinal' onClick={() => handleClarity(clar)}>{clar}</td>
                                     ))}
                                 </tr>
                             </tbody>
