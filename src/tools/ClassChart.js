@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { CLASSES } from '../assets/shared/CLASSES';
+import { RACES } from '../assets/shared/RACES';
 
 const dndClasses = [...CLASSES.slice(0,8), ...CLASSES[9].topics];
 
@@ -88,8 +89,8 @@ const ClassChart = () => {
                         <p className='text-center'>
                             <select name='classes' className="ms-2 charPicklist" id='class-select' onChange={handleClass}>
                                 <option value="all">--Select Classes--</option>
-                                {dndClasses.map((classOpt) => (
-                                    <option value={classOpt.name} key={classOpt.id}>{classOpt.name}</option>
+                                {dndClasses.map((classOpt, index) => (
+                                    <option value={classOpt.name} key={index}>{classOpt.name}</option>
                                 ))}
                             </select>
                             {(dndClasses.length !== selectedClasses.length) && selectedClasses.map((e, index) => (
@@ -144,6 +145,7 @@ const ClassChart = () => {
                                     <td>Hit Die</td>
                                     <td>Equipment</td>
                                     <td>Proficiencies</td>
+                                    <td>Allowed Races</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -161,6 +163,7 @@ const ClassChart = () => {
                                                 <strong>Saving Throws: </strong>{cl.saving_throw_prof ? cl.saving_throw_prof.join(', ') : ('none')}, 
                                                 <strong>Skills: </strong>{cl.skill_prof ? cl.skill_prof.join(', ') : ('none')}
                                             </td>
+                                            <td>{cl.race.join(', ')}</td>
                                         </tr>
                                         {cl.topics && checkbox && (
                                             <tr className='table table-container table-hover'>

@@ -40,7 +40,7 @@ const RacePage = () => {
                     <SingRaceCard array={RACES[8]} left={RACES[7]} right={RACES[9]} />
                 } />
                 <Route path='/ethereals' element={
-                    <SingRaceCard array={RACES[9]} left={RACES[8]} right={RACES[0]} />
+                    <MultiRaceCards array={RACES[9]} left={RACES[8]} right={RACES[0]} />
                 } />
             </Routes>
         </div>

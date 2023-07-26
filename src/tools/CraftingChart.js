@@ -466,7 +466,7 @@ const concoctions = [
     },
     {
         id: 26,
-        name: "Leeching Solution Brew",
+        name: "Leeching Solution",
         type: 'Meddling',
         description: "You change a body of water into another liquid (liquid required to craft).",
         ingredients: [

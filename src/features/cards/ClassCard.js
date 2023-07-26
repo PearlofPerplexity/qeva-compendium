@@ -37,7 +37,7 @@ const ClassCard = (props) => {
                 <li className="list-group-item"><b>Goal</b> {goal}</li>
                 <li className="list-group-item"><b>Sacred Text</b> {sacredText}</li>
                 <li className="list-group-item"><b>World Knowledge</b> {worldKnowledge}</li>
-                <li className="list-group-item"><b>Possible Races</b> {race}</li>
+                <li className="list-group-item"><b>Possible Races</b> {race.join(', ')}</li>
                 <li className="list-group-item"><b>Primary Weapon</b> {primaryWeapon}</li>
               </ul>
             </div>

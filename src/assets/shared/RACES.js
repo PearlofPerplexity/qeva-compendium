@@ -18,6 +18,7 @@ import half from '../imgs/races/half.png';
 import aeoki from '../imgs/races/aeoki.png';
 import treefolk from '../imgs/races/treefolk.png';
 import spirit from '../imgs/ethereal/spirit.png';
+import spectre from '../imgs/ethereal/spectre.png';
 import user from '../imgs/races/user.png';
 
 /* INCLUDES:
@@ -728,17 +729,15 @@ export const RACES = [
         lifespan: `Immortal`,
         height: `7-8 ft`,
         weight: `Weightless`,
-        appearance: `Invisible`,
         language: `Celestial`,
         government: `Theocracy`,
         residence: `The Etherworld`,
+        foundedOrders: `Avlimeth`,
         description: `Spirits (or Haelas in the celestial tongue) are the original and intended form of all ethereals. They dwell and act from the ether as immortal beings and are perfectly aligned with DIA meaning they have never committed evil. However, this does not mean that they do the greatest good. Some are free of evil and still lazy, unfocused or simply untapped of their full potential.`,
         image: spirit,
         speed: 30,
         size: 'M',
-        wis: '+2',
         dex: '+2',
-        cha: '+2',
         proficiencies: ['-'],
         languages: ['celestial', '*all'],
         abilities: [
@@ -763,6 +762,50 @@ export const RACES = [
                 description: "In their truesight, spirits can see beyond physical things. They can see into the soul. As a spirit, once per day you can enter the mind of a physical being."
             }
         ],
-        imageAlt: `Qeṽa Ethereal`
+        topics: [
+            {
+                id: 0,
+                name: `Spirits`,
+                singName: "Spirit",
+                residence: `The Etherworld`,
+                appearance: `Invisible`,
+                description: 
+                    `Spirits (or Haelas in the celestial tongue) are the original and intended form of all ethereals. They dwell and act from the ether as immortal beings and are perfectly aligned with DIA meaning they have never committed evil. However, this does not mean that they do the greatest good. Some are free of evil and still lazy, unfocused or simply untapped of their full potential.`,
+                image: spirit,
+                imageAlt: `Qeṽa Spirit`,
+                wis: '+2',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Invisible',
+                        description: "In your natural state, you are invisible to the naked eye."
+                    },
+                    {
+                        id: 1,
+                        name: 'Take Shape',
+                        description: 'Once per day, you can make yourself visible to physical beings. You can take a human or another form (humanoid-sized).'
+                    }
+                ]
+            },
+            {
+                id: 1,
+                name: `Spectres`,
+                singName: "Spectre",
+                residence: `The Natural World`,
+                appearance: `White Hair, White Skin, White Eyes`,
+                description: 
+                    `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their celestite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them mortal. They would look identical to humans if not for their luminescence. They are rare in Qeṽa and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
+                image: spectre,
+                imageAlt: `Qeṽa Spectre`,
+                cha: '+2',
+                abilities: [
+                    {
+                        id: 0,
+                        name: 'Fey Ancestry',
+                        description: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+                    }
+                ]
+            }
+        ]
     }
 ];
