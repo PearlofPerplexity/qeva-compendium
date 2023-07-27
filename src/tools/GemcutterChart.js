@@ -33,11 +33,13 @@ const gemColor = ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P
 const gemCuts = [
     {
         id: 0,
-        name: 'Uncut',
+        name: 'Polished',
         image: uncut1,
         dc: 5,
         daysToCut: 1,
-        price: 25
+        price: 25,
+        containment: 0,
+        output: 1
     },
     {
         id: 1,
@@ -45,7 +47,9 @@ const gemCuts = [
         image: brilliant,
         dc: 16,
         daysToCut: 30,
-        price: 475
+        price: 475,
+        containment: 6,
+        output: 3
     },
     {
         id: 2,
@@ -53,7 +57,9 @@ const gemCuts = [
         image: cushion,
         dc: 16,
         daysToCut: 30,
-        price: 460
+        price: 460,
+        containment: 10,
+        output: 1
     },
     {
         id: 3,
@@ -61,7 +67,9 @@ const gemCuts = [
         image: emeraldCut,
         dc: 12,
         daysToCut: 14,
-        price: 260
+        price: 260,
+        containment: 2,
+        output: 2
     },
     {
         id: 4,
@@ -69,7 +77,9 @@ const gemCuts = [
         image: french,
         dc: 14,
         daysToCut: 7,
-        price: 210
+        price: 210,
+        containment: 4,
+        output: 2
     },
     {
         id: 5,
@@ -77,7 +87,9 @@ const gemCuts = [
         image: lozenge,
         dc: 12,
         daysToCut: 10,
-        price: 222
+        price: 222,
+        containment: 4,
+        output: 1
     },
     {
         id: 6,
@@ -85,7 +97,9 @@ const gemCuts = [
         image: marquise,
         dc: 16,
         daysToCut: 35,
-        price: 510
+        price: 510,
+        containment: 4,
+        output: 4
     },
     {
         id: 7,
@@ -93,7 +107,9 @@ const gemCuts = [
         image: oval,
         dc: 16,
         daysToCut: 35,
-        price: 500
+        price: 500,
+        containment: 8,
+        output: 2
     },
     {
         id: 8,
@@ -101,7 +117,9 @@ const gemCuts = [
         image: pear,
         dc: 16,
         daysToCut: 25,
-        price: 425
+        price: 425,
+        containment: 2,
+        output: 5
     },
     {
         id: 9,
@@ -109,7 +127,9 @@ const gemCuts = [
         image: peruzzi,
         dc: 18,
         daysToCut: 40,
-        price: 580
+        price: 580,
+        containment: 6,
+        output: 5
     },
     {
         id: 10,
@@ -117,7 +137,9 @@ const gemCuts = [
         image: portuguese,
         dc: 20,
         daysToCut: 60,
-        price: 1500
+        price: 1500,
+        containment: 10,
+        output: 5
     },
     {
         id: 11,
@@ -125,7 +147,9 @@ const gemCuts = [
         image: princess,
         dc: 18,
         daysToCut: 40,
-        price: 725
+        price: 725,
+        containment: 10,
+        output: 3
     },
     {
         id: 12,
@@ -133,7 +157,9 @@ const gemCuts = [
         image: radiant,
         dc: 18,
         daysToCut: 40,
-        price: 690
+        price: 690,
+        containment: 8,
+        output: 4
     },
     {
         id: 13,
@@ -141,7 +167,9 @@ const gemCuts = [
         image: single,
         dc: 10,
         daysToCut: 7,
-        price: 100
+        price: 100,
+        containment: 2,
+        output: 1
     },
     {
         id: 14,
@@ -149,7 +177,9 @@ const gemCuts = [
         image: trillion,
         dc: 18,
         daysToCut: 25,
-        price: 450
+        price: 450,
+        containment: 4,
+        output: 6
     }
 ];
 
@@ -162,18 +192,25 @@ const GemcutterChart = () => {
     const infoToggle = () => setInfo(!info);
 
     const [cuts, setCuts] = useState(gemCuts);
+    const [curProp, setCurProp] = useState();
     const [filter, setFilter] = useState(false);
     const filterToggle = () => setFilter(!filter);
 
     const sortByValue = (property) => {
         let newCuts;
-        if (filter) {
-            newCuts = cuts.sort((a, b) => b[property] - a[property]);
+        if (property === curProp) {
+            if (filter) {
+                newCuts = cuts.sort((a, b) => b[property] - a[property]);
+            } else {
+                newCuts = cuts.sort((a, b) => a[property] - b[property]);
+            }
+            filterToggle();
         } else {
-            newCuts = cuts.sort((a, b) => a[property] - b[property]);
+            newCuts = cuts.sort((a, b) => b[property] - a[property]);
+            setFilter(false);
         }
+        setCurProp(property);
         setCuts(newCuts);
-        filterToggle();
     }
 
     const reset = () => {
@@ -254,6 +291,16 @@ const GemcutterChart = () => {
                                             Price ⇅
                                         </a>
                                     </td>
+                                    <td>
+                                        <a onClick={() => sortByValue('containment')}>
+                                            Containment ⇅
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a onClick={() => sortByValue('output')}>
+                                            Output ⇅
+                                        </a>
+                                    </td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -265,6 +312,8 @@ const GemcutterChart = () => {
                                             <td>{gem.dc}</td>
                                             <td>{gem.daysToCut}</td>
                                             <td>{gem.price}</td>
+                                            <td>+{gem.containment}</td>
+                                            <td>+{gem.output}</td>
                                         </tr>
                                     </React.Fragment>
                                 ))}

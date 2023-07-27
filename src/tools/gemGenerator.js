@@ -696,59 +696,59 @@ const GemGenerator = () => {
                 maxPwrArray.cutPtOut = 0;
                 break;
             case "Single":
-                maxPwrArray.cutPtCon = 1;
+                maxPwrArray.cutPtCon = 2;
                 maxPwrArray.cutPtOut = 1;
                 break;
             case "Emerald":
-                maxPwrArray.cutPtCon = 1;
+                maxPwrArray.cutPtCon = 2;
                 maxPwrArray.cutPtOut = 2;
                 break;
             case "Lozenge":
-                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtCon = 4;
                 maxPwrArray.cutPtOut = 1;
                 break;
             case "Island":
-                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtCon = 4;
                 maxPwrArray.cutPtOut = 2;
                 break;
             case "Marquise":
-                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtCon = 4;
                 maxPwrArray.cutPtOut = 4;
                 break;
             case "Oval":
-                maxPwrArray.cutPtCon = 4;
+                maxPwrArray.cutPtCon = 8;
                 maxPwrArray.cutPtOut = 2;
                 break;
             case "Brilliant":
-                maxPwrArray.cutPtCon = 3;
+                maxPwrArray.cutPtCon = 6;
                 maxPwrArray.cutPtOut = 3;
                 break;
             case "Cushion":
-                maxPwrArray.cutPtCon = 5;
+                maxPwrArray.cutPtCon = 10;
                 maxPwrArray.cutPtOut = 1;
                 break;
             case "Pear":
-                maxPwrArray.cutPtCon = 1;
+                maxPwrArray.cutPtCon = 2;
                 maxPwrArray.cutPtOut = 5;
                 break;
             case "Princess":
-                maxPwrArray.cutPtCon = 5;
+                maxPwrArray.cutPtCon = 10;
                 maxPwrArray.cutPtOut = 3;
                 break;
             case "Radiant":
-                maxPwrArray.cutPtCon = 4;
+                maxPwrArray.cutPtCon = 8;
                 maxPwrArray.cutPtOut = 4;
                 break;
             case "Peruzzi":
-                maxPwrArray.cutPtCon = 3;
+                maxPwrArray.cutPtCon = 6;
                 maxPwrArray.cutPtOut = 5;
                 break;
             case "Trillion":
-                maxPwrArray.cutPtCon = 2;
+                maxPwrArray.cutPtCon = 4;
                 maxPwrArray.cutPtOut = 6;
                 break;
             case "Portuguese":
-                maxPwrArray.cutPtCon = 5;
+                maxPwrArray.cutPtCon = 10;
                 maxPwrArray.cutPtOut = 5;
                 break;
             default:

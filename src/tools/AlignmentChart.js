@@ -30,8 +30,12 @@ const AlignmentChart = () => {
     const [detail, setDetail] = useState('');
 
     const abilityInfo = (e) => {
-        setTitle(e.name);
-        setDetail(e.description);
+        if(e.description === detail) {
+            abilityInfoReset();
+        } else {
+            setTitle(e.name);
+            setDetail(e.description);
+        }
     }
 
     const abilityInfoReset = () => {
@@ -349,10 +353,10 @@ const AlignmentChart = () => {
                             </OffcanvasBody>
                         </Offcanvas>
                         <div className='row text-center'>
-                            <h6 className='col'><strong>CARAT: {gem.carat}</strong></h6>
+                            <h5 className='col'><strong>CARAT: {gem.carat}</strong></h5>
                             <p className='col'>Req. Level: {gem.lvl}</p>
                             <p className='col'>Containment Pts: {gem.containmentPts}</p>
-                            <h6 className='col'><strong>CLARITY: {gem.clarity}</strong></h6>
+                            <h5 className='col'><strong>CLARITY: {gem.clarity}</strong></h5>
                             <p className='col'>Req. Color: {gem.color}</p>
                             <p className='col'>Output Pts: {gem.outputPts}</p>
                         </div>
@@ -389,7 +393,17 @@ const AlignmentChart = () => {
                                 <tr>
                                     <th scope="col">Carat</th>
                                     {gemCarat.map((carat, index) => (
-                                        <td key={index} className='cardinal' onClick={() => handleCarat(carat)}>{carat}</td>
+                                        <React.Fragment key={index}>
+                                            {carat === gem.carat? (
+                                                <td className='cardinal bg-secondary text-light' onClick={() => handleCarat(carat)}>
+                                                    {carat}
+                                                </td>
+                                            ) : (
+                                                <td className='cardinal' onClick={() => handleCarat(carat)}>
+                                                    {carat}
+                                                </td>
+                                            )}
+                                        </React.Fragment>
                                     ))}
                                 </tr>
                             </tbody>
@@ -414,7 +428,21 @@ const AlignmentChart = () => {
                                 <tr>
                                     <th scope='col'>Clarity</th>
                                     {gemClarity.map((clar, index) => (
-                                        <td colSpan='2' key={index} className='cardinal' onClick={() => handleClarity(clar)}>{clar}</td>
+                                        <React.Fragment key={index}>
+                                            {clar === gem.clarity ? (
+                                                <td 
+                                                    className='cardinal bg-secondary text-light' 
+                                                    onClick={() => handleClarity(clar)}
+                                                    colSpan='2'
+                                                >
+                                                    {clar}
+                                                </td>
+                                            ) : (
+                                                <td colSpan='2' className='cardinal' onClick={() => handleClarity(clar)}>
+                                                    {clar}
+                                                </td>
+                                            )}
+                                        </React.Fragment>
                                     ))}
                                 </tr>
                             </tbody>
@@ -528,15 +556,21 @@ const AlignmentChart = () => {
                                         <tr>
                                             <th scope='col' rowSpan='2'>{gem.name} ({gem.quality})</th>
                                             {gem.lvls && (gem.lvls.map((level) => (
-                                                <td key={level.id} className='cardinal' onClick={() => abilityInfo(level)}>{level.name}</td>
+                                                <React.Fragment key={level.id}>
+                                                    {level.description === detail ? (
+                                                        <td className='cardinal bg-secondary text-light' onClick={() => abilityInfo(level)}>
+                                                            {level.name}
+                                                        </td>
+                                                    ) : (
+                                                        <td className='cardinal' onClick={() => abilityInfo(level)}>{level.name}</td>
+                                                    )}
+                                                </React.Fragment>
                                             )))}
                                         </tr>
                                         <tr>
                                             {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
-                                                <td colSpan='6'>
-                                                    <em><strong>{title}: </strong>{detail} </em><a onClick={abilityInfoReset}>reset</a>
-                                                </td>
-                                            ) : (<td colSpan='6'></td>)
+                                                <td colSpan='6'><em>{detail}</em></td>
+                                                ) : (<td colSpan='6'></td>)
                                             }
                                         </tr>
                                     </React.Fragment>
@@ -619,14 +653,14 @@ const AlignmentChart = () => {
                                         <tr>
                                             <th scope='col' rowSpan='2'>{gem.name} ({gem.quality})</th>
                                             {gem.lvls && (gem.lvls.map((level) => (
-                                                <td key={level.id} className='cardinal' onClick={() => abilityInfo(level)}>{level.name}</td>
+                                                <td key={level.id} className='cardinal' onClick={() => abilityInfo(level)}>
+                                                    {level.description === detail ? (<span className='text-warning'>{level.name}</span>) : (<span>{level.name}</span>)}
+                                                </td>
                                             )))}
                                         </tr>
                                         <tr>
                                             {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
-                                                <td colSpan='6'>
-                                                    <em><strong>{title}: </strong>{detail} </em><a onClick={abilityInfoReset}>reset</a>
-                                                </td>
+                                                <td colSpan='6'><em>{detail}</em></td>
                                             ) : (<td colSpan='6'></td>)
                                             }
                                         </tr>
@@ -669,15 +703,15 @@ const AlignmentChart = () => {
                                         <tr>
                                             <th scope='col' rowSpan='2'>{gem.name} ({gem.quality})</th>
                                             {gem.lvls && (gem.lvls.map((level) => (
-                                                <td key={level.id} className='cardinal' onClick={() => abilityInfo(level)}>{level.name}</td>
+                                                <td key={level.id} className='cardinal' onClick={() => abilityInfo(level)}>
+                                                    {level.description === detail ? (<span className='text-danger'>{level.name}</span>) : (<span>{level.name}</span>)}
+                                                </td>
                                             )))}
                                         </tr>
                                         <tr>
                                             {(gem.lvls.find(level => Object.values(level).includes(detail))) ? (
-                                                <td colSpan='6'>
-                                                    <em><strong>{title}: </strong>{detail} </em><a onClick={abilityInfoReset}>reset</a>
-                                                </td>
-                                            ) : (<td colSpan='6'></td>)
+                                                <td colSpan='6'><em>{detail}</em></td>
+                                                ) : (<td colSpan='6'></td>)
                                             }
                                         </tr>
                                     </React.Fragment>

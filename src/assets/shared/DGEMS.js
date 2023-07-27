@@ -1,10 +1,6 @@
 /* INCLUDES:
-
-Divine Stones
-Cardinal Stones
-Incidental Stones
-Overview
-
+Unbound Stones
+Dark Stones
 */
 
 export const DGEMS = [
