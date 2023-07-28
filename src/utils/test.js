@@ -1,7 +1,15 @@
 // json-server -H 0.0.0.0 --watch db.json -p 3001 -d 2000
 
-/* TO RUN PROGRAM
-    1. npm start
+/* 
+    TO RUN PROGRAM: npm start
+
+    TO SAVE CODE:
+        1. git status
+        2. git add .
+        3. git commit -m "message required"
+        4. git push
+        5. git status
+
 */
 
 // WELCOME TO THE IMAGINATION STATION!
