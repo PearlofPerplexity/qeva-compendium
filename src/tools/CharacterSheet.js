@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import diamondShape from '../assets/imgs/diamond-shape.png';
+//CONTEXT
+import { CharacterContext } from '../contexts/characterContext';
 
 const CharacterSheet = React.forwardRef((props, ref) => {
+
+    const [character, setCharacter] = useContext(CharacterContext);
+
+    const { 
+        STR, 
+        DEX, 
+        CON, 
+        INT, 
+        WIS, 
+        CHA 
+    } = character;
+
     return (
 <form className="charsheet" ref={ref}>
 <header>
@@ -38,7 +52,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <ul>
             <li>
             <div className="score">
-                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder="10" className="stat"/>
+                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder={STR} className="stat"/>
             </div>
             <div className="modifier">
                 <input name="Strengthmod" placeholder="+0" className="statmod"/>

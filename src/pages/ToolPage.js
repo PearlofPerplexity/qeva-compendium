@@ -14,7 +14,10 @@ import FightingChart from '../tools/FightingChart';
 import CraftGenerator from '../tools/CraftingGenerator';
 import LootGenerator from '../tools/LootGenerator';
 import TravelGenerator from '../tools/TravelGenerator';
-import '../style.css'
+//STYLES
+import '../style.css';
+//CONTEXTS
+import { CharacterProvider } from '../contexts/characterContext';
 
 
 const ToolPage = () => {
@@ -30,7 +33,9 @@ const ToolPage = () => {
             <section className="highlights mt-4">
                 <div className="row">
                     <GemGenerator />
-                    <CharacterCreator />
+                    <CharacterProvider>
+                        <CharacterCreator />
+                    </CharacterProvider>
                     <NPCGenerator />
                 </div>      
             </section>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer, useContext } from 'react';
 import {
     Accordion,
     AccordionBody,
@@ -8,10 +8,24 @@ import {
 import { RACES } from "../assets/shared/RACES";
 import { CLASSES } from "../assets/shared/CLASSES";
 import { GEMS } from "../assets/shared/GEMS";
+//CONTEXT
+import { CharacterContext } from '../contexts/characterContext';
 
 // Create help badges showing different alignments, races, etc.
 
 const CharacterBuilder = () => {
+    
+    const [character, setCharacter] = useContext(CharacterContext);
+
+    const handleCharacter = (prop, value) => {
+        let Zobj = character;
+        console.log('prop: ' + prop);
+        console.log('value: ' + value);
+        console.log(Zobj);
+        Zobj[prop] = value;
+        setCharacter(Zobj);
+    };
+    
     // Character Name
     const [charName, setCharName] = useState("");
     
@@ -45,7 +59,7 @@ const CharacterBuilder = () => {
         setCharName(nameVal);
     }
 
-    const abilityScoreArray = ['8', '10', '12', '13', '14', '15'];
+    const abilityScoreArray = [8, 10, 12, 13, 14, 15];
     const handleStrength = (num) => setStrength(num);
     const handleDexterity = (num) => setDexterity(num);
     const handleConstitution = (num) => setConstitution(num);
@@ -101,7 +115,7 @@ const CharacterBuilder = () => {
                             <h4>Strength</h4>
                             {abilityScoreArray.map((num, key) => (
                                 <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='str_scores' value={num} onClick={(e) => handleStrength(num)} />
+                                    <input type='radio' id={num} name='str_scores' value={num} onClick={() => handleCharacter('STR', num)} />
                                     <label htmlFor={num}>&nbsp;{num}</label>
                                 </div>
                             ))}
