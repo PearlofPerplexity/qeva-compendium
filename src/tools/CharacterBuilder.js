@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     Accordion,
     AccordionBody,
@@ -18,33 +18,38 @@ const CharacterBuilder = () => {
     const [character, setCharacter] = useContext(CharacterContext);
 
     const handleCharacter = (prop, value) => {
-        let Zobj = character;
-        console.log('prop: ' + prop);
-        console.log('value: ' + value);
-        console.log(Zobj);
-        Zobj[prop] = value;
-        setCharacter(Zobj);
+        let charObj = character;
+        charObj[prop] = value;
+        setCharacter({...charObj});
     };
+
+    const handleAbilityScore = (prop, value) => {
+        let charObj = character;
+        charObj[prop] = value;
+        // Determine value of modifier
+        let modNum, modVal, modProp;
+        modNum = (Math.floor((value - 10) / 2));
+        if (modNum >= 0 ) modVal = `+${modNum}`;
+        else modVal = modNum; 
+        modProp = `${prop}Mod`;
+        charObj[modProp] = modVal;
+        setCharacter({...charObj});
+    }
     
     // Character Name
     const [charName, setCharName] = useState("");
     
     // Ability Scores
-    const [strength, setStrength] = useState("");
-    const [dexterity, setDexterity] = useState("");
-    const [constitution, setConstitution] = useState("");
-    const [intelligence, setIntelligence] = useState("");
-    const [wisdom, setWisdom] = useState("");
-    const [charisma, setCharisma] = useState("");
-    const allAbility = 72 - strength - dexterity - constitution - intelligence - wisdom - charisma;
+    const abilityScoreArray = [8, 10, 12, 13, 14, 15];
+    const allAbility = 72 - character.str - character.dex - character.con - character.int - character.wis - character.cha;
 
     // Ability Score Modifiers
-    const strMod = Math.floor((strength - 10) / 2);
-    const dexMod = Math.floor((dexterity - 10) / 2);
-    const conMod = Math.floor((constitution - 10) / 2);
-    const intMod = Math.floor((intelligence - 10) / 2);
-    const wisMod = Math.floor((wisdom - 10) / 2);
-    const chaMod = Math.floor((charisma - 10) / 2);
+    const strMod = Math.floor((character.str - 10) / 2);
+    const dexMod = Math.floor((character.dex - 10) / 2);
+    const conMod = Math.floor((character.con - 10) / 2);
+    const intMod = Math.floor((character.int - 10) / 2);
+    const wisMod = Math.floor((character.wis - 10) / 2);
+    const chaMod = Math.floor((character.cha - 10) / 2);
 
     const [alignment, setAlignment] = useState("");
     const [gemAlignment, setGemAlignment] = useState("");
@@ -59,13 +64,6 @@ const CharacterBuilder = () => {
         setCharName(nameVal);
     }
 
-    const abilityScoreArray = [8, 10, 12, 13, 14, 15];
-    const handleStrength = (num) => setStrength(num);
-    const handleDexterity = (num) => setDexterity(num);
-    const handleConstitution = (num) => setConstitution(num);
-    const handleIntelligence = (num) => setIntelligence(num);
-    const handleWisdom = (num) => setWisdom(num);
-    const handleCharisma = (num) => setCharisma(num);
     const [open, setOpen] = useState('');
     const toggle = (id) => {
         if (open === id) setOpen();
@@ -104,8 +102,8 @@ const CharacterBuilder = () => {
         <form className="col text-center char-overflow">
             <h2>Your Builder</h2>
             <div className='mb-2 char-name-input'>
-                <label>Character Name&nbsp;</label>
-                <input type='text' value={charName} onChange={nameValuer} />
+                <label>Character Name:&nbsp;</label>
+                <input type='text' value={character.name} onChange={(e) => handleCharacter('name', e.target.value)} />
             </div>
             <Accordion open={open} toggle={toggle}>
                 <AccordionItem>
@@ -115,7 +113,7 @@ const CharacterBuilder = () => {
                             <h4>Strength</h4>
                             {abilityScoreArray.map((num, key) => (
                                 <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='str_scores' value={num} onClick={() => handleCharacter('STR', num)} />
+                                    <input type='radio' id={num} name='str_scores' value={num} onClick={() => handleAbilityScore('str', num)} />
                                     <label htmlFor={num}>&nbsp;{num}</label>
                                 </div>
                             ))}
@@ -124,7 +122,7 @@ const CharacterBuilder = () => {
                             <h4>Dexterity</h4>
                             {abilityScoreArray.map((num, key) => (
                                 <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='dex_scores' value={num} onClick={(e) => handleDexterity(num)} />
+                                    <input type='radio' id={num} name='dex_scores' value={num} onClick={() => handleAbilityScore('dex', num)} />
                                     <label htmlFor={num}>&nbsp;{num}</label>
                                 </div>
                             ))}
@@ -133,7 +131,7 @@ const CharacterBuilder = () => {
                             <h4>Constitution</h4>
                             {abilityScoreArray.map((num, key) => (
                                 <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='con_scores' value={num} onClick={(e) => handleConstitution(num)} />
+                                    <input type='radio' id={num} name='con_scores' value={num} onClick={() => handleAbilityScore('con', num)} />
                                     <label htmlFor={num}>&nbsp;{num}</label>
                                 </div>
                             ))}
@@ -142,7 +140,7 @@ const CharacterBuilder = () => {
                             <h4>Intelligence</h4>
                             {abilityScoreArray.map((num, key) => (
                                 <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='int_scores' value={num} onClick={(e) => handleIntelligence(num)} />
+                                    <input type='radio' id={num} name='int_scores' value={num} onClick={() => handleAbilityScore('int', num)} />
                                     <label htmlFor={num}>&nbsp;{num}</label>
                                 </div>
                             ))}
@@ -151,7 +149,7 @@ const CharacterBuilder = () => {
                             <h4>Wisdom</h4>
                             {abilityScoreArray.map((num, key) => (
                                 <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='wis_scores' value={num} onClick={(e) => handleWisdom(num)} />
+                                    <input type='radio' id={num} name='wis_scores' value={num} onClick={() => handleAbilityScore('wis', num)} />
                                     <label htmlFor={num}>&nbsp;{num}</label>
                                 </div>
                             ))}
@@ -160,7 +158,7 @@ const CharacterBuilder = () => {
                             <h4>Charisma</h4>
                             {abilityScoreArray.map((num, key) => (
                                 <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='cha_scores' value={num} onClick={(e) => handleCharisma(num)} />
+                                    <input type='radio' id={num} name='cha_scores' value={num} onClick={() => handleAbilityScore('cha', num)} />
                                     <label htmlFor={num}>&nbsp;{num}</label>
                                 </div>
                             ))}
@@ -271,7 +269,7 @@ const CharacterBuilder = () => {
             </Accordion>
         </form>
         <div className="col text-center border-start border-3 border-light rounded char-overflow">
-            <h2 className='mb-5'>Your Character: {charName}</h2>
+            <h2 className='mb-5'>Your Character: {character.name}</h2>
             <h5 className='char-build-title'>
                 {allAbility === 0 ? (<strong className='text-success'>✓ </strong>)
                 : allAbility === 72 ? (<strong className='text-danger'>! </strong>)
@@ -279,20 +277,20 @@ const CharacterBuilder = () => {
                 <strong>ABILITY SCORES</strong>
             </h5>
             <div className='row'>
-                <p className='col-2'>STR: {strength}</p>
-                <p className='col-2'>DEX: {dexterity}</p>
-                <p className='col-2'>CON: {constitution}</p>
-                <p className='col-2'>INT: {intelligence}</p>
-                <p className='col-2'>WIS: {wisdom}</p>
-                <p className='col-2'>CHA: {charisma}</p>
+                <p className='col-2'>STR: {character.str}</p>
+                <p className='col-2'>DEX: {character.dex}</p>
+                <p className='col-2'>CON: {character.con}</p>
+                <p className='col-2'>INT: {character.int}</p>
+                <p className='col-2'>WIS: {character.wis}</p>
+                <p className='col-2'>CHA: {character.cha}</p>
             </div>
             <div className='row mb-4'>
-                {strMod !== -5 && (<p className='col-2'>{strMod}</p>)} 
-                {dexMod !== -5 && (<p className='col-2'>{dexMod}</p>)} 
-                {conMod !== -5 && (<p className='col-2'>{conMod}</p>)} 
-                {intMod !== -5 && (<p className='col-2'>{intMod}</p>)} 
-                {wisMod !== -5 && (<p className='col-2'>{wisMod}</p>)} 
-                {chaMod !== -5 && (<p className='col-2'>{chaMod}</p>)}
+                {character.strMod !== -5 && (<p className='col-2'>{character.strMod}</p>)} 
+                {character.dexMod !== -5 && (<p className='col-2'>{character.dexMod}</p>)} 
+                {character.conMod !== -5 && (<p className='col-2'>{character.conMod}</p>)} 
+                {character.intMod !== -5 && (<p className='col-2'>{character.intMod}</p>)} 
+                {character.wisMod !== -5 && (<p className='col-2'>{character.wisMod}</p>)} 
+                {character.chaMod !== -5 && (<p className='col-2'>{character.chaMod}</p>)}
             </div>
             <div className='mb-5'>
             {alignment && !gemAlignment ? (

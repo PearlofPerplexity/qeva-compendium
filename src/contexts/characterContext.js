@@ -8,12 +8,15 @@ const CharacterContext = createContext([{}, () => { }]);
 const CharacterProvider = ({ children }) => {
 
     const [character, setCharacter] = useState({
-        STR: 0,
-        DEX: 0,
-        CON: 0,
-        INT: 0,
-        WIS: 0,
-        CHA: 0,
+        //Name
+        name: "",
+        //Ability Scores
+        str: 0, strMod: -5,
+        dex: 0, dexMod: -5,
+        con: 0, conMod: -5,
+        int: 0, intMod: -5,
+        wis: 0, wisMod: -5,
+        cha: 0, chaMod: -5,
     });
 
     //Any children within this provider can access this context
@@ -22,57 +25,6 @@ const CharacterProvider = ({ children }) => {
             {children}
         </CharacterContext.Provider>
     );
-
-    function characterReducer(action) {
-        let charObj = action.profile;
-        console.log('type: ' + action.type);
-        console.log('payload: ' + action.payload);
-        console.log(action.profile);
-        charObj[action.type] = action.payload;
-        return charObj;
-
-        /* switch (action.type) {
-            case 'STR': {
-                console.log(character);
-                return {
-                    ...character,
-                    STR: action.payload
-                };
-            }
-            case 'DEX': {
-                console.log(character);
-                return {
-                    ...character,
-                    DEX: action.payload
-                };
-            }
-            case 'CON': {
-                console.log(character);
-                return {
-                    ...character,
-                    CON: action.payload
-                };
-            }
-            case 'INT': {
-                console.log(character);
-                return {
-                    ...character,
-                    INT: action.payload
-                };
-            }
-            case 'INT': {
-                console.log(character);
-                return {
-                    ...character,
-                    INT: action.payload
-                };
-            }
-            default:
-                console.log('ERROR! No Changes Made.');
-                return { ...character };
-        } */
-    }
-
 };
 
 export { CharacterContext, CharacterProvider };

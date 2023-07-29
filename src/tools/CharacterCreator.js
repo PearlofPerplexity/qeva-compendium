@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import {
     Button,
     Modal,
@@ -10,26 +10,26 @@ import { Link } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import CharacterSheet from './CharacterSheet';
 import CharacterBuilder from './CharacterBuilder';
+//CONTEXT
+import { CharacterContext } from '../contexts/characterContext';
 
 const CharacterCreator = () => {
     
-    /*
-    https://www.geeksforgeeks.org/how-to-send-state-props-to-another-component-in-react-with-onclick/
+    const [character, setCharacter] = useContext(CharacterContext);
 
-    const [state, setState] = useState({data:""});
-    const changeState = () => {  
-        setstate({data:`state/props of parent component 
-        is send by onClick event to another component`}); 
-    };
-
-    IN PARENT BELOW:
-    onClick={changeState}
-
-    IN CHILD:
-    {props.data}
-
-    */
-
+    const resetCharacter = () => {
+        setCharacter({
+            //Name
+            name: "",
+            //Ability Scores
+            str: 0, strMod: -5,
+            dex: 0, dexMod: -5,
+            con: 0, conMod: -5,
+            int: 0, intMod: -5,
+            wis: 0, wisMod: -5,
+            cha: 0, chaMod: -5,
+        });
+    }
 
     const [modalOne, setModalOne] = useState(false);
     const toggleOneStart = () => setModalOne(true);
@@ -43,6 +43,7 @@ const CharacterCreator = () => {
         setNestedModal(false);
         setModal(false);
         setModalOne(false);
+        resetCharacter();
         console.clear();
     };
     const componentRef = React.createRef();

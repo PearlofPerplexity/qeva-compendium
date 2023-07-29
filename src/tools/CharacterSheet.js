@@ -8,19 +8,20 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     const [character, setCharacter] = useContext(CharacterContext);
 
     const { 
-        STR, 
-        DEX, 
-        CON, 
-        INT, 
-        WIS, 
-        CHA 
+        name,
+        str, strMod, 
+        dex, dexMod,
+        con, conMod,
+        int, intMod,
+        wis, wisMod,
+        cha, chaMod,
     } = character;
 
     return (
 <form className="charsheet" ref={ref}>
 <header>
     <section className="charname">
-    <label htmlFor="charname">Character Name</label><input name="charname" placeholder="Thelmiel" />
+    <label htmlFor="charname">Character Name</label><input name="charname" placeholder="Thelmiel" value={name} />
     </section>
     <section className="misc">
     <ul>
@@ -52,50 +53,50 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <ul>
             <li>
             <div className="score">
-                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder={STR} className="stat"/>
+                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder={10} value={str} className="stat"/>
             </div>
             <div className="modifier">
-                <input name="Strengthmod" placeholder="+0" className="statmod"/>
+                <input name="Strengthmod" placeholder="+0" value={strMod} className="statmod"/>
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" className="stat"/>
+                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value={dex} className="stat"/>
             </div>
             <div className="modifier">
-                <input name="Dexteritymod" placeholder="+0" className="statmod" />
+                <input name="Dexteritymod" placeholder="+0" value={dexMod} className="statmod" />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" className="stat"/>
+                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value={con} className="stat"/>
             </div>
             <div className="modifier">
-                <input name="Constitutionmod" placeholder="+0" className="statmod"/>
+                <input name="Constitutionmod" placeholder="+0" value={conMod} className="statmod"/>
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" className="stat"/>
+                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value={wis}className="stat"/>
             </div>
             <div className="modifier">
-                <input name="Wisdommod" placeholder="+0" />
+                <input name="Wisdommod" placeholder="+0" value={wisMod} />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" className="stat"/>
+                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value={int} className="stat"/>
             </div>
             <div className="modifier">
-                <input name="Intelligencemod" placeholder="+0" className="statmod"/>
+                <input name="Intelligencemod" placeholder="+0" value={intMod} className="statmod"/>
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" className="stat"/>
+                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value={cha} className="stat"/>
             </div>
             <div className="modifier">
-                <input name="Charismamod" placeholder="+0" className="statmod"/>
+                <input name="Charismamod" placeholder="+0" value={chaMod} className="statmod"/>
             </div>
             </li>
         </ul>
@@ -205,7 +206,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <div className="label-container">
         <label htmlFor="passiveperception">Passive Perception (Wisdom)</label>
         </div>
-        <input name="passiveperception" placeholder="10" />
+        <input name="passiveperception" placeholder="10" value={wis} />
     </div>
     <div className="otherprofs box textblock">
         <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea name="otherprofs"></textarea>
@@ -339,19 +340,13 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <div className="money">
             <ul>
             <li>
-                <label htmlFor="cp">cp</label><input name="cp" />
+                <label htmlFor="ct">ct</label><input name="ct" />
             </li>
             <li>
-                <label htmlFor="sp">sp</label><input name="sp" />
+                <label htmlFor="k">k</label><input name="k" />
             </li>
             <li>
-                <label htmlFor="ep">ep</label><input name="ep" />
-            </li>
-            <li>
-                <label htmlFor="gp">gp</label><input name="gp" />
-            </li>
-            <li>
-                <label htmlFor="pp">pp</label><input name="pp" />
+                <label htmlFor="qz">qz</label><input name="qz" />
             </li>
             </ul>
         </div>
