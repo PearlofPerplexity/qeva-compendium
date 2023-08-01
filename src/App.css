@@ -599,7 +599,7 @@ input.col.slider::-webkit-slider-thumb {
   /* CHARACTER BUILDER */
   div.accordion-body select.charPicklist, 
   div.char-name-input input,
-  button.info, .charPicklist {
+  button.info, .charPicklist, .player-name-input {
 	  border-radius: 50px;
 	  border: none;
 	  padding: 5px 10px;
@@ -607,6 +607,12 @@ input.col.slider::-webkit-slider-thumb {
 	  color: var(--dk-gray-300);
 	  background-color: var(--navbar-bg-lt);
 	  /* ^was important */
+  }
+  div.col-lg-4 > button.rounded-circle {
+	background-color: var(--navbar-bg-color);
+  }
+  div.col-lg-4 > button.rounded-circle:hover {
+	background-color: var(--navbar-bg-lt);
   }
 
   .char-build-title {

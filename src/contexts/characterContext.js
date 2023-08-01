@@ -9,6 +9,7 @@ const CharacterProvider = ({ children }) => {
 
     const [character, setCharacter] = useState({
         //Name
+        playerName: "",
         name: "",
         //Ability Scores
         str: 0, strMod: -5,
@@ -17,6 +18,12 @@ const CharacterProvider = ({ children }) => {
         int: 0, intMod: -5,
         wis: 0, wisMod: -5,
         cha: 0, chaMod: -5,
+        //Alignment
+        alignment: "", alignmentType: "", alignmentGem: undefined,
+        //Race
+        race: undefined, subrace: undefined, endrace: undefined,
+        //Class
+        myClass: undefined, subclass: undefined, endclass: undefined
     });
 
     //Any children within this provider can access this context

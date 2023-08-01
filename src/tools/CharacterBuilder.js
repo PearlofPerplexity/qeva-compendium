@@ -8,61 +8,16 @@ import {
 import { RACES } from "../assets/shared/RACES";
 import { CLASSES } from "../assets/shared/CLASSES";
 import { GEMS } from "../assets/shared/GEMS";
+import { DGEMS } from '../assets/shared/DGEMS';
+import AlignmentChart from './AlignmentChart';
+import RaceChart from './RaceChart';
+import ClassChart from './ClassChart';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
 
 // Create help badges showing different alignments, races, etc.
 
 const CharacterBuilder = () => {
-    
-    const [character, setCharacter] = useContext(CharacterContext);
-
-    const handleCharacter = (prop, value) => {
-        let charObj = character;
-        charObj[prop] = value;
-        setCharacter({...charObj});
-    };
-
-    const handleAbilityScore = (prop, value) => {
-        let charObj = character;
-        charObj[prop] = value;
-        // Determine value of modifier
-        let modNum, modVal, modProp;
-        modNum = (Math.floor((value - 10) / 2));
-        if (modNum >= 0 ) modVal = `+${modNum}`;
-        else modVal = modNum; 
-        modProp = `${prop}Mod`;
-        charObj[modProp] = modVal;
-        setCharacter({...charObj});
-    }
-    
-    // Character Name
-    const [charName, setCharName] = useState("");
-    
-    // Ability Scores
-    const abilityScoreArray = [8, 10, 12, 13, 14, 15];
-    const allAbility = 72 - character.str - character.dex - character.con - character.int - character.wis - character.cha;
-
-    // Ability Score Modifiers
-    const strMod = Math.floor((character.str - 10) / 2);
-    const dexMod = Math.floor((character.dex - 10) / 2);
-    const conMod = Math.floor((character.con - 10) / 2);
-    const intMod = Math.floor((character.int - 10) / 2);
-    const wisMod = Math.floor((character.wis - 10) / 2);
-    const chaMod = Math.floor((character.cha - 10) / 2);
-
-    const [alignment, setAlignment] = useState("");
-    const [gemAlignment, setGemAlignment] = useState("");
-
-    const [raceCur, setRaceCur] = useState({});
-    const [subrace, setSubrace] = useState("");
-    const [subclass, setSubclass] = useState("");
-    const [classCur, setClassCur] = useState({});
-
-    const nameValuer = (event) => {
-        const nameVal = event.target.value;
-        setCharName(nameVal);
-    }
 
     const [open, setOpen] = useState('');
     const toggle = (id) => {
@@ -70,30 +25,119 @@ const CharacterBuilder = () => {
         else setOpen(id);
     };
 
-    const handleAlignment = (e) => {
-        setAlignment(e.target.value);
-        setGemAlignment('');
-    }
-    const handleGemAlignment = (e) => setGemAlignment(e.target.value);
+    const [character, setCharacter] = useContext(CharacterContext);
 
-    const handleRace = (e) => {
-        if (e.target.value === '') {
-            setRaceCur({});
-        } else {
-            setRaceCur(RACES.find(event => event.name === e.target.value));
-        }
-        setSubrace('');
+    // Ability Scores
+    const abilityScoreArray = [8, 10, 12, 13, 14, 15];
+    const allAbility = 72 - character.str - character.dex - character.con - character.int - character.wis - character.cha;
+
+    const handleCharacter = (prop, value) => {
+        let charObj = character;
+        charObj[prop] = value;
+        setCharacter({...charObj});
+    };
+    const handleAbilityScore = (prop, value) => {
+        let charObj = character;
+        charObj[prop] = value;
+        // Determine value of modifier
+        let modNum, modVal, modProp;
+        modNum = (Math.floor((value - 10) / 2));
+        //Adds a '+' if the modifier is >= 0
+        if (modNum >= 0 ) modVal = `+${modNum}`;
+        else modVal = modNum; 
+        modProp = `${prop}Mod`;
+        charObj[modProp] = modVal;
+        setCharacter({...charObj});
     }
-    const handleSubrace = (e) => setSubrace(e.target.value);
-    const handleClass = (e) => {
-        if (e.target.value === '') {
-            setClassCur({});
-        } else {
-            setClassCur(CLASSES.find(event => event.name === e.target.value));
-        }
-        setSubclass('');
+    const handleAlignment = (prop, id) => {
+        let charObj = character;
+        if (prop === 'alignment') {
+            charObj[prop] = id;
+            charObj.alignmentType = '';
+            charObj.alignmentGem = '';
+        } else if (prop === 'alignmentType') {
+            charObj[prop] = id;
+            charObj.alignmentGem = '';
+        } else if (prop === 'alignmentGem') {
+            switch (character.alignmentType) {
+                case 'Divine':
+                    charObj[prop] = GEMS[0].topics[id];
+                    break;
+                case 'Cardinal':
+                    charObj[prop] = GEMS[1].topics[id];
+                    break;
+                case 'Incidental':
+                    charObj[prop] = GEMS[1].topics[id];
+                    break;
+                case 'Unbound':
+                    charObj[prop] = DGEMS[0].topics[id];
+                    break;
+                case 'Dark':
+                    charObj[prop] = DGEMS[1].topics[id];
+                    break;
+                default:
+                    break;
+            }
+        } else return;
+        setCharacter({...charObj});
     }
-    const handleSubclass = (e) => setSubclass(e.target.value);
+    const handleRace = (prop, id) => {
+        let charObj = character;
+        let newrace;
+        if (prop === 'race') {
+            if (id) {
+                newrace = RACES[id];
+                charObj[prop] = newrace;
+                charObj.endrace = newrace;
+            } else {
+                charObj[prop] = null;
+                charObj.endrace = null;
+            }
+            charObj.subrace = null;
+        } else if (prop === 'subrace') {
+            if (id) {
+                newrace = character.race.topics[id];
+                charObj[prop] = newrace;
+                charObj.endrace = newrace;
+            }
+            else {
+                charObj[prop] = null;
+                charObj.endrace = character.race;
+            }
+        }
+        setCharacter({...charObj});
+    }
+    const handleClass = (prop, id) => {
+        let charObj = character;
+        let newclass;
+        console.log(prop, id);
+        if (prop === 'myClass') {
+            if (id) {
+                newclass = CLASSES[id];
+                charObj[prop] = newclass;
+                if (!(newclass.name === 'No Affiliation')) {
+                    charObj.endclass = newclass;
+                    console.log(charObj.endclass);
+                } else charObj.endclass = null;
+            }
+            else {
+                charObj[prop] = null;
+                charObj.endclass = null;
+            };
+            charObj.subclass = null;
+        } else if (prop === 'subclass') {
+            if (id) {
+                newclass = character.myClass.topics[id];
+                charObj[prop] = newclass;
+                charObj.endclass = newclass;
+            }
+            else {
+                charObj[prop] = null;
+                charObj.endclass = null;
+            };
+        }
+        setCharacter({...charObj});
+    }
 
     return (
 
@@ -168,8 +212,9 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='2'>Alignment</AccordionHeader>
                     <AccordionBody accordionId='2'>
-                        <select name='alignment' className="charPicklist" id="alignment-select" onChange={handleAlignment}>
-                            <option value="">--Select an Alignment--</option>
+                        <AlignmentChart loc="charCreate" />
+                        <select name='alignment' className="charPicklist" id="alignment-select" onChange={(e) => handleAlignment('alignment', e.target.value)}>
+                            <option value="">--Select Alignment--</option>
                             <option value="Lawful Good">Lawful Good</option>
                             <option value="Neutral Good">Neutral Good</option>
                             <option value="Chaotic Good">Chaotic Good</option>
@@ -180,29 +225,53 @@ const CharacterBuilder = () => {
                             <option value="Neutral Evil">Neutral Evil</option>
                             <option value="Chaotic Evil">Chaotic Evil</option>
                         </select>
-                        <button type="button" className="btn"><i className="uil uil-info-circle"></i></button>
-                        {alignment && (
-                            <select name='gem-alignment' className="charPicklist" id='gem-alignment-select' onChange={handleGemAlignment}>
-                                <option value="">--Select a Gem to Pursue--</option>
-                                {[...GEMS[0].topics, ...GEMS[2].topics].map((gem) => (
-                                    <option value={gem.name} key={gem.id}>{gem.name} - {gem.quality}</option>
-                                ))}
-                                {!alignment.includes('Evil') ? (
-                                    <>
-                                        {GEMS[1].topics.map((gem) => (
-                                            <option value={gem.name} key={gem.id}>{gem.name} - {gem.quality}</option>
-                                        ))}
-                                    </>
-                                ) : (
-                                    <>
-                                        {GEMS[1].topics.map((gem) => (
-                                            <>
-                                                <option value={gem.syntheticStone} key={gem.id}>Refracted {gem.name} - {gem.syntheticStone}</option>
-                                                <option value={gem.darkStone} key={gem.id}>Dark {gem.name} - {gem.darkStone}</option>
-                                            </>
-                                        ))}
-                                    </>
+                        {character.alignment && (
+                            <select name='alignment' className="charPicklist" id="alignment-select" onChange={(e) => handleAlignment('alignmentType', e.target.value)}>
+                                <option value="">--Select Stone Type--</option>
+                                <option value="Divine">Creator Stones</option>
+                                { !character.alignment.includes('Evil')
+                                    ? (<option value="Cardinal">Moral Stones</option>)
+                                    : (<option value="Dark">Dark Stones</option>)}
+                                { !character.alignment.includes('Good') && (
+                                    <option value="Unbound">Unbound Stones</option>
                                 )}
+                                <option value="Incidental">Power Stones</option>
+                            </select>
+                        )}
+                        {character.alignment && character.alignmentType && (
+                            <select name='gem-alignment' className="charPicklist" id='gem-alignment-select' onChange={(e) => handleAlignment('alignmentGem', e.target.value)}>
+                                <option value="">--Select Gem to Pursue--</option>
+                                { character.alignmentType === 'Divine' ? (
+                                    <>
+                                        {GEMS[0].topics.map((gem) => (
+                                            <option value={gem.id} key={gem.id}>{gem.name} - {gem.quality}</option>
+                                        ))}
+                                    </>
+                                ) : character.alignmentType === 'Cardinal' ? (
+                                    <>
+                                        {GEMS[1].topics.map((gem) => (
+                                            <option value={gem.id} key={gem.id}>{gem.name} - {gem.quality}</option>
+                                        ))}
+                                    </>
+                                ) : character.alignmentType === 'Incidental' ? (
+                                    <>
+                                        {GEMS[2].topics.map((gem) => (
+                                            <option value={gem.id} key={gem.id}>{gem.name} - {gem.quality}</option>
+                                        ))}
+                                    </>
+                                ) : character.alignmentType === 'Unbound' ? (
+                                    <>
+                                        {DGEMS[0].topics.map((gem) => (
+                                            <option value={gem.id} key={gem.id}>{gem.name} - {gem.quality}</option>
+                                        ))}
+                                    </>
+                                ) : character.alignmentType === 'Dark' ? (
+                                    <>
+                                        {DGEMS[1].topics.map((gem) => (
+                                            <option value={gem.id} key={gem.id}>{gem.name} - {gem.quality}</option>
+                                        ))}
+                                    </>
+                                ) : ('')}
                             </select>
                         )}
                     </AccordionBody>
@@ -210,48 +279,40 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='3'>Race</AccordionHeader>
                     <AccordionBody accordionId='3'>
-                        <select name='races' className="charPicklist" id='race-select' onChange={handleRace}>
+                        <RaceChart loc="charCreate" />
+                        <select name='races' className="charPicklist" id='race-select' onChange={(e) => handleRace('race', e.target.value)}>
                             <option value="">--Select a Race--</option>
                             {RACES.map((race) => (
-                                <option value={race.name} key={race.id}>{race.name}</option>
+                                <option value={race.id} key={race.id}>{race.name}</option>
                             ))}
                         </select>
-                        {raceCur && (
-                            <>
-                                {raceCur.topics && (
-                                    <select name='subraces' className="charPicklist" id='subrace-select' onChange={handleSubrace}>
-                                        <option value="">--Select Subrace--</option>
-                                        {raceCur.topics.map((subrace) => (
-                                            <option value={subrace.name} key={subrace.id}>{subrace.name}</option>
-                                        ))}
-                                    </select>
-                                )}
-                            </>
+                        {character.race && character.race.topics && (
+                            <select name='subraces' className="charPicklist" id='subrace-select' onChange={(e) => handleRace('subrace', e.target.value)}>
+                                <option value="">--Select Subrace--</option>
+                                {character.race.topics.map((subrace) => (
+                                    <option value={subrace.id} key={subrace.id}>{subrace.name}</option>
+                                ))}
+                            </select>
                         )}
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionHeader targetId='4'>Class</AccordionHeader>
                     <AccordionBody accordionId='4'>
-                        <select name='orders' className="charPicklist" id='order-select' onChange={handleClass}>
+                        <ClassChart loc="charCreate" />
+                        <select name='orders' className="charPicklist" id='order-select' onChange={(e) => handleClass('myClass', e.target.value)}>
                             <option value="">--Select a Class--</option>
                             {CLASSES.map((order) => (
-                                <option value={order.name} key={order.id}>{order.name}</option>
+                                <option value={order.id} key={order.id}>{order.name}</option>
                                 ))}
                         </select>
-                        {classCur && (
-                            <>
-                                {classCur.name === 'No Affiliation' && (
-                                    <>
-                                        <select name='subclasses' className="charPicklist" id='subclass-select' onChange={handleSubclass}>
-                                            <option value="">--Select a Subclass--</option>
-                                            {classCur.topics.map((subclass) => (
-                                                <option value={subclass.name} key={subclass.id}>{subclass.name}</option>
-                                            ))}
-                                        </select>
-                                    </>
-                                )}
-                            </>
+                        {character.myClass && character.myClass.name === 'No Affiliation' && (
+                            <select name='subclasses' className="charPicklist" id='subclass-select' onChange={(e) => handleClass('subclass', e.target.value)}>
+                                <option value="">--Select a Subclass--</option>
+                                {character.myClass.topics.map((subclass) => (
+                                    <option value={subclass.id} key={subclass.id}>{subclass.name}</option>
+                                ))}
+                            </select>
                         )}
                     </AccordionBody>
                 </AccordionItem>
@@ -269,7 +330,7 @@ const CharacterBuilder = () => {
             </Accordion>
         </form>
         <div className="col text-center border-start border-3 border-light rounded char-overflow">
-            <h2 className='mb-5'>Your Character: {character.name}</h2>
+            <h2 className='mb-5'>{character.playerName ? (`${character.playerName.split(' ')[0]}'s`) : ('Your')} Character: {character.name}</h2>
             <h5 className='char-build-title'>
                 {allAbility === 0 ? (<strong className='text-success'>✓ </strong>)
                 : allAbility === 72 ? (<strong className='text-danger'>! </strong>)
@@ -293,59 +354,59 @@ const CharacterBuilder = () => {
                 {character.chaMod !== -5 && (<p className='col-2'>{character.chaMod}</p>)}
             </div>
             <div className='mb-5'>
-            {alignment && !gemAlignment ? (
-                !alignment.includes('Evil') ? (
-                    <>
-                        <h5 className='char-build-title'><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
-                        <p><strong>You can align to the following stones: </strong> Creator Stones, Moral Stones, Power Stones</p>
-                    </>
-                ) : (
-                    <>
-                        <h5 className='char-build-title'><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{alignment}</h5>
-                        <p><strong>You can align to the following stones: </strong> Creator Stones, Synthetic Stones, Dark Stones, Power Stones</p>
-                    </>
-                )
-            ) :  alignment && gemAlignment ? (
+            {character.alignment && !character.alignmentGem ? (
                 <>
-                    <h5 className='char-build-title'><strong className='text-success'>✓ </strong><strong> ALIGNMENT: </strong>{alignment} | {gemAlignment}</h5>
+                    <h5 className='char-build-title'><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{character.alignment}</h5>
+                    <p><strong>You can align to the following stones: </strong> 
+                        Creator Stones,&nbsp; 
+                        { !character.alignment.includes('evil') ? ('Moral Stones') : ('Dark Stones')},&nbsp;
+                        { !character.alignment.includes('good') ? ('Unbound Stones,') : ('')}&nbsp;
+                        Power Stones
+                    </p>
                 </>
+            ) :  character.alignment && character.alignmentGem ? (
+                <h5 className='char-build-title'><strong className='text-success'>
+                    ✓ </strong><strong> ALIGNMENT: </strong>{character.alignment} | {character.alignmentGem.name}
+                </h5>
             ) : (
-                <>
-                    <h5 className='char-build-title'><strong className='text-danger'>! </strong><strong> ALIGNMENT: </strong></h5>
-                </>
+                <h5 className='char-build-title'><strong className='text-danger'>
+                    ! </strong><strong> ALIGNMENT: </strong>
+                </h5>
             )}
             </div>
-            {!(Object.keys(raceCur).length === 0) ? (
+            {character.race ? (
                     <div className='mb-5'>
                         <h5 className='char-build-title'>
-                            {raceCur.hasOwnProperty('topics') && !subrace ? (
+                            {character.race.hasOwnProperty('topics') && !character.subrace ? (
                                 <strong className='text-warning'>... </strong>
                             ) : (<strong className='text-success'>✓ </strong>)
                             }
-                            <strong>RACE: </strong>{raceCur.name} {subrace && ( '| ' + subrace)}
+                            <strong>RACE: </strong>{character.race.name} {character.subrace && ( '| ' + character.subrace.name)}
                         </h5>
                         <div className='row'>
-                            <p className='col'><strong>lifespan: </strong>{raceCur.lifespan}</p>
-                            <p className='col'><strong>size: </strong>{raceCur.size}</p>
-                            <p className='col'><strong>speed: </strong>{raceCur.speed}</p>
+                            <p className='col'><strong>lifespan: </strong>{character.race.lifespan}</p>
+                            <p className='col'><strong>size: </strong>{character.race.size}</p>
+                            <p className='col'><strong>speed: </strong>{character.race.speed}</p>
                         </div>
                     </div>
             ) : (
                 <h5 className='mb-5 char-build-title'><strong className='text-danger'>! </strong><strong>RACE: </strong></h5>
             )}
-            {!(Object.keys(classCur).length === 0) ? (
+            {character.myClass ? (
                 <div className='mb-5'>
                     <h5 className='char-build-title'>
-                        {(classCur.topics[0].name === 'Adventurer') && !subclass ? (
+                        {(character.myClass.topics[0].name === 'Adventurer') && !character.subclass ? (
                             <strong className='text-warning'>... </strong>
                         ) : (<strong className='text-success'>✓ </strong>)
                         }
-                        <strong>CLASS: </strong>{classCur.name} {subclass && ('| ' + subclass)}
+                        <strong>CLASS: </strong>{character.myClass.name} {character.subclass && ('| ' + character.subclass.name)}
                     </h5>
-                    <div className='row'>
-                        <p className='col'><strong>Proficiencies: </strong>{raceCur.lifespan}</p>
-                        <p className='col'><strong>Languages: </strong>{raceCur.size}</p>
-                    </div>
+                    {character.endclass && (
+                        <div className='row'>
+                            <p className='col'><strong>Goal: </strong>{character.endclass.goal}</p>
+                            <p className='col'><strong>Equipment: </strong>{character.endclass.equipment.join(', ')}</p>
+                        </div>
+                    )}
                 </div>
             ) : (
                 <h5 className='mb-5 char-build-title'><strong className='text-danger'>! </strong><strong>CLASS: </strong></h5>

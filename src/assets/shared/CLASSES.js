@@ -802,7 +802,7 @@ export const CLASSES = [
         link: `/classes/topplers`,
         quality: `Halfling Rabble Fighters`,
         goal: `Aid where there is none`,
-        name: `The Topplers`,
+        name: `Topplers`,
         race: ['Halfling', 'Human'],
         primaryWeapon: `Slingshot`,
         sacredText: `None`,

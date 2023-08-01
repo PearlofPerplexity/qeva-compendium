@@ -41,9 +41,9 @@ const ToolPage = () => {
             </section>
             <section className="highlights mt-4">
                 <div className='row'>
-                    <AlignmentChart />
-                    <RaceChart />
-                    <ClassChart />
+                    <AlignmentChart loc='toolPage' />
+                    <RaceChart loc='toolPage' />
+                    <ClassChart loc='toolPage' />
                 </div>
             </section>
             <section className="highlights mt-4">

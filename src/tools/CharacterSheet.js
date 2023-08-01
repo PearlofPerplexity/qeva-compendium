@@ -8,13 +8,27 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     const [character, setCharacter] = useContext(CharacterContext);
 
     const { 
+
+        //Name
+        playerName,
         name,
+        //Ability Scores
         str, strMod, 
         dex, dexMod,
         con, conMod,
         int, intMod,
         wis, wisMod,
         cha, chaMod,
+        //Alignment
+        alignment, alignmentType, alignmentGem,
+        //Race
+        endrace,
+        //Class
+        endclass,
+        //Calculations
+        ac,
+        init,
+
     } = character;
 
     return (
@@ -26,22 +40,22 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     <section className="misc">
     <ul>
         <li>
-        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" placeholder="Oracle 7" />
+        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" placeholder="Oracle 7" value={`${endclass.name} 1`} />
         </li>
         <li>
-        <label htmlFor="background">Gemstone</label><input name="background" placeholder="Tanzanite" />
+        <label htmlFor="background">Gemstone</label><input name="background" placeholder="Tanzanite" value={alignmentGem.name} />
         </li>
         <li>
-        <label htmlFor="playername">Player Name</label><input name="playername" placeholder="Kyle O'Brien" />
+        <label htmlFor="playername">Player Name</label><input name="playername" value={playerName} />
         </li>
         <li>
-        <label htmlFor="race">Race</label><input name="race" placeholder="Aviame" />
+        <label htmlFor="race">Race</label><input name="race" placeholder="Aviame" value={endrace.singName} />
         </li>
         <li>
-        <label htmlFor="alignment">Alignment</label><input name="alignment" placeholder="Chaotic Neutral" />
+        <label htmlFor="alignment">Alignment</label><input name="alignment" placeholder="Chaotic Neutral" value={alignment} />
         </li>
         <li>
-        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" placeholder="1337" />
+        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" />
         </li>
     </ul>
     </section>
@@ -112,7 +126,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             <div className="label-container">
             <label htmlFor="proficiencybonus">Proficiency Bonus</label>
             </div>
-            <input name="proficiencybonus" placeholder="+2" />
+            <input name="proficiencybonus" placeholder="+2" value='+2' />
         </div>
         <div className="saves list-section box">
             <ul>
@@ -216,17 +230,17 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     <section className="combat">
         <div className="armorclass">
             <div>
-                <label htmlFor="ac">Armor Class</label><input name="ac" placeholder="10" type="text" />
+                <label htmlFor="ac">Armor Class</label><input name="ac" placeholder="10" type="text" value={ac} />
             </div>
         </div>
         <div className="initiative">
             <div>
-                <label htmlFor="initiative">Initiative</label><input name="initiative" placeholder="+0" type="text" />
+                <label htmlFor="initiative">Initiative</label><input name="initiative" placeholder="+0" type="text" value={init} />
             </div>
         </div>
         <div className="speed">
             <div>
-                <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" />
+                <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" value={endrace.speed} />
             </div>
         </div>
         <div className="hp">
@@ -358,7 +372,12 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     <section className="gem">
         <h6>Gemstone Alignment</h6>
         <div className="gemstone-alignment box">
-        <input name="firstgem" placeholder="Diamond (Love)" className="label-container" />
+        <input 
+            name="firstgem" 
+            placeholder="Diamond (Love)" 
+            className="label-container"
+            value={`${alignmentGem.name} (${alignmentGem.quality})`} 
+        />
         <div className="gemOne">
             <input name="firstgemscore" placeholder="5" className="gemOne" />
             <img src={diamondShape} alt="diamond" />

@@ -16,7 +16,7 @@ import { RACES } from '../assets/shared/RACES';
 const dndClasses = [...CLASSES.slice(0,8), ...CLASSES[9].topics];
 
 
-const ClassChart = () => {
+const ClassChart = (props) => {
     
     const [selectedClasses, setSelectedClasses] = useState(dndClasses);
     const handleClass = (e) => {
@@ -68,14 +68,21 @@ const ClassChart = () => {
 
     return (
         <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
-                <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
-                <div className="ms-3">
-                    <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Class Chart</h3>
+            {props.loc === 'toolPage' ? (
+                <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
+                    <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
+                    <div className="ms-3">
+                        <div className="d-flex align-items-center">
+                            <h3 className="mb-0">Class Chart</h3>
+                        </div>
                     </div>
-                </div>
-            </Link>
+                </Link>
+            ) : props.loc === 'charCreate' ? (
+                <button type="button" className="d-flex btn rounded-circle" onClick={toggle}>
+                    <i className="uil uil-info-circle"></i>
+                </button>
+            ) : ('')}
+            
             <Modal isOpen={modal} toggle={toggle} fullscreen>
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i> Class Chart</ModalHeader>
                 <ModalBody>

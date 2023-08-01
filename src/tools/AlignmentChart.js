@@ -14,7 +14,7 @@ import { ALIGNMENTS } from '../assets/shared/ALIGNMENTS';
 import { GEMS } from '../assets/shared/GEMS';
 import { DGEMS } from '../assets/shared/DGEMS';
 
-const AlignmentChart = () => {
+const AlignmentChart = (props) => {
     
     // const gemPoints20 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20];
     const gemPoints40 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, '...', 30, '...', 40];
@@ -237,15 +237,21 @@ const AlignmentChart = () => {
     }
 
     return (
-        <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
-                <i className="iconify fs-2" data-icon="twemoji:gem-stone"></i>
-                <div className="ms-3">
-                    <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Gem Chart</h3>
+        <div className="col-lg-4"> 
+            {props.loc === 'toolPage' ? (
+                <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
+                    <i className="iconify fs-2" data-icon="twemoji:gem-stone"></i>
+                    <div className="ms-3">
+                        <div className="d-flex align-items-center">
+                            <h3 className="mb-0">Gem Chart</h3>
+                        </div>
                     </div>
-                </div>
-            </Link>
+                </Link>
+            ) : props.loc === 'charCreate' ? (
+                <button type="button" className="d-flex btn rounded-circle" onClick={toggle}>
+                    <i className="uil uil-info-circle"></i>
+                </button>
+            ) : ('')}
             <Modal isOpen={modal} toggle={toggle} fullscreen>
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="twemoji:gem-stone"></i> Gem Chart</ModalHeader>
                 <ModalBody>
