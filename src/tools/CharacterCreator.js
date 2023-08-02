@@ -36,15 +36,15 @@ const CharacterCreator = () => {
             playerName: "",
             name: "",
             //Ability Scores
-            str: 0, strMod: -5,
-            dex: 0, dexMod: -5,
-            con: 0, conMod: -5,
-            int: 0, intMod: -5,
-            wis: 0, wisMod: -5,
-            cha: 0, chaMod: -5,
+            str: 0, strMod: -5, strSave: -3,
+            dex: 0, dexMod: -5, dexSave: -3,
+            con: 0, conMod: -5, conSave: -3,
+            int: 0, intMod: -5, intSave: -3,
+            wis: 0, wisMod: -5, wisSave: -3,
+            cha: 0, chaMod: -5, chaSave: -3,
             alignment: "", alignmentType: "", alignmentGem: undefined,
             endrace: undefined,
-            endclass: undefined
+            endclass: undefined,
         });
     }
 
@@ -67,6 +67,7 @@ const CharacterCreator = () => {
         charObj.ac = (10 + parseInt(charObj.dexMod));
         charObj.init = `+${d20 + parseInt(charObj.dexMod)}`;
         
+        console.log(charObj);
         setCharacter({...charObj});
         setModal(true);
     };

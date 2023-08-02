@@ -38,15 +38,30 @@ const CharacterBuilder = () => {
     };
     const handleAbilityScore = (prop, value) => {
         let charObj = character;
+
+        //Determine value of ABILITY SCORE | ex. 'dex'
         charObj[prop] = value;
-        // Determine value of modifier
+
+        // Determine value of MODIFIER
         let modNum, modVal, modProp;
         modNum = (Math.floor((value - 10) / 2));
         //Adds a '+' if the modifier is >= 0
         if (modNum >= 0 ) modVal = `+${modNum}`;
-        else modVal = modNum; 
+        else modVal = modNum;
+        //Creates the Modifier | ex. 'dexMod'
         modProp = `${prop}Mod`;
         charObj[modProp] = modVal;
+
+        //Determine value of SAVE
+        let saveNum, saveVal, saveProp;
+        saveNum = parseInt(modNum) + 2;
+        //Adds a '+' if the modifier is >= 0
+        if (saveNum >= 0 ) saveVal = `+${saveNum}`;
+        else saveVal = saveNum;
+        //Creates the Saving Throw | ex. 'dexSave'
+        saveProp = `${prop}Save`;
+        charObj[saveProp] = saveVal;
+
         setCharacter({...charObj});
     }
     const handleAlignment = (prop, id) => {

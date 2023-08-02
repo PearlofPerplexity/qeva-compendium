@@ -13,18 +13,18 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         playerName,
         name,
         //Ability Scores
-        str, strMod, 
-        dex, dexMod,
-        con, conMod,
-        int, intMod,
-        wis, wisMod,
-        cha, chaMod,
+        str, strMod, strSave,
+        dex, dexMod, dexSave,
+        con, conMod, conSave,
+        int, intMod, intSave,
+        wis, wisMod, wisSave,
+        cha, chaMod, chaSave,
         //Alignment
         alignment, alignmentType, alignmentGem,
         //Race
-        endrace,
+        race, subrace, endrace,
         //Class
-        endclass,
+        myClass, subClass, endclass,
         //Calculations
         ac,
         init,
@@ -35,24 +35,24 @@ const CharacterSheet = React.forwardRef((props, ref) => {
 <form className="charsheet" ref={ref}>
 <header>
     <section className="charname">
-    <label htmlFor="charname">Character Name</label><input name="charname" placeholder="Thelmiel" value={name} />
+    <label htmlFor="charname">Character Name</label><input name="charname" placeholder="Thelmiel" value={name} readOnly />
     </section>
     <section className="misc">
     <ul>
         <li>
-        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" placeholder="Oracle 7" value={`${endclass.name} 1`} />
+        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" placeholder="Oracle 7" value={`${endclass.name} 1`} readOnly />
         </li>
         <li>
-        <label htmlFor="background">Gemstone</label><input name="background" placeholder="Tanzanite" value={alignmentGem.name} />
+        <label htmlFor="background">Gemstone</label><input name="background" placeholder="Tanzanite" value={alignmentGem.name} readOnly />
         </li>
         <li>
-        <label htmlFor="playername">Player Name</label><input name="playername" value={playerName} />
+        <label htmlFor="playername">Player Name</label><input name="playername" value={playerName} readOnly />
         </li>
         <li>
-        <label htmlFor="race">Race</label><input name="race" placeholder="Aviame" value={endrace.singName} />
+        <label htmlFor="race">Race</label><input name="race" placeholder="Aviame" value={endrace.singName} readOnly />
         </li>
         <li>
-        <label htmlFor="alignment">Alignment</label><input name="alignment" placeholder="Chaotic Neutral" value={alignment} />
+        <label htmlFor="alignment">Alignment</label><input name="alignment" placeholder="Chaotic Neutral" value={alignment} readOnly />
         </li>
         <li>
         <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" />
@@ -67,50 +67,50 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <ul>
             <li>
             <div className="score">
-                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder={10} value={str} className="stat"/>
+                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder={10} value={str} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Strengthmod" placeholder="+0" value={strMod} className="statmod"/>
+                <input name="Strengthmod" placeholder="+0" value={strMod} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value={dex} className="stat"/>
+                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value={dex} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Dexteritymod" placeholder="+0" value={dexMod} className="statmod" />
+                <input name="Dexteritymod" placeholder="+0" value={dexMod} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value={con} className="stat"/>
+                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value={con} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Constitutionmod" placeholder="+0" value={conMod} className="statmod"/>
+                <input name="Constitutionmod" placeholder="+0" value={conMod} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value={wis}className="stat"/>
+                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value={wis}className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Wisdommod" placeholder="+0" value={wisMod} />
+                <input name="Wisdommod" placeholder="+0" value={wisMod} readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value={int} className="stat"/>
+                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value={int} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Intelligencemod" placeholder="+0" value={intMod} className="statmod"/>
+                <input name="Intelligencemod" placeholder="+0" value={intMod} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value={cha} className="stat"/>
+                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value={cha} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Charismamod" placeholder="+0" value={chaMod} className="statmod"/>
+                <input name="Charismamod" placeholder="+0" value={chaMod} className="statmod" readOnly />
             </div>
             </li>
         </ul>
@@ -126,27 +126,27 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             <div className="label-container">
             <label htmlFor="proficiencybonus">Proficiency Bonus</label>
             </div>
-            <input name="proficiencybonus" placeholder="+2" value='+2' />
+            <input name="proficiencybonus" placeholder="+2" value='+2' readOnly />
         </div>
         <div className="saves list-section box">
             <ul>
             <li>
-                <label htmlFor="Strength-save">Strength</label><input name="Strength-save" placeholder="+0" type="text" /><input name="Strength-save-prof" type="checkbox" />
+                <label htmlFor="Strength-save">Strength</label><input name="Strength-save" placeholder="+0" type="text" value={strSave} readOnly /><input name="Strength-save-prof" type="checkbox" />
             </li>
             <li>
-                <label htmlFor="Dexterity-save">Dexterity</label><input name="Dexterity-save" placeholder="+0" type="text" /><input name="Dexterity-save-prof" type="checkbox" />
+                <label htmlFor="Dexterity-save">Dexterity</label><input name="Dexterity-save" placeholder="+0" type="text" value={dexSave} readOnly /><input name="Dexterity-save-prof" type="checkbox" />
             </li>
             <li>
-                <label htmlFor="Constitution-save">Constitution</label><input name="Constitution-save" placeholder="+0" type="text" /><input name="Constitution-save-prof" type="checkbox" />
+                <label htmlFor="Constitution-save">Constitution</label><input name="Constitution-save" placeholder="+0" type="text" value={conSave} readOnly /><input name="Constitution-save-prof" type="checkbox" />
             </li>
             <li>
-                <label htmlFor="Wisdom-save">Wisdom</label><input name="Wisdom-save" placeholder="+0" type="text" /><input name="Wisdom-save-prof" type="checkbox" />
+                <label htmlFor="Wisdom-save">Wisdom</label><input name="Wisdom-save" placeholder="+0" type="text" value={wisSave} readOnly /><input name="Wisdom-save-prof" type="checkbox" />
             </li>
             <li>
-                <label htmlFor="Intelligence-save">Intelligence</label><input name="Intelligence-save" placeholder="+0" type="text" /><input name="Intelligence-save-prof" type="checkbox" />
+                <label htmlFor="Intelligence-save">Intelligence</label><input name="Intelligence-save" placeholder="+0" type="text" value={intSave} readOnly /><input name="Intelligence-save-prof" type="checkbox" />
             </li>
             <li>
-                <label htmlFor="Charisma-save">Charisma</label><input name="Charisma-save" placeholder="+0" type="text" /><input name="Charisma-save-prof" type="checkbox" />
+                <label htmlFor="Charisma-save">Charisma</label><input name="Charisma-save" placeholder="+0" type="text" value={chaSave} readOnly /><input name="Charisma-save-prof" type="checkbox" />
             </li>
             </ul>
             <div className="label">
@@ -220,7 +220,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <div className="label-container">
         <label htmlFor="passiveperception">Passive Perception (Wisdom)</label>
         </div>
-        <input name="passiveperception" placeholder="10" value={wis} />
+        <input name="passiveperception" placeholder="10" value={wis} readOnly />
     </div>
     <div className="otherprofs box textblock">
         <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea name="otherprofs"></textarea>
@@ -230,17 +230,17 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     <section className="combat">
         <div className="armorclass">
             <div>
-                <label htmlFor="ac">Armor Class</label><input name="ac" placeholder="10" type="text" value={ac} />
+                <label htmlFor="ac">Armor Class</label><input name="ac" placeholder="10" type="text" value={ac} readOnly />
             </div>
         </div>
         <div className="initiative">
             <div>
-                <label htmlFor="initiative">Initiative</label><input name="initiative" placeholder="+0" type="text" value={init} />
+                <label htmlFor="initiative">Initiative</label><input name="initiative" placeholder="+0" type="text" value={init} readOnly />
             </div>
         </div>
         <div className="speed">
             <div>
-                <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" value={endrace.speed} />
+                <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" value={race.speed} readOnly />
             </div>
         </div>
         <div className="hp">
@@ -377,6 +377,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             placeholder="Diamond (Love)" 
             className="label-container"
             value={`${alignmentGem.name} (${alignmentGem.quality})`} 
+            readOnly
         />
         <div className="gemOne">
             <input name="firstgemscore" placeholder="5" className="gemOne" />
