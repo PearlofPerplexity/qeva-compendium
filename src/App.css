@@ -608,6 +608,12 @@ input.col.slider::-webkit-slider-thumb {
 	  background-color: var(--navbar-bg-lt);
 	  /* ^was important */
   }
+  div.char-name-textarea textarea, div.char-name-textarea textarea:focus {
+	color: var(--dk-gray-300);
+	background-color: var(--navbar-bg-lt);
+	border: none;
+  }
+
   div.col-lg-4 > button.rounded-circle {
 	background-color: var(--navbar-bg-color);
   }

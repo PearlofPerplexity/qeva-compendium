@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { 
     Collapse,
     Navbar,
@@ -48,6 +49,7 @@ const Header = (args) => {
 
     const toggle = () => setIsOpen(!isOpen);
 
+    const location = useLocation();
     const wikiToggle = () => setMenu("Qeṽa Compendium");
     const toolToggle = () => setMenu("Qeṽa Tools");
 
@@ -57,7 +59,7 @@ const Header = (args) => {
         } else {
             wikiToggle();
         }
-      });
+      }, [location]);
     
     return (
         <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>

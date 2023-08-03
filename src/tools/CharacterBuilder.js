@@ -103,7 +103,7 @@ const CharacterBuilder = () => {
             if (id) {
                 newrace = RACES[id];
                 charObj[prop] = newrace;
-                charObj.endrace = newrace;
+                if (!newrace.topics) charObj.endrace = newrace;
             } else {
                 charObj[prop] = null;
                 charObj.endrace = null;
@@ -168,59 +168,43 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                 <AccordionHeader targetId='1'>Ability Scores | Available Points: {allAbility}</AccordionHeader>
                     <AccordionBody accordionId='1'>
-                        <div className='row mb-3'>
-                            <h4>Strength</h4>
-                            {abilityScoreArray.map((num, key) => (
-                                <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='str_scores' value={num} onClick={() => handleAbilityScore('str', num)} />
-                                    <label htmlFor={num}>&nbsp;{num}</label>
+                        <div className='row m-lg-2'>
+                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
+                                <div>
+                                    <label htmlFor="str_score">STR</label>
+                                    <input value={character.str} name="str_score" type="number" onChange={(e) => handleAbilityScore('str', e.target.value)} />
                                 </div>
-                            ))}
-                        </div>
-                        <div className='row mb-3'>
-                            <h4>Dexterity</h4>
-                            {abilityScoreArray.map((num, key) => (
-                                <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='dex_scores' value={num} onClick={() => handleAbilityScore('dex', num)} />
-                                    <label htmlFor={num}>&nbsp;{num}</label>
+                            </div>
+                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
+                                <div>
+                                    <label htmlFor="dex_score">DEX</label>
+                                    <input value={character.dex} name="dex_score" type="number" onChange={(e) => handleAbilityScore('dex', e.target.value)} />
                                 </div>
-                            ))}
-                        </div>
-                        <div className='row mb-3'>
-                            <h4>Constitution</h4>
-                            {abilityScoreArray.map((num, key) => (
-                                <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='con_scores' value={num} onClick={() => handleAbilityScore('con', num)} />
-                                    <label htmlFor={num}>&nbsp;{num}</label>
+                            </div>
+                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
+                                <div>
+                                    <label htmlFor="con_score">CON</label>
+                                    <input value={character.con} name="con_score" type="number" onChange={(e) => handleAbilityScore('con', e.target.value)} />
                                 </div>
-                            ))}
-                        </div>
-                        <div className='row mb-3'>
-                            <h4>Intelligence</h4>
-                            {abilityScoreArray.map((num, key) => (
-                                <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='int_scores' value={num} onClick={() => handleAbilityScore('int', num)} />
-                                    <label htmlFor={num}>&nbsp;{num}</label>
+                            </div>
+                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
+                                <div>
+                                    <label htmlFor="int_score">INT</label>
+                                    <input value={character.int} name="int_score" type="number" onChange={(e) => handleAbilityScore('int', e.target.value)} />
                                 </div>
-                            ))}
-                        </div>
-                        <div className='row mb-3'>
-                            <h4>Wisdom</h4>
-                            {abilityScoreArray.map((num, key) => (
-                                <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='wis_scores' value={num} onClick={() => handleAbilityScore('wis', num)} />
-                                    <label htmlFor={num}>&nbsp;{num}</label>
+                            </div>
+                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
+                                <div>
+                                    <label htmlFor="wis_score">WIS</label>
+                                    <input value={character.wis} name="wis_score" type="number" onChange={(e) => handleAbilityScore('wis', e.target.value)} />
                                 </div>
-                            ))}
-                        </div>
-                        <div className='row mb-3'>
-                            <h4>Charisma</h4>
-                            {abilityScoreArray.map((num, key) => (
-                                <div className='col-2' key={key}>
-                                    <input type='radio' id={num} name='cha_scores' value={num} onClick={() => handleAbilityScore('cha', num)} />
-                                    <label htmlFor={num}>&nbsp;{num}</label>
+                            </div>
+                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
+                                <div>
+                                    <label htmlFor="cha_score">CHA</label>
+                                    <input value={character.cha} name="cha_score" type="number" onChange={(e) => handleAbilityScore('cha', e.target.value)} />
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </AccordionBody>
                 </AccordionItem>
@@ -298,14 +282,14 @@ const CharacterBuilder = () => {
                         <select name='races' className="charPicklist" id='race-select' onChange={(e) => handleRace('race', e.target.value)}>
                             <option value="">--Select a Race--</option>
                             {RACES.map((race) => (
-                                <option value={race.id} key={race.id}>{race.name}</option>
+                                <option value={race.id} key={race.id}>{race.singName}</option>
                             ))}
                         </select>
                         {character.race && character.race.topics && (
                             <select name='subraces' className="charPicklist" id='subrace-select' onChange={(e) => handleRace('subrace', e.target.value)}>
                                 <option value="">--Select Subrace--</option>
                                 {character.race.topics.map((subrace) => (
-                                    <option value={subrace.id} key={subrace.id}>{subrace.name}</option>
+                                    <option value={subrace.id} key={subrace.id}>{subrace.singName}</option>
                                 ))}
                             </select>
                         )}
@@ -334,12 +318,37 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='5'>Background</AccordionHeader>
                     <AccordionBody accordionId='5'>
-                        <p>Develop a character backstory and receive the following:</p>
-                        <ul className='ps-5 text-start list-group'>
-                            <li>2 Skill Proficiencies</li>
-                            <li>2 Tool Proficiencies or Languages</li>
-                            <li>2 Equipment Items</li>
-                        </ul>
+                        <div className='row mb-3'>
+                            <p>Develop the below elements to be awarded the following by your DM:</p>
+                            <ul className='ps-5 text-start list-group mb-3'>
+                                <li>1 Skill Proficiency</li>
+                                <li>1 Tool Proficiencies or Language</li>
+                                <li>1 Equipment Items</li>
+                                <li>&nbsp;Inspiration</li>
+                            </ul>
+                            <div className='col char-name-textarea sm-textarea'>
+                                <h5 className='text-start'>Backstory:</h5>
+                                <textarea className='form-control' rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div className='row mb-3'>
+                            <div className='col char-name-textarea'>
+                                <h5 className='text-start'>Personality:</h5>
+                                <textarea className='form-control' rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div className='row mb-3'>
+                            <div className='col char-name-textarea'>
+                                <h5 className='text-start'>Ideals:</h5>
+                                <textarea className='form-control' rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div className='row mb-3'>
+                            <div className='col char-name-textarea'>
+                                <h5 className='text-start'>Flaws:</h5>
+                                <textarea className='form-control' rows="2"></textarea>
+                            </div>
+                        </div>
                     </AccordionBody>
                 </AccordionItem>
             </Accordion>
