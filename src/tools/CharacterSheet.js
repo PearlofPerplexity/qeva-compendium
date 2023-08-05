@@ -9,6 +9,8 @@ const CharacterSheet = React.forwardRef((props, ref) => {
 
     const { 
 
+        //Level
+        level,
         //Name
         playerName,
         name,
@@ -26,8 +28,11 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         //Class
         myClass, subClass, endclass,
         //Calculations
-        ac,
-        init,
+        ac, init, hp, hitDie, inspiration,
+        //Features
+        features,
+        //Backstory
+        personality, ideals, flaws,
 
     } = character;
 
@@ -35,27 +40,27 @@ const CharacterSheet = React.forwardRef((props, ref) => {
 <form className="charsheet" ref={ref}>
 <header>
     <section className="charname">
-    <label htmlFor="charname">Character Name</label><input name="charname" placeholder="Thelmiel" value={name} readOnly />
+    <label htmlFor="charname">Character Name</label><input name="charname" placeholder="Your Character" value={name} readOnly />
     </section>
     <section className="misc">
     <ul>
         <li>
-        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" placeholder="Oracle 7" value={`${endclass.name} 1`} readOnly />
+        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" placeholder="Class 1" value={`${endclass && endclass.name} ${level}`} readOnly />
         </li>
         <li>
-        <label htmlFor="background">Gemstone</label><input name="background" placeholder="Tanzanite" value={alignmentGem.name} readOnly />
+        <label htmlFor="background">Gemstone</label><input name="background" placeholder="Tanzanite" value={alignmentGem && alignmentGem.name} readOnly />
         </li>
         <li>
-        <label htmlFor="playername">Player Name</label><input name="playername" value={playerName} readOnly />
+        <label htmlFor="playername">Player Name</label><input name="playername" placeholder='Your Name' value={playerName} readOnly />
         </li>
         <li>
-        <label htmlFor="race">Race</label><input name="race" placeholder="Aviame" value={endrace.singName} readOnly />
+        <label htmlFor="race">Race</label><input name="race" placeholder="Aviame" value={endrace && endrace.singName} readOnly />
         </li>
         <li>
         <label htmlFor="alignment">Alignment</label><input name="alignment" placeholder="Chaotic Neutral" value={alignment} readOnly />
         </li>
         <li>
-        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" />
+        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" placeholder='0' />
         </li>
     </ul>
     </section>
@@ -120,7 +125,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             <div className="label-container">
             <label htmlFor="inspiration">Inspiration</label>
             </div>
-            <input name="inspiration" type="checkbox" />
+            <input name="inspiration" type="checkbox" checked={inspiration} readOnly />
         </div>
         <div className="proficiencybonus box">
             <div className="label-container">
@@ -240,26 +245,26 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         </div>
         <div className="speed">
             <div>
-                <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" value={race.speed} readOnly />
+                <label htmlFor="speed">Speed</label><input name="speed" placeholder="30" type="text" value={race && race.speed} readOnly />
             </div>
         </div>
         <div className="hp">
         <div className="regular">
             <div className="max">
-            <label htmlFor="maxhp">Hit Point Maximum</label><input name="maxhp" placeholder="10" type="text" />
+            <label htmlFor="maxhp">Hit Point Maximum</label><input name="maxhp" placeholder="10" type="text" value={hp} readOnly />
             </div>
             <div className="current">
-            <label htmlFor="currenthp">Current Hit Points</label><input name="currenthp" type="text" />
+            <label htmlFor="currenthp">Current Hit Points</label><input name="currenthp" type="text" placeholder={hp} />
             </div>
         </div>
         <div className="temporary">
-            <label htmlFor="temphp">Temporary Hit Points</label><input name="temphp" type="text" />
+            <label htmlFor="temphp">Temporary Hit Points</label><input name="temphp" type="text" placeholder='0' />
         </div>
         </div>
         <div className="hitdice">
         <div>
             <div className="total">
-            <label htmlFor="totalhd">Total</label><input name="totalhd" placeholder="2d10" type="text" />
+            <label htmlFor="totalhd">Total</label><input name="totalhd" placeholder="1d10" type="text" value={hitDie} readOnly />
             </div>
             <div className="remaining">
             <label htmlFor="remaininghd">Hit Dice</label><input name="remaininghd" type="text" />
@@ -376,44 +381,44 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             name="firstgem" 
             placeholder="Diamond (Love)" 
             className="label-container"
-            value={`${alignmentGem.name} (${alignmentGem.quality})`} 
+            value={`${alignmentGem && alignmentGem.name} (${alignmentGem && alignmentGem.quality})`} 
             readOnly
         />
         <div className="gemOne">
-            <input name="firstgemscore" placeholder="5" className="gemOne" />
+            <input name="firstgemscore" value="1" className="gemOne" readOnly />
             <img src={diamondShape} alt="diamond" />
         </div>
         </div>
         <div className="gemstone-alignment box">
-        <input name="firstgem" placeholder="Quartz (Strength)" className="label-container" />
+        <input name="firstgem" placeholder="Gemstone (Quality)" className="label-container" />
         <div className="gemOne">
-            <input name="firstgemscore" placeholder="5" className="gemOne" />
+            <input name="firstgemscore" className="gemOne" placeholder='0' />
             <img src={diamondShape} alt="diamond" />
         </div>
         </div>
         <div className="extra-gemstones box">
         <div className="gemOne">
-            <input name="firstgemscore" placeholder="0" className="gemScore" />
+            <input name="firstgemscore" placeholder='0' className="gemScore" />
             <input name="firstgemscore" placeholder="DEX" className="gemType" />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" placeholder="0" className="gemScore" />
+            <input name="firstgemscore" placeholder='0' className="gemScore" />
             <input name="firstgemscore" placeholder="CON" className="gemType" />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" placeholder="0" className="gemScore" />
+            <input name="firstgemscore" placeholder='0' className="gemScore" />
             <input name="firstgemscore" placeholder="WIS" className="gemType" />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" placeholder="0" className="gemScore" />
+            <input name="firstgemscore" placeholder='0' className="gemScore" />
             <input name="firstgemscore" placeholder="INT" className="gemType" />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" placeholder="0" className="gemScore" />
+            <input name="firstgemscore" placeholder='0' className="gemScore" />
             <input name="firstgemscore" placeholder="CHA" className="gemType" />
             <img src={diamondShape} alt="diamond" />
         </div>
@@ -421,18 +426,18 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     </section>
     <section className="flavor">
         <div className="personality">
-        <label htmlFor="personality">Personality</label><textarea name="personality"></textarea>
+        <label htmlFor="personality">Personality</label><textarea name="personality" value={personality} readOnly></textarea>
         </div>
         <div className="ideals">
-        <label htmlFor="ideals">Ideals</label><textarea name="ideals"></textarea>
+        <label htmlFor="ideals">Ideals</label><textarea name="ideals" value={ideals} readOnly></textarea>
         </div>
         <div className="flaws">
-        <label htmlFor="flaws">Flaws</label><textarea name="flaws"></textarea>
+        <label htmlFor="flaws">Flaws</label><textarea name="flaws" value={flaws} readOnly></textarea>
         </div>
     </section>
     <section className="features">
         <div>
-        <label htmlFor="features">Features & Traits</label><textarea name="features"></textarea>
+        <label htmlFor="features">Features & Traits</label><textarea name="features" value={features && features.join("\n\n")} readOnly></textarea>
         </div>
     </section>
     </section>

@@ -23,7 +23,11 @@ const CharacterProvider = ({ children }) => {
         //Race
         race: undefined, subrace: undefined, endrace: undefined,
         //Class
-        myClass: undefined, subclass: undefined, endclass: undefined
+        myClass: undefined, subclass: undefined, endclass: undefined,
+        //Features
+        features: [],
+        //Backstory
+        personality: "", ideals: "", flaws: "",
     });
 
     //Any children within this provider can access this context

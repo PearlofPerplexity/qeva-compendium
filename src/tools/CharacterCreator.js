@@ -45,6 +45,9 @@ const CharacterCreator = () => {
             alignment: "", alignmentType: "", alignmentGem: undefined,
             endrace: undefined,
             endclass: undefined,
+            personality: "",
+            ideals: "",
+            flaws: "",
         });
     }
 
@@ -56,16 +59,40 @@ const CharacterCreator = () => {
     const [nestedModal, setNestedModal] = useState(false);
     const [errorModal, setErrorModal] = useState(false);
     const toggle = () => {
+        //Creates the character
         let charObj, d20;
         if (!character.alignmentGem || !character.endrace || !character.endclass) {
             toggleError();
             return;
         }
         charObj = character;
+        charObj.level = 1;
         //Die Rolls
-        d20 = Math.floor(Math.random() * 20) + 1;
+
+        if (!character.initD20) charObj.initD20 = Math.floor(Math.random() * 20) + 1;
+        
+        //ARMOR CLASS
         charObj.ac = (10 + parseInt(charObj.dexMod));
-        charObj.init = `+${d20 + parseInt(charObj.dexMod)}`;
+        
+        //INITIATIVE
+        charObj.init = `+${charObj.initD20 + parseInt(charObj.dexMod)}`;
+        
+        //INSPIRATION - receive inspiration if all background elements are completed
+        if (character.backstory && character.personality && character.ideals && character.flaws) {
+            character.inspiration = true;
+        } else {
+            character.inspiration = false;
+        }
+
+        //HIT POINTS: class hit die + constitution modifier
+        charObj.hp = parseInt(character.endclass.hitDie.replace(/^d/, '')) + parseInt(character.conMod);
+
+        //HIT DIE: level * class hit die
+        charObj.hitDie = `${character.level}${character.endclass.hitDie}`;
+
+        //FEATURES: An array separated by \n to create line breaks in textarea
+        charObj.features = [];
+        charObj.features.push(`${character.alignmentGem.lvls[0].name.toUpperCase()}: ${character.alignmentGem.lvls[0].description}`);
         
         console.log(charObj);
         setCharacter({...charObj});

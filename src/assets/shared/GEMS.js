@@ -647,27 +647,27 @@ export const GEMS = [
                     {
                         id: 0, 
                         name: "Fate",
-                        description: "Search your future for positive possibilities"
+                        description: "You can search your future for positive possibilities"
                     },
                     {
                         id: 1, 
                         name: "Fortune",
-                        description: "Search another's future for positive possibilities"
+                        description: "You can search another's future for positive possibilities"
                     },
                     {
                         id: 2, 
                         name: "Destiny",
-                        description: "Search the future of the ground where you stand"
+                        description: "You can search the future of the ground where you stand"
                     },
                     {
                         id: 3, 
                         name: "Endstate",
-                        description: "Search the future of an object"
+                        description: "You can search the future of an object"
                     },
                     {
                         id: 4, 
                         name: "Crystal Ball",
-                        description: "Search the future at will"
+                        description: "You can search the future at will"
                     },
                     {
                         id: 5, 

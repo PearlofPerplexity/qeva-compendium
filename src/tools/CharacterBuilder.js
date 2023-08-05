@@ -181,7 +181,7 @@ const CharacterBuilder = () => {
                                     <input value={character.dex} name="dex_score" type="number" onChange={(e) => handleAbilityScore('dex', e.target.value)} />
                                 </div>
                             </div>
-                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
+                            <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0 mb-lg-3">
                                 <div>
                                     <label htmlFor="con_score">CON</label>
                                     <input value={character.con} name="con_score" type="number" onChange={(e) => handleAbilityScore('con', e.target.value)} />
@@ -328,25 +328,25 @@ const CharacterBuilder = () => {
                             </ul>
                             <div className='col char-name-textarea sm-textarea'>
                                 <h5 className='text-start'>Backstory:</h5>
-                                <textarea className='form-control' rows="5"></textarea>
+                                <textarea className='form-control' rows="5" value={character.backstory} onChange={(e) => handleCharacter("backstory", e.target.value)}></textarea>
                             </div>
                         </div>
                         <div className='row mb-3'>
                             <div className='col char-name-textarea'>
                                 <h5 className='text-start'>Personality:</h5>
-                                <textarea className='form-control' rows="2"></textarea>
+                                <textarea className='form-control' rows="2" value={character.personality} onChange={(e) => handleCharacter("personality", e.target.value)}></textarea>
                             </div>
                         </div>
                         <div className='row mb-3'>
                             <div className='col char-name-textarea'>
                                 <h5 className='text-start'>Ideals:</h5>
-                                <textarea className='form-control' rows="2"></textarea>
+                                <textarea className='form-control' rows="2" value={character.ideals} onChange={(e) => handleCharacter("ideals", e.target.value)}></textarea>
                             </div>
                         </div>
                         <div className='row mb-3'>
                             <div className='col char-name-textarea'>
                                 <h5 className='text-start'>Flaws:</h5>
-                                <textarea className='form-control' rows="2"></textarea>
+                                <textarea className='form-control' rows="2" value={character.flaws} onChange={(e) => handleCharacter("flaws", e.target.value)}></textarea>
                             </div>
                         </div>
                     </AccordionBody>
@@ -377,11 +377,11 @@ const CharacterBuilder = () => {
                 {character.wisMod !== -5 && (<p className='col-2'>{character.wisMod}</p>)} 
                 {character.chaMod !== -5 && (<p className='col-2'>{character.chaMod}</p>)}
             </div>
-            <div className='mb-5'>
+            <div className='mb-4'>
             {character.alignment && !character.alignmentGem ? (
                 <>
                     <h5 className='char-build-title'><strong className='text-warning'>... </strong><strong>ALIGNMENT: </strong>{character.alignment}</h5>
-                    <p><strong>You can align to the following stones: </strong> 
+                    <p className='mx-3'><strong>You can align to the following stones: </strong> 
                         Creator Stones,&nbsp; 
                         { !character.alignment.includes('evil') ? ('Moral Stones') : ('Dark Stones')},&nbsp;
                         { !character.alignment.includes('good') ? ('Unbound Stones,') : ('')}&nbsp;
@@ -389,9 +389,13 @@ const CharacterBuilder = () => {
                     </p>
                 </>
             ) :  character.alignment && character.alignmentGem ? (
-                <h5 className='char-build-title'><strong className='text-success'>
-                    ✓ </strong><strong> ALIGNMENT: </strong>{character.alignment} | {character.alignmentGem.name}
-                </h5>
+                <>
+                    <h5 className='char-build-title mb-3'><strong className='text-success'>
+                        ✓ </strong><strong> ALIGNMENT: </strong>{character.alignment} | {character.alignmentGem.name}
+                    </h5>
+                    <h6><strong>ABILITY: </strong><em>{character.alignmentGem.lvls[0].name}</em></h6>
+                    <p>{character.alignmentGem.lvls[0].description}</p>
+                </>
             ) : (
                 <h5 className='char-build-title'><strong className='text-danger'>
                     ! </strong><strong> ALIGNMENT: </strong>
