@@ -66,6 +66,9 @@ const CharacterBuilder = () => {
     }
     const handleAlignment = (prop, id) => {
         let charObj = character;
+        console.log('prop: ' + prop);
+        console.log('id: ' + id);
+        console.log('character.alignmentType: ' + character.alignmentType);
         if (prop === 'alignment') {
             charObj[prop] = id;
             charObj.alignmentType = '';
@@ -82,7 +85,7 @@ const CharacterBuilder = () => {
                     charObj[prop] = GEMS[1].topics[id];
                     break;
                 case 'Incidental':
-                    charObj[prop] = GEMS[1].topics[id];
+                    charObj[prop] = GEMS[2].topics[id];
                     break;
                 case 'Unbound':
                     charObj[prop] = DGEMS[0].topics[id];
@@ -393,8 +396,14 @@ const CharacterBuilder = () => {
                     <h5 className='char-build-title mb-3'><strong className='text-success'>
                         ✓ </strong><strong> ALIGNMENT: </strong>{character.alignment} | {character.alignmentGem.name}
                     </h5>
-                    <h6><strong>ABILITY: </strong><em>{character.alignmentGem.lvls[0].name}</em></h6>
-                    <p>{character.alignmentGem.lvls[0].description}</p>
+                    {character.alignmentType === 'Incidental' ? (
+                        <h6><strong>ABILITY: </strong>{character.alignmentGem.lvls[0]} | <em>cost: 2pts</em></h6>
+                    ) : (
+                        <>
+                            <h6><strong>ABILITY: </strong><em>{character.alignmentGem.lvls[0].name}</em> | <em>cost: 2pts</em></h6>
+                            <p>{character.alignmentGem.lvls[0].description}</p>
+                        </>
+                    )}
                 </>
             ) : (
                 <h5 className='char-build-title'><strong className='text-danger'>

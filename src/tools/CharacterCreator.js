@@ -92,7 +92,11 @@ const CharacterCreator = () => {
 
         //FEATURES: An array separated by \n to create line breaks in textarea
         charObj.features = [];
-        charObj.features.push(`${character.alignmentGem.lvls[0].name.toUpperCase()}: ${character.alignmentGem.lvls[0].description}`);
+        if (character.alignmentType === 'Incidental') {
+            charObj.features.push(`${character.alignmentGem.name.toUpperCase()}: ${character.alignmentGem.lvls[0]} (2pts)`);
+        } else {
+            charObj.features.push(`${character.alignmentGem.lvls[0].name.toUpperCase()}: ${character.alignmentGem.lvls[0].description} (2pts)`);
+        }
         
         console.log(charObj);
         setCharacter({...charObj});
