@@ -24,6 +24,8 @@ const CharacterProvider = ({ children }) => {
         race: undefined, subrace: undefined, endrace: undefined,
         //Class
         myClass: undefined, subclass: undefined, endclass: undefined,
+        //Proficiencies & Languages
+        profAndLang: [],
         //Features
         features: [],
         //Backstory

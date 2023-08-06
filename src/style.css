@@ -36,7 +36,6 @@ form.charsheet {
 form.charsheet textarea {
   font-size: 12px;
   text-align: left;
-  width: calc(100% - 20px - 2px);
   border-radius: 10px;
   padding: 10px;
   resize: none;
@@ -44,6 +43,9 @@ form.charsheet textarea {
   height: 15em;
   background-color: white;
   color: black;
+}
+form.charsheet textarea.widthCalc {
+  width: calc(100% - 20px - 2px);
 }
 form.charsheet input[type=checkbox] {
   cursor: pointer;

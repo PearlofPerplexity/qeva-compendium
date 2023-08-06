@@ -27,6 +27,8 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         race, subrace, endrace,
         //Class
         myClass, subClass, endclass,
+        //Proficiencies and Languages
+        profAndLang,
         //Calculations
         ac, init, hp, hitDie, inspiration,
         //Features
@@ -228,7 +230,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <input name="passiveperception" placeholder="10" value={wis} readOnly />
     </div>
     <div className="otherprofs box textblock">
-        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea name="otherprofs"></textarea>
+        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea className='widthCalc' name="otherprofs" value={profAndLang && profAndLang.join("\n\n")}></textarea>
     </div>
     </section>
     <section>
@@ -350,7 +352,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             </tr>
             </tbody>
         </table>
-        <textarea></textarea>
+        <textarea className='widthCalc'></textarea>
         </div>
     </section>
     <section className="equipment">
@@ -369,7 +371,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             </li>
             </ul>
         </div>
-        <textarea placeholder="Equipment list here"></textarea>
+        <textarea className='widthCalc' placeholder="Equipment list here"></textarea>
         </div>
     </section>
     </section>
@@ -426,18 +428,19 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     </section>
     <section className="flavor">
         <div className="personality">
-        <label htmlFor="personality">Personality</label><textarea name="personality" value={personality} readOnly></textarea>
+        <label htmlFor="personality">Personality</label><textarea className='widthCalc' name="personality" value={personality} readOnly></textarea>
         </div>
         <div className="ideals">
-        <label htmlFor="ideals">Ideals</label><textarea name="ideals" value={ideals} readOnly></textarea>
+        <label htmlFor="ideals">Ideals</label><textarea className='widthCalc' name="ideals" value={ideals} readOnly></textarea>
         </div>
         <div className="flaws">
-        <label htmlFor="flaws">Flaws</label><textarea name="flaws" value={flaws} readOnly></textarea>
+        <label htmlFor="flaws">Flaws</label><textarea className='widthCalc' name="flaws" value={flaws} readOnly></textarea>
         </div>
     </section>
     <section className="features">
         <div>
-        <label htmlFor="features">Features & Traits</label><textarea name="features" value={features && features.join("\n\n")} readOnly></textarea>
+        <label htmlFor="features">Features & Traits</label>
+        <textarea name="features" value={features && features.join("\n\n")} readOnly></textarea>
         </div>
     </section>
     </section>

@@ -13,6 +13,10 @@ import CharacterBuilder from './CharacterBuilder';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
 
+import { GEMS } from '../assets/shared/GEMS';
+import { CLASSES } from '../assets/shared/CLASSES';
+import { RACES } from '../assets/shared/RACES';
+
 const CharacterCreator = () => {
     
     const [character, setCharacter] = useContext(CharacterContext);
@@ -28,6 +32,8 @@ const CharacterCreator = () => {
         endrace,
         //Class
         endclass,
+        //Backstory
+        backstory, personality, ideals, flaws,
      } = character;
 
     const resetCharacter = () => {
@@ -48,6 +54,31 @@ const CharacterCreator = () => {
             personality: "",
             ideals: "",
             flaws: "",
+        });
+    }
+
+    const handleRandom = () => {
+        setCharacter({
+            //Name
+            playerName: "Kyle O'Brien",
+            name: "Hartri",
+            //Ability Scores
+            str: 12, strMod: +1, strSave: +3,
+            dex: 12, dexMod: +1, dexSave: +3,
+            con: 12, conMod: +1, conSave: +3,
+            int: 12, intMod: +1, intSave: +3,
+            wis: 12, wisMod: +1, wisSave: +3,
+            cha: 12, chaMod: +1, chaSave: +3,
+            alignment: "Lawful Good", alignmentType: "Cardinal", alignmentGem: GEMS[1].topics[11],
+            race: RACES[5],
+            endrace: RACES[5].topics[1],
+            subrace: RACES[5].topics[1],
+            myClass: CLASSES[1],
+            endclass: CLASSES[1],
+            backstory: "A rugged old caracadre gnome who is nearly always the wisest of his party and slowest to rashness.",
+            personality: "Hartri is gentle and understanding. Makes friends everywhere he goes.",
+            ideals: "Believes in peace",
+            flaws: "Too slow too action, getting older.",
         });
     }
 
@@ -83,6 +114,15 @@ const CharacterCreator = () => {
         } else {
             character.inspiration = false;
         }
+
+        //PROFICIENCIES & LANGUAGES
+        charObj.profAndLang = [];
+        //LANGUAGES
+        charObj.languages = character.race.languages.join(', ');
+        charObj.profAndLang.push(`LANGUAGES: ${charObj.languages}`);
+        //PROFICIENCIES
+        charObj.proficiencies = character.race.proficiencies;
+        charObj.profAndLang.push(`PROFICIENCIES: ${charObj.proficiencies}`);
 
         //HIT POINTS: class hit die + constitution modifier
         charObj.hp = parseInt(character.endclass.hitDie.replace(/^d/, '')) + parseInt(character.conMod);
@@ -127,7 +167,11 @@ const CharacterCreator = () => {
             alignmentType ||
             alignmentGem ||
             endrace ||
-            endclass
+            endclass ||
+            backstory ||
+            personality ||
+            ideals ||
+            flaws
         ) {
             return true;
         }
@@ -163,12 +207,15 @@ const CharacterCreator = () => {
             <Modal isOpen={modalOne} toggle={toggleOne} fullscreen>
                 <ModalHeader>
                     <i className="iconify fs-2" data-icon="noto:man-elf-light-skin-tone"></i> Character Builder for:&nbsp;
-                    <input type='text' className='player-name-input' onBlur={(e) => handleCharacter('playerName', e.target.value)} />
+                    <input type='text' className='player-name-input' value={character.playerName} onChange={(e) => handleCharacter('playerName', e.target.value)} />
                 </ModalHeader>
                 <ModalBody>
                     <CharacterBuilder />
                 </ModalBody>
                 <ModalFooter>
+                    <Button color="secondary" onClick={handleRandom} >
+                        Randomize
+                    </Button>{' '}
                     <Button color="primary" onClick={toggle} >
                         Build Character Sheet
                     </Button>{' '}
@@ -178,7 +225,7 @@ const CharacterCreator = () => {
                 </ModalFooter>
             </Modal>
             <Modal isOpen={modal} toggle={toggle} fullscreen>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i> Character Builder</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:man-elf-light-skin-tone"></i> Character Builder</ModalHeader>
                 <ModalBody>
                     <CharacterSheet ref={componentRef} />
                 </ModalBody>
