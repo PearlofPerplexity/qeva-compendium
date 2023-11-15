@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import _ from "lodash";
 import { Link } from "react-router-dom";
 import { SearchIcon, CloseIcon } from "./icon";
-// import { BASICS } from "../assets/shared/BASICS";
+import { BASICS } from "../assets/shared/oldData/BASICS";
 import { CHARACTERS } from '../assets/shared/CHARACTERS';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { DIVINE } from '../assets/shared/DIVINE';
@@ -20,6 +20,7 @@ const SearchBar = () => {
 
 const allArrays = [
     ..._.cloneDeep(useSelector(selectAllBasics)),
+    ...BASICS,
     ...CHARACTERS,
     ...CLASSES, 
     ...DIVINE, 

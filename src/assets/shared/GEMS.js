@@ -898,7 +898,7 @@ export const GEMS = [
                 description: `Whitestone is a white chalky limestone, which is found as the primary rock in the southwestern cliffs (including the mirror cliffs on Haven originally apart of Avlim). It is truly the stone of selflness as it garners the least respect of all stones by far. If one follows it's quality long enough, it will solidify into pearl.`,
                 image: whitestone,
                 imageAlt: `Qeṽa Whitestone`,
-                lvls: ["+1 ABILItY to other", "+3 ABILItY to other", "+5 ABILItY to other", "+8 ABILItY to other", "+10 ABILItY to other"]
+                lvls: ["+1 ABILITY to other", "+3 ABILITY to other", "+5 ABILITY to other", "+8 ABILITY to other", "+10 ABILITY to other"]
             }
         ]
     },

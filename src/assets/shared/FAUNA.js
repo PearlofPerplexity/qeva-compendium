@@ -126,6 +126,11 @@ export const FAUNA = [
             },
             {
                 id: 1,
+                name: 'White-laced Ladies',
+                description: 'Butterflies native to the mountains in Altiavaire. It is a great sight to see their migration west to the Athari cliffs.'
+            },
+            {
+                id: 2,
                 name: 'Dragons',
                 description: 'Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elder elves, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.'
             }

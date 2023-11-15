@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { RACES } from '../assets/shared/RACES';
 
-const dndClasses = [...CLASSES.slice(0,8), ...CLASSES[9].topics];
+const dndClasses = [...CLASSES.slice(0,9), ...CLASSES[9].topics];
 
 
 const ClassChart = (props) => {

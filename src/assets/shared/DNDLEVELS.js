@@ -32,18 +32,15 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Acrobat',
-                    description: 'Acrobat things'
-                }
-            ],
-            trackables: ["test", "other"],
-            spells: [
-                {
-                    id: 0,
                     name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
+                    description: 'Size: 5ft cube, Range: 15ft'
+                },
+                {
+                    id: 1, 
+                    name: "Endless Blesing",
+                    description: "You live in a constant state of blessing, guarded by ethereals.You can add proficiency to any roll."
+                },
+            ],
         },
         {
             // LEVEL 2
@@ -53,17 +50,9 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Ability Score Increase',
-                    description: 'Add +1 to any ability score'
-                }
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }  
             ],
-            trackables: [],
-            spells: [
-                {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
         },
         {
             // LEVEL 3
@@ -72,18 +61,15 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Ability Score Increase',
-                    description: 'Add +1 to any ability score'
-                }
-            ],
-            trackables: [],
-            spells: [
+                    name: 'LVL 2 Divination',
+                    description: 'Size: 10ft cube, Range: 30ft'
+                },
                 {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
+                    id: 1, 
+                    name: "Share the Wealth",
+                    description: "Any caracadre that you give an unburnt olive leaf, lives in a constant state of blessing and is guarded by ethereals for as long as they abide in DIA. They can add proficiency to any roll."
+                },
+            ],
         },
         {
             // LEVEL 4
@@ -96,14 +82,6 @@ export const DNDLEVELS = {
                     description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
                 }
             ],
-            trackables: [],
-            spells: [
-                {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
         },
         {
             // LEVEL 5
@@ -112,18 +90,15 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Ability Score Increase',
-                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
-                }
-            ],
-            trackables: [],
-            spells: [
+                    name: 'LVL 3 Divination',
+                    description: 'Size: 15ft cube, Range: 60ft'
+                },
                 {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
+                    id: 1, 
+                    name: "Celestial Tongue",
+                    description: "You can comprehend the speech of ethereals"
+                },
+            ],
         },
         {
             // LEVEL 6
@@ -132,18 +107,10 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Acrobat',
-                    description: 'Acrobat things'
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
                 }
             ],
-            trackables: [],
-            spells: [
-                {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
         },
         {
             // LEVEL 7
@@ -152,18 +119,15 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Ability Score Increase',
-                    description: 'Add +1 to any ability score'
-                }
-            ],
-            trackables: [],
-            spells: [
+                    name: 'LVL 4 Divination',
+                    description: 'Size: 20ft cube, Range: 120ft'
+                },
                 {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
+                    id: 1, 
+                    name: "Communion",
+                    description: "Above cloudline, you can receive direction from DIA"
+                },
+            ],
         },
         {
             // LEVEL 8
@@ -176,14 +140,6 @@ export const DNDLEVELS = {
                     description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
                 }
             ],
-            trackables: [],
-            spells: [
-                {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
         },
         {
             // LEVEL 9
@@ -192,18 +148,10 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Ability Score Increase',
-                    description: 'Add +1 to any ability score'
+                    name: '-',
+                    description: 'No features earned at this level.'
                 }
             ],
-            trackables: [],
-            spells: [
-                {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
         },
         {
             // LEVEL 10
@@ -212,18 +160,10 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Ability Score Increase',
-                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                    name: '-',
+                    description: 'No features earned at this level.'
                 }
             ],
-            trackables: [],
-            spells: [
-                {
-                    id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Keep divining.'
-                }
-            ]
         },
     ],
     /* ---------- NEXT CLASS -------------------- CARACADRE ---------- */
@@ -1049,16 +989,22 @@ export const DNDLEVELS = {
             // LEVEL 2
             id: 2,
             prof_bonus: '+2',
-            features: [],
+            features: [
+                {
+                    id: 0,
+                    name: '-',
+                    description: 'No features earned at this level.'
+                }
+            ],
         },
         {
             // LEVEL 3
             id: 3,
             prof_bonus: '+2',
-            features: [
+            features: [ 
                 {
                     id: 0,
-                    name: "Select a feats",
+                    name: "Select a feat",
                     description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
                 }
             ],
@@ -1096,7 +1042,13 @@ export const DNDLEVELS = {
             // LEVEL 6
             id: 6,
             prof_bonus: '+3',
-            features: [],
+            features: [
+                {
+                    id: 0,
+                    name: '-',
+                    description: 'No features earned at this level.'
+                }
+            ],
         },
         {
             // LEVEL 7

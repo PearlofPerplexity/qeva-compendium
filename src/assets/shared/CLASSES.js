@@ -58,7 +58,7 @@ export const CLASSES = [
         weapon_prof: ["Zanhari Sword"],
         saving_throw_prof: ["Dexterity", "Wisdom"],
         skill_prof: ["Dexterity", "Wisdom", "Religion"],
-        //lvls: DNDLEVELS.oracles,
+        lvls: DNDLEVELS.oracles,
         topics: [
             {
                 id: 0,
@@ -626,7 +626,7 @@ export const CLASSES = [
     {
         id: 2,
         link: `/classes/avlimeth`,
-        quality: `Monks`,
+        quality: `Paladins`,
         goal: `Bring Peace & Justice for the Common Man`,
         name: `Avlimeth`,
         race: ['Any'],
@@ -646,7 +646,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `The Avlimeth or "Haven of Avlim" more commonly known as 'watchers' are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences  in their beliefs about gems. After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the oracles placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, elemental caracadre only pursue stones of a shared element.`
+                description: `The Avlimeth or "Haven of Avlim" more commonly known as 'watchers' are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences  in their beliefs about gems. After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the oracles placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, avlimeth only pursue stones of a shared element.`
             },
             {
                 id: 1,
@@ -663,12 +663,12 @@ export const CLASSES = [
                     {
                         id: 0,
                         name: `Tour of the Guard`,
-                        description: `All Avlimeth, no matter their calling must take a tour of the guard, to cement their position as an avlimeth. THis tour of the guard is one year spent in Avlim devoting themselves to justice in Avlim. Most take multiple tour of duties, but only one is required. Any tour of the guard must be followed by a month of rest, which they call a "breath".`
+                        description: `All Avlimeth, no matter their calling must take a tour of the guard, to cement their position as an avlimeth. This tour of the guard is one year spent in Avlim devoting themselves to justice in Avlim. Most take multiple tour of duties, but only one is required. Any tour of the guard must be followed by a month of rest, which they call a "breath".`
                     },
                     {
                         id: 1,
                         name: `Watchmen`,
-                        description: `A watchmen takes watch over a cathedral. They are different than then thenyls, which are the priamry guardians of cathedrals; haelas or spirits, which have surrendered their invisibility to take eternal guard over a cathedral. Avlimeth dedicated as watchmen join them in tending to the cathedrals.`
+                        description: `A watchmen takes watch over a cathedral. They are different than then thenyls, which are the priamry guardians of cathedrals; haelas or spirits, which have surrendered their invisibility to take eternal guard over a cathedral. Avlimeth dedicated as watchmen join them in tending to the cathedrals and follow thenyl commands.`
                     },
                     {
                         id: 3,

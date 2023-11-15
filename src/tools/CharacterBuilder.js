@@ -27,8 +27,6 @@ const CharacterBuilder = () => {
 
     const [character, setCharacter] = useContext(CharacterContext);
 
-    // Ability Scores
-    const abilityScoreArray = [8, 10, 12, 13, 14, 15];
     const allAbility = 72 - character.str - character.dex - character.con - character.int - character.wis - character.cha;
 
     const handleCharacter = (prop, value) => {
@@ -36,8 +34,9 @@ const CharacterBuilder = () => {
         charObj[prop] = value;
         setCharacter({...charObj});
     };
-    const handleAbilityScore = (prop, value) => {
+    const handleAbilityScore = (prop, val) => {
         let charObj = character;
+        let value = parseInt(val);
 
         //Determine value of ABILITY SCORE | ex. 'dex'
         charObj[prop] = value;
@@ -356,7 +355,7 @@ const CharacterBuilder = () => {
                 </AccordionItem>
             </Accordion>
         </form>
-        <div className="col text-center border-start border-3 border-light rounded char-overflow">
+        <div className="col text-center border-start border-3 border-light rounded char-overflow d-none d-md-block">
             <h2 className='mb-5'>{character.playerName ? (`${character.playerName.split(' ')[0]}'s`) : ('Your')} Character: {character.name}</h2>
             <h5 className='char-build-title'>
                 {allAbility === 0 ? (<strong className='text-success'>✓ </strong>)
@@ -373,12 +372,12 @@ const CharacterBuilder = () => {
                 <p className='col-2'>CHA: {character.cha}</p>
             </div>
             <div className='row mb-4'>
-                {character.strMod !== -5 && (<p className='col-2'>{character.strMod}</p>)} 
-                {character.dexMod !== -5 && (<p className='col-2'>{character.dexMod}</p>)} 
-                {character.conMod !== -5 && (<p className='col-2'>{character.conMod}</p>)} 
-                {character.intMod !== -5 && (<p className='col-2'>{character.intMod}</p>)} 
-                {character.wisMod !== -5 && (<p className='col-2'>{character.wisMod}</p>)} 
-                {character.chaMod !== -5 && (<p className='col-2'>{character.chaMod}</p>)}
+                <p className='col-2'>{character.strMod !== -5 ? character.strMod : ""}</p> 
+                <p className='col-2'>{character.dexMod !== -5 ? character.dexMod : ""}</p> 
+                <p className='col-2'>{character.conMod !== -5 ? character.conMod : ""}</p> 
+                <p className='col-2'>{character.intMod !== -5 ? character.intMod : ""}</p> 
+                <p className='col-2'>{character.wisMod !== -5 ? character.wisMod : ""}</p> 
+                <p className='col-2'>{character.chaMod !== -5 ? character.chaMod : ""}</p> 
             </div>
             <div className='mb-4'>
             {character.alignment && !character.alignmentGem ? (

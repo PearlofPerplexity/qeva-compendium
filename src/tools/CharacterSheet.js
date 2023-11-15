@@ -230,7 +230,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <input name="passiveperception" placeholder="10" value={wis} readOnly />
     </div>
     <div className="otherprofs box textblock">
-        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea className='widthCalc' name="otherprofs" value={profAndLang && profAndLang.join("\n\n")}></textarea>
+        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea className='widthCalc' name="otherprofs" value={profAndLang && profAndLang.join("\n\n")} readOnly></textarea>
     </div>
     </section>
     <section>
@@ -301,7 +301,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
     </section>
     <section className="attacksandspellcasting">
         <div>
-        <label>Attacks & Spellcasting</label>
+        <label>Attacks</label>
         <table>
             <thead>
             <tr>

@@ -52,7 +52,7 @@ return (
             );
         })}
     </div>
-    <BottomSmNav left={DIVINE[2]} right={DIVINE[0]} />
+    <BottomSmNav left={DIVINE[1]} right={DIVINE[3]} />
 </>
 );
 }

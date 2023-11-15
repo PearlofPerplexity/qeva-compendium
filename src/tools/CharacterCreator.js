@@ -34,7 +34,9 @@ const CharacterCreator = () => {
         endclass,
         //Backstory
         backstory, personality, ideals, flaws,
-     } = character;
+    } = character;
+
+    const allAbility = 72 - (str + dex + con + int + wis + cha);
 
     const resetCharacter = () => {
         setCharacter({
@@ -63,12 +65,12 @@ const CharacterCreator = () => {
             playerName: "Kyle O'Brien",
             name: "Hartri",
             //Ability Scores
-            str: 12, strMod: +1, strSave: +3,
-            dex: 12, dexMod: +1, dexSave: +3,
-            con: 12, conMod: +1, conSave: +3,
-            int: 12, intMod: +1, intSave: +3,
-            wis: 12, wisMod: +1, wisSave: +3,
-            cha: 12, chaMod: +1, chaSave: +3,
+            str: 10, strMod: "+0", strSave: "+2",
+            dex: 15, dexMod: "+2", dexSave: "+4",
+            con: 15, conMod: "+2", conSave: "+4",
+            int: 8, intMod: "-1", intSave: "+1",
+            wis: 11, wisMod: "+0", wisSave: "+2",
+            cha: 13, chaMod: "+1", chaSave: "+3",
             alignment: "Lawful Good", alignmentType: "Cardinal", alignmentGem: GEMS[1].topics[11],
             race: RACES[5],
             endrace: RACES[5].topics[1],
@@ -92,7 +94,8 @@ const CharacterCreator = () => {
     const toggle = () => {
         //Creates the character
         let charObj, d20;
-        if (!character.alignmentGem || !character.endrace || !character.endclass) {
+        if (!character.alignmentGem || !character.endrace || !character.endclass || (allAbility !== 0)) {
+            console.log([str, dex, con, int, wis, cha]);
             toggleError();
             return;
         }
@@ -121,7 +124,7 @@ const CharacterCreator = () => {
         charObj.languages = character.race.languages.join(', ');
         charObj.profAndLang.push(`LANGUAGES: ${charObj.languages}`);
         //PROFICIENCIES
-        charObj.proficiencies = character.race.proficiencies;
+        charObj.proficiencies = character.race.proficiencies.join(', ');
         charObj.profAndLang.push(`PROFICIENCIES: ${charObj.proficiencies}`);
 
         //HIT POINTS: class hit die + constitution modifier
@@ -136,6 +139,16 @@ const CharacterCreator = () => {
             charObj.features.push(`${character.alignmentGem.name.toUpperCase()}: ${character.alignmentGem.lvls[0]} (2pts)`);
         } else {
             charObj.features.push(`${character.alignmentGem.lvls[0].name.toUpperCase()}: ${character.alignmentGem.lvls[0].description} (2pts)`);
+        }
+        if (character.race.abilities && character.race.abilities.length > 0) {
+            character.race.abilities.map(ability => {
+                charObj.features.push(`${ability.name.toUpperCase()}: ${ability.description}`)
+            });
+        }
+        if (character.subrace && character.subrace.abilities.length > 0) {
+            character.subrace.abilities.map(ability => {
+                charObj.features.push(`${ability.name.toUpperCase()}: ${ability.description}`)
+            });
         }
         
         console.log(charObj);
@@ -265,6 +278,7 @@ const CharacterCreator = () => {
                     <div className='text-start'>
                         Some critical information is missing:
                         <ul className="list-group-flush">
+                            {(allAbility !== 0) && (<li className='list-group-item'><strong className='text-danger'>! </strong>Ability Score Points have not been allocated properly</li>)}
                             {!alignmentGem && (<li className='list-group-item'><strong className='text-danger'>! </strong>Alignment</li>)}
                             {!endrace && (<li className='list-group-item'><strong className='text-danger'>! </strong>Race</li>)}
                             {!endclass && (<li className='list-group-item'><strong className='text-danger'>! </strong>Class</li>)}

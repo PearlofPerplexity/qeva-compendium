@@ -2,6 +2,7 @@ import _ from "lodash";
 import React from 'react';
 import EdiText from 'react-editext';
 import { Col } from "reactstrap";
+import { BASICS } from '../assets/shared/oldData/BASICS';
 import { GEMS } from '../assets/shared/GEMS';
 import { DIVINE } from '../assets/shared/DIVINE';
 import { BasicIcon } from "../utils/icon";
@@ -13,6 +14,8 @@ import Error from "../utils/Error";
 import Loading from "../utils/Loading";
 
 const BasicPage = () => {
+    const basics = BASICS;
+    /*
     const basics = useSelector(selectAllBasics);
 
     const dispatch = useDispatch();
@@ -41,7 +44,7 @@ if (errMsg) {
         </Col>
     );
 }
-
+*/
 if (basics && basics.length > 0) {
     return (
         <div className='py-2 px-3'>
@@ -59,7 +62,7 @@ if (basics && basics.length > 0) {
                                                 showButtonsOnHover
                                                 type="textarea"
                                                 value={topic.description}
-                                                onSave={handleSave(index)}
+                                                //onSave={handleSave(index)}
                                                 className='card-text'
                                                 inputProps={{
                                                     style:{
