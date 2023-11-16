@@ -19,7 +19,7 @@ import aeoki from '../imgs/races/aeoki.png';
 import treefolk from '../imgs/races/treefolk.png';
 import spirit from '../imgs/ethereal/spirit.png';
 import spectre from '../imgs/ethereal/spectre.png';
-import user from '../imgs/races/user.png';
+//import user from '../imgs/races/user.png';
 
 /* INCLUDES:
 
@@ -63,6 +63,15 @@ export const RACES = [
                 id: 0,
                 name: `Wood Elves`,
                 singName: "Wood Elf",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Elvish Cloaks',
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Forests of Navenia & Navalil`,
                 appearance: `Gold Hair & White Skin`,
                 description: 
@@ -93,6 +102,15 @@ export const RACES = [
                 id: 1,
                 name: `River Elves`,
                 singName: "River Elf",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Elvish Cloaks',
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Miolaire & Dundili Rivers`,
                 appearance: `Black Hair & White Skin`,
                 description: 
@@ -117,6 +135,15 @@ export const RACES = [
                 id: 2,
                 name: `Desert Elves`,
                 singName: "Desert Elf",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Elvish Cloaks',
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Miolaire & Dundili Rivers`,
                 appearance: `Gold Hair & Tan Skin`,
                 description: 
@@ -166,6 +193,14 @@ export const RACES = [
                 name: `Lumiare`,
                 singName: "Autumn Avi",
                 nickname: `Autumn Avi`,
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Mountains of Altiavaire`,
                 appearance: `Black Hair & Tangerine Skin`,
                 description: 
@@ -191,6 +226,15 @@ export const RACES = [
                 name: `Athiame`,
                 singName: "Night Avi",
                 nickname: `Night Avi`,
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Ghost Blades',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Athvari Cliffs`,
                 appearance: `White Hair & Black Skin`,
                 description: 
@@ -221,6 +265,14 @@ export const RACES = [
                 name: `Asiame`,
                 singName: "Snow Avi",
                 nickname: `Snow Avi`,
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `High Mountains, Orcaṽa`,
                 appearance: `White Hair & Skin`,
                 description: 
@@ -246,6 +298,16 @@ export const RACES = [
                 name: `Half-Aviame, Half-Elf`,
                 singName: "Ave",
                 nickname: `Aves`,
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Elvish Cloaks',
+                    'Avikin',
+                    'Ghost Blades',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Elven & Aviame Communities`,
                 appearance: `White Hair & Calico Skin`,
                 description: 
@@ -294,6 +356,15 @@ export const RACES = [
                 id: 0,
                 name: `Humans`,
                 singName: "Human",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Topplers',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Arvañon`,
                 appearance: `Varied Hair & Skin`,
                 description: 
@@ -311,6 +382,16 @@ export const RACES = [
                 id: 1,
                 name: `Half-Elves`,
                 singName: "Half-Elf",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Elvish Cloaks',
+                    'Avikin',
+                    'Topplers',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Elven & Human Communities`,
                 appearance: `Eyes the color of their elven parent`,
                 description: 
@@ -336,6 +417,16 @@ export const RACES = [
                 id: 2,
                 name: `Elden`,
                 singName: "Elden",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth',
+                    'Elvish Cloaks', 
+                    'Avikin',
+                    'Topplers',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Brielle`,
                 appearance: `Each elden different`,
                 description: 
@@ -350,6 +441,14 @@ export const RACES = [
         link: `/races/osei`,
         name: `Ocri`,
         singName: "Ocrim",
+        classes: [
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'The Uncorrupted',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Amethyst (Peace)`,
         spawnStone: `Azurite (Charisma)`,
         elden: `Moriel`,
@@ -437,6 +536,14 @@ export const RACES = [
                 id: 0,
                 name: `Thrauldem's Folk`,
                 singName: "Thrush Mtn Dwarf",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Thursh Mountains`,
                 appearance: `~Black Hair, White Skin`,
                 description: 
@@ -456,6 +563,14 @@ export const RACES = [
                 id: 1,
                 name: `Narduhelm's Folk`,
                 singName: "Bare Mtn Dwarf",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Bare Mountains`,
                 appearance: `~Brown Hair, White Skin`,
                 description: 
@@ -512,6 +627,14 @@ export const RACES = [
                 id: 0,
                 name: `Green Gnomes`,
                 singName: "Green Gnome",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Farathain`,
                 appearance: `Green Skin`,
                 description: 
@@ -536,6 +659,14 @@ export const RACES = [
                 id: 1,
                 name: `Blue Gnomes`,
                 singName: "Blue Gnome",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Haven`,
                 appearance: `Blue Skin`,
                 description: 
@@ -560,6 +691,14 @@ export const RACES = [
                 id: 2,
                 name: `Red Gnomes`,
                 singName: "Red Gnome",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `Baroach, Bare Mountains`,
                 appearance: `Red Skin`,
                 description: 
@@ -592,6 +731,15 @@ export const RACES = [
         link: `/races/halflings`,
         name: `Halflings`,
         singName: "Halfling",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'Topplers',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Jasper (Joy)`,
         spawnStone: `Scarlet Scolecite (Happiness)`,
         elden: `Xaradriel`,
@@ -634,6 +782,14 @@ export const RACES = [
         link: `/races/aeoki`,
         name: `Oaki`,
         singName: "Oaki",
+        classes: [
+            'Oracles', 
+            'Caracadre',
+            'Avlimeth', 
+            'Avikin',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Turqouise (Gentleness)`,
         spawnStone: `Chryscocolla (Stealth)`,
         elden: `Mhindil`,
@@ -671,6 +827,15 @@ export const RACES = [
         link: `/races/arborums`,
         name: `Arborums`,
         singName: "Arborum",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'Topplers',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Emerald (Goodness)`,
         spawnStone: `Jade (Awareness)`,
         elden: `Arboriul`,
@@ -767,6 +932,7 @@ export const RACES = [
                 id: 0,
                 name: `Spirits`,
                 singName: "Spirit",
+                classes: [],
                 residence: `The Etherworld`,
                 appearance: `Invisible`,
                 description: 
@@ -791,6 +957,14 @@ export const RACES = [
                 id: 1,
                 name: `Spectres`,
                 singName: "Spectre",
+                classes: [
+                    'Oracles', 
+                    'Caracadre', 
+                    'Avlimeth', 
+                    'Avikin',
+                    'Order of the Feather',
+                    'No Affiliation'
+                ],
                 residence: `The Natural World`,
                 appearance: `White Hair, White Skin, White Eyes`,
                 description: 

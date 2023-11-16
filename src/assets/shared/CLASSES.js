@@ -695,7 +695,7 @@ export const CLASSES = [
         quality: `Wood Elven Warriors`,
         goal: `Keep Watch over the Elvish Realms`,
         name: `Elvish Cloaks`,
-        race: ['Elves', 'Aves'],
+        race: ['Elf', 'Ave'],
         primaryWeapon: `Longbow`,
         sacredText: `Histories of Avlim`,
         worldKnowledge: `Medium-High`,

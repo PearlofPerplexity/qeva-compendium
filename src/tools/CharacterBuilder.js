@@ -26,6 +26,7 @@ const CharacterBuilder = () => {
     };
 
     const [character, setCharacter] = useContext(CharacterContext);
+    const [classes, setClasses] = useState(CLASSES);
 
     const allAbility = 72 - character.str - character.dex - character.con - character.int - character.wis - character.cha;
 
@@ -105,7 +106,10 @@ const CharacterBuilder = () => {
             if (id) {
                 newrace = RACES[id];
                 charObj[prop] = newrace;
-                if (!newrace.topics) charObj.endrace = newrace;
+                if (!newrace.topics) {
+                    charObj.endrace = newrace;
+                    setClassOptions(newrace);
+                }
             } else {
                 charObj[prop] = null;
                 charObj.endrace = null;
@@ -116,13 +120,26 @@ const CharacterBuilder = () => {
                 newrace = character.race.topics[id];
                 charObj[prop] = newrace;
                 charObj.endrace = newrace;
+                setClassOptions(newrace);
             }
             else {
                 charObj[prop] = null;
                 charObj.endrace = character.race;
             }
         }
+        charObj.myClass = null;
+        charObj.subclass = null;
+        charObj.endclass = null;
         setCharacter({...charObj});
+    }
+    const setClassOptions = (race) => {
+        let raceClasses;
+        if (race.hasOwnProperty('classes')) {
+            raceClasses = CLASSES.filter(cls => race.classes.includes(cls.name));
+        } else {
+            raceClasses = CLASSES;
+        }
+        setClasses(raceClasses);
     }
     const handleClass = (prop, id) => {
         let charObj = character;
@@ -301,9 +318,14 @@ const CharacterBuilder = () => {
                     <AccordionHeader targetId='4'>Class</AccordionHeader>
                     <AccordionBody accordionId='4'>
                         <ClassChart loc="charCreate" />
-                        <select name='orders' className="charPicklist" id='order-select' onChange={(e) => handleClass('myClass', e.target.value)}>
+                        <select 
+                            name='orders' 
+                            className="charPicklist" 
+                            id='order-select' 
+                            onChange={(e) => handleClass('myClass', e.target.value)}
+                        >
                             <option value="">--Select a Class--</option>
-                            {CLASSES.map((order) => (
+                            {classes.map((order) => (
                                 <option value={order.id} key={order.id}>{order.name}</option>
                                 ))}
                         </select>
