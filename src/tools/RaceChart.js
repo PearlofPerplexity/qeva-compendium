@@ -140,7 +140,7 @@ const RaceChart = (props) => {
                                 </p>
                             </OffcanvasBody>
                         </Offcanvas>
-                        <table className="table table-hover table-sticky align-middle">
+                        <table className="table table-hover align-middle">
                             <thead>
                                 <tr className='align-middle'>
                                     <th>Race</th>
@@ -152,9 +152,9 @@ const RaceChart = (props) => {
                                     <td>INT</td>
                                     <td>WIS</td>
                                     <td>CHA</td>
-                                    <td>Languages</td>
-                                    <td>Proficiencies</td>
-                                    <td>abilities</td>
+                                    <td>Languages & Proficiencies</td>
+                                    <td>Abilities</td>
+                                    <td>Allowed Classes</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -170,13 +170,21 @@ const RaceChart = (props) => {
                                             <td>{race.int}</td>
                                             <td>{race.wis}</td>
                                             <td>{race.cha}</td>
-                                            <td>{race.languages.join(', ')}</td>
-                                            <td>{race.proficiencies.join(', ')}</td>
+                                            <td>{race.proficiencies ? (
+                                                <>
+                                                    {race.languages.join(', ')}, {race.proficiencies.join(', ')}
+                                                </>
+                                                ) : (
+                                                <>
+                                                    {race.languages.join(', ')}
+                                                </>
+                                                )}</td>
                                             <td>
                                                 {race.abilities && race.abilities.map(a => (
                                                     <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
                                                 ))}
                                             </td>
+                                            <td>{race.classes.join(', ')}</td>
                                         </tr>
                                         {race.topics && checkbox && (
                                             <tr className='table table-container table-hover'>
@@ -193,6 +201,7 @@ const RaceChart = (props) => {
                                                                 <td>CHA</td>
                                                                 <td>ANY</td>
                                                                 <td>Abilities</td>
+                                                                <td>Allowed Classes</td>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -211,6 +220,7 @@ const RaceChart = (props) => {
                                                                             <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
                                                                         ))}
                                                                     </td>
+                                                                    <td>{subrace.classes.join(', ')}</td>
                                                                 </tr>
                                                             ))}
                                                         </tbody>

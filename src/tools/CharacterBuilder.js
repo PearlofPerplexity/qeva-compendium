@@ -102,14 +102,18 @@ const CharacterBuilder = () => {
     const handleRace = (prop, id) => {
         let charObj = character;
         let newrace;
+        let classCompliant;
         if (prop === 'race') {
             if (id) {
                 newrace = RACES[id];
                 charObj[prop] = newrace;
                 if (!newrace.topics) {
                     charObj.endrace = newrace;
-                    setClassOptions(newrace);
+                } else {
+                    charObj.subrace = null;
+                    charObj.endrace = null;
                 }
+                classCompliant = setClassOptions(charObj);
             } else {
                 charObj[prop] = null;
                 charObj.endrace = null;
@@ -120,19 +124,23 @@ const CharacterBuilder = () => {
                 newrace = character.race.topics[id];
                 charObj[prop] = newrace;
                 charObj.endrace = newrace;
-                setClassOptions(newrace);
+                classCompliant = setClassOptions(charObj);
             }
             else {
                 charObj[prop] = null;
                 charObj.endrace = character.race;
             }
         }
-        charObj.myClass = null;
-        charObj.subclass = null;
-        charObj.endclass = null;
+        if(!classCompliant) {
+            charObj.myClass = null;
+            charObj.subclass = null;
+            charObj.endclass = null;
+        }
         setCharacter({...charObj});
     }
-    const setClassOptions = (race) => {
+    const setClassOptions = (char) => {
+        const race = char.endrace ? char.endrace : char.race;
+        const myClass = char.endclass ? char.endclass : char.myClass;
         let raceClasses;
         if (race.hasOwnProperty('classes')) {
             raceClasses = CLASSES.filter(cls => race.classes.includes(cls.name));
@@ -140,6 +148,11 @@ const CharacterBuilder = () => {
             raceClasses = CLASSES;
         }
         setClasses(raceClasses);
+        if (myClass !== null && !raceClasses.find(cls => cls.name === myClass.name)) {
+            return false;
+        } else {
+            return true;
+        }
     }
     const handleClass = (prop, id) => {
         let charObj = character;
@@ -305,7 +318,13 @@ const CharacterBuilder = () => {
                             ))}
                         </select>
                         {character.race && character.race.topics && (
-                            <select name='subraces' className="charPicklist" id='subrace-select' onChange={(e) => handleRace('subrace', e.target.value)}>
+                            <select 
+                                name='subraces' 
+                                className="charPicklist" 
+                                id='subrace-select' 
+                                onChange={(e) => handleRace('subrace', e.target.value)}
+                                defaultValue=""
+                            >
                                 <option value="">--Select Subrace--</option>
                                 {character.race.topics.map((subrace) => (
                                     <option value={subrace.id} key={subrace.id}>{subrace.singName}</option>
@@ -330,7 +349,12 @@ const CharacterBuilder = () => {
                                 ))}
                         </select>
                         {character.myClass && character.myClass.name === 'No Affiliation' && (
-                            <select name='subclasses' className="charPicklist" id='subclass-select' onChange={(e) => handleClass('subclass', e.target.value)}>
+                            <select 
+                                name='subclasses' 
+                                className="charPicklist" 
+                                id='subclass-select' 
+                                onChange={(e) => handleClass('subclass', e.target.value)}
+                            >
                                 <option value="">--Select a Subclass--</option>
                                 {character.myClass.topics.map((subclass) => (
                                     <option value={subclass.id} key={subclass.id}>{subclass.name}</option>

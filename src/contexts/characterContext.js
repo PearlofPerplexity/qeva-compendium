@@ -21,9 +21,9 @@ const CharacterProvider = ({ children }) => {
         //Alignment
         alignment: "", alignmentType: "", alignmentGem: undefined,
         //Race
-        race: undefined, subrace: undefined, endrace: undefined,
+        race: null, subrace: null, endrace: null,
         //Class
-        myClass: undefined, subclass: undefined, endclass: undefined,
+        myClass: null, subclass: null, endclass: null,
         //Proficiencies & Languages
         profAndLang: [],
         //Features

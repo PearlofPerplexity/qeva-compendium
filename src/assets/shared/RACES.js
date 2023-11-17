@@ -42,6 +42,15 @@ export const RACES = [
         link: `/races/elves`,
         name: `Elves`,
         singName: "Elf",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Elvish Cloaks',
+            'Avikin',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Diamond (Love)`,
         spawnStone: `Quartz (Strength)`,
         elden: `Amare`,
@@ -171,6 +180,15 @@ export const RACES = [
         link: `/races/aviame`,
         name: `Aviame`,
         singName: "Aviame",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'Ghost Blades',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Ruby (Self-control)`,
         spawnStone: `Crocoite (Dexterity)`,
         elden: `Thelmiel`,
@@ -198,6 +216,7 @@ export const RACES = [
                     'Caracadre', 
                     'Avlimeth', 
                     'Avikin',
+                    'Elvish Cloaks',
                     'Order of the Feather',
                     'No Affiliation'
                 ],
@@ -336,6 +355,16 @@ export const RACES = [
         link: `/races/humans`,
         name: `Humans`,
         singName: "Human",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'Elvish Cloaks',
+            'Topplers',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Onyx (Faithfulness)`,
         spawnStone: `Jet (Loyalty)`,
         elden: `Çairça`,
@@ -492,6 +521,14 @@ export const RACES = [
         link: `/races/dwarves`,
         name: `Dwarves`,
         singName: "Dwarf",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Pyrite (Patience)`,
         spawnStone: `Rutile (Endurance)`,
         elden: `Ferthrui`,
@@ -593,6 +630,14 @@ export const RACES = [
         link: `/races/gnomes`,
         name: `Gnomes`,
         singName: "Gnome",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Sapphire (Kindness)`,
         spawnStone: `Tanzanite (Truth)`,
         elden: `Nware`,
@@ -888,6 +933,14 @@ export const RACES = [
         link: `/races/ethereals`,
         name: `Ethereals`,
         singName: "Ethereal",
+        classes: [
+            'Oracles', 
+            'Caracadre', 
+            'Avlimeth', 
+            'Avikin',
+            'Order of the Feather',
+            'No Affiliation'
+        ],
         heartStone: `Celestite (Holiness)`,
         spawnStone: `None`,
         elden: `DIA`,

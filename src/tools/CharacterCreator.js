@@ -162,6 +162,16 @@ const CharacterCreator = () => {
             reset();
         }
     };
+    const handleJSON = () => {
+        //function downloadObjectAsJson(exportObj, exportName){
+        let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(character));
+        let downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", character.name + ".json");
+        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+    }
     const toggleError = () => {
         setErrorModal(!errorModal);
     };
@@ -245,6 +255,9 @@ const CharacterCreator = () => {
                 <ModalFooter>
                     <Button color="secondary" onClick={toggleOne} >
                         Back
+                    </Button>{' '}
+                    <Button color="secondary" onClick={handleJSON} >
+                        Save Character JSON
                     </Button>{' '}
                     <Button color="primary" onClick={handlePrint} >
                         Print
