@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { BasicLink } from '../utils/link';
 import GemGenerator from '../tools/GemGenerator';
 import CharacterCreator from '../tools/CharacterCreator';
+import CharacterEditor from '../tools/CharacterEditor';
 import NPCGenerator from '../tools/NPCGenerator';
 import AlignmentChart from '../tools/AlignmentChart';
 import RaceChart from '../tools/RaceChart';
@@ -23,49 +24,50 @@ import { CharacterProvider } from '../contexts/characterContext';
 const ToolPage = () => {
 
     return (
-        <div className="p-4">
-            <div className="welcome">
-                <div className="content rounded-3 p-3">
-                    <h1 className="fs-3">Welcome to the Qeṽa Tools!</h1>
-                    <p className="mb-0">Access the tools below or return to the compendium <Link to={BasicLink}>here</Link>. May every blessing of DIA be upon you!</p>
+        <CharacterProvider>
+            <div className="p-4">
+                <div className="welcome">
+                    <div className="content rounded-3 p-3">
+                        <h1 className="fs-3">Welcome to the Qeṽa Tools!</h1>
+                        <p className="mb-0">Access the tools below or return to the compendium <Link to={BasicLink}>here</Link>. May every blessing of DIA be upon you!</p>
+                    </div>
                 </div>
-            </div>
-            <section className="highlights mt-4">
-                <div className="row">
-                    <GemGenerator />
-                    <CharacterProvider>
+                <section className="highlights mt-4">
+                    <div className="row">
+                        <GemGenerator />
                         <CharacterCreator />
-                    </CharacterProvider>
-                    <NPCGenerator />
-                </div>      
-            </section>
-            <section className="highlights mt-4">
-                <div className='row'>
-                    <AlignmentChart loc='toolPage' />
-                    <RaceChart loc='toolPage' />
-                    <ClassChart loc='toolPage' />
-                </div>
-            </section>
-            <section className="highlights mt-4">
-                <div className='row'>
-                    <GemcutterChart />
-                    <CraftingChart />
-                    <FightingChart />
-                </div>
-            </section>
-            <section className="highlights mt-4">
-                <div className='row'>
-                    <GrenadierChart />
-                    <CraftGenerator />
-                    <LootGenerator />
-                </div>
-            </section>
-            <section className="highlights mt-4">
-                <div className='row'>
-                    <TravelGenerator />
-                </div>
-            </section>
-        </div>
+                        <NPCGenerator />
+                    </div>      
+                </section>
+                <section className="highlights mt-4">
+                    <div className='row'>
+                        <AlignmentChart loc='toolPage' />
+                        <RaceChart loc='toolPage' />
+                        <ClassChart loc='toolPage' />
+                    </div>
+                </section>
+                <section className="highlights mt-4">
+                    <div className='row'>
+                        <GemcutterChart />
+                        <CharacterEditor />
+                        <FightingChart />
+                    </div>
+                </section>
+                <section className="highlights mt-4">
+                    <div className='row'>
+                        <GrenadierChart />
+                        <CraftGenerator />
+                        <LootGenerator />
+                    </div>
+                </section>
+                <section className="highlights mt-4">
+                    <div className='row'>
+                        <TravelGenerator />
+                        <CraftingChart />
+                    </div>
+                </section>
+            </div>
+        </CharacterProvider>
     );
 };
 

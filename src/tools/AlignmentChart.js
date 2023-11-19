@@ -26,20 +26,20 @@ const AlignmentChart = (props) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
-    const [title, setTitle] = useState('');
+    //const [title, setTitle] = useState('');
     const [detail, setDetail] = useState('');
 
     const abilityInfo = (e) => {
         if(e.description === detail) {
             abilityInfoReset();
         } else {
-            setTitle(e.name);
+            //setTitle(e.name);
             setDetail(e.description);
         }
     }
 
     const abilityInfoReset = () => {
-        setTitle("");
+        //setTitle("");
         setDetail("");
     }
 
@@ -112,6 +112,8 @@ const AlignmentChart = (props) => {
             case "FL":
                 alignPts = 35;
                 _color = "D";
+                break;
+            default:
                 break;
         }
         setGem({
@@ -212,6 +214,8 @@ const AlignmentChart = (props) => {
             case 6:
                 alignPts = 40;
                 _lvl = 20;
+                break;
+            default:
                 break;
         }
         setGem({
