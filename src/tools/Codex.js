@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Button,
     Modal,
@@ -31,15 +31,36 @@ const Codex = (props) => {
 
     const [powers, setPowers] = useState(POWERS);
 
+    const [nameCheckbox, setNameCheckbox] = useState(true);
+    const [txtCheckbox, setTxtCheckbox] = useState(true);
+    const [typeCheckbox, setTypeCheckbox] = useState(true);
+    useEffect(() => {
+        handleSearch(searchTerm);
+      }, [nameCheckbox,txtCheckbox,typeCheckbox]);
+    const checkboxToggle = (box) => {
+        switch (box) {
+            case 'name':
+                setNameCheckbox(!nameCheckbox);
+                break;
+            case 'txt':
+                setTxtCheckbox(!txtCheckbox);
+                break;
+            case 'type':
+                setTypeCheckbox(!typeCheckbox);
+            default:
+                break;
+        }
+    };
     const [searchTerm, setSearchTerm] = useState("");
     const handleSearch = (e) => {
-        setSearchTerm(e.target.value);
-        if(e.target.value) {
-            const searchVal = e.target.value.toLowerCase();
+        setSearchTerm(e);
+        if(e) {
+            const searchVal = e.toLowerCase();
             const searchPowers = POWERS.filter(pwr => {
-                const nameIncludes = pwr.name.toLowerCase().includes(searchVal);
-                const textIncludes = pwr.description.toLowerCase().includes(searchVal);
-                const typeIncludes = pwr.type.toLowerCase().includes(searchVal);
+                let nameIncludes, textIncludes, typeIncludes;
+                nameIncludes = nameCheckbox ? pwr.name.toLowerCase().includes(searchVal) : false;
+                textIncludes = txtCheckbox ? pwr.description.toLowerCase().includes(searchVal) : false;
+                typeIncludes = typeCheckbox ? pwr.type.toLowerCase().includes(searchVal) : false;
                 return nameIncludes || textIncludes || typeIncludes;
             });
             setPowers(searchPowers);
@@ -53,6 +74,11 @@ const Codex = (props) => {
 
     const reset = () => {
         toggle();
+        setPowers(POWERS);
+        setNameCheckbox(true);
+        setTxtCheckbox(true);
+        setTypeCheckbox(true);
+        setSearchTerm("");
         console.clear();
     }
 
@@ -95,11 +121,32 @@ const Codex = (props) => {
                         </h3>
                         <div className='mb-2 char-name-input'>
                             <input 
-                                onChange={handleSearch}
+                                onChange={e => handleSearch(e.target.value)}
                                 placeholder='Search Powers...' 
                                 type='text' 
                                 value={searchTerm} 
                             />
+                            <input 
+                                name="nameCheck" 
+                                type="checkbox"
+                                onClick={(e) => checkboxToggle('name')}
+                                checked={nameCheckbox}
+                            />
+                            <label htmlFor="nameCheck">&nbsp;Name</label>
+                            <input 
+                                name="txtCheck"
+                                type="checkbox"
+                                onClick={(e) => checkboxToggle('txt')}
+                                checked={txtCheckbox}
+                            />
+                            <label htmlFor="txtCheck">&nbsp;Description</label>
+                            <input 
+                                name="typeCheck" 
+                                type="checkbox" 
+                                onClick={(e) => checkboxToggle('type')} 
+                                checked={typeCheckbox}
+                            />
+                            <label htmlFor="typeCheck">&nbsp;Type</label>
                         </div>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
                             <OffcanvasHeader toggle={infoToggle}>
