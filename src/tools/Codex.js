@@ -11,19 +11,42 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { FIGHTINGSTYLES, FIGHTINGSTYLEMANEUVERS } from '../assets/shared/FIGHTSTYLES';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 const fightingStyles = FIGHTINGSTYLES.map(fs => {
-    return {
-        name: fs.name,
-        description: fs.description,
-        reference: 'Fighting Styles'
-    }
+    return { name: fs.name, description: fs.description, type: 'Fighting Styles'};
 });
+const fightingStyleManeuvers = FIGHTINGSTYLEMANEUVERS.map(fsm => {
+    return { name: fsm.name, description: fsm.description, type: 'Fighting Style Maneuvers'};
+})
+const POWERS = [
+    ...fightingStyles,
+    ...fightingStyleManeuvers
+]
 
 const Codex = (props) => {
-    console.log(fightingStyles);    
+
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
+
+    const [powers, setPowers] = useState(POWERS);
+
+    const [searchTerm, setSearchTerm] = useState("");
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value);
+        if(e.target.value) {
+            const searchVal = e.target.value.toLowerCase();
+            const searchPowers = POWERS.filter(pwr => {
+                const nameIncludes = pwr.name.toLowerCase().includes(searchVal);
+                const textIncludes = pwr.description.toLowerCase().includes(searchVal);
+                const typeIncludes = pwr.type.toLowerCase().includes(searchVal);
+                return nameIncludes || textIncludes || typeIncludes;
+            });
+            setPowers(searchPowers);
+        } else {
+            setPowers(POWERS);
+        }
+    }
 
     const [info, setInfo] = useState(false);
     const infoToggle = () => setInfo(!info);
@@ -31,6 +54,15 @@ const Codex = (props) => {
     const reset = () => {
         toggle();
         console.clear();
+    }
+
+    const handleType = (e) => {
+        if (e.target.value === 'all') {
+            setPowers(POWERS);
+        } else {
+            const curPowers = POWERS.filter(pwr => pwr.type.toLowerCase().includes(e.target.value));
+            setPowers(curPowers);
+        }
     }
 
     return (
@@ -50,25 +82,34 @@ const Codex = (props) => {
             ) : ('')}
 
             <Modal isOpen={modal} toggle={toggle} fullscreen>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:old-key"></i> Codex</ModalHeader>
+                <ModalHeader toggle={toggle}>
+                    <i className="iconify fs-2" data-icon="noto:old-key"></i> Codex
+                </ModalHeader>
                 <ModalBody>
                 <div className='container'>
                     <div className='row text-center mb-4'>
-                        <h3>Fighting Styles
+                        <h3>Codex of Powers
                             <Button className='text-center info' onClick={infoToggle}>
                                 🛈
                             </Button>                            
                         </h3>
+                        <div className='mb-2 char-name-input'>
+                            <input 
+                                onChange={handleSearch}
+                                placeholder='Search Powers...' 
+                                type='text' 
+                                value={searchTerm} 
+                            />
+                        </div>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
                             <OffcanvasHeader toggle={infoToggle}>
-                            Fighting Styles
+                            Powers
                             </OffcanvasHeader>
                             <OffcanvasBody>
                                 <p>
-                                This table includes a discription of all abilities in the game.
+                                This table includes a description of all abilities in the game.
                                 </p>
                                 <h5>Charts Referenced</h5>
-                                Fighting Styles are used by the following classes:
                                 <ul>
                                     <li>Fighting Styles</li>
                                     <li>Fighting Style Maneuvers</li>
@@ -80,35 +121,27 @@ const Codex = (props) => {
                                 <tr className='align-middle'>
                                     <th>Name</th>
                                     <td>Description</td>
-                                    <td>Reference</td>
+                                    <td>
+                                        <select 
+                                            name='locs' 
+                                            className="ms-2 charPicklist text-center" 
+                                            id='locs-select' 
+                                            onChange={handleType}
+                                        >
+                                            <option value="all">Type</option>
+                                            <option value='fighting styles' >Fighting Styles</option>
+                                            <option value='fighting style maneuvers' >Fighting Style Maneuvers</option>
+                                        </select>
+                                    </td>
                                 </tr>
                             </thead>
                             <tbody>
-                                {FIGHTINGSTYLES.map(fs => (
-                                    <React.Fragment key={fs.id}>
+                                {powers.map((p,key) => (
+                                    <React.Fragment key={key}>
                                         <tr className='align-middle'>
-                                            <th>{fs.name}</th>
-                                            <td>{fs.description}</td>
-                                            <td></td>
-                                        </tr>
-                                    </React.Fragment>
-                                ))}
-                            </tbody>
-                        </table>
-                        <h3 className='mt-5'>Fighting Maneuvers</h3>
-                        <table className="table table-hover table-sticky align-middle">
-                            <thead>
-                                <tr className='align-middle'>
-                                    <th>Name</th>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {FIGHTINGSTYLEMANEUVERS.map(fs => (
-                                    <React.Fragment key={fs.id}>
-                                        <tr className='align-middle'>
-                                            <th>{fs.name}</th>
-                                            <td>{fs.description}</td>
+                                            <th>{p.name}</th>
+                                            <td>{p.description}</td>
+                                            <td>{p.type}</td>
                                         </tr>
                                     </React.Fragment>
                                 ))}
