@@ -19,7 +19,7 @@ import { CharacterContext } from '../contexts/characterContext';
 
 const CharacterBuilder = () => {
 
-    const [open, setOpen] = useState('');
+    const [open, setOpen] = useState('1');
     const toggle = (id) => {
         if (open === id) setOpen();
         else setOpen(id);

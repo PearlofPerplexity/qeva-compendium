@@ -62,7 +62,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <label htmlFor="alignment">Alignment</label><input name="alignment" placeholder="Chaotic Neutral" value={alignment} readOnly />
         </li>
         <li>
-        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" placeholder='0' />
+        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" />
         </li>
     </ul>
     </section>

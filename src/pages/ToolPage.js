@@ -15,6 +15,7 @@ import FightingChart from '../tools/FightingChart';
 import CraftGenerator from '../tools/CraftingGenerator';
 import LootGenerator from '../tools/LootGenerator';
 import TravelGenerator from '../tools/TravelGenerator';
+import Codex from '../tools/Codex';
 //STYLES
 import '../style.css';
 //CONTEXTS
@@ -34,36 +35,37 @@ const ToolPage = () => {
                 </div>
                 <section className="highlights mt-4">
                     <div className="row">
-                        <GemGenerator />
                         <CharacterCreator />
-                        <NPCGenerator />
+                        <CharacterEditor />
+                        <RaceChart loc='toolPage' />
                     </div>      
                 </section>
                 <section className="highlights mt-4">
                     <div className='row'>
                         <AlignmentChart loc='toolPage' />
-                        <RaceChart loc='toolPage' />
-                        <ClassChart loc='toolPage' />
-                    </div>
-                </section>
-                <section className="highlights mt-4">
-                    <div className='row'>
+                        <GemGenerator />
                         <GemcutterChart />
-                        <CharacterEditor />
-                        <FightingChart />
                     </div>
                 </section>
                 <section className="highlights mt-4">
                     <div className='row'>
-                        <GrenadierChart />
-                        <CraftGenerator />
-                        <LootGenerator />
+                        <ClassChart loc='toolPage' />
+                        <FightingChart loc='toolPage' />
+                        <NPCGenerator />
                     </div>
                 </section>
                 <section className="highlights mt-4">
                     <div className='row'>
-                        <TravelGenerator />
                         <CraftingChart />
+                        <CraftGenerator />
+                        <GrenadierChart />
+                    </div>
+                </section>
+                <section className="highlights mt-4">
+                    <div className='row'>
+                        <LootGenerator />
+                        <TravelGenerator />
+                        <Codex loc='toolPage' />
                     </div>
                 </section>
             </div>

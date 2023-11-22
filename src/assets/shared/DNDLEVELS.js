@@ -205,7 +205,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: "SELECT A FEATURE",
-                    description: "..."
+                    description: "Options presented in-line"
                 },
                 {
                     id: 1,
@@ -278,7 +278,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'SELECT A DEFENSE TACTIC',
-                    description: '...'
+                    description: 'Options presented in-line'
                 },
                 {
                     id: 1,
@@ -845,7 +845,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'SELECT AN EXPERT WEAPON',
-                    description: '...'
+                    description: 'Options presented in-line'
                 },
                 {
                     id: 1,

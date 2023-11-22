@@ -123,7 +123,6 @@ const AlignmentChart = (props) => {
             color: _color,
         });
     }
-
     const handleCarat = (carat) => {
         let alignPts, _lvl;
         switch (carat) {
@@ -225,7 +224,6 @@ const AlignmentChart = (props) => {
             lvl: _lvl,
         });
     }
-
     const reset = () => {
         toggle();
         setDetail("");

@@ -429,7 +429,8 @@ export const CLASSES = [
         weapon_prof: ["Zanhari Sword", "Shields", "Simple","Martial"],
         tool_prof: ["gemstones"],
         saving_throw_prof: ["Strength", "Constitution"],
-        skill_prof: ["Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival"],
+        skill_prof: ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"],
+        skill_prof_selection: 2,
         lvls: DNDLEVELS.caracadre,
         topics: [
             {
@@ -641,7 +642,8 @@ export const CLASSES = [
         weapon_prof: ["Simple", "shortswords"],
         tool_prof: ["Choose one type of artisan's tools"],
         saving_throw_prof: ["Strength", "Dexterity"],
-        skill_prof: ["Choose two from Acrobatics, Athletics, History, Insight, Religion, Stealth"],
+        skill_prof: ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"],
+        skill_prof_selection: 2,
         topics: [
             {
                 id: 0,
@@ -706,7 +708,8 @@ export const CLASSES = [
         armor_prof: ["Light", "medium"],
         weapon_prof: ["Simple", "Ranged"],
         saving_throw_prof: ["Dexterity"],
-        skill_prof: ["Choose two from Animal Handling, Acrobatics, Nature, Perception, History"],
+        skill_prof: ["Animal Handling", "Acrobatics", "Nature", "Perception", "History"],
+        skill_prof_selection: 2,
         topics: [
             {
                 id: 0,
@@ -760,7 +763,8 @@ export const CLASSES = [
         weapon_prof: ["Simple", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
         tool_prof: ["Thieve's tools"],
         saving_throw_prof: ["Dexterity", "Intelligence"],
-        skill_prof: ["Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth"],
+        skill_prof: ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"],
+        skill_prof_selection: 4,
         lvls: DNDLEVELS.ghostBlades,
         topics: [
             {
@@ -787,7 +791,8 @@ export const CLASSES = [
         armor_prof: ["Light", "Medium"],
         weapon_prof: ["Shields", "Simple & martial weapons","Ranged weapons"],
         saving_throw_prof: ["Dexterity"],
-        skill_prof: ["Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival"],
+        skill_prof: ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"],
+        skill_prof_selection: 2,
         lvls: DNDLEVELS.uncorrupted,
         topics: [
             {
@@ -814,7 +819,8 @@ export const CLASSES = [
         armor_prof: ["Light", "Medium"],
         weapon_prof: ["Simple weapons","Ranged weapons"],
         saving_throw_prof: ["Dexterity"],
-        skill_prof: [ "Choose two from Nature, Stealth, Medicine, History, Investigation"],
+        skill_prof: ["Nature", "Stealth", "Medicine", "History", "Investigation"],
+        skill_prof_selection: 2,
         lvls: DNDLEVELS.topplers,
         topics: [
             {
@@ -841,7 +847,8 @@ export const CLASSES = [
         armor_prof: ["Light", "Medium"],
         weapon_prof: ["Simple","Ranged", "Martial"],
         saving_throw_prof: ["Strength", "Constitution"],
-        skill_prof: ["Choose two from Animal Handling, Athletics, Investigation, Perception"],
+        skill_prof: ["Animal Handling", "Athletics", "Investigation", "Perception"],
+        skill_prof_selection: 2,
         topics: [
             {
                 id: 0,
@@ -868,7 +875,8 @@ export const CLASSES = [
                 armor_prof: ["Choose 1"],
                 weapon_prof: ["Choose 1 Simple","1 martial", "1 ranged"],
                 saving_throw_prof: ["Choose 1"],
-                skill_prof: ["Choose 2 skills"],
+                skill_prof: ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"],
+                skill_prof_selection: 2,
                 topics: [],
                 lvls: DNDLEVELS.adventurer,
             },
@@ -883,7 +891,8 @@ export const CLASSES = [
                 equipment: ["light crossbow and 20 bolts or any simple weapon", "component pouch or arcane focus", "dungeoneer's pack or an explorer's pack", "cut of emerald"],
                 weapon_prof: ["Daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
                 saving_throw_prof: ["Constitution", "Charisma"],
-                skill_prof: ["Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, Religion"],
+                skill_prof: ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"],
+                skill_prof_selection: 2,
                 topics: [],
             },
             {
@@ -899,7 +908,8 @@ export const CLASSES = [
                 weapon_prof: ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
                 tool_prof: ["3 Musical instruments of your choice"],
                 saving_throw_prof: ["Dexterity", "Charisma"],
-                skill_prof: ["Choose 3 skills"],
+                skill_prof: ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"],
+                skill_prof_selection: 3,
                 topics: [],
             },
             {
@@ -915,7 +925,8 @@ export const CLASSES = [
                 weapon_prof: ["Shields", "Simple weapons"],
                 tool_prof: ["Herbalism kit"],
                 saving_throw_prof: ["Wisdom", "Charisma"],
-                skill_prof: ["Choose two from History, Insight, Medicine, Persuasion, Religion"],
+                skill_prof: ["History", "Insight", "Medicine", "Persuasion", "Religion"],
+                skill_prof_selection: 2,
                 topics: [],
                 lvls: DNDLEVELS.crafter,
             },
@@ -932,7 +943,8 @@ export const CLASSES = [
                 weapon_prof: ["Shields","Clubs","Daggers", "Darts", "Javelins", "Maces", "Quarterstaffs", "Scimitars", "Sickles", "Slings", "Spears"],
                 tool_prof: ["Herbalism kit"],
                 saving_throw_prof: ["Intelligence", "Wisdom"],
-                skill_prof: ["Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival"],
+                skill_prof: ["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion, Survival"],
+                skill_prof_selection: 2,
                 topics: [],
             },
             {
@@ -947,7 +959,8 @@ export const CLASSES = [
                 armor_prof: ["All"],
                 weapon_prof: ["Shields", "Simple weapons", "Martial weapons"],
                 saving_throw_prof: ["Strength", "Constitution"],
-                skill_prof: ["Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival"],
+                skill_prof: ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"],
+                skill_prof_selection: 2,
                 topics: [],
                 lvls: DNDLEVELS.fighter,
             },
@@ -963,7 +976,8 @@ export const CLASSES = [
                 armor_prof: ["Light"],
                 weapon_prof: ["Simple weapons"],
                 saving_throw_prof: ["Intelligence", "Constitution"],
-                skill_prof: ["Choose any 3"],
+                skill_prof: ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"],
+                skill_prof_selection: 3,
                 topics: [],
                 lvls: DNDLEVELS.gemcutter,
             },
@@ -980,7 +994,8 @@ export const CLASSES = [
                 weapon_prof: ["Simple"],
                 tool_prof: ["Calligrapher's tools"],
                 saving_throw_prof: ["Intelligence", "Wisdom"],
-                skill_prof: ["Choose two from History, Medicine, Nature, Performance, Persuasion, Religion"],
+                skill_prof: ["History", "Medicine", "Nature", "Performance", "Persuasion", "Religion"],
+                skill_prof_selection: 2,
                 topics: [],
                 lvls: DNDLEVELS.scribe,
             }

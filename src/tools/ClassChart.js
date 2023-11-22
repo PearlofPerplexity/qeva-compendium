@@ -12,6 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { RACES } from '../assets/shared/RACES';
+import FightingStyleChart from './FightingChart';
 
 const dndClasses = [...CLASSES.slice(0,9), ...CLASSES[9].topics];
 
@@ -49,8 +50,12 @@ const ClassChart = (props) => {
     const [title, setTitle] = useState("See Description");
     const [detail, setDetail] = useState("Click on an ability, feature, cantrip or spell above to see its description.");
     const detailToggle = (e) => {
-        setTitle(e.name);
-        setDetail(e.description);
+        if(e.name === title) {
+            detailReset();
+        } else {
+            setTitle(e.name);
+            setDetail(e.description);
+        }
     }
     const detailReset = () => {
         setTitle("See Description");
@@ -164,11 +169,11 @@ const ClassChart = (props) => {
                                             <td>{cl.hitDie}</td>
                                             <td>{cl.equipment.join(', ')}</td>
                                             <td>
-                                                <strong>Armor: </strong>{cl.armor_prof ? cl.armor_prof.join(', ') : ('none')}, 
-                                                <strong>Weapons: </strong>{cl.weapon_prof ? cl.weapon_prof.join(', ') : ('none')}, 
-                                                <strong>Tool: </strong>{cl.tool_prof ? cl.tool_prof.join(', ') : ('none')}, 
-                                                <strong>Saving Throws: </strong>{cl.saving_throw_prof ? cl.saving_throw_prof.join(', ') : ('none')}, 
-                                                <strong>Skills: </strong>{cl.skill_prof ? cl.skill_prof.join(', ') : ('none')}
+                                                <strong> Armor: </strong>{cl.armor_prof ? cl.armor_prof.join(', ') : ('none')}, 
+                                                <strong> Weapons: </strong>{cl.weapon_prof ? cl.weapon_prof.join(', ') : ('none')}, 
+                                                <strong> Tool: </strong>{cl.tool_prof ? cl.tool_prof.join(', ') : ('none')}, 
+                                                <strong> Saving Throws: </strong>{cl.saving_throw_prof ? cl.saving_throw_prof.join(', ') : ('none')}, 
+                                                <strong> Skills: </strong>{cl.skill_prof_selection && ` Choose ${cl.skill_prof_selection} from `}{cl.skill_prof ? cl.skill_prof.join(', ') : ('none')}
                                             </td>
                                             <td>{cl.race.join(', ')}</td>
                                         </tr>
@@ -197,7 +202,10 @@ const ClassChart = (props) => {
                                                                     <td>
                                                                         {lvl.features && lvl.features.map(a => (
                                                                             <a key={a.id} onClick={() => detailToggle(a)}>
-                                                                                {a.id === 0 ? '' : ', '}{a.name}
+                                                                                {a.id === 0 ? '' : ', '}
+                                                                                {title === a.name ? (
+                                                                                    <strong>{a.name}</strong>
+                                                                                ) : (<>{a.name}</>)}
                                                                             </a>
                                                                         ))}
                                                                     </td>
@@ -227,10 +235,18 @@ const ClassChart = (props) => {
                 </div>
                 </ModalBody>
                 <ModalFooter>
-                    <p className='text-start'><strong>{title.toUpperCase()}: </strong><em>{detail}</em></p>
-                    <Button color="secondary" onClick={detailReset}>
-                        Reset
-                    </Button>
+                    {(title.toLowerCase().includes('fighting style') || title.toLowerCase().includes('maneuvers')) && (
+                        <FightingStyleChart loc='classChart' />
+                    )}
+                    <p className='text-start'>
+                        <strong>{title.toUpperCase()}: </strong>
+                        <em>{detail}</em>
+                    </p>
+                    {!(title === 'See Description') && (
+                        <Button color="secondary" onClick={detailReset}>
+                            Reset
+                        </Button>
+                    )}
                     <Button color="secondary" onClick={reset}>
                         Close
                     </Button>

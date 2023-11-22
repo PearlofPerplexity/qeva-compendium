@@ -12,8 +12,16 @@ import {
 import { Link } from 'react-router-dom';
 import { FIGHTINGSTYLES, FIGHTINGSTYLEMANEUVERS } from '../assets/shared/FIGHTSTYLES';
 
-const FightingStyleChart = (props) => {
-        
+const fightingStyles = FIGHTINGSTYLES.map(fs => {
+    return {
+        name: fs.name,
+        description: fs.description,
+        reference: 'Fighting Styles'
+    }
+});
+
+const Codex = (props) => {
+    console.log(fightingStyles);    
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
@@ -32,21 +40,17 @@ const FightingStyleChart = (props) => {
                     className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  
                     onClick={toggle}
                 >
-                    <i className="iconify fs-2" data-icon="fluent-emoji:crossed-swords"></i>
+                    <i className="iconify fs-2" data-icon="noto:old-key"></i>
                     <div className="ms-3">
                         <div className="d-flex align-items-center">
-                            <h3 className="mb-0">Fighting Charts</h3>
+                            <h3 className="mb-0">Codex</h3>
                         </div>
                     </div>
                 </Link>
-            ) : props.loc === 'classChart' ? (
-                <button type="button" className="btn rounded-circle" onClick={toggle}>
-                    <i className="uil uil-info-circle"></i>
-                </button>
             ) : ('')}
 
             <Modal isOpen={modal} toggle={toggle} fullscreen>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="fluent-emoji:crossed-swords"></i> Fighting Charts</ModalHeader>
+                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:old-key"></i> Codex</ModalHeader>
                 <ModalBody>
                 <div className='container'>
                     <div className='row text-center mb-4'>
@@ -61,18 +65,14 @@ const FightingStyleChart = (props) => {
                             </OffcanvasHeader>
                             <OffcanvasBody>
                                 <p>
-                                This table includes all available fighting styles.
+                                This table includes a discription of all abilities in the game.
                                 </p>
-                                <h5>Classes</h5>
-                                <p>
+                                <h5>Charts Referenced</h5>
                                 Fighting Styles are used by the following classes:
-                                    <ul>
-                                        <li>Adventurer</li>
-                                        <li>Avlimeth</li>
-                                        <li>Caracadre</li>
-                                        <li>Fighter</li>
-                                    </ul>
-                                </p>
+                                <ul>
+                                    <li>Fighting Styles</li>
+                                    <li>Fighting Style Maneuvers</li>
+                                </ul>
                             </OffcanvasBody>
                         </Offcanvas>
                         <table className="table table-hover table-sticky align-middle">
@@ -80,6 +80,7 @@ const FightingStyleChart = (props) => {
                                 <tr className='align-middle'>
                                     <th>Name</th>
                                     <td>Description</td>
+                                    <td>Reference</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -88,6 +89,7 @@ const FightingStyleChart = (props) => {
                                         <tr className='align-middle'>
                                             <th>{fs.name}</th>
                                             <td>{fs.description}</td>
+                                            <td></td>
                                         </tr>
                                     </React.Fragment>
                                 ))}
@@ -125,4 +127,4 @@ const FightingStyleChart = (props) => {
     );
 }
 
-export default FightingStyleChart;
+export default Codex;
