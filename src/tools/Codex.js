@@ -10,19 +10,110 @@ import {
     OffcanvasHeader
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { CLASSES } from '../assets/shared/CLASSES';
+import { DGEMS } from '../assets/shared/DGEMS';
 import { FIGHTINGSTYLES, FIGHTINGSTYLEMANEUVERS } from '../assets/shared/FIGHTSTYLES';
-import { text } from '@fortawesome/fontawesome-svg-core';
+import { GEMS } from '../assets/shared/GEMS';
+import { RACES } from '../assets/shared/RACES';
 
-const fightingStyles = FIGHTINGSTYLES.map(fs => {
-    return { name: fs.name, description: fs.description, type: 'Fighting Styles'};
-});
-const fightingStyleManeuvers = FIGHTINGSTYLEMANEUVERS.map(fsm => {
-    return { name: fsm.name, description: fsm.description, type: 'Fighting Style Maneuvers'};
-})
+const fightingStyles = FIGHTINGSTYLES.map(fs => ({
+    name: fs.name, 
+    description: fs.description, 
+    type: 'Fighting Styles', 
+    source: '-'
+}));
+const fightingStyleManeuvers = FIGHTINGSTYLEMANEUVERS.map(fsm => ({
+    name: fsm.name, 
+    description: fsm.description, 
+    type: 'Fighting Style Maneuvers', 
+    source: '-'
+}));
+const gems = GEMS.flatMap(category =>
+    (category.name !== 'Incidental' && category.name !== 'Gem Overview')
+        ? category.topics.flatMap(gem =>
+          gem.lvls
+            ? gem.lvls.map(level => ({
+                name: level.name,
+                description: level.description,
+                type: 'Gems',
+                source: gem.name,
+              }))
+            : []
+        ) : []
+);
+const darkGems = DGEMS.flatMap(category =>
+    category.topics.flatMap(gem =>
+        gem.lvls
+            ? gem.lvls.map(level => ({
+                name: level.name,
+                description: level.description,
+                type: 'Dark Gems',
+                source: gem.name,
+              }))
+            : []
+    )
+);
+const classes = CLASSES.flatMap(cls =>
+    cls.lvls
+        ? cls.lvls.flatMap(level =>
+            level.features
+            ? level.features.map(feat => ({
+                name: feat.name,
+                description: feat.description,
+                type: 'Classes',
+                source: cls.name,
+            }))
+            : []
+        )
+        : []
+);
+const races = RACES.flatMap(race =>
+    race.abilities
+        ? race.abilities.map(ability => ({
+            name: ability.name,
+            description: ability.description,
+            type: 'Races',
+            source: race.name
+        }))
+        : []
+);
+const subraces = RACES.flatMap(race =>
+    race.topics
+    ? race.topics.flatMap(subrace =>
+        subrace.abilities
+            ? subrace.abilities.map(ability => ({
+                name: ability.name,
+                description: ability.description,
+                type: 'Subraces',
+                source: subrace.name,
+              }))
+            : []
+    )
+    : []
+);
+  
+const seenNames = {};
 const POWERS = [
+    ...classes,
+    ...darkGems,
     ...fightingStyles,
-    ...fightingStyleManeuvers
-]
+    ...fightingStyleManeuvers,
+    ...gems,
+    ...races,
+    ...subraces
+].filter(obj => { // Removes Duplicates from the Array
+    if (!seenNames[obj.name]) {
+        seenNames[obj.name] = true;
+        return true;
+    }
+    return false;
+}).sort((a, b) => { // Sorts the Array Alphabetically
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+    if (nameA < nameB) return -1;
+    else if (nameA > nameB) return 1;
+    else return 0;
+});
 
 const Codex = (props) => {
 
@@ -33,10 +124,9 @@ const Codex = (props) => {
 
     const [nameCheckbox, setNameCheckbox] = useState(true);
     const [txtCheckbox, setTxtCheckbox] = useState(true);
-    const [typeCheckbox, setTypeCheckbox] = useState(true);
     useEffect(() => {
         handleSearch(searchTerm);
-      }, [nameCheckbox,txtCheckbox,typeCheckbox]);
+      }, [nameCheckbox,txtCheckbox]);
     const checkboxToggle = (box) => {
         switch (box) {
             case 'name':
@@ -45,8 +135,6 @@ const Codex = (props) => {
             case 'txt':
                 setTxtCheckbox(!txtCheckbox);
                 break;
-            case 'type':
-                setTypeCheckbox(!typeCheckbox);
             default:
                 break;
         }
@@ -60,8 +148,7 @@ const Codex = (props) => {
                 let nameIncludes, textIncludes, typeIncludes;
                 nameIncludes = nameCheckbox ? pwr.name.toLowerCase().includes(searchVal) : false;
                 textIncludes = txtCheckbox ? pwr.description.toLowerCase().includes(searchVal) : false;
-                typeIncludes = typeCheckbox ? pwr.type.toLowerCase().includes(searchVal) : false;
-                return nameIncludes || textIncludes || typeIncludes;
+                return nameIncludes || textIncludes;
             });
             setPowers(searchPowers);
         } else {
@@ -77,7 +164,6 @@ const Codex = (props) => {
         setPowers(POWERS);
         setNameCheckbox(true);
         setTxtCheckbox(true);
-        setTypeCheckbox(true);
         setSearchTerm("");
         console.clear();
     }
@@ -86,7 +172,7 @@ const Codex = (props) => {
         if (e.target.value === 'all') {
             setPowers(POWERS);
         } else {
-            const curPowers = POWERS.filter(pwr => pwr.type.toLowerCase().includes(e.target.value));
+            const curPowers = POWERS.filter(pwr => pwr.type.toLowerCase() === e.target.value);
             setPowers(curPowers);
         }
     }
@@ -140,13 +226,6 @@ const Codex = (props) => {
                                 checked={txtCheckbox}
                             />
                             <label htmlFor="txtCheck">&nbsp;Description</label>
-                            <input 
-                                name="typeCheck" 
-                                type="checkbox" 
-                                onClick={(e) => checkboxToggle('type')} 
-                                checked={typeCheckbox}
-                            />
-                            <label htmlFor="typeCheck">&nbsp;Type</label>
                         </div>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
                             <OffcanvasHeader toggle={infoToggle}>
@@ -158,6 +237,8 @@ const Codex = (props) => {
                                 </p>
                                 <h5>Charts Referenced</h5>
                                 <ul>
+                                    <li>Alignment Chart</li>
+                                    <li>Class Chart</li>
                                     <li>Fighting Styles</li>
                                     <li>Fighting Style Maneuvers</li>
                                 </ul>
@@ -168,6 +249,7 @@ const Codex = (props) => {
                                 <tr className='align-middle'>
                                     <th>Name</th>
                                     <td>Description</td>
+                                    <td>Source</td>
                                     <td>
                                         <select 
                                             name='locs' 
@@ -176,8 +258,13 @@ const Codex = (props) => {
                                             onChange={handleType}
                                         >
                                             <option value="all">Type</option>
+                                            <option value="classes">Classes</option>
+                                            <option value='dark gems' >Dark Gems</option>
                                             <option value='fighting styles' >Fighting Styles</option>
                                             <option value='fighting style maneuvers' >Fighting Style Maneuvers</option>
+                                            <option value="gems">Gems</option>
+                                            <option value='races' >Races</option>
+                                            <option value='subraces' >Subraces</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -188,6 +275,7 @@ const Codex = (props) => {
                                         <tr className='align-middle'>
                                             <th>{p.name}</th>
                                             <td>{p.description}</td>
+                                            <td>{p.source}</td>
                                             <td>{p.type}</td>
                                         </tr>
                                     </React.Fragment>
