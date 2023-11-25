@@ -45,8 +45,12 @@ const RaceChart = (props) => {
     const [title, setTitle] = useState("Ability");
     const [detail, setDetail] = useState("Click on an ability above to see it's description.");
     const detailToggle = (e) => {
-        setTitle(e.name);
-        setDetail(e.description);
+        if(e.name === title) {
+            detailReset();
+        } else {
+            setTitle(e.name);
+            setDetail(e.description);
+        }
     }
     const detailReset = () => {
         setTitle("Ability");
@@ -181,7 +185,12 @@ const RaceChart = (props) => {
                                                 )}</td>
                                             <td>
                                                 {race.abilities && race.abilities.map(a => (
-                                                    <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
+                                                    <a key={a.id} onClick={() => detailToggle(a)}>
+                                                        {a.id === 0 ? '' : ', '}
+                                                        {title === a.name ? (
+                                                            <strong>{a.name}</strong>
+                                                        ) : (<>{a.name}</>)}
+                                                    </a>
                                                 ))}
                                             </td>
                                             <td>{race.classes.join(', ')}</td>
@@ -217,7 +226,12 @@ const RaceChart = (props) => {
                                                                     <td>{subrace.any}</td>
                                                                     <td>
                                                                         {subrace.abilities && subrace.abilities.map(a => (
-                                                                            <a key={a.id} onClick={() => detailToggle(a)}>{a.name}, </a>
+                                                                            <a key={a.id} onClick={() => detailToggle(a)}>
+                                                                                {a.id === 0 ? '' : ', '}
+                                                                                {title === a.name ? (
+                                                                                    <strong>{a.name}</strong>
+                                                                                ) : (<>{a.name}</>)}
+                                                                            </a>
                                                                         ))}
                                                                     </td>
                                                                     <td>{subrace.classes.join(', ')}</td>
@@ -238,9 +252,11 @@ const RaceChart = (props) => {
                 </ModalBody>
                 <ModalFooter>
                     <p className='text-start'><strong>{title.toUpperCase()}: </strong><em>{detail}</em></p>
-                    <Button color="secondary" onClick={detailReset}>
-                        Reset
-                    </Button>
+                    {!(title === 'Ability') && (
+                        <Button color="secondary" onClick={detailReset}>
+                            Reset
+                        </Button>
+                    )}
                     <Button color="secondary" onClick={reset}>
                         Close
                     </Button>

@@ -911,6 +911,7 @@ export const CLASSES = [
                 skill_prof: ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"],
                 skill_prof_selection: 3,
                 topics: [],
+                lvls: DNDLEVELS.bard
             },
             {
                 id: 3,
@@ -946,6 +947,7 @@ export const CLASSES = [
                 skill_prof: ["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion, Survival"],
                 skill_prof_selection: 2,
                 topics: [],
+                lvls: DNDLEVELS.druid
             },
             {
                 id: 5,

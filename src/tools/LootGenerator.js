@@ -430,10 +430,12 @@ const LootGenerator = () => {
         setLootResults(lootArray);
 
         const randCts = Math.floor( Math.random() * (100)) + 1;
-        const randKs = Math.floor( Math.random() * (100)) + 1;
+        const randKs = Math.floor( Math.random() * (50)) + 1;
+        const randQzs = Math.floor( Math.random() * (25)) + 1;
         setLootCoins({
             carats: randCts,
-            karats: randKs
+            karats: randKs,
+            quartz: randQzs
         });
     }
     
@@ -461,7 +463,7 @@ const LootGenerator = () => {
                         </div>
                         <div className='row mb-3'>
                             <h4 className='col text-start'>Results: </h4>
-                            {lootCoins && `Coins: ${lootCoins.carats}ct (carats), ${lootCoins.karats}k (karats), `}{lootResults.join(', ')}
+                            {lootCoins && `Coins: ${lootCoins.carats}ct (carats), ${lootCoins.karats}k (karats), ${lootCoins.quartz}qz (quartz), `}{lootResults.join(', ')}
                         </div>
                     </div>
                 </ModalBody>

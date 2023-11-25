@@ -67,6 +67,20 @@ const classes = CLASSES.flatMap(cls =>
         )
         : []
 );
+const unaffiliatedClasses = CLASSES[9].topics.flatMap(cls => 
+    cls.lvls
+        ? cls.lvls.flatMap(level =>
+            level.features
+            ? level.features.map(feat => ({
+                name: feat.name,
+                description: feat.description,
+                type: 'Classes',
+                source: cls.name,
+            }))
+            : []
+        )
+        : []
+);
 const races = RACES.flatMap(race =>
     race.abilities
         ? race.abilities.map(ability => ({
@@ -95,6 +109,7 @@ const subraces = RACES.flatMap(race =>
 const seenNames = {};
 const POWERS = [
     ...classes,
+    ...unaffiliatedClasses,
     ...darkGems,
     ...fightingStyles,
     ...fightingStyleManeuvers,
@@ -239,8 +254,8 @@ const Codex = (props) => {
                                 <ul>
                                     <li>Alignment Chart</li>
                                     <li>Class Chart</li>
-                                    <li>Fighting Styles</li>
-                                    <li>Fighting Style Maneuvers</li>
+                                    <li>Fighting Charts</li>
+                                    <li>Race Chart</li>
                                 </ul>
                             </OffcanvasBody>
                         </Offcanvas>

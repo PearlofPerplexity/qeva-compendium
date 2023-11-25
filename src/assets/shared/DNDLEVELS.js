@@ -1746,12 +1746,270 @@ export const DNDLEVELS = {
             trackables: ["Superiority Dice: 5"],
         },
     ],
+    /* ---------- NEXT CLASS -------------------- DRUID ---------- */
+    druid: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Nature Lore',
+                    description: 'You can identify plants and can especially identify plants that are edible, poisonous or have good/ill effects. On a successful DC12 Nature check, You can find enough natural food for your group. On a failed save you only find food for yourself.'
+                },
+                {
+                    id: 1,
+                    name: 'Tree Sense',
+                    description: 'You can sense the general feeling of the surrounding flora. The DM will provide you with one word to describe it.'
+                }
+            ],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Animal Kinship',
+                    description: "You can understand and communicate basic ideas with animals. On a successful DC12, You can improve the relationship of an animal. If they are hostile, they will become chaotic; if chaotic, indifferent; if indifferent, friendly."
+                }
+            ],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Animal Companion',
+                    description: 'In your travels you develop a relationship with an animal. The beast is friendly to you and your companions and obeys your commands. Choose its stat block-Beast of the Land, Beast of the Sea, or Beast of the Sky-which uses your proficiency bonus (PB) in several places. You also determine the kind of animal the beast is, choosing a kind appropriate for the stat block. In combat, the beast acts during your turn. It can move and use its reaction on its own, but the only action it takes is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. You can also sacrifice one of your attacks when you take the Attack action to command the beast to take the Attack action. If you are incapacitated, the beast can take any action of its choice, not just Dodge.'
+                },
+            ],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Extra Attack',
+                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                }
+            ],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Exceptional Training',
+                    description: "Beginning at 7th level, on any of your turns when your beast companion doesn't attack, you can use a bonus action to command the beast to take the Dash, Disengage, or Help action on its turn. In addition, the beast's attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+                }
+            ],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Camouflage',
+                    description: 'You can blend seamlessly with your surroundings, making you nearly invisible in natural settings. Add +10 to your stealth roll.'
+                }
+            ],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Bestial Fury',
+                    description: 'Starting at 11th level, when you command your beast companion to take the Attack action, the beast can make two attacks, or it can take the Multiattack action if it has that action.'
+                }
+            ],
+        },
+    ],
+    /* ---------- NEXT CLASS -------------------- BARD ---------- */
+    bard: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Bardic Inspiration',
+                    description: 'You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level.'
+                }
+            ],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Jack of all Trades',
+                    description: "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus."
+                },
+                {
+                    id: 1,
+                    name: 'Song of Rest',
+                    description: "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points. The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
+                }
+            ],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Expertise',
+                    description: 'At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.'
+                },
+                {
+                    id: 1,
+                    name: 'Bonus Proficiencies',
+                    description: "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice."
+                },
+                {
+                    id: 2,
+                    name: 'Cutting Words',
+                    description: "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed."
+                }
+            ],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Font of Inspiration',
+                    description: 'Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.'
+                }
+            ],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Extra Attack',
+                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                }
+            ],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Countercharm',
+                    description: 'At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).'
+                }
+            ],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Higher Expertise',
+                    description: 'At 10th level, choose two more of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.'
+                }
+            ],
+        },
+    ],
 
     //NEXT CLASSES
     // AVLIMETH CLASS LEVELS
     // ELVISH CLOAKS CLASS LEVELS
     // ORDER OF THE FEATHER CLASS LEVELS
     // ACOLYTE CLASS LEVELS
-    // BARD CLASS LEVELS
-    // DRUID CLASS LEVELS
 }
