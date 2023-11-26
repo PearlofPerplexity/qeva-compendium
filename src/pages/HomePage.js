@@ -28,14 +28,20 @@ import {
 import {
     GemIcon, 
     RaceIcon } from '../utils/icon';
+import { useContext } from 'react';
+import { AdminContext } from '../contexts/adminContext';
 
 const HomePage = () => {
+
+    const [isAdmin, setIsAdmin] = useContext(AdminContext);
+
     return (
         <div className="p-4">
             <div className="welcome">
                 <div className="content rounded-3 p-3">
                     <h1 className="fs-3">Welcome to the Qeṽa Compendium!</h1>
-                    <p className="mb-0">Browse the options below or click on the hamburger icon in the top right hand corner to see the full menu. Or learn the basics <Link to={BasicLink}>here</Link>. May every blessing of DIA be upon you!</p>
+                    <p className="mb-2">Browse the options below or click on the hamburger icon in the top right hand corner to see the full menu. Or learn the basics <Link to={BasicLink}>here</Link>. May every blessing of DIA be upon you!</p>
+                    <p><strong>YOU ARE VIEWING THE COMPENDIUM AS {isAdmin ? ('AN ADMIN') : ('A PLAYER')}</strong></p>
                 </div>
             </div>
 

@@ -891,7 +891,7 @@ export const RACES = [
         language: `Treeish`,
         government: `Communal`,
         residence: `Mahelos`,
-        description: `It was revealed later in history that some of the flora had become sentient. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are shy folk and do not carry out business like other races. They seem to see themselves as more plant than people and keep to themselves in their forests, gravitating to the center of the forest.`,
+        description: `It was revealed later in history that some of the flora had become sentient and in some areas of the world (Ellowood forest, Mahelos and the richest in Aguave), all flora. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are often shy folk and do not carry out business like other races. This may because they do not have ears or eyes like other folk and rather see and hear through the vibrations of their many branches. Or it is because they can only speek treeish and communication with other races is tedious. Either way, they are a seldom seen race. However, if one does make the effort to know them, they reap great rewards. Arborums are fierce friends and a great source of wisdom. When a arborum first grows roots, it pulls them out of the ground and is able to walk the surface of the earth, only taking root to heal and rest. They walk the earth until their stature grows and their trunks stiffen to the point that mobility is difficult. At this point, they choose their final resting place - often their homeland - and dig their roots back on the earth to remain their for the rest of their years. Some live thousands of years and offer thousands of years of wisdom. It is the sapplings who protect them and walkabout the earth.`,
         image: treefolk,
         speed: 30,
         size: 'M',
@@ -918,7 +918,7 @@ export const RACES = [
             {
                 id: 3,
                 name: "Tremor",
-                description: "When rooted, medium size creatures and above within 100 feet of you must achieve a 15+ Stealth check or be detected."
+                description: "You see and hear through your branche's vibrations. As long as you have your branches, you cannot be blinded or deafened. When rooted, medium size creatures and above within 100 feet of you must achieve a 15+ Stealth check or be detected."
             },
             {
                 id: 4,

@@ -1,5 +1,12 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import {
+    Button,
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter
+} from 'reactstrap';
 import { useLocation } from 'react-router-dom';
 import { 
     Collapse,
@@ -42,12 +49,24 @@ import {
     MapIcon
 } from '../utils/icon';
 import SearchBar from '../utils/SearchBar';
+import { AdminContext } from '../contexts/adminContext';
 
 const Header = (args) => {
     const [isOpen, setIsOpen] = useState(false);
     const [menu, setMenu] = useState("Qeṽa Compendium");
+    const [isAdmin, setIsAdmin] = useContext(AdminContext);
+    const [adminModal, setAdminModal] = useState(false);
+    const [adminPassword, setAdminPassword] = useState('');
+    const [adminError, setAdminError] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
+    const adminToggle = () => {
+        if(adminModal) {
+            setAdminError(false);
+            setAdminPassword('');
+        }
+        setAdminModal(!adminModal);
+    }
 
     const location = useLocation();
     const wikiToggle = () => setMenu("Qeṽa Compendium");
@@ -60,6 +79,28 @@ const Header = (args) => {
             wikiToggle();
         }
       }, [location]);
+
+    const handleAdminSwitch = () => {
+        if (isAdmin) setIsAdmin(!isAdmin);
+        else adminToggle();
+    }
+    const handlePassword = (e) => {
+        setAdminPassword(e.target.value);
+    }
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    }
+    const checkPassword = () => {
+        if (adminPassword === 'francis') {
+            setIsAdmin(!isAdmin);
+            setAdminError(false);
+            adminToggle();
+        } else {
+            setAdminError(true);
+        }
+    }
     
     return (
         <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>
@@ -74,7 +115,43 @@ const Header = (args) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <SearchBar />
+            <div 
+                nav 
+                className="form-check form-switch" 
+                style={{ position: 'absolute', top: '15px', right: '15px'}}
+            >
+                <input 
+                    className="form-check-input" 
+                    type="checkbox" 
+                    id="switch"
+                    onChange={handleAdminSwitch}
+                    checked={isAdmin}  
+                />
+                <label className="form-check-label" for="flexSwitchCheckChecked">Admin</label>
+            </div>
 
+            <Modal isOpen={adminModal} toggle={adminToggle}>
+                <ModalHeader>
+                    Enter Admin View
+                </ModalHeader>
+                <ModalBody>
+                    <div className='mt-3 mb-1 text-center'>Type the password below to enter admin view.</div>
+                    <div className='d-flex justify-content-center char-name-input'>
+                        <input className='m-3 mx-auto' type="password" onChange={handlePassword} onKeyUp={handleEnter} />
+                    </div>
+                    {adminError && (
+                        <p className='text-danger text-center'>Incorrect Password</p>
+                    )}
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" onClick={checkPassword} >
+                        Sign In
+                    </Button>{' '}
+                    <Button color="danger" onClick={adminToggle}>
+                        Cancel
+                    </Button>   
+                </ModalFooter>
+            </Modal>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav 
