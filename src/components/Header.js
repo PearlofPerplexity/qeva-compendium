@@ -117,12 +117,12 @@ const Header = (args) => {
             <SearchBar />
             <div 
                 nav 
-                className="form-check form-switch" 
+                className="form-check form-switch d-none d-md-block" 
                 style={{ position: 'absolute', top: '15px', right: '15px'}}
             >
                 <input 
                     className="form-check-input" 
-                    type="checkbox" 
+                    type="checkbox"
                     id="switch"
                     onChange={handleAdminSwitch}
                     checked={isAdmin}  
@@ -135,9 +135,15 @@ const Header = (args) => {
                     Enter Admin View
                 </ModalHeader>
                 <ModalBody>
-                    <div className='mt-3 mb-1 text-center'>Type the password below to enter admin view.</div>
+                    <div className='mt-3 text-center'>Type the password below to enter admin view.</div>
                     <div className='d-flex justify-content-center char-name-input'>
-                        <input className='m-3 mx-auto' type="password" onChange={handlePassword} onKeyUp={handleEnter} />
+                        <input 
+                            className='m-2 mx-auto' 
+                            type="password" 
+                            onChange={handlePassword} 
+                            onKeyUp={handleEnter}
+                            autoFocus
+                        />
                     </div>
                     {adminError && (
                         <p className='text-danger text-center'>Incorrect Password</p>

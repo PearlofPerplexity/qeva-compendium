@@ -644,6 +644,7 @@ export const CLASSES = [
         saving_throw_prof: ["Strength", "Dexterity"],
         skill_prof: ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"],
         skill_prof_selection: 2,
+        lvls: DNDLEVELS.avlimeth,
         topics: [
             {
                 id: 0,

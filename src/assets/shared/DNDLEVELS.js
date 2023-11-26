@@ -1991,7 +1991,13 @@ export const DNDLEVELS = {
             // LEVEL 9
             id: 9,
             prof_bonus: '+4',
-            features: [],
+            features: [
+                {
+                    id: 0,
+                    name: '-',
+                    description: 'No features earned at this level.'
+                }
+            ],
         },
         {
             // LEVEL 10
@@ -2015,8 +2021,13 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Bardic Inspiration',
-                    description: 'You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level.'
+                    name: 'Divine Sense',
+                    description: 'The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any ethereal within 60 feet of you. Within the same radius, you also detect the presence of any place or object that has been blessed or cursed. You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.'
+                },
+                {
+                    id: 1,
+                    name: 'Temple Guardian',
+                    description: 'You may visit cathedrals to receive free lodgin and information.'
                 }
             ],
         },
@@ -2027,13 +2038,18 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Jack of all Trades',
-                    description: "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus."
+                    name: 'SELECT A FIGHTING STYLE',
+                    description: 'See the Fighting Style chart and select a style.'
                 },
                 {
                     id: 1,
-                    name: 'Song of Rest',
-                    description: "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points. The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
+                    name: 'Lay on Hands',
+                    description: "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x5. As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool. Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one. You cannot remove a curse."
+                },
+                {
+                    id: 2,
+                    name: 'Divine Smite',
+                    description: "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapons damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend, to a maximum of 6d8."
                 }
             ],
         },
@@ -2044,18 +2060,18 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Expertise',
-                    description: 'At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.'
+                    name: "Sacred Oath",
+                    description: "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose the Oath of Devotion"
                 },
                 {
                     id: 1,
-                    name: 'Bonus Proficiencies',
-                    description: "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice."
+                    name: "Channel Divinity",
+                    description: "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again. Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."
                 },
                 {
                     id: 2,
-                    name: 'Cutting Words',
-                    description: "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed."
+                    name: "Sacred Weapon",
+                    description: "As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1)."
                 }
             ],
         },
@@ -2078,8 +2094,13 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Font of Inspiration',
-                    description: 'Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.'
+                    name: 'Extra Attack',
+                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                },
+                {
+                    id: 1,
+                    name: 'Divine Disruption',
+                    description: 'You do not have the ability to control the elements as oracles do, but you can disrupt them. You can cause water to splash, or burst out of a glass, rocks to crack and break, air to burst.'
                 }
             ],
         },
@@ -2090,8 +2111,8 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Extra Attack',
-                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                    name: 'Aura of Protection',
+                    description: 'Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.'
                 }
             ],
         },
@@ -2102,8 +2123,8 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Countercharm',
-                    description: 'At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).'
+                    name: "Aura of Devotion",
+                    description: "Starting at 7th level, you and friendly creatures within 10 feet of you can’t be charmed while you are conscious."
                 }
             ],
         },
@@ -2123,7 +2144,13 @@ export const DNDLEVELS = {
             // LEVEL 9
             id: 9,
             prof_bonus: '+4',
-            features: [],
+            features: [
+                {
+                    id: 0,
+                    name: '-',
+                    description: 'No features earned at this level.'
+                }
+            ],
         },
         {
             // LEVEL 10
@@ -2132,15 +2159,14 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Higher Expertise',
-                    description: 'At 10th level, choose two more of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.'
+                    name: 'Aura of Courage',
+                    description: 'Starting at 10th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious.'
                 }
             ],
         },
     ],
 
     //NEXT CLASSES
-    // AVLIMETH CLASS LEVELS
     // ELVISH CLOAKS CLASS LEVELS
     // ORDER OF THE FEATHER CLASS LEVELS
     // ACOLYTE CLASS LEVELS
