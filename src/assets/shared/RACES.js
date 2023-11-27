@@ -19,6 +19,7 @@ import aeoki from '../imgs/races/aeoki.png';
 import treefolk from '../imgs/races/treefolk.png';
 import spirit from '../imgs/ethereal/spirit.png';
 import spectre from '../imgs/ethereal/spectre.png';
+import arborum from '../imgs/races/arborum.png';
 //import user from '../imgs/races/user.png';
 
 /* INCLUDES:
@@ -892,7 +893,8 @@ export const RACES = [
         government: `Communal`,
         residence: `Mahelos`,
         description: `It was revealed later in history that some of the flora had become sentient and in some areas of the world (Ellowood forest, Mahelos and the richest in Aguave), all flora. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are often shy folk and do not carry out business like other races. This may because they do not have ears or eyes like other folk and rather see and hear through the vibrations of their many branches. Or it is because they can only speek treeish and communication with other races is tedious. Either way, they are a seldom seen race. However, if one does make the effort to know them, they reap great rewards. Arborums are fierce friends and a great source of wisdom. When a arborum first grows roots, it pulls them out of the ground and is able to walk the surface of the earth, only taking root to heal and rest. They walk the earth until their stature grows and their trunks stiffen to the point that mobility is difficult. At this point, they choose their final resting place - often their homeland - and dig their roots back on the earth to remain their for the rest of their years. Some live thousands of years and offer thousands of years of wisdom. It is the sapplings who protect them and walkabout the earth.`,
-        image: treefolk,
+        image: arborum,
+        imageAlt: `Qeṽa Arborum`,
         speed: 30,
         size: 'M',
         str: '+1',
@@ -925,8 +927,7 @@ export const RACES = [
                 name: "Regrowth",
                 description: "Whenever your health drops below 0, you lose a tree branch/limb. The number of points you drop below zero equals the number of days it will require to regrow the limb. During the healing process, you have disadvantage on attacks with two-handed weapons."
             }
-        ],
-        imageAlt: `Qeṽa Arborum`
+        ]
     },
     {
         id: 9,

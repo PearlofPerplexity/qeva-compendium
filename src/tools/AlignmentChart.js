@@ -18,6 +18,8 @@ const AlignmentChart = (props) => {
     
     // const gemPoints20 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20];
     const gemPoints40 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, '...', 30, '...', 40];
+    const gemContain = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, '...', 50, '...', 60];
+    const gemOutput = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, '...', 30, '...', 40];
     const gemClarity = ["I", "I3", "I2", "I1", "SI3", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL"];
     const gemColor = ["Z","Y","X","W","V","U","T","S","R","Q","P","O","N","M","L","K","J","I","H","G","F","E","D",""];
     const gemCarat = [0.05, 0.1, 0.15, 0.2, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 2.75, 3, 3.25, 3.5, '...', 4.75, '...', 6];
@@ -127,91 +129,91 @@ const AlignmentChart = (props) => {
         let alignPts, _lvl;
         switch (carat) {
             case 0.05:
-                alignPts = 1;
-                _lvl = 1;
-                break;
-            case 0.1:
                 alignPts = 2;
                 _lvl = 1;
                 break;
+            case 0.1:
+                alignPts = 4;
+                _lvl = 1;
+                break;
             case 0.15:
-                alignPts = 3;
+                alignPts = 6;
                 _lvl = 2;
                 break;
             case 0.2:
-                alignPts = 4;
+                alignPts = 8;
                 _lvl = 2;
                 break;
             case 0.25:
-                alignPts = 5;
+                alignPts = 10;
                 _lvl = 3;
                 break;
             case 0.35:
-                alignPts = 6;
+                alignPts = 12;
                 _lvl = 3;
                 break;
             case 0.45:
-                alignPts = 7;
+                alignPts = 14;
                 _lvl = 4;
                 break;
             case 0.55:
-                alignPts = 8;
+                alignPts = 16;
                 _lvl = 4;
                 break;
             case 0.65:
-                alignPts = 9;
+                alignPts = 18;
                 _lvl = 5;
                 break;
             case 0.75:
-                alignPts = 10;
+                alignPts = 20;
                 _lvl = 5;
                 break;
             case 1:
-                alignPts = 11;
+                alignPts = 22;
                 _lvl = 6;
                 break;
             case 1.25:
-                alignPts = 12;
+                alignPts = 24;
                 _lvl = 6;
                 break;
             case 1.5:
-                alignPts = 13;
+                alignPts = 26;
                 _lvl = 7;
                 break;
             case 1.75:
-                alignPts = 14;
+                alignPts = 28;
                 _lvl = 7;
                 break;
             case 2:
-                alignPts = 15;
+                alignPts = 30;
                 _lvl = 8;
                 break;
             case 2.5:
-                alignPts = 16;
+                alignPts = 32;
                 _lvl = 8;
                 break;
             case 2.75:
-                alignPts = 17;
+                alignPts = 34;
                 _lvl = 9;
                 break;
             case 3:
-                alignPts = 18;
+                alignPts = 36;
                 _lvl = 9;
                 break;
             case 3.25:
-                alignPts = 19;
+                alignPts = 38;
                 _lvl = 10;
                 break;
             case 3.5:
-                alignPts = 20;
+                alignPts = 40;
                 _lvl = 10;
                 break;
             case 4.75:
-                alignPts = 30;
+                alignPts = 60;
                 _lvl = 15;
                 break;
             case 6:
-                alignPts = 40;
+                alignPts = 80;
                 _lvl = 20;
                 break;
             default:
@@ -377,7 +379,7 @@ const AlignmentChart = (props) => {
                                 </tr>
                                 <tr>
                                     <th scope='col'>Alignment Pts</th>
-                                    {gemPoints40.map((point, index) => (
+                                    {gemContain.map((point, index) => (
                                         <td scope='col' key={index}>{point}</td>
                                     ))}
                                 </tr>
@@ -421,7 +423,7 @@ const AlignmentChart = (props) => {
                                 </tr>
                                 <tr>
                                     <th scope='col'>Alignment Pts</th>
-                                    {gemPoints40.map((point, index) => (
+                                    {gemOutput.map((point, index) => (
                                         <td colSpan='' key={index}>{point}</td>
                                     ))}
                                 </tr>

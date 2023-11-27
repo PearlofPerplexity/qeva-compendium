@@ -219,7 +219,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the diamond stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the diamond stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -265,7 +265,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the citrine stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the citrine stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -290,8 +290,8 @@ export const GEMS = [
                     },
                     {
                         id: 1, 
-                        name: "Treespeech",
-                        description: "Use Speak with Animals on any vegetation you touch."
+                        name: "Tales of the Land",
+                        description: "Speak with earth upon touch"
                     },
                     {
                         id: 2, 
@@ -300,8 +300,8 @@ export const GEMS = [
                     },
                     {
                         id: 3, 
-                        name: "Tales of the Land",
-                        description: "Speak with earth upon touch"
+                        name: "Treespeech",
+                        description: "Use Speak with Animals on any vegetation you touch."
                     },
                     {
                         id: 4, 
@@ -311,7 +311,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the amethyst stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the amethyst stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -357,7 +357,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the pyrite stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the pyrite stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -402,7 +402,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the sapphire stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the sapphire stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -447,7 +447,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the emerald stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the emerald stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -492,7 +492,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the onyx stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the onyx stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -537,7 +537,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the turquoise stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the turquoise stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -582,7 +582,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the ruby stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the ruby stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -627,7 +627,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the opal stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the opal stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -672,7 +672,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the topaz stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the topaz stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -717,7 +717,7 @@ export const GEMS = [
                     {
                         id: 5, 
                         name: "Unity",
-                        description: "You are one with the pearl. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the pearl. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },

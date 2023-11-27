@@ -46,7 +46,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the diamond stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the diamond stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1') (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -87,7 +87,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the citrine stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the citrine stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -107,8 +107,8 @@ export const DGEMS = [
                     },
                     {
                         id: 1, 
-                        name: "Treespeech ɸ",
-                        description: "Use Speak with Animals on any vegetation you see or touch."
+                        name: "Tales of the Land ɸ",
+                        description: "Speak with earth upon sight or touch"
                     },
                     {
                         id: 2, 
@@ -117,8 +117,8 @@ export const DGEMS = [
                     },
                     {
                         id: 3, 
-                        name: "Tales of the Land ɸ",
-                        description: "Speak with earth upon sight or touch"
+                        name: "Treespeech ɸ",
+                        description: "Use Speak with Animals on any vegetation you see or touch."
                     },
                     {
                         id: 4, 
@@ -128,7 +128,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the amethyst stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the amethyst stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -169,7 +169,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the pyrite stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the pyrite stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -210,7 +210,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the sapphire stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the sapphire stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -251,7 +251,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the emerald stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the emerald stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -292,7 +292,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the onyx stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the onyx stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -333,7 +333,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the turquoise stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the turquoise stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -374,7 +374,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the ruby stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the ruby stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -415,7 +415,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the opal stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the opal stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -456,7 +456,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Unity ɸ",
-                        description: "You are one with the topaz stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the topaz stone. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             }
@@ -504,7 +504,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the dark diamond. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the dark diamond. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -545,7 +545,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black diamond. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black diamond. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -586,7 +586,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black amethyst. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black amethyst. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -627,7 +627,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Full Corruption",
-                        description: "Stone ability rolls are automatically 20."
+                        description: "Stone ability rolls are automatically 20 (if not '1')."
                     }
                 ]
             },
@@ -668,7 +668,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black sapphire. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black sapphire. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -709,7 +709,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black emerald. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black emerald. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -750,7 +750,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the dark onyx. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the dark onyx. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -791,7 +791,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black turquoise. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black turquoise. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -832,7 +832,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black ruby. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black ruby. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -873,7 +873,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the fire opal. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the fire opal. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -914,7 +914,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black topaz. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black topaz. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             },
@@ -956,7 +956,7 @@ export const DGEMS = [
                     {
                         id: 5, 
                         name: "Corruption",
-                        description: "You are one with the black pearl. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20. Touch is no longer required."
+                        description: "You are one with the black pearl. You no longer need a physical gem to access its powers. Stone ability rolls are automatically 20 (if not '1'). Touch is no longer required."
                     }
                 ]
             }

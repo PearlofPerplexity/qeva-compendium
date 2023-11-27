@@ -895,6 +895,7 @@ export const CLASSES = [
                 skill_prof: ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"],
                 skill_prof_selection: 2,
                 topics: [],
+                lvls: DNDLEVELS.acolyte
             },
             {
                 id: 2,

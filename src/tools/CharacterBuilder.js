@@ -361,6 +361,9 @@ const CharacterBuilder = () => {
                                 ))}
                             </select>
                         )}
+                        {character.myClass && character.myClass.name === 'Oracles' && (
+                            <p className='text-danger'>You must be selected for this class. If the DM deems you worthy, you must roll a "1" on a D20. If not, you must roll a "1" on a D100.</p>
+                        )}
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>

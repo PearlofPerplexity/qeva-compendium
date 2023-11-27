@@ -138,16 +138,16 @@ const CharacterCreator = () => {
         if (character.alignmentType === 'Incidental') {
             charObj.features.push(`${character.alignmentGem.name.toUpperCase()}: ${character.alignmentGem.lvls[0]} (2pts)`);
         } else {
-            charObj.features.push(`${character.alignmentGem.lvls[0].name.toUpperCase()}: ${character.alignmentGem.lvls[0].description} (2pts)`);
+            charObj.features.push(`${character.alignmentGem.lvls[0].name.toUpperCase()} (2pts)`);
         }
         if (character.race.abilities && character.race.abilities.length > 0) {
             character.race.abilities.map(ability => {
-                charObj.features.push(`${ability.name.toUpperCase()}: ${ability.description}`)
+                charObj.features.push(`${ability.name.toUpperCase()}`)
             });
         }
         if (character.subrace && character.subrace.abilities.length > 0) {
             character.subrace.abilities.map(ability => {
-                charObj.features.push(`${ability.name.toUpperCase()}: ${ability.description}`)
+                charObj.features.push(`${ability.name.toUpperCase()}`)
             });
         }
         

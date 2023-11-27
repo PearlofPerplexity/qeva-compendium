@@ -33,14 +33,20 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'LVL 1 Divination',
-                    description: 'Size: 5ft cube, Range: 15ft'
+                    description: 'Size: 5ft cube, Range: 15ft (Acolyte: Requires level 1 divination slot).'
                 },
                 {
                     id: 1, 
-                    name: "Endless Blesing",
-                    description: "You live in a constant state of blessing, guarded by ethereals.You can add proficiency to any roll."
+                    name: "Endless Blessing",
+                    description: "You live in a constant state of blessing, guarded by ethereals.You cannot be cursed as long as you are faithful. You can add proficiency to any roll."
+                },
+                {
+                    id: 1, 
+                    name: "Unrestricted Access",
+                    description: "You have no limit on uses of diviniation and can divine all types of elements."
                 },
             ],
+
         },
         {
             // LEVEL 2
@@ -62,7 +68,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'LVL 2 Divination',
-                    description: 'Size: 10ft cube, Range: 30ft'
+                    description: 'Size: 10ft cube, Range: 30ft (Acolyte: Requires level 2 divination slot).'
                 },
                 {
                     id: 1, 
@@ -91,7 +97,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'LVL 3 Divination',
-                    description: 'Size: 15ft cube, Range: 60ft'
+                    description: 'Size: 15ft cube, Range: 60ft (Acolyte: Requires level 3 divination slot).'
                 },
                 {
                     id: 1, 
@@ -2027,9 +2033,10 @@ export const DNDLEVELS = {
                 {
                     id: 1,
                     name: 'Temple Guardian',
-                    description: 'You may visit cathedrals to receive free lodgin and information.'
+                    description: 'You may visit cathedrals to receive free lodging and information.'
                 }
             ],
+            trackables: ["D1: 0"],
         },
         {
             // LEVEL 2
@@ -2052,6 +2059,7 @@ export const DNDLEVELS = {
                     description: "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapons damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend, to a maximum of 6d8."
                 }
             ],
+            trackables: ["D1: 2"],
         },
         {
             // LEVEL 3
@@ -2074,6 +2082,7 @@ export const DNDLEVELS = {
                     description: "As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1)."
                 }
             ],
+            trackables: ["D1: 3"],
         },
         {
             // LEVEL 4
@@ -2086,6 +2095,7 @@ export const DNDLEVELS = {
                     description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
                 }
             ],
+            trackables: ["D1: 4"],
         },
         {
             // LEVEL 5
@@ -2103,6 +2113,7 @@ export const DNDLEVELS = {
                     description: 'You do not have the ability to control the elements as oracles do, but you can disrupt them. You can cause water to splash, or burst out of a glass, rocks to crack and break, air to burst.'
                 }
             ],
+            trackables: ["D1: 4", "D1: 1"],
         },
         {
             // LEVEL 6
@@ -2115,6 +2126,7 @@ export const DNDLEVELS = {
                     description: 'Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.'
                 }
             ],
+            trackables: ["D1: 4", "D2: 2"],
         },
         {
             // LEVEL 7
@@ -2124,9 +2136,10 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: "Aura of Devotion",
-                    description: "Starting at 7th level, you and friendly creatures within 10 feet of you can’t be charmed while you are conscious."
+                    description: "Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious."
                 }
             ],
+            trackables: ["D1: 4", "D2: 3"],
         },
         {
             // LEVEL 8
@@ -2139,6 +2152,7 @@ export const DNDLEVELS = {
                     description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
                 }
             ],
+            trackables: ["D1: 4", "D2: 3"],
         },
         {
             // LEVEL 9
@@ -2151,6 +2165,7 @@ export const DNDLEVELS = {
                     description: 'No features earned at this level.'
                 }
             ],
+            trackables: ["D1: 4", "D2: 3", "D3: 1"],
         },
         {
             // LEVEL 10
@@ -2160,9 +2175,184 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Aura of Courage',
-                    description: 'Starting at 10th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious.'
+                    description: "Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious."
                 }
             ],
+            trackables: ["D1: 4", "D2: 3", "D3: 2"],
+        },
+    ],
+    /* ---------- NEXT CLASS -------------------- ACOLYTE ---------- */
+    acolyte: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Holy Gemstone',
+                    description: "You must pledge yourself to a moral gemstone (neither dark nor unbound). An Acolyte must have this gemstone in their possession undarkened in order to cast divination."
+                },
+                {
+                    id: 1,
+                    name: 'Onyx Boost',
+                    description: "If an acolyte choses 'Onyx' (Faithfulness) as one of their stones, the gem divination and class divination can boost each other. For example, if a character uses lvl 2 divination with their gem, they can upgrade this to lvl 3 by expending an acolyte lvl 1 divination slot. Keep in mind, dem divination is limited by path."
+                },
+                {
+                    id: 2,
+                    name: 'Knowledge of Stones',
+                    description: "By deep study, you know the true meaning of all gemstones."
+                }
+            ],
+            trackables: ["D1: 0"],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Divine Disruption',
+                    description: 'You do not have the ability to control the elements as oracles do, but you can disrupt them. You can cause water to splash, or burst out of a glass, rocks to crack and break, air to burst (Requires level 1 divination slot).'
+                },
+                {
+                    id: 1,
+                    name: "Minor Illusion",
+                    description: "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again. Every one foot of illusion requires +1 dice roll (ex. a 15 sq ft. illusion requires an intelligence roll of 15+)."
+                }
+            ],
+            trackables: ["D1: 2"],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'LVL 1 Divination',
+                    description: 'Size: 5ft cube, Range: 15ft (Acolyte: Requires level 1 divination slot).'
+                },
+                {
+                    id: 1,
+                    name: 'Divine Smite',
+                    description: "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapons damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend, to a maximum of 6d8."
+                }
+            ],
+            trackables: ["D1: 3"],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                },
+                {
+                    id: 1,
+                    name: 'Meditation',
+                    description: 'For every hour you meditate, you regain 1 divination slot.'
+                },
+            ],
+            trackables: ["D1: 4"],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'LVL 2 Divination',
+                    description: 'Size: 10ft cube, Range: 30ft (Acolyte: Requires level 2 divination slot).'
+                },
+
+            ],
+            trackables: ["D1: 4", "D1: 1"],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Earth Tremor',
+                    description: 'You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 1d6 bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.'
+                },
+                {
+                    id: 1,
+                    name: "Thunderwave",
+                    description: "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed. In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet."
+                }
+            ],
+            trackables: ["D1: 4", "D2: 2"],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: "Plant Growth",
+                    description: "This spell channels vitality into plants within a specific area. There are two possible uses for the spell, granting either immediate or long-term benefits. If you cast this spell using 1 action, choose a point within range. All normal plants in a 100-foot radius centered on that point become thick and overgrown. A creature moving through the area must spend 4 feet of movement for every 1 foot it moves. You can exclude one or more areas of any size within the spell's area from being affected. If you cast this spell over 8 hours, you enrich the land. All plants in a half-mile radius centered on a point within range become enriched for 1 year. The plants yield twice the normal amount of food when harvested."
+                }
+            ],
+            trackables: ["D1: 4", "D2: 3"],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+            trackables: ["D1: 4", "D2: 3"],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Gust of Arrows',
+                    description: 'You can use your control of wind to guide an arrow to its target. Add +10 to any long-range attack for 1 minute.'
+                },
+                {
+                    id: 1,
+                    name: 'Feather Fall',
+                    description: "Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature."
+                }
+            ],
+            trackables: ["D1: 4", "D2: 3", "D3: 1"],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Shatter Steel',
+                    description: "Starting at 10th level, you can destroy an enemy's weapon. If you succeed on a DC12 Wisdom check, the enemy's weapon shatters."
+                },
+                {
+                    id: 0,
+                    name: 'Ethereal Service',
+                    description: "You can call on the ethereal realm for help. On a successful DC12, an ethereal will take physical form and help you in your fight or quest as long as it is worthy."
+                }
+            ],
+            trackables: ["D1: 4", "D2: 3", "D3: 2"],
         },
     ],
 
