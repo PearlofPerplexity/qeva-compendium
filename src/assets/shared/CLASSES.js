@@ -711,6 +711,7 @@ export const CLASSES = [
         saving_throw_prof: ["Dexterity"],
         skill_prof: ["Animal Handling", "Acrobatics", "Nature", "Perception", "History"],
         skill_prof_selection: 2,
+        lvls: DNDLEVELS.elvenCloaks,
         topics: [
             {
                 id: 0,
@@ -850,6 +851,7 @@ export const CLASSES = [
         saving_throw_prof: ["Strength", "Constitution"],
         skill_prof: ["Animal Handling", "Athletics", "Investigation", "Perception"],
         skill_prof_selection: 2,
+        lvls: DNDLEVELS.orderOfTheFeather,
         topics: [
             {
                 id: 0,

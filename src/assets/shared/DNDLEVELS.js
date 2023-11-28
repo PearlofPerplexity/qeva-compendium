@@ -363,7 +363,7 @@ export const DNDLEVELS = {
                     description: "You can use Dexterity instead of Strength for the attack and damage rolIs of your ranged attacks. Also, When you use the attack action with a bow on your turn, you can make the same attack as a bonus action."
                 }
             ],
-            trackables: ["Ki: 0", "UM: +0"],
+            trackables: ["DIV: 0", "UM: +0"],
         },
         {
             // LEVEL 2
@@ -372,26 +372,21 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Ki',
-                    description: 'Your training allows you to harness a divine energy (ki). Your access to this energy is represented by a number of ki points. Your level determines the number of points you have, as shown in the ki points column of the table, You can spend these points to fuel various ki features. You start knowing two such features: Patient Defense, and Step of the Wind, When you spend a ki poinl. it is unavailable until you finish a short or long rest.'
+                    name: 'DIV',
+                    description: 'Your training allows you to harness a divine energy (Div). Your access to this energy is represented by a number of div points. Your level determines the number of points you have, as shown in the Div points column of the table, You can spend these points to fuel various Div features.'
                 },
                 {
                     id: 1,
-                    name: 'Patience Defense',
-                    description: 'You can spend 1 ki point to take the Dodge action as a bonus action on your turn.'
+                    name: 'Step of the Wind',
+                    description: 'You can spend 1 div point to take the Disengage, Dodge or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.'
                 },
                 {
                     id: 2,
-                    name: 'Step of the Wind',
-                    description: 'You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.'
-                },
-                {
-                    id: 3,
                     name: 'Unarmored Movement (UM)',
                     description: 'Your speed increases by 10 ft while you are light or no armor.'
                 }
             ],
-            trackables: ["Ki: 2", "UM: +10"],
+            trackables: ["DIV: 2", "UM: +10"],
         },
         {
             // LEVEL 3
@@ -406,10 +401,10 @@ export const DNDLEVELS = {
                 {
                     id: 1,
                     name: "Deflect Missiles",
-                    description: "You can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity modifier +your leveI. If you reduce the damage to O,you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free, If you catch a missile in this way, you can spend 1 ki point to make a ranged attack with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack."
+                    description: "You can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity modifier +your leveI. If you reduce the damage to O,you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free, If you catch a missile in this way, you can spend 1 div point to make a ranged attack with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack."
                 }
             ],
-            trackables: ["Ki: 3", "UM: +10"],
+            trackables: ["DIV: 3", "UM: +10"],
         },
         {
             // LEVEL 4
@@ -427,7 +422,7 @@ export const DNDLEVELS = {
                     description: 'You can use your reaction when you fall to reduce any falling damage you take by an amount equal to 5x your level.'
                 }
             ],
-            trackables: ["Ki: 4", "UM: +10"],
+            trackables: ["DIV: 4", "UM: +10"],
         },
         {
             // LEVEL 5
@@ -442,10 +437,10 @@ export const DNDLEVELS = {
                 {
                     id: 1,
                     name: 'Stunning Strike',
-                    description: 'When you hit another creature with a melee weapon attack. you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.'
+                    description: 'When you hit another creature with a melee weapon attack. you can spend 1 div point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.'
                 },
             ],
-            trackables: ["Ki: 5", "UM: +10"],
+            trackables: ["DIV: 5", "UM: +10"],
         },
         {
             // LEVEL 6
@@ -458,7 +453,7 @@ export const DNDLEVELS = {
                     description: 'You gain the ability to heal yourself. As an action, you can regain hit points equal to 3x your level. You must finish a long rest before you can use this feature again.'
                 }
             ],
-            trackables: ["Ki: 6", "UM: +15"],
+            trackables: ["DIV: 6", "UM: +15"],
         },
         {
             // LEVEL 7
@@ -476,7 +471,7 @@ export const DNDLEVELS = {
                     description: 'You can use your action to end one effect on yourself that is causing you to be charmed or frightened.'
                 }
             ],
-            trackables: ["Ki: 7", "UM: +15"],
+            trackables: ["DIV: 7", "UM: +15"],
         },
         {
             // LEVEL 8
@@ -489,7 +484,7 @@ export const DNDLEVELS = {
                     description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
                 }
             ],
-            trackables: ["Ki: 8", "UM: +15"],
+            trackables: ["DIV: 8", "UM: +15"],
         },
         {
             // LEVEL 9
@@ -502,7 +497,7 @@ export const DNDLEVELS = {
                     description: 'You gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.'
                 }
             ],
-            trackables: ["Ki: 9", "UM: +15"],
+            trackables: ["DIV: 9", "UM: +15"],
         },
         {
             // LEVEL 10
@@ -515,7 +510,7 @@ export const DNDLEVELS = {
                     description: 'You are immune to disease and poison.'
                 }
             ],
-            trackables: ["Ki: 10", "UM: +20"],
+            trackables: ["DIV: 10", "UM: +20"],
         },
     ],
     /* ---------- NEXT CLASS -------------------- GHOST BLADES ---------- */
@@ -2355,9 +2350,280 @@ export const DNDLEVELS = {
             trackables: ["D1: 4", "D2: 3", "D3: 2"],
         },
     ],
-
-    //NEXT CLASSES
-    // ELVISH CLOAKS CLASS LEVELS
-    // ORDER OF THE FEATHER CLASS LEVELS
-    // ACOLYTE CLASS LEVELS
+    /* ---------- NEXT CLASS -------------------- ELVEN CLOAKS ---------- */
+    elvenCloaks: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Elven Precision',
+                    description: "Your elven heritage grants you unparalleled precision. Once per short rest, you can reroll a missed attack roll."
+                },
+            ],
+            trackables: ["DIV: 0", "UM: +0"],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'DIV',
+                    description: 'Your training allows you to harness a divine energy (Div). Your access to this energy is represented by a number of div points. Your level determines the number of points you have, as shown in the Div points column of the table, You can spend these points to fuel various Div features.'
+                },
+                {
+                    id: 1,
+                    name: 'Shadowstep',
+                    description: 'Embracing the shadows and your ethereal guardians, you gain the ability to teleport up to 30 feet to an unoccupied space you can see in dim light or darkness as a bonus action.'
+                },
+                {
+                    id: 2,
+                    name: 'Unarmored Movement (UM)',
+                    description: 'Your speed increases by 10 ft while you are light or no armor.'
+                }
+            ],
+            trackables: ["DIV: 2", "UM: +10"],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ethereal Archer',
+                    description: "By means of a long relationship between elves and ethereals, you can elicit their help to phase your arrows into the ethereal plane in flight. You can spend one divinity point to cast Etherealness on an arrow. You can pass from full cover."
+                }
+            ],
+            trackables: ["DIV: 3", "UM: +10"],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+            trackables: ["DIV: 4", "UM: +10"],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Sylvan Shot',
+                    description: "You've mastered the art of the bow. Your ranged attacks now ignore half cover, and you can make an additional attack when taking the Attack action"
+                },
+                {
+                    id: 1,
+                    name: 'Doubleshot',
+                    description: "You have more than one move up your sleeve. You can expend a DIV point to fire two arrows at once; arrows must fire at the same target."
+                }
+            ],
+            trackables: ["DIV: 5", "UM: +10"],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Elven Reflexes',
+                    description: "Your reflexes are unmatched. You gain proficiency in Dexterity saving throws."
+                }
+            ],
+            trackables: ["DIV: 6", "UM: +15"],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: "Evasive Maneuvers",
+                    description: "Your agility reaches new heights. You can use your reaction to impose disadvantage on an attack against you."
+                }
+            ],
+            trackables: ["DIV: 7", "UM: +15"],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+            trackables: ["DIV: 8", "UM: +15"],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: '-',
+                    description: 'No features earned at this level.'
+                }
+            ],
+            trackables: ["DIV: 9", "UM: +15"],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ethereal Archer',
+                    description: "By means of a long relationship between elves and ethereals, you can elicit their help to phase your arrows into the ethereal plane in flight. Once per short rest, you can cast Etherealness on an arrow. You can pass from full cover."
+                }
+            ],
+            trackables: ["DIV: 10", "UM: +20"],
+        },
+    ],
+    /* ---------- NEXT CLASS -------------------- ORDER OF THE FEATHER ---------- */
+    orderOfTheFeather: [
+        {
+            // LEVEL 1
+            id: 1,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: "Pathfinder's Insight",
+                    description: "Your keen eye for detail allows you to find hidden paths and clues easily. You gain advantage on Wisdom (Perception) checks to detect traps and secret doors."
+                },
+                {
+                    id: 1,
+                    name: 'Cartographer',
+                    description: 'You are familiar with the geography of Avlim and one other continent. You have access to maps and resources to guide through various regions and are knowledgable about culture and geography to navigate them with wisdom.'
+                }
+            ],
+        },
+        {
+            // LEVEL 2
+            id: 2,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: "Survivalist's Resilience",
+                    description: "Your time in the wild has toughened you. You gain proficiency in the Survival skill, and you can endure harsh climates without suffering exhaustion."
+                }
+            ],
+        },
+        {
+            // LEVEL 3
+            id: 3,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Master of Terrain',
+                    description: "Your mastery over different terrains allows you and your party to ignore difficult terrain during overland travel."
+                }
+            ],
+        },
+        {
+            // LEVEL 4
+            id: 4,
+            prof_bonus: '+2',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 5
+            id: 5,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Extra Attack',
+                    description: 'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+                },
+            ],
+        },
+        {
+            // LEVEL 6
+            id: 6,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: "Eagle Eye",
+                    description: "Your vision is unmatched. You can see clearly up to a mile away with no difficulty, able to discern even fine details."
+                }
+            ],
+        },
+        {
+            // LEVEL 7
+            id: 7,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Adaptive Skills',
+                    description: "You can quickly pick up new skills. Once per long rest, you can gain proficiency in any one skill for one hour."
+                }
+            ],
+        },
+        {
+            // LEVEL 8
+            id: 8,
+            prof_bonus: '+3',
+            features: [
+                {
+                    id: 0,
+                    name: 'Ability Score Increase',
+                    description: 'Allocate 2 ability score points (1 pt to 2 ability scores or 2 pts to 1 ability score)'
+                }
+            ],
+        },
+        {
+            // LEVEL 9
+            id: 9,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: '-',
+                    description: 'No features earned at this level.'
+                }
+            ],
+        },
+        {
+            // LEVEL 10
+            id: 10,
+            prof_bonus: '+4',
+            features: [
+                {
+                    id: 0,
+                    name: "Trailblazer's Instinct",
+                    description: "Your intuition guides you unerringly. Once per long rest, you can ask the DM to provide a hint or clue about the best course of action in a specific situation."
+                }
+            ],
+        },
+    ],   
 }
