@@ -9,7 +9,7 @@ export const CHARACTERS = [
                 name: `Merith`,
                 life: `V.A. 406 - M.A. 39`,
                 residence: `Haven`,
-                affiliation: `Oracle, Caracadre, Ghost Blade, Avikin, Elvish Cloaks`,
+                affiliation: `Oracle, Caracadre, Ghost Blade, Avikin, Elven Cloaks`,
                 race: `Human`,
                 personality: `Introverted, drawn more to comfort than adventure`,
                 description: `By means of vision from the celesti, Merith played a pivotal role in the paling of the orcs, which led to the embracement of the Osei and the end of the Void Age.`

@@ -23,7 +23,7 @@ import { DNDLEVELS } from './DNDLEVELS';
 oracles
 caracadre
 avlimeth
-elvish cloaks
+elven cloaks
 avikin
 ghost blades
 the uncorrupted
@@ -441,7 +441,7 @@ export const CLASSES = [
             {
                 id: 1,
                 name: `History`,
-                description: `The Caracadre arose from the ashes of the beginning of wars in 2229 Q.Y. as a brotherhood that would defend against the dark armies of Moriel. They followed the formation of the oracle order commissioned by DIA in 2084 Q.Y. and the elvish cloaks begun in 2199 Q.Y. Unlike the former orders, the caracadre comprised of volunteers for oracles were selected by DIA and elves were merely born into their “cloaked” communities. The order was began by Mayveo, Lachlan and Haemon.`
+                description: `The Caracadre arose from the ashes of the beginning of wars in 2229 Q.Y. as a brotherhood that would defend against the dark armies of Moriel. They followed the formation of the oracle order commissioned by DIA in 2084 Q.Y. and the Elven Cloaks begun in 2199 Q.Y. Unlike the former orders, the caracadre comprised of volunteers for oracles were selected by DIA and elves were merely born into their “cloaked” communities. The order was began by Mayveo, Lachlan and Haemon.`
             },
             {
                 id: 2,
@@ -697,13 +697,13 @@ export const CLASSES = [
         link: `/classes/elvish-cloaks`,
         quality: `Wood Elven Warriors`,
         goal: `Keep Watch over the Elvish Realms`,
-        name: `Elvish Cloaks`,
+        name: `Elven Cloaks`,
         race: ['Elf', 'Ave'],
         primaryWeapon: `Longbow`,
         sacredText: `Histories of Avlim`,
         worldKnowledge: `Medium-High`,
         image: elvishcloaks,
-        imageAlt: `Elvish Cloaks Logo`,
+        imageAlt: `Elven Cloaks Logo`,
         hitDie: 'd8',
         equipment: ["leather armor", "2 shortswords or simple melee weapons", "longbow and a quiver of 20 arrows", "dungeoneer's pack or explorer's pack"],
         armor_prof: ["Light", "medium"],
@@ -716,7 +716,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elvish cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains iconic for the towering elven statues on either side. They were the only order established by oracles and are rumored to have been graced with a small degree of knowledge in divination.`,
+                description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elven Cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains iconic for the towering elven statues on either side. They were the only order established by oracles and are rumored to have been graced with a small degree of knowledge in divination.`,
             }
         ]
     },

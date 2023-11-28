@@ -5,7 +5,7 @@
     oracles
     caracadre
     avlimeth
-    elvish cloaks
+    elven cloaks
     avikin
     ghost blades
     the uncorrupted

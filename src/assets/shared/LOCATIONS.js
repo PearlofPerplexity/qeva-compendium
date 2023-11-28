@@ -199,14 +199,14 @@ export const LOCATIONS = [
                         features: `Yarvarwe (Cathedral of Bridges)`,
                         description: `Evyandil is an elven forest in the southwestern region of Avlim and contains like-lushness to Navenia. It's borders are heavily guarded as an exclusivley elven realm.`,
                         image: eCloaks,
-                        imageAlt: `Passage of the Elvish Cloaks`
+                        imageAlt: `Passage of the Elven Cloaks`
                     },
                     {
                         id: 2,
                         name: `Thrush Mountains`,
                         race: `Dwarves, River Elves`,
                         cities: `Anuage`,
-                        features: `Passage of the Elvish Cloaks, Aneaguthe (Cathedral whose waters flow from the mountain)`,
+                        features: `Passage of the Elven Cloaks, Aneaguthe (Cathedral whose waters flow from the mountain)`,
                         description: `Mountains range from patches of lush treelines to bare mountains the further east you travel` 
                     },
                     {
