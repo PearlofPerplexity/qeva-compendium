@@ -364,6 +364,10 @@ const LootGenerator = () => {
     
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
+    const init = () => {
+        setNumber(randNum());
+        toggle();
+    }
 
     const reset = () => {
         toggle();
@@ -379,7 +383,10 @@ const LootGenerator = () => {
         setLevel(sliderNum);
     }
 
-    const [number, setNumber] = useState(10);
+    const randNum = () => {
+        return Math.floor(Math.random() * 10) + 1;
+    }
+    const [number, setNumber] = useState();
     const handleNumber = (e) => {
         setNumber(e.target.value);
     }
@@ -441,7 +448,7 @@ const LootGenerator = () => {
     
     return (
         <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
+            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={init}>
                 <i className="iconify fs-2" data-icon="noto:coin"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">

@@ -14,22 +14,30 @@ import { RACES } from '../assets/shared/RACES';
 
 const RaceChart = (props) => {
     
-    const [selectedRaces, setSelectedRaces] = useState(RACES);
+    const races = RACES.sort((a, b) => { // Sorts the Array Alphabetically
+        const nameA = a.name.toUpperCase();
+        const nameB = b.name.toUpperCase();
+        if (nameA < nameB) return -1;
+        else if (nameA > nameB) return 1;
+        else return 0;
+    });
+
+    const [selectedRaces, setSelectedRaces] = useState(races);
     const handleRace = (e) => {
-        if ((RACES.length !== selectedRaces.length) && selectedRaces.find(race => race.name === e.target.value)) {
+        if ((races.length !== selectedRaces.length) && selectedRaces.find(race => race.name === e.target.value)) {
             alert('You have already added this race!');
         } else if (e.target.value === 'all') {
-            setSelectedRaces(RACES);
+            setSelectedRaces(races);
         } else {
-            const curRace = RACES.filter(event => event.name === e.target.value)
-            if (selectedRaces.length === RACES.length) setSelectedRaces(curRace);
+            const curRace = races.filter(event => event.name === e.target.value)
+            if (selectedRaces.length === races.length) setSelectedRaces(curRace);
             else setSelectedRaces([...selectedRaces, ...curRace]);
         }
     }
     const removeClass = (e) => {
         console.log(e.target.ariaLabel);
         const curRaces = selectedRaces.filter(event => event.name !== e.target.ariaLabel);
-        if (curRaces.length === 0) setSelectedRaces(RACES);
+        if (curRaces.length === 0) setSelectedRaces(races);
         else setSelectedRaces(curRaces);
     }
     
@@ -61,7 +69,7 @@ const RaceChart = (props) => {
         toggle();
         setTitle("Ability");
         setDetail("Click on an ability above to see it's description.");
-        setSelectedRaces(RACES);
+        setSelectedRaces(races);
         setCheckbox(false);
         console.clear();
     }
@@ -96,11 +104,11 @@ const RaceChart = (props) => {
                         <p className='text-center'>
                             <select name='races' className="ms-2 charPicklist" id='race-select' onChange={handleRace}>
                                 <option value="all">--Select Races--</option>
-                                {RACES.map((race) => (
+                                {races.map((race) => (
                                     <option value={race.name} key={race.id}>{race.name}</option>
                                 ))}
                             </select>
-                            {(RACES.length !== selectedRaces.length) && selectedRaces.map((e, index) => (
+                            {(races.length !== selectedRaces.length) && selectedRaces.map((e, index) => (
                                 <a key={index} aria-label={e.name} className='charPicklist' onClick={removeClass}>
                                     {e.name} x
                                 </a>

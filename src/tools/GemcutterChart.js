@@ -183,7 +183,7 @@ const gemCuts = [
     }
 ];
 
-const GemcutterChart = () => {
+const GemcutterChart = (props) => {
         
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -223,14 +223,20 @@ const GemcutterChart = () => {
 
     return (
         <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
-                <i className="iconify fs-2" data-icon="fxemoji:ring"></i>
-                <div className="ms-3">
-                    <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Gemcutter Chart</h3>
+            {props.loc === 'toolPage' ? (
+                <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
+                    <i className="iconify fs-2" data-icon="fxemoji:ring"></i>
+                    <div className="ms-3">
+                        <div className="d-flex align-items-center">
+                            <h3 className="mb-0">Gemcutter Chart</h3>
+                        </div>
                     </div>
-                </div>
-            </Link>
+                </Link>
+            ) : props.loc === 'classChart' ? (
+                <button type="button" className="btn rounded-circle" onClick={toggle}>
+                    <i className="uil uil-info-circle"></i>
+                </button>
+            ) : ('')}
             <Modal isOpen={modal} toggle={toggle} fullscreen>
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="fxemoji:ring"></i> Gemcutting Chart</ModalHeader>
                 <ModalBody>

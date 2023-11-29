@@ -13,9 +13,20 @@ import { Link } from 'react-router-dom';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { RACES } from '../assets/shared/RACES';
 import FightingStyleChart from './FightingChart';
+import GrenadierChart from './GrenadierChart';
+import CraftingChart from './CraftingChart';
+import GemcutterChart from './GemcutterChart';
 
-const dndClasses = [...CLASSES.slice(0,9), ...CLASSES[9].topics];
-
+const dndClasses = [
+    ...CLASSES.slice(0,9), 
+    ...CLASSES[9].topics
+].sort((a, b) => { // Sorts the Array Alphabetically
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+    if (nameA < nameB) return -1;
+    else if (nameA > nameB) return 1;
+    else return 0;
+});;
 
 const ClassChart = (props) => {
     
@@ -235,13 +246,22 @@ const ClassChart = (props) => {
                 </div>
                 </ModalBody>
                 <ModalFooter>
-                    {(title.toLowerCase().includes('fighting style') || title.toLowerCase().includes('maneuvers')) && (
-                        <FightingStyleChart loc='classChart' />
-                    )}
                     <p className='text-start'>
                         <strong>{title.toUpperCase()}: </strong>
                         <em>{detail}</em>
                     </p>
+                    {(title.toLowerCase().includes('fighting style') || title.toLowerCase().includes('maneuvers')) && (
+                        <FightingStyleChart loc='classChart' />
+                    )}
+                    {title.toLowerCase().includes('craft') && (
+                        <CraftingChart loc='classChart' />
+                    )}
+                    {title.toLowerCase().includes('cut expertise') && (
+                        <GemcutterChart loc='classChart' />
+                    )}
+                    {title.toLowerCase().includes('grenadier') && (
+                        <GrenadierChart loc='classChart' />
+                    )}
                     {!(title === 'See Description') && (
                         <Button color="secondary" onClick={detailReset}>
                             Reset

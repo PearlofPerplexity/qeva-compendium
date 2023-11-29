@@ -896,7 +896,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Grenadier Upgrade',
+                    name: 'GRENADIER UPGRADE',
                     description: 'Selection an Option: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 2d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 10 feet to the radius of a currently mastered grenade.'
                 }
             ],
@@ -920,7 +920,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Grenadier Upgrade',
+                    name: 'GRENADIER UPGRADE',
                     description: 'Selection an Option: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 2d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 10 feet to the radius of a currently mastered grenade.'
                 }
             ],
@@ -944,7 +944,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Grenadier Upgrade',
+                    name: 'GRENADIER UPGRADE',
                     description: 'Selection an Option: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 2d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 10 feet to the radius of a currently mastered grenade.'
                 }
             ],
@@ -971,7 +971,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Select Feats (2)',
+                    name: 'SELECT FEATS (2)',
                     description: "Though not a standard route, you've forged a new path that has led you to cross with other trades. Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master “Nimble dodge”, a Level 10 Toppler feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot take the gemcutter's “Master of Divine Stones” feat if you have not already mastered moral and power stones)."
                 },
                 {
@@ -1005,7 +1005,7 @@ export const DNDLEVELS = {
             features: [ 
                 {
                     id: 0,
-                    name: "Select a feat",
+                    name: "SELECT A FEAT",
                     description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
                 }
             ],
@@ -1029,7 +1029,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: "Select feats (2)",
+                    name: "SELECT FEATS (2)",
                     description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
                 },
                 {
@@ -1058,7 +1058,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: "Select a feat",
+                    name: "SELECT A FEAT",
                     description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
                 }
             ],
@@ -1082,7 +1082,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: "Select a feat",
+                    name: "SELECT A FEAT",
                     description: "Learn the feat of another class. NOTE: the feat must occur below or equal to your current level (Ex. You cannot master a Level 10 feat at level 3) and fulfill all necessary prerequisites (Ex. You cannot select a feat without first selecting its prerequisites).You can move through the space of any creature that is of a size larger than yours. If you are a halfling, you can move through any enemy space, regardless of the size of the creature."
                 }
             ],
@@ -1126,7 +1126,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Primary Domain',
+                    name: 'Primary Craft Domain',
                     description: 'Select a domain from the crafting table (Healing, Amplification, Meddling or Damage). You are an expert in this domain. Whenever you select this domain for future expertise, you gain 3 instead of 2 concoctions. You also have a keen sense for these ingredients. You can recognize when another creature is using a concoction you have mastered.'
                 }
             ],
@@ -1138,7 +1138,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'SELECT AN UPGRADE',
+                    name: 'CRAFT UPGRADE',
                     description: 'New Concoction OR Expertise'
                 },
                 {
@@ -1189,7 +1189,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'SELECT AN UPGRADE',
+                    name: 'CRAFT UPGRADE',
                     description: 'New Concoction OR Expertise'
                 },
                 {
@@ -1235,7 +1235,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'SELECT AN UPGRADE',
+                    name: 'CRAFT UPGRADE',
                     description: 'New Concoction OR Expertise'
                 },
                 {
@@ -1282,7 +1282,7 @@ export const DNDLEVELS = {
                 },
                 {
                     id: 2,
-                    name: 'Expertise',
+                    name: 'Cut Expertise',
                     description: "Select three cuts from the Gemcutter's chart to master."
                 },
             ],
@@ -1306,7 +1306,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Expertise Improvement',
+                    name: 'Cut Expertise Improvement',
                     description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
                 }
             ],
@@ -1330,7 +1330,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Expertise Improvement',
+                    name: 'Cut Expertise Improvement',
                     description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
                 },
                 {
@@ -1364,7 +1364,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Expertise Improvement',
+                    name: 'Cut Expertise Improvement',
                     description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
                 }
             ],
@@ -1393,7 +1393,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'Expertise Improvement',
+                    name: 'Cut Expertise Improvement',
                     description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
                 },
                 {
@@ -2452,7 +2452,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: "Evasive Maneuvers",
+                    name: "Evasive Maneuver",
                     description: "Your agility reaches new heights. You can use your reaction to impose disadvantage on an attack against you."
                 }
             ],

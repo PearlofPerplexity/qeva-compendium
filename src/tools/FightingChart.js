@@ -12,6 +12,22 @@ import {
 import { Link } from 'react-router-dom';
 import { FIGHTINGSTYLES, FIGHTINGSTYLEMANEUVERS } from '../assets/shared/FIGHTSTYLES';
 
+const fightingStyles = FIGHTINGSTYLES.sort((a, b) => { // Sorts the Array Alphabetically
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+    if (nameA < nameB) return -1;
+    else if (nameA > nameB) return 1;
+    else return 0;
+});
+
+const fightingStyleManeuvers = FIGHTINGSTYLEMANEUVERS.sort((a, b) => { // Sorts the Array Alphabetically
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+    if (nameA < nameB) return -1;
+    else if (nameA > nameB) return 1;
+    else return 0;
+});
+
 const FightingStyleChart = (props) => {
         
     const [modal, setModal] = useState(false);
@@ -83,7 +99,7 @@ const FightingStyleChart = (props) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {FIGHTINGSTYLES.map(fs => (
+                                {fightingStyles.map(fs => (
                                     <React.Fragment key={fs.id}>
                                         <tr className='align-middle'>
                                             <th>{fs.name}</th>
@@ -102,7 +118,7 @@ const FightingStyleChart = (props) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {FIGHTINGSTYLEMANEUVERS.map(fs => (
+                                {fightingStyleManeuvers.map(fs => (
                                     <React.Fragment key={fs.id}>
                                         <tr className='align-middle'>
                                             <th>{fs.name}</th>

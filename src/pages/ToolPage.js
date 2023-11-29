@@ -44,7 +44,7 @@ const ToolPage = () => {
                     <div className='row'>
                         <AlignmentChart loc='toolPage' />
                         <GemGenerator />
-                        <GemcutterChart />
+                        <GemcutterChart loc='toolPage' />
                     </div>
                 </section>
                 <section className="highlights mt-4">
@@ -56,9 +56,9 @@ const ToolPage = () => {
                 </section>
                 <section className="highlights mt-4">
                     <div className='row'>
-                        <CraftingChart />
+                        <CraftingChart loc='toolPage' />
                         <CraftGenerator />
-                        <GrenadierChart />
+                        <GrenadierChart loc='toolPage' />
                     </div>
                 </section>
                 <section className="highlights mt-4">

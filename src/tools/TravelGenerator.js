@@ -104,6 +104,10 @@ const TravelGenerator = () => {
     
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
+    const init = () => {
+        setNumber(rand100());
+        toggle();
+    }
 
     const reset = () => {
         toggle();
@@ -111,7 +115,10 @@ const TravelGenerator = () => {
         setTravelItem("");
     }
 
-    const [number, setNumber] = useState(10);
+    const rand100 = () => {
+        return Math.floor(Math.random() * 100) + 1;
+    }
+    const [number, setNumber] = useState();
     const handleNumber = (e) => {
         setNumber(e.target.value);
     }
@@ -162,7 +169,7 @@ const TravelGenerator = () => {
     
     return (
         <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
+            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={init}>
                 <i className="iconify fs-2" data-icon="flat-color-icons:night-landscape"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">

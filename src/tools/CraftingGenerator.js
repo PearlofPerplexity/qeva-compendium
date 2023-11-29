@@ -175,16 +175,22 @@ const CraftGenerator = () => {
     
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
+    const init = () => {
+        setSparsity(randSparsity());
+        toggle();
+    }
 
     const reset = () => {
         toggle();
-        setSparsity(20);
         setSelectedIngredients(ingredients);
         setNumber(5);
         setIngredientResults([]);
     }
 
-    const [sparsity, setSparsity] = useState(20);
+    const randSparsity = () => {
+        return (Math.floor(Math.random() * 9) + 1) * 10;
+    }
+    const [sparsity, setSparsity] = useState();
     const slider = (e) => {
         const sliderNum = e.target.value;
         setSparsity(sliderNum);
@@ -245,7 +251,7 @@ const CraftGenerator = () => {
     
     return (
         <div className="col-lg-4">
-            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={toggle}>
+            <Link className="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3"  onClick={init}>
                 <i className="iconify fs-2" data-icon="twemoji:herb"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
