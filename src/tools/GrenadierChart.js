@@ -122,6 +122,7 @@ const GrenadierChart = (props) => {
                                 🛈
                             </Button>                            
                         </h3>
+                        <p>Each upgrade, select 3 of the following:</p>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
                             <OffcanvasHeader toggle={infoToggle}>
                             Grenades
@@ -146,8 +147,8 @@ const GrenadierChart = (props) => {
                                     <td>
                                         Select or invent <strong>1 additional type of grenade</strong> to craft and wield.
                                     </td>
-                                    <td><strong>+2d6 to the damage roll</strong> of a currently mastered grenade.</td>
-                                    <td><strong>+10ft to the radius</strong> of a currently mastered grenade. </td>
+                                    <td><strong>+1d6 to the damage roll</strong> of a currently mastered grenade.</td>
+                                    <td><strong>+5ft to the radius</strong> of a currently mastered grenade. </td>
                                     <td><strong>+1 to the Dex Save</strong> of a currently mastered grenade.</td>
                                 </tr>
                             </tbody>

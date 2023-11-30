@@ -271,8 +271,8 @@ const GemcutterChart = (props) => {
                                     <td>
                                         Select or invent <strong>1 additional cut</strong> to craft.
                                     </td>
-                                    <td><strong>-1 DC</strong> to a currently mastered cut.</td>
-                                    <td><strong>-5 days </strong> to cut a currently mastered cut. </td>
+                                    <td><strong>-2 DC</strong> to a currently mastered cut.</td>
+                                    <td><strong>-10 days </strong> to cut a currently mastered cut. </td>
                                 </tr>
                             </tbody>
                         </table>

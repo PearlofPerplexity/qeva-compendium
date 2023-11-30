@@ -897,7 +897,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'GRENADIER UPGRADE',
-                    description: 'Selection an Option: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 2d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 10 feet to the radius of a currently mastered grenade.'
+                    description: 'Select 3 from: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 1d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 5 feet to the radius of a currently mastered grenade., (4) +1 to the Dex Save of a currently mastered grenade.'
                 }
             ],
         },
@@ -921,7 +921,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'GRENADIER UPGRADE',
-                    description: 'Selection an Option: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 2d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 10 feet to the radius of a currently mastered grenade.'
+                    description: 'Select 3 from: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 1d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 5 feet to the radius of a currently mastered grenade., (4) +1 to the Dex Save of a currently mastered grenade.'
                 }
             ],
         },
@@ -945,7 +945,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'GRENADIER UPGRADE',
-                    description: 'Selection an Option: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 2d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 10 feet to the radius of a currently mastered grenade.'
+                    description: 'Select 3 from: (1) New Grenade: Select another grenade to craft and wield., (2) Improve Impact: Add 1d6 to the damage roll of a currently mastered grenade., (3) Improve Radius: Add 5 feet to the radius of a currently mastered grenade., (4) +1 to the Dex Save of a currently mastered grenade.'
                 }
             ],
         },
@@ -1307,7 +1307,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Cut Expertise Improvement',
-                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                    description: 'Select 3 from: (1) Select or invent 1 additional cut to craft (2) -2 DC to a currently mastered cut. (3) -10 days to cut a currently mastered cut.'
                 }
             ],
         },
@@ -1331,7 +1331,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Cut Expertise Improvement',
-                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                    description: 'Select 3 from: (1) Select or invent 1 additional cut to craft (2) -2 DC to a currently mastered cut. (3) -10 days to cut a currently mastered cut.'
                 },
                 {
                     id: 1,
@@ -1365,7 +1365,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Cut Expertise Improvement',
-                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                    description: 'Select 3 from: (1) Select or invent 1 additional cut to craft (2) -2 DC to a currently mastered cut. (3) -10 days to cut a currently mastered cut.'
                 }
             ],
         },
@@ -1394,7 +1394,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Cut Expertise Improvement',
-                    description: 'Select 1 option: (1) Select or invent 1 additional cut to craft (2) -1 DC to a currently mastered cut. (3) -5 days to cut a currently mastered cut.'
+                    description: 'Select 3 from: (1) Select or invent 1 additional cut to craft (2) -2 DC to a currently mastered cut. (3) -10 days to cut a currently mastered cut.'
                 },
                 {
                     id: 1,
@@ -2342,7 +2342,7 @@ export const DNDLEVELS = {
                     description: "Starting at 10th level, you can destroy an enemy's weapon. If you succeed on a DC12 Wisdom check, the enemy's weapon shatters."
                 },
                 {
-                    id: 0,
+                    id: 1,
                     name: 'Ethereal Service',
                     description: "You can call on the ethereal realm for help. On a successful DC12, an ethereal will take physical form and help you in your fight or quest as long as it is worthy."
                 }
