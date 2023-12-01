@@ -12,22 +12,11 @@ import {
 import { Link } from 'react-router-dom';
 import { INGREDIENTS } from '../assets/shared/INGREDIENTS';
 import { CONCOCTIONS } from '../assets/shared/CONCOCTIONS';
+import { sortObjArray } from '../utils/dnd';
 
-const ingredients = INGREDIENTS.sort((a, b) => { // Sorts the Array Alphabetically
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) return -1;
-    else if (nameA > nameB) return 1;
-    else return 0;
-});
+const ingredients = sortObjArray(INGREDIENTS);
 
-const concoctions = CONCOCTIONS.sort((a, b) => { // Sorts the Array Alphabetically
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) return -1;
-    else if (nameA > nameB) return 1;
-    else return 0;
-});
+const concoctions = sortObjArray(CONCOCTIONS);
 
 const CraftingChart = (props) => {
     

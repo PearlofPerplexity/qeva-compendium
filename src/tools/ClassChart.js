@@ -17,16 +17,14 @@ import GrenadierChart from './GrenadierChart';
 import CraftingChart from './CraftingChart';
 import GemcutterChart from './GemcutterChart';
 
-const dndClasses = [
+import { sortObjArray } from '../utils/dnd';
+
+const dndClasses = sortObjArray(
+    [
     ...CLASSES.slice(0,9), 
     ...CLASSES[9].topics
-].sort((a, b) => { // Sorts the Array Alphabetically
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) return -1;
-    else if (nameA > nameB) return 1;
-    else return 0;
-});;
+    ]
+);
 
 const ClassChart = (props) => {
     

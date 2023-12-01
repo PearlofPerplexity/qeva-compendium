@@ -65,7 +65,7 @@ export const RACES = [
         image: wood,
         speed: 30,
         size: 'M',
-        dex: '+2',
+        dex: 2,
         proficiencies: ['longsword', 'shortsword', 'shortbow', 'longbow'],
         languages: ['common', 'elvish'],
         topics: [
@@ -88,7 +88,7 @@ export const RACES = [
                     `Wood elves are drawn to trees and so reside in forests where plantlife is abundant. They maintain the oldest and most central city of civilization, which is Brielle in the forest of Navenia. Other great cities include Eavano in Evendil, as well as Linda and Nalri in the west. They are traditionally vegetarian and perceptive to the nature of forest environments and plants.`,
                 image: wood,
                 imageAlt: `Qeṽa Wood Elf`,
-                wis: '+1',
+                wis: 1,
                 proficiencies: [''],
                 abilities: [
                     {
@@ -127,7 +127,7 @@ export const RACES = [
                     `River elves are those that are drawn most to flowing water and so build their cities adjacent to rivers. Their greatest cities are Thelos on the Silver river, Anuage on the Dundili, Vaiorse on the Oulaire, Eteala on the Neale and Helos on the Miolaire before the wood was cursed. They are traditionally pescatarian and perceptive to the nature of water.`,
                 image: river,
                 imageAlt: `Qeṽa River Elf`,
-                int: '+1',
+                int: 1,
                 abilities: [
                     {
                         id: 0,
@@ -160,7 +160,7 @@ export const RACES = [
                     `Desert elves are those who withdrew from society to seek separation from the growing hostility in Avlim. They found seclusion in the northeastern deserts of Shaole, in an oasis they've hidden by illusions. Though their community was built on passivism, there are still those among them who reenter society to play a role in the events of history.`,
                 image: desert,
                 imageAlt: `Qeṽa Desert Elf`,
-                con: '+1',
+                con: 1,
                 abilities: [
                     {
                         id: 0,
@@ -203,7 +203,7 @@ export const RACES = [
         image: lumiare,
         speed: 30,
         size: 'M',
-        dex: '+2',
+        dex: 2,
         proficiencies: ['longsword', 'shortsword', 'shortbow', 'longbow'],
         languages: ['common', 'lumiare'],
         topics: [
@@ -227,7 +227,7 @@ export const RACES = [
                     `The Lumiare or Autumn Avi have a tanish, orange tint to their skin, dark purple lips and black markings on their face. Their greatest city is Lumion in the Anduir valley of Altiavaire, though their kind can be found scattered throughout the mid-north. Unlike elves, they have a sense for mountainous terrain and wildlife. They are best known for their legendary mountain warfare school and companionship with birds.`,
                 image: lumiare,
                 imageAlt: `Qeṽa Lumiare Aviame`,
-                wis: '+1',
+                wis: 1,
                 abilities: [
                     {
                         id: 0,
@@ -261,7 +261,7 @@ export const RACES = [
                     `The Athiame or “Night Avi” were degradingly called the Athmari after the Athiame-born tyrant, Ithmar reigned ruthlessly over Avlim in the age of darkness. This tie to the dark armies would scar their reputation as many of the noble races would compare their dark skin to the gray skin of orcs, declaring them as untrustworthy. Thus, the Athiame would lock themselves in the Athiari cliffs, guarded by their greatly feared order of the ghost blades.`,
                 image: athiame,
                 imageAlt: `Qeṽa Athiame`,
-                dex: '+1',
+                dex: 1,
                 abilities: [
                     {
                         id: 0,
@@ -299,7 +299,7 @@ export const RACES = [
                     `The Asiame or Snow Avi or even High Aviame have pale white skin and hair. They live in the high mountains; most prevalently in the north ranges acting as a gatekeepers of Altiavaire. Beyond the normal tolerance of other Aviame, Asiame are especially built for the cold so much so that some sailed north for inhabitable land after the Terracut.`,
                 image: asiame,
                 imageAlt: `Qeṽa Asiame`,
-                int: '+1',
+                int: 1,
                 abilities: [
                     {
                         id: 0,
@@ -334,8 +334,8 @@ export const RACES = [
                     `Aves are a half elf, half aviame race. Though they are given a warm welcome in Altiavaire and Navalil and experience the best of Elven and Aviame hospitality, they are not well-trusted among the other races. Along with their kind being rare, their often calico complexion sparks others races to distrust them and distance themselves. They are not numerous enough to have their own cities, but rather mix in with the elven and aviame population. They carry themselves like their parent races and do not often venture west.`,
                 image: ave,
                 imageAlt: `Qeṽa Ave`,
-                cha: '+1',
-                any: '+1',
+                cha: 1,
+                any: 1,
                 abilities: [
                     {
                         id: 0,
@@ -401,12 +401,12 @@ export const RACES = [
                     `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
                 image: human,
                 imageAlt: `Qeṽa Human`,
-                str: '+1',
-                dex: '+1',
-                con: '+1',
-                int: '+1',
-                wis: '+1',
-                cha: '+1'
+                str: 1,
+                dex: 1,
+                con: 1,
+                int: 1,
+                wis: 1,
+                cha: 1
             },
             {
                 id: 1,
@@ -428,8 +428,8 @@ export const RACES = [
                     `Half-elves are half-human and half-elf and they are indistinguishable from either race depending on the genes they inherent. They walk among both races nearly unnoticed with only the most perceptive recognizing their irregularity. Some half-elves do not even know their heritage until they outlive their human counterparts or begin to show the signs of mortality. Half-elves live for around a century, depending on the purity of their elven bloodline.`,
                 image: halfElf,
                 imageAlt: `Qeṽa Half Elf`,
-                cha: '+2',
-                any: '+2',
+                cha: 2,
+                any: 2,
                 abilities: [
                     {
                         id: 0,
@@ -495,8 +495,8 @@ export const RACES = [
         imageAlt: `Qeṽa Osei`,
         speed: 30,
         size: 'M',
-        str: '+2',
-        con: '+1',
+        str: 2,
+        con: 1,
         proficiencies: ['Intimidation'],
         languages: ['common', 'orc'],
         abilities: [
@@ -544,7 +544,7 @@ export const RACES = [
         image: tdwarf,
         speed: 25,
         size: 'M',
-        con: '+2',
+        con: 2,
         proficiencies: ['battleaxe', 'handaxe', 'light hammer', 'warhammer','artisan tools of your choice'],
         languages: ['common', 'dwarvish'],
         abilities: [
@@ -588,7 +588,7 @@ export const RACES = [
                     `The Dwarves of the west are dispersed in the Thrush mountains with their largest stronghold being in Haraduin. Acting as gatekeepers between Navalil and Ouri, they learned to have better relations with other races than eastern dwarves. They formed significant relationships with both halflings and elves.`,
                 image: tdwarf,
                 imageAlt: `Qeṽa Dwarf of the Thrush Mountains`,
-                wis: '+1',
+                wis: 1,
                 abilities: [
                     {
                         id: 0,
@@ -615,7 +615,7 @@ export const RACES = [
                     `The eastern dwarves of the Bare Mountains are bread even harder than their western cousins and are not typically an amiable acquaintance. They reside in the barren lands of Shaole, where few things grow or last and their greatest city was Barahduil until it was overtaken by the dark armies. Now, any great gathering of western dwarves is hidden or eradicated and dispersed.`,
                 image: bdwarf,
                 imageAlt: `Qeṽa Dwarf of the Bare Mountains`,
-                str: '+2',
+                str: 2,
                 abilities: [
                     {
                         id: 0,
@@ -653,7 +653,7 @@ export const RACES = [
         image: ggnome,
         speed: 25,
         size: 'S',
-        int: '+2',
+        int: 2,
         proficiencies: ['-'],
         languages: ['common', 'gnomish'],
         abilities: [
@@ -687,7 +687,7 @@ export const RACES = [
                     `Green Gnomes can be found in Farathain, the southern region of Ouri below Fletcheren. Their greatest towns are Nalri in the wood and Nadia south of Loch Ladish. Unlike most sentient races, these Gnomes have a natural propensity for divination. Without any training, they begin forming minor illusions as children and progress in their skill from there.`,
                 image: ggnome,
                 imageAlt: `Qeṽa Green Gnome`,
-                wis: '+1',
+                wis: 1,
                 abilities: [
                     {
                         id: 0,
@@ -719,7 +719,7 @@ export const RACES = [
                     `Blue Gnomes live on the island, Haven, southwest of Avlim with their greatest city being Amvil, city of bridges. They are the farthest removed from world events, though Haven was the primary refuge for all races during the reign of Ithmar and his void that brought on the age of darkness. Like green gnomes, they have a natural propensity for divination.`,
                 image: bgnome,
                 imageAlt: `Qeṽa Blue Gnome`,
-                dex: '+1',
+                dex: 1,
                 abilities: [
                     {
                         id: 0,
@@ -751,7 +751,7 @@ export const RACES = [
                     `Unlike green and blue gnomes, red gnomes do not have an ability to produce divination, but only magic. Also unlike other gnomes, they are unfriendly if not altogether hostile. No one seems to really know their source of origin, though most claim that they live in the uninhabited treelines of the thrush and bare mountains.`,
                 image: rgnome,
                 imageAlt: `Qeṽa Red Gnome`,
-                con: '+1',
+                con: 1,
                 abilities: [
                     {
                         id: 0,
@@ -801,7 +801,7 @@ export const RACES = [
         image: half,
         speed: 25,
         size: 'S',
-        dex: '+2',
+        dex: 2,
         proficiencies: ['-'],
         languages: ['common', 'halfling'],
         abilities: [
@@ -850,8 +850,8 @@ export const RACES = [
         image: aeoki,
         speed: 20,
         size: 'S',
-        dex: '+1',
-        cha: '+2',
+        dex: 1,
+        cha: 2,
         proficiencies: ['-'],
         languages: ['*lumiare', 'kigaul'],
         abilities: [
@@ -897,8 +897,8 @@ export const RACES = [
         imageAlt: `Qeṽa Arborum`,
         speed: 30,
         size: 'M',
-        str: '+1',
-        con: '+2',
+        str: 1,
+        con: 2,
         proficiencies: ['-'],
         languages: ['*elvish', '*lumiare', 'speak with plants'],
         abilities: [
@@ -956,7 +956,7 @@ export const RACES = [
         image: spirit,
         speed: 30,
         size: 'M',
-        dex: '+2',
+        dex: 2,
         proficiencies: ['-'],
         languages: ['celestial', '*all'],
         abilities: [
@@ -993,7 +993,7 @@ export const RACES = [
                     `Spirits (or Haelas in the celestial tongue) are the original and intended form of all ethereals. They dwell and act from the ether as immortal beings and are perfectly aligned with DIA meaning they have never committed evil. However, this does not mean that they do the greatest good. Some are free of evil and still lazy, unfocused or simply untapped of their full potential.`,
                 image: spirit,
                 imageAlt: `Qeṽa Spirit`,
-                wis: '+2',
+                wis: 2,
                 abilities: [
                     {
                         id: 0,
@@ -1025,7 +1025,7 @@ export const RACES = [
                     `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their celestite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them mortal. They would look identical to humans if not for their luminescence. They are rare in Qeṽa and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
                 image: spectre,
                 imageAlt: `Qeṽa Spectre`,
-                cha: '+2',
+                cha: 2,
                 abilities: [
                     {
                         id: 0,

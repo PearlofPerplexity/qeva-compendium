@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import {
     Button,
     Modal,
@@ -52,6 +52,7 @@ import SearchBar from '../utils/SearchBar';
 import { AdminContext } from '../contexts/adminContext';
 
 const Header = (args) => {
+    const inputRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const [menu, setMenu] = useState("Qeṽa Compendium");
     const [isAdmin, setIsAdmin] = useContext(AdminContext);
@@ -83,6 +84,11 @@ const Header = (args) => {
     const handleAdminSwitch = () => {
         if (isAdmin) setIsAdmin(!isAdmin);
         else adminToggle();
+        setTimeout(() => {
+            if (inputRef) {
+                inputRef.current.focus();
+            }
+        }, 300);
     }
     const handlePassword = (e) => {
         setAdminPassword(e.target.value);
@@ -125,7 +131,7 @@ const Header = (args) => {
                     type="checkbox"
                     id="switch"
                     onChange={handleAdminSwitch}
-                    checked={isAdmin}  
+                    checked={isAdmin}
                 />
                 <label className="form-check-label" for="flexSwitchCheckChecked">Admin</label>
             </div>
@@ -135,19 +141,22 @@ const Header = (args) => {
                     Enter Admin View
                 </ModalHeader>
                 <ModalBody>
-                    <div className='mt-3 text-center'>Type the password below to enter admin view.</div>
-                    <div className='d-flex justify-content-center char-name-input'>
-                        <input 
-                            className='m-2 mx-auto' 
-                            type="password" 
-                            onChange={handlePassword} 
-                            onKeyUp={handleEnter}
-                            autoFocus
-                        />
-                    </div>
-                    {adminError && (
-                        <p className='text-danger text-center'>Incorrect Password</p>
-                    )}
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <div className='mt-3 text-center'>Type the password below to enter admin view.</div>
+                        <div className='d-flex justify-content-center char-name-input'>
+                            <input 
+                                className='m-2 mx-auto' 
+                                type="password" 
+                                onChange={handlePassword} 
+                                onKeyUp={handleEnter}
+                                ref={inputRef}
+                                autoComplete='off'
+                            />
+                        </div>
+                        {adminError && (
+                            <p className='text-danger text-center'>That password is incorrect. Please try again.</p>
+                        )}
+                    </form>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={checkPassword} >

@@ -14,11 +14,15 @@ import RaceChart from './RaceChart';
 import ClassChart from './ClassChart';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
+//import DND Tools
+import { calcAbilityMod, sortObjArray } from '../utils/dnd';
 
 // Create help badges showing different alignments, races, etc.
+const races = sortObjArray(RACES);
 
 const CharacterBuilder = () => {
 
+    console.log(races);
     const [open, setOpen] = useState('1');
     const toggle = (id) => {
         if (open === id) setOpen();
@@ -28,7 +32,7 @@ const CharacterBuilder = () => {
     const [character, setCharacter] = useContext(CharacterContext);
     const [classes, setClasses] = useState(CLASSES);
 
-    const allAbility = 72 - character.str - character.dex - character.con - character.int - character.wis - character.cha;
+    const allAbility = 72 - character.start.str - character.start.dex - character.start.con - character.start.int - character.start.wis - character.start.cha;
 
     const handleCharacter = (prop, value) => {
         let charObj = character;
@@ -40,11 +44,12 @@ const CharacterBuilder = () => {
         let value = parseInt(val);
 
         //Determine value of ABILITY SCORE | ex. 'dex'
+        charObj.start[prop] = value;
         charObj[prop] = value;
 
         // Determine value of MODIFIER
         let modNum, modVal, modProp;
-        modNum = (Math.floor((value - 10) / 2));
+        modNum = calcAbilityMod(value);
         //Adds a '+' if the modifier is >= 0
         if (modNum >= 0 ) modVal = `+${modNum}`;
         else modVal = modNum;
@@ -101,11 +106,11 @@ const CharacterBuilder = () => {
     }
     const handleRace = (prop, id) => {
         let charObj = character;
-        let newrace;
+        let newrace = {};
         let classCompliant;
         if (prop === 'race') {
             if (id) {
-                newrace = RACES[id];
+                newrace = races[id];
                 charObj[prop] = newrace;
                 if (!newrace.topics) {
                     charObj.endrace = newrace;
@@ -136,11 +141,12 @@ const CharacterBuilder = () => {
             charObj.subclass = null;
             charObj.endclass = null;
         }
+        charObj = setAbilityScores(charObj);
         setCharacter({...charObj});
     }
     const setClassOptions = (char) => {
         const race = char.endrace ? char.endrace : char.race;
-        const myClass = char.endclass ? char.endclass : char.myClass;
+        const myClass = char.endclass ? char.endclass : char.myClass ? char.myClass : null;
         let raceClasses;
         if (race.hasOwnProperty('classes')) {
             raceClasses = CLASSES.filter(cls => race.classes.includes(cls.name));
@@ -153,6 +159,29 @@ const CharacterBuilder = () => {
         } else {
             return true;
         }
+    }
+    const setAbilityScores = (char) => {
+        console.log('setAbilityScores');
+        let abilities = ['str', 'dex', 'con', 'wis', 'int', 'cha', 'any'];
+        abilities.forEach(ability => {
+            //Add or Subtract Race values
+            if(char.race === null || !char.race[ability]) {
+                char[ability] = char.start[ability];
+            } else if(char.race[ability] && ability === 'any') {
+                alert('any!');//show 'any' input
+            } else if(char.race[ability]) {
+                char[ability] = char.start[ability] + char.race[ability];
+            }
+            //Add or Subtract Subrace values
+            if(char.subrace !== null && char.subrace[ability] && ability !== 'any') {
+                char[ability] += char.subrace[ability];
+            }
+            let modifier = calcAbilityMod(char[ability]);
+            if(modifier > 0) modifier = `+${modifier}`;
+            else if (modifier < 0) modifier = `-${modifier}`;
+            char[ability+'Mod'] = modifier;
+        });
+        return char;
     }
     const handleClass = (prop, id) => {
         let charObj = character;
@@ -194,7 +223,11 @@ const CharacterBuilder = () => {
             <h2>Your Builder</h2>
             <div className='mb-2 char-name-input'>
                 <label>Character Name:&nbsp;</label>
-                <input type='text' value={character.name} onChange={(e) => handleCharacter('name', e.target.value)} />
+                <input 
+                    type='text' 
+                    value={character.name} 
+                    onChange={(e) => handleCharacter('name', e.target.value)} 
+                />
             </div>
             <Accordion open={open} toggle={toggle}>
                 <AccordionItem>
@@ -204,37 +237,37 @@ const CharacterBuilder = () => {
                             <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
                                 <div>
                                     <label htmlFor="str_score">STR</label>
-                                    <input value={character.str} name="str_score" type="number" onChange={(e) => handleAbilityScore('str', e.target.value)} />
+                                    <input value={character.start.str} name="str_score" type="number" onChange={(e) => handleAbilityScore('str', e.target.value)} />
                                 </div>
                             </div>
                             <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
                                 <div>
                                     <label htmlFor="dex_score">DEX</label>
-                                    <input value={character.dex} name="dex_score" type="number" onChange={(e) => handleAbilityScore('dex', e.target.value)} />
+                                    <input value={character.start.dex} name="dex_score" type="number" onChange={(e) => handleAbilityScore('dex', e.target.value)} />
                                 </div>
                             </div>
                             <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0 mb-lg-3">
                                 <div>
                                     <label htmlFor="con_score">CON</label>
-                                    <input value={character.con} name="con_score" type="number" onChange={(e) => handleAbilityScore('con', e.target.value)} />
+                                    <input value={character.start.con} name="con_score" type="number" onChange={(e) => handleAbilityScore('con', e.target.value)} />
                                 </div>
                             </div>
                             <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
                                 <div>
                                     <label htmlFor="int_score">INT</label>
-                                    <input value={character.int} name="int_score" type="number" onChange={(e) => handleAbilityScore('int', e.target.value)} />
+                                    <input value={character.start.int} name="int_score" type="number" onChange={(e) => handleAbilityScore('int', e.target.value)} />
                                 </div>
                             </div>
                             <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
                                 <div>
                                     <label htmlFor="wis_score">WIS</label>
-                                    <input value={character.wis} name="wis_score" type="number" onChange={(e) => handleAbilityScore('wis', e.target.value)} />
+                                    <input value={character.start.wis} name="wis_score" type="number" onChange={(e) => handleAbilityScore('wis', e.target.value)} />
                                 </div>
                             </div>
                             <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
                                 <div>
                                     <label htmlFor="cha_score">CHA</label>
-                                    <input value={character.cha} name="cha_score" type="number" onChange={(e) => handleAbilityScore('cha', e.target.value)} />
+                                    <input value={character.start.cha} name="cha_score" type="number" onChange={(e) => handleAbilityScore('cha', e.target.value)} />
                                 </div>
                             </div>
                         </div>
@@ -313,7 +346,7 @@ const CharacterBuilder = () => {
                         <RaceChart loc="charCreate" />
                         <select name='races' className="charPicklist" id='race-select' onChange={(e) => handleRace('race', e.target.value)}>
                             <option value="">--Select a Race--</option>
-                            {RACES.map((race) => (
+                            {races.map((race) => (
                                 <option value={race.id} key={race.id}>{race.singName}</option>
                             ))}
                         </select>

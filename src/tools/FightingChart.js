@@ -11,22 +11,10 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { FIGHTINGSTYLES, FIGHTINGSTYLEMANEUVERS } from '../assets/shared/FIGHTSTYLES';
+import { sortObjArray } from '../utils/dnd';
 
-const fightingStyles = FIGHTINGSTYLES.sort((a, b) => { // Sorts the Array Alphabetically
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) return -1;
-    else if (nameA > nameB) return 1;
-    else return 0;
-});
-
-const fightingStyleManeuvers = FIGHTINGSTYLEMANEUVERS.sort((a, b) => { // Sorts the Array Alphabetically
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) return -1;
-    else if (nameA > nameB) return 1;
-    else return 0;
-});
+const fightingStyles = sortObjArray(FIGHTINGSTYLES);
+const fightingStyleManeuvers = sortObjArray(FIGHTINGSTYLEMANEUVERS);
 
 const FightingStyleChart = (props) => {
         

@@ -11,6 +11,15 @@ const CharacterProvider = ({ children }) => {
         //Name
         playerName: "",
         name: "",
+        //Start Ability Scores
+        start: {
+            str: 0,
+            dex: 0,
+            con: 0,
+            int: 0,
+            wis: 0,
+            cha: 0,
+        },
         //Ability Scores
         str: 0, strMod: -5,
         dex: 0, dexMod: -5,

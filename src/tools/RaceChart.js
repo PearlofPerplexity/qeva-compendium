@@ -11,16 +11,11 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { RACES } from '../assets/shared/RACES';
+import { sortObjArray } from '../utils/dnd';
 
 const RaceChart = (props) => {
     
-    const races = RACES.sort((a, b) => { // Sorts the Array Alphabetically
-        const nameA = a.name.toUpperCase();
-        const nameB = b.name.toUpperCase();
-        if (nameA < nameB) return -1;
-        else if (nameA > nameB) return 1;
-        else return 0;
-    });
+    const races = sortObjArray(RACES);
 
     const [selectedRaces, setSelectedRaces] = useState(races);
     const handleRace = (e) => {
@@ -176,12 +171,12 @@ const RaceChart = (props) => {
                                             <th>{race.singName}</th>
                                             <td>{race.size}</td>
                                             <td>{race.speed}</td>
-                                            <td>{race.str}</td>
-                                            <td>{race.dex}</td>
-                                            <td>{race.con}</td>
-                                            <td>{race.int}</td>
-                                            <td>{race.wis}</td>
-                                            <td>{race.cha}</td>
+                                            <td>{race.str && (`+${race.str}`)}</td>
+                                            <td>{race.dex && (`+${race.dex}`)}</td>
+                                            <td>{race.con && (`+${race.con}`)}</td>
+                                            <td>{race.int && (`+${race.int}`)}</td>
+                                            <td>{race.wis && (`+${race.wis}`)}</td>
+                                            <td>{race.cha && (`+${race.cha}`)}</td>
                                             <td>{race.proficiencies ? (
                                                 <>
                                                     {race.languages.join(', ')}, {race.proficiencies.join(', ')}
@@ -225,13 +220,13 @@ const RaceChart = (props) => {
                                                             {race.topics.map(subrace => (
                                                                 <tr className='align-middle'>
                                                                     <th>{subrace.singName}</th>
-                                                                    <td>{subrace.str}</td>
-                                                                    <td>{subrace.dex}</td>
-                                                                    <td>{subrace.con}</td>
-                                                                    <td>{subrace.int}</td>
-                                                                    <td>{subrace.wis}</td>
-                                                                    <td>{subrace.cha}</td>
-                                                                    <td>{subrace.any}</td>
+                                                                    <td>{subrace.str && (`+${subrace.str}`)}</td>
+                                                                    <td>{subrace.dex && (`+${subrace.dex}`)}</td>
+                                                                    <td>{subrace.con && (`+${subrace.con}`)}</td>
+                                                                    <td>{subrace.int && (`+${subrace.int}`)}</td>
+                                                                    <td>{subrace.wis && (`+${subrace.wis}`)}</td>
+                                                                    <td>{subrace.cha && (`+${subrace.cha}`)}</td>
+                                                                    <td>{subrace.any && (`+${subrace.any}`)}</td>
                                                                     <td>
                                                                         {subrace.abilities && subrace.abilities.map(a => (
                                                                             <a key={a.id} onClick={() => detailToggle(a)}>

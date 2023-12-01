@@ -15,6 +15,7 @@ import { DGEMS } from '../assets/shared/DGEMS';
 import { FIGHTINGSTYLES, FIGHTINGSTYLEMANEUVERS } from '../assets/shared/FIGHTSTYLES';
 import { GEMS } from '../assets/shared/GEMS';
 import { RACES } from '../assets/shared/RACES';
+import { sortObjArray } from '../utils/dnd';
 
 const fightingStyles = FIGHTINGSTYLES.map(fs => ({
     name: fs.name, 
@@ -107,28 +108,25 @@ const subraces = RACES.flatMap(race =>
 );
   
 const seenNames = {};
-const POWERS = [
-    ...classes,
-    ...unaffiliatedClasses,
-    ...darkGems,
-    ...fightingStyles,
-    ...fightingStyleManeuvers,
-    ...gems,
-    ...races,
-    ...subraces
-].filter(obj => { // Removes Duplicates from the Array
-    if (!seenNames[obj.name]) {
-        seenNames[obj.name] = true;
-        return true;
-    }
-    return false;
-}).sort((a, b) => { // Sorts the Array Alphabetically
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) return -1;
-    else if (nameA > nameB) return 1;
-    else return 0;
-});
+const POWERS = sortObjArray(
+    [
+        ...classes,
+        ...unaffiliatedClasses,
+        ...darkGems,
+        ...fightingStyles,
+        ...fightingStyleManeuvers,
+        ...gems,
+        ...races,
+        ...subraces
+    ].filter(obj => { // Removes Duplicates from the Array
+        if (obj.name === '-') return false; //Removes Blanks
+        if (!seenNames[obj.name]) {
+            seenNames[obj.name] = true;
+            return true;
+        }
+        return false;
+    })
+);
 
 const Codex = (props) => {
 

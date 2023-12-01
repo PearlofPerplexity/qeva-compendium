@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import {
     Button,
     Modal,
@@ -43,6 +43,14 @@ const CharacterCreator = () => {
             //Name
             playerName: "",
             name: "",
+            start: {
+                str: 0,
+                dex: 0,
+                con: 0,
+                int: 0,
+                wis: 0,
+                cha: 0,
+            },
             //Ability Scores
             str: 0, strMod: -5, strSave: -3,
             dex: 0, dexMod: -5, dexSave: -3,
@@ -64,6 +72,14 @@ const CharacterCreator = () => {
             //Name
             playerName: "Kyle O'Brien",
             name: "Hartri",
+            start: {
+                str: 10,
+                dex: 15,
+                con: 15,
+                int: 8,
+                wis: 11,
+                cha: 13,
+            },
             //Ability Scores
             str: 10, strMod: "+0", strSave: "+2",
             dex: 15, dexMod: "+2", dexSave: "+4",
@@ -80,12 +96,20 @@ const CharacterCreator = () => {
             backstory: "A rugged old caracadre gnome who is nearly always the wisest of his party and slowest to rashness.",
             personality: "Hartri is gentle and understanding. Makes friends everywhere he goes.",
             ideals: "Believes in peace",
-            flaws: "Too slow too action, getting older.",
+            flaws: "Too slow to action, getting older.",
         });
     }
 
     const [modalOne, setModalOne] = useState(false);
-    const toggleOneStart = () => setModalOne(true);
+    const inputRef = useRef(null);
+    const toggleOneStart = () => {
+        setModalOne(true);
+        setTimeout(() => {
+            if (inputRef) {
+                inputRef.current.focus();
+            }
+        }, 300);
+    }
     const toggleOne = () => setModal(false);
 
     const [modal, setModal] = useState(false);
@@ -230,7 +254,13 @@ const CharacterCreator = () => {
             <Modal isOpen={modalOne} toggle={toggleOne} fullscreen>
                 <ModalHeader>
                     <i className="iconify fs-2" data-icon="noto:man-elf-light-skin-tone"></i> Character Builder for:&nbsp;
-                    <input type='text' className='player-name-input' value={character.playerName} onChange={(e) => handleCharacter('playerName', e.target.value)} />
+                    <input 
+                        type='text' 
+                        className='player-name-input' 
+                        value={character.playerName} 
+                        onChange={(e) => handleCharacter('playerName', e.target.value)}
+                        ref={inputRef} 
+                    />
                 </ModalHeader>
                 <ModalBody>
                     <CharacterBuilder />
