@@ -66,8 +66,13 @@ export const RACES = [
         speed: 30,
         size: 'M',
         dex: 2,
-        proficiencies: ['longsword', 'shortsword', 'shortbow', 'longbow'],
+        armor_prof: [],
+        weapon_prof: ['longsword', 'shortsword', 'shortbow', 'longbow'],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['common', 'elvish'],
+        abilities: [],
         topics: [
             {
                 id: 0,
@@ -89,7 +94,6 @@ export const RACES = [
                 image: wood,
                 imageAlt: `Qeṽa Wood Elf`,
                 wis: 1,
-                proficiencies: [''],
                 abilities: [
                     {
                         id: 0,
@@ -204,8 +208,13 @@ export const RACES = [
         speed: 30,
         size: 'M',
         dex: 2,
-        proficiencies: ['longsword', 'shortsword', 'shortbow', 'longbow'],
+        armor_prof: [],
+        weapon_prof: ['longsword', 'shortsword', 'shortbow', 'longbow'],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['common', 'lumiare'],
+        abilities: [],
         topics: [
             {
                 id: 0,
@@ -379,8 +388,13 @@ export const RACES = [
         image: human,
         speed: 30,
         size: 'M',
-        proficiencies: ['-'],
         languages: ['common', 'one other language'],
+        armor_prof: [],
+        weapon_prof: [],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
+        abilities: [],
         topics: [
             {
                 id: 0,
@@ -497,7 +511,11 @@ export const RACES = [
         size: 'M',
         str: 2,
         con: 1,
-        proficiencies: ['Intimidation'],
+        armor_prof: [],
+        weapon_prof: [],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: ['Intimidation'],
         languages: ['common', 'orc'],
         abilities: [
             {
@@ -545,7 +563,11 @@ export const RACES = [
         speed: 25,
         size: 'M',
         con: 2,
-        proficiencies: ['battleaxe', 'handaxe', 'light hammer', 'warhammer','artisan tools of your choice'],
+        armor_prof: [],
+        weapon_prof: ['battleaxe', 'handaxe', 'light hammer', 'warhammer'],
+        tool_prof: ['artisan tools of your choice'],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['common', 'dwarvish'],
         abilities: [
             {
@@ -654,7 +676,11 @@ export const RACES = [
         speed: 25,
         size: 'S',
         int: 2,
-        proficiencies: ['-'],
+        armor_prof: [],
+        weapon_prof: [],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['common', 'gnomish'],
         abilities: [
             {
@@ -802,7 +828,11 @@ export const RACES = [
         speed: 25,
         size: 'S',
         dex: 2,
-        proficiencies: ['-'],
+        armor_prof: [],
+        weapon_prof: [],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['common', 'halfling'],
         abilities: [
             {
@@ -852,7 +882,11 @@ export const RACES = [
         size: 'S',
         dex: 1,
         cha: 2,
-        proficiencies: ['-'],
+        armor_prof: [],
+        weapon_prof: [],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['*lumiare', 'kigaul'],
         abilities: [
             {
@@ -899,7 +933,11 @@ export const RACES = [
         size: 'M',
         str: 1,
         con: 2,
-        proficiencies: ['-'],
+        armor_prof: [],
+        weapon_prof: [],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['*elvish', '*lumiare', 'speak with plants'],
         abilities: [
             {
@@ -957,7 +995,11 @@ export const RACES = [
         speed: 30,
         size: 'M',
         dex: 2,
-        proficiencies: ['-'],
+        armor_prof: [],
+        weapon_prof: [],
+        tool_prof: [],
+        saving_throw_prof: [],
+        skill_prof: [],
         languages: ['celestial', '*all'],
         abilities: [
             {

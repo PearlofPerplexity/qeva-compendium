@@ -118,7 +118,7 @@ const CharacterCreator = () => {
     const toggle = () => {
         //Creates the character
         let charObj, d20;
-        if (!character.alignmentGem || !character.endrace || !character.endclass || (allAbility !== 0)) {
+        if (!character.alignmentGem || !character.endrace || !character.endclass || (allAbility !== 0) || endclass.skill_prof.length !== endclass.skill_prof_num) {
             console.log([str, dex, con, int, wis, cha]);
             toggleError();
             return;
@@ -148,8 +148,8 @@ const CharacterCreator = () => {
         charObj.languages = character.race.languages.join(', ');
         charObj.profAndLang.push(`LANGUAGES: ${charObj.languages}`);
         //PROFICIENCIES
-        charObj.proficiencies = character.race.proficiencies.join(', ');
-        charObj.profAndLang.push(`PROFICIENCIES: ${charObj.proficiencies}`);
+        //charObj.proficiencies = character.race.armor_prof.join(', ');
+        charObj.profAndLang.push(`PROFICIENCIES: ${charObj.armor_prof}`);
 
         //HIT POINTS: class hit die + constitution modifier
         charObj.hp = parseInt(character.endclass.hitDie.replace(/^d/, '')) + parseInt(character.conMod);
@@ -321,10 +321,36 @@ const CharacterCreator = () => {
                     <div className='text-start'>
                         Some critical information is missing:
                         <ul className="list-group-flush">
-                            {(allAbility !== 0) && (<li className='list-group-item'><strong className='text-danger'>! </strong>Ability Score Points have not been allocated properly</li>)}
-                            {!alignmentGem && (<li className='list-group-item'><strong className='text-danger'>! </strong>Alignment</li>)}
-                            {!endrace && (<li className='list-group-item'><strong className='text-danger'>! </strong>Race</li>)}
-                            {!endclass && (<li className='list-group-item'><strong className='text-danger'>! </strong>Class</li>)}
+                            {(allAbility !== 0) && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Ability Score Points have not been allocated properly
+                                </li>
+                            )}
+                            {!alignmentGem && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Alignment
+                                </li>
+                            )}
+                            {!endrace && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Race
+                                </li>
+                            )}
+                            {!endclass && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Class
+                                </li>
+                            )}
+                            {endclass && (endclass.skill_prof.length !== endclass.skill_prof_num) && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Skill Proficiencies have not been allocated properly
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </ModalBody>

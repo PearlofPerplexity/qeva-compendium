@@ -177,9 +177,9 @@ const RaceChart = (props) => {
                                             <td>{race.int && (`+${race.int}`)}</td>
                                             <td>{race.wis && (`+${race.wis}`)}</td>
                                             <td>{race.cha && (`+${race.cha}`)}</td>
-                                            <td>{race.proficiencies ? (
+                                            <td>{race.armor_prof ? (
                                                 <>
-                                                    {race.languages.join(', ')}, {race.proficiencies.join(', ')}
+                                                    {race.languages.join(', ')}, {race.armor_prof.join(', ')}
                                                 </>
                                                 ) : (
                                                 <>

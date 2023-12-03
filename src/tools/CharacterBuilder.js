@@ -19,10 +19,10 @@ import { calcAbilityMod, sortObjArray } from '../utils/dnd';
 
 // Create help badges showing different alignments, races, etc.
 const races = sortObjArray(RACES);
+const _classes = sortObjArray(CLASSES);
 
 const CharacterBuilder = () => {
 
-    console.log(races);
     const [open, setOpen] = useState('1');
     const toggle = (id) => {
         if (open === id) setOpen();
@@ -30,7 +30,7 @@ const CharacterBuilder = () => {
     };
 
     const [character, setCharacter] = useContext(CharacterContext);
-    const [classes, setClasses] = useState(CLASSES);
+    const [classes, setClasses] = useState(_classes);
 
     const allAbility = 72 - character.start.str - character.start.dex - character.start.con - character.start.int - character.start.wis - character.start.cha;
 
@@ -149,9 +149,9 @@ const CharacterBuilder = () => {
         const myClass = char.endclass ? char.endclass : char.myClass ? char.myClass : null;
         let raceClasses;
         if (race.hasOwnProperty('classes')) {
-            raceClasses = CLASSES.filter(cls => race.classes.includes(cls.name));
+            raceClasses = _classes.filter(cls => race.classes.includes(cls.name));
         } else {
-            raceClasses = CLASSES;
+            raceClasses = _classes;
         }
         setClasses(raceClasses);
         if (myClass !== null && !raceClasses.find(cls => cls.name === myClass.name)) {
@@ -177,8 +177,7 @@ const CharacterBuilder = () => {
                 char[ability] += char.subrace[ability];
             }
             let modifier = calcAbilityMod(char[ability]);
-            if(modifier > 0) modifier = `+${modifier}`;
-            else if (modifier < 0) modifier = `-${modifier}`;
+            if(modifier >= 0) modifier = `+${modifier}`;
             char[ability+'Mod'] = modifier;
         });
         return char;
@@ -189,7 +188,7 @@ const CharacterBuilder = () => {
         console.log(prop, id);
         if (prop === 'myClass') {
             if (id) {
-                newclass = CLASSES[id];
+                newclass = _classes[id];
                 charObj[prop] = newclass;
                 if (!(newclass.name === 'No Affiliation')) {
                     charObj.endclass = newclass;
@@ -213,6 +212,25 @@ const CharacterBuilder = () => {
             };
         }
         setCharacter({...charObj});
+    }
+    const [skillObj, setSkillObj] = useState({});
+    const handleSkillSelect = (newSkill, num) => {
+        if(!character.endclass.skill_prof.find(skill => skill === newSkill)) {
+            let prevSkill = skillObj[num];
+            let charObj = character;
+            let skObj = skillObj;
+            if(prevSkill) {
+                charObj.endclass.skill_prof = charObj.endclass.skill_prof.filter(skName => skName !== prevSkill);
+            }
+            if(newSkill) {
+                charObj.endclass.skill_prof.push(newSkill);
+                skObj[num] = newSkill;
+            } else {
+                skObj[num] = undefined;
+            }
+            setSkillObj({...skObj});
+            setCharacter({...charObj});
+        }
     }
 
     return (
@@ -389,10 +407,30 @@ const CharacterBuilder = () => {
                                 onChange={(e) => handleClass('subclass', e.target.value)}
                             >
                                 <option value="">--Select a Subclass--</option>
-                                {character.myClass.topics.map((subclass) => (
-                                    <option value={subclass.id} key={subclass.id}>{subclass.name}</option>
+                                {character.myClass.topics.map((subclass, index) => (
+                                    <option value={index} key={index}>{subclass.name}</option>
                                 ))}
                             </select>
+                        )}
+                        {character.endclass && character.endclass.skill_prof_num && (
+                        <>
+                            <p className='mt-3'>
+                                SELECT {character.endclass.skill_prof_num} SKILLS
+                            </p>
+                            {Array.from({ length: character.endclass.skill_prof_num }, (v, index) => (
+                            <select 
+                                name='skillselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={(e) => handleSkillSelect(e.target.value, index)}
+                            >
+                                <option value="">--Select a Skill--</option>
+                                {character.endclass.skill_prof_selection.map((skillName, key) => (
+                                    <option value={skillName} key={key}>{skillName}</option>
+                                ))}
+                            </select>
+                            ))}
+                        </>
                         )}
                         {character.myClass && character.myClass.name === 'Oracles' && (
                             <p className='text-danger'>You must be selected for this class. If the DM deems you worthy, you must roll a "1" on a D20. If not, you must roll a "1" on a D100.</p>
@@ -502,9 +540,67 @@ const CharacterBuilder = () => {
                             <strong>RACE: </strong>{character.race.name} {character.subrace && ( '| ' + character.subrace.name)}
                         </h5>
                         <div className='row'>
-                            <p className='col'><strong>lifespan: </strong>{character.race.lifespan}</p>
-                            <p className='col'><strong>size: </strong>{character.race.size}</p>
-                            <p className='col'><strong>speed: </strong>{character.race.speed}</p>
+                            <p className='col'><strong>LIFESPAN: </strong>{character.race.lifespan}</p>
+                            <p className='col'><strong>SIZE: </strong>{character.race.size}</p>
+                            <p className='col'><strong>SPEED: </strong>{character.race.speed}</p>
+                        </div>
+                        <div className='row mb-2'>
+                            <p className='col'>
+                                <strong>LANGUAGES: </strong>{character.race.languages.join(', ')}
+                            </p>
+                        </div>
+                        <div className='row'>
+                            <h6>
+                                <strong>PROFICIENCIES: </strong>
+                                {
+                                    character.race.armor_prof.length <= 0 &&
+                                    character.race.weapon_prof.length <= 0 &&
+                                    character.race.tool_prof.length <= 0 &&
+                                    character.race.skill_prof.length <= 0 &&
+                                    character.race.saving_throw_prof.length <= 0 &&
+                                    (
+                                        'None'
+                                    )
+                                }
+                            </h6>
+                        </div>
+                        <div className='row mb-3'>
+                            {character.race.armor_prof.length > 0 && (
+                                <p className='col-12'>
+                                    <strong>Armor: </strong>{character.race.armor_prof.join(', ')}
+                                </p>
+                            )}
+                            {character.race.weapon_prof.length > 0 && (
+                                <p className='col-12'>
+                                    <strong>Weapon: </strong>{character.race.weapon_prof.join(', ')}
+                                </p>
+                            )}
+                            {character.race.tool_prof.length > 0 && (
+                                <p className='col-12'>
+                                    <strong>Tool: </strong>{character.race.tool_prof.join(', ')}
+                                </p>
+                            )}
+                            {character.race.skill_prof.length > 0 && (
+                                <p className='col-12'>
+                                    <strong>Skill: </strong>{character.race.skill_prof.join(', ')}
+                                </p>
+                            )}
+                            {character.race.saving_throw_prof.length > 0 && (
+                                <p className='col-12'>
+                                    <strong>Saving Throw: </strong>{character.race.saving_throw_prof.join(', ')}
+                                </p>
+                            )}
+                        </div>
+                        <div className='row'>
+                            <h6><strong>ABILITIES: </strong></h6>
+                        </div>
+                        <div className='row'>
+                            {character.race.abilities.map(ability => (
+                                <p><strong>{ability.name}: </strong>{ability.description}</p>
+                            ))}
+                            {character.subrace && character.subrace.abilities.map(ability => (
+                                <p><strong>{ability.name}: </strong>{ability.description}</p>
+                            ))}
                         </div>
                     </div>
             ) : (
@@ -520,9 +616,61 @@ const CharacterBuilder = () => {
                         <strong>CLASS: </strong>{character.myClass.name} {character.subclass && ('| ' + character.subclass.name)}
                     </h5>
                     {character.endclass && (
-                        <div className='row'>
-                            <p className='col'><strong>Goal: </strong>{character.endclass.goal}</p>
-                            <p className='col'><strong>Equipment: </strong>{character.endclass.equipment.join(', ')}</p>
+                        <div className='mb-5'>
+                            <div className='row'>
+                                <p className='col'><strong>GOAL: </strong>{character.endclass.goal}</p>
+                            </div>
+                            <div className='row'>
+                                <p className='col'><strong>EQUIPMENT: </strong>{character.endclass.equipment.join(', ')}</p>
+                            </div>
+                            <div className='row'>
+                                <h6>
+                                    <strong>PROFICIENCIES: </strong>
+                                    {
+                                        character.endclass.armor_prof.length <= 0 &&
+                                        character.endclass.weapon_prof.length <= 0 &&
+                                        character.endclass.tool_prof.length <= 0 &&
+                                        character.endclass.skill_prof.length <= 0 &&
+                                        character.endclass.saving_throw_prof.length <= 0 &&
+                                        (
+                                            'None'
+                                        )
+                                    }
+                                </h6>
+                            </div>
+                            <div className='row mb-3'>
+                                {character.endclass.armor_prof.length > 0 && (
+                                    <p className='col-12'>
+                                        <strong>Armor: </strong>{character.endclass.armor_prof.join(', ')}
+                                    </p>
+                                )}
+                                {character.endclass.weapon_prof.length > 0 && (
+                                    <p className='col-12'>
+                                        <strong>Weapons: </strong>{character.endclass.weapon_prof.join(', ')}
+                                    </p>
+                                )}
+                                {character.endclass.tool_prof.length > 0 && (
+                                    <p className='col-12'>
+                                        <strong>Tools: </strong>{character.endclass.tool_prof.join(', ')}
+                                    </p>
+                                )}
+                                <p className='col-12'>
+                                    <strong>Skills: </strong>{character.endclass.skill_prof.join(', ')}
+                                </p>
+                                {character.endclass.saving_throw_prof.length > 0 && (
+                                    <p className='col-12'>
+                                        <strong>Saving Throws: </strong>{character.endclass.saving_throw_prof.join(', ')}
+                                    </p>
+                                )}
+                            </div>
+                            <div className='row'>
+                                <h6><strong>ABILITIES: </strong></h6>
+                            </div>
+                            <div className='row'>
+                                {character.endclass.lvls[0].features.map(ability => (
+                                    <p><strong>{ability.name}: </strong>{ability.description}</p>
+                                ))}
+                            </div>
                         </div>
                     )}
                 </div>
