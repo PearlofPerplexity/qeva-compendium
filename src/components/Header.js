@@ -88,7 +88,7 @@ const Header = (args) => {
             if (inputRef) {
                 inputRef.current.focus();
             }
-        }, 300);
+        }, 500);
     }
     const handlePassword = (e) => {
         setAdminPassword(e.target.value);

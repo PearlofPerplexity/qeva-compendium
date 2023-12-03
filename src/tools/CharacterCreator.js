@@ -24,6 +24,8 @@ const CharacterCreator = () => {
     const {
         //Name
         playerName, name,
+        //Start Ability Scores
+        start,
         //Ability Scores
         str, dex, con, int, wis, cha,
         //Alignment
@@ -36,7 +38,7 @@ const CharacterCreator = () => {
         backstory, personality, ideals, flaws,
     } = character;
 
-    const allAbility = 72 - (str + dex + con + int + wis + cha);
+    const allAbility = 72 - (start.str + start.dex + start.con + start.int + start.wis + start.cha);
 
     const resetCharacter = () => {
         setCharacter({
@@ -108,7 +110,7 @@ const CharacterCreator = () => {
             if (inputRef) {
                 inputRef.current.focus();
             }
-        }, 300);
+        }, 500);
     }
     const toggleOne = () => setModal(false);
 
