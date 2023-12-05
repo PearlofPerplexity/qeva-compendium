@@ -9,6 +9,11 @@ import { RACES } from "../assets/shared/RACES";
 import { CLASSES } from "../assets/shared/CLASSES";
 import { GEMS } from "../assets/shared/GEMS";
 import { DGEMS } from '../assets/shared/DGEMS';
+import { 
+    SIMPLEWEAPONS,
+    MARTIALWEAPONS,
+    RANGEDWEAPONS
+} from '../assets/shared/DNDITEMS';
 import AlignmentChart from './AlignmentChart';
 import RaceChart from './RaceChart';
 import ClassChart from './ClassChart';
@@ -20,6 +25,9 @@ import { calcAbilityMod, sortObjArray } from '../utils/dnd';
 // Create help badges showing different alignments, races, etc.
 const races = sortObjArray(RACES);
 const _classes = sortObjArray(CLASSES);
+const simpleWeapons = sortObjArray(SIMPLEWEAPONS);
+const martialWeapons = sortObjArray(MARTIALWEAPONS);
+const rangedWeapons = sortObjArray(RANGEDWEAPONS);
 
 const CharacterBuilder = () => {
 
@@ -232,6 +240,27 @@ const CharacterBuilder = () => {
             setCharacter({...charObj});
         }
     }
+    const handleWeaponSelect = (type, weaponName) => {
+        if(!character.endclass.weapon_prof.find(weapon => weapon === weaponName)) {
+            let charObj = character;
+            let index;
+            switch (type) {
+                case 'simple':
+                    index = 0;
+                    break;
+                case 'martial':
+                    index = 1;
+                    break;
+                case 'ranged':
+                    index = 2;
+                    break;
+                default:
+                    break;
+            }
+            charObj.endclass.weapon_prof[index] = weaponName;
+            setCharacter({...charObj});
+        }
+    }
 
     return (
 
@@ -412,6 +441,46 @@ const CharacterBuilder = () => {
                                 ))}
                             </select>
                         )}
+                        {character.endclass && character.endclass.name === 'Adventurer' && (
+                        <>
+                            <p className='mt-3'>
+                                SELECT WEAPONS
+                            </p>
+                            <select 
+                                name='simpleweaponselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={(e) => handleWeaponSelect('simple', e.target.value)}
+                            >
+                                <option value="">--Simple Weapons--</option>
+                                {simpleWeapons.map(weapon => (
+                                    <option value={weapon.name} key={weapon.id}>{weapon.name}</option>
+                                ))}
+                            </select>
+                            <select 
+                                name='martialweaponselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={(e) => handleWeaponSelect('martial', e.target.value)}
+                            >
+                                <option value="">--Martial Weapons--</option>
+                                {martialWeapons.map(weapon => (
+                                    <option value={weapon.name} key={weapon.id}>{weapon.name}</option>
+                                ))}
+                            </select>
+                            <select 
+                                name='rangedweaponselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={(e) => handleWeaponSelect('ranged', e.target.value)}
+                            >
+                                <option value="">--Ranged Weapons--</option>
+                                {rangedWeapons.map(weapon => (
+                                    <option value={weapon.name} key={weapon.id}>{weapon.name}</option>
+                                ))}
+                            </select>
+                        </>
+                        )}
                         {character.endclass && character.endclass.skill_prof_num && (
                         <>
                             <p className='mt-3'>
@@ -432,7 +501,7 @@ const CharacterBuilder = () => {
                             ))}
                         </>
                         )}
-                        {character.myClass && character.myClass.name === 'Oracles' && (
+                        {character.endclass && character.endclass.name === 'Oracles' && (
                             <p className='text-danger'>You must be selected for this class. If the DM deems you worthy, you must roll a "1" on a D20. If not, you must roll a "1" on a D100.</p>
                         )}
                     </AccordionBody>
