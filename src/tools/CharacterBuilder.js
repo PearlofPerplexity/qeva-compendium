@@ -452,7 +452,7 @@ const CharacterBuilder = () => {
                                 id='skill-select' 
                                 onChange={(e) => handleWeaponSelect('simple', e.target.value)}
                             >
-                                <option value="">--Simple Weapons--</option>
+                                <option value="-">--Simple Weapons--</option>
                                 {simpleWeapons.map(weapon => (
                                     <option value={weapon.name} key={weapon.id}>{weapon.name}</option>
                                 ))}
