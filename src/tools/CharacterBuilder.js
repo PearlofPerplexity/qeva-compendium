@@ -12,7 +12,10 @@ import { DGEMS } from '../assets/shared/DGEMS';
 import { 
     SIMPLEWEAPONS,
     MARTIALWEAPONS,
-    RANGEDWEAPONS
+    RANGEDWEAPONS,
+    LIGHTARMOR,
+    MEDIUMARMOR,
+    HEAVYARMOR
 } from '../assets/shared/DNDITEMS';
 import AlignmentChart from './AlignmentChart';
 import RaceChart from './RaceChart';
@@ -28,6 +31,11 @@ const _classes = sortObjArray(CLASSES);
 const simpleWeapons = sortObjArray(SIMPLEWEAPONS);
 const martialWeapons = sortObjArray(MARTIALWEAPONS);
 const rangedWeapons = sortObjArray(RANGEDWEAPONS);
+const lightArmor = sortObjArray(LIGHTARMOR);
+const mediumArmor = sortObjArray(MEDIUMARMOR);
+const heavyArmor = sortObjArray(HEAVYARMOR);
+const allArmor = sortObjArray([...LIGHTARMOR, ...MEDIUMARMOR, ...HEAVYARMOR]);
+
 
 const CharacterBuilder = () => {
 
@@ -222,7 +230,7 @@ const CharacterBuilder = () => {
         setCharacter({...charObj});
     }
     const [skillObj, setSkillObj] = useState({});
-    const handleSkillSelect = (newSkill, num) => {
+    const handleSkillProfSelect = (newSkill, num) => {
         if(!character.endclass.skill_prof.find(skill => skill === newSkill)) {
             let prevSkill = skillObj[num];
             let charObj = character;
@@ -240,8 +248,8 @@ const CharacterBuilder = () => {
             setCharacter({...charObj});
         }
     }
-    const handleWeaponSelect = (type, weaponName) => {
-        if(!character.endclass.weapon_prof.find(weapon => weapon === weaponName)) {
+    const handleWeaponProfSelect = (type, weaponName) => {
+        if(!character.endclass.weapon_prof.find(weapon => weapon === weaponName) || weaponName === '-') {
             let charObj = character;
             let index;
             switch (type) {
@@ -260,6 +268,12 @@ const CharacterBuilder = () => {
             charObj.endclass.weapon_prof[index] = weaponName;
             setCharacter({...charObj});
         }
+    }
+    const handleArmorProfSelect = (event) => {
+        let armor = event.target.value;
+        let charObj = character;
+        charObj.endclass.armor_prof = [armor];
+        setCharacter({...charObj});
     }
 
     return (
@@ -444,13 +458,27 @@ const CharacterBuilder = () => {
                         {character.endclass && character.endclass.name === 'Adventurer' && (
                         <>
                             <p className='mt-3'>
-                                SELECT WEAPONS
+                                SELECT ARMOR PROFICIENCIES
+                            </p>
+                            <select 
+                                name='armorselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={handleArmorProfSelect}
+                            >
+                                <option value="-">--Armor--</option>
+                                {allArmor.map(armor => (
+                                    <option value={armor.name} key={armor.id}>{armor.name}</option>
+                                ))}
+                            </select>
+                            <p className='mt-3'>
+                                SELECT WEAPON PROFICIENCIES
                             </p>
                             <select 
                                 name='simpleweaponselect' 
                                 className="charPicklist" 
                                 id='skill-select' 
-                                onChange={(e) => handleWeaponSelect('simple', e.target.value)}
+                                onChange={(e) => handleWeaponProfSelect('simple', e.target.value)}
                             >
                                 <option value="-">--Simple Weapons--</option>
                                 {simpleWeapons.map(weapon => (
@@ -461,9 +489,9 @@ const CharacterBuilder = () => {
                                 name='martialweaponselect' 
                                 className="charPicklist" 
                                 id='skill-select' 
-                                onChange={(e) => handleWeaponSelect('martial', e.target.value)}
+                                onChange={(e) => handleWeaponProfSelect('martial', e.target.value)}
                             >
-                                <option value="">--Martial Weapons--</option>
+                                <option value="-">--Martial Weapons--</option>
                                 {martialWeapons.map(weapon => (
                                     <option value={weapon.name} key={weapon.id}>{weapon.name}</option>
                                 ))}
@@ -472,9 +500,9 @@ const CharacterBuilder = () => {
                                 name='rangedweaponselect' 
                                 className="charPicklist" 
                                 id='skill-select' 
-                                onChange={(e) => handleWeaponSelect('ranged', e.target.value)}
+                                onChange={(e) => handleWeaponProfSelect('ranged', e.target.value)}
                             >
-                                <option value="">--Ranged Weapons--</option>
+                                <option value="-">--Ranged Weapons--</option>
                                 {rangedWeapons.map(weapon => (
                                     <option value={weapon.name} key={weapon.id}>{weapon.name}</option>
                                 ))}
@@ -484,14 +512,14 @@ const CharacterBuilder = () => {
                         {character.endclass && character.endclass.skill_prof_num && (
                         <>
                             <p className='mt-3'>
-                                SELECT {character.endclass.skill_prof_num} SKILLS
+                                SELECT {character.endclass.skill_prof_num} SKILL PROFICIENCIES
                             </p>
                             {Array.from({ length: character.endclass.skill_prof_num }, (v, index) => (
                             <select 
                                 name='skillselect' 
                                 className="charPicklist" 
                                 id='skill-select' 
-                                onChange={(e) => handleSkillSelect(e.target.value, index)}
+                                onChange={(e) => handleSkillProfSelect(e.target.value, index)}
                             >
                                 <option value="">--Select a Skill--</option>
                                 {character.endclass.skill_prof_selection.map((skillName, key) => (

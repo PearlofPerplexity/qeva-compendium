@@ -346,3 +346,111 @@ export const RANGEDWEAPONS = [
         properties: 'Special, thrown (range 5/15)'
     },
 ];
+
+export const LIGHTARMOR = [
+    {
+        id: 0,
+        name: 'Padded',
+        ac: 11,
+        addDexMod: true,
+        stealthDisad: true,
+        weight: 8,
+    },
+    {
+        id: 1,
+        name: 'Leather',
+        ac: 11,
+        addDexMod: true,
+        stealthDisad: false,
+        weight: 10,
+    },
+    {
+        id: 2,
+        name: 'Studded leather',
+        ac: 12,
+        addDexMod: true,
+        stealthDisad: false,
+        weight: 13,
+    }
+];
+
+export const MEDIUMARMOR = [
+    {
+        id: 0,
+        name: 'Hide',
+        ac: 12,
+        addDexMod: true,
+        stealthDisad: true,
+        weight: 12,
+    },
+    {
+        id: 1,
+        name: 'Chain shirt',
+        ac: 13,
+        addDexMod: true,
+        stealthDisad: false,
+        weight: 20,
+    },
+    {
+        id: 2,
+        name: 'Scale mail',
+        ac: 14,
+        addDexMod: true,
+        stealthDisad: true,
+        weight: 45,
+    },
+    {
+        id: 3,
+        name: 'Breastplate',
+        ac: 14,
+        addDexMod: true,
+        stealthDisad: false,
+        weight: 20,
+    },
+    {
+        id: 4,
+        name: 'Half plate',
+        ac: 15,
+        addDexMod: true,
+        stealthDisad: true,
+        weight: 40,
+    },
+];
+
+export const HEAVYARMOR = [
+    {
+        id: 0,
+        name: 'Ring mail',
+        ac: 14,
+        addDexMod: false,
+        stealthDisad: true,
+        weight: 40,
+    },
+    {
+        id: 1,
+        name: 'Chain mail',
+        ac: 16,
+        addDexMod: false,
+        stealthDisad: true,
+        stealthStr: 13,
+        weight: 55,
+    },
+    {
+        id: 2,
+        name: 'Splint',
+        ac: 17,
+        addDexMod: false,
+        stealthDisad: true,
+        stealthStr: 15,
+        weight: 60,
+    },
+    {
+        id: 3,
+        name: 'Plate',
+        ac: 18,
+        addDexMod: false,
+        stealthDisad: true,
+        stealthStr: 15,
+        weight: 65,
+    },
+];
