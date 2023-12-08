@@ -17,6 +17,14 @@ import masqadre from '../imgs/classes/masqadre-white.png';
 import maulQadre from '../imgs/classes/maulQadre-white.png';
 import grandCaracadre from '../imgs/classes/grandCaracadre.png';
 import { DNDLEVELS } from './DNDLEVELS';
+import { 
+    SIMPLEWEAPONS,
+    MARTIALWEAPONS,
+    RANGEDWEAPONS,
+    LIGHTARMOR,
+    MEDIUMARMOR,
+    HEAVYARMOR
+} from './DNDITEMS';
 
 /* CLASSES: 
 
@@ -40,6 +48,16 @@ scribe
 
 */
 
+//Simple String Arrays of Weapon Names
+const simpleWeapons = SIMPLEWEAPONS.map(weapon => weapon.name);
+const martialWeapons = MARTIALWEAPONS.map(weapon => weapon.name);
+const rangedWeapons = RANGEDWEAPONS.map(weapon => weapon.name);
+
+//Simple String Arrays of Armor Names
+const lightArmor = LIGHTARMOR.map(armor => armor.name);
+const mediumArmor = MARTIALWEAPONS.map(armor => armor.name);
+const heavyArmor = HEAVYARMOR.map(armor => armor.name);
+
 export const CLASSES = [
     {
         id: 0,
@@ -54,7 +72,16 @@ export const CLASSES = [
         image: oracle,
         imageAlt: `Oracle Logo`,
         hitDie: 'd12',
-        equipment: ["Zanhari Sword", "Olive Leaves"],
+        //EQUIPMENT
+        armor: [],
+        weapon: ['Zanhari Sword'],
+        weapon2: [],
+        weapon3: [],
+        pack: [],
+        other_equip: ['Olive leaves'],
+        //EQUIPMENT OPTIONS
+        //none
+        //PROFICIENCIES
         armor_prof: [],
         tool_prof: [],
         weapon_prof: ["Zanhari Sword"],
@@ -426,7 +453,18 @@ export const CLASSES = [
         image: caracadre,
         imageAlt: `Caracadre Logo`,
         hitDie: 'd10',
-        equipment: ["scale mail or leather armor", "2 shortswords or simple melee weapons", "longbow and a quiver of 20 arrows", "1 dungeoneer's pack or explorer's pack"],
+        //EQUIPMENT
+        armor: [],
+        weapon: [],
+        weapon2: ['longbow and a quiver of 20 arrows'],
+        weapon3: [],
+        pack: [],
+        other_equip: ['bird-caller'],
+        //EQUIPMENT OPTIONS
+        armor_options: ['leather armor', 'scale mail'],
+        weapon_options: ['2 shortswords', ...simpleWeapons],
+        pack_options: ["dungeoneer's pack", "explorer's pack"],
+        //PROFICIENCIES
         armor_prof: ["light", "medium"],
         weapon_prof: ["Zanhari Sword", "Shields", "Simple","Martial"],
         tool_prof: [],
@@ -640,7 +678,17 @@ export const CLASSES = [
         image: avlimeth,
         imageAlt: `Avlimeth Logo`,
         hitDie: 'd8',
-        equipment: ["a shortsword or any simple weapond", "a dungeoneer's pack or an explorer's pack", "10 darts"],
+        //EQUIPMENT
+        armor: [],
+        weapon: [],
+        weapon2: [],
+        weapon3: [],
+        pack: [],
+        other_equip: ["10 darts"],
+        //EQUIPMENT OPTIONS
+        weapon_options: ['shortsword', ...simpleWeapons],
+        pack_options: ["dungeoneer's pack", "explorer's pack"],
+        //PROFICIENCIES
         armor_prof: ["light", "medium"],
         weapon_prof: ["Simple", "shortswords"],
         tool_prof: ["Choose one type of artisan's tools"],
@@ -709,7 +757,17 @@ export const CLASSES = [
         image: elvishcloaks,
         imageAlt: `Elven Cloaks Logo`,
         hitDie: 'd8',
-        equipment: ["leather armor", "2 shortswords or simple melee weapons", "longbow and a quiver of 20 arrows", "dungeoneer's pack or explorer's pack"],
+        //EQUIPMENT
+        armor: ['leather'],
+        weapon: [],
+        weapon2: ['longbow and a quiver of 20 arrows'],
+        weapon3: [],
+        pack: [],
+        other_equip: ['Cloak of Navalil'],
+        //EQUIPMENT OPTIONS
+        weapon_options: [...rangedWeapons, ...simpleWeapons],
+        pack_options: ["dungeoneer's pack", "explorer's pack"],
+        //PROFICIENCIES
         armor_prof: ["Light", "medium"],
         weapon_prof: ["Simple", "Ranged"],
         tool_prof: [],
@@ -739,7 +797,17 @@ export const CLASSES = [
         image: avikin,
         imageAlt: `Avikin Logo`,
         hitDie: 'd8',
-        equipment: ["scale mail", "2 shortswords or simple melee weapons", "longbow and a quiver of 20 arrows", "dungeoneer's pack or explorer's pack"],
+        //EQUIPMENT
+        armor: ['scale mail'],
+        weapon: [],
+        weapon2: ['longbow and a quiver of 20 arrows'],
+        weapon3: [],
+        pack: [],
+        other_equip: [],
+        //EQUIPMENT OPTIONS
+        weapon_options: [...rangedWeapons],
+        pack_options: ["dungeoneer's pack", "explorer's pack"],
+        //PROFICIENCIES
         armor_prof: ["Light", "medium"],
         weapon_prof: ["Simple", "Ranged"],
         tool_prof: [],
@@ -767,7 +835,17 @@ export const CLASSES = [
         image: ghostblade,
         imageAlt: `Ghostblade Logo`,
         hitDie: 'd8',
-        equipment: ["leather armor", "rapier or shortsword", "shortbow and a quiver of 20 arrows or a shortsword", "2 daggers", "thieves' tools", "burglar's pack, dungeoneer's pack or explorer's pack"],
+        //EQUIPMENT
+        armor: ['leather'],
+        weapon: [],
+        weapon2: ['shortbow and a quiver of 20 arrows'],
+        weapon3: [],
+        pack: [],
+        other_equip: ['2 daggers', 'thieves tools'],
+        //EQUIPMENT OPTIONS
+        weapon_options: ['rapier', 'shortsword'],
+        pack_options: ["dungeoneer's pack", "explorer's pack", "burglar's pack"],
+        //PROFICIENCIES
         armor_prof: ["Light", "Medium"],
         weapon_prof: ["Simple", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
         tool_prof: ["Thieve's tools"],
@@ -797,7 +875,17 @@ export const CLASSES = [
         image: uncorrupted,
         imageAlt: `Uncorrupted Logo`,
         hitDie: 'd12',
-        equipment: ["greataxe or any martial melee weapon", "2 handaxes or any simple weapon", "4 javelins", "explorer's pack"],
+        //EQUIPMENT
+        armor: [],
+        weapon: [],
+        weapon2: [],
+        weapon3: [],
+        pack: ["explorer's pack"],
+        other_equip: ['4 javelins'],
+        //EQUIPMENT OPTIONS
+        weapon_options: ['greataxe', ...martialWeapons],
+        weapon2_options: ['2 handaxes', ...simpleWeapons],
+        //PROFICIENCIES
         armor_prof: ["Light", "Medium"],
         weapon_prof: ["Shields", "Simple & martial weapons","Ranged weapons"],
         tool_prof: [],
@@ -827,7 +915,18 @@ export const CLASSES = [
         image: toppler,
         imageAlt: `Toppler Logo`,
         hitDie: 'd10',
-        equipment: ["chain mail or leather armor", "martial weapon or a simple weapon and a shield", "light crossbow and 20 bolts", "dungeoneer's pack or an explorer's pack"],
+        //EQUIPMENT
+        armor: [],
+        weapon: [],
+        weapon2: ['light crossbow and 20 bolts'],
+        weapon3: ['shield'],
+        pack: [],
+        other_equip: ['pouch of seed & soil'],
+        //EQUIPMENT OPTIONS
+        armor_options: ['chain mail', 'leather'],
+        weapon_options: [...martialWeapons, ...simpleWeapons],
+        pack_options: ["dungeoneer's pack", "explorer's pack"],
+        //PROFICIENCIES
         armor_prof: ["Light", "Medium"],
         weapon_prof: ["Simple weapons","Ranged weapons"],
         tool_prof: [],
@@ -857,7 +956,18 @@ export const CLASSES = [
         image: feather,
         imageAlt: `Order of the Feather Logo`,
         hitDie: 'd8',
-        equipment: ["chain mail or leather armor", "martial weapon and a shield or two martial weapons", "light crossbow and 20 bolts or a shortbow and 20 arrows", "explorer's pack"],
+        //EQUIPMENT
+        armor: [],
+        weapon: [],
+        weapon2: [],
+        weapon3: [],
+        pack: ["explorer's pack"],
+        other_equip: ['shield'],
+        //EQUIPMENT OPTIONS
+        armor_options: ['chain mail', 'leather'],
+        weapon_options: [...martialWeapons, ...simpleWeapons],
+        weapon2_options: ['light crossbow and 20 bolts', 'shortbow and 20 arrows'],
+        //PROFICIENCIES
         armor_prof: ["Light", "Medium"],
         weapon_prof: ["Simple","Ranged", "Martial"],
         tool_prof: [],
@@ -894,7 +1004,18 @@ export const CLASSES = [
                 expertise: `Varies`,
                 description: `Unrestricted by any affiliation is the adventurer. Each one as their own reasons for venturing into the still orc-riddled lands of Avlim.`,
                 hitDie: 'd8',
-                equipment: ["chain mail or leather armor", "1 simple weapon", "dungeoneer's pack or an explorer's pack"],
+                //EQUIPMENT
+                armor: [],
+                weapon: [],
+                weapon2: [],
+                weapon3: [],
+                pack: [],
+                other_equip: [],
+                //EQUIPMENT OPTIONS
+                armor_options: ['chain mail', 'leather'],
+                weapon_options: [...simpleWeapons],
+                pack_options: ["dungeoneer's pack", "explorer's pack"],
+                //PROFICIENCIES
                 armor_prof: ['-'],
                 weapon_prof: ['-','-','-'],
                 tool_prof: [],
@@ -914,7 +1035,17 @@ export const CLASSES = [
                 expertise: `Arcana`,
                 description: `The acolyte is well-versed in the spiritual realities of Qeṽa. They have discovered the true meaning of gems and the hidden realities of the ethereal realm. By pouring over old texts or pestering oracles, elves or cathedral keepers, they have uncovered secrets held only by a few and they use this knowledge to pursue the art of divination. Though most believe in an unseen realm, they tend to trust physical crafts and their own experience dismissing acolytes as dreamers and fairy tale storytellers.`,
                 hitDie: 'd6',
-                equipment: ["light crossbow and 20 bolts or any simple weapon", "component pouch or arcane focus", "dungeoneer's pack or an explorer's pack", "cut of emerald"],
+                //EQUIPMENT
+                armor: ['leather'],
+                weapon: [],
+                weapon2: [],
+                weapon3: [],
+                pack: [],
+                other_equip: ['component pouch', 'cut of emerald'],
+                //EQUIPMENT OPTIONS
+                weapon_options: [...simpleWeapons, 'light crossbow and 20 bolts'],
+                pack_options: ["dungeoneer's pack", "explorer's pack"],
+                //PROFICIENCIES
                 armor_prof: [],
                 weapon_prof: ["Daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
                 tool_prof: [],
@@ -934,7 +1065,17 @@ export const CLASSES = [
                 expertise: `Town Talk`,
                 description: `Whether they are versed in battle or not, the bard travels the adulterated lands of Avlim with instrument in hand to inspire their own songs, or write about the heroic ventures of others.`,
                 hitDie: 'd8',
-                equipment: ["leather armor","rapier, longsword or any simple weapon", "dagger", "diplomat's pack or an entertainer's pack", "lute or musical instrument"],
+                //EQUIPMENT
+                armor: ['leather'],
+                weapon: [],
+                weapon2: [],
+                weapon3: [],
+                pack: [],
+                other_equip: ['dagger', 'musical instrument'],
+                //EQUIPMENT OPTIONS
+                weapon_options: [...simpleWeapons, 'longsword', 'rapier'],
+                pack_options: ["diplomat's pack", "entertainer's pack"],
+                //PROFICIENCIES
                 armor_prof: ["Light"],
                 weapon_prof: ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
                 tool_prof: ["3 Musical instruments of your choice"],
@@ -954,7 +1095,17 @@ export const CLASSES = [
                 expertise: `Herbs & Elixirs`,
                 description: `Whether by magical means or herbal knowledge, the crafter is skilled in healing and natural crafting. They take company with others to heal their fellow warriors or heal the ones they find. However, this skill with herbs can also prove dangerous as they possess the knowledge to create potions of great detriment as well. When working with gems, crafters can work beyond simple elixirs. Crafters can use combinations of gem ingredients to create things as DIA did. For example, half an emerald combined with half a topaz gem might make a kind of tree.`,
                 hitDie: 'd8',
-                equipment: ["light crossbow and 20 bolts or any simple weapon", "15 empty viles", "5 potions of your choice", "dungeoneer's pack or an explorer's pack", "herbalism kit", "alchemist supplies or poisoner's kit"],
+                //EQUIPMENT
+                armor: ['leather'],
+                weapon: [],
+                weapon2: [],
+                weapon3: [],
+                pack: [],
+                other_equip: ['15 empty viles', '5 potions of your choice', "herbalism kit", "alchemist supplies"],
+                //EQUIPMENT OPTIONS
+                weapon_options: [...simpleWeapons, 'light crossbow and 20 bolts'],
+                pack_options: ["dungeoneer's pack", "explorer's pack"],
+                //PROFICIENCIES
                 armor_prof: ["Light", "medium"],
                 weapon_prof: ["Shields", "Simple weapons"],
                 tool_prof: ["Herbalism kit"],
@@ -974,7 +1125,17 @@ export const CLASSES = [
                 expertise: `Nature`,
                 description: `They have answered the call to free Avlim of danger, but their true love is for nature. They wish to see the world of Avlim to witness and interact with the various flora and fauna, and especially its birds.`,
                 hitDie: 'd8',
-                equipment: ["leather armor","wooden shield or any simple weapon", "scimitar or any simple melee weapon", "explorer's pack", "druidic focus", "bird-caller"],
+                //EQUIPMENT
+                armor: ['leather'],
+                weapon: [],
+                weapon2: [],
+                weapon3: ['shield'],
+                pack: ["explorer's pack"],
+                other_equip: ['bird-caller', 'druidic focus'],
+                //EQUIPMENT OPTIONS
+                weapon_options: [...simpleWeapons, 'scimitar'],
+                weapon2_options: [...simpleWeapons, 'scimitar'],
+                //PROFICIENCIES
                 armor_prof: ["Light", "medium"],
                 weapon_prof: ["Shields","Clubs","Daggers", "Darts", "Javelins", "Maces", "Quarterstaffs", "Scimitars", "Sickles", "Slings", "Spears"],
                 tool_prof: ["Herbalism kit"],
@@ -994,7 +1155,19 @@ export const CLASSES = [
                 expertise: `Combat`,
                 description: `Whether they are a new recruit or a veteran soldier hardened by past wars, the fighter has donned their armor and picked up their weapon to answer the king's call.`,
                 hitDie: 'd10',
-                equipment: ["chain mail or leather armor", "longbow and 20 arrows", "martial weapon and a shield or two martial weapons", "light crossbow and 20 bolts or two handaxes","dungeoneer's pack or an explorer's pack"],
+                //EQUIPMENT
+                armor: [],
+                weapon: [],
+                weapon2: [],
+                weapon3: ['longbow and 20 arrows'],
+                pack: [],
+                other_equip: [],
+                //EQUIPMENT OPTIONS
+                armor_options: ['chain mail', 'leather'],
+                weapon_options: [...martialWeapons],
+                weapon2_options: ['light crossbow and 20 bolts', '2 handaxes'],
+                pack_options: ["dungeoneer's pack", "explorer's pack"],
+                //PROFICIENCIES
                 armor_prof: ["Light, medium, heavy"],
                 weapon_prof: ["Shields", "Simple weapons", "Martial weapons"],
                 tool_prof: [],
@@ -1014,7 +1187,17 @@ export const CLASSES = [
                 expertise: `Gemstones`,
                 description: `Gems hold renowned in Qeṽa whether for their beauty and mystic. For this, many wish for a stone to be cut into a shape that accentuates its beauty. However, such things must be handled with great care. The stonecutter knows how to cut a stone without opening it and open it when the clients are so inclined. However, given their value, an honest stonecutter is hard to find. Some are crafty and keep shards of stones or even steal stones. Others maintain a blameless reputation and charge a fine price. It takes a bit of wisdom to tell the difference. If fair, the gemcutter can evaluate a gem based on four characteristics: cut (the skill of the gemcutter), clarity (the gem's freedom from incusions), color (the gem's alignment to its attribute) and carat (the size and weight of the gem). The gemcutter knows the cut and color can be corrected, while the clarity and carat cannot.`,
                 hitDie: 'd8',
-                equipment: ["Shortsword or any simple weapon", "Gem-balancer", "dungeoneer's pack or an explorer's pack", "jewler's tools", "Smith's tools"],
+                //EQUIPMENT
+                armor: [],
+                weapon: [],
+                weapon2: [],
+                weapon3: [],
+                pack: [],
+                other_equip: ['Gem-balancer', "jeweler's tools", "Smith's tools"],
+                //EQUIPMENT OPTIONS
+                weapon_options: [...simpleWeapons, 'shortsword'],
+                pack_options: ["dungeoneer's pack", "explorer's pack"],
+                //PROFICIENCIES
                 armor_prof: ["Light"],
                 weapon_prof: ["Simple weapons"],
                 tool_prof: [],
@@ -1034,7 +1217,17 @@ export const CLASSES = [
                 expertise: `History`,
                 description: `Like the Bard the scribe wishes to record history, but in books rather than song. Perhaps they want to get the most honest account of the state of the different regions after the void, or perhaps they wish to sell their tale fact or fiction when they return.`,
                 hitDie: 'd8',
-                equipment: ["light crossbow and 20 bolts or any simple weapon", "regional map of your choice", "scholar's pack or a diplomat's pack", "cartographer's tools or forgery kit"],
+                //EQUIPMENT
+                armor: [],
+                weapon: [],
+                weapon2: [],
+                weapon3: [],
+                pack: [],
+                other_equip: ['regional map of your choice', "cartographer's tools"],
+                //EQUIPMENT OPTIONS
+                weapon_options: [...simpleWeapons, 'light crossbow and 20 bolts'],
+                pack_options: ["scholar's pack", "diplomat's pack"],
+                //PROFICIENCIES
                 armor_prof: ["Light"],
                 weapon_prof: ["Simple"],
                 tool_prof: ["Calligrapher's tools"],

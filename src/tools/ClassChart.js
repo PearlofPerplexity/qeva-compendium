@@ -176,7 +176,14 @@ const ClassChart = (props) => {
                                             <th>{cl.name}</th>
                                             <td>{cl.quality}</td>
                                             <td>{cl.hitDie}</td>
-                                            <td>{cl.equipment.join(', ')}</td>
+                                            <td>{[
+                                                    ...cl.armor, 
+                                                    ...cl.weapon,
+                                                    ...cl.weapon2,
+                                                    ...cl.weapon3,
+                                                    ...cl.pack,
+                                                    ...cl.other_equip
+                                                ].join(', ')}</td>
                                             <td>
                                                 <strong> Armor: </strong>{cl.armor_prof ? cl.armor_prof.join(', ') : ('none')}, 
                                                 <strong> Weapons: </strong>{cl.weapon_prof ? cl.weapon_prof.join(', ') : ('none')}, 

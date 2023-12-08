@@ -718,7 +718,7 @@ const CharacterBuilder = () => {
                                 <p className='col'><strong>GOAL: </strong>{character.endclass.goal}</p>
                             </div>
                             <div className='row'>
-                                <p className='col'><strong>EQUIPMENT: </strong>{character.endclass.equipment.join(', ')}</p>
+                                <p className='col'><strong>EQUIPMENT: </strong>{character.endclass.armor.join(', ')}</p>
                             </div>
                             <div className='row'>
                                 <h6>
