@@ -230,7 +230,7 @@ const ClassChart = (props) => {
                                                             {cl.lvls && cl.lvls.map(lvl => (
                                                                 <tr key={lvl.id} className='align-middle'>
                                                                     <th>{lvl.id}</th>
-                                                                    <td>{lvl.prof_bonus}</td>
+                                                                    <td>+{lvl.prof_bonus}</td>
                                                                     <td>
                                                                         {lvl.features && lvl.features.map(a => (
                                                                             <a key={a.id} onClick={() => detailToggle(a)}>

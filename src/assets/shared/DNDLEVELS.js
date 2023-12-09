@@ -28,7 +28,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -51,7 +51,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -63,7 +63,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -80,7 +80,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -92,7 +92,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -109,7 +109,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -121,7 +121,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -138,7 +138,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -150,7 +150,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -162,7 +162,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -177,7 +177,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -194,7 +194,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -206,7 +206,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -233,7 +233,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -250,7 +250,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -267,7 +267,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -279,7 +279,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -306,7 +306,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -323,7 +323,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -335,7 +335,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -350,7 +350,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -368,7 +368,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -391,7 +391,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -409,7 +409,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -427,7 +427,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -445,7 +445,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -458,7 +458,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -476,7 +476,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -489,7 +489,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -502,7 +502,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -518,7 +518,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -541,7 +541,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -554,7 +554,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -572,7 +572,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -585,7 +585,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -598,7 +598,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -611,7 +611,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -624,7 +624,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -637,7 +637,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -650,7 +650,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -666,7 +666,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -684,7 +684,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -702,7 +702,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -725,7 +725,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -738,7 +738,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -756,7 +756,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -769,7 +769,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -782,7 +782,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -795,7 +795,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -808,7 +808,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -824,7 +824,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -841,7 +841,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -863,7 +863,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -880,7 +880,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -892,7 +892,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -904,7 +904,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -916,7 +916,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -928,7 +928,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -940,7 +940,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -952,7 +952,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -967,7 +967,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -989,7 +989,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1001,7 +1001,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [ 
                 {
                     id: 0,
@@ -1013,7 +1013,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1025,7 +1025,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1042,7 +1042,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1054,7 +1054,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1066,7 +1066,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1078,7 +1078,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1090,7 +1090,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1105,7 +1105,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1122,7 +1122,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1134,7 +1134,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1156,7 +1156,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1168,7 +1168,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1185,7 +1185,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1207,7 +1207,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1219,7 +1219,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1231,7 +1231,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1253,7 +1253,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1268,7 +1268,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1290,7 +1290,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1302,7 +1302,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1314,7 +1314,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1326,7 +1326,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1343,7 +1343,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1360,7 +1360,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1372,7 +1372,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1389,7 +1389,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1406,7 +1406,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1421,7 +1421,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1443,7 +1443,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1470,7 +1470,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1492,7 +1492,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1504,7 +1504,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1521,7 +1521,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1533,7 +1533,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1545,7 +1545,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1557,7 +1557,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1569,7 +1569,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1584,7 +1584,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1602,7 +1602,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1615,7 +1615,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1648,7 +1648,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1661,7 +1661,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1674,7 +1674,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1687,7 +1687,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1705,7 +1705,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1718,7 +1718,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1731,7 +1731,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1752,7 +1752,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1769,7 +1769,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1781,7 +1781,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1793,7 +1793,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1805,7 +1805,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1817,7 +1817,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1829,7 +1829,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1841,7 +1841,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1853,7 +1853,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1865,7 +1865,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -1880,7 +1880,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1892,7 +1892,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1909,7 +1909,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1931,7 +1931,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -1943,7 +1943,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1955,7 +1955,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1967,7 +1967,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1979,7 +1979,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -1991,7 +1991,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2003,7 +2003,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2018,7 +2018,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2036,7 +2036,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2059,7 +2059,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2082,7 +2082,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2095,7 +2095,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2113,7 +2113,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2126,7 +2126,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2139,7 +2139,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2152,7 +2152,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2165,7 +2165,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2181,7 +2181,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2204,7 +2204,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2222,7 +2222,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2240,7 +2240,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2258,7 +2258,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2272,7 +2272,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2290,7 +2290,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2303,7 +2303,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2316,7 +2316,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2334,7 +2334,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2355,7 +2355,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2368,7 +2368,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2391,7 +2391,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2404,7 +2404,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2417,7 +2417,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2435,7 +2435,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2448,7 +2448,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2461,7 +2461,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2474,7 +2474,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2487,7 +2487,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2503,7 +2503,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 1
             id: 1,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2520,7 +2520,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 2
             id: 2,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2532,7 +2532,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 3
             id: 3,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2544,7 +2544,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 4
             id: 4,
-            prof_bonus: '+2',
+            prof_bonus: 2,
             features: [
                 {
                     id: 0,
@@ -2556,7 +2556,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 5
             id: 5,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2568,7 +2568,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 6
             id: 6,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2580,7 +2580,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 7
             id: 7,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2592,7 +2592,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 8
             id: 8,
-            prof_bonus: '+3',
+            prof_bonus: 3,
             features: [
                 {
                     id: 0,
@@ -2604,7 +2604,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 9
             id: 9,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,
@@ -2616,7 +2616,7 @@ export const DNDLEVELS = {
         {
             // LEVEL 10
             id: 10,
-            prof_bonus: '+4',
+            prof_bonus: 4,
             features: [
                 {
                     id: 0,

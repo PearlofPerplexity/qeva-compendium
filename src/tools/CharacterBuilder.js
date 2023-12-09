@@ -801,9 +801,19 @@ const CharacterBuilder = () => {
             {character.myClass ? (
                 <div className='mb-5'>
                     <h5 className='char-build-title'>
-                        {(character.myClass.topics[0].name === 'Adventurer') && !character.subclass ? (
-                            <strong className='text-warning'>... </strong>
-                        ) : (<strong className='text-success'>✓ </strong>)
+                        {
+                            ((character.myClass.topics[0].name === 'Adventurer') && !character.subclass) 
+                            ||
+                            character.endclass.armor.length < 1
+                            ||
+                            character.endclass.weapon.length < 1
+                            ||
+                            character.endclass.pack.length < 1
+                            ||
+                            (character.endclass.skill_prof_num && character.endclass.skill_prof.length !== character.endclass.skill_prof_num ) 
+                            ? (
+                                <strong className='text-warning'>... </strong>
+                            ) : (<strong className='text-success'>✓ </strong>)
                         }
                         <strong>CLASS: </strong>{character.myClass.name} {character.subclass && ('| ' + character.subclass.name)}
                     </h5>

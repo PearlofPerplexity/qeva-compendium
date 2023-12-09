@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import diamondShape from '../assets/imgs/diamond-shape.png';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
 
 const CharacterSheet = React.forwardRef((props, ref) => {
-
+    
+    const profBonus = 2; //Always 2 for Level 1
+    
     const [character, setCharacter] = useContext(CharacterContext);
 
     const { 
@@ -37,6 +39,45 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         personality, ideals, flaws,
 
     } = character;
+
+    const [skills, setSkills] = useState(
+        [
+            { id: 0, name: 'Acrobatics', type:'Dex', value: dexMod, prof: false },
+            { id: 1, name: 'Animal Handling', type:'Wis', value: wisMod, prof: false },
+            { id: 2, name: 'Arcana', type:'Int', value: intMod, prof: false },
+            { id: 3, name: 'Athletics', type:'Str', value: strMod, prof: false },
+            { id: 4, name: 'Deception', type:'Cha', value: chaMod, prof: false },
+            { id: 5, name: 'History', type:'Int', value: intMod, prof: false },
+            { id: 6, name: 'Insight', type:'Wis', value: wisMod, prof: false },
+            { id: 7, name: 'Intimidation', type:'Cha', value: chaMod, prof: false },
+            { id: 8, name: 'Investigation', type:'Int', value: intMod, prof: false },
+            { id: 9, name: 'Medicine', type:'Wis', value: wisMod, prof: false },
+            { id: 10, name: 'Nature', type:'Int', value: intMod, prof: false },
+            { id: 11, name: 'Perception', type:'Wis', value: wisMod, prof: false },
+            { id: 12, name: 'Performance', type:'Cha', value: chaMod, prof: false },
+            { id: 13, name: 'Persuasion', type:'Cha', value: chaMod, prof: false },
+            { id: 14, name: 'Religion', type:'Int', value: intMod, prof: false },
+            { id: 15, name: 'Sleight of Hand', type:'Dex', value: dexMod, prof: false },
+            { id: 16, name: 'Stealth', type:'Dex', value: dexMod, prof: false },
+            { id: 17, name: 'Survival', type:'Wis', value: wisMod, prof: false }
+        ]
+    );
+
+    useEffect(() => {
+        //Set skill values
+        let newSkills = skills;
+        skills.map(skill => {            
+            if(endclass.skill_prof.includes(skill.name) || race.skill_prof.includes(skill)) {
+                let newValue = parseInt(skill.value) + profBonus; //Adds +2
+                if (newValue >= 0) newValue = `+${newValue}`;
+                else newValue = `-${newValue}`;
+                newSkills[skill.id].value = newValue;
+                newSkills[skill.id].prof = true; //Checks the checkbox
+            }
+        });
+        setSkills([...newSkills]);
+    }, []);
+
 
     return (
 <form className="charsheet" ref={ref}>
@@ -162,60 +203,11 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         </div>
         <div className="skills list-section box">
             <ul>
-            <li>
-                <label htmlFor="Acrobatics">Acrobatics <span className="skill">(Dex)</span></label><input name="Acrobatics-skill" placeholder="+0" type="text" /><input name="Acrobatics-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Animal Handling">Animal Handling <span className="skill">(Wis)</span></label><input name="AnimalHandling-skill" placeholder="+0" type="text" /><input name="Animal Handling-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Arcana">Arcana <span className="skill">(Int)</span></label><input name="Arcana-skill" placeholder="+0" type="text" /><input name="Arcana-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Athletics">Athletics <span className="skill">(Str)</span></label><input name="Athletics-skill" placeholder="+0" type="text" /><input name="Athletics-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Deception">Deception <span className="skill">(Cha)</span></label><input name="Deception-skill" placeholder="+0" type="text" /><input name="Deception-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="History">History <span className="skill">(Int)</span></label><input name="History-skill" placeholder="+0" type="text" /><input name="History-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Insight">Insight <span className="skill">(Wis)</span></label><input name="Insight-skill" placeholder="+0" type="text" /><input name="Insight-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Intimidation">Intimidation <span className="skill">(Cha)</span></label><input name="Intimidation-skill" placeholder="+0" type="text" /><input name="Intimidation-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Investigation">Investigation <span className="skill">(Int)</span></label><input name="Investigation-skill" placeholder="+0" type="text" /><input name="Investigation-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Medicine">Medicine <span className="skill">(Wis)</span></label><input name="Medicine-skill" placeholder="+0" type="text" /><input name="Medicine-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Nature">Nature <span className="skill">(Int)</span></label><input name="Nature-skill" placeholder="+0" type="text" /><input name="Nature-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Perception">Perception <span className="skill">(Wis)</span></label><input name="Perception-skill" placeholder="+0" type="text" /><input name="Perception-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Performance">Performance <span className="skill">(Cha)</span></label><input name="Performance-skill" placeholder="+0" type="text" /><input name="Performance-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Persuasion">Persuasion <span className="skill">(Cha)</span></label><input name="Persuasion-skill" placeholder="+0" type="text" /><input name="Persuasion-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Religion">Religion <span className="skill">(Int)</span></label><input name="Religion-skill" placeholder="+0" type="text" /><input name="Religion-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Sleight of Hand">Sleight of Hand <span className="skill">(Dex)</span></label><input name="SleightofHand-skill" placeholder="+0" type="text" /><input name="Sleight of Hand-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Stealth">Stealth <span className="skill">(Dex)</span></label><input name="Stealth-skill" placeholder="+0" type="text" /><input name="Stealth-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Survival">Survival <span className="skill">(Wis)</span></label><input name="Survival-skill" placeholder="+0" type="text" /><input name="Survival-prof" type="checkbox" />
-            </li>
+                {skills.map(skill => (
+                    <li key={skill.id}>
+                        <label htmlFor={skill.name}>{skill.name} <span className="skill">({skill.type})</span></label><input name={`${skill.name}-skill`} placeholder="+0" type="text" value={skill.value} /><input name={`${skill.name}-prof`} type="checkbox" checked={skill.prof} />
+                    </li>
+                ))}
             </ul>
             <div className="label">
             Skills

@@ -73,11 +73,11 @@ export const CLASSES = [
         imageAlt: `Oracle Logo`,
         hitDie: 'd12',
         //EQUIPMENT
-        armor: [],
+        armor: ['Leather armor'],
         weapon: ['Zanhari Sword'],
         weapon2: [],
         weapon3: [],
-        pack: [],
+        pack: ['No Pack'],
         other_equip: ['Olive leaves'],
         //EQUIPMENT OPTIONS
         //none
@@ -86,7 +86,7 @@ export const CLASSES = [
         tool_prof: [],
         weapon_prof: ["Zanhari Sword"],
         saving_throw_prof: ["Dexterity", "Wisdom"],
-        skill_prof: ["Dexterity", "Wisdom", "Religion"],
+        skill_prof: ['Acrobatics', 'Animal Handling', 'Arcana', 'Deception', 'History', 'Insight', 'Intimidation', 'Perception', 'Religion', 'Sleight of Hand', 'Stealth'],
         lvls: DNDLEVELS.oracles,
         topics: [
             {
@@ -679,7 +679,7 @@ export const CLASSES = [
         imageAlt: `Avlimeth Logo`,
         hitDie: 'd8',
         //EQUIPMENT
-        armor: [],
+        armor: ['Scale mail armor'],
         weapon: [],
         weapon2: [],
         weapon3: [],
@@ -876,7 +876,7 @@ export const CLASSES = [
         imageAlt: `Uncorrupted Logo`,
         hitDie: 'd12',
         //EQUIPMENT
-        armor: [],
+        armor: ['Chain mail armor'],
         weapon: [],
         weapon2: [],
         weapon3: [],
@@ -1188,7 +1188,7 @@ export const CLASSES = [
                 description: `Gems hold renowned in Qeṽa whether for their beauty and mystic. For this, many wish for a stone to be cut into a shape that accentuates its beauty. However, such things must be handled with great care. The stonecutter knows how to cut a stone without opening it and open it when the clients are so inclined. However, given their value, an honest stonecutter is hard to find. Some are crafty and keep shards of stones or even steal stones. Others maintain a blameless reputation and charge a fine price. It takes a bit of wisdom to tell the difference. If fair, the gemcutter can evaluate a gem based on four characteristics: cut (the skill of the gemcutter), clarity (the gem's freedom from incusions), color (the gem's alignment to its attribute) and carat (the size and weight of the gem). The gemcutter knows the cut and color can be corrected, while the clarity and carat cannot.`,
                 hitDie: 'd8',
                 //EQUIPMENT
-                armor: [],
+                armor: ['Studded leather armor'],
                 weapon: [],
                 weapon2: [],
                 weapon3: [],
@@ -1218,7 +1218,7 @@ export const CLASSES = [
                 description: `Like the Bard the scribe wishes to record history, but in books rather than song. Perhaps they want to get the most honest account of the state of the different regions after the void, or perhaps they wish to sell their tale fact or fiction when they return.`,
                 hitDie: 'd8',
                 //EQUIPMENT
-                armor: [],
+                armor: ['Studded leather armor'],
                 weapon: [],
                 weapon2: [],
                 weapon3: [],
