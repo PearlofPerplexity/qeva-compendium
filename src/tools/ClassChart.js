@@ -185,11 +185,27 @@ const ClassChart = (props) => {
                                                     ...cl.other_equip
                                                 ].join(', ')}</td>
                                             <td>
-                                                <strong> Armor: </strong>{cl.armor_prof ? cl.armor_prof.join(', ') : ('none')}, 
-                                                <strong> Weapons: </strong>{cl.weapon_prof ? cl.weapon_prof.join(', ') : ('none')}, 
-                                                <strong> Tool: </strong>{cl.tool_prof ? cl.tool_prof.join(', ') : ('none')}, 
-                                                <strong> Saving Throws: </strong>{cl.saving_throw_prof ? cl.saving_throw_prof.join(', ') : ('none')}, 
-                                                <strong> Skills: </strong>{cl.skill_prof_selection && ` Choose ${cl.skill_prof_selection} from `}{cl.skill_prof ? cl.skill_prof.join(', ') : ('none')}
+                                                {cl.name === 'Adventurer' ? (
+                                                <>
+                                                    <strong>Armor: </strong>Choose 1 from {cl.armor_options.join(', ')},
+                                                    <strong> Weapons: </strong>Choose 1 Simple Weapon
+                                                </>
+                                                ) : (
+                                                <>
+                                                    <strong> Armor: </strong>{cl.armor_prof.length > 0 ? cl.armor_prof.join(', ') : ('None')},
+                                                    <strong> Weapons: </strong>{cl.weapon_prof.length > 0 ? cl.weapon_prof.join(', ') : ('None')},
+                                                </> 
+                                                )}
+                                                <strong> Tools: </strong>{cl.tool_prof.length > 0 ? cl.tool_prof.join(', ') : ('None')}, 
+                                                <strong> Saving Throws: </strong>{cl.saving_throw_prof.length > 0 ? cl.saving_throw_prof.join(', ') : ('None')}, 
+                                                <strong> Skills: </strong>
+                                                    {
+                                                    cl.skill_prof_selection ? (
+                                                        ` Choose ${cl.skill_prof_num} from ${cl.skill_prof_selection.join(', ')}`
+                                                    ) : (
+                                                        cl.skill_prof.join(', ')
+                                                    )
+                                                    }
                                             </td>
                                             <td>{cl.race.join(', ')}</td>
                                         </tr>

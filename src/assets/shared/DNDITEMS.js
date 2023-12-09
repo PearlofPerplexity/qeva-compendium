@@ -350,7 +350,7 @@ export const RANGEDWEAPONS = [
 export const LIGHTARMOR = [
     {
         id: 0,
-        name: 'Padded',
+        name: 'Padded Armor',
         ac: 11,
         addDexMod: true,
         stealthDisad: true,
@@ -358,7 +358,7 @@ export const LIGHTARMOR = [
     },
     {
         id: 1,
-        name: 'Leather',
+        name: 'Leather Armor',
         ac: 11,
         addDexMod: true,
         stealthDisad: false,
@@ -366,7 +366,7 @@ export const LIGHTARMOR = [
     },
     {
         id: 2,
-        name: 'Studded leather',
+        name: 'Studded leather Armor',
         ac: 12,
         addDexMod: true,
         stealthDisad: false,
@@ -377,7 +377,7 @@ export const LIGHTARMOR = [
 export const MEDIUMARMOR = [
     {
         id: 0,
-        name: 'Hide',
+        name: 'Hide Armor',
         ac: 12,
         addDexMod: true,
         stealthDisad: true,
@@ -385,7 +385,7 @@ export const MEDIUMARMOR = [
     },
     {
         id: 1,
-        name: 'Chain shirt',
+        name: 'Chain shirt Armor',
         ac: 13,
         addDexMod: true,
         stealthDisad: false,
@@ -393,7 +393,7 @@ export const MEDIUMARMOR = [
     },
     {
         id: 2,
-        name: 'Scale mail',
+        name: 'Scale mail Armor',
         ac: 14,
         addDexMod: true,
         stealthDisad: true,
@@ -401,7 +401,7 @@ export const MEDIUMARMOR = [
     },
     {
         id: 3,
-        name: 'Breastplate',
+        name: 'Breastplate Armor',
         ac: 14,
         addDexMod: true,
         stealthDisad: false,
@@ -409,7 +409,7 @@ export const MEDIUMARMOR = [
     },
     {
         id: 4,
-        name: 'Half plate',
+        name: 'Half plate Armor',
         ac: 15,
         addDexMod: true,
         stealthDisad: true,
@@ -420,7 +420,7 @@ export const MEDIUMARMOR = [
 export const HEAVYARMOR = [
     {
         id: 0,
-        name: 'Ring mail',
+        name: 'Ring mail Armor',
         ac: 14,
         addDexMod: false,
         stealthDisad: true,
@@ -428,7 +428,7 @@ export const HEAVYARMOR = [
     },
     {
         id: 1,
-        name: 'Chain mail',
+        name: 'Chain mail Armor',
         ac: 16,
         addDexMod: false,
         stealthDisad: true,
@@ -437,7 +437,7 @@ export const HEAVYARMOR = [
     },
     {
         id: 2,
-        name: 'Splint',
+        name: 'Splint Armor',
         ac: 17,
         addDexMod: false,
         stealthDisad: true,
@@ -446,7 +446,7 @@ export const HEAVYARMOR = [
     },
     {
         id: 3,
-        name: 'Plate',
+        name: 'Plate Armor',
         ac: 18,
         addDexMod: false,
         stealthDisad: true,

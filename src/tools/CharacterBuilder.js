@@ -229,6 +229,21 @@ const CharacterBuilder = () => {
         }
         setCharacter({...charObj});
     }
+
+    //EQUIPMENT
+    const handleEquipmentSelect = (type, item) => {
+        let equipment;
+        if (item) {
+            equipment = [item];
+        } else {
+            equipment = [];
+        }
+        let charObj = character;
+        charObj.endclass[type] = equipment;
+        setCharacter({...charObj});
+    }
+
+    //SKILLS & PROFICIENCES
     const [skillObj, setSkillObj] = useState({});
     const handleSkillProfSelect = (newSkill, num) => {
         if(!character.endclass.skill_prof.find(skill => skill === newSkill)) {
@@ -455,6 +470,86 @@ const CharacterBuilder = () => {
                                 ))}
                             </select>
                         )}
+                        {character.endclass && character.endclass.armor_options && (
+                        <>
+                            <p className='mt-3'>
+                                SELECT ARMOR
+                            </p>
+                            <select 
+                                name='armorselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={(e) => handleEquipmentSelect('armor', e.target.value)}
+                            >
+                                <option value="">--Select Armor--</option>
+                                {character.endclass.armor_options.map((armor, key) => (
+                                    <option value={armor} key={key}>{armor}</option>
+                                ))}
+                            </select>
+                        </>
+                        )}
+                        {character.endclass && character.endclass.weapon_options && (
+                        <>
+                            <p className='mt-3'>
+                                SELECT WEAPONS
+                            </p>
+                            <select 
+                                name='weaponselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={(e) => handleEquipmentSelect('weapon', e.target.value)}
+                            >
+                                <option value="">--Select Weapon--</option>
+                                {character.endclass.weapon_options.map((wpn, key) => (
+                                    <option value={wpn} key={key}>{wpn}</option>
+                                ))}
+                            </select>
+                            {character.endclass.weapon2_options && (
+                                <select 
+                                    name='weapon2select' 
+                                    className="charPicklist" 
+                                    id='skill-select' 
+                                    onChange={(e) => handleEquipmentSelect('weapon2', e.target.value)}
+                                >
+                                    <option value="">--Select Weapon--</option>
+                                    {character.endclass.weapon2_options.map((wpn, key) => (
+                                        <option value={wpn} key={key}>{wpn}</option>
+                                    ))}
+                                </select>
+                            )}
+                            {character.endclass.weapon3_options && (
+                                <select 
+                                    name='weapon3select' 
+                                    className="charPicklist" 
+                                    id='skill-select' 
+                                    onChange={(e) => handleEquipmentSelect('weapon3', e.target.value)}
+                                >
+                                    <option value="">--Select Weapon--</option>
+                                    {character.endclass.weapon3_options.map((wpn, key) => (
+                                        <option value={wpn} key={key}>{wpn}</option>
+                                    ))}
+                                </select>
+                            )}
+                        </>
+                        )}
+                        {character.endclass && character.endclass.pack_options && (
+                        <>
+                            <p className='mt-3'>
+                                SELECT PACK
+                            </p>
+                            <select 
+                                name='packselect' 
+                                className="charPicklist" 
+                                id='skill-select' 
+                                onChange={(e) => handleEquipmentSelect('pack', e.target.value)}
+                            >
+                                <option value="">--Select Pack--</option>
+                                {character.endclass.pack_options.map((pack, key) => (
+                                    <option value={pack} key={key}>{pack}</option>
+                                ))}
+                            </select>
+                        </>
+                        )}
                         {character.endclass && character.endclass.name === 'Adventurer' && (
                         <>
                             <p className='mt-3'>
@@ -512,7 +607,7 @@ const CharacterBuilder = () => {
                         {character.endclass && character.endclass.skill_prof_num && (
                         <>
                             <p className='mt-3'>
-                                SELECT {character.endclass.skill_prof_num} SKILL PROFICIENCIES
+                                SELECT <strong>{character.endclass.skill_prof_num}</strong> SKILL PROFICIENCIES
                             </p>
                             {Array.from({ length: character.endclass.skill_prof_num }, (v, index) => (
                             <select 
@@ -714,11 +809,27 @@ const CharacterBuilder = () => {
                     </h5>
                     {character.endclass && (
                         <div className='mb-5'>
-                            <div className='row'>
+                            <div className='row mb-2'>
                                 <p className='col'><strong>GOAL: </strong>{character.endclass.goal}</p>
                             </div>
                             <div className='row'>
-                                <p className='col'><strong>EQUIPMENT: </strong>{character.endclass.armor.join(', ')}</p>
+                                <h6>
+                                    <strong>EQUIPMENT: </strong>
+                                </h6>
+                            </div>
+                            <div className='row mb-2'>
+                                <p className='col-12'>
+                                {
+                                    [
+                                        ...character.endclass.armor,
+                                        ...character.endclass.weapon,
+                                        ...character.endclass.weapon2,
+                                        ...character.endclass.weapon3,
+                                        ...character.endclass.pack,
+                                        ...character.endclass.other_equip
+                                    ].join(', ')
+                                }
+                                </p>
                             </div>
                             <div className='row'>
                                 <h6>
