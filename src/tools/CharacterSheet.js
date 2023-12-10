@@ -35,6 +35,8 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         ac, init, hp, hitDie, inspiration,
         //Features
         features,
+        //Equipment
+        equipment,
         //Backstory
         personality, ideals, flaws,
 
@@ -63,12 +65,48 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         ]
     );
 
+    const [savingThrows, setSavingThrows] = useState(
+        [
+            { id: 0, name: 'Strength', type:'Str', value: strMod, prof: false },
+            { id: 1, name: 'Dexterity', type:'Dex', value: dexMod, prof: false },
+            { id: 2, name: 'Constitution', type:'Con', value: conMod, prof: false },
+            { id: 3, name: 'Wisdom',  type:'Wis', value: wisMod, prof: false },
+            { id: 4, name: 'Intelligence', type:'Int', value: intMod, prof: false },
+            { id: 5, name: 'Charisma', type:'Cha', value: chaMod, prof: false },
+        ]
+    );
+
+    const [gemLevel, setGemLevel] = useState(1);
+
     useEffect(() => {
+        //Set gem level
+        console.log('gemlevel');
+        if (
+            race.heartStone.toLowerCase().includes(alignmentGem.name.toLowerCase()) 
+            || 
+            race.spawnStone.toLowerCase().includes(alignmentGem.name.toLowerCase())
+        ) {
+            setGemLevel(2);
+        } else {
+            setGemLevel(1);
+        }
+        //Set saving throws
+        let newSavThrows = savingThrows;
+        savingThrows.forEach(sThrow => {            
+            if(endclass.saving_throw_prof.includes(sThrow.name) || race.saving_throw_prof.includes(sThrow.name)) {
+                let newValue = parseInt(character[sThrow.type.toLowerCase()+'Mod']) + profBonus; //Adds +2
+                if (newValue >= 0) newValue = `+${newValue}`;
+                else newValue = `-${newValue}`;
+                newSavThrows[sThrow.id].value = newValue;
+                newSavThrows[sThrow.id].prof = true; //Checks the checkbox
+            }
+        });
+        setSavingThrows([...newSavThrows]);
         //Set skill values
         let newSkills = skills;
-        skills.map(skill => {            
-            if(endclass.skill_prof.includes(skill.name) || race.skill_prof.includes(skill)) {
-                let newValue = parseInt(skill.value) + profBonus; //Adds +2
+        skills.forEach(skill => {            
+            if(endclass.skill_prof.includes(skill.name) || race.skill_prof.includes(skill.name)) {
+                let newValue = parseInt(character[skill.type.toLowerCase()+'Mod']) + profBonus; //Adds +2
                 if (newValue >= 0) newValue = `+${newValue}`;
                 else newValue = `-${newValue}`;
                 newSkills[skill.id].value = newValue;
@@ -178,24 +216,11 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         </div>
         <div className="saves list-section box">
             <ul>
-            <li>
-                <label htmlFor="Strength-save">Strength</label><input name="Strength-save" placeholder="+0" type="text" value={strSave} readOnly /><input name="Strength-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Dexterity-save">Dexterity</label><input name="Dexterity-save" placeholder="+0" type="text" value={dexSave} readOnly /><input name="Dexterity-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Constitution-save">Constitution</label><input name="Constitution-save" placeholder="+0" type="text" value={conSave} readOnly /><input name="Constitution-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Wisdom-save">Wisdom</label><input name="Wisdom-save" placeholder="+0" type="text" value={wisSave} readOnly /><input name="Wisdom-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Intelligence-save">Intelligence</label><input name="Intelligence-save" placeholder="+0" type="text" value={intSave} readOnly /><input name="Intelligence-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Charisma-save">Charisma</label><input name="Charisma-save" placeholder="+0" type="text" value={chaSave} readOnly /><input name="Charisma-save-prof" type="checkbox" />
-            </li>
+                {savingThrows.map(sThrow => (
+                    <li key={sThrow.id}>
+                        <label htmlFor={`${sThrow.name}-save`}>{sThrow.name}</label><input name={`${sThrow.name}-save`} placeholder="+0" type="text" value={sThrow.value} readOnly /><input name={`${sThrow.name}-prof`} type="checkbox" checked={sThrow.prof} readOnly />
+                    </li>
+                ))}
             </ul>
             <div className="label">
             Saving Throws
@@ -205,7 +230,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             <ul>
                 {skills.map(skill => (
                     <li key={skill.id}>
-                        <label htmlFor={skill.name}>{skill.name} <span className="skill">({skill.type})</span></label><input name={`${skill.name}-skill`} placeholder="+0" type="text" value={skill.value} /><input name={`${skill.name}-prof`} type="checkbox" checked={skill.prof} />
+                        <label htmlFor={skill.name}>{skill.name} <span className="skill">({skill.type})</span></label><input name={`${skill.name}-skill`} placeholder="+0" type="text" value={skill.value} readOnly /><input name={`${skill.name}-prof`} type="checkbox" checked={skill.prof} readOnly />
                     </li>
                 ))}
             </ul>
@@ -353,17 +378,17 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <div className="money">
             <ul>
             <li>
-                <label htmlFor="ct">ct</label><input name="ct" />
+                <label htmlFor="ct">ct</label><input name="ct" value={25} />
             </li>
             <li>
-                <label htmlFor="k">k</label><input name="k" />
+                <label htmlFor="k">k</label><input name="k" value={10} />
             </li>
             <li>
-                <label htmlFor="qz">qz</label><input name="qz" />
+                <label htmlFor="qz">qz</label><input name="qz" value={5} />
             </li>
             </ul>
         </div>
-        <textarea className='widthCalc' placeholder="Equipment list here"></textarea>
+        <textarea className='widthCalc' placeholder="Equipment list here" value={equipment && equipment.join("\n")}></textarea>
         </div>
     </section>
     </section>
@@ -379,7 +404,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             readOnly
         />
         <div className="gemOne">
-            <input name="firstgemscore" value="1" className="gemOne" readOnly />
+            <input name="firstgemscore" value={gemLevel} className="gemOne" readOnly />
             <img src={diamondShape} alt="diamond" />
         </div>
         </div>

@@ -73,7 +73,7 @@ const CharacterBuilder = () => {
         modProp = `${prop}Mod`;
         charObj[modProp] = modVal;
 
-        //Determine value of SAVE
+        /*Determine value of SAVE
         let saveNum, saveVal, saveProp;
         saveNum = parseInt(modNum) + 2;
         //Adds a '+' if the modifier is >= 0
@@ -82,6 +82,7 @@ const CharacterBuilder = () => {
         //Creates the Saving Throw | ex. 'dexSave'
         saveProp = `${prop}Save`;
         charObj[saveProp] = saveVal;
+        */
 
         setCharacter({...charObj});
     }

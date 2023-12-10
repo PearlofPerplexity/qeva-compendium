@@ -530,7 +530,7 @@ form.charsheet main section.attacksandspellcasting > div > table input {
 }
 form.charsheet main section.attacksandspellcasting > div textarea {
   border: 0;
-  height: 6.25em;
+  height: 3.25em;
 }
 form.charsheet main section.equipment {
   border: 1px solid black;
@@ -578,6 +578,7 @@ form.charsheet main section.equipment > div > label {
 form.charsheet main section.equipment > div > textarea {
   flex: 1;
   border: 0;
+  height: 19.6em;
 }
 form.charsheet main section.flavor {
   padding: 10px;

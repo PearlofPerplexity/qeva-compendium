@@ -120,7 +120,18 @@ const CharacterCreator = () => {
     const toggle = () => {
         //Creates the character
         let charObj, d20;
-        if (!character.alignmentGem || !character.endrace || !character.endclass || (allAbility !== 0) || endclass.skill_prof.length !== endclass.skill_prof_num) {
+        if (
+            !character.alignmentGem
+            || 
+            !character.endrace
+            ||
+            !character.endclass
+            ||
+            (allAbility !== 0)
+            ||
+            (endclass.skill_prof_num && endclass.skill_prof.length !== endclass.skill_prof_num)
+            ) 
+        {
             console.log([str, dex, con, int, wis, cha]);
             toggleError();
             return;
@@ -151,7 +162,24 @@ const CharacterCreator = () => {
         charObj.profAndLang.push(`LANGUAGES: ${charObj.languages}`);
         //PROFICIENCIES
         //charObj.proficiencies = character.race.armor_prof.join(', ');
-        charObj.profAndLang.push(`PROFICIENCIES: ${charObj.armor_prof}`);
+        const raceWeaponArray = character.race.weapon_prof.map(wpn => wpn + ' weapons');
+        const classWeaponArray = character.endclass.weapon_prof.map(wpn => wpn + ' weapons');
+        const classArmorArray = character.endclass.armor_prof.map(armor => armor + ' armor');
+        const allProfs = [
+            //Race Proficiencies
+            ...character.race.armor_prof,
+            ...raceWeaponArray,
+            ...character.race.tool_prof,
+            ...character.race.saving_throw_prof,
+            ...character.race.skill_prof,
+            //Class Proficiencies
+            ...classArmorArray,
+            ...classWeaponArray,
+            ...character.endclass.tool_prof,
+            ...character.endclass.saving_throw_prof,
+            ...character.endclass.skill_prof,
+        ].join(', ');
+        charObj.profAndLang.push(`PROFICIENCIES: ${allProfs}`);
 
         //HIT POINTS: class hit die + constitution modifier
         charObj.hp = parseInt(character.endclass.hitDie.replace(/^d/, '')) + parseInt(character.conMod);
@@ -176,6 +204,59 @@ const CharacterCreator = () => {
                 charObj.features.push(`${ability.name.toUpperCase()}`)
             });
         }
+        
+        //EQUIPMENT: An array separated by \n to create line breaks in textarea
+        charObj.equipment = [
+            ...character.endclass.armor,
+            ...character.endclass.other_equip
+        ];
+        let packName = character.endclass.pack[0];
+        let pack;
+        if (packName === "Dungeoneer's pack") {
+            pack = [
+                'Backpack', 'Crowbar', 'Hammer', '10 Pitons', '10 Torches',
+                'Tinderbox', '10 Days of Rations', 'Waterskin', '50 Feet of Hempen Rope'
+            ];
+        } else if (packName === "Explorer's pack") {
+            pack = [
+                'Backpack', 'Bedroll', 'Mess Kit', 'Tinderbox', '10 Torches',
+                '10 Days of Rations', 'Waterskin', '50 Feet of Hempen Rope'
+              ];     
+        } else if (packName === "Burglar's pack") {
+            pack = [
+                'Backpack', 'Bag of 1,000 Ball Bearings', '10 Feet of String', 'Bell',
+                '5 Candles', 'Crowbar', 'Hammer', '10 Pitons', 'Hooded Lantern',
+                '2 Flasks of Oil', '5 Days of Rations', 'Tinderbox', 'Waterskin'
+              ];     
+        } else if (packName === "Diplomat's pack") {
+            pack = [
+                'Chest', '2 Cases for Maps and Scrolls', 'Set of Fine Clothes',
+                'Bottle of Ink', 'Ink Pen', 'Lamp', '2 Flasks of Oil', '5 Sheets of Paper',
+                'Vial of Perfume', 'Sealing Wax', 'Soap'
+              ];     
+        } else if (packName === "Priest's pack") {
+            pack = [
+                'Backpack', 'Blanket', '10 Candles', 'Tinderbox', 'Alms Box',
+                'Incense Censer', 'Vestments', '2 Days of Rations', 'Waterskin'
+              ];
+        } else if (packName === "Scholar's pack") {
+            pack = [
+                'Backpack', 'Book of Lore', 'Bottle of Ink', 'Ink Pen',
+                '10 Sheets of Parchment', 'Little Bag of Sand', 'Small Knife', 'Quill'
+              ];
+        } else if (packName === "Entertainer's pack") {
+            pack = [
+                'Backpack', 'Bedroll', '2 Costumes', '5 Candles',
+                '5 Days of Rations', 'Waterskin', 'Disguise Kit'
+              ];
+        } else if (packName === "Merchant's pack") {
+            pack = [
+                'Scale', 'Merchant\'s Scale', 'Abacus', 'Set of Fine Clothes',
+                'Bottle of Ink', 'Ink Pen', 'Lamp', '2 Flasks of Oil', '5 Sheets of Paper',
+                'Vial of Perfume', 'Sealing Wax', 'Soap'
+              ];
+        }
+        charObj.equipment.push(...pack);
         
         console.log(charObj);
         setCharacter({...charObj});
@@ -347,7 +428,7 @@ const CharacterCreator = () => {
                                     Class
                                 </li>
                             )}
-                            {endclass && (endclass.skill_prof.length !== endclass.skill_prof_num) && (
+                            {endclass && endclass.skill_prof_num && (endclass.skill_prof.length !== endclass.skill_prof_num) && (
                                 <li className='list-group-item'>
                                     <strong className='text-danger'>! </strong>
                                     Skill Proficiencies have not been allocated properly

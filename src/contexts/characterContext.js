@@ -37,6 +37,8 @@ const CharacterProvider = ({ children }) => {
         profAndLang: [],
         //Features
         features: [],
+        //Equipment
+        equipment: [],
         //Backstory
         personality: "", ideals: "", flaws: "",
     });
