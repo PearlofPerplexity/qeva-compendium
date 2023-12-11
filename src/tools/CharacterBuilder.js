@@ -18,6 +18,7 @@ import {
     HEAVYARMOR
 } from '../assets/shared/DNDITEMS';
 import AlignmentChart from './AlignmentChart';
+import AbilityScores from './AbilityScores';
 import RaceChart from './RaceChart';
 import ClassChart from './ClassChart';
 //CONTEXT
@@ -295,8 +296,8 @@ const CharacterBuilder = () => {
     return (
 
 <div className="container-fluid">
-    <div className="row row-height">
-        <form className="col text-center char-overflow">
+    <div className="row row-height mb-3">
+        <form className="col text-center char-overflow mb-5">
             <h2>Your Builder</h2>
             <div className='mb-2 char-name-input'>
                 <label>Character Name:&nbsp;</label>
@@ -310,6 +311,7 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                 <AccordionHeader targetId='1'>Ability Scores | Available Points: {allAbility}</AccordionHeader>
                     <AccordionBody accordionId='1'>
+                        <AbilityScores />
                         <div className='row m-lg-2'>
                             <div className="modbox col col-xl-4 col-xxl-2 m-sm-3 m-lg-0">
                                 <div>
@@ -667,6 +669,7 @@ const CharacterBuilder = () => {
                     </AccordionBody>
                 </AccordionItem>
             </Accordion>
+            <div style={{height:'300px'}}></div>
         </form>
         <div className="col text-center border-start border-3 border-light rounded char-overflow d-none d-md-block">
             <h2 className='mb-5'>{character.playerName ? (`${character.playerName.split(' ')[0]}'s`) : ('Your')} Character: {character.name}</h2>
@@ -896,6 +899,7 @@ const CharacterBuilder = () => {
             ) : (
                 <h5 className='mb-5 char-build-title'><strong className='text-danger'>! </strong><strong>CLASS: </strong></h5>
             )}
+            <div style={{height:'300px'}}></div>
         </div>
     </div>
 </div>

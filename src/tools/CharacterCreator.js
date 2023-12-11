@@ -16,6 +16,18 @@ import { CharacterContext } from '../contexts/characterContext';
 import { GEMS } from '../assets/shared/GEMS';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { RACES } from '../assets/shared/RACES';
+import { 
+    LIGHTARMOR,
+    MEDIUMARMOR,
+    HEAVYARMOR,
+ } from '../assets/shared/DNDITEMS';
+import { sortObjArray } from '../utils/dnd';
+
+const allArmors = sortObjArray([
+    ...LIGHTARMOR,
+    ...MEDIUMARMOR,
+    ...HEAVYARMOR
+]);
 
 const CharacterCreator = () => {
     
@@ -129,6 +141,16 @@ const CharacterCreator = () => {
             ||
             (allAbility !== 0)
             ||
+            (endclass.armor_options && endclass.armor.length < 1)
+            ||
+            (endclass.weapon_options && endclass.weapon.length < 1)
+            ||
+            (endclass.weapon2_options && endclass.weapon2.length < 1)
+            ||
+            (endclass.weapon3_options && endclass.weapon3.length < 1)
+            ||
+            (endclass.pack_options && endclass.pack.length < 1)
+            ||
             (endclass.skill_prof_num && endclass.skill_prof.length !== endclass.skill_prof_num)
             ) 
         {
@@ -141,9 +163,6 @@ const CharacterCreator = () => {
         //Die Rolls
 
         if (!character.initD20) charObj.initD20 = Math.floor(Math.random() * 20) + 1;
-        
-        //ARMOR CLASS
-        charObj.ac = (10 + parseInt(charObj.dexMod));
         
         //INITIATIVE
         charObj.init = `+${charObj.initD20 + parseInt(charObj.dexMod)}`;
@@ -161,25 +180,63 @@ const CharacterCreator = () => {
         charObj.languages = character.race.languages.join(', ');
         charObj.profAndLang.push(`LANGUAGES: ${charObj.languages}`);
         //PROFICIENCIES
-        //charObj.proficiencies = character.race.armor_prof.join(', ');
-        const raceWeaponArray = character.race.weapon_prof.map(wpn => wpn + ' weapons');
-        const classWeaponArray = character.endclass.weapon_prof.map(wpn => wpn + ' weapons');
-        const classArmorArray = character.endclass.armor_prof.map(armor => armor + ' armor');
+        let armorProfs,weaponProfs,toolProfs,skillProfs,savingThrowProfs;
+
+        //ARMOR PROFICENCIES
+        let armorProfArray = [...character.race.armor_prof, ...character.endclass.armor_prof];
+        if (armorProfArray.length === 1) armorProfs = 'Armor: ' + armorProfArray[0];
+        else if (armorProfArray.length === 0) armorProfs = 'Armor: None';
+        else armorProfs = 'Armor: ' + armorProfArray[0] + ', ' + armorProfArray.slice(1).join(', ');
+        //WEAPON PROFICENCIES
+        let weaponProfArray = [...character.race.weapon_prof, ...character.endclass.weapon_prof];
+        if (weaponProfArray.length === 1) weaponProfs = 'Weapons: ' + weaponProfArray[0];
+        else if (weaponProfArray.length === 0) weaponProfs = 'Weapons: None';
+        else weaponProfs = 'Weapons: ' + weaponProfArray[0] + ', ' + weaponProfArray.slice(1).join(', ');
+        //TOOL PROFICENCIES
+        let toolProfArray = [...character.race.tool_prof, ...character.endclass.tool_prof];
+        if (toolProfArray.length === 1) toolProfs = 'Tools: ' + toolProfArray[0];
+        else if (toolProfArray.length === 0) toolProfs = 'Tools: None';
+        else toolProfs = 'Tools: ' + toolProfArray[0] + ', ' + toolProfArray.slice(1).join(', ');
+        //SKILL PROFICENCIES
+        let skillProfArray = [...character.race.skill_prof, ...character.endclass.skill_prof];
+        if (skillProfArray.length === 1) skillProfs = 'Skills: ' + skillProfArray[0];
+        else if (skillProfArray.length === 0) skillProfs = 'Skills: None';
+        else skillProfs = 'Skills: ' + skillProfArray[0] + ', ' + skillProfArray.slice(1).join(', ');
+        //SAVING THROW PROFICENCIES
+        let savThrowProfArray = [...character.race.saving_throw_prof, ...character.endclass.saving_throw_prof];
+        if (savThrowProfArray.length === 1) savingThrowProfs = 'Saving Throws: ' + savThrowProfArray[0];
+        else if (armorProfArray.length === 0) armorProfs = 'Saving Throws: None';
+        else savingThrowProfs = 'Saving Throws: ' + savThrowProfArray[0] + ', ' + savThrowProfArray.slice(1).join(', ');
+
         const allProfs = [
-            //Race Proficiencies
-            ...character.race.armor_prof,
-            ...raceWeaponArray,
-            ...character.race.tool_prof,
-            ...character.race.saving_throw_prof,
-            ...character.race.skill_prof,
-            //Class Proficiencies
-            ...classArmorArray,
-            ...classWeaponArray,
-            ...character.endclass.tool_prof,
-            ...character.endclass.saving_throw_prof,
-            ...character.endclass.skill_prof,
+            armorProfs,
+            weaponProfs,
+            toolProfs,
+            skillProfs,
+            savingThrowProfs
         ].join(', ');
         charObj.profAndLang.push(`PROFICIENCIES: ${allProfs}`);
+
+        //ARMOR CLASS & SPEED
+        charObj.ac = (10 + parseInt(charObj.dexMod)); //AC
+        charObj.speed = character.race.speed; //Speed
+
+        const charArmorString = character.endclass.armor[0].toLowerCase();
+        const charArmor = allArmors.find(armor => armor.name.toLowerCase() === charArmorString);
+        
+        //Changes AC based on armor
+        if (charArmor) {
+            if (charArmor.addDexMod) {
+                charObj.ac = charArmor.ac + parseInt(character.dexMod);
+            } else {
+                charObj.ac = charArmor.ac;
+            }
+        }
+        //Changes SPEED based on armor
+        if (charArmor.type === 'heavy' && charArmor.stealthStr && charArmor.stealthStr > character.str) {
+            charObj.speed -= 10;
+            charObj.profAndLang.push(`DISADVANTAGES: Stealth`);
+        }
 
         //HIT POINTS: class hit die + constitution modifier
         charObj.hp = parseInt(character.endclass.hitDie.replace(/^d/, '')) + parseInt(character.conMod);
@@ -428,10 +485,40 @@ const CharacterCreator = () => {
                                     Class
                                 </li>
                             )}
+                            {endclass && endclass.armor_options && (endclass.armor.length < 1) && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Armor has not been selected in class
+                                </li>
+                            )}
+                            {endclass && endclass.weapon_options && (endclass.weapon.length < 1) && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Weapons have not been allocated properly in class
+                                </li>
+                            )}
+                            {endclass && endclass.weapon2_options && (endclass.weapon2.length < 1) && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Weapons have not been allocated properly in class
+                                </li>
+                            )}
+                            {endclass && endclass.weapon3_options && (endclass.weapon3.length < 1) && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    Weapons have not been allocated properly in class
+                                </li>
+                            )}
+                            {endclass && endclass.pack_options && (endclass.pack.length < 1) && (
+                                <li className='list-group-item'>
+                                    <strong className='text-danger'>! </strong>
+                                    A pack has not been selected in class
+                                </li>
+                            )}
                             {endclass && endclass.skill_prof_num && (endclass.skill_prof.length !== endclass.skill_prof_num) && (
                                 <li className='list-group-item'>
                                     <strong className='text-danger'>! </strong>
-                                    Skill Proficiencies have not been allocated properly
+                                    Skill Proficiencies have not been allocated properly in class
                                 </li>
                             )}
                         </ul>

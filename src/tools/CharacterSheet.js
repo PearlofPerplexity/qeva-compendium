@@ -2,6 +2,12 @@ import React, { useState, useContext, useEffect } from 'react';
 import diamondShape from '../assets/imgs/diamond-shape.png';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
+import { end } from '@popperjs/core';
+import { 
+    SIMPLEWEAPONS,
+    MARTIALWEAPONS,
+    RANGEDWEAPONS
+} from '../assets/shared/DNDITEMS';
 
 const CharacterSheet = React.forwardRef((props, ref) => {
     
@@ -42,6 +48,27 @@ const CharacterSheet = React.forwardRef((props, ref) => {
 
     } = character;
 
+    const [gemLevel, setGemLevel] = useState(1);
+    const [pureAbilityMods, setPureAbilityMods] = useState(
+        {
+            _strMod: parseInt(strMod),
+            _dexMod: parseInt(dexMod),
+            _conMod: parseInt(conMod),
+            _intMod: parseInt(intMod),
+            _wisMod: parseInt(wisMod),
+            _chaMod: parseInt(chaMod),
+        }
+    );
+    const {
+        _strMod,
+        _dexMod,
+        _conMod,
+        _intMod,
+        _wisMod,
+        _chaMod,
+    } = pureAbilityMods;
+    const [passivePer, setPassivePer] = useState(10);
+
     const [skills, setSkills] = useState(
         [
             { id: 0, name: 'Acrobatics', type:'Dex', value: dexMod, prof: false },
@@ -64,7 +91,6 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             { id: 17, name: 'Survival', type:'Wis', value: wisMod, prof: false }
         ]
     );
-
     const [savingThrows, setSavingThrows] = useState(
         [
             { id: 0, name: 'Strength', type:'Str', value: strMod, prof: false },
@@ -75,21 +101,38 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             { id: 5, name: 'Charisma', type:'Cha', value: chaMod, prof: false },
         ]
     );
-
-    const [gemLevel, setGemLevel] = useState(1);
+    const allWeapons = [
+        ...SIMPLEWEAPONS,
+        ...MARTIALWEAPONS,
+        ...RANGEDWEAPONS
+    ];
+    const charWeapons = [
+        ...endclass.weapon,
+        ...endclass.weapon2,
+        ...endclass.weapon3
+    ];
+    const [attacks, setAttacks] = useState([
+        {id: 0, name: '', attack: '', damage: ''},
+        {id: 1, name: '', attack: '', damage: ''},
+        {id: 2, name: '', attack: '', damage: ''},
+    ]);
 
     useEffect(() => {
         //Set gem level
-        console.log('gemlevel');
-        if (
-            race.heartStone.toLowerCase().includes(alignmentGem.name.toLowerCase()) 
-            || 
-            race.spawnStone.toLowerCase().includes(alignmentGem.name.toLowerCase())
+        if (race.heartStone.toLowerCase().includes(alignmentGem.name.toLowerCase()) 
+            || race.spawnStone.toLowerCase().includes(alignmentGem.name.toLowerCase())
         ) {
             setGemLevel(2);
         } else {
             setGemLevel(1);
         }
+        let newPassivePer = 10 + parseInt(wisMod);
+        if(endclass.skill_prof.join(',').toLowerCase().includes('perception')
+            || race.skill_prof.join(',').toLowerCase().includes('perception')
+        ) {
+            newPassivePer += profBonus;
+        }
+        setPassivePer(newPassivePer);
         //Set saving throws
         let newSavThrows = savingThrows;
         savingThrows.forEach(sThrow => {            
@@ -114,6 +157,38 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             }
         });
         setSkills([...newSkills]);
+        //Set attacks
+        let newAttacks = attacks;
+        charWeapons.forEach((wpn, index) => {
+            //Find the Weapon in the dictionary of weapons
+            const wpnRef = allWeapons.find(item => wpn.toLowerCase().includes(item.name.toLowerCase()));
+            if(!wpnRef) return;
+            let atkBonus;
+            //Calculate modifier to be used
+            if (wpnRef.properties.toLowerCase().includes('finesse')) {
+                atkBonus = parseInt(dexMod);
+            } else {
+                atkBonus = parseInt(strMod);
+            }
+            //Calculate the atkBonus
+            if (endclass.weapon_prof.find(prof => prof.toLowerCase().includes(wpnRef.type.toLowerCase()))) {
+                atkBonus += profBonus;
+            } else if (endclass.weapon_prof.includes(wpnRef.name)) {
+                atkBonus += profBonus;
+            }
+            //Add a + or minus
+            if (atkBonus >= 0) atkBonus = `+${atkBonus}`;
+            else atkBonus = `-${atkBonus}`;
+            //Create the weapon object using the weapon reference
+            const newWpn = {
+                id: index, 
+                name: wpnRef.name,
+                attack: atkBonus,
+                damage: wpnRef.damage,
+            }
+            newAttacks[index] = newWpn;
+        });
+        setAttacks(newAttacks);
     }, []);
 
 
@@ -153,50 +228,50 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <ul>
             <li>
             <div className="score">
-                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder={10} value={str} className="stat" readOnly />
+                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" placeholder={10} value={_strMod} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Strengthmod" placeholder="+0" value={strMod} className="statmod" readOnly />
+                <input name="Strengthmod" placeholder="+0" value={str} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value={dex} className="stat" readOnly />
+                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value={_dexMod} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Dexteritymod" placeholder="+0" value={dexMod} className="statmod" readOnly />
+                <input name="Dexteritymod" placeholder="+0" value={dex} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value={con} className="stat" readOnly />
+                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value={_conMod} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Constitutionmod" placeholder="+0" value={conMod} className="statmod" readOnly />
+                <input name="Constitutionmod" placeholder="+0" value={con} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value={wis}className="stat" readOnly />
+                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value={_wisMod}className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Wisdommod" placeholder="+0" value={wisMod} readOnly />
+                <input name="Wisdommod" placeholder="+0" value={wis} readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value={int} className="stat" readOnly />
+                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value={_intMod} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Intelligencemod" placeholder="+0" value={intMod} className="statmod" readOnly />
+                <input name="Intelligencemod" placeholder="+0" value={int} className="statmod" readOnly />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value={cha} className="stat" readOnly />
+                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value={_chaMod} className="stat" readOnly />
             </div>
             <div className="modifier">
-                <input name="Charismamod" placeholder="+0" value={chaMod} className="statmod" readOnly />
+                <input name="Charismamod" placeholder="+0" value={cha} className="statmod" readOnly />
             </div>
             </li>
         </ul>
@@ -206,7 +281,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             <div className="label-container">
             <label htmlFor="inspiration">Inspiration</label>
             </div>
-            <input name="inspiration" type="checkbox" checked={inspiration} readOnly />
+            <input name="inspiration" type="checkbox" readOnly />
         </div>
         <div className="proficiencybonus box">
             <div className="label-container">
@@ -244,7 +319,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
         <div className="label-container">
         <label htmlFor="passiveperception">Passive Perception (Wisdom)</label>
         </div>
-        <input name="passiveperception" placeholder="10" value={wis} readOnly />
+        <input name="passiveperception" placeholder="10" value={passivePer} readOnly />
     </div>
     <div className="otherprofs box textblock">
         <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea className='widthCalc' name="otherprofs" value={profAndLang && profAndLang.join("\n\n")} readOnly></textarea>
@@ -286,7 +361,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             <label htmlFor="totalhd">Total</label><input name="totalhd" placeholder="1d10" type="text" value={hitDie} readOnly />
             </div>
             <div className="remaining">
-            <label htmlFor="remaininghd">Hit Dice</label><input name="remaininghd" type="text" />
+            <label htmlFor="remaininghd">Hit Dice</label><input name="remaininghd" type="text" placeholder='1' />
             </div>
         </div>
         </div>
@@ -325,8 +400,8 @@ const CharacterSheet = React.forwardRef((props, ref) => {
                 <th>
                 Name
                 </th>
-                <th>
-                Atk Bonus
+                <th style={{width:'10%'}}>
+                Atk
                 </th>
                 <th>
                 Damage/Type
@@ -334,39 +409,19 @@ const CharacterSheet = React.forwardRef((props, ref) => {
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>
-                <input name="atkname1" type="text" />
-                </td>
-                <td>
-                <input name="atkbonus1" type="text" />
-                </td>
-                <td>
-                <input name="atkdamage1" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <input name="atkname2" type="text" />
-                </td>
-                <td>
-                <input name="atkbonus2" type="text" />
-                </td>
-                <td>
-                <input name="atkdamage2" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <input name="atkname3" type="text" />
-                </td>
-                <td>
-                <input name="atkbonus3" type="text" />
-                </td>
-                <td>
-                <input name="atkdamage3" type="text" />
-                </td>
-            </tr>
+                {attacks.map(attack => (
+                    <tr>
+                        <td>
+                        <input name={attack.name} type="text" value={attack.name} readOnly />
+                        </td>
+                        <td style={{width:'10%'}}>
+                        <input name={attack.attack} type="text" value={attack.attack} readOnly />
+                        </td>
+                        <td>
+                        <input name={attack.damage} type="text" value={attack.damage} readOnly />
+                        </td>
+                    </tr>
+                ))}
             </tbody>
         </table>
         <textarea className='widthCalc'></textarea>

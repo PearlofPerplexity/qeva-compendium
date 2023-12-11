@@ -5,6 +5,8 @@ import { CharacterContext } from '../contexts/characterContext';
 
 const CharacterSheetEditable = React.forwardRef((props, ref) => {
 
+    const profBonus = 2; //Always 2 for Level 1
+
     const [character, setCharacter] = useContext(CharacterContext);
 
     const { 
@@ -37,6 +39,9 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         personality, ideals, flaws,
 
     } = character;
+
+    
+
 
     return (
 <form className="charsheet" ref={ref}>

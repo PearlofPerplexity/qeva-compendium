@@ -1078,7 +1078,7 @@ export const CLASSES = [
                 //PROFICIENCIES
                 armor_prof: ["Light"],
                 weapon_prof: ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
-                tool_prof: ["3 Musical instruments of your choice"],
+                tool_prof: ["3 Musical instruments"],
                 saving_throw_prof: ["Dexterity", "Charisma"],
                 skill_prof_selection: ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"],
                 skill_prof: [],
