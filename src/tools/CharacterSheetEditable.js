@@ -1,16 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import diamondShape from '../assets/imgs/diamond-shape.png';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
+import { 
+    SIMPLEWEAPONS,
+    MARTIALWEAPONS,
+    RANGEDWEAPONS
+} from '../assets/shared/DNDITEMS';
 
 const CharacterSheetEditable = React.forwardRef((props, ref) => {
 
     const profBonus = 2; //Always 2 for Level 1
 
     const [character, setCharacter] = useContext(CharacterContext);
-
     const { 
-
         //Level
         level,
         //Name
@@ -35,36 +38,178 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         ac, init, hp, hitDie, inspiration,
         //Features
         features,
+        //Equipment
+        equipment,
         //Backstory
         personality, ideals, flaws,
-
     } = character;
 
-    
+    const [gemLevel, setGemLevel] = useState(1);
+    const [pureAbilityMods, setPureAbilityMods] = useState(
+        {
+            _strMod: parseInt(strMod),
+            _dexMod: parseInt(dexMod),
+            _conMod: parseInt(conMod),
+            _intMod: parseInt(intMod),
+            _wisMod: parseInt(wisMod),
+            _chaMod: parseInt(chaMod),
+        }
+    );
+    const {
+        _strMod,
+        _dexMod,
+        _conMod,
+        _intMod,
+        _wisMod,
+        _chaMod,
+    } = pureAbilityMods;
+    const [passivePer, setPassivePer] = useState(10);
+
+    const [skills, setSkills] = useState(
+        [
+            { id: 0, name: 'Acrobatics', type:'Dex', value: dexMod, prof: false },
+            { id: 1, name: 'Animal Handling', type:'Wis', value: wisMod, prof: false },
+            { id: 2, name: 'Arcana', type:'Int', value: intMod, prof: false },
+            { id: 3, name: 'Athletics', type:'Str', value: strMod, prof: false },
+            { id: 4, name: 'Deception', type:'Cha', value: chaMod, prof: false },
+            { id: 5, name: 'History', type:'Int', value: intMod, prof: false },
+            { id: 6, name: 'Insight', type:'Wis', value: wisMod, prof: false },
+            { id: 7, name: 'Intimidation', type:'Cha', value: chaMod, prof: false },
+            { id: 8, name: 'Investigation', type:'Int', value: intMod, prof: false },
+            { id: 9, name: 'Medicine', type:'Wis', value: wisMod, prof: false },
+            { id: 10, name: 'Nature', type:'Int', value: intMod, prof: false },
+            { id: 11, name: 'Perception', type:'Wis', value: wisMod, prof: false },
+            { id: 12, name: 'Performance', type:'Cha', value: chaMod, prof: false },
+            { id: 13, name: 'Persuasion', type:'Cha', value: chaMod, prof: false },
+            { id: 14, name: 'Religion', type:'Int', value: intMod, prof: false },
+            { id: 15, name: 'Sleight of Hand', type:'Dex', value: dexMod, prof: false },
+            { id: 16, name: 'Stealth', type:'Dex', value: dexMod, prof: false },
+            { id: 17, name: 'Survival', type:'Wis', value: wisMod, prof: false }
+        ]
+    );
+    const [savingThrows, setSavingThrows] = useState(
+        [
+            { id: 0, name: 'Strength', type:'Str', value: strMod, prof: false },
+            { id: 1, name: 'Dexterity', type:'Dex', value: dexMod, prof: false },
+            { id: 2, name: 'Constitution', type:'Con', value: conMod, prof: false },
+            { id: 3, name: 'Wisdom',  type:'Wis', value: wisMod, prof: false },
+            { id: 4, name: 'Intelligence', type:'Int', value: intMod, prof: false },
+            { id: 5, name: 'Charisma', type:'Cha', value: chaMod, prof: false },
+        ]
+    );
+    const allWeapons = [
+        ...SIMPLEWEAPONS,
+        ...MARTIALWEAPONS,
+        ...RANGEDWEAPONS
+    ];
+    const charWeapons = [
+        ...endclass.weapon,
+        ...endclass.weapon2,
+        ...endclass.weapon3
+    ];
+    const [attacks, setAttacks] = useState([
+        {id: 0, name: '', attack: '', damage: ''},
+        {id: 1, name: '', attack: '', damage: ''},
+        {id: 2, name: '', attack: '', damage: ''},
+    ]);
+
+    useEffect(() => {
+        //Set gem level
+        if (race.heartStone.toLowerCase().includes(alignmentGem.name.toLowerCase()) 
+            || race.spawnStone.toLowerCase().includes(alignmentGem.name.toLowerCase())
+        ) {
+            setGemLevel(2);
+        } else {
+            setGemLevel(1);
+        }
+        let newPassivePer = 10 + parseInt(wisMod);
+        if(endclass.skill_prof.join(',').toLowerCase().includes('perception')
+            || race.skill_prof.join(',').toLowerCase().includes('perception')
+        ) {
+            newPassivePer += profBonus;
+        }
+        setPassivePer(newPassivePer);
+        //Set saving throws
+        let newSavThrows = savingThrows;
+        savingThrows.forEach(sThrow => {            
+            if(endclass.saving_throw_prof.includes(sThrow.name) || race.saving_throw_prof.includes(sThrow.name)) {
+                let newValue = parseInt(character[sThrow.type.toLowerCase()+'Mod']) + profBonus; //Adds +2
+                if (newValue >= 0) newValue = `+${newValue}`;
+                else newValue = `-${newValue}`;
+                newSavThrows[sThrow.id].value = newValue;
+                newSavThrows[sThrow.id].prof = true; //Checks the checkbox
+            }
+        });
+        setSavingThrows([...newSavThrows]);
+        //Set skill values
+        let newSkills = skills;
+        skills.forEach(skill => {            
+            if(endclass.skill_prof.includes(skill.name) || race.skill_prof.includes(skill.name)) {
+                let newValue = parseInt(character[skill.type.toLowerCase()+'Mod']) + profBonus; //Adds +2
+                if (newValue >= 0) newValue = `+${newValue}`;
+                else newValue = `-${newValue}`;
+                newSkills[skill.id].value = newValue;
+                newSkills[skill.id].prof = true; //Checks the checkbox
+            }
+        });
+        setSkills([...newSkills]);
+        //Set attacks
+        let newAttacks = attacks;
+        charWeapons.forEach((wpn, index) => {
+            //Find the Weapon in the dictionary of weapons
+            const wpnRef = allWeapons.find(item => wpn.toLowerCase().includes(item.name.toLowerCase()));
+            if(!wpnRef) return;
+            let atkBonus;
+            //Calculate modifier to be used
+            if (wpnRef.properties.toLowerCase().includes('finesse')) {
+                atkBonus = parseInt(dexMod);
+            } else {
+                atkBonus = parseInt(strMod);
+            }
+            //Calculate the atkBonus
+            if (endclass.weapon_prof.find(prof => prof.toLowerCase().includes(wpnRef.type.toLowerCase()))) {
+                atkBonus += profBonus;
+            } else if (endclass.weapon_prof.includes(wpnRef.name)) {
+                atkBonus += profBonus;
+            }
+            //Add a + or minus
+            if (atkBonus >= 0) atkBonus = `+${atkBonus}`;
+            else atkBonus = `-${atkBonus}`;
+            //Create the weapon object using the weapon reference
+            const newWpn = {
+                id: index, 
+                name: wpnRef.name,
+                attack: atkBonus,
+                damage: wpnRef.damage,
+            }
+            newAttacks[index] = newWpn;
+        });
+        setAttacks(newAttacks);
+    }, []);
 
 
     return (
 <form className="charsheet" ref={ref}>
 <header>
     <section className="charname">
-    <label htmlFor="charname">Character Name</label><input name="charname" value={name} />
+    <label htmlFor="charname">Character Name</label><input name="charname" defaultValue={name} />
     </section>
     <section className="misc">
     <ul>
         <li>
-        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" value={`${endclass && endclass.name} ${level}`} />
+        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" defaultValue={`${endclass && endclass.name} ${level}`} />
         </li>
         <li>
-        <label htmlFor="background">Gemstone</label><input name="background" value={alignmentGem && alignmentGem.name} />
+        <label htmlFor="background">Gemstone</label><input name="background" defaultValue={alignmentGem && alignmentGem.name} />
         </li>
         <li>
-        <label htmlFor="playername">Player Name</label><input name="playername" value={playerName} />
+        <label htmlFor="playername">Player Name</label><input name="playername" defaultValue={playerName} />
         </li>
         <li>
         <label htmlFor="race">Race</label><input name="race" value={endrace && endrace.singName} />
         </li>
         <li>
-        <label htmlFor="alignment">Alignment</label><input name="alignment" value={alignment} />
+        <label htmlFor="alignment">Alignment</label><input name="alignment" defaultValue={alignment} />
         </li>
         <li>
         <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" />
@@ -79,50 +224,50 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         <ul>
             <li>
             <div className="score">
-                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" value={str} className="stat" />
+                <label htmlFor="Strengthscore">Strength</label><input name="Strengthscore" value={_strMod} className="stat" />
             </div>
             <div className="modifier">
-                <input name="Strengthmod" value={strMod} className="statmod" />
+                <input name="Strengthmod" defaultValue={str} className="statmod" />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" value={dex} className="stat" />
+                <label htmlFor="Dexterityscore">Dexterity</label><input name="Dexterityscore" value={_dexMod} className="stat" />
             </div>
             <div className="modifier">
-                <input name="Dexteritymod" value={dexMod} className="statmod" />
+                <input name="Dexteritymod" defaultValue={dex} className="statmod" />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" value={con} className="stat" />
+                <label htmlFor="Constitutionscore">Constitution</label><input name="Constitutionscore" value={_conMod} className="stat" />
             </div>
             <div className="modifier">
-                <input name="Constitutionmod" value={conMod} className="statmod" />
+                <input name="Constitutionmod" defaultValue={con} className="statmod" />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" value={wis}className="stat" />
+                <label htmlFor="Wisdomscore">Wisdom</label><input name="Wisdomscore" value={_wisMod}className="stat" />
             </div>
             <div className="modifier">
-                <input name="Wisdommod" value={wisMod} />
+                <input name="Wisdommod" defaultValue={wis} />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" value={int} className="stat" />
+                <label htmlFor="Intelligencescore">Intelligence</label><input name="Intelligencescore" value={_intMod} className="stat" />
             </div>
             <div className="modifier">
-                <input name="Intelligencemod" value={intMod} className="statmod" />
+                <input name="Intelligencemod" defaultValue={int} className="statmod" />
             </div>
             </li>
             <li>
             <div className="score">
-                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" value={cha} className="stat" />
+                <label htmlFor="Charismascore">Charisma</label><input name="Charismascore" value={_chaMod} className="stat" />
             </div>
             <div className="modifier">
-                <input name="Charismamod" value={chaMod} className="statmod" />
+                <input name="Charismamod" defaultValue={cha} className="statmod" />
             </div>
             </li>
         </ul>
@@ -132,34 +277,21 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             <div className="label-container">
             <label htmlFor="inspiration">Inspiration</label>
             </div>
-            <input name="inspiration" type="checkbox" checked={inspiration} />
+            <input name="inspiration" type="checkbox" readOnly />
         </div>
         <div className="proficiencybonus box">
             <div className="label-container">
             <label htmlFor="proficiencybonus">Proficiency Bonus</label>
             </div>
-            <input name="proficiencybonus" value='+2' />
+            <input name="proficiencybonus" value={`+${profBonus}`} />
         </div>
         <div className="saves list-section box">
             <ul>
-            <li>
-                <label htmlFor="Strength-save">Strength</label><input name="Strength-save" type="text" value={strSave} /><input name="Strength-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Dexterity-save">Dexterity</label><input name="Dexterity-save" type="text" value={dexSave} /><input name="Dexterity-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Constitution-save">Constitution</label><input name="Constitution-save" type="text" value={conSave} /><input name="Constitution-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Wisdom-save">Wisdom</label><input name="Wisdom-save" type="text" value={wisSave} /><input name="Wisdom-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Intelligence-save">Intelligence</label><input name="Intelligence-save" type="text" value={intSave} /><input name="Intelligence-save-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Charisma-save">Charisma</label><input name="Charisma-save" type="text" value={chaSave} /><input name="Charisma-save-prof" type="checkbox" />
-            </li>
+                {savingThrows.map(sThrow => (
+                    <li key={sThrow.id}>
+                        <label htmlFor={`${sThrow.name}-save`}>{sThrow.name}</label><input name={`${sThrow.name}-save`} placeholder="+0" type="text" value={sThrow.value} readOnly /><input name={`${sThrow.name}-prof`} type="checkbox" checked={sThrow.prof} readOnly />
+                    </li>
+                ))}
             </ul>
             <div className="label">
             Saving Throws
@@ -167,60 +299,11 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         </div>
         <div className="skills list-section box">
             <ul>
-            <li>
-                <label htmlFor="Acrobatics">Acrobatics <span className="skill">(Dex)</span></label><input name="Acrobatics-skill" type="text" /><input name="Acrobatics-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Animal Handling">Animal Handling <span className="skill">(Wis)</span></label><input name="AnimalHandling-skill" type="text" /><input name="Animal Handling-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Arcana">Arcana <span className="skill">(Int)</span></label><input name="Arcana-skill" type="text" /><input name="Arcana-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Athletics">Athletics <span className="skill">(Str)</span></label><input name="Athletics-skill" type="text" /><input name="Athletics-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Deception">Deception <span className="skill">(Cha)</span></label><input name="Deception-skill" type="text" /><input name="Deception-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="History">History <span className="skill">(Int)</span></label><input name="History-skill" type="text" /><input name="History-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Insight">Insight <span className="skill">(Wis)</span></label><input name="Insight-skill" type="text" /><input name="Insight-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Intimidation">Intimidation <span className="skill">(Cha)</span></label><input name="Intimidation-skill" type="text" /><input name="Intimidation-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Investigation">Investigation <span className="skill">(Int)</span></label><input name="Investigation-skill" type="text" /><input name="Investigation-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Medicine">Medicine <span className="skill">(Wis)</span></label><input name="Medicine-skill" type="text" /><input name="Medicine-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Nature">Nature <span className="skill">(Int)</span></label><input name="Nature-skill" type="text" /><input name="Nature-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Perception">Perception <span className="skill">(Wis)</span></label><input name="Perception-skill" type="text" /><input name="Perception-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Performance">Performance <span className="skill">(Cha)</span></label><input name="Performance-skill" type="text" /><input name="Performance-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Persuasion">Persuasion <span className="skill">(Cha)</span></label><input name="Persuasion-skill" type="text" /><input name="Persuasion-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Religion">Religion <span className="skill">(Int)</span></label><input name="Religion-skill" type="text" /><input name="Religion-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Sleight of Hand">Sleight of Hand <span className="skill">(Dex)</span></label><input name="SleightofHand-skill" type="text" /><input name="Sleight of Hand-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Stealth">Stealth <span className="skill">(Dex)</span></label><input name="Stealth-skill" type="text" /><input name="Stealth-prof" type="checkbox" />
-            </li>
-            <li>
-                <label htmlFor="Survival">Survival <span className="skill">(Wis)</span></label><input name="Survival-skill" type="text" /><input name="Survival-prof" type="checkbox" />
-            </li>
+                {skills.map(skill => (
+                    <li key={skill.id}>
+                        <label htmlFor={skill.name}>{skill.name} <span className="skill">({skill.type})</span></label><input name={`${skill.name}-skill`} placeholder="+0" type="text" value={skill.value} readOnly /><input name={`${skill.name}-prof`} type="checkbox" checked={skill.prof} readOnly />
+                    </li>
+                ))}
             </ul>
             <div className="label">
             Skills
@@ -232,10 +315,10 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         <div className="label-container">
         <label htmlFor="passiveperception">Passive Perception (Wisdom)</label>
         </div>
-        <input name="passiveperception" value={wis} />
+        <input name="passiveperception" value={passivePer} />
     </div>
     <div className="otherprofs box textblock">
-        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea className='widthCalc' name="otherprofs" value={profAndLang && profAndLang.join("\n\n")} ></textarea>
+        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea className='widthCalc' name="otherprofs" defaultValue={profAndLang && profAndLang.join("\n\n")} ></textarea>
     </div>
     </section>
     <section>
@@ -274,7 +357,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             <label htmlFor="totalhd">Total</label><input name="totalhd" type="text" value={hitDie} />
             </div>
             <div className="remaining">
-            <label htmlFor="remaininghd">Hit Dice</label><input name="remaininghd" type="text" />
+            <label htmlFor="remaininghd">Hit Dice</label><input name="remaininghd" type="text" placeholder='1' />
             </div>
         </div>
         </div>
@@ -313,7 +396,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
                 <th>
                 Name
                 </th>
-                <th>
+                <th style={{width:'10%'}}>
                 Atk Bonus
                 </th>
                 <th>
@@ -322,39 +405,19 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>
-                <input name="atkname1" type="text" />
-                </td>
-                <td>
-                <input name="atkbonus1" type="text" />
-                </td>
-                <td>
-                <input name="atkdamage1" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <input name="atkname2" type="text" />
-                </td>
-                <td>
-                <input name="atkbonus2" type="text" />
-                </td>
-                <td>
-                <input name="atkdamage2" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <input name="atkname3" type="text" />
-                </td>
-                <td>
-                <input name="atkbonus3" type="text" />
-                </td>
-                <td>
-                <input name="atkdamage3" type="text" />
-                </td>
-            </tr>
+                {attacks.map(attack => (
+                    <tr>
+                        <td>
+                        <input name={attack.name} type="text" defaultValue={attack.name} />
+                        </td>
+                        <td style={{width:'10%'}}>
+                        <input name={attack.attack} type="text" value={attack.attack} readOnly />
+                        </td>
+                        <td>
+                        <input name={attack.damage} type="text" value={attack.damage} readOnly />
+                        </td>
+                    </tr>
+                ))}
             </tbody>
         </table>
         <textarea className='widthCalc'></textarea>
@@ -376,7 +439,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             </li>
             </ul>
         </div>
-        <textarea className='widthCalc' ></textarea>
+        <textarea className='widthCalc' defaultValue={equipment && equipment.join("\n")}></textarea>
         </div>
     </section>
     </section>
@@ -387,10 +450,10 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         <input 
             name="firstgem"  
             className="label-container"
-            value={`${alignmentGem && alignmentGem.name} (${alignmentGem && alignmentGem.quality})`}
+            defaultValue={`${alignmentGem && alignmentGem.name} (${alignmentGem && alignmentGem.quality})`}
         />
         <div className="gemOne">
-            <input name="firstgemscore" value="1" className="gemOne" />
+            <input name="firstgemscore" value={gemLevel} className="gemOne" />
             <img src={diamondShape} alt="diamond" />
         </div>
         </div>
@@ -431,19 +494,19 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
     </section>
     <section className="flavor">
         <div className="personality">
-        <label htmlFor="personality">Personality</label><textarea className='widthCalc' name="personality" value={personality} ></textarea>
+        <label htmlFor="personality">Personality</label><textarea className='widthCalc' name="personality" defaultValue={personality} ></textarea>
         </div>
         <div className="ideals">
-        <label htmlFor="ideals">Ideals</label><textarea className='widthCalc' name="ideals" value={ideals} ></textarea>
+        <label htmlFor="ideals">Ideals</label><textarea className='widthCalc' name="ideals" defaultValue={ideals} ></textarea>
         </div>
         <div className="flaws">
-        <label htmlFor="flaws">Flaws</label><textarea className='widthCalc' name="flaws" value={flaws} ></textarea>
+        <label htmlFor="flaws">Flaws</label><textarea className='widthCalc' name="flaws" defaultValue={flaws} ></textarea>
         </div>
     </section>
     <section className="features">
         <div>
         <label htmlFor="features">Features & Traits</label>
-        <textarea name="features" value={features && features.join("\n\n")} ></textarea>
+        <textarea name="features" defaultValue={features && features.join("\n\n")} ></textarea>
         </div>
     </section>
     </section>

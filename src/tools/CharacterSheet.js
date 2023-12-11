@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from 'react';
 import diamondShape from '../assets/imgs/diamond-shape.png';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
-import { end } from '@popperjs/core';
 import { 
     SIMPLEWEAPONS,
     MARTIALWEAPONS,
