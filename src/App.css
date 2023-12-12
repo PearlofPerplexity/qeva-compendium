@@ -539,6 +539,10 @@ div.accordion button.accordion-button {
 	/* ^was important */
 }
 
+.modal-header .btn-close {
+	background-color: white;
+}
+
 .modal-content, .modal-body button {
 	background-color: var(--dk-gray-900);
 	/* ^was important */

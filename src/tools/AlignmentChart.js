@@ -257,9 +257,35 @@ const AlignmentChart = (props) => {
                 </button>
             ) : ('')}
             <Modal isOpen={modal} toggle={toggle} fullscreen>
-                <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="twemoji:gem-stone"></i> Gem Chart</ModalHeader>
+                <ModalHeader toggle={toggle}>
+                    <i className="iconify fs-2" data-icon="twemoji:gem-stone"></i> Gem Chart
+                </ModalHeader>
                 <ModalBody>
                 <div className='container'>
+                    {props.loc === 'charCreate' && (
+                        <>
+                        <div className='row text-center'>
+                            <h3>What is Alignment? | Why is it important?</h3>
+                            <p>
+                                When choosing an alignment, you are choosing what kind of character you want to be. Do you care about others? Do you follow the rules or do you follow your own? Whatever you choose will impact the gems you can align to. Use the <i className="uil uil-info-circle"></i> information boxes to learn more about each chart. To start, here is a quick review:
+                            </p>
+                        </div>
+                        <div className='row justify-content-center text-center mb-4'>
+                            <div className='col-4'>
+                                <h4>Moral/Ethical Chart</h4>
+                                <p>
+                                    The moral/ethical chart helps you select your player's alignment. Use the <i className="uil uil-info-circle"></i> information boxes to choose a moral and ethic separately. Together, they will show you your alignment.
+                                </p>
+                            </div>
+                            <div className='col-5'>
+                                <h4>Gemstone Charts</h4>
+                                <p>
+                                    Below the moral/ethical chart, the gemstone charts outline the abilities of each gemstone. Your alignment will determine what gems you can align to. Characters who are 'good' cannot align to dark & unbound stones. Characters who are 'evil' cannot align to moral stones. Use the <i className="uil uil-info-circle"></i> information boxes to learn more about each type of stone.
+                                </p>
+                            </div>
+                        </div>
+                        </>
+                    )}
                     <div className='row text-center'>
                         <h3>Ethical Axis 
                             <Button className='text-center info' onClick={ethicToggle}>
@@ -338,126 +364,128 @@ const AlignmentChart = (props) => {
                             </table>
                         </div>
                     </div>
-                    <div className='row text-center mb-4'>
-                        <h3>Gemstone Quality
-                            <Button className='text-center info' onClick={qualityToggle}>
-                                🛈
-                            </Button>
-                        </h3>
-                        <Offcanvas isOpen={quality} toggle={qualityToggle} direction={'end'}>
-                            <OffcanvasHeader toggle={qualityToggle}>
-                            Gemstone Quality
-                            </OffcanvasHeader>
-                            <OffcanvasBody>
-                                <p>
-                                The potency of a gem is quanitified by alignment points, which are affected by two factors: the gem itself and the alignemnt of its wielder.
-                                </p>
-                                <h5>Power Containment</h5>
-                                <p>
-                                Power containment describes the amount of total alignment points a gem can hold (ex. a player at level 3 can wield all gems with color "K" and below. If the player has a gem with color "J", it will hold 7 alignment points). Gems' alignment points refresh at every short rest for moral stones, every long rest for power stones and never for divine stones. A player can increase a gem's alignment by aligning to its quality. Oppositely, they will decrease its quality by going against its quality. A gem's alignment points will not refresh if the gem is drawn down to 0 alignment points.
-                                </p>
-                                <h5>Power Output</h5>
-                                <p>
-                                Power output describes the amount of alignment points a gem can draw in a single action. It can be decided by either the clarity or carat of the gem - whichever is higher (ex. a gem with "I3" clarity and "0.65" carat can output 9 alignment points in a single action). Clarity and carat do not change and are not impacted by player level.
-                                </p>
-                            </OffcanvasBody>
-                        </Offcanvas>
-                        <div className='row text-center'>
-                            <h5 className='col'><strong>CARAT: {gem.carat}</strong></h5>
-                            <p className='col'>Req. Level: {gem.lvl}</p>
-                            <p className='col'>Containment Pts: {gem.containmentPts}</p>
-                            <h5 className='col'><strong>CLARITY: {gem.clarity}</strong></h5>
-                            <p className='col'>Req. Color: {gem.color}</p>
-                            <p className='col'>Output Pts: {gem.outputPts}</p>
+                    {props.loc === 'toolPage' && (
+                        <div className='row text-center mb-4'>
+                            <h3>Gemstone Quality
+                                <Button className='text-center info' onClick={qualityToggle}>
+                                    🛈
+                                </Button>
+                            </h3>
+                            <Offcanvas isOpen={quality} toggle={qualityToggle} direction={'end'}>
+                                <OffcanvasHeader toggle={qualityToggle}>
+                                Gemstone Quality
+                                </OffcanvasHeader>
+                                <OffcanvasBody>
+                                    <p>
+                                    The potency of a gem is quanitified by alignment points, which are affected by two factors: the gem itself and the alignemnt of its wielder.
+                                    </p>
+                                    <h5>Power Containment</h5>
+                                    <p>
+                                    Power containment describes the amount of total alignment points a gem can hold (ex. a player at level 3 can wield all gems with color "K" and below. If the player has a gem with color "J", it will hold 7 alignment points). Gems' alignment points refresh at every short rest for moral stones, every long rest for power stones and never for creator stones. A player can increase a gem's alignment by aligning to its quality. Oppositely, they will decrease its quality by going against its quality. A gem's alignment points will not refresh if the gem is drawn down to 0 alignment points.
+                                    </p>
+                                    <h5>Power Output</h5>
+                                    <p>
+                                    Power output describes the amount of alignment points a gem can draw in a single action. It can be decided by either the clarity or carat of the gem - whichever is higher (ex. a gem with "I3" clarity and "0.65" carat can output 9 alignment points in a single action). Clarity and carat do not change and are not impacted by player level.
+                                    </p>
+                                </OffcanvasBody>
+                            </Offcanvas>
+                            <div className='row text-center'>
+                                <h5 className='col'><strong>CARAT: {gem.carat}</strong></h5>
+                                <p className='col'>Req. Level: {gem.lvl}</p>
+                                <p className='col'>Containment Pts: {gem.containmentPts}</p>
+                                <h5 className='col'><strong>CLARITY: {gem.clarity}</strong></h5>
+                                <p className='col'>Req. Color: {gem.color}</p>
+                                <p className='col'>Output Pts: {gem.outputPts}</p>
+                            </div>
+                            <div className='row text-center'>
+                            </div>
+                            <table className="table table-hover table-responsive table-striped align-middle">
+                                <thead>
+                                    <tr>
+                                        <th colSpan="25">MAX Power &#40;Pts&#41; Containment</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope='col'>Alignment Pts</th>
+                                        {gemContain.map((point, index) => (
+                                            <td scope='col' key={index}>{point}</td>
+                                        ))}
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Req. LVL</th>
+                                        <td colSpan="2 table-active">lvl 1</td>
+                                        <td colSpan="2">lvl 2</td>
+                                        <td colSpan="2">lvl 3</td>
+                                        <td colSpan="2">lvl 4</td>
+                                        <td colSpan="2">lvl 5</td>
+                                        <td colSpan="2">lvl 6</td>
+                                        <td colSpan="2">lvl 7</td>
+                                        <td colSpan="2">lvl 8</td>
+                                        <td colSpan="2">9</td>
+                                        <td colSpan="2">10</td>
+                                        <td colSpan="2">15</td>
+                                        <td colSpan="2">20</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">Carat</th>
+                                        {gemCarat.map((carat, index) => (
+                                            <React.Fragment key={index}>
+                                                {carat === gem.carat? (
+                                                    <td className='cardinal bg-secondary text-light' onClick={() => handleCarat(carat)}>
+                                                        {carat}
+                                                    </td>
+                                                ) : (
+                                                    <td className='cardinal' onClick={() => handleCarat(carat)}>
+                                                        {carat}
+                                                    </td>
+                                                )}
+                                            </React.Fragment>
+                                        ))}
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th colSpan="25">MAX Power &#40;Pts&#41; Output </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope='col'>Alignment Pts</th>
+                                        {gemOutput.map((point, index) => (
+                                            <td colSpan='' key={index}>{point}</td>
+                                        ))}
+                                    </tr>
+                                    <tr>
+                                        <th scope='col'>Req. Color</th>
+                                        {gemColor.map((color, index) => (
+                                            <td key={index}>{color}</td>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope='col'>Clarity</th>
+                                        {gemClarity.map((clar, index) => (
+                                            <React.Fragment key={index}>
+                                                {clar === gem.clarity ? (
+                                                    <td 
+                                                        className='cardinal bg-secondary text-light' 
+                                                        onClick={() => handleClarity(clar)}
+                                                        colSpan='2'
+                                                    >
+                                                        {clar}
+                                                    </td>
+                                                ) : (
+                                                    <td colSpan='2' className='cardinal' onClick={() => handleClarity(clar)}>
+                                                        {clar}
+                                                    </td>
+                                                )}
+                                            </React.Fragment>
+                                        ))}
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div className='row text-center'>
-                        </div>
-                        <table className="table table-hover table-responsive table-striped align-middle">
-                            <thead>
-                                <tr>
-                                    <th colSpan="25">MAX Power &#40;Pts&#41; Containment</th>
-                                </tr>
-                                <tr>
-                                    <th scope='col'>Alignment Pts</th>
-                                    {gemContain.map((point, index) => (
-                                        <td scope='col' key={index}>{point}</td>
-                                    ))}
-                                </tr>
-                                <tr>
-                                    <th scope="col">Req. LVL</th>
-                                    <td colSpan="2 table-active">lvl 1</td>
-                                    <td colSpan="2">lvl 2</td>
-                                    <td colSpan="2">lvl 3</td>
-                                    <td colSpan="2">lvl 4</td>
-                                    <td colSpan="2">lvl 5</td>
-                                    <td colSpan="2">lvl 6</td>
-                                    <td colSpan="2">lvl 7</td>
-                                    <td colSpan="2">lvl 8</td>
-                                    <td colSpan="2">9</td>
-                                    <td colSpan="2">10</td>
-                                    <td colSpan="2">15</td>
-                                    <td colSpan="2">20</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="col">Carat</th>
-                                    {gemCarat.map((carat, index) => (
-                                        <React.Fragment key={index}>
-                                            {carat === gem.carat? (
-                                                <td className='cardinal bg-secondary text-light' onClick={() => handleCarat(carat)}>
-                                                    {carat}
-                                                </td>
-                                            ) : (
-                                                <td className='cardinal' onClick={() => handleCarat(carat)}>
-                                                    {carat}
-                                                </td>
-                                            )}
-                                        </React.Fragment>
-                                    ))}
-                                </tr>
-                            </tbody>
-                            <thead>
-                                <tr>
-                                    <th colSpan="25">MAX Power &#40;Pts&#41; Output </th>
-                                </tr>
-                                <tr>
-                                    <th scope='col'>Alignment Pts</th>
-                                    {gemOutput.map((point, index) => (
-                                        <td colSpan='' key={index}>{point}</td>
-                                    ))}
-                                </tr>
-                                <tr>
-                                    <th scope='col'>Req. Color</th>
-                                    {gemColor.map((color, index) => (
-                                        <td key={index}>{color}</td>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope='col'>Clarity</th>
-                                    {gemClarity.map((clar, index) => (
-                                        <React.Fragment key={index}>
-                                            {clar === gem.clarity ? (
-                                                <td 
-                                                    className='cardinal bg-secondary text-light' 
-                                                    onClick={() => handleClarity(clar)}
-                                                    colSpan='2'
-                                                >
-                                                    {clar}
-                                                </td>
-                                            ) : (
-                                                <td colSpan='2' className='cardinal' onClick={() => handleClarity(clar)}>
-                                                    {clar}
-                                                </td>
-                                            )}
-                                        </React.Fragment>
-                                    ))}
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    )}
                     <div className='row text-center mb-4'>
                         <h3>Power Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
@@ -488,9 +516,9 @@ const AlignmentChart = (props) => {
                                 <p>
                                 Moral Stones refresh at every short rest. Click on an ability in the chart to reveal its description.
                                 </p>
-                                <h5>Divine Stones</h5>
+                                <h5>Creator Stones</h5>
                                 <p>
-                                Divine stones do not operate like other stones. They can only be used once and can prove difficult to wield. To wield a divine stone's power, one must select the power level they want to wield at (2-20). They then roll a gemstone saving throw (D20) and add their alignment level to it. If their saving throw is above or equal to the power level number, they will wield the stone successfully at that power level. If not, the power is still unleashed, but not within the control of the wielder. Rolling a 1 is an automatic failure.
+                                Creator stones or "Divine" stones do not operate like other stones. They can only be used once and can prove difficult to wield. To wield a creator stone's power, one must select the power level they want to wield at (2-20). They then roll a gemstone saving throw (D20) and add their alignment level to it. If their saving throw is above or equal to the power level number, they will wield the stone successfully at that power level. If not, the power is still unleashed, but not within the control of the wielder. Rolling a 1 is an automatic failure.
                                 </p>
                                 <h5>Unbound Stones</h5>
                                 <p>Unbound stones are the cardinal stones when unbound by the other stones. Unbound, they are at the height of their power, but it comes at a price. Not only do the stones go against DIA, but they prevent a person from aligning with any other stone.</p>
@@ -589,7 +617,7 @@ const AlignmentChart = (props) => {
                         </table>
                     </div>
                     <div className='row text-center mb-4'>
-                        <h3>Divine Stone Alignment
+                        <h3>Creator Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
                                 🛈
                             </Button>
