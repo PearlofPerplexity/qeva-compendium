@@ -19,7 +19,7 @@ export const DRACES = [
         id: 0,
         link: `/dark-races/orcs`,
         name: `Orcs`,
-        origin: `Osei`,
+        origin: `Ocri`,
         heartStone: `Black Amethyst (Mayhem)`,
         elden: `Moriel`,
         lifespan: `~60 yrs`,

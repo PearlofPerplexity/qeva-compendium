@@ -19,12 +19,13 @@ export const BASICS = [
             {
                 id: 2,
                 name: `Mechanics of Divination`,
-                description: `The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of divination and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for divination to occur.`
+                description: `The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals, both graces of DIA. Gemstones are the source of divination and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for divination to occur.`
             },
             {
                 id: 3,
                 name: `Darkening of Races`,
-                description: `Unlike other worlds, the races of Qeṽa risks falling into a dark form if they are not careful. The more one strays from the attributes of DIA, the more they risk this transformation. However, such a transformation is not permanent. Orcs for example are merely the dark form of Osei. A orc may then become good like any other race and no sentient creature is beyond purification. This is ture for all beings except for ethereals that is. Once an ethereal has darkened, they are too consumed by a singular nature of evil to ever return. Unlike other dark races, dark ethereals or wraiths may take a variety of monstrous.`
+                description: `Unlike other worlds, the races of Qeṽa risks falling into a dark form if they are not careful. The more one strays from the attributes of DIA, the more they risk this transformation. However, such a transformation is not permanent. This is true for all beings except for ethereals that is. Once an ethereal has darkened, they are too consumed by a singular nature of evil to ever return. Unlike other dark races, dark ethereals or wraiths may take a variety of monstrous.`,
+                admin: 'Take note that this aspect of the world has special impact upon the Ocri. Ocri are orcs who have turned away from their darkened form and walk in new light. Many if not all hide this fact though as they are too ashamed and fearful of being associated with the vileness of the orc.'
             }
         ]
     }

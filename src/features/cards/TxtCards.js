@@ -1,7 +1,15 @@
+import { useContext } from 'react';
+import { AdminContext } from '../../contexts/adminContext';
+
 const TxtCards = (props) => {
+
+    const [isAdmin, setIsAdmin] = useContext(AdminContext);
+
     return (
         <div className="container-fluid">
             {props.array.topics.map((topic) => (
+                <>
+                {((!isAdmin && !topic.adminOnly) || (isAdmin)) && (
                     <div className="col col-lg-10 col-xl-9 mt-4" key={topic.id}>
                         <div className="row align-items-center background-box rounded-2">
                             <div className="col p-0 fs-7">
@@ -11,9 +19,11 @@ const TxtCards = (props) => {
                                         {topic.year ? (
                                             <p>{topic.year}</p>
                                         ) : ('')}
-                                        <p className="card-text">{topic.description}</p>
+                                        <p className="card-text">{topic.description} {isAdmin && topic.admin && topic.admin}</p>
                                         {topic.subtopics && (
                                             topic.subtopics.map((props) => (
+                                                <>
+                                                {((!isAdmin && !props.adminOnly) || (isAdmin)) && (
                                                 <div key={props.id}>
                                                     {props.image ? (
                                                         <div className="d-flex align-items-center p-2 mb-3" >
@@ -25,16 +35,18 @@ const TxtCards = (props) => {
                                                             </div>
                                                             <div className="ms-3 covered-div">
                                                                 <h3 className="fs-5 mb-1">{props.name}</h3>
-                                                                <p className="mb-0">{props.description}</p>
+                                                                <p className="mb-0">{props.description} {isAdmin && props.admin && props.admin}</p>
                                                             </div>
                                                         </div>
                                                     ) : (
                                                     <>
                                                         <strong>{props.name}</strong><br />
-                                                        {props.description}
+                                                        {props.description} {isAdmin && topic.admin && topic.admin}
                                                     </>
                                                     )}
                                                 </div>
+                                                )}
+                                                </>
                                             )))
                                         }
                                         {topic.image && (
@@ -45,6 +57,8 @@ const TxtCards = (props) => {
                             </div>
                         </div>
                     </div>
+                )}
+                </>
             ))}
         </div>
     );

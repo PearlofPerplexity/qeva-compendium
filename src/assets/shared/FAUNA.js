@@ -13,7 +13,7 @@ export const FAUNA = [
         id: 0,
         link: `/fauna/birds`,
         name: `Birds`,
-        description: `Birds play a large role in the world of Qeṽa and many form kinship with them. Among all the peoples of Qeṽa, the Aviame are alone in their kinship with birds. While the Caracadre have trained them as messengers and the elves learned their speech, only the Aviame have built a true relationship. The bond is so strong that flocks of bird will take direction and obey commands when called.They know the birds: their cares and worries, their coming and goings, their likes and dislikes. They know them better than even the eldar and care for them like their own. Here are a few notable birds and what is most well-know about them.`,
+        description: `Birds play a large role in the world of Qeṽa and many form kinship with them. Among all the peoples of Qeṽa, the Aviame are alone in their kinship with birds. While the Caracadre have trained them as messengers and the elves learned their speech, only the Aviame have built a true relationship. The bond is so strong that flocks of bird will take direction and obey commands when called.They know the birds: their cares and worries, their coming and goings, their likes and dislikes. They know them better than even the elden and care for them like their own. Here are a few notable birds and what is most well-know about them.`,
         topics: [
             {
                 id: 0,
@@ -132,7 +132,7 @@ export const FAUNA = [
             {
                 id: 2,
                 name: 'Dragons',
-                description: 'Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elder elves, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.'
+                description: 'Following his other creations, Moriel created another creature, one of great power and wisdom. Here he used a cut of tourmaline and puored an incredible portion of wisdom. After the beginning of wars, Moriel saw the flaws in his creation. In his lust for power, he deprived orcs of free-thinking. They lacked the ability to think creatively or strategize in battle. And so, he desired a creature clever enough to match the power and wisdom of the elden, one to fight at his side as an equal. In secrecy, he searched Avlim, for amber, the stone of wisdom. He bonded it to a shard of immensity from Arguthain and formed the dragon. In his crafting, Moriel was still weakened even in mind and lost control of the immensity stone and the dragons grew far larger than he planned. The dragons inspired fear even in himself. He approached them carefully and with respect.'
             }
         ]
     }

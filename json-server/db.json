@@ -17,13 +17,13 @@
         },
         {
           "id": 2,
-          "name": "Mechanics of Divination",
-          "description": "The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of divination and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for divination to occur."
+          "name": "Mechanics of Radiance",
+          "description": "The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of Thauma and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for radiance to occur."
         },
         {
           "id": 3,
           "name": "Darkening of Races",
-          "description": "Unlike other worlds, the races of Qeṽa risks falling into a dark form if they are not careful. The more one strays from the attributes of DIA, the more they risk this transformation. However, such a transformation is not permanent. Orcs for example are merely the dark form of Osei. A orc may then become good like any other race and no sentient creature is beyond purification. This is ture for all beings except for ethereals that is. Once an ethereal has darkened, they are too consumed by a singular nature of evil to ever return. Unlike other dark races, dark ethereals or wraiths may take a variety of monstrous."
+          "description": "Unlike other worlds, the races of Qeṽa risks falling into a dark form if they are not careful. The more one strays from the attributes of DIA, the more they risk this transformation. However, such a transformation is not permanent. Orcs for example are merely the dark form of Ocri. A orc may then become good like any other race and no sentient creature is beyond purification. This is ture for all beings except for ethereals that is. Once an ethereal has darkened, they are too consumed by a singular nature of evil to ever return. Unlike other dark races, dark ethereals or wraiths may take a variety of monstrous."
         }
       ]
     },
@@ -45,13 +45,13 @@
           },
           {
             "id": 2,
-            "name": "Mechanics of Divination",
-            "description": "The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of divination and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for divination to occur."
+            "name": "Mechanics of Radiance",
+            "description": "The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of radiance and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for radiance to occur."
           },
           {
             "id": 3,
             "name": "Darkening of Races",
-            "description": "Unlike other worlds, the races of Qeṽa risks falling into a dark form if they are not careful. The more one strays from the attributes of DIA, the more they risk this transformation. However, such a transformation is not permanent. Orcs for example are merely the dark form of Osei. A orc may then become good like any other race and no sentient creature is beyond purification. This is ture for all beings except for ethereals that is. Once an ethereal has darkened, they are too consumed by a singular nature of evil to ever return. Unlike other dark races, dark ethereals or wraiths may take a variety of monstrous."
+            "description": "Unlike other worlds, the races of Qeṽa risks falling into a dark form if they are not careful. The more one strays from the attributes of DIA, the more they risk this transformation. However, such a transformation is not permanent. Orcs for example are merely the dark form of Ocri. A orc may then become good like any other race and no sentient creature is beyond purification. This is ture for all beings except for ethereals that is. Once an ethereal has darkened, they are too consumed by a singular nature of evil to ever return. Unlike other dark races, dark ethereals or wraiths may take a variety of monstrous."
           }
         ]
       }

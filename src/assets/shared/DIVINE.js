@@ -9,7 +9,7 @@ import wraith from '../imgs/ethereal/wraith.png';
 /* INCLUDES:
 
 Layers of Heavens
-Magic & Divination
+Magic & Radiance
 Ethereals
 Spiritual Realities
 
@@ -57,13 +57,13 @@ export const DIVINE = [
     {
         id: 1,
         link: `/divine/divination-magic`,
-        name: `Magic & Divination`,
+        name: `Magic & Radiance`,
         description: `The world of Qeṽa is one of magic. This magic is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of divination and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for divination to occur. Learn about the range of abilities this diviniation and magic can offer.`,
         topics: [
             {
                 id: 0,
                 name: `True Divination`,
-                description: `Also known as True touch, true divination gives one unnatural power over non-sentient creation and it takes many forms. A diviner may be able to manipulate the elements by moving water, earth and air or by removing it from existence and pulling it into the void layer of heaven by a deep and dark divination known as void magic. It may interact with the ethereals through revelation or the body through healing. Its only limit that is known is its restriction from sentient beings. A sentient creation is untouchable by any type of divination. All forms can be developed and exploited as a diviner learns more about the extent of their power and imagines its possibilities. The Aeoki are the only natural wielders of True Divination and the oracles are the only beings classically trained in it.`
+                description: `Also known as True touch, true divination gives one unnatural power over non-sentient creation and it takes many forms. A diviner may be able to manipulate the elements by moving water, earth and air or by removing it from existence and pulling it into the void layer of heaven by a deep and dark divination known as void magic. It may interact with the ethereals through revelation or the body through healing. Its only limit that is known is its restriction from sentient beings. A sentient creation is untouchable by any type of divination. All forms can be developed and exploited as a diviner learns more about the extent of their power and imagines its possibilities. The oaki are the only natural wielders of True Divination and the oracles are the only beings classically trained in it.`
             },
             {
                 id: 1,
@@ -178,7 +178,7 @@ export const DIVINE = [
                     {
                         id: 0,
                         name: `Soul Lifting`,
-                        description: `When a physical being dies, the soul divorces the body and continues to live. Unfettered by the physical body, the soul lifts upward into the ether, where the ethereals live and remain there until agate above. This does not mean they become ethereals, not in the slightest. They do not have the same mobility and agency as ethereals and can only watch the inner workings of the world peacefully from above. Some who are wise, describe the existence of souls in the ether as clouds among birds. Ethereals are like birds who can fly throughout the ether and fly down to the earth below and do as they wish, while disembodied souls drift where the wind takes them, where DIA wishes them to see.`
+                        description: `When a physical being dies, the soul divorces the body and continues to live. Unfettered by the physical body, the soul lifts upward into the ether, where the ethereals live and remain there until agate above. This does not mean they become ethereals, not in the slightest. They do not have the same mobility and agency as ethereals and can only watch the inner workings of the world peacefully from above. They are the forerunners; the ones who have gone before us. Some who are wise, describe the existence of souls in the ether as clouds among birds. Ethereals are like birds who can fly throughout the ether and fly down to the earth below and do as they wish, while disembodied souls drift where the wind takes them, where DIA wishes them to see.`
                     },
                     {
                         id: 1,

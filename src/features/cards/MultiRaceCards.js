@@ -20,7 +20,7 @@ const MultiRaceCards = (props) => {
                             <ul className="list-group list-group-flush">
                                 <li className="list-group-item"><b>Heart Stone</b> {heartStone}</li>
                                 <li className="list-group-item"><b>Spawn Stone</b> {spawnStone}</li>
-                                <li className="list-group-item"><b>Elder</b> {elden}</li>
+                                <li className="list-group-item"><b>Elden</b> {elden}</li>
                                 <li className="list-group-item"><b>Lifespan</b> {lifespan}</li>
                                 <li className="list-group-item"><b>Size</b> {height} | {weight}</li>
                                 <li className="list-group-item"><b>Language</b> {language}</li>

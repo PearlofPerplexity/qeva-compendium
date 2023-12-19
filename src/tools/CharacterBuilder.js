@@ -448,7 +448,7 @@ const CharacterBuilder = () => {
                 <AccordionItem>
                     <AccordionHeader targetId='4'>Class</AccordionHeader>
                     <AccordionBody accordionId='4'>
-                        <ClassChart loc="charCreate" />
+                        <ClassChart loc="charCreate" /> Select a faction or select "No affiliation" to see options without an allegiance."
                         <select 
                             name='orders' 
                             className="charPicklist" 

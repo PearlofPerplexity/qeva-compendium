@@ -5,7 +5,7 @@ import lumiare from '../imgs/races/lumiare.png';
 import athiame from '../imgs/races/athiame.png';
 import asiame from '../imgs/races/viame.png';
 import ave from '../imgs/races/ave.png';
-import elder from '../imgs/races/eldar.png';
+import elden from '../imgs/races/elden.png';
 import human from '../imgs/races/human.png';
 import halfElf from '../imgs/races/half-elf.png';
 import bdwarf from '../imgs/races/bdwarf.png';
@@ -13,10 +13,9 @@ import tdwarf from '../imgs/races/tdwarf.png';
 import ggnome from '../imgs/races/ggnome.png';
 import bgnome from '../imgs/races/bgnome.png';
 import rgnome from '../imgs/races/rgnome.png';
-import osei from '../imgs/races/osei.png';
+import ocri from '../imgs/races/ocri.png';
 import half from '../imgs/races/half.png';
-import aeoki from '../imgs/races/aeoki.png';
-import treefolk from '../imgs/races/treefolk.png';
+import oaki from '../imgs/races/oaki.png';
 import spirit from '../imgs/ethereal/spirit.png';
 import spectre from '../imgs/ethereal/spectre.png';
 import arborum from '../imgs/races/arborum.png';
@@ -27,12 +26,12 @@ import arborum from '../imgs/races/arborum.png';
 Elves
 Aviame
 Humans
-Osei
+Ocri
 Gnomes
 Dwarves
 Halflings
-Aeoki
-Arborums
+Oaki
+Arbora
 Dragons
 
 */
@@ -203,7 +202,7 @@ export const RACES = [
         language: `Lumiare`,
         government: `Autocracy`,
         foundedOrders: `Avikin, Ghost Blades`,
-        description: `Aviame or Avi are a race under the guidance of the eldar, Nware. They are the most similar in build to elves, but easily identifiable from them by their shades of skin color and face markings. While Avis live longer than most, they are not immortal and few age past a century. They tend to prefer mountainous regions where the air is thinner and the temperature colder as their bodies have a higher tolerance for the cold.`,
+        description: `Aviame or Avi are a race under the guidance of the elden, Nware. They are the most similar in build to elves, but easily identifiable from them by their shades of skin color and face markings. While Avis live longer than most, they are not immortal and few age past a century. They tend to prefer mountainous regions where the air is thinner and the temperature colder as their bodies have a higher tolerance for the cold.`,
         image: lumiare,
         speed: 30,
         size: 'M',
@@ -384,7 +383,7 @@ export const RACES = [
         language: `Common`,
         government: `Republic`,
         foundedOrders: `Caracadre, Helmsmen`,
-        description: `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
+        description: `Though no elden oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
         image: human,
         speed: 30,
         size: 'M',
@@ -412,7 +411,7 @@ export const RACES = [
                 residence: `Arvañon`,
                 appearance: `Varied Hair & Skin`,
                 description: 
-                    `Though no eldar oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
+                    `Though no elden oversees humans, many guess that one once did. An elden statue with the title, Çairça is erected in their capital city of Ekeveri. Rounded ears give them and their ancestors away as humans of Arvannon, though their hair and skin can take many shades from fair to dark. Also known as people of the North, Humans are the most eccentric of the noble races and have stretched their presence into Ouri and Altiavaire. Their greatest cities are Ekevri, Durik, Durakin, Farkrine and Urvek leit. They enjoy the company of halves in the good times and the alliance of aviame and elves in the evil times. In their short lifes of around 120 years, they are quick at picking up many a craft.`,
                 image: human,
                 imageAlt: `Qeṽa Human`,
                 str: 1,
@@ -475,14 +474,14 @@ export const RACES = [
                 appearance: `Each elden different`,
                 description: 
                     `The Elden were the first nine created by Dia and from them all men were born. Their names are not all known, but nearly all are familiar with Amare, Xaradriel, Çairça and Nware. They were the only elves taught divination directly from DIA and so were commanded to oversee the oracle order. Thus, they are said to be the wisest of all.`,
-                image: elder,
+                image: elden,
                 imageAlt: `Qeṽa Elden`
             }
         ]
     },
     {
         id: 3,
-        link: `/races/osei`,
+        link: `/races/ocri`,
         name: `Ocri`,
         singName: "Ocrim",
         classes: [
@@ -504,9 +503,9 @@ export const RACES = [
         government: `Theocracy`,
         residence: `None`,
         foundedOrders: `The Uncorrupted`,
-        description: `Among the known peoples of Avlim, the Ocra seem to be the only race without a homeland and without the guidance of an eldar. They have pale skin and a tall muscular build. They are nearly as stoic as the elves, but with a sharper sense of hardened character. Not surprisingly, they are not fast made friends, though they are rumored to be the kindest of strangers if approached. This temperament and body type matches their known recognition for being great warriors with unmatched discipline. They mix into the various lands of Qeṽa, often holding high military positions.`,
-        image: osei,
-        imageAlt: `Qeṽa Osei`,
+        description: `Among the known peoples of Avlim, the ocri seem to be the only race without a homeland and without the guidance of an elden. They have pale skin and a tall muscular build. They are nearly as stoic as the elves, but with a sharper sense of hardened character. Not surprisingly, they are not fast made friends, though they are rumored to be the kindest of strangers if approached. This temperament and body type matches their known recognition for being great warriors with unmatched discipline. They mix into the various lands of Qeṽa, often holding high military positions.`,
+        image: ocri,
+        imageAlt: `Qeṽa Ocri`,
         speed: 30,
         size: 'M',
         str: 2,
@@ -671,7 +670,7 @@ export const RACES = [
         government: `None`,
         residence: `Greenlands`,
         foundedOrders: `Order of the Feather`,
-        description: `The Gnomes are some of the least involved in world events. They are 4-5 feet tall with long pointy ears and a unique face. Like halflings, they have little affinity for glory in war, but unlike halflings they are positioned to avoid it. Their settlements are greatly distanced from Shaole and buffered by mountains, oceans and surrounding nations. Removed from conflict, they find tranquility in the trades of leatherwork and fishing, though a spark of curiosity inspires many to become travelers and adventurers. The Eldar, Çairça watches over them.`,
+        description: `The Gnomes are some of the least involved in world events. They are 4-5 feet tall with long pointy ears and a unique face. Like halflings, they have little affinity for glory in war, but unlike halflings they are positioned to avoid it. Their settlements are greatly distanced from Shaole and buffered by mountains, oceans and surrounding nations. Removed from conflict, they find tranquility in the trades of leatherwork and fishing, though a spark of curiosity inspires many to become travelers and adventurers. The elden, Çairça watches over them.`,
         image: ggnome,
         speed: 25,
         size: 'S',
@@ -823,7 +822,7 @@ export const RACES = [
         government: `Democracy`,
         residence: `Fletcheren`,
         foundedOrders: `The Topplers`,
-        description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the Eldar, Xaradriel and oracle, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for 75% of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
+        description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the elden, Xaradriel and oracle, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for 75% of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
         image: half,
         speed: 25,
         size: 'S',
@@ -855,7 +854,7 @@ export const RACES = [
     },
     {
         id: 7,
-        link: `/races/aeoki`,
+        link: `/races/oaki`,
         name: `Oaki`,
         singName: "Oaki",
         classes: [
@@ -876,8 +875,8 @@ export const RACES = [
         language: `Kigaul`,
         government: `Communal`,
         residence: `Mhindileth`,
-        description: `Rarely seen are the Aeoki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for divination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the oracles, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
-        image: aeoki,
+        description: `Rarely seen are the oaki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for divination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the oracles, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
+        image: oaki,
         speed: 20,
         size: 'S',
         dex: 1,
@@ -900,12 +899,12 @@ export const RACES = [
                 description: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
             }
         ],
-        imageAlt: `Qeṽa Aeoki`
+        imageAlt: `Qeṽa Oaki`
     },
     {
         id: 8,
-        link: `/races/arborums`,
-        name: `Arborums`,
+        link: `/races/arbora`,
+        name: `Arbora`,
         singName: "Arborum",
         classes: [
             'Oracles', 
@@ -926,7 +925,7 @@ export const RACES = [
         language: `Treeish`,
         government: `Communal`,
         residence: `Mahelos`,
-        description: `It was revealed later in history that some of the flora had become sentient and in some areas of the world (Ellowood forest, Mahelos and the richest in Aguave), all flora. They may look like trees, but they move, walk and sometimes speak like the other beings. However, the treelings are often shy folk and do not carry out business like other races. This may because they do not have ears or eyes like other folk and rather see and hear through the vibrations of their many branches. Or it is because they can only speek treeish and communication with other races is tedious. Either way, they are a seldom seen race. However, if one does make the effort to know them, they reap great rewards. Arborums are fierce friends and a great source of wisdom. When a arborum first grows roots, it pulls them out of the ground and is able to walk the surface of the earth, only taking root to heal and rest. They walk the earth until their stature grows and their trunks stiffen to the point that mobility is difficult. At this point, they choose their final resting place - often their homeland - and dig their roots back on the earth to remain their for the rest of their years. Some live thousands of years and offer thousands of years of wisdom. It is the sapplings who protect them and walkabout the earth.`,
+        description: `It was revealed later in history that some of the flora had become sentient and in some areas of the world, all flora (Ellowood forest, Mahelos and most richely in Aguave). They may look like trees, but they move and walk like other beings. However, the arbora are often shy folk and do not carry out business like other races. This may because they do not have ears or eyes like other folk and rather see and hear through the vibrations of their many branches. Or it is because they can only speek treeish and communication with other races is tedious. Either way, they are a seldom seen race. However, if one does make the effort to know them, they reap great rewards. Arbora are fierce friends and a great source of wisdom. When a arborum first grows roots, it pulls them out of the ground and is able to walk the surface of the earth, only taking root to heal and rest. They walk the earth until their stature grows and their trunks stiffen to the point that mobility is difficult. At this point, they choose their final resting place - often their homeland - and dig their roots back into the earth to remain their for the rest of their years. Some live thousands of years and offer thousands of years of wisdom. It is the sapplings who protect them and walkabout the earth.`,
         image: arborum,
         imageAlt: `Qeṽa Arborum`,
         speed: 30,
@@ -943,17 +942,17 @@ export const RACES = [
             {
                 id: 0,
                 name: 'Barkskin',
-                description: "Treefolk's bark-like skin provides them with natural protection. A Treefolk's Armor Class equals 14 + their Dexterity modifier + their Constitution modifier. They also have resistance to bludgeoning damage."
+                description: "The bark-like skin of the arbora provides them with natural protection. An arborum's Armor Class equals 14 + their Dexterity modifier + their Constitution modifier. They also have resistance to bludgeoning damage."
             },
             {
                 id: 1,
                 name: "Take Root",
-                description: "Treefolk do not sleep, but they must put down roots each night and enter a semi-conscious dormant state for at least 4 hours. Treefolk can take root in sand, dirt, mud, loose gravel or similar material; but not worked stone or bare rock. While rooted, a Treefolk's speed becomes 0, and they become immune to both the prone condition and any form of forced movement, but have disadvantage on Dexterity saving throws. You can take root and unroot as an action. Taking root adds +2 to every dice roll and gives you advantage on any save or ability check to resist forced movement."
+                description: "Arbora do not sleep, but they must put down roots each night and enter a semi-conscious dormant state for at least 4 hours. Arbora can take root in sand, dirt, mud, loose gravel or similar material; but not worked stone or bare rock. While rooted, an arborum's speed becomes 0, and they become immune to both the prone condition and any form of forced movement, but have disadvantage on Dexterity saving throws. You can take root and unroot as an action. Taking root adds +2 to every dice roll and gives you advantage on any save or ability check to resist forced movement."
             },
             {
                 id: 2,
                 name: "Flammable",
-                description: "Treefolk have vulnerability to fire damage. Treefolk are weak to fire, and burn easily.",
+                description: "Arbora have vulnerability to fire damage. Arbora are weak to fire, and burn easily.",
             },
             {
                 id: 3,

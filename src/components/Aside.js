@@ -71,7 +71,7 @@ function Aside() {
                     </AccordionBody>
                 </AccordionItem>
                 <Sidebar name="Gemstones" id="2" array={GEMS} icon={GemIcon} />
-                <Sidebar name="Divination" id="3" array={DIVINE} icon={DivineIcon} />
+                <Sidebar name="Supernatural Sphere" id="3" array={DIVINE} icon={DivineIcon} />
                 <Sidebar name="Races" id="4" array={RACES} icon={RaceIcon} />
                 <Sidebar name="Dark Races" id="5" array={DRACES} icon={DRaceIcon} />
                 <Sidebar name="Classes" id="6" array={CLASSES} icon={ClassIcon} />

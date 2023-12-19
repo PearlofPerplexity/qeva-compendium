@@ -92,8 +92,8 @@ const ClassChart = (props) => {
                     </div>
                 </Link>
             ) : props.loc === 'charCreate' ? (
-                <button type="button" className="d-flex btn rounded-circle" onClick={toggle}>
-                    <i className="uil uil-info-circle"></i>
+                <button type="button" className="d-flex btn rounded-circle mb-2" onClick={toggle}>
+                    <i className="uil uil-info-circle"></i> 
                 </button>
             ) : ('')}
             

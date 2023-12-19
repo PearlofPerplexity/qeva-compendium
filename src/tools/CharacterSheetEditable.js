@@ -10,8 +10,7 @@ import {
 
 const CharacterSheetEditable = React.forwardRef((props, ref) => {
 
-    const profBonus = 2; //Always 2 for Level 1
-
+    const profBonus = endclass.lvls[0].prof_bonus;
     const [character, setCharacter] = useContext(CharacterContext);
     const { 
         //Level
@@ -453,7 +452,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             defaultValue={`${alignmentGem && alignmentGem.name} (${alignmentGem && alignmentGem.quality})`}
         />
         <div className="gemOne">
-            <input name="firstgemscore" value={gemLevel} className="gemOne" />
+            <input name="firstgemscore" defaultValue={gemLevel} className="gemOne" />
             <img src={diamondShape} alt="diamond" />
         </div>
         </div>

@@ -16,7 +16,7 @@ const RacePage = () => {
                 <Route path='/' element={
                     <InnerMenu name='Races' icon={RaceIcon} array={RACES} />
                 } />
-                <Route path='/arborums' element={
+                <Route path='/arbora' element={
                     <SingRaceCard array={races[0]} left={races[9]} right={races[1]} />
                 } />
                 <Route path='/aviame' element={
@@ -40,10 +40,10 @@ const RacePage = () => {
                 <Route path='/humans' element={
                     <MultiRaceCards array={races[7]} left={races[6]} right={races[8]} />
                 } />
-                <Route path='/aeoki' element={
+                <Route path='/oaki' element={
                     <SingRaceCard array={races[8]} left={races[7]} right={races[9]} />
                 } />
-                <Route path='/osei' element={
+                <Route path='/ocri' element={
                     <SingRaceCard array={races[9]} left={races[8]} right={races[0]} />
                 } />
             </Routes>

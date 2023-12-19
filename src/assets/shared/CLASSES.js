@@ -21,9 +21,6 @@ import {
     SIMPLEWEAPONS,
     MARTIALWEAPONS,
     RANGEDWEAPONS,
-    LIGHTARMOR,
-    MEDIUMARMOR,
-    HEAVYARMOR
 } from './DNDITEMS';
 
 /* CLASSES: 
@@ -52,11 +49,6 @@ scribe
 const simpleWeapons = SIMPLEWEAPONS.map(weapon => weapon.name);
 const martialWeapons = MARTIALWEAPONS.map(weapon => weapon.name);
 const rangedWeapons = RANGEDWEAPONS.map(weapon => weapon.name);
-
-//Simple String Arrays of Armor Names
-const lightArmor = LIGHTARMOR.map(armor => armor.name);
-const mediumArmor = MARTIALWEAPONS.map(armor => armor.name);
-const heavyArmor = HEAVYARMOR.map(armor => armor.name);
 
 export const CLASSES = [
     {
@@ -92,10 +84,11 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `Oracles are the guardians of Qeṽa and are viewed as authoritative figures in all of Avlim. To maintain this, they are the only beings formally trained by the Eldar in the arts of divination - what is commonly known as magic. Given their prestige and weight of responsibility, A novitiate cannot volunteer, but can only be selected. Before accepting this role, one should know that oracles have a strict moral code and life of discipline; To follow this path is to accept a difficult and restricted life, but no less rewarding. However, only races endowed with the capacity for divination are fit to serve in such a role. To initiate themselves as oracles, a novitiate must walk to the sacred island of agate and attune themselves with one of the cardinal stones that lies there. They also select a cut of opal, which is crucial to the forging of the iconic blade of an oracle.`
+                description: `Oracles are the guardians of Qeṽa and are viewed as authoritative figures in all of Avlim. To maintain this, they are the only beings formally trained by the elden in the arts of divination - what is commonly known as magic. Given their prestige and weight of responsibility, A novitiate cannot volunteer, but can only be selected. Before accepting this role, one should know that oracles have a strict moral code and life of discipline; To follow this path is to accept a difficult and restricted life, but no less rewarding. However, only races endowed with the capacity for divination are fit to serve in such a role. To initiate themselves as oracles, a novitiate must walk to the sacred island of agate and attune themselves with one of the cardinal stones that lies there. They also select a cut of opal, which is crucial to the forging of the iconic blade of an oracle. There is a great deal more to the Oracles role. They bear great responsibility and a vast amount of knowledge, but most of it is not shared.`
             },
             {
                 id: 1,
+                adminOnly: true,
                 name: `The 9 Blessed Attributes`,
                 description: `Among the attributes that rained down onto Qeṽa, nine were blessed. Blessed they were because they were chosen among the cardinal stones to be given to the nine eveile, the first sentience to walk the shores of Avlim. You must ground yourself in each and learn to have command over them as your first step as oracle. As you master each, you will slowly earn each piece of your oracle set of armor. During the learning of the blessed attributes, you will take a vow of silence that will not be lifted until the process is complete. Here they are in the order that you must master them.`,
                 subtopics: [
@@ -117,12 +110,12 @@ export const CLASSES = [
                             {
                                 id: 3,
                                 name: 'Joy',
-                                description: `Joy is the attribute given to the eldar, Xaradriel in the form of citrine. A rough red stone, that is less pronounced than the other stones when polished. Joy is best described in contrast to happiness. Happiness is a short lived rush of personal pleasure. It may last a minute or an hour a day or a month, but inevitably it drops into a valley. Its peaks are high and its valleys low and the only way to experience another peak is to indulge twice as much as the last time. It has a hunger that is never satisfied and the seeker of happiness is doomed to . Contrarily is joy, which does not offer the same rush of pleasure that happiness does. Its peaks are hills to the mountainous peaks of happiness, but it lasts much longer. It can survive the harsh winters of life and the droughts of happiness.`
+                                description: `Joy is the attribute given to the elden, Xaradriel in the form of citrine. A rough red stone, that is less pronounced than the other stones when polished. Joy is best described in contrast to happiness. Happiness is a short lived rush of personal pleasure. It may last a minute or an hour a day or a month, but inevitably it drops into a valley. Its peaks are high and its valleys low and the only way to experience another peak is to indulge twice as much as the last time. It has a hunger that is never satisfied and the seeker of happiness is doomed to . Contrarily is joy, which does not offer the same rush of pleasure that happiness does. Its peaks are hills to the mountainous peaks of happiness, but it lasts much longer. It can survive the harsh winters of life and the droughts of happiness.`
                             },
                             {
                                 id: 4,
                                 name: `Goodness`,
-                                description: `Goodness is the attribute found in green emerald, which gave life to the arborum. It was given to the eldar, Arboriul at the divergence. Like the races it formed, it is difficult to grasp. It is a purity of heart that seeks DIA's attributes of all else. As goodness develops in a person, they detach themselves from divisive passions and misplaced emotions and seek only the attributes set in stone. Pursue goodness to alleviate the burden of selfishness that you may be kinder and more loving to all`
+                                description: `Goodness is the attribute found in green emerald, which gave life to the arborum. It was given to the elden, Arboriul at the divergence. Like the races it formed, it is difficult to grasp. It is a purity of heart that seeks DIA's attributes of all else. As goodness develops in a person, they detach themselves from divisive passions and misplaced emotions and seek only the attributes set in stone. Pursue goodness to alleviate the burden of selfishness that you may be kinder and more loving to all`
                             },
                             {
                                 id: 5,
@@ -132,7 +125,7 @@ export const CLASSES = [
                             {
                                 id: 6,
                                 name: `Gentleness`,
-                                description: `Gentleness was the prominent stone when Mhindil gave sentience to the Aeoki. It is embodied in the glowing gem of turquoise which lights the halls of Agate and the Zanhari of the oracle. Much akin to kindness, gentleness is soft and tenderhearted in nature. It is a vulnerable disposition and empathy that finds its strength from within. Where others develop hard outer shells to protect a sensitive soul within, the gentle one is soft on the outside and hardy within. They open themselves open to attack, but are built to withstand it. The honing of this attribute will be painful, but worth the peace that will last a lifetime.`
+                                description: `Gentleness was the prominent stone when Mhindil gave sentience to the oaki. It is embodied in the glowing gem of turquoise which lights the halls of Agate and the Zanhari of the oracle. Much akin to kindness, gentleness is soft and tenderhearted in nature. It is a vulnerable disposition and empathy that finds its strength from within. Where others develop hard outer shells to protect a sensitive soul within, the gentle one is soft on the outside and hardy within. They open themselves open to attack, but are built to withstand it. The honing of this attribute will be painful, but worth the peace that will last a lifetime.`
                             },
                             {
                                 id: 7,
@@ -149,6 +142,7 @@ export const CLASSES = [
             {
                 id: 2,
                 name: `The 6 Disciplines`,
+                adminOnly: true,
                 description: `There are six disciplines that mark the life of the oracle. Practice and exercise them regularly to uphold your oath and remain focused on the blessed attributes. You are to master these disciplines not only for your own benefit, but also for the respect of the noble races and for the mentorship of future caracadre and oracle.`,
                 subtopics: [
                     {
@@ -179,13 +173,14 @@ export const CLASSES = [
                     {
                         id: 5,
                         name: `Service`,
-                        description: `Care for your blade and care for others. In alignment with the blessed attributes of kindness, goodness and gentleness, lender to your abilities to all in service to them.Leaders ought to be servants and you are their model of leadership. Do not see any task as to miniscule for you to take up. Help the hafling push his cart into town and the Aeoki find his lost stone. Not only will this develop trust, but it will be a sign of your humility, which must be ever-present in your life. Serve and care for your blade as an extension of yourself. Sharpen it, clean it, protect it. Serve it well and it will serve you well.`
+                        description: `Care for your blade and care for others. In alignment with the blessed attributes of kindness, goodness and gentleness, lender to your abilities to all in service to them.Leaders ought to be servants and you are their model of leadership. Do not see any task as to miniscule for you to take up. Help the hafling push his cart into town and the oaki find his lost stone. Not only will this develop trust, but it will be a sign of your humility, which must be ever-present in your life. Serve and care for your blade as an extension of yourself. Sharpen it, clean it, protect it. Serve it well and it will serve you well.`
                     }
                 ]
             },
             {
                 id: 3,
                 name: `The Five Sacred Duties`,
+                adminOnly: true,
                 description: `As an oracle, you are tasked with three sacred duties to guard and protect the noble people of Avlim. Your training in the blessed attributes and mastery of the disciplines will prepare you for these tasks.`,
                 subtopics: [
                     {
@@ -218,6 +213,7 @@ export const CLASSES = [
             {
                 id: 4,
                 name: `Beliefs about Stones`,
+                adminOnly: true,
                 description: `In the beginning, DIA shattered the mirror of his essence into gemstones; each one a particle of His character, an attribute of His essence. One of the sacred most steps to becoming an oracle is the selection of one of these stones, attributes of DIA in their original form. A single cardinal stone you will select to guide your path as an oracle. Ponder what attribute you cherish most and where DIA has fanned the passion within your heart. Here you will be most in tune with your stone. There are many stones that mark Qeṽa, but your stone, oracle must be a cardinal stone from the crystal island of Agate. Understand these stones and their place amongst the divine and incidental stones if you are to become a master oracle.`,
                 subtopics: [
                     {
@@ -255,6 +251,7 @@ export const CLASSES = [
             {
                 id: 5,
                 name: `Baptism into the Oracle Role at Agate`,
+                adminOnly: true,
                 description: `The initiation into the oracle role is unparalleled in difficulty and sanctity. Once you have meditated on the stone you will pursue, you must take passage to the sacred crystal isle of Agate on the Western shores of Avlim. Here you will obtain your Cardinal stone. While you are graced to take this journey at any time, a caracadre may only travel here when the waters are at peace during the summer and autumn equinox.`,
                 subtopics: [
                     {
@@ -282,11 +279,13 @@ export const CLASSES = [
             {
                 id: 6,
                 name: `Relation to Divination`,
+                adminOnly: true,
                 description: `Remember oracle of Qeṽa, that you are to be a master of all forms of divination. It is for this reason that no man nor orc will ever obtain the role as oracle. Be earnest in your study that you may earn the respect of the noble people of Avlim and beyond. Do not seek to understand the limits of divination, but rather the possibilities as they are not all shown here - only their roots. Do not be persuaded to use magic, the dark divination of Moriel's hosts. If you pull from their will, you may not turn from it when the time comes.`
             },
             {
                 id: 7,
                 name: `Crafting of the Zanhari`,
+                adminOnly: true,
                 description: `The weapon of the oracle is known as the Zanhari. It is a sword feared by the noble peoples of Avlim and their enemies. Its distinction must be preserved by upholding the tradition of its forging and disciplined exercise of its training. Above all, do not forget to pray as DIA's blessing is crucial to the formation of the blade. Here are the steps you must take:`,
                 subtopics: [
                     {
@@ -319,6 +318,7 @@ export const CLASSES = [
             {
                 id: 8,
                 name: `Oath of the Oracle`,
+                adminOnly: true,
                 description: `The Oath of the oracle is no small charge and must be met with a solemn attitude. Before you promise your faculties be sure of the purity of your heart and the aim of your life. When you have cleared your mind of obstruction to the task, take the oath as taken by all oracles before you.`,
                 subtopics: [
                     {
@@ -401,6 +401,7 @@ export const CLASSES = [
             {
                 id: 9,
                 name: `Symbol of the Oracle`,
+                adminOnly: true,
                 description: `Inherit to the oath of the oracle is its symbol shown above. By carrying this symbol, you recognize that you are bound to the oath of the oracle and do not associate yourself with this symbol until you are bound.`,
                 subtopics: [
                     {
@@ -413,6 +414,7 @@ export const CLASSES = [
             {
                 id: 10,
                 name: `Secrets to Keep`,
+                adminOnly: true,
                 description: `While the life of the oracle should not be one of withholding, there are certain truths that are unwise to be entrusted to the noble peoples.`,
                 subtopics: [
                     {
@@ -423,7 +425,7 @@ export const CLASSES = [
                     {
                         id: 1,
                         name: `Divine Stones`,
-                        description: `Do not teach the noble peoples where they can find the divine stones of DIA nor about their abilities. These stones were never intended for them. For the moonstone was brought to be depleted by the eldar, tourmaline was meant to be left in the atmosphere and achroite was a grace befallen that is rightly hidden in Malunë. Look to Amare who wore the moonstone around his neck, but did not reveal its secrets. Whenever asked of it, he simply said, “It is not for you to know.”`
+                        description: `Do not teach the noble peoples where they can find the divine stones of DIA nor about their abilities. These stones were never intended for them. For the moonstone was brought to be depleted by the elden, tourmaline was meant to be left in the atmosphere and achroite was a grace befallen that is rightly hidden in Malunë. Look to Amare who wore the moonstone around his neck, but did not reveal its secrets. Whenever asked of it, he simply said, “It is not for you to know.”`
                     },
                     {
                         id: 2,
@@ -482,6 +484,7 @@ export const CLASSES = [
             {
                 id: 1,
                 name: `History`,
+                adminOnly: true,
                 description: `The Caracadre arose from the ashes of the beginning of wars in 2229 Q.Y. as a brotherhood that would defend against the dark armies of Moriel. They followed the formation of the oracle order commissioned by DIA in 2084 Q.Y. and the Elven Cloaks begun in 2199 Q.Y. Unlike the former orders, the caracadre comprised of volunteers for oracles were selected by DIA and elves were merely born into their “cloaked” communities. The order was began by Mayveo, Lachlan and Haemon.`
             },
             {
@@ -604,21 +607,24 @@ export const CLASSES = [
             {
                 id: 6,
                 name: `Mastery of Stones`,
+                adminOnly: true,
                 description: `Few caracadre ever mastered more than one stone which was a feat in itself. To master one stone was to be worthy of it, bond with it, master its qualities and maintain the bond. Those who tried to cheat the stone would watch the stone slowly dim to darkness. It is for these reasons that the Caracadre were careful in their selection of stone. A chosen stone was kept close - either set into a weapon, in a ring or hung around the neck.`
             },
             {
                 id: 7,
                 name: `The Grand Caracadre`,
-                description: `To become a Grand Caracadre was the goal of most, for a Grand Caracadre was one who mastered all seven incidental stones. Such a master of stones was rarer than even the oracles whose greatness they rivaled, despite no affinity to divination. They were quicker and lighter than the wind wielded by the oracles and stronger than the crystals they carried. A grand caracadre was given equal status of an oracle and welcomed within their ranks and sacred spaces.`
+                description: `To become a Grand Caracadre was the goal of most, for a Grand Caracadre is one who masteres all seven incidental stones. Such a master of stones is rarer than even the oracles whose greatness they rivaled, despite no affinity to divination. They are quicker and lighter than the wind wielded by the oracles and stronger than the crystals they cary. A grand caracadre is given equal status of an oracle and welcomed within their ranks and sacred spaces.`
             },
             {
                 id: 8,
                 name: `The Crested Caracara`,
-                description: `The name “Caracadre is derived from the two words “caracara” and “cadre”. A cadre is one specially trained for a profession. In suit, the caracadre's unique set of skills make them specially equipped for a singular task: to protect the marginalized in the far reaches of society. The Crested “Caracara” is a bird of prey; the only bird brave enough to fly over the black shores of Avlim (besides the wretched vulture). The caracadre see themselves as keeping a watchful eye over the noble races and preying on those who do evil - even in places where it is darkest. The caracadre do not look solely to the crested caracara for their name, but also for their aid. Over the years, the caracadre have trained the caracara to strike down small prey and carry written messages in their talons. One must but offer the birds a token of friendship and then set auditory markers: a marker for themselves and a marker for those they wish to find. It is an amicable relationship between the two beyond the puncture wounds the bird leaves in the cadre's arm. This being said there is healthy mutual respect as they both seem to understand each other as fierce hunters.`
+                description: 'It is clear to all that the caracadre have developed a special relationship with the Crested Caracara bird.',
+                admin: `The name “Caracadre is derived from the two words “caracara” and “cadre”. A cadre is one specially trained for a profession. In suit, the caracadre's unique set of skills make them specially equipped for a singular task: to protect the marginalized in the far reaches of society. The Crested “Caracara” is a bird of prey; the only bird brave enough to fly over the black shores of Avlim (besides the wretched vulture). The caracadre see themselves as keeping a watchful eye over the noble races and preying on those who do evil - even in places where it is darkest. The caracadre do not look solely to the crested caracara for their name, but also for their aid. Over the years, the caracadre have trained the caracara to strike down small prey and carry written messages in their talons. One must but offer the birds a token of friendship and then set auditory markers: a marker for themselves and a marker for those they wish to find. It is an amicable relationship between the two beyond the puncture wounds the bird leaves in the cadre's arm. This being said there is healthy mutual respect as they both seem to understand each other as fierce hunters.`
             },
             {
                 id: 9,
                 name: `Song of the Caracadre`,
+                adminOnly: true,
                 description: `The song of the caracadre is a song often sung by homesick caracadre traveling through the harsher lands of Qeṽa.`,
                 subtopics: [
                     {
@@ -701,12 +707,13 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `The Avlimeth or "Haven of Avlim" more commonly known as 'watchers' are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences  in their beliefs about gems. After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the oracles placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, avlimeth only pursue stones of a shared element.`
+                description: `The Avlimeth or "Haven of Avlim" more commonly known as 'watchers' are warriors much like the caracadre for they once were part of there order. However, they broke away from the caracadre over differences in their beliefs about gems. Avlimeth were convicted that Cardinal Stones were essential to following DIA.`, 
+                admin: `After reading the SenSavye, the Avlimeth disagreed with the caracadre's focus on the incidental stones for it ignored the value the oracles placed on the Cardinal stones. However, they did not feel it was right either to ignore the power of the incidental stones nor abandon them for they too were created by DIA. So they decided the gems should be pursued vertically by their shared element rather than horizontally by their class (divine, cardinal, incidental). For example, they recognize that amber, the incidental stone of constitution amd topaz, the cardinal stone of hope share the same elemental quality and effect. A person with hope will have constitution and a person with constitution will have hope. With this, avlimeth only pursue stones of a shared element.`
             },
             {
                 id: 1,
                 name: `The Genogravé`,
-                description: `There are many methods for a watcher to select a stone. They may visit an acolyte or they may read the stone descriptions in the texts of the SenSavye. They may even decide based on instinct. However, the method recommended by the oracles is to consult the Genogravé. The Genogravé is a painting, which can be found in every eldar cathedral in Avlim and the outer isles. Though they depict the same scene, each Genogravé depicts it differently. The oracles say a caracadre ought to sit before the painting and ask themselves, “What resonates with you in the painting?” Within the painting are powerful notes of every stone and these notes draw out the emotions of the viewer. Some argue and most avlimeth affirm that it is the emotional piece of art ever created and likely so because it is inspired by DIA HIMSELF. The attribute the viewer is drawn to is the attribute they ought to pursue. An initiate may do this to select their first stone or a caracadre may do it to identify their next stone.`,
+                description: `There are many methods for a watcher to select a stone. They may visit an acolyte or they may read the stone descriptions in the texts of the SenSavye. They may even decide based on instinct. However, the method recommended by the oracles is to consult the Genogravé. The Genogravé is a painting, which can be found in every elden cathedral in Avlim and the outer isles. Though they depict the same scene, each Genogravé depicts it differently. The oracles say an avlimeth ought to sit before the painting and ask themselves, “What resonates with you in the painting?” Within the painting are powerful notes of every stone and these notes draw out the emotions of the viewer. Some argue and most avlimeth affirm that it is the emotional piece of art ever created and likely so because it is inspired by DIA HIMSELF. The attribute the viewer is drawn to is the attribute they ought to pursue. An initiate may do this to select their first stone or a caracadre may do it to identify their next stone.`,
                 image: genograve,
                 imageAlt: `Genograve painting`
             },
@@ -780,7 +787,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elven Cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains iconic for the towering elven statues on either side. They were the only order established by oracles and are rumored to have been graced with a small degree of knowledge in divination.`,
+                description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elven Cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains. It was iconic for the towering elven statues on either side. They were the only order established by oracles and are rumored to have been graced with a small degree of knowledge in divination.`,
             }
         ]
     },
@@ -858,7 +865,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `Perhaps the most feared among the factions are the Athiame Ghost Blades. Though they are skilled warriors, public fear is due more to history than skill. One of the most lethal sorcerers to live was the dark lord Ithmaar of Athiame descent. Not only was he responsible for the cursing of the Mahelo wood and Rose Fields of Altiavaire, but he initiated the Aeoki genocide and was a ruthless oppressor during the Void age. His actions scarred the reputation of athiame became known as the “Athmari.” Being welcomed less and less elsewhere, The Athiame holed themselves up in the Athiare cliffs. Their borders were secured by the “ghost blades” who had such stealth that men would say a trespasser's neck would be slit before they even felt the blade. The recent actions of the Athiame, Theathe has somewhat redeemed the Athiame name, but there is still great skepticism and fear around the renowned Athmari ghost blades (though they prefer “Athiame ghost blades”).`,
+                description: `Perhaps the most feared among the factions are the Athiame Ghost Blades. Though they are skilled warriors, public fear is due more to history than skill. One of the most lethal sorcerers to live was the dark lord Ithmaar of Athiame descent. Not only was he responsible for the cursing of the Mahelo wood and Rose Fields of Altiavaire, but he initiated the Oaki genocide and was a ruthless oppressor during the Void age. His actions scarred the reputation of athiame became known as the “Athmari.” Being welcomed less and less elsewhere, The Athiame holed themselves up in the Athiare cliffs. Their borders were secured by the “ghost blades” who had such stealth that men would say a trespasser's neck would be slit before they even felt the blade. The recent actions of the Athiame, Theathe has somewhat redeemed the Athiame name, but there is still great skepticism and fear around the renowned Athmari ghost blades (though they prefer “Athiame ghost blades”).`
             }
         ]
     },
@@ -898,7 +905,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `The uncorrupted is the nickname given to a legion of disciplined Ohri soldiers with an unmatched reputation. They comprised the front lines in the retaking of Avlim and comprised the majority of the force in the war of all. Despite their reputation, there is very little known about them. They did not appear in Avlim until the end of the void age and it is a bit of a mystery of where they came from. Some speculate that they were a byproduct of Ithmaar's void magic or divined by the Eldar while others believe them to be underdwellers who burrowed up from the ground or voyagers from another land. Few dare to ask, as the uncorrupted are of a battle-hardened, stoic breed. They have perfect chemistry with each other, but struggle forming bonds with others.`
+                description: `The uncorrupted is the nickname given to a legion of disciplined ocri soldiers with an unmatched reputation. They comprised the front lines in the retaking of Avlim and comprised the majority of the force in the war of all. Despite their reputation, there is very little known about them. They did not appear in Avlim until the end of the void age and it is a bit of a mystery of where they came from. Some speculate that they were a byproduct of Ithmaar's void magic or divined by the elden while others believe them to be underdwellers who burrowed up from the ground or voyagers from another land. Few dare to ask, as the uncorrupted are of a battle-hardened, stoic breed. They have perfect chemistry with each other, but struggle forming bonds with others.`
             }
         ]
     },
@@ -939,7 +946,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `In response to the war of the weak, the Halflings became trained in combat by the man, Tyrns, a grand caracadre. This formed the first significant bond between men and halflings and their “order" became known as the “Topplers.” Before the void, they saw little action, but gave a small measure of pride and security to their people in the Fletcheren hills. Now in a different world, they call upon their distant training to aid in the restoration of Avlim. However, their lighthearted disposition, small stature and lack of experience in real battle has led them to be seen as  joke in the realm of warfare.`,
+                description: `In response to the war of the weak, the Halflings became trained in combat by the man, Tyrns, a grand caracadre. This formed the first significant bond between men and halflings and their “order" became known as the “Topplers.” Before the void, they saw little action, but gave a small measure of pride and security to their people in the Fletcheren hills. Now in a different world, they call upon their distant training to aid in the restoration of Avlim. However, their lighthearted disposition, small stature and lack of experience in real battle has led them to be seen as a joke in the realm of warfare.`,
             }
         ]
     },

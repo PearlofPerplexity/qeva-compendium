@@ -54,7 +54,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone pulled down by Moriel from the Outerworld`,
                 description:
-                    `Tourmaline is the stone of immensity. At the beginning of time, DIA shattered it from his reflection, but it's quality could not be contained in Qeṽa. It flew past the planet and ever expanded and split into planets, stars and galaxies in the outstretch of space. Everyone beyond this world and its moon is crafted from Tourmaline. So then, when one eldar reached out in divination into space, it was tourmaline that fell from the sky. You are likely familiar with its presence on the far eastern island of Arguthain where the eldar, Moriel divined a meteor from the sky and shaped it into a fortress. Do not seek out this substance, oracle. Yes it is powerful and the source of the Dark Armies' strength who resisted us at the ends of the east, but it cannot be bottled. It continues to multiply on Arguthain and the dark armies with it. It tempts warriors far and wide, but do not be so easily tricked. It is impossible to keep in balance with the other attributes and will only be to your destruction. It is a stone of divinity as no created sentient being can experience omnipotence nor omnipresence.`,
+                    `Tourmaline is the stone of immensity. At the beginning of time, DIA shattered it from his reflection, but it's quality could not be contained in Qeṽa. It flew past the planet and ever expanded and split into planets, stars and galaxies in the outstretch of space. Everyone beyond this world and its moon is crafted from Tourmaline. So then, when one elden reached out in divination into space, it was tourmaline that fell from the sky. You are likely familiar with its presence on the far eastern island of Arguthain where the elden, Moriel divined a meteor from the sky and shaped it into a fortress. Do not seek out this substance, oracle. Yes it is powerful and the source of the Dark Armies' strength who resisted us at the ends of the east, but it cannot be bottled. It continues to multiply on Arguthain and the dark armies with it. It tempts warriors far and wide, but do not be so easily tricked. It is impossible to keep in balance with the other attributes and will only be to your destruction. It is a stone of divinity as no created sentient being can experience omnipotence nor omnipresence.`,
                 image: tourmaline,
                 imageAlt: `Qeṽa Tourmaline Gem`,
                 lvls: [
@@ -96,7 +96,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone avoided and thought to be a naturally dark stone`,
                 description:
-                    `When DIA made the decision to create time and space, it began with total solitude. Before any of the other attributes were formed in the translucent orb above the earth, he heated the obsidian till it was molten and shaped it into the earth. When the crust hardened is when he began shaping the other attributes. As the years continued, obsidian broke through to the surface in volcanoes in its molten form. It then hardened as volcanic glass; notably Mount Sakur in Avlim. The eldar know of this for DIA has told them, but they do not share this information with others. Rather, they allow the people of Avlim to keep their superstitions. The noble people avoid the gem, because it is black like the dark stones, which oppose DIA. The Eldar do not enlighten them because obsidian was intended by DIA to be left alone. It is a gem of solitude and if parties venture to find it, it will lose its quality or worse, be abused as it easily is. Nonetheless, still some learn the secret and venture to Sakur. DIA nor the Eldars condemn them as it is a profound blessing if used correctly. However, overall, the gem is not to be sought. It is a stone of divinity as no created sentient being can experience true sole-existence.`,
+                    `When DIA made the decision to create time and space, it began with total solitude. Before any of the other attributes were formed in the translucent orb above the earth, he heated the obsidian till it was molten and shaped it into the earth. When the crust hardened is when he began shaping the other attributes. As the years continued, obsidian broke through to the surface in volcanoes in its molten form. It then hardened as volcanic glass; notably Mount Sakur in Avlim. The elden know of this for DIA has told them, but they do not share this information with others. Rather, they allow the people of Avlim to keep their superstitions. The noble people avoid the gem, because it is black like the dark stones, which oppose DIA. The elden do not enlighten them because obsidian was intended by DIA to be left alone. It is a gem of solitude and if parties venture to find it, it will lose its quality or worse, be abused as it easily is. Nonetheless, still some learn the secret and venture to Sakur. DIA nor the elden condemn them as it is a profound blessing if used correctly. However, overall, the gem is not to be sought. It is a stone of divinity as no created sentient being can experience true sole-existence.`,
                 image: obsidian,
                 imageAlt: `Qeṽa Obsidian Gem`,
                 lvls: [
@@ -159,7 +159,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone given to all the eveile at the beginning of the Divergent Age.`,
                 description:
-                    `Moonstone or the sentience stone is that which is elemental to creating all life. No sentient creation evil or good survives without it and no eldar nor oracle can create life without it. It can only be found on the moon of Qeṽa where the eveile, once walked and witnessed its silver glittering glow. Some creatures have been influenced by its nightly glow upon Qeṽa and taken to awaken during the night and sleep during the day. The Eldar, Amare is the only known keeper of moonstone on Qeṽa. For each Eldar was given a sentient stone to create, but Amare did not. It is a stone of divinity as no created sentient being can reconstruct life apart from DIA.`,
+                    `Moonstone or the sentience stone is that which is elemental to creating all life. No sentient creation evil or good survives without it and no elden nor oracle can create life without it. It can only be found on the moon of Qeṽa where the eveile, once walked and witnessed its silver glittering glow. Some creatures have been influenced by its nightly glow upon Qeṽa and taken to awaken during the night and sleep during the day. The elden, Amare is the only known keeper of moonstone on Qeṽa. For each elden was given a sentient stone to create, but Amare did not. It is a stone of divinity as no created sentient being can reconstruct life apart from DIA.`,
                 image: moonstone,
                 imageAlt: `Qeṽa Tiger's Eye Gem`,
                 lvls: [
@@ -187,7 +187,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone given to Amare never used to create`,
                 description:
-                    `First is the diamond, which is love; least understood and greatest among the cardinal stones given to the eldar. It is mostly white when cut from the earth, but clear in its purest form. It binds us all together through the garnering of all stones. Without it, all attributes are meaningless and apart from the others it is indescribable. To the Eldest, Amare, was this stone entrusted. He chose to bury it in the forest of Malune and it flourished into a paradise that all shall share in at the coming of Agate above. This self-sacrificial act of Amare is prominent in the diamond.`,
+                    `First is the diamond, which is love; least understood and greatest among the cardinal stones given to the elden. It is mostly white when cut from the earth, but clear in its purest form. It binds us all together through the garnering of all stones. Without it, all attributes are meaningless and apart from the others it is indescribable. To the Eldest, Amare, was this stone entrusted. He chose to bury it in the forest of Malune and it flourished into a paradise that all shall share in at the coming of Agate above. This self-sacrificial act of Amare is prominent in the diamond.`,
                 image: diamond,
                 imageAlt: `Qeṽa Diamond Gem`,
                 lvls: [
@@ -233,7 +233,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone given to Xaradriel to create Halflings`,
                 description:
-                    `Second is citrine, which is joy, given to the eldar, Xaradriel to craft the halfling. Its red color is unmistakable in the earth and can be polished into a flawless orange gem. If you bind yourself to its nature, your joy will outlast any difficulty that comes before you. You will be the last to lose heart when the path darkens; an evergreen, ever-glad soul.`,
+                    `Second is citrine, which is joy, given to the elden, Xaradriel to craft the halfling. Its red color is unmistakable in the earth and can be polished into a flawless orange gem. If you bind yourself to its nature, your joy will outlast any difficulty that comes before you. You will be the last to lose heart when the path darkens; an evergreen, ever-glad soul.`,
                 image: citrine,
                 imageAlt: `Qeṽa Citrine Gem`,
                 lvls: [
@@ -277,7 +277,7 @@ export const GEMS = [
                 syntheticStone: `Control`,
                 darkStone: `Mayhem`,
                 smDescription: 
-                    `Stone given to Moriel to create Ohri`,
+                    `Stone given to Moriel to create ocri`,
                 description:
                     `There is then Amethyst, which is peace. It is purple in color and glitters even unpolished. This stone was opened by the dark lord, Moriel, to craft the races of the dark armies, but do not make the mistake to say that the stone is cursed. It is not in Amethyst's nature to be destructive. You, oracle can restore honor to an Amethyst gem by allowing the stone to draw oneself and others to DIA rather than oneself. With Amethyst you will be the eye of the hurricane, the calm of the storm.`,
                 image: amethyst,
@@ -325,7 +325,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone given to Ferthrui to create Dwarves`,
                 description:
-                    `Pyrite glitters gold in the tunnels of the dwarves. It is patience as the dwarves are patient in their mining of fine minerals. It was given to the eldar, Ferthrui to form the dwarves in the thrush mountains and is easily confused with gold. So then, there is great wisdom in carrying the lesser stone of Gold in one's possession to compare it to the far more valuable, Pyrite. It grants one the patience to see long-term goals and rewards to fruition.`,
+                    `Pyrite glitters gold in the tunnels of the dwarves. It is patience as the dwarves are patient in their mining of fine minerals. It was given to the elden, Ferthrui to form the dwarves in the thrush mountains and is easily confused with gold. So then, there is great wisdom in carrying the lesser stone of Gold in one's possession to compare it to the far more valuable, Pyrite. It grants one the patience to see long-term goals and rewards to fruition.`,
                 image: pyrite,
                 imageAlt: `Qeṽa Pyrite Gem`,
                 lvls: [
@@ -370,7 +370,7 @@ export const GEMS = [
                 darkStone: `Wrath`,
                 smDescription: 
                     `Stone given to Nware to create Gnomes`,
-                description: `Sapphire, which is kindness, was given to the eldar, Nware to craft the race of gnomes. You will recognize this stone as a clear dark blue in its raw form. You must visit the gnomes of Farathain to truly understand the selfless fashion of this attribute. Master it, and you will develop relationships with all the noble races and develop an empathy for your enemy that will lead to their demise.`,
+                description: `Sapphire, which is kindness, was given to the elden, Nware to craft the race of gnomes. You will recognize this stone as a clear dark blue in its raw form. You must visit the gnomes of Farathain to truly understand the selfless fashion of this attribute. Master it, and you will develop relationships with all the noble races and develop an empathy for your enemy that will lead to their demise.`,
                 image: sapphire,
                 imageAlt: `Qeṽa Sapphire Gem`,
                 lvls: [
@@ -415,7 +415,7 @@ export const GEMS = [
                 darkStone: `Evil`,
                 smDescription: 
                     `Stone given to Arboriul to bring Trees to sentience`,
-                description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the eldar, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
+                description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the elden, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
                 image: emerald,
                 imageAlt: `Qeṽa Emerald Gem`,
                 lvls: [
@@ -460,7 +460,7 @@ export const GEMS = [
                 darkStone: `Faithless`,
                 smDescription: 
                     `Stone given to Çairça to create Elves`,
-                description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the eldar, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
+                description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the elden, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
                 image: onyx,
                 imageAlt: `Qeṽa Onyx Gem`,
                 lvls: [
@@ -504,8 +504,8 @@ export const GEMS = [
                 syntheticStone: `Apathy`,
                 darkStone: `Violence`,
                 smDescription: 
-                    `Stone given to Mhindil to bring Aeoki to sentience`,
-                description: `Turquoise is the stone of gentleness and it will be a part of your journey no matter the stone you select. Learn to recognize it before your journey to the crystal isle of Agate. Turquoise is blue-green in color and the only stone to radiate light and glow at night. It was given to the eldar, Mhindil, which she used to grant sentience to the small, intelligent Aeoki of the Arthadain Fields. The meekness of Turquoise cannot only lend one toward humility and softness, but also mask them in stealth. But these reasons are not why they are essential to the oracle warrior. All stones reveal with color the bond of a warrior to their stone, but none more so than Turquoise and none need surveillance of character more so than the oracles. For this reason, a turquoise edge lines ever Zanhari, the sword of the oracle.`,
+                    `Stone given to Mhindil to bring oaki to sentience`,
+                description: `Turquoise is the stone of gentleness and it will be a part of your journey no matter the stone you select. Learn to recognize it before your journey to the crystal isle of Agate. Turquoise is blue-green in color and the only stone to radiate light and glow at night. It was given to the elden, Mhindil, which she used to grant sentience to the small, intelligent oaki of the Arthadain Fields. The meekness of Turquoise cannot only lend one toward humility and softness, but also mask them in stealth. But these reasons are not why they are essential to the oracle warrior. All stones reveal with color the bond of a warrior to their stone, but none more so than Turquoise and none need surveillance of character more so than the oracles. For this reason, a turquoise edge lines ever Zanhari, the sword of the oracle.`,
                 image: turquoise,
                 imageAlt: `Qeṽa Turquoise Gem`,
                 lvls: [
@@ -550,7 +550,7 @@ export const GEMS = [
                 darkStone: `Havoc`,
                 smDescription: 
                     `Stone given to Thelmiel to create Aviame`,
-                description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the eldar, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
+                description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the elden, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
                 image: ruby,
                 imageAlt: `Qeṽa Ruby Gem`,
                 lvls: [
@@ -685,7 +685,7 @@ export const GEMS = [
                 darkStone: `Pride`,
                 smDescription:
                     `The penultimate stone, foundational to all other stones`,
-                description: `Greatest and rarest of all cardinal stones is the pearl of humility. Consider yourself the lowliest and vilest of sentience before DIA if you wish for it not to crumble in your hand. For it is brittler than fine glass and is mere myth among the noble races. No eldar was entrusted with it and no dwarf has been known to recover it from stone. It is white, circular and smooth as the surface of Qeṽa before the sprinkling of DIA's attributes. If ever you come across it, know this: the wielder of the pearl of humility is gifted with the attribute necessary to pursue and master all other attributes. However, the more one grows in the attributes, the more difficult this stone is to control, but the one who does will be among the most powerful warriors to walk Qeṽa.`,
+                description: `Greatest and rarest of all cardinal stones is the pearl of humility. Consider yourself the lowliest and vilest of sentience before DIA if you wish for it not to crumble in your hand. For it is brittler than fine glass and is mere myth among the noble races. No elden was entrusted with it and no dwarf has been known to recover it from stone. It is white, circular and smooth as the surface of Qeṽa before the sprinkling of DIA's attributes. If ever you come across it, know this: the wielder of the pearl of humility is gifted with the attribute necessary to pursue and master all other attributes. However, the more one grows in the attributes, the more difficult this stone is to control, but the one who does will be among the most powerful warriors to walk Qeṽa.`,
                 image: pearl,
                 imageAlt: `Qeṽa Pearl`,
                 lvls: [
@@ -753,7 +753,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone native to Fletcheren, home of the Halflings.`,
                 description:
-                    `Crocoite is the stone of happiness, which is born out of citrine, the cardinal stone of joy given to the eldar, Xaradriel at the inception of the divergent age. Thus, crocoite is most abundantly found in the Fletchering Hills, the home of Xaradriel's creation, the halfling. Their kind are willing to part with it for a price. It is a mere reflection of citrine as citrine is a mere reflection of Dia. Crocoite struggles to maintain the same longevity as citrine, but rather has the temptation of short-term potency. For this reason, many abuse it as a narcotic and quickly deplete its essence without supplementing it with their own joy. If a warrior would align themselves to crocoite with their own joy, they would receive a lesser blessing of citrine.`,
+                    `Crocoite is the stone of happiness, which is born out of citrine, the cardinal stone of joy given to the elden, Xaradriel at the inception of the divergent age. Thus, crocoite is most abundantly found in the Fletchering Hills, the home of Xaradriel's creation, the halfling. Their kind are willing to part with it for a price. It is a mere reflection of citrine as citrine is a mere reflection of Dia. Crocoite struggles to maintain the same longevity as citrine, but rather has the temptation of short-term potency. For this reason, many abuse it as a narcotic and quickly deplete its essence without supplementing it with their own joy. If a warrior would align themselves to crocoite with their own joy, they would receive a lesser blessing of citrine.`,
                 image: crocoite,
                 imageAlt: `Qeṽa Crocoite Gem`,
                 lvls: ["+5 Death Save", "+10 Death Save", "+5 Speed", "1 Guaranteed Death Save", "+10 Speed"]
@@ -766,9 +766,9 @@ export const GEMS = [
                 syntheticStone: `Control`,
                 darkStone: `Mayhem`,
                 smDescription: 
-                    `Stone native to Shaolë home of the Ohri`,
+                    `Stone native to Shaolë home of the ocri`,
                 description:
-                    `Azurite is the stone of charisma, which is born out of Amethyst, the cardinal stone of peace given to the eldar, Moriel. Thus, it grows abundantly in the dangerous regions of the grave mountains and Akukar canyon. The dark races are too diminished in sentience to make use of it and pay no attention to it though its power is rooted in Amethyst and can provide a persuasive and charming kind of peace. You must warn the caracadre who venture there of the peril of such a quest. Few who wander into Shaole ever return.`,
+                    `Azurite is the stone of charisma, which is born out of Amethyst, the cardinal stone of peace given to the elden, Moriel. Thus, it grows abundantly in the dangerous regions of the grave mountains and Akukar canyon. The dark races are too diminished in sentience to make use of it and pay no attention to it though its power is rooted in Amethyst and can provide a persuasive and charming kind of peace. You must warn the caracadre who venture there of the peril of such a quest. Few who wander into Shaole ever return.`,
                 image: azurite,
                 imageAlt: `Qeṽa Azurite Gem`,
                 lvls: ["+1 CHA", "+3 CHA", "+5 CHA", "+8 CHA", "+10 CHA"]
@@ -838,7 +838,7 @@ export const GEMS = [
                 syntheticStone: `Apathy`,
                 darkStone: `Violence`,
                 smDescription: 
-                    `Stone native to Mhindileth, home of the Aeoki`,
+                    `Stone native to Mhindileth, home of the oaki`,
                 description: `A gentle foot is a stealthy foot. Though Chryscocolla does not glow like turquoise, it shares its teal hue. Chryscocolla is hidden away in the tunnels of Mhindeleth and grows alongside its parent stone turquoise.`,
                 image: chryscocolla,
                 imageAlt: `Qeṽa Chryscocolla Gem`,
