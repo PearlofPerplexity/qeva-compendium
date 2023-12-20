@@ -189,7 +189,7 @@ const Header = (args) => {
                     <NavItem className="nav-item">
                         <NavLink href={DivineLink}>
                             <i className={DivineIcon} />
-                            &nbsp; Divination
+                            &nbsp; Luminance
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">

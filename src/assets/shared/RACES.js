@@ -60,7 +60,7 @@ export const RACES = [
         language: `Elvish`,
         government: `Republic`,
         foundedOrders: `Elven Cloaks`,
-        description: `Elves were the first race to live in Qeṽa. They roamed the world and even the stars for a thousand years before the other races appeared. They are immortal therefore wisest of the races. They can be deciphered from men by their fair skin, and pointed ears. They are responsible for the cathedrals around Qeṽa mythed to be erected through divination and they are drawn to DIA's attributes in water and wood.`,
+        description: `Elves were the second race to live in Qeṽa. They are immortal and therefore amongest the wisest of the races if not the proudest. They can be deciphered from men by their fair skin, and pointed ears. They are responsible for the cathedrals around Qeṽa mythed to be erected through lumination and they are drawn to DIA's attributes in water and wood.`,
         image: wood,
         speed: 30,
         size: 'M',
@@ -160,7 +160,7 @@ export const RACES = [
                 residence: `Miolaire & Dundili Rivers`,
                 appearance: `Gold Hair & Tan Skin`,
                 description: 
-                    `Desert elves are those who withdrew from society to seek separation from the growing hostility in Avlim. They found seclusion in the northeastern deserts of Shaole, in an oasis they've hidden by illusions. Though their community was built on passivism, there are still those among them who reenter society to play a role in the events of history.`,
+                    `Desert elves are those who withdrew from society to seek separation from the growing hostility in Avlim. They found seclusion in the northeastern deserts of Shaole, in an oasis they've hidden by illusions. Though their community was built on passivism, there are still those among them who re-enter society to play a role in the events of history.`,
                 image: desert,
                 imageAlt: `Qeṽa Desert Elf`,
                 con: 1,
@@ -232,7 +232,7 @@ export const RACES = [
                 residence: `Mountains of Altiavaire`,
                 appearance: `Black Hair & Tangerine Skin`,
                 description: 
-                    `The Lumiare or Autumn Avi have a tanish, orange tint to their skin, dark purple lips and black markings on their face. Their greatest city is Lumion in the Anduir valley of Altiavaire, though their kind can be found scattered throughout the mid-north. Unlike elves, they have a sense for mountainous terrain and wildlife. They are best known for their legendary mountain warfare school and companionship with birds.`,
+                    `The Lumiare or Autumn Avi have a tanish, orange tint to their skin, dark purple lips and black markings on their bodies. Their greatest city is Lumion in the Anduir valley of Altiavaire, though their kind can be found scattered throughout the mid-north. Unlike elves, they have a sense for mountainous terrain and wildlife. They are best known for their legendary mountain warfare school and companionship with birds.`,
                 image: lumiare,
                 imageAlt: `Qeṽa Lumiare Aviame`,
                 wis: 1,
@@ -473,7 +473,8 @@ export const RACES = [
                 residence: `Brielle`,
                 appearance: `Each elden different`,
                 description: 
-                    `The Elden were the first nine created by Dia and from them all men were born. Their names are not all known, but nearly all are familiar with Amare, Xaradriel, Çairça and Nware. They were the only elves taught divination directly from DIA and so were commanded to oversee the oracle order. Thus, they are said to be the wisest of all.`,
+                    `The Elden were the first beings created by Dia and from them all men were born.`, 
+                admin: 'Nine there were. Their names are not all known, but nearly all are familiar with Amare, Xaradriel, Çairça and Nware. They and they alone were taught luminance directly from DIA and so were commanded to oversee the oracle order. Thus, they are said to be the wisest of all.',
                 image: elden,
                 imageAlt: `Qeṽa Elden`
             }
@@ -504,6 +505,7 @@ export const RACES = [
         residence: `None`,
         foundedOrders: `The Uncorrupted`,
         description: `Among the known peoples of Avlim, the ocri seem to be the only race without a homeland and without the guidance of an elden. They have pale skin and a tall muscular build. They are nearly as stoic as the elves, but with a sharper sense of hardened character. Not surprisingly, they are not fast made friends, though they are rumored to be the kindest of strangers if approached. This temperament and body type matches their known recognition for being great warriors with unmatched discipline. They mix into the various lands of Qeṽa, often holding high military positions.`,
+        admin: 'Few if any are aware that ocri are orcs who have turned back from darkness and back to the attributes of DIA.',
         image: ocri,
         imageAlt: `Qeṽa Ocri`,
         speed: 30,
@@ -709,7 +711,7 @@ export const RACES = [
                 residence: `Farathain`,
                 appearance: `Green Skin`,
                 description: 
-                    `Green Gnomes can be found in Farathain, the southern region of Ouri below Fletcheren. Their greatest towns are Nalri in the wood and Nadia south of Loch Ladish. Unlike most sentient races, these Gnomes have a natural propensity for divination. Without any training, they begin forming minor illusions as children and progress in their skill from there.`,
+                    `Green Gnomes can be found in Farathain, the southern region of Ouri below Fletcheren. Their greatest towns are Nalri in the wood and Nadia south of Loch Ladish. Unlike most sentient races, these Gnomes have a natural propensity for lumination. Without any training, they begin forming minor illusions as children and progress in their skill from there.`,
                 image: ggnome,
                 imageAlt: `Qeṽa Green Gnome`,
                 wis: 1,
@@ -741,7 +743,7 @@ export const RACES = [
                 residence: `Haven`,
                 appearance: `Blue Skin`,
                 description: 
-                    `Blue Gnomes live on the island, Haven, southwest of Avlim with their greatest city being Amvil, city of bridges. They are the farthest removed from world events, though Haven was the primary refuge for all races during the reign of Ithmar and his void that brought on the age of darkness. Like green gnomes, they have a natural propensity for divination.`,
+                    `Blue Gnomes live on the island, Haven, southwest of Avlim with their greatest city being Amvil, city of bridges. They are the farthest removed from world events, though Haven was the primary refuge for all races during the reign of Ithmar and his void that brought on the age of darkness. Like green gnomes, they have a natural propensity for lumination.`,
                 image: bgnome,
                 imageAlt: `Qeṽa Blue Gnome`,
                 dex: 1,
@@ -773,7 +775,7 @@ export const RACES = [
                 residence: `Baroach, Bare Mountains`,
                 appearance: `Red Skin`,
                 description: 
-                    `Unlike green and blue gnomes, red gnomes do not have an ability to produce divination, but only magic. Also unlike other gnomes, they are unfriendly if not altogether hostile. No one seems to really know their source of origin, though most claim that they live in the uninhabited treelines of the thrush and bare mountains.`,
+                    `Unlike green and blue gnomes, red gnomes do not have an ability to produce lumination, but only magic. Also unlike other gnomes, they are unfriendly if not altogether hostile. No one seems to really know their source of origin, though most claim that they live in the uninhabited treelines of the thrush and bare mountains.`,
                 image: rgnome,
                 imageAlt: `Qeṽa Red Gnome`,
                 con: 1,
@@ -822,7 +824,7 @@ export const RACES = [
         government: `Democracy`,
         residence: `Fletcheren`,
         foundedOrders: `The Topplers`,
-        description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the elden, Xaradriel and oracle, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for 75% of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
+        description: `Halflings or Halves have the faces of men, but not the stature. At 3 feet tall, there are among the shortest in Avlim and yet occupy some of the lushest land for farming in the Fletcheren hills. If not for their hearty disposition, they are known for a narcotic stimulant, the scolecite stone, which is sparsely found outside their lands. While not much trouble stirs up among halflings, an order of vanguards known as the Topplers were trained by the elden, Xaradriel and oracle, Tyrns to secure their borders and resolve disputes. Their greatest city is Harbollow, which accounts for three quarters of all halflings. Halflings life for around 120 years, a fraction of the Elves and Aviame.`,
         image: half,
         speed: 25,
         size: 'S',
@@ -875,7 +877,7 @@ export const RACES = [
         language: `Kigaul`,
         government: `Communal`,
         residence: `Mhindileth`,
-        description: `Rarely seen are the oaki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for divination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the oracles, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
+        description: `Rarely seen are the oaki. Though they appear innocent with their large eyes, petite figure and tenderhearted disposition, they are more dangerous than most with an intense proclivity for lumination. Though it is not in their nature to use this ability for evil, they will not hesitate to defend a friend or themself. Their whereabouts are hidden by the oracles, but rumors place them somewhere in the High Mountains. They understand the common tongue, but cannot speak it.`,
         image: oaki,
         speed: 20,
         size: 'S',
@@ -1063,7 +1065,7 @@ export const RACES = [
                 residence: `The Natural World`,
                 appearance: `White Hair, White Skin, White Eyes`,
                 description: 
-                    `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their celestite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them mortal. They would look identical to humans if not for their luminescence. They are rare in Qeṽa and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
+                    `Spectres or Estrayas commonly branded fallen stars are spirits which have lost or given up their celestite to take a physical form and yet have remained faithful to their alignment to DIA and HIS goodness. This choice however has made them visible aand mortal. They would look identical to humans if not for their luminescence. They are rare in Qeṽa and are generally seen as untrustworthy. At one time, specters told their stories until rumors spread that they were ripped out of the ether on account of a fall from grace.`,
                 image: spectre,
                 imageAlt: `Qeṽa Spectre`,
                 cha: 2,

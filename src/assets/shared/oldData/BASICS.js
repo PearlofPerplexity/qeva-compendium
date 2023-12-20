@@ -18,8 +18,8 @@ export const BASICS = [
             },
             {
                 id: 2,
-                name: `Mechanics of Divination`,
-                description: `The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals, both graces of DIA. Gemstones are the source of divination and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for divination to occur.`
+                name: `Mechanics of Lumination`,
+                description: `The magic in Qeṽa is unique in that it sources its power from the combination of gemstones and ethereals, both graces of DIA. Gemstones are the source of luminance and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for lumination to occur.`
             },
             {
                 id: 3,

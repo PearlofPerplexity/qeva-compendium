@@ -54,7 +54,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone pulled down by Moriel from the Outerworld`,
                 description:
-                    `Tourmaline is the stone of immensity. At the beginning of time, DIA shattered it from his reflection, but it's quality could not be contained in Qeṽa. It flew past the planet and ever expanded and split into planets, stars and galaxies in the outstretch of space. Everyone beyond this world and its moon is crafted from Tourmaline. So then, when one elden reached out in divination into space, it was tourmaline that fell from the sky. You are likely familiar with its presence on the far eastern island of Arguthain where the elden, Moriel divined a meteor from the sky and shaped it into a fortress. Do not seek out this substance, oracle. Yes it is powerful and the source of the Dark Armies' strength who resisted us at the ends of the east, but it cannot be bottled. It continues to multiply on Arguthain and the dark armies with it. It tempts warriors far and wide, but do not be so easily tricked. It is impossible to keep in balance with the other attributes and will only be to your destruction. It is a stone of divinity as no created sentient being can experience omnipotence nor omnipresence.`,
+                    `Tourmaline is the stone of immensity. At the beginning of time, DIA shattered it from his reflection, but it's quality could not be contained in Qeṽa. It flew past the planet and ever expanded and split into planets, stars and galaxies in the outstretch of space. Everyone beyond this world and its moon is crafted from Tourmaline. So then, when one elden reached out in luminance into space, it was tourmaline that fell from the sky. You are likely familiar with its presence on the far eastern island of Arguthain where the elden, Moriel divined a meteor from the sky and shaped it into a fortress. Do not seek out this substance, oracle. Yes it is powerful and the source of the Dark Armies' strength who resisted us at the ends of the east, but it cannot be bottled. It continues to multiply on Arguthain and the dark armies with it. It tempts warriors far and wide, but do not be so easily tricked. It is impossible to keep in balance with the other attributes and will only be to your destruction. It is a stone of divinity as no created sentient being can experience omnipotence nor omnipresence.`,
                 image: tourmaline,
                 imageAlt: `Qeṽa Tourmaline Gem`,
                 lvls: [
@@ -466,27 +466,27 @@ export const GEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "LVL 1 Divination",
+                        name: "LVL 1 Lumination",
                         description: "Size: 5ft cube, Range: 15ft"
                     },
                     {
                         id: 1, 
-                        name: "LVL 2 Divination",
+                        name: "LVL 2 Lumination",
                         description: "Size: 10ft cube, Range: 30ft"
                     },
                     {
                         id: 2, 
                         name: "Second Path",
-                        description: "Choose a secondary path of divination"
+                        description: "Choose a secondary path of lumination"
                     },
                     {
                         id: 3, 
-                        name: "LVL 3 Divination",
+                        name: "LVL 3 Lumination",
                         description: "Size: 15ft cube, Range: 60ft"
                     },
                     {
                         id: 4, 
-                        name: "LVL 4 Divination",
+                        name: "LVL 4 Lumination",
                         description: "Size: 20ft cube, Range: 120ft"
                     },
                     {
@@ -550,7 +550,7 @@ export const GEMS = [
                 darkStone: `Havoc`,
                 smDescription: 
                     `Stone given to Thelmiel to create Aviame`,
-                description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the elden, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the diviner the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
+                description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the elden, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the luminary the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
                 image: ruby,
                 imageAlt: `Qeṽa Ruby Gem`,
                 lvls: [

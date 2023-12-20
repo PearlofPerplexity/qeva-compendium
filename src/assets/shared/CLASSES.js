@@ -84,7 +84,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `Oracles are the guardians of Qeṽa and are viewed as authoritative figures in all of Avlim. To maintain this, they are the only beings formally trained by the elden in the arts of divination - what is commonly known as magic. Given their prestige and weight of responsibility, A novitiate cannot volunteer, but can only be selected. Before accepting this role, one should know that oracles have a strict moral code and life of discipline; To follow this path is to accept a difficult and restricted life, but no less rewarding. However, only races endowed with the capacity for divination are fit to serve in such a role. To initiate themselves as oracles, a novitiate must walk to the sacred island of agate and attune themselves with one of the cardinal stones that lies there. They also select a cut of opal, which is crucial to the forging of the iconic blade of an oracle. There is a great deal more to the Oracles role. They bear great responsibility and a vast amount of knowledge, but most of it is not shared.`
+                description: `Oracles are the guardians of Qeṽa and are viewed as authoritative figures in all of Avlim. To maintain this, they are the only beings formally trained by the elden in the arts of luminance - what is commonly known as magic. Given their prestige and weight of responsibility, A novitiate cannot volunteer, but can only be selected. Before accepting this role, one should know that oracles have a strict moral code and life of discipline; To follow this path is to accept a difficult and restricted life, but no less rewarding. However, only races endowed with the capacity for luminance are fit to serve in such a role. To initiate themselves as oracles, a novitiate must walk to the sacred island of agate and attune themselves with one of the cardinal stones that lies there. They also select a cut of opal, which is crucial to the forging of the iconic blade of an oracle. There is a great deal more to the Oracles role. They bear great responsibility and a vast amount of knowledge, but most of it is not shared.`
             },
             {
                 id: 1,
@@ -152,8 +152,8 @@ export const CLASSES = [
                     },
                     {
                         id: 1,
-                        name: `Divination`,
-                        description: `Divination is what separates the oracle from all else and should not be viewed. lightly. It is the noble races' one connection with DIA and the only way to commune with Him after the darkening of Qeṽa. When the people refuse to acknowledge the words of Dia, it allows you authoritative power to oppose insurrection. Practice these arts daily and grow in your knowledge and skill, remembering that you are not the only beings in Qeṽa to hold them. The dark mages of Moriel are influenced by evil heavenly beings who will challenge your abilities and defeat you if you do not sharpen them.`
+                        name: `Luminance`,
+                        description: `Luminance is what separates the oracle from all else and should not be viewed. lightly. It is the noble races' one connection with DIA and the only way to commune with Him after the darkening of Qeṽa. When the people refuse to acknowledge the words of Dia, it allows you authoritative power to oppose insurrection. Practice these arts daily and grow in your knowledge and skill, remembering that you are not the only beings in Qeṽa to hold them. The dark mages of Moriel are influenced by evil heavenly beings who will challenge your abilities and defeat you if you do not sharpen them.`
                     },
                     {
                         id: 2,
@@ -196,7 +196,7 @@ export const CLASSES = [
                     {
                         id: 2,
                         name: `Combat`,
-                        description: `There are times when people are too stubborn or evil too strong-willed to submit to your authority. When all else fails, there will be times when force or even the Zanhari will be needed. Use this sparingly and as a last resort. Remember that divination is what sets you apart.`
+                        description: `There are times when people are too stubborn or evil too strong-willed to submit to your authority. When all else fails, there will be times when force or even the Zanhari will be needed. Use this sparingly and as a last resort. Remember that luminance is what sets you apart.`
                     },
                     {
                         id: 3,
@@ -219,7 +219,7 @@ export const CLASSES = [
                     {
                         id: 0,
                         name: `Selecting a Cardinal Stones`,
-                        description: `Remember oh oracle, that such stones do not grant power unwillingly. You must bind yourself to the ideal of the stone if you are to access their abilities. It is a mutual relationship of sacrifice. Only as much as you portray the stone’s qualities will it yield itself to you. Neglect their attribute and they will turn dark as night. Give yourself wholly to their attribute and your power will be beyond measure. All Cardinal stones are the gateway to divination, but only you, oracle, are gifted with knowledge of this path.Know yourself to know the stone that you ought to bond to. You must be clear of this when you make the journey, for all the stones in Agate will brighten in the presence of an oracle. It may happen that the stone you seek will not make itself known in Agate. This is certain for any who seek the pearl of humility. If your stone is unsearchable, take a rock from the ground and treat it as you would a gemstone. This is no easy path and far lonelier than that of a cut gem. Stray but a little and the rock will forever and always be nothing but a rock. However, if you are true to your attribute and bind yourself to it unswervingly, such a strong attribute will overcome the core of your rock and become that which you pursue. You may notice a light glow of the rock at night or sparkling specs on the surface. You may notice nothing. Only time will tell and the time needed cannot be known.`
+                        description: `Remember oh oracle, that such stones do not grant power unwillingly. You must bind yourself to the ideal of the stone if you are to access their abilities. It is a mutual relationship of sacrifice. Only as much as you portray the stone’s qualities will it yield itself to you. Neglect their attribute and they will turn dark as night. Give yourself wholly to their attribute and your power will be beyond measure. All Cardinal stones are the gateway to luminance, but only you, oracle, are gifted with knowledge of this path.Know yourself to know the stone that you ought to bond to. You must be clear of this when you make the journey, for all the stones in Agate will brighten in the presence of an oracle. It may happen that the stone you seek will not make itself known in Agate. This is certain for any who seek the pearl of humility. If your stone is unsearchable, take a rock from the ground and treat it as you would a gemstone. This is no easy path and far lonelier than that of a cut gem. Stray but a little and the rock will forever and always be nothing but a rock. However, if you are true to your attribute and bind yourself to it unswervingly, such a strong attribute will overcome the core of your rock and become that which you pursue. You may notice a light glow of the rock at night or sparkling specs on the surface. You may notice nothing. Only time will tell and the time needed cannot be known.`
                     },
                     {
                         id: 1,
@@ -229,7 +229,7 @@ export const CLASSES = [
                     {
                         id: 2,
                         name: `Cardinal Stones`,
-                        description: `Then there are the cardinal stones of DIA from which were shattered from the mirror of his essence, sprinkled onto Qeṽa and divined to take shape into creation. You must choose one of these to initiate your divination training as an oracle. Selecting one does not stone does not mean that you fixate on one attribute. Rather, the meditation on one stone should lead you to fulfill all the cardinal stones.`
+                        description: `Then there are the cardinal stones of DIA from which were shattered from the mirror of his essence, sprinkled onto Qeṽa and divined to take shape into creation. You must choose one of these to initiate your luminance training as an oracle. Selecting one does not stone does not mean that you fixate on one attribute. Rather, the meditation on one stone should lead you to fulfill all the cardinal stones.`
                     },
                     {
                         id: 3,
@@ -272,15 +272,15 @@ export const CLASSES = [
                     {
                         id: 3,
                         name: `Return`,
-                        description: `In order to leave the island, you will need to divine the stepping planks yourself. Here your faith in DIA is tested in a different way. Therefore, meditate and bond with your newly secured cardinal stone and dedicate it to Dia. When you step out to meet the steps to Agate, imagine their shape below the waves. Bond with them and understand them. The stronger your conception of them, the stronger your will will be over them. Physically lift your arms and tense your hands to pull them upward. Above all else pray to DIA and call on him for help for he will not leave you there alone.  The crossing of the steps back to the shores of Amaga beach completes your journey. You are now ready to begin your training in Divination`
+                        description: `In order to leave the island, you will need to divine the stepping planks yourself. Here your faith in DIA is tested in a different way. Therefore, meditate and bond with your newly secured cardinal stone and dedicate it to Dia. When you step out to meet the steps to Agate, imagine their shape below the waves. Bond with them and understand them. The stronger your conception of them, the stronger your will will be over them. Physically lift your arms and tense your hands to pull them upward. Above all else pray to DIA and call on him for help for he will not leave you there alone.  The crossing of the steps back to the shores of Amaga beach completes your journey. You are now ready to begin your training in luminance`
                     }
                 ]
             },
             {
                 id: 6,
-                name: `Relation to Divination`,
+                name: `Relation to Luminance`,
                 adminOnly: true,
-                description: `Remember oracle of Qeṽa, that you are to be a master of all forms of divination. It is for this reason that no man nor orc will ever obtain the role as oracle. Be earnest in your study that you may earn the respect of the noble people of Avlim and beyond. Do not seek to understand the limits of divination, but rather the possibilities as they are not all shown here - only their roots. Do not be persuaded to use magic, the dark divination of Moriel's hosts. If you pull from their will, you may not turn from it when the time comes.`
+                description: `Remember oracle of Qeṽa, that you are to be a master of all forms of luminance. It is for this reason that no man nor orc will ever obtain the role as oracle. Be earnest in your study that you may earn the respect of the noble people of Avlim and beyond. Do not seek to understand the limits of luminance, but rather the possibilities as they are not all shown here - only their roots. Do not be persuaded to use magic, the dark luminance of Moriel's hosts. If you pull from their will, you may not turn from it when the time comes.`
             },
             {
                 id: 7,
@@ -311,7 +311,7 @@ export const CLASSES = [
                     {
                         id: 10,
                         name: `The Finished Blade`,
-                        description: `While the staff was a tool, the Zanhari must be an extension of yourself. It should never leave your side. Sleep with it, eat with it, converse with it. Any place that does not permit it, does not permit the oracle. Discover its nuance like a good friend. Understand how the blade moves; its natural flow. Allow the Zanhari to become as acquainted with the forms as you are and learn its power in conjunction with divination. Tend to the blade daily. Sharpen and polish it; never sheath a stained blade. If you care for it in the lulls it will care for you in the heat of battle.`
+                        description: `While the staff was a tool, the Zanhari must be an extension of yourself. It should never leave your side. Sleep with it, eat with it, converse with it. Any place that does not permit it, does not permit the oracle. Discover its nuance like a good friend. Understand how the blade moves; its natural flow. Allow the Zanhari to become as acquainted with the forms as you are and learn its power in conjunction with luminance. Tend to the blade daily. Sharpen and polish it; never sheath a stained blade. If you care for it in the lulls it will care for you in the heat of battle.`
                     }
                 ]
             },
@@ -369,7 +369,7 @@ export const CLASSES = [
                     {
                         id: 9,
                         name: `Bow your torso and place your head on the ground with your hands folded on your abdomen.`,
-                        description: `“I render my mind to you, Dia, for your worship and purposes. May my thoughts and divinations be immersed in your way and the foolish being within me destroyed. I ask for your blessing upon my mind.”`
+                        description: `“I render my mind to you, Dia, for your worship and purposes. May my thoughts and luminance be immersed in your way and the foolish being within me destroyed. I ask for your blessing upon my mind.”`
                     },
                     {
                         id: 10,
@@ -613,7 +613,7 @@ export const CLASSES = [
             {
                 id: 7,
                 name: `The Grand Caracadre`,
-                description: `To become a Grand Caracadre was the goal of most, for a Grand Caracadre is one who masteres all seven incidental stones. Such a master of stones is rarer than even the oracles whose greatness they rivaled, despite no affinity to divination. They are quicker and lighter than the wind wielded by the oracles and stronger than the crystals they cary. A grand caracadre is given equal status of an oracle and welcomed within their ranks and sacred spaces.`
+                description: `To become a Grand Caracadre was the goal of most, for a Grand Caracadre is one who masteres all seven incidental stones. Such a master of stones is rarer than even the oracles whose greatness they rivaled, despite no affinity to lumination. They are quicker and lighter than the wind wielded by the oracles and stronger than the crystals they cary. A grand caracadre is given equal status of an oracle and welcomed within their ranks and sacred spaces.`
             },
             {
                 id: 8,
@@ -787,7 +787,7 @@ export const CLASSES = [
             {
                 id: 0,
                 name: `Overview`,
-                description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elven Cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains. It was iconic for the towering elven statues on either side. They were the only order established by oracles and are rumored to have been graced with a small degree of knowledge in divination.`,
+                description: `Prior to the void age, The Elvish domain of Navalil was the first line of defense against the dark armies in the east. Because of this, an order of elves was established to protect and keep watch over their borders. This was especially true of the forest of Ethel, which was considered impassible outside of elven permission. The only road to enter this great forest was the “Passage of the Elven Cloaks” a bridge between Ethel and Navenia that crossed the Thrush Mountains. It was iconic for the towering elven statues on either side. They were the only order established by oracles and are rumored to have been graced with a small degree of knowledge in lumination.`,
             }
         ]
     },
@@ -1036,11 +1036,11 @@ export const CLASSES = [
             {
                 id: 1,
                 name: `Acolyte`,
-                quality: 'Diviner',
-                goal: `Master the arts of divination`,
+                quality: 'Luminary',
+                goal: `Master the arts of lumination`,
                 race: ['Any'],
                 expertise: `Arcana`,
-                description: `The acolyte is well-versed in the spiritual realities of Qeṽa. They have discovered the true meaning of gems and the hidden realities of the ethereal realm. By pouring over old texts or pestering oracles, elves or cathedral keepers, they have uncovered secrets held only by a few and they use this knowledge to pursue the art of divination. Though most believe in an unseen realm, they tend to trust physical crafts and their own experience dismissing acolytes as dreamers and fairy tale storytellers.`,
+                description: `The acolyte is well-versed in the spiritual realities of Qeṽa. They have discovered the true meaning of gems and the hidden realities of the ethereal realm. By pouring over old texts or pestering oracles, elves or cathedral keepers, they have uncovered secrets held only by a few and they use this knowledge to pursue the art of lumination. Though most believe in an unseen realm, they tend to trust physical crafts and their own experience dismissing acolytes as dreamers and fairy tale storytellers.`,
                 hitDie: 'd6',
                 //EQUIPMENT
                 armor: ['Leather armor'],

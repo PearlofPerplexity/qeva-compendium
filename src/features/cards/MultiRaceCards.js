@@ -2,9 +2,14 @@ import LgInnerNav from "../navs/LgInnerNav";
 import { RaceIcon } from "../../utils/icon";
 import { RaceLink } from "../../utils/link";
 import BottomNav from "../navs/BottomNav";
+import { useContext } from 'react';
+import { AdminContext } from '../../contexts/adminContext';
+
 
 const MultiRaceCards = (props) => {
-    const { name, heartStone, spawnStone, elden, lifespan, height, weight, language, government, foundedOrders, description, topics } = props.array;
+    const { name, heartStone, spawnStone, elden, lifespan, height, weight, language, government, foundedOrders, description, admin, topics } = props.array;
+
+    const [isAdmin, setIsAdmin] = useContext(AdminContext);
 
     return (
         <>
@@ -38,7 +43,7 @@ const MultiRaceCards = (props) => {
                             </h2>
                             <div id="collapseZero" className="accordion-collapse collapse" aria-labelledby="headingZero" data-bs-parent="#accordionRace">
                                 <div className="accordion-body border border-0 p-5 fs-5">
-                                {description}
+                                {description} {isAdmin && admin && admin}
                                 </div>
                             </div>
                         </div>
@@ -46,7 +51,7 @@ const MultiRaceCards = (props) => {
                 </div>
             </div>
             {topics.map((race) => {
-                const { id, name, nickname, residence, appearance, description, image, imageAlt } = race;
+                const { id, name, nickname, residence, appearance, description, admin, image, imageAlt } = race;
 
                 return (
                     <div className="col col-lg-10 col-xl-9 mt-4" key={id}>
@@ -67,7 +72,7 @@ const MultiRaceCards = (props) => {
                                 </div>
                             </div>
                             <div className="card-text p-4 px-5">
-                                {description}
+                                {description} {isAdmin && admin && admin}
                             </div>
                         </div>
                     </div>

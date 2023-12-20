@@ -266,27 +266,27 @@ export const DGEMS = [
                 lvls: [
                     {
                         id: 0, 
-                        name: "LVL 2 Divination ɸ",
+                        name: "LVL 2 Lumination ɸ",
                         description: "Size: 10ft cube, Range: 30ft"
                     },
                     {
                         id: 1, 
                         name: "Second Path ɸ",
-                        description: "Choose a secondary path of divination"
+                        description: "Choose a secondary path of lumination"
                     },
                     {
                         id: 2, 
-                        name: "LVL 3 Divination ɸ",
+                        name: "LVL 3 Lumination ɸ",
                         description: "Size: 15ft cube, Range: 60ft"
                     },
                     {
                         id: 3, 
-                        name: "LVL 4 Divination ɸ",
+                        name: "LVL 4 Lumination ɸ",
                         description: "Size: 20ft cube, Range: 120ft"
                     },
                     {
                         id: 4, 
-                        name: "LVL 5 Divination ɸ",
+                        name: "LVL 5 Lumination ɸ",
                         description: "Size: 30ft cube, Range: 120ft"
                     },
                     {
@@ -735,7 +735,7 @@ export const DGEMS = [
                     {
                         id: 2, 
                         name: "Second Path",
-                        description: "Choose a secondary path of divination"
+                        description: "Choose a secondary path of lumination"
                     },
                     {
                         id: 3, 

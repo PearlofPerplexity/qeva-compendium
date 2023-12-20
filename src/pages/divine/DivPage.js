@@ -39,12 +39,12 @@ const DivSpirit = () => {
 const DivPage = () => {
     return (
         <div className='py-2 px-3'>
-            <InnerNav name='Divination' icon={DivineIcon} array={DIVINE} />
+            <InnerNav name='Luminance' icon={DivineIcon} array={DIVINE} />
             <Routes>
                 <Route path='/layers-of-heavens' element={
                     <DivLayers />
                 } />
-                <Route path='/divination-magic' element={
+                <Route path='/luminance' element={
                     <DivMagic />
                 } />
                 <Route path='/ethereals' element={

@@ -32,8 +32,8 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Size: 5ft cube, Range: 15ft (Acolyte: Requires level 1 divination slot).'
+                    name: 'LVL 1 Lumination',
+                    description: 'Size: 5ft cube, Range: 15ft (Acolyte: Requires level 1 lumination slot).'
                 },
                 {
                     id: 1, 
@@ -67,8 +67,8 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'LVL 2 Divination',
-                    description: 'Size: 10ft cube, Range: 30ft (Acolyte: Requires level 2 divination slot).'
+                    name: 'LVL 2 Lumination',
+                    description: 'Size: 10ft cube, Range: 30ft (Acolyte: Requires level 2 lumination slot).'
                 },
                 {
                     id: 1, 
@@ -96,8 +96,8 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'LVL 3 Divination',
-                    description: 'Size: 15ft cube, Range: 60ft (Acolyte: Requires level 3 divination slot).'
+                    name: 'LVL 3 Lumination',
+                    description: 'Size: 15ft cube, Range: 60ft (Acolyte: Requires level 3 lumination slot).'
                 },
                 {
                     id: 1, 
@@ -125,7 +125,7 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'LVL 4 Divination',
+                    name: 'LVL 4 Lumination',
                     description: 'Size: 20ft cube, Range: 120ft'
                 },
                 {
@@ -2186,12 +2186,12 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Holy Gemstone',
-                    description: "You must pledge yourself to a moral gemstone (neither dark nor unbound). An Acolyte must have this gemstone in their possession undarkened in order to cast divination."
+                    description: "You must pledge yourself to a moral gemstone (neither dark nor unbound). An Acolyte must have this gemstone in their possession undarkened in order to cast lumination."
                 },
                 {
                     id: 1,
                     name: 'Onyx Boost',
-                    description: "If an acolyte choses 'Onyx' (Faithfulness) as one of their stones, the gem divination and class divination can boost each other. For example, if a character uses lvl 2 divination with their gem, they can upgrade this to lvl 3 by expending an acolyte lvl 1 divination slot. Keep in mind, dem divination is limited by path."
+                    description: "If an acolyte choses 'Onyx' (Faithfulness) as one of their stones, the gem luminance and class luminance can boost each other. For example, if a character uses lvl 2 lumination with their gem, they can upgrade this to lvl 3 by expending an acolyte lvl 1 lumination slot. Keep in mind, gem lumination is limited by path."
                 },
                 {
                     id: 2,
@@ -2209,7 +2209,7 @@ export const DNDLEVELS = {
                 {
                     id: 0,
                     name: 'Divine Disruption',
-                    description: 'You do not have the ability to control the elements as oracles do, but you can disrupt them. You can cause water to splash, or burst out of a glass, rocks to crack and break, air to burst (Requires level 1 divination slot).'
+                    description: 'You do not have the ability to control the elements as oracles do, but you can disrupt them. You can cause water to splash, or burst out of a glass, rocks to crack and break, air to burst (Requires level 1 lumination slot).'
                 },
                 {
                     id: 1,
@@ -2226,8 +2226,8 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'LVL 1 Divination',
-                    description: 'Size: 5ft cube, Range: 15ft (Acolyte: Requires level 1 divination slot).'
+                    name: 'LVL 1 Lumination',
+                    description: 'Size: 5ft cube, Range: 15ft (Acolyte: Requires level 1 lumination slot).'
                 },
                 {
                     id: 1,
@@ -2250,7 +2250,7 @@ export const DNDLEVELS = {
                 {
                     id: 1,
                     name: 'Meditation',
-                    description: 'For every hour you meditate, you regain 1 divination slot.'
+                    description: 'For every hour you meditate, you regain 1 lumination slot.'
                 },
             ],
             trackables: ["D1: 4"],
@@ -2262,8 +2262,8 @@ export const DNDLEVELS = {
             features: [
                 {
                     id: 0,
-                    name: 'LVL 2 Divination',
-                    description: 'Size: 10ft cube, Range: 30ft (Acolyte: Requires level 2 divination slot).'
+                    name: 'LVL 2 Lumination',
+                    description: 'Size: 10ft cube, Range: 30ft (Acolyte: Requires level 2 lumination slot).'
                 },
 
             ],

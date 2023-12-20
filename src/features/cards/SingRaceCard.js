@@ -2,11 +2,15 @@ import LgInnerNav from "../navs/LgInnerNav";
 import { RaceIcon, DRaceIcon } from "../../utils/icon";
 import { RaceLink, DRaceLink } from "../../utils/link";
 import BottomNav from "../navs/BottomNav";
+import { useContext } from 'react';
+import { AdminContext } from '../../contexts/adminContext';
 
 // Used for Both Races & Dark Races with ternary operators handling differences below
 
 const SingRaceCard = (props) => {
-    const { image, imageAlt, name, heartStone, spawnStone, origin, elden, lifespan, height, weight, appearance, language, government, residence, foundedOrders, description } = props.array;
+    const { image, imageAlt, name, heartStone, spawnStone, origin, elden, lifespan, height, weight, appearance, language, government, residence, foundedOrders, description, admin } = props.array;
+
+    const [isAdmin, setIsAdmin] = useContext(AdminContext);
 
     return (
     
@@ -31,7 +35,7 @@ const SingRaceCard = (props) => {
                     {spawnStone ? (
                       <li className="list-group-item"><b>Spawn Stone</b> {spawnStone}</li>
                     ) : ( 
-                      <li className="list-group-item"><b>Origin</b> {origin}</li>
+                      <li className="list-group-item"><b>Origin</b> {isAdmin ? origin : 'Unknown'}</li>
                     )}
                     <li className="list-group-item"><b>Elden</b> {elden}</li>
                   </ul>
@@ -58,7 +62,7 @@ const SingRaceCard = (props) => {
             </div>
           </div>
           <div className="card-text p-4 px-5">
-            {description}
+            {description} {isAdmin && admin && admin}
           </div>
         </div>
       </div>

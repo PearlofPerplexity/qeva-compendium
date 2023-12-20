@@ -9,9 +9,14 @@ import wraith from '../imgs/ethereal/wraith.png';
 /* INCLUDES:
 
 Layers of Heavens
-Magic & Radiance
+Magic & Luminance
 Ethereals
 Spiritual Realities
+
+Changes:
+- Diviner: Luminary
+- Divination: Luminance/Lumination (tried radiance)
+- Divine - luminate
 
 */
 
@@ -50,35 +55,35 @@ export const DIVINE = [
             {
                 id: 5,
                 name: `The Void`,
-                description: `The void is the absence of anything. A black hole is a rip between the heavens that gives a window into the immensity of this layer's appetite. Dark sorcerers access this dangerous layer through a dark magic known as void magic, which voids a target of whatever the diviner chooses or is powerful enough to bring about.`
+                description: `The void is the absence of anything. A black hole is a rip between the heavens that gives a window into the immensity of this layer's appetite. Dark sorcerers access this dangerous layer through a dark magic known as void magic, which voids a target of whatever the luminary chooses or is powerful enough to bring about.`
             },
         ]
     },
     {
         id: 1,
-        link: `/divine/divination-magic`,
-        name: `Magic & Radiance`,
-        description: `The world of Qeṽa is one of magic. This magic is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of divination and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for divination to occur. Learn about the range of abilities this diviniation and magic can offer.`,
+        link: `/divine/luminance`,
+        name: `Luminance`,
+        description: `The world of Qeṽa is one of magic. This magic is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of luminance and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for luminance to occur. If the quality is of DIA, the gemstone will pull from the power of Learn about the range of abilities this diviniation and magic can offer.`,
         topics: [
             {
                 id: 0,
-                name: `True Divination`,
-                description: `Also known as True touch, true divination gives one unnatural power over non-sentient creation and it takes many forms. A diviner may be able to manipulate the elements by moving water, earth and air or by removing it from existence and pulling it into the void layer of heaven by a deep and dark divination known as void magic. It may interact with the ethereals through revelation or the body through healing. Its only limit that is known is its restriction from sentient beings. A sentient creation is untouchable by any type of divination. All forms can be developed and exploited as a diviner learns more about the extent of their power and imagines its possibilities. The oaki are the only natural wielders of True Divination and the oracles are the only beings classically trained in it.`
+                name: `True Luminance`,
+                description: `Also known as True touch, true luminance gives one unnatural power over non-sentient creation and it takes many forms. A luminary may be able to manipulate the elements by moving water, earth and air or by removing it from existence and pulling it into the void layer of heaven by a deep and dark luminance known as void magic. It may interact with the ethereals through revelation or the body through healing. Its only limit that is known is its restriction from sentient beings. A sentient creation is untouchable by any type of luminance. All forms can be developed and exploited as a luminary learns more about the extent of their power and imagines its possibilities. The oaki are the only natural wielders of True luminance and the oracles are the only beings classically trained in it.`
             },
             {
                 id: 1,
-                name: `Illusory Divination`,
-                description: `Also known as illusions, charms or mimics, illusory divination is a magic of the imagination. An illusory diviner is not able to change or affect anything in the natural world, but rather create the illusion of change or affect. They paint upon the etterworld, another layer of heaven where DIA allows sentients to paint their own pictures for a time. For example, illusory divination allows one to create the illusion of everything from a small stone in their hand to a volcano erupting. Their ability is limited only to their imagination. Gnomes are the only natural wielders of illusory divination.`
+                name: `Illusory Lumination`,
+                description: `Also known as illusions, charms or mimics, illusory lumination is a magic of the imagination. An illusory luminary is not able to change or affect anything in the natural world, but rather create the illusion of change or affect. They paint upon the etterworld, another layer of heaven where DIA allows sentients to paint their own pictures for a time. For example, illusory lumination allows one to create the illusion of everything from a small stone in their hand to a volcano erupting. Their ability is limited only to their imagination. Gnomes are the only natural wielders of illusory lumination.`
             },
             {
                 id: 2,
-                name: `Magic (Dark Divination)`,
-                description: `The people of Avlim are naive to the art of divination and will often refer to divination as Magic. However, Magic is something far different and the only type of divination that must be rejected. It pulls from something in the netherland, attributes conceived apart from God. Rather than submitting themselves to the attributable stones of Dia, Mages craft synthetic gems that mimic the appearance of known gems, but not their attributes. Rather, their attributes are wrath, pride, lust and sloth. We will teach you to identify these synthetic stones, but you will feel the evil of their attributes long before you must identify them. They incite a feeling within that will be foreign to you in your seclusive purity. These feelings titillating in new ways and exciting, but do not give in to them. They are toxic and lead to addiction and ultimately death from within. For this reason keep your distance from magic and synthetic stones. Do not listen to the silver tongue of the mage.`
+                name: `Magic (Dark Luminance)`,
+                description: `The people of Avlim are naive to the art of luminance and will often refer to luminance as Magic. However, Magic is something far different and the only type of lumination that must be rejected. It pulls from something in the netherland, attributes conceived apart from God. Rather than submitting themselves to the attributable stones of Dia, Mages craft synthetic gems that mimic the appearance of known gems, but not their attributes. Rather, their attributes are wrath, pride, lust and sloth. We will teach you to identify these synthetic stones, but you will feel the evil of their attributes long before you must identify them. They incite a feeling within that will be foreign to you in your seclusive purity. These feelings titillating in new ways and exciting, but do not give in to them. They are toxic and lead to addiction and ultimately death from within. For this reason keep your distance from magic and synthetic stones. Do not listen to the silver tongue of the mage.`
             },
             {
                 id: 3,
-                name: `Divination & Ethereals`,
-                description: `Though Divination is the channeling of Dia's Essence, it can be enhanced by the influence of ethereals. In fact, ethereals are most effective in exacting change in this way. It takes far greater energy for ethereals to enter the physical world through sight or speech than to work from within the ether. And if they should enter, they cannot channel DIA's essence through divination in the physical form. Thus, an ethereal can influence a physical being by either empowering them with further essence from DIA or warding against wraiths.`
+                name: `Luminance & Ethereals`,
+                description: `Though luminance is the channeling of Dia's Essence, it can be enhanced by the influence of ethereals. In fact, ethereals are most effective in exacting change in this way. It takes far greater energy for ethereals to enter the physical world through sight or speech than to work from within the ether. And if they should enter, they cannot channel DIA's essence through luminance in the physical form. Thus, an ethereal can influence a physical being by either empowering them with further essence from DIA or warding against wraiths.`
             }
         ]
     },
@@ -258,8 +263,8 @@ export const DIVINE = [
                     },
                     {
                         id: 5,
-                        name: `Divination`,
-                        description: `As written earlier, divination is the most common and practical way for an ethereal to interact with an embodied soul. They can lift their heart or tear them down, focus their mind or feed them temptation. However, it is important to note that the burden of successful divination does not lie solely on the ethereal nor primarily. Rather, a being can only experience the full potential of divination in as much as they are aligned with DIA's qualities. Like gemstones, a being must be aligned with DIA to channel HIS essence. The stronger this alignment, the stronger their divination. Straying from this alignment also inhibits an ability of a spirit to attach themselves to the being as evil attracts the attachment of wraiths. Goodness in the life of the physical being also has the potential to feed and strengthen the spirit as evil and hatred strengthens the wraith.`
+                        name: `Luminance`,
+                        description: `As written earlier, luminance is the most common and practical way for an ethereal to interact with an embodied soul. They can lift their heart or tear them down, focus their mind or feed them temptation. However, it is important to note that the burden of successful lumination does not lie solely on the ethereal nor primarily. Rather, a being can only experience the full potential of luminance in as much as they are aligned with DIA's qualities. Like gemstones, a being must be aligned with DIA to channel HIS essence. The stronger this alignment, the stronger their luminance. Straying from this alignment also inhibits an ability of a spirit to attach themselves to the being as evil attracts the attachment of wraiths. Goodness in the life of the physical being also has the potential to feed and strengthen the spirit as evil and hatred strengthens the wraith.`
                     },
                     {
                         id: 6,

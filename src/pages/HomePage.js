@@ -115,7 +115,7 @@ const HomePage = () => {
                                         alt="sky icon" />
                                 </div>
                                 <div className="ms-3 covered-div">
-                                    <h3 className="fs-5 mb-1">Divination</h3>
+                                    <h3 className="fs-5 mb-1">Luminance</h3>
                                     <p className="mb-0">Discover the unseen dimensions and the powers within.</p>
                                 </div>
                             </Link>
