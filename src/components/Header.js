@@ -32,7 +32,8 @@ import {
     FloraLink,
     HistLink,
     LocLink,
-    MapLink
+    MapLink,
+    ToolLink
 } from '../utils/link';
 import { 
     BasicIcon, 
@@ -46,7 +47,8 @@ import {
     FloraIcon,
     HistIcon,
     LocIcon,
-    MapIcon
+    MapIcon,
+    ToolIcon
 } from '../utils/icon';
 import SearchBar from '../utils/SearchBar';
 import { AdminContext } from '../contexts/adminContext';
@@ -189,7 +191,7 @@ const Header = (args) => {
                     <NavItem className="nav-item">
                         <NavLink href={DivineLink}>
                             <i className={DivineIcon} />
-                            &nbsp; Luminance
+                            &nbsp; Supernatural Sphere
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
@@ -244,6 +246,12 @@ const Header = (args) => {
                         <NavLink href={MapLink}>
                             <i className={MapIcon} />
                             &nbsp; Map
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className="nav-item">
+                        <NavLink href={ToolLink}>
+                            <i className={ToolIcon} />
+                            &nbsp; Tools
                         </NavLink>
                     </NavItem>
                 </Nav>
