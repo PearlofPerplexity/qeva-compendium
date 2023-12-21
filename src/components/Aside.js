@@ -19,9 +19,10 @@ import {
     FloraIcon,
     HistIcon,
     LocIcon,
-    MapIcon
+    MapIcon,
+    ToolIcon
 } from '../utils/icon';
-import { BasicLink, MapLink } from '../utils/link';
+import { BasicLink, MapLink, ToolLink } from '../utils/link';
 import Sidebar from './Sidebar';
 import { CLASSES } from '../assets/shared/CLASSES';
 import { DIVINE } from '../assets/shared/DIVINE';
@@ -88,6 +89,17 @@ function Aside() {
                     <AccordionBody accordionId="12">
                         <ul className='sidebar-dropdown list-unstyled'>
                             <li><Link to={MapLink}>Avlim</Link></li>
+                        </ul>
+                    </AccordionBody>
+                </AccordionItem>
+                <AccordionItem>
+                    <AccordionHeader targetId="13">
+                        <i className={ToolIcon}></i>
+                        &nbsp; Tools
+                    </AccordionHeader>
+                    <AccordionBody accordionId="13">
+                        <ul className='sidebar-dropdown list-unstyled'>
+                            <li><Link to={ToolLink}>Tabletop Tools</Link></li>
                         </ul>
                     </AccordionBody>
                 </AccordionItem>

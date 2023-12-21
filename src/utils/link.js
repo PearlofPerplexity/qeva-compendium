@@ -18,3 +18,4 @@ export const FloraLink = FLORA[0].link;
 export const HistLink = '/history';
 export const LocLink = '/locations';
 export const MapLink = '/map';
+export const ToolLink = '/tools';

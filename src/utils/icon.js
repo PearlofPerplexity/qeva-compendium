@@ -14,6 +14,7 @@ export const FloraIcon = 'uil-pagelines';
 export const HistIcon = 'uil-book-open';
 export const LocIcon = 'uil-university fa-fw';
 export const MapIcon = 'uil-map-marker';
+export const ToolIcon = 'uil-wrench';
 
 // Arrow Icons
 export const leftArrow = 'uil-angle-left-b';
