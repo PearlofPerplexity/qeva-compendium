@@ -865,7 +865,8 @@ export const RACES = [
             'Avlimeth', 
             'Avikin',
             'Order of the Feather',
-            'No Affiliation'
+            'No Affiliation',
+            'Topplers'
         ],
         heartStone: `Turqouise (Gentleness)`,
         spawnStone: `Chryscocolla (Stealth)`,
@@ -1029,7 +1030,9 @@ export const RACES = [
                 id: 0,
                 name: `Spirits`,
                 singName: "Spirit",
-                classes: [],
+                classes: [
+                    'No Affiliation'
+                ],
                 residence: `The Etherworld`,
                 appearance: `Invisible`,
                 description: 

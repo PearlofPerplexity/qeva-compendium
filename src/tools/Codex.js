@@ -228,17 +228,19 @@ const Codex = (props) => {
                             <input 
                                 name="nameCheck" 
                                 type="checkbox"
+                                className='small-hidden'
                                 onClick={(e) => checkboxToggle('name')}
                                 checked={nameCheckbox}
                             />
-                            <label htmlFor="nameCheck">&nbsp;Name</label>
+                            <label htmlFor="nameCheck" className='small-hidden'>&nbsp;Name</label>
                             <input 
                                 name="txtCheck"
                                 type="checkbox"
+                                className='small-hidden'
                                 onClick={(e) => checkboxToggle('txt')}
                                 checked={txtCheckbox}
                             />
-                            <label htmlFor="txtCheck">&nbsp;Description</label>
+                            <label htmlFor="txtCheck" className='small-hidden'>&nbsp;Description</label>
                         </div>
                         <Offcanvas isOpen={info} toggle={infoToggle} direction={'end'}>
                             <OffcanvasHeader toggle={infoToggle}>
@@ -262,8 +264,8 @@ const Codex = (props) => {
                                 <tr className='align-middle'>
                                     <th>Name</th>
                                     <td>Description</td>
-                                    <td>Source</td>
-                                    <td>
+                                    <td className='small-hidden'>Source</td>
+                                    <td className='small-hidden'>
                                         <select 
                                             name='locs' 
                                             className="ms-2 charPicklist text-center" 
@@ -288,8 +290,8 @@ const Codex = (props) => {
                                         <tr className='align-middle'>
                                             <th>{p.name}</th>
                                             <td>{p.description}</td>
-                                            <td>{p.source}</td>
-                                            <td>{p.type}</td>
+                                            <td className='small-hidden'>{p.source}</td>
+                                            <td className='small-hidden'>{p.type}</td>
                                         </tr>
                                     </React.Fragment>
                                 ))}

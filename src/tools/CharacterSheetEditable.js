@@ -10,7 +10,6 @@ import {
 
 const CharacterSheetEditable = React.forwardRef((props, ref) => {
 
-    const profBonus = endclass.lvls[0].prof_bonus;
     const [character, setCharacter] = useContext(CharacterContext);
     const { 
         //Level
@@ -42,6 +41,8 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         //Backstory
         personality, ideals, flaws,
     } = character;
+
+    const profBonus = (endclass && endclass.lvls) ? endclass.lvls[0].prof_bonus : 2; //Usually '2' for Level 1
 
     const [gemLevel, setGemLevel] = useState(1);
     const [pureAbilityMods, setPureAbilityMods] = useState(

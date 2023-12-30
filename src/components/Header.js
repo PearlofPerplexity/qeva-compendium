@@ -71,17 +71,18 @@ const Header = (args) => {
         setAdminModal(!adminModal);
     }
 
-    const location = useLocation();
+    //const location = useLocation();
     const wikiToggle = () => setMenu("Qeṽa Compendium");
     const toolToggle = () => setMenu("Qeṽa Tools");
 
     useEffect(() => {
-        if(window.location.pathname === '/tools') {
+        //console.log(location);
+        if(true) {
             toolToggle();
         } else {
             wikiToggle();
         }
-      }, [location]);
+      }, []);
 
     const handleAdminSwitch = () => {
         if (isAdmin) setIsAdmin(!isAdmin);

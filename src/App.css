@@ -439,7 +439,12 @@ aside ul {
 		color: #EEE;
 		font-size: 18px;
 	}
-	.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {background-color: transparent}
+	.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+		background-color: transparent
+	}
+	.small-hidden {
+		display: none;
+	}
 }
 
 @media (width >= 35em) {

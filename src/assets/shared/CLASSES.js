@@ -915,7 +915,7 @@ export const CLASSES = [
         quality: `Halfling Rabble Fighters`,
         goal: `Aid where there is none`,
         name: `Topplers`,
-        race: ['Halfling', 'Human'],
+        race: ['Any'],
         primaryWeapon: `Slingshot`,
         sacredText: `None`,
         worldKnowledge: `Low`,

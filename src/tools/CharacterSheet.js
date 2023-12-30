@@ -45,7 +45,7 @@ const CharacterSheet = React.forwardRef((props, ref) => {
 
     } = character;
 
-    const profBonus = endclass.lvls[0].prof_bonus; //Usually '2' for Level 1
+    const profBonus = (endclass && endclass.lvls) ? endclass.lvls[0].prof_bonus : 2; //Usually '2' for Level 1
     const [gemLevel, setGemLevel] = useState(1);
     const [pureAbilityMods, setPureAbilityMods] = useState(
         {
