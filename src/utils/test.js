@@ -9,7 +9,7 @@
         3. git commit -m "message required"
         4. git push
         5. git status
-
+        6. npm run deploy
 */
 
 // WELCOME TO THE IMAGINATION STATION!
