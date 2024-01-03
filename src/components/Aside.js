@@ -50,7 +50,7 @@ function Aside() {
 
     return (
         <aside className='sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1 d-none d-md-block'>
-            <Link to="/">
+            <Link to='/qeva-compendium'>
                 <div className="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
                     <img
                         className="rounded-pill img-fluid"

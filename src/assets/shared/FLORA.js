@@ -1,7 +1,7 @@
 export const FLORA = [
     {
         id: 0,
-        link: `/flora/plants`,
+        link: `/qeva-compendium/flora/plants`,
         name: `Plants`,
         topics: [
             {
@@ -23,7 +23,7 @@ export const FLORA = [
     },
     {
         id: 1,
-        link: `/flora/herbs`,
+        link: `/qeva-compendium/flora/herbs`,
         name: `Herbs`,
         topics: [
             {
@@ -35,7 +35,7 @@ export const FLORA = [
     },
     {
         id: 2,
-        link: `/flora/crops`,
+        link: `/qeva-compendium/flora/crops`,
         name: `Crops`,
         topics: [
             {

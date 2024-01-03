@@ -171,7 +171,7 @@ const HomePage = () => {
                                     <p className="mb-0">Discover the native plant-life and their significance.</p>
                                 </div>
                             </Link>
-                            <Link className="admin d-flex align-items-center rounded-2 p-3" to='/'>
+                            <Link className="admin d-flex align-items-center rounded-2 p-3" to='/qeva-compendium'>
                                 <div className="img">
                                     <img className="img-fluid rounded-pill"
                                         width="75" height="75"

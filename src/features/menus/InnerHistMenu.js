@@ -43,7 +43,7 @@ const InnerHistMenu = (props) => {
                                         );
                                     })}
                                     <NavItem className='button welcome' id="inactive">
-                                        <NavLink className='nav-link text-nowrap text-center' to='/'>Home</NavLink>
+                                        <NavLink className='nav-link text-nowrap text-center' to='/qeva-compendium'>Home</NavLink>
                                     </NavItem>
                                 </Nav>
                             </Navbar>

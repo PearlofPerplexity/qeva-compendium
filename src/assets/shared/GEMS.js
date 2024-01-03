@@ -41,7 +41,7 @@ Overview
 export const GEMS = [
     {
         id: 0,
-        link: `/gems/divine`,
+        link: `/qeva-compendium/gems/divine`,
         name: `Divine`,
         topics: [
             {
@@ -174,7 +174,7 @@ export const GEMS = [
     },
     {
         id: 1,
-        link: `/gems/cardinal`,
+        link: `/qeva-compendium/gems/cardinal`,
         name: `Cardinal`,
         topics: [
             {
@@ -725,7 +725,7 @@ export const GEMS = [
     },
     {
         id: 2,
-        link: `/gems/incidental`,
+        link: `/qeva-compendium/gems/incidental`,
         name: `Incidental`,
         topics: [
             {
@@ -904,7 +904,7 @@ export const GEMS = [
     },
     {
         id: 3,
-        link: `/gems/overview`,
+        link: `/qeva-compendium/gems/overview`,
         name: `Gem Overview`,
         topics: [
             {

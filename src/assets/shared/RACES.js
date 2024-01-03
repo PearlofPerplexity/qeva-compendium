@@ -39,7 +39,7 @@ Dragons
 export const RACES = [
     {
         id: 0,
-        link: `/races/elves`,
+        link: `/qeva-compendium/races/elves`,
         name: `Elves`,
         singName: "Elf",
         classes: [
@@ -181,7 +181,7 @@ export const RACES = [
     },
     {
         id: 1,
-        link: `/races/aviame`,
+        link: `/qeva-compendium/races/aviame`,
         name: `Aviame`,
         singName: "Aviame",
         classes: [
@@ -361,7 +361,7 @@ export const RACES = [
     },
     {
         id: 2,
-        link: `/races/humans`,
+        link: `/qeva-compendium/races/humans`,
         name: `Humans`,
         singName: "Human",
         classes: [
@@ -482,7 +482,7 @@ export const RACES = [
     },
     {
         id: 3,
-        link: `/races/ocri`,
+        link: `/qeva-compendium/races/ocri`,
         name: `Ocri`,
         singName: "Ocrim",
         classes: [
@@ -538,7 +538,7 @@ export const RACES = [
     },
     {
         id: 4,
-        link: `/races/dwarves`,
+        link: `/qeva-compendium/races/dwarves`,
         name: `Dwarves`,
         singName: "Dwarf",
         classes: [
@@ -651,7 +651,7 @@ export const RACES = [
     },
     {
         id: 5,
-        link: `/races/gnomes`,
+        link: `/qeva-compendium/races/gnomes`,
         name: `Gnomes`,
         singName: "Gnome",
         classes: [
@@ -801,7 +801,7 @@ export const RACES = [
     },
     {
         id: 6,
-        link: `/races/halflings`,
+        link: `/qeva-compendium/races/halflings`,
         name: `Halflings`,
         singName: "Halfling",
         classes: [
@@ -856,7 +856,7 @@ export const RACES = [
     },
     {
         id: 7,
-        link: `/races/oaki`,
+        link: `/qeva-compendium/races/oaki`,
         name: `Oaki`,
         singName: "Oaki",
         classes: [
@@ -906,7 +906,7 @@ export const RACES = [
     },
     {
         id: 8,
-        link: `/races/arbora`,
+        link: `/qeva-compendium/races/arbora`,
         name: `Arbora`,
         singName: "Arborum",
         classes: [
@@ -971,7 +971,7 @@ export const RACES = [
     },
     {
         id: 9,
-        link: `/races/ethereals`,
+        link: `/qeva-compendium/races/ethereals`,
         name: `Ethereals`,
         singName: "Ethereal",
         classes: [

@@ -6,7 +6,7 @@ const SubHeader = ({ current, detail }) => {
         <div className='p-2'>
                 <Breadcrumb>
                     <BreadcrumbItem>
-                        <Link to='/'>Home</Link>
+                        <Link to='/qeva-compendium'>Home</Link>
                     </BreadcrumbItem>
                     {detail && (
                         <BreadcrumbItem>

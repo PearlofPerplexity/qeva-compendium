@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useContext, useRef } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import {
     Button,
     Modal,
@@ -7,7 +7,7 @@ import {
     ModalBody,
     ModalFooter
 } from 'reactstrap';
-import { useLocation } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { 
     Collapse,
     Navbar,
@@ -71,18 +71,8 @@ const Header = (args) => {
         setAdminModal(!adminModal);
     }
 
-    //const location = useLocation();
     const wikiToggle = () => setMenu("Qeṽa Compendium");
     const toolToggle = () => setMenu("Qeṽa Tools");
-
-    useEffect(() => {
-        //console.log(location);
-        if(true) {
-            toolToggle();
-        } else {
-            wikiToggle();
-        }
-      }, []);
 
     const handleAdminSwitch = () => {
         if (isAdmin) setIsAdmin(!isAdmin);
@@ -112,152 +102,185 @@ const Header = (args) => {
     }
     
     return (
-        <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>
+        <>
+            <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>
 
-            <UncontrolledDropdown nav inNavbar className='fs-5 mx-3'>
-              <DropdownToggle nav caret>
-                {menu}
-              </DropdownToggle>
-              <DropdownMenu dark>
-                <DropdownItem href="/" onClick={wikiToggle}>Qeṽa Compendium</DropdownItem>
-                <DropdownItem href="/tools" onClick={toolToggle}>Qeṽa Tools</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <SearchBar />
-            <div 
-                nav 
-                className="form-check form-switch d-none d-md-block" 
-                style={{ position: 'absolute', top: '15px', right: '15px'}}
-            >
-                <input 
-                    className="form-check-input" 
-                    type="checkbox"
-                    id="switch"
-                    onChange={handleAdminSwitch}
-                    checked={isAdmin}
-                />
-                <label className="form-check-label" for="flexSwitchCheckChecked">Admin</label>
-            </div>
-
-            <Modal isOpen={adminModal} toggle={adminToggle}>
-                <ModalHeader>
-                    Enter Admin View
-                </ModalHeader>
-                <ModalBody>
-                    <form onSubmit={(e) => e.preventDefault()}>
-                        <div className='mt-3 text-center'>Type the password below to enter admin view.</div>
-                        <div className='d-flex justify-content-center char-name-input'>
-                            <input 
-                                className='m-2 mx-auto' 
-                                type="password" 
-                                onChange={handlePassword} 
-                                onKeyUp={handleEnter}
-                                ref={inputRef}
-                                autoComplete='off'
-                            />
-                        </div>
-                        {adminError && (
-                            <p className='text-danger text-center'>That password is incorrect. Please try again.</p>
-                        )}
-                    </form>
-                </ModalBody>
-                <ModalFooter>
-                    <Button color="primary" onClick={checkPassword} >
-                        Sign In
-                    </Button>{' '}
-                    <Button color="danger" onClick={adminToggle}>
-                        Cancel
-                    </Button>   
-                </ModalFooter>
-            </Modal>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar>
-                <Nav 
-                    className="mx-2 d-md-none navbar-nav-scroll" 
-                    navbar
-                    style={{height: '200px'}}
+                <UncontrolledDropdown nav inNavbar className='fs-5 mx-3'>
+                <DropdownToggle nav caret>
+                    {menu}
+                </DropdownToggle>
+                <DropdownMenu dark>
+                    <DropdownItem>
+                        <Link to='/qeva-compendium' onClick={wikiToggle}>Qeṽa Compendium</Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                        <Link to={ToolLink} onClick={toolToggle}>Qeṽa Tools</Link>
+                    </DropdownItem>
+                </DropdownMenu>
+                </UncontrolledDropdown>
+                <SearchBar />
+                <div 
+                    nav 
+                    className="form-check form-switch d-none d-md-block" 
+                    style={{ position: 'absolute', top: '15px', right: '15px'}}
                 >
-                    <NavItem className="nav-item">
-                        <NavLink href={BasicLink}>
-                            <i className={BasicIcon} />
-                            &nbsp; The Basics
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={GemLink}>
-                            <i className={GemIcon} />
-                            &nbsp; Gemstones
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={DivineLink}>
-                            <i className={DivineIcon} />
-                            &nbsp; Supernatural Sphere
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={RaceLink}>
-                            <i className={RaceIcon} />
-                            &nbsp; Races
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={DRaceLink}>
-                            <i className={DRaceIcon} />
-                            &nbsp; Dark Races
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={ClassLink}>
-                            <i className={ClassIcon} />
-                            &nbsp; Classes
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={CharLink}>
-                            <i className={CharIcon} />
-                            &nbsp; Characters
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={FaunaLink}>
-                            <i className={FaunaIcon} />
-                            &nbsp; Fauna
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={FloraLink}>
-                            <i className={FloraIcon} />
-                            &nbsp; Flora
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={HistLink}>
-                            <i className={HistIcon} />
-                            &nbsp; History
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={LocLink}>
-                            <i className={LocIcon} />
-                            &nbsp; Locations
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={MapLink}>
-                            <i className={MapIcon} />
-                            &nbsp; Map
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink href={ToolLink}>
-                            <i className={ToolIcon} />
-                            &nbsp; Tools
-                        </NavLink>
-                    </NavItem>
-                </Nav>
-            </Collapse>
-        </Navbar>
+                    <input 
+                        className="form-check-input" 
+                        type="checkbox"
+                        id="switch"
+                        onChange={handleAdminSwitch}
+                        checked={isAdmin}
+                    />
+                    <label className="form-check-label" for="flexSwitchCheckChecked">Admin</label>
+                </div>
+
+                <Modal isOpen={adminModal} toggle={adminToggle}>
+                    <ModalHeader>
+                        Enter Admin View
+                    </ModalHeader>
+                    <ModalBody>
+                        <form onSubmit={(e) => e.preventDefault()}>
+                            <div className='mt-3 text-center'>Type the password below to enter admin view.</div>
+                            <div className='d-flex justify-content-center char-name-input'>
+                                <input 
+                                    className='m-2 mx-auto' 
+                                    type="password" 
+                                    onChange={handlePassword} 
+                                    onKeyUp={handleEnter}
+                                    ref={inputRef}
+                                    autoComplete='off'
+                                />
+                            </div>
+                            {adminError && (
+                                <p className='text-danger text-center'>That password is incorrect. Please try again.</p>
+                            )}
+                        </form>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={checkPassword} >
+                            Sign In
+                        </Button>{' '}
+                        <Button color="danger" onClick={adminToggle}>
+                            Cancel
+                        </Button>   
+                    </ModalFooter>
+                </Modal>
+                <NavbarToggler onClick={toggle} />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav 
+                        className="mx-2 d-md-none navbar-nav-scroll" 
+                        navbar
+                        style={{height: '200px'}}
+                    >
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={BasicLink} onClick={toggle}>
+                                    <i className={BasicIcon} />
+                                    &nbsp; The Basics
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={GemLink} onClick={toggle}>
+                                    <i className={GemIcon} />
+                                    &nbsp; Gemstones
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={DivineLink} onClick={toggle}>
+                                    <i className={DivineIcon} />
+                                    &nbsp; Supernatural Sphere
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={RaceLink} onClick={toggle}>
+                                    <i className={RaceIcon} />
+                                    &nbsp; Races
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={DRaceLink} onClick={toggle}>
+                                    <i className={DRaceIcon} />
+                                    &nbsp; Dark Races
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={ClassLink} onClick={toggle}>
+                                    <i className={ClassIcon} />
+                                    &nbsp; Classes
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={CharLink} onClick={toggle}>
+                                    <i className={CharIcon} />
+                                    &nbsp; Characters
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={FaunaLink} onClick={toggle}>
+                                    <i className={FaunaIcon} />
+                                    &nbsp; Fauna
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={FloraLink} onClick={toggle}>
+                                    <i className={FloraIcon} />
+                                    &nbsp; Flora
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={HistLink} onClick={toggle}>
+                                    <i className={HistIcon} />
+                                    &nbsp; History
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={LocLink} onClick={toggle}>
+                                    <i className={LocIcon} />
+                                    &nbsp; Locations
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={MapLink} onClick={toggle}>
+                                    <i className={MapIcon} />
+                                    &nbsp; Map
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <NavLink>
+                                <Link to={ToolLink} onClick={toggle}>
+                                    <i className={ToolIcon} />
+                                    &nbsp; Tools
+                                </Link>
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </Navbar>
+            <Outlet />
+        </>
     );
 };
 

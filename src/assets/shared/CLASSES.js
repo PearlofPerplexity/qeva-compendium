@@ -53,7 +53,7 @@ const rangedWeapons = RANGEDWEAPONS.map(weapon => weapon.name);
 export const CLASSES = [
     {
         id: 0,
-        link: `/classes/oracles`,
+        link: `/qeva-compendium/classes/oracles`,
         quality: `Supreme Guardians of Avlim`,
         goal: `Guide the Nations to Reflect DIA's Image`,
         name: `Oracles`,
@@ -444,7 +444,7 @@ export const CLASSES = [
     },
     {
         id: 1,
-        link: `/classes/caracadre`,
+        link: `/qeva-compendium/classes/caracadre`,
         quality: `Rangers`,
         goal: `Bring Peace & Justice for the Common Man`,
         name: `Caracadre`,
@@ -673,7 +673,7 @@ export const CLASSES = [
     },
     {
         id: 2,
-        link: `/classes/avlimeth`,
+        link: `/qeva-compendium/classes/avlimeth`,
         quality: `Paladins`,
         goal: `Bring Peace & Justice for the Common Man`,
         name: `Avlimeth`,
@@ -753,7 +753,7 @@ export const CLASSES = [
     },
     {
         id: 3,
-        link: `/classes/elvish-cloaks`,
+        link: `/qeva-compendium/classes/elvish-cloaks`,
         quality: `Wood Elven Warriors`,
         goal: `Keep Watch over the Elvish Realms`,
         name: `Elven Cloaks`,
@@ -793,7 +793,7 @@ export const CLASSES = [
     },
     {
         id: 4,
-        link: `/classes/avikin`,
+        link: `/qeva-compendium/classes/avikin`,
         quality: `Mountain Archers`,
         goal: `Defend Altiavaire and Avlim at large from Evil`,
         name: `Avikin`,
@@ -831,7 +831,7 @@ export const CLASSES = [
     },
     {
         id: 5,
-        link: `/classes/ghost-blades`,
+        link: `/qeva-compendium/classes/ghost-blades`,
         quality: `Rogues`,
         goal: `Defend their home and people`,
         name: `Ghost Blades`,
@@ -871,7 +871,7 @@ export const CLASSES = [
     },
     {
         id: 6,
-        link: `/classes/uncorrupted`,
+        link: `/qeva-compendium/classes/uncorrupted`,
         quality: `Legionnaires`,
         goal: `Eradicate Evil Anywhere`,
         name: `The Uncorrupted`,
@@ -911,7 +911,7 @@ export const CLASSES = [
     },
     {
         id: 7,
-        link: `/classes/topplers`,
+        link: `/qeva-compendium/classes/topplers`,
         quality: `Halfling Rabble Fighters`,
         goal: `Aid where there is none`,
         name: `Topplers`,
@@ -952,7 +952,7 @@ export const CLASSES = [
     },
     {
         id: 8,
-        link: `/classes/order-of-the-feather`,
+        link: `/qeva-compendium/classes/order-of-the-feather`,
         quality: `Explorers, Sea Farrers & Cartographers`,
         goal: `Explore Qeṽa`,
         name: `Order of the Feather`,
@@ -993,7 +993,7 @@ export const CLASSES = [
     },
     {
         id: 9,
-        link: `/classes/no-affiliation`,
+        link: `/qeva-compendium/classes/no-affiliation`,
         name: `No Affiliation`,
         description: `Not all who adventure or make their way through the world adhere to an order. View other common trades and lifestyles below.`,
         armor_prof: [],

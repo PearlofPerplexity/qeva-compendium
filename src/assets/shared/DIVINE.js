@@ -23,7 +23,7 @@ Changes:
 export const DIVINE = [
     {
         id: 0,
-        link: `/divine/layers-of-heavens`,
+        link: `/qeva-compendium/divine/layers-of-heavens`,
         name: `Layers of Heavens`,
         description: `There are six planes of existence or 'layers of heaven' within the world of Qeṽa.`,
         topics: [
@@ -61,7 +61,7 @@ export const DIVINE = [
     },
     {
         id: 1,
-        link: `/divine/luminance`,
+        link: `/qeva-compendium/divine/luminance`,
         name: `Luminance`,
         description: `The world of Qeṽa is one of magic. This magic is unique in that it sources its power from the combination of gemstones and ethereals. Gemstones are the source of luminance and yet, ethereals are needed to draw this power out. Not only must gemstones and ethereals be present, but an individual must align themselves to both the qualities of the stone and the qualities of the ethereal in order for luminance to occur. If the quality is of DIA, the gemstone will pull from the power of Learn about the range of abilities this diviniation and magic can offer.`,
         topics: [
@@ -89,7 +89,7 @@ export const DIVINE = [
     },
     {
         id: 2,
-        link: `/divine/ethereals`,
+        link: `/qeva-compendium/divine/ethereals`,
         name: `Ethereals`,
         description: `Ethereals are the non-physical beings who dwell in the ether world and are tasked by DIA with the sole mission to shepherd HIS creation. They are ever-present in the workings of the world, sometimes taking physical form to do so. However, not ethereals have retained their purity and there are fowl ethereals who made the decision to oppose to DIA. Learn about their various forms of good and evil below.`,
         topics: [
@@ -167,7 +167,7 @@ export const DIVINE = [
     },
     {
         id: 3,
-        link: `/divine/spiritual-realities`,
+        link: `/qeva-compendium/divine/spiritual-realities`,
         name: `Spiritual Realities`,
         topics: [
             {

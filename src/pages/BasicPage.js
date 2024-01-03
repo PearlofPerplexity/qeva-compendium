@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React from 'react';
 import EdiText from 'react-editext';
 import { Col } from "reactstrap";
@@ -8,43 +7,11 @@ import { DIVINE } from '../assets/shared/DIVINE';
 import { BasicIcon } from "../utils/icon";
 import InnerSmNav from "../features/navs/InnerSmNav";
 import BottomSmNav from '../features/navs/BottomSmNav';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectAllBasics, updateBasics } from '../slices/basicsSlice';
-import Error from "../utils/Error";
-import Loading from "../utils/Loading";
 
 const BasicPage = () => {
-    const basics = BASICS;
-    /*
-    const basics = useSelector(selectAllBasics);
-
-    const dispatch = useDispatch();
     
-    const handleSave = index => e => {
-        let newArr = _.cloneDeep(basics);
-        newArr[0].topics[index].description = e;
-        dispatch(updateBasics(newArr));
-    };
+const basics = BASICS;
 
-    const isLoading = useSelector((state) => state.basics.isLoading);
-    const errMsg = useSelector((state) => state.basics.errMsg);
-
-if(isLoading) {
-    return (
-        <Col md='5' className='m-1'>
-            <Loading />
-        </Col>
-    );
-}
-
-if (errMsg) {
-    return (
-        <Col md='5' className='m-1'>
-            <Error errMsg={errMsg}/>
-        </Col>
-    );
-}
-*/
 if (basics && basics.length > 0) {
     return (
         <div className='py-2 px-3'>

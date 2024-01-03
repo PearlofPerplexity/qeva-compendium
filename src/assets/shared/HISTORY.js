@@ -7,7 +7,7 @@ import agateAbove from '../imgs/locations/agate-above.jpg';
 export const HISTORY = [
     {
         id: 0,
-        link: `/history/sparkling-era`,
+        link: `/qeva-compendium/history/sparkling-era`,
         name: `Sparkling Era`,
         description: `The sparkling era encompasses the inception and shaping of the world before the first race of men were born.`,
         image: sparkling,
@@ -35,7 +35,7 @@ export const HISTORY = [
     },
     {
         id: 1,
-        link: `/history/quintessential-era`,
+        link: `/qeva-compendium/history/quintessential-era`,
         name: `Quintessential Era`,
         description: `The quintessential era is the era of Qeṽa at its best when the veil of the void was secure and DIA's qualities flourished throughout the world.`,
         image: quint,
@@ -81,7 +81,7 @@ export const HISTORY = [
     },
     {
         id: 2,
-        link: `/history/divergent-era`,
+        link: `/qeva-compendium/history/divergent-era`,
         name: `Divergent Era`,
         description: `The Divergent Era was marked by the creation of the different races, which led to the divergence of the eveile.`,
         image: divergent,
@@ -266,7 +266,7 @@ export const HISTORY = [
     },
     {
         id: 3,
-        link: `/history/void-era`,
+        link: `/qeva-compendium/history/void-era`,
         name: `Void Era`,
         description: `The Void Era was the darkest hour of Avlim when the dark Lord Ithmaar summoned void magic to drain Avlim of DIA's qualities in the world and the heart.`,
         image: voidage,
@@ -333,7 +333,7 @@ export const HISTORY = [
     },
     {
         id: 4,
-        link: `/history/mortal-era`,
+        link: `/qeva-compendium/history/mortal-era`,
         name: `Mortal Era`,
         description: `The mortal era began when DIA's Spirit filled a man and through this man cast out Ithmaar from Avlim. Because of this, the rule of Avlim was given to men`,
         image: divergent,
@@ -487,7 +487,7 @@ export const HISTORY = [
     },
     {
         id: 5,
-        link: `/history/agate-above`,
+        link: `/qeva-compendium/history/agate-above`,
         name: `Agate Above`,
         description: `Agate Above is the mythed afterlife of Qeṽa where DIA's attributes will be refilled in the World and all set right.`,
         image: agateAbove,

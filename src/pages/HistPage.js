@@ -9,7 +9,7 @@ const HistPage = () => {
         <div className='py-2 px-3'>
             <Routes>
                 <Route path='/' element={
-                    <InnerHistMenu name='History' icon={HistIcon} array={HISTORY} link='/' />
+                    <InnerHistMenu name='History' icon={HistIcon} array={HISTORY} link='/qeva-compendium' />
                 } />
                 <Route path='/sparkling-era' element={
                     <HistCard array={HISTORY[0]} left={HISTORY[5]} right={HISTORY[1]} />

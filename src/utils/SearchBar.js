@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import _ from "lodash";
 import { Link } from "react-router-dom";
 import { SearchIcon, CloseIcon } from "./icon";
 import { BASICS } from "../assets/shared/oldData/BASICS";
@@ -13,13 +12,10 @@ import { GEMS } from '../assets/shared/GEMS';
 import { HISTORY } from '../assets/shared/HISTORY';
 import { LOCATIONS } from '../assets/shared/LOCATIONS';
 import { RACES } from '../assets/shared/RACES';
-import { useSelector } from "react-redux";
-import { selectAllBasics } from "../slices/basicsSlice";
 
 const SearchBar = () => {    
 
 const allArrays = [
-    ..._.cloneDeep(useSelector(selectAllBasics)),
     ...BASICS,
     ...CHARACTERS,
     ...CLASSES, 

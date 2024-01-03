@@ -15,7 +15,7 @@ const ClassPage = () => {
         <div className='py-2 px-3'>
             <Routes>
                 <Route path='/' element={
-                    <InnerMenu name='Classes' icon={ClassIcon} array={CLASSES} link='/' />
+                    <InnerMenu name='Classes' icon={ClassIcon} array={CLASSES} link='/qeva-compendium' />
                 } />
                 <Route path='/avikin' element={
                     <ClassCard array={classes[0]} left={classes[9]} right={classes[1]} />

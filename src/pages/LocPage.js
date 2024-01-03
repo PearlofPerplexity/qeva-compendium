@@ -9,7 +9,7 @@ const LocPage = () => {
         <div className='py-2 px-3'>
             <Routes>
                 <Route path='/' element={
-                    <InnerExMenu name='Locations' icon={LocIcon} array={LOCATIONS} link='/' />
+                    <InnerExMenu name='Locations' icon={LocIcon} array={LOCATIONS} link='/qeva-compendium' />
                 } />
                 <Route path='/avlim' element={
                     <LocCard array={LOCATIONS[0]} left={LOCATIONS[4]} right={LOCATIONS[1]} />

@@ -19,7 +19,7 @@ import oasis from '../imgs/locations/oasis.jpg';
 export const LOCATIONS = [
     {
         id: 0,
-        link: `/locations/avlim`,
+        link: `/qeva-compendium/locations/avlim`,
         name: `Avlim`,
         description: `The central continent of Qeṽa and the concentrated existence of all sentient life.`,
         image: avlim,
@@ -281,7 +281,7 @@ export const LOCATIONS = [
     },
     {
         id: 1,
-        link: `/locations/malune`,
+        link: `/qeva-compendium/locations/malune`,
         name: `Malunë`,
         description: `Malunë is the island of the elves; their southern sanctuary from the void and evils of Avlim, hidden by celestite and known only to their kind.`,
         hTopics: [
@@ -338,7 +338,7 @@ export const LOCATIONS = [
     },
     {
         id: 2,
-        link: `/locations/orcava`,
+        link: `/qeva-compendium/locations/orcava`,
         name: `Orcaṽa`,
         description: `Orcaṽa is the land, which broke northward and quickly took on a terribly cold climate, which drew the Asiame race to it.`,
         image: orcava,
@@ -371,7 +371,7 @@ export const LOCATIONS = [
     },
     {
         id: 3,
-        link: `/locations/baroach`,
+        link: `/qeva-compendium/locations/baroach`,
         name: `Baroach`,
         description: `Baroach are the lands of Nagar that broke eastward at the breaking of Qeṽa and become home to a nation of ocri children.`,
         image: baroach,
@@ -568,7 +568,7 @@ export const LOCATIONS = [
     },
     {
         id: 4,
-        link: `/locations/aguave`,
+        link: `/qeva-compendium/locations/aguave`,
         name: `Aguavé`,
         description: `Aguavé is the lush land westward, which interacted little if at all with the affairs of Avlim and its people.`
     }

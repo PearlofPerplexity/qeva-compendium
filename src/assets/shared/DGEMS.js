@@ -6,7 +6,7 @@ Dark Stones
 export const DGEMS = [
     {
         id: 0,
-        link: `/gems/unbound`,
+        link: `/qeva-compendium/gems/unbound`,
         name: `Unbound`,
         topics: [
             {
@@ -464,7 +464,7 @@ export const DGEMS = [
     },
     {
         id: 1,
-        link: `/gems/dark`,
+        link: `/qeva-compendium/gems/dark`,
         name: `Dark`,
         topics: [
             {

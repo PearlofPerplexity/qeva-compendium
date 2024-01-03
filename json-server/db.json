@@ -2,7 +2,7 @@
   "basics": [
     {
       "id": 0,
-      "link": "/about",
+      "link": "/qeva-compendium/about",
       "name": "Basics",
       "topics": [
         {
@@ -30,7 +30,7 @@
     [
       {
         "id": 0,
-        "link": "/about",
+        "link": "/qeva-compendium/about",
         "name": "Basics",
         "topics": [
           {

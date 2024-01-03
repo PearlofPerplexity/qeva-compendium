@@ -17,7 +17,7 @@ Mongrels
 export const DRACES = [
     {
         id: 0,
-        link: `/dark-races/orcs`,
+        link: `/qeva-compendium/dark-races/orcs`,
         name: `Orcs`,
         origin: `Ocri`,
         heartStone: `Black Amethyst (Mayhem)`,
@@ -35,7 +35,7 @@ export const DRACES = [
     },
     {
         id: 1,
-        link: `/dark-races/husks`,
+        link: `/qeva-compendium/dark-races/husks`,
         name: `Husks`,
         origin: `Elves, Aviame, or Humans`,
         heartStone: `Black Diamond (Hate), Black Ruby (Havoc) or Dead Onyx (Faithless)`,
@@ -53,7 +53,7 @@ export const DRACES = [
     },
     {
         id: 2,
-        link: `/dark-races/ronin`,
+        link: `/qeva-compendium/dark-races/ronin`,
         name: `Ronin`,
         origin: `Mating of a Reaper with an Elf, Aviame, or Human`,
         heartStone: `Black Diamond (Hate), Black Ruby (Havoc) or Dead Onyx (Faithless)`,
@@ -71,7 +71,7 @@ export const DRACES = [
     },
     {
         id: 3,
-        link: `/dark-races/jackals`,
+        link: `/qeva-compendium/dark-races/jackals`,
         name: `Jackals`,
         origin: `Corrupt creation of Ithmaar in collusion with the wraith-world`,
         heartStone: `None`,
@@ -89,7 +89,7 @@ export const DRACES = [
     },
     {
         id: 4,
-        link: `/dark-races/mongrels`,
+        link: `/qeva-compendium/dark-races/mongrels`,
         name: `Mongrels`,
         origin: `Mating of a monstrous reaper with a dragon, mongrel or another monstrous reaper`,
         heartStone: `Black Emerald (Evil)`,
@@ -106,7 +106,7 @@ export const DRACES = [
     },
     {
         id: 5,
-        link: `/dark-races/wraiths`,
+        link: `/qeva-compendium/dark-races/wraiths`,
         name: `Wraiths`,
         origin: `Created by DIA`,
         heartStone: `Black Celestite`,

@@ -1,7 +1,7 @@
 export const CHARACTERS = [
     {
         id: 0,
-        link: `/characters/noble`,
+        link: `/qeva-compendium/characters/noble`,
         name: `Noble`,
         topics: [
             {
@@ -138,7 +138,7 @@ export const CHARACTERS = [
     },
     {
         id: 1,
-        link: `/characters/evil`,
+        link: `/qeva-compendium/characters/evil`,
         name: `Evil`,
         topics: [
             {
