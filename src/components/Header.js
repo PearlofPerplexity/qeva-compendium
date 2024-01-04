@@ -1,5 +1,5 @@
 
-import React, { useState, useContext, useRef } from 'react';
+import React, { useState, useContext, useRef, useEffect } from 'react';
 import {
     Button,
     Modal,
@@ -53,6 +53,7 @@ import {
 import SearchBar from '../utils/SearchBar';
 import { AdminContext } from '../contexts/adminContext';
 
+
 const Header = (args) => {
     const inputRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +62,21 @@ const Header = (args) => {
     const [adminModal, setAdminModal] = useState(false);
     const [adminPassword, setAdminPassword] = useState('');
     const [adminError, setAdminError] = useState(false);
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const updateScreenWidth = () => {
+        setScreenWidth(window.innerWidth);
+    };
+    useEffect(() => {
+        // Update the screen width when the component mounts
+        updateScreenWidth();
+        // Add event listener for window resize
+        window.addEventListener('resize', updateScreenWidth);
+        // Clean up the event listener when the component unmounts
+        return () => {
+          window.removeEventListener('resize', updateScreenWidth);
+        };
+      }, []);
 
     const toggle = () => setIsOpen(!isOpen);
     const adminToggle = () => {
@@ -105,16 +121,25 @@ const Header = (args) => {
         <>
             <Navbar {...args} dark sticky='top' expand='md' className='topnavbar py-2'>
 
-                <UncontrolledDropdown nav inNavbar className='fs-5 mx-3'>
+                <UncontrolledDropdown nav inNavbar className='fs-5 mx-sm-3'>
                 <DropdownToggle nav caret>
-                    {menu}
+                    {menu === 'Qeṽa Compendium' ? (
+                        <i className="d-lg-none uil uil-book-open"></i>
+                    ) : (
+                        <i className="d-lg-none uil uil-wrench"></i>
+                    )}
+                    {screenWidth > 991 ? menu : ('')}
                 </DropdownToggle>
                 <DropdownMenu dark>
                     <DropdownItem>
-                        <Link to='/qeva-compendium' onClick={wikiToggle}>Qeṽa Compendium</Link>
+                        <Link to='/qeva-compendium' onClick={wikiToggle}>
+                            <i className="uil uil-book-open"></i> Qeṽa Compendium
+                        </Link>
                     </DropdownItem>
                     <DropdownItem>
-                        <Link to={ToolLink} onClick={toolToggle}>Qeṽa Tools</Link>
+                        <Link to={ToolLink} onClick={toolToggle}>
+                            <i className="uil uil-wrench"></i> Qeṽa Tools
+                        </Link>
                     </DropdownItem>
                 </DropdownMenu>
                 </UncontrolledDropdown>

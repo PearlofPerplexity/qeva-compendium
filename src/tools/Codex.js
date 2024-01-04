@@ -200,7 +200,7 @@ const Codex = (props) => {
                     <i className="iconify fs-2" data-icon="noto:old-key"></i>
                     <div className="ms-3">
                         <div className="d-flex align-items-center">
-                            <h3 className="mb-0">Codex</h3>
+                            <h4 className="mb-0">Codex</h4>
                         </div>
                     </div>
                 </Link>
@@ -215,7 +215,7 @@ const Codex = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Codex of Powers
                             <Button className='text-center info' onClick={infoToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>                            
                         </h3>
                         <div className='mb-2 char-name-input'>

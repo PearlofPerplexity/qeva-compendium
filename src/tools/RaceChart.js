@@ -76,7 +76,7 @@ const RaceChart = (props) => {
                     <i className="iconify fs-2" data-icon="noto:elf-medium-skin-tone"></i>
                     <div className="ms-3">
                         <div className="d-flex align-items-center">
-                            <h3 className="mb-0">Race Chart</h3>
+                            <h4 className="mb-0">Race Chart</h4>
                         </div>
                     </div>
                 </Link>
@@ -93,7 +93,7 @@ const RaceChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Races
                             <Button className='text-center info' onClick={infoToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>                            
                         </h3>
                         <p className='text-center'>

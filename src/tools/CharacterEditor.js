@@ -105,7 +105,7 @@ const CharacterEditor = () => {
                 <i className="iconify fs-2" data-icon="noto:woman-elf"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Character Editor</h3>
+                        <h4 className="mb-0">Character Editor</h4>
                     </div>
                 </div>
             </Link>

@@ -247,7 +247,7 @@ const AlignmentChart = (props) => {
                     <i className="iconify fs-2" data-icon="twemoji:gem-stone"></i>
                     <div className="ms-3">
                         <div className="d-flex align-items-center">
-                            <h3 className="mb-0">Gem Chart</h3>
+                            <h4 className="mb-0">Gem Chart</h4>
                         </div>
                     </div>
                 </Link>
@@ -289,7 +289,7 @@ const AlignmentChart = (props) => {
                     <div className='row text-center'>
                         <h3>Ethical Axis 
                             <Button className='text-center info' onClick={ethicToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>
                         </h3>
                         <Offcanvas isOpen={ethic} toggle={ethicToggle} direction={'end'}>
@@ -312,7 +312,7 @@ const AlignmentChart = (props) => {
                         <div className='col-2'>
                             <h3>Moral Axis
                                 <Button className='text-center info' onClick={moralToggle}>
-                                    🛈
+                                    <i className="uil uil-info-circle"></i>
                                 </Button>
                             </h3>
                             <Offcanvas isOpen={moral} toggle={moralToggle}>
@@ -368,7 +368,7 @@ const AlignmentChart = (props) => {
                         <div className='row text-center mb-4'>
                             <h3>Gemstone Quality
                                 <Button className='text-center info' onClick={qualityToggle}>
-                                    🛈
+                                    <i className="uil uil-info-circle"></i>
                                 </Button>
                             </h3>
                             <Offcanvas isOpen={quality} toggle={qualityToggle} direction={'end'}>
@@ -489,7 +489,7 @@ const AlignmentChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Power Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>
                         </h3>
                         <Offcanvas isOpen={align} toggle={alignToggle} direction={'end'}>
@@ -564,7 +564,7 @@ const AlignmentChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Moral Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>
                         </h3>
                         <table className="table table-striped align-middle">
@@ -619,7 +619,7 @@ const AlignmentChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Creator Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>
                         </h3>
                         <table className="table table-hover align-middle">
@@ -660,7 +660,7 @@ const AlignmentChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Unbound Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>
                         </h3>
                         <table className="table table-dark text-light table-striped align-middle">
@@ -710,7 +710,7 @@ const AlignmentChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Dark Stone Alignment
                             <Button className='text-center info' onClick={alignToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>
                         </h3>
                         <table className="table table-dark text-light table-striped align-middle">

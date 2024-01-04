@@ -87,7 +87,7 @@ const ClassChart = (props) => {
                     <i className="iconify fs-2" data-icon="noto-v1:crossed-swords"></i>
                     <div className="ms-3">
                         <div className="d-flex align-items-center">
-                            <h3 className="mb-0">Class Chart</h3>
+                            <h4 className="mb-0">Class Chart</h4>
                         </div>
                     </div>
                 </Link>
@@ -104,7 +104,7 @@ const ClassChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Classes
                             <Button className='text-center info' onClick={infoToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>                            
                         </h3>
                         <p className='text-center'>

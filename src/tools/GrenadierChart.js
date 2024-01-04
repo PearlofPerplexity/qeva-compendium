@@ -103,7 +103,7 @@ const GrenadierChart = (props) => {
                     <i className="iconify fs-2" data-icon="fluent-emoji:bottle-with-popping-cork"></i>
                     <div className="ms-3">
                         <div className="d-flex align-items-center">
-                            <h3 className="mb-0">Grenadier Chart</h3>
+                            <h4 className="mb-0">Grenadier Chart</h4>
                         </div>
                     </div>
                 </Link>
@@ -119,7 +119,7 @@ const GrenadierChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Grenade Upgrades
                             <Button className='text-center info' onClick={infoToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>                            
                         </h3>
                         <p>Each upgrade, select 3 of the following:</p>

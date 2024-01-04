@@ -829,7 +829,7 @@ const GemGenerator = () => {
                 <i className="iconify fs-2" data-icon="noto:gem-stone"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
-                        <h3 className="mb-0">Gem Calculator</h3>
+                        <h4 className="mb-0">Gem Calculator</h4>
                     </div>
                 </div>
             </Link>

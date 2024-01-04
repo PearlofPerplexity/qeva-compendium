@@ -228,7 +228,7 @@ const GemcutterChart = (props) => {
                     <i className="iconify fs-2" data-icon="fxemoji:ring"></i>
                     <div className="ms-3">
                         <div className="d-flex align-items-center">
-                            <h3 className="mb-0">Gemcutter Chart</h3>
+                            <h4 className="mb-0">Gemcutter Chart</h4>
                         </div>
                     </div>
                 </Link>
@@ -244,7 +244,7 @@ const GemcutterChart = (props) => {
                     <div className='row text-center mb-4'>
                         <h3>Gemcutting Upgrades
                             <Button className='text-center info' onClick={infoToggle}>
-                                🛈
+                                <i className="uil uil-info-circle"></i>
                             </Button>                            
                         </h3>
                         <p>Each upgrade, select 3 of the following:</p>

@@ -174,7 +174,7 @@ const NPCGenerator = () => {
                 <i className="iconify fs-2" data-icon="emojione:crossed-swords"></i>
                 <div className="ms-3">
                     <div className="d-flex align-items-center">
-                        <h3 className="mb-0">NPC Generator</h3>
+                        <h4 className="mb-0">NPC Generator</h4>
                     </div>
                 </div>
             </Link>
