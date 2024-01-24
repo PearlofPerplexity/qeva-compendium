@@ -75,7 +75,7 @@ export const GEMS = [
                 smDescription: 
                     `Stone dropped by DIA at the parsing of invisibility`,
                 description:
-                    `Last is celestite, the stone of holiness. It was the cinder of hope to humanity in the age of darkness at the expense of DIA Himself. As black polluted clouds covered the entire planet, it seemed that all bonds with DIA were lost. On the islands, there were no mountains high enough for the people to speak with God and no way to rise above the smoke. To remain in communion with his people, the good and gracious DIA spared a cut of his true essence of invisibility and bestowed it upon Avlim. With this parsing of His essence, DIA would be bound to a visible form for the remainder of eternity. At its parsing, a bit of celestite fell from the sky like a falling star. If it was not found at its fall, it will likely never be found for the stone itself is invisible. It is a stone of divinity as no created sentient being can experience all the layers of heavens hidden by the varieties of celestite.`,
+                    `Celestite is the stone of holiness. It was the cinder of hope to humanity in the age of darkness at the expense of DIA Himself. As black polluted clouds covered the entire planet, it seemed that all bonds with DIA were lost. On the islands, there were no mountains high enough for the people to speak with God and no way to rise above the smoke. To remain in communion with his people, the good and gracious DIA spared a cut of his true essence of invisibility and bestowed it upon Avlim. With this parsing of His essence, DIA would be bound to a visible form for the remainder of eternity. At its parsing, a bit of celestite fell from the sky like a falling star. If it was not found at its fall, it will likely never be found for the stone itself is invisible. It is a stone of divinity as no created sentient being can experience all the layers of heavens hidden by the varieties of celestite.`,
                 image: celestite,
                 imageAlt: `Qeṽa Celestite Gem`,
                 lvls: [
@@ -92,11 +92,11 @@ export const GEMS = [
                 quality: `Solitude`,
                 purpose: `Physical Manifestation of DIA's Reflection`,
                 originalLocation: `Lower Mantle of Qeṽa`,
-                notableLocations: `Mount Sauthur`,
+                notableLocations: `Mount Asukar`,
                 smDescription: 
                     `Stone avoided and thought to be a naturally dark stone`,
                 description:
-                    `When DIA made the decision to create time and space, it began with total solitude. Before any of the other attributes were formed in the translucent orb above the earth, he heated the obsidian till it was molten and shaped it into the earth. When the crust hardened is when he began shaping the other attributes. As the years continued, obsidian broke through to the surface in volcanoes in its molten form. It then hardened as volcanic glass; notably Mount Sakur in Avlim. The elden know of this for DIA has told them, but they do not share this information with others. Rather, they allow the people of Avlim to keep their superstitions. The noble people avoid the gem, because it is black like the dark stones, which oppose DIA. The elden do not enlighten them because obsidian was intended by DIA to be left alone. It is a gem of solitude and if parties venture to find it, it will lose its quality or worse, be abused as it easily is. Nonetheless, still some learn the secret and venture to Sakur. DIA nor the elden condemn them as it is a profound blessing if used correctly. However, overall, the gem is not to be sought. It is a stone of divinity as no created sentient being can experience true sole-existence.`,
+                    `When DIA made the decision to create time and space, it began with total solitude. Before any of the other attributes were formed in the translucent orb above the earth, he heated the obsidian till it was molten and shaped it into the earth. When the crust hardened is when he began shaping the other attributes. As the years continued, obsidian broke through to the surface in volcanoes in its molten form. It then hardened as volcanic glass; notably Mount Asukar in Avlim. The elden know of this for DIA has told them, but they do not share this information with others. Rather, they allow the people of Avlim to keep their superstitions. The noble people avoid the gem, because it is black like the dark stones, which oppose DIA. The elden do not enlighten them because obsidian was intended by DIA to be left alone. It is a gem of solitude and if parties venture to find it, it will lose its quality or worse, be abused as it easily is. Nonetheless, still some learn the secret and venture to Asukar. DIA nor the elden condemn them as it is a profound blessing if used correctly. However, overall, the gem is not to be sought. It is a stone of divinity as no created sentient being can experience true sole-existence.`,
                 image: obsidian,
                 imageAlt: `Qeṽa Obsidian Gem`,
                 lvls: [
@@ -459,8 +459,8 @@ export const GEMS = [
                 syntheticStone: `Certainty`,
                 darkStone: `Faithless`,
                 smDescription: 
-                    `Stone given to Çairça to create Elves`,
-                description: `Emerald, which is goodness, is another stone of green color, but darker in hue. It was given to the elden, Arboriul to bring sentience to forest, earth and river. A heart of goodness should not be overlooked as a pure heart easily repels the distraction of passions and pursues the rightful course no matter its popularity. The qualities of Emerald in relation to the ethereals is really quite special. Looking through a cut of jade allows one to see into the etherworld. With emerald, one realizes that most ethereals are not so far away and are much closer than one realizes. Furthermore, aligning oneself to its quality allows the masters of these stones to hold communication with ethereals only fettered by language.`,
+                    `Stone given to Thelmiel to bestow upon mankind`,
+                description: `Onyx, which is faithfulness is pich black. It was given to the elden, Thelmiel, but he did not use it to create. Rather to honor the decision of DIA to make the eveile mortal, Thelmiel bestowed the gem upon mankind, the mortal children of the eveile. Few know this original story and see the men as cursed for their short lives. When really they share the heart of DIA a heart of sacrifice and faith when all seems ill.`,
                 image: onyx,
                 imageAlt: `Qeṽa Onyx Gem`,
                 lvls: [
@@ -549,8 +549,8 @@ export const GEMS = [
                 syntheticStone: `Self-Focus`,
                 darkStone: `Havoc`,
                 smDescription: 
-                    `Stone given to Thelmiel to create Aviame`,
-                description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the elden, Nware for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allos the luminary the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
+                    `Stone given to Çairça to create Aviame`,
+                description: `Similar is Ruby, which is self-control. It is a deeper red than pruskite granted to the elden, Çairça for crafting the elf-like Aviame. While the patience of pyrite allows one to pursue a macro event, ruby allows a luminary the self-control to navigate micro events. Is this not evident from the skills of the Aviame warriors? Who else in all of Avlim moves in combat as they do? If discipline and dexterity are your aim, oracle, prepare for the path of the Ruby.`,
                 image: ruby,
                 imageAlt: `Qeṽa Ruby Gem`,
                 lvls: [
@@ -640,7 +640,7 @@ export const GEMS = [
                 darkStone: `Cynicism`,
                 smDescription:
                     `Stone ungiven, but inherent to the will of all sentience`,
-                description: `Topaz is the stone of hope, least recognizable amongst all stones, yet unmatched in the darkest hour. Though its natural state shares the honey yellow color of amber, it can take on many colors in the spectrum, but the one with hope will recognize it. Maintain hope and this stone will spirit you no matter the depth of difficulty or length of battle. Interestingly it has been found that anyone bonded to topaz is also bound to amber.`,
+                description: `Topaz is the stone of hope, least recognizable amongst all stones, yet unmatched in the darkest hour. Though its natural state shares the honey yellow color of amber, it can take on many colors in the spectrum, but the one with hope will recognize it. Maintain hope and this stone will spirit you no matter the depth of difficulty or length of battle.`,
                 image: topaz,
                 imageAlt: `Qeṽa Topaz Gem`,
                 lvls: [
