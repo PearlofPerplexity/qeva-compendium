@@ -235,9 +235,15 @@ const CharacterEditor = () => {
                                     </ul>
                                     <Button 
                                         color="danger" onClick={handleLevelUp}
+                                        className='text-center mb-3'
+                                    >
+                                        Cancel Level Up
+                                    </Button>
+                                    <Button 
+                                        color="info" onClick={handleLevelUp}
                                         className='text-center'
                                     >
-                                        Exit Level Up Mode
+                                        Save Character
                                     </Button>
                                 </div>
                             )}
