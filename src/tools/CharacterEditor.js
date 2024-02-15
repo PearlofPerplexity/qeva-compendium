@@ -9,6 +9,9 @@ import {
 import { Link } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import CharacterSheetEditable from './CharacterSheetEditable';
+import levelUpImg from '../assets/imgs/other/lvlUp.png'
+import { CLASSES } from '../assets/shared/CLASSES';
+import { RACES } from '../assets/shared/RACES';
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
 
@@ -45,6 +48,7 @@ const CharacterEditor = () => {
         try {
             if(charString) {
                 const charObj = JSON.parse(charString);
+                console.log(charObj);
                 if(charObj.hasOwnProperty('endrace') && charObj.hasOwnProperty('endclass')) {
                     setCharacter({...charObj});
                     setModal(true);
@@ -68,6 +72,16 @@ const CharacterEditor = () => {
             reset();
         }
     };
+    const [lvlModal, setLevelModal] = useState(false);
+    const toggleLvlModal = () => setLevelModal(!lvlModal);
+    const [levelUpMode, setLevelUpMode] = useState(false);
+    const toggleLvlMode = () => {
+        setLevelUpMode(!levelUpMode);
+        toggleLvlModal();
+    };
+    const handleLevelUp = () => {
+        toggleLvlModal();
+    }
     const handleJSON = () => {
         //function downloadObjectAsJson(exportObj, exportName){
         let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(character));
@@ -126,12 +140,120 @@ const CharacterEditor = () => {
                     </Button>   
                 </ModalFooter>
             </Modal>
+            <Modal isOpen={lvlModal} toggle={toggleLvlModal}>
+                <ModalHeader>
+                    <img
+                        className="rounded-pill img-fluid"
+                        width="140"
+                        src={levelUpImg}
+                        alt="level up"
+                    /> {levelUpMode ? ('Exit') : ('Enter')} Level Up Mode
+                </ModalHeader>
+                <ModalBody>
+                    <div className='mt-3 mb-1 text-center'>
+                        {levelUpMode ? (
+                            'Are you sure? This will remove any changes made to your character.'
+                        ) : (
+                            'Are you sure you want to level up your character?'
+                        )}
+                    </div>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" onClick={toggleLvlMode} >
+                        Continue
+                    </Button>{' '}
+                    <Button color="danger" onClick={toggleLvlModal}>
+                        Cancel
+                    </Button>   
+                </ModalFooter>
+            </Modal>
             <Modal isOpen={modal} toggle={toggle} fullscreen>
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:woman-elf"></i> Character Editor</ModalHeader>
                 <ModalBody>
-                    <CharacterSheetEditable ref={componentRef} />
+                    <div className='container text-center'>
+                        <div className='row'>
+                            <CharacterSheetEditable ref={componentRef} className='col-9' />
+                            {levelUpMode && (
+                                <div className='col-3 pt-2'>
+                                    <img
+                                        width="140"
+                                        src={levelUpImg}
+                                        alt="level up"
+                                    />
+                                    <h6 className='text-center pb-2'>Follow the Below Steps</h6>
+                                    <ul className="list-group list-group-flush mb-3 bck">
+                                        <li className="list-group-item">
+                                            <b>INCREASE YOUR HIT POINTS</b><br/>
+                                            <p>
+                                            Either roll your class' hit die or take the average result of that hit die. This will be added to your Constitution modifier to determine your additional hitpoints.</p>
+                                            <div className='row py-2'>
+                                                <h5 className='col text-end'>
+                                                    Roll a {character.endclass.hitDie}
+                                                </h5>
+                                                <h5 className='col-5 text-start'>
+                                                    <input className='col-6 px-2' />
+                                                </h5>
+                                            </div>
+                                            <h4 className='pb-2'> 
+                                                <b>{character.endclass.hitDie}</b> + <b>{parseInt(character.conMod)}</b> = <b>12</b> hp
+                                            </h4>
+                                        </li>
+                                        <li className="list-group-item">
+                                            <b>GAIN ONE HIT DIE</b><br/>
+                                            <p>
+                                                At level 2 you have
+                                            </p>
+                                            <h4 className=''><b>2</b></h4>
+                                            <p>hit die</p>
+                                        </li>
+                                        <li className="list-group-item">
+                                            <b>GAIN CLASS FEATURES</b><br/>
+                                            <p className='row'>
+                                                //Class Features or Ability Score improvements
+                                            </p>
+                                        </li>
+                                        <li className="list-group-item">
+                                            <b>PROF. BONUS UPGRADE</b><b/>
+                                            <p>
+                                                At level 2 You have a
+                                            </p>
+                                            <h4><b>+2</b></h4>
+                                            <p>Proficiency Bonus</p>
+                                        </li>
+                                        <li className="list-group-item">
+                                            <b>ABILITY SCORE UPGRADE</b><br/>
+                                            <p>
+                                                <i>You do not gain any ability score increases at this level.</i>
+                                            </p>
+                                        </li>
+                                        <li className="list-group-item">
+                                            <b>GEMSTONE UPGRADE</b><br/>
+                                            <p>
+                                                Increase your gemstone level or select another gemstone.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <Button 
+                                        color="danger" onClick={handleLevelUp}
+                                        className='text-center'
+                                    >
+                                        Exit Level Up Mode
+                                    </Button>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </ModalBody>
                 <ModalFooter>
+                    {!levelUpMode && (
+                        <a><img
+                            className="rounded-pill img-fluid"
+                            width="140"
+                            src={levelUpImg}
+                            alt="level up"
+                            onClick={handleLevelUp}
+                        /></a>
+                    )}
                     <Button color="secondary" onClick={toggleOne} >
                         Back
                     </Button>{' '}

@@ -10,6 +10,8 @@ import {
 
 const CharacterSheetEditable = React.forwardRef((props, ref) => {
 
+    //Used in Character Editor
+
     const [character, setCharacter] = useContext(CharacterContext);
     const { 
         //Level
@@ -212,7 +214,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         <label htmlFor="alignment">Alignment</label><input name="alignment" defaultValue={alignment} />
         </li>
         <li>
-        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" />
+        <label htmlFor="experiencepoints">Experience Points</label><input name="experiencepoints" readOnly/>
         </li>
     </ul>
     </section>
@@ -318,7 +320,14 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         <input name="passiveperception" value={passivePer} />
     </div>
     <div className="otherprofs box textblock">
-        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea className='widthCalc' name="otherprofs" defaultValue={profAndLang && profAndLang.join("\n\n")} ></textarea>
+        <label htmlFor="otherprofs">Other Proficiencies and Languages</label>
+        <textarea 
+            className='widthCalc' 
+            name="otherprofs" 
+            defaultValue={profAndLang && profAndLang.join("\n\n")} 
+            readOnly
+        >
+        </textarea>
     </div>
     </section>
     <section>
@@ -429,13 +438,13 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         <div className="money">
             <ul>
             <li>
-                <label htmlFor="ct">ct</label><input name="ct" />
+                <label htmlFor="ct">ct</label><input name="ct" readOnly />
             </li>
             <li>
-                <label htmlFor="k">k</label><input name="k" />
+                <label htmlFor="k">k</label><input name="k" readOnly />
             </li>
             <li>
-                <label htmlFor="qz">qz</label><input name="qz" />
+                <label htmlFor="qz">qz</label><input name="qz" readOnly />
             </li>
             </ul>
         </div>
@@ -451,43 +460,49 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             name="firstgem"  
             className="label-container"
             defaultValue={`${alignmentGem && alignmentGem.name} (${alignmentGem && alignmentGem.quality})`}
+            readOnly
         />
         <div className="gemOne">
-            <input name="firstgemscore" defaultValue={gemLevel} className="gemOne" />
+            <input 
+                name="firstgemscore" 
+                className="gemOne"
+                defaultValue={gemLevel}
+                readOnly
+            />
             <img src={diamondShape} alt="diamond" />
         </div>
         </div>
         <div className="gemstone-alignment box">
-        <input name="firstgem" className="label-container" />
-        <div className="gemOne">
-            <input name="firstgemscore" className="gemOne" />
-            <img src={diamondShape} alt="diamond" />
-        </div>
+            <input name="firstgem" className="label-container" readOnly />
+            <div className="gemOne">
+                <input name="firstgemscore" className="gemOne" readOnly />
+                <img src={diamondShape} alt="diamond" />
+            </div>
         </div>
         <div className="extra-gemstones box">
         <div className="gemOne">
-            <input name="firstgemscore" className="gemScore" />
-            <input name="firstgemscore" className="gemType" />
+            <input name="firstgemscore" className="gemScore" readOnly />
+            <input name="firstgemscore" className="gemType" readOnly />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" className="gemScore" />
-            <input name="firstgemscore" className="gemType" />
+            <input name="firstgemscore" className="gemScore" readOnly />
+            <input name="firstgemscore" className="gemType" readOnly />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" className="gemScore" />
-            <input name="firstgemscore" className="gemType" />
+            <input name="firstgemscore" className="gemScore" readOnly />
+            <input name="firstgemscore" className="gemType" readOnly />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" className="gemScore" />
-            <input name="firstgemscore" className="gemType" />
+            <input name="firstgemscore" className="gemScore" readOnly />
+            <input name="firstgemscore" className="gemType" readOnly />
             <img src={diamondShape} alt="diamond" />
         </div>
         <div className="gemOne">
-            <input name="firstgemscore" className="gemScore" />
-            <input name="firstgemscore" className="gemType" />
+            <input name="firstgemscore" className="gemScore" readOnly />
+            <input name="firstgemscore" className="gemType" readOnly />
             <img src={diamondShape} alt="diamond" />
         </div>
         </div>
