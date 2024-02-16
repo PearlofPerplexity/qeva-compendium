@@ -640,6 +640,10 @@ input.col.slider::-webkit-slider-thumb {
 	height: 80vh;
   }
 
+  .row-height-two {
+	height: 190vh;
+  }
+
   .char-overflow {
   	height: 100%;
   	overflow-y: scroll;

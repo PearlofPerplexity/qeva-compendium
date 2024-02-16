@@ -35,7 +35,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         //Proficiencies and Languages
         profAndLang,
         //Calculations
-        ac, init, hp, hitDie, inspiration,
+        ac, init, hp, hitDie, speed, inspiration,
         //Features
         features,
         //Equipment
@@ -44,9 +44,9 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         personality, ideals, flaws,
     } = character;
 
-    const profBonus = (endclass && endclass.lvls) ? endclass.lvls[0].prof_bonus : 2; //Usually '2' for Level 1
+    const lvlIndex = level - 1;
+    const profBonus = (endclass && endclass.lvls) ? endclass.lvls[lvlIndex].prof_bonus : 2; //Usually '2' for Level 1
 
-    const [gemLevel, setGemLevel] = useState(1);
     const [pureAbilityMods, setPureAbilityMods] = useState(
         {
             _strMod: parseInt(strMod),
@@ -120,9 +120,9 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         if (race.heartStone.toLowerCase().includes(alignmentGem.name.toLowerCase()) 
             || race.spawnStone.toLowerCase().includes(alignmentGem.name.toLowerCase())
         ) {
-            setGemLevel(2);
+            alignmentGem.level = 2;
         } else {
-            setGemLevel(1);
+            alignmentGem.level = 1;
         }
         let newPassivePer = 10 + parseInt(wisMod);
         if(endclass.skill_prof.join(',').toLowerCase().includes('perception')
@@ -189,17 +189,28 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         setAttacks(newAttacks);
     }, []);
 
+    const handleCharacterChange = (event, field) => {
+        let charObj = character;
+        charObj[field] = event.target.value;
+        setCharacter({...charObj});
+        console.log(charObj);
+    }
 
     return (
 <form className="charsheet" ref={ref}>
 <header>
     <section className="charname">
-    <label htmlFor="charname">Character Name</label><input name="charname" defaultValue={name} />
+        <label htmlFor="charname">Character Name</label>
+        <input 
+            name="charname" 
+            value={name}
+            onChange={(e) => handleCharacterChange(e, 'name')}
+        />
     </section>
     <section className="misc">
     <ul>
         <li>
-        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" defaultValue={`${endclass && endclass.name} ${level}`} />
+        <label htmlFor="classlevel">Class & Level</label><input name="classlevel" defaultValue={`${endclass && endclass.name} ${level}`} readOnly/>
         </li>
         <li>
         <label htmlFor="background">Gemstone</label><input name="background" defaultValue={alignmentGem && alignmentGem.name} />
@@ -344,7 +355,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         </div>
         <div className="speed">
             <div>
-                <label htmlFor="speed">Speed</label><input name="speed" type="text" value={race && race.speed} />
+                <label htmlFor="speed">Speed</label><input name="speed" type="text" value={speed} />
             </div>
         </div>
         <div className="hp">
@@ -353,11 +364,11 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             <label htmlFor="maxhp">Hit Point Maximum</label><input name="maxhp" type="text" value={hp} />
             </div>
             <div className="current">
-            <label htmlFor="currenthp">Current Hit Points</label><input name="currenthp" type="text" />
+            <label htmlFor="currenthp">Current Hit Points</label><input name="currenthp" type="text" readOnly />
             </div>
         </div>
         <div className="temporary">
-            <label htmlFor="temphp">Temporary Hit Points</label><input name="temphp" type="text" />
+            <label htmlFor="temphp">Temporary Hit Points</label><input name="temphp" type="text" readOnly />
         </div>
         </div>
         <div className="hitdice">
@@ -366,7 +377,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             <label htmlFor="totalhd">Total</label><input name="totalhd" type="text" value={hitDie} />
             </div>
             <div className="remaining">
-            <label htmlFor="remaininghd">Hit Dice</label><input name="remaininghd" type="text" placeholder='1' />
+            <label htmlFor="remaininghd">Hit Dice</label><input name="remaininghd" type="text" placeholder='1' readOnly/>
             </div>
         </div>
         </div>
@@ -466,7 +477,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
             <input 
                 name="firstgemscore" 
                 className="gemOne"
-                defaultValue={gemLevel}
+                defaultValue={alignmentGem && alignmentGem.level}
                 readOnly
             />
             <img src={diamondShape} alt="diamond" />
@@ -521,7 +532,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
     <section className="features">
         <div>
         <label htmlFor="features">Features & Traits</label>
-        <textarea name="features" defaultValue={features && features.join("\n\n")} ></textarea>
+        <textarea name="features" value={features && features.join("\n\n")} readOnly></textarea>
         </div>
     </section>
     </section>

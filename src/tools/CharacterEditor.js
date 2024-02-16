@@ -18,7 +18,12 @@ import { CharacterContext } from '../contexts/characterContext';
 const CharacterEditor = () => {
     
     const [character, setCharacter] = useContext(CharacterContext);
+    const [characterBackup, setCharacterBackup] = useState();
     const [charString, setCharString] = useState("");
+    const [hpData, setHpData] = useState({
+        hitDie: 0, conMod: 0, extraHP: 0, avgRoll: 0
+    });
+    const [feats, setFeats] = useState();
 
     const handleCharFile = (e) => {
         const file = e.target.files[0];
@@ -37,8 +42,10 @@ const CharacterEditor = () => {
 
     const [modalOne, setModalOne] = useState(false);
     const toggleOneStart = () => setModalOne(true);
-    const toggleOne = () => setModal(false);
-
+    const toggleOne = () => {
+        setModal(false);
+        setLevelUpMode(false);
+    }
     const [modal, setModal] = useState(false);
     const [nestedModal, setNestedModal] = useState(false);
     const [errorModal, setErrorModal] = useState(false);
@@ -48,9 +55,9 @@ const CharacterEditor = () => {
         try {
             if(charString) {
                 const charObj = JSON.parse(charString);
-                console.log(charObj);
                 if(charObj.hasOwnProperty('endrace') && charObj.hasOwnProperty('endclass')) {
                     setCharacter({...charObj});
+                    setCharacterBackup({...charObj});
                     setModal(true);
                 } else {
                     setErrorMsg("The File you uploaded is not a valid character JSON. :(");
@@ -76,6 +83,11 @@ const CharacterEditor = () => {
     const toggleLvlModal = () => setLevelModal(!lvlModal);
     const [levelUpMode, setLevelUpMode] = useState(false);
     const toggleLvlMode = () => {
+        if(!levelUpMode) {
+            prepareNextLevel();
+        } else {
+            setCharacter({...characterBackup});
+        }
         setLevelUpMode(!levelUpMode);
         toggleLvlModal();
     };
@@ -106,12 +118,101 @@ const CharacterEditor = () => {
         setNestedModal(false);
         setModal(false);
         setModalOne(false);
+        setLevelModal(false);
         console.clear();
     };
     const componentRef = React.createRef();
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
+
+    const handleHp = (event) => {
+        let roll = event.target.value;
+        if(!roll || roll < hpData.avgRoll) roll = hpData.avgRoll;
+        roll = parseInt(roll);
+        if(roll > hpData.hitDieVal) roll = hpData.avgRoll;
+        const xtraHp = hpData.conMod + roll;
+        setHpData({...hpData, extraHp: xtraHp });
+        const newHp = characterBackup.hp + xtraHp;
+        setCharacter({...character, hp: newHp });
+    }
+
+    const handleGem = (event) => {
+        const selection = event.target.value;
+        const charObj = character;
+        if (!selection) {
+            if (charObj.race.heartStone.toLowerCase().includes(charObj.alignmentGem.name.toLowerCase()) 
+                || charObj.race.spawnStone.toLowerCase().includes(charObj.alignmentGem.name.toLowerCase())
+            ) {
+                charObj.alignmentGem.level = 2;
+            } else {
+                charObj.alignmentGem.level = 1;
+            }
+        } else if(selection === 'same') {
+            if(charObj.alignmentType === 'Cardinal') {
+                //Prepare for further levels
+                charObj.alignmentGem.level = characterBackup.alignmentGem.level + 1;
+            }
+        }
+        setCharacter({...charObj});
+    }
+
+    const prepareNextLevel = () => {
+        const charObj = character;
+        
+        //Handle Level
+        const prevlvlIndex = charObj.level - 1;
+        const lvlIndex = charObj.level;
+        charObj.level = charObj.level + 1;
+
+        //Handle HP
+        let avgRoll = parseInt(charObj.endclass.hitDie.replace("d", "")) / 2;
+        if (avgRoll % 1 !== 0) avgRoll += 1;
+        avgRoll = Math.floor(avgRoll);
+        const hpObj = {
+            hitDieVal: parseInt(charObj.endclass.hitDie.replace("d", "")),
+            conMod: parseInt(charObj.conMod),
+            extraHp: avgRoll + parseInt(charObj.conMod),
+            avgRoll: avgRoll
+        };
+        charObj.hp = charObj.hp + hpObj.extraHp;
+        setHpData({...hpObj});
+        
+        //Handle Hit DIe
+        charObj.hitDie = charObj.level + charObj.endclass.hitDie;
+        
+        //Handle Proficiency Bonus
+        const prevProf = charObj.endclass.lvls[prevlvlIndex].prof_bonus;
+        const newProf = charObj.endclass.lvls[lvlIndex].prof_bonus;
+        charObj.profBonus = `+${newProf}`;
+        if(prevProf !== newProf) {
+            //Todo: Update profBonus
+        }
+
+        //Handle Features
+        const lvlFeats = charObj.endclass.lvls[lvlIndex];
+        if(lvlFeats.features[0].name !== '-') {
+            lvlFeats.features.forEach(feat => {
+                charObj.features.push(feat.name.toUpperCase());
+            });
+        }
+        if(lvlFeats.trackables && lvlFeats.trackables.length > 0) {
+            let umItem = lvlFeats.trackables.find(item => item.includes("UM"));
+            if(umItem) {
+                umItem = umItem.replace(/[^0-9+-]/g, '');
+                let umNum = parseInt(umItem);
+                charObj.speed = charObj.race.speed + umNum;
+            }
+        }
+        setFeats([...lvlFeats.features]);
+
+        //Handle Ability Score Increase
+            //Todo: Prepare way to update ability scores 
+        
+        //Save Upgraded Character
+        console.log(charObj);
+        setCharacter({...charObj});
+    }
 
     return (
         <div className="col-lg-4">
@@ -129,7 +230,14 @@ const CharacterEditor = () => {
                 </ModalHeader>
                 <ModalBody>
                     <div className='mt-3 mb-1 text-center'>Select a file that contains your character JSON.</div>
-                    <input className='m-3' type="file" id="fileInput" onChange={e => handleCharFile(e)} />
+                    <div class="my-3 mx-5">
+                        <input 
+                            class="form-control" 
+                            type="file" 
+                            id="fileInput" 
+                            onChange={e => handleCharFile(e)} 
+                        />
+                    </div>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={toggle} >
@@ -152,9 +260,14 @@ const CharacterEditor = () => {
                 <ModalBody>
                     <div className='mt-3 mb-1 text-center'>
                         {levelUpMode ? (
-                            'Are you sure? This will remove any changes made to your character.'
+                            <p>
+                                Are you sure? This will remove any changes made to your character.
+                            </p>
                         ) : (
-                            'Are you sure you want to level up your character?'
+                            <p>
+                                Are you sure you want to level up your character to
+                                <h4>level {character.level+1}?</h4>
+                            </p>
                         )}
                     </div>
                 </ModalBody>
@@ -170,11 +283,11 @@ const CharacterEditor = () => {
             <Modal isOpen={modal} toggle={toggle} fullscreen>
                 <ModalHeader toggle={toggle}><i className="iconify fs-2" data-icon="noto:woman-elf"></i> Character Editor</ModalHeader>
                 <ModalBody>
-                    <div className='container text-center'>
-                        <div className='row'>
+                    <div className='container-fluid text-center'>
+                        <div className='row row-height-two'>
                             <CharacterSheetEditable ref={componentRef} className='col-9' />
                             {levelUpMode && (
-                                <div className='col-3 pt-2'>
+                                <div className='col-3 char-overflow pt-2'>
                                     <img
                                         width="140"
                                         src={levelUpImg}
@@ -185,52 +298,80 @@ const CharacterEditor = () => {
                                         <li className="list-group-item">
                                             <b>INCREASE YOUR HIT POINTS</b><br/>
                                             <p>
-                                            Either roll your class' hit die or take the average result of that hit die. This will be added to your Constitution modifier to determine your additional hitpoints.</p>
+                                            Roll your class' hit die. This will be added to your Constitution modifier to determine your additional hit points. If you roll poorly, the system will take the average result of your hit die ({hpData.avgRoll}). </p>
                                             <div className='row py-2'>
                                                 <h5 className='col text-end'>
                                                     Roll a {character.endclass.hitDie}
                                                 </h5>
                                                 <h5 className='col-5 text-start'>
-                                                    <input className='col-6 px-2' />
+                                                    <input className='col-6 px-2' onChange={handleHp} />
                                                 </h5>
                                             </div>
                                             <h4 className='pb-2'> 
-                                                <b>{character.endclass.hitDie}</b> + <b>{parseInt(character.conMod)}</b> = <b>12</b> hp
+                                                <b>{character.endclass.hitDie}</b> + <b>{hpData.conMod}</b> = <b>{hpData.extraHp}</b> hp
                                             </h4>
                                         </li>
+                                        <li className="list-group-item bg-dark m-1"></li>
                                         <li className="list-group-item">
                                             <b>GAIN ONE HIT DIE</b><br/>
                                             <p>
-                                                At level 2 you have
+                                                At level {character.level} you have
                                             </p>
-                                            <h4 className=''><b>2</b></h4>
+                                            <h4 className=''><b>{character.level}</b></h4>
                                             <p>hit die</p>
                                         </li>
+                                        <li className="list-group-item bg-dark m-1"></li>
                                         <li className="list-group-item">
                                             <b>GAIN CLASS FEATURES</b><br/>
-                                            <p className='row'>
-                                                //Class Features or Ability Score improvements
-                                            </p>
+                                            <div className='row'>
+                                                <ul className='list-group list-group-flush mb-3'>
+                                                    {feats[0].name !== '-' ? 
+                                                        feats.map(feat => (
+                                                        <li key={feat.id} className='list-group-item'>
+                                                            <b>{feat.name}: </b>{feat.description}
+                                                        </li>
+                                                    )) : (
+                                                        <li>No Features offered at this level</li>
+                                                    )}
+                                                </ul>
+                                            </div>
                                         </li>
+                                        <li className="list-group-item bg-dark m-1"></li>
                                         <li className="list-group-item">
                                             <b>PROF. BONUS UPGRADE</b><b/>
                                             <p>
-                                                At level 2 You have a
+                                                At level {character.level} You have a
                                             </p>
-                                            <h4><b>+2</b></h4>
+                                            <h4><b>{character.profBonus}</b></h4>
                                             <p>Proficiency Bonus</p>
                                         </li>
+                                        <li className="list-group-item bg-dark m-1"></li>
                                         <li className="list-group-item">
                                             <b>ABILITY SCORE UPGRADE</b><br/>
                                             <p>
                                                 <i>You do not gain any ability score increases at this level.</i>
                                             </p>
                                         </li>
+                                        <li className="list-group-item bg-dark m-1"></li>
                                         <li className="list-group-item">
                                             <b>GEMSTONE UPGRADE</b><br/>
                                             <p>
                                                 Increase your gemstone level or select another gemstone.
                                             </p>
+                                            <select 
+                                                name='alignment' 
+                                                className="form-select" 
+                                                id="alignment-select" 
+                                                onChange={handleGem}
+                                            >
+                                                <option value="">--Make Selection--</option>
+                                                <option value="same">
+                                                    Invest in Current Gemstone
+                                                </option>
+                                                <option value="new">
+                                                    Align to another Gemstone
+                                                </option>
+                                            </select>
                                         </li>
                                     </ul>
                                     <Button 
@@ -238,14 +379,16 @@ const CharacterEditor = () => {
                                         className='text-center mb-3'
                                     >
                                         Cancel Level Up
-                                    </Button>
+                                    </Button><br/>
                                     <Button 
                                         color="info" onClick={handleLevelUp}
                                         className='text-center'
                                     >
-                                        Save Character
+                                        Save Changes
                                     </Button>
+                                    <div style={{height:'600px'}}></div>
                                 </div>
+                                
                             )}
                         </div>
                     </div>
