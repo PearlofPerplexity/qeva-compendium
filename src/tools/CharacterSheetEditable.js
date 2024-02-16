@@ -27,7 +27,7 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         wis, wisMod, wisSave,
         cha, chaMod, chaSave,
         //Alignment
-        alignment, alignmentType, alignmentGem,
+        alignment, alignmentType, alignmentGem, alignmentGemTwo = {},
         //Race
         race, subrace, endrace,
         //Class
@@ -484,9 +484,18 @@ const CharacterSheetEditable = React.forwardRef((props, ref) => {
         </div>
         </div>
         <div className="gemstone-alignment box">
-            <input name="firstgem" className="label-container" readOnly />
+            <input 
+                name="secondgem" 
+                className="label-container"
+                defaultValue={alignmentGemTwo.name && `${alignmentGemTwo && alignmentGemTwo.name} (${alignmentGemTwo && alignmentGemTwo.quality})`}
+                readOnly />
             <div className="gemOne">
-                <input name="firstgemscore" className="gemOne" readOnly />
+                <input 
+                    name="firstgemscore" 
+                    className="gemOne"
+                    defaultValue={alignmentGemTwo.level && alignmentGemTwo.level} 
+                    readOnly 
+                />
                 <img src={diamondShape} alt="diamond" />
             </div>
         </div>

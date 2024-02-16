@@ -12,6 +12,9 @@ import CharacterSheetEditable from './CharacterSheetEditable';
 import levelUpImg from '../assets/imgs/other/lvlUp.png'
 import { CLASSES } from '../assets/shared/CLASSES';
 import { RACES } from '../assets/shared/RACES';
+import { GEMS } from "../assets/shared/GEMS";
+import { DGEMS } from '../assets/shared/DGEMS';
+
 //CONTEXT
 import { CharacterContext } from '../contexts/characterContext';
 
@@ -24,6 +27,8 @@ const CharacterEditor = () => {
         hitDie: 0, conMod: 0, extraHP: 0, avgRoll: 0
     });
     const [feats, setFeats] = useState();
+    const [newGem, setNewGem] = useState(false);
+    const [gems, setGems] = useState();
 
     const handleCharFile = (e) => {
         const file = e.target.files[0];
@@ -140,7 +145,7 @@ const CharacterEditor = () => {
     const handleGem = (event) => {
         const selection = event.target.value;
         const charObj = character;
-        if (!selection) {
+        if (!selection || selection === 'new') {
             if (charObj.race.heartStone.toLowerCase().includes(charObj.alignmentGem.name.toLowerCase()) 
                 || charObj.race.spawnStone.toLowerCase().includes(charObj.alignmentGem.name.toLowerCase())
             ) {
@@ -154,6 +159,31 @@ const CharacterEditor = () => {
                 charObj.alignmentGem.level = characterBackup.alignmentGem.level + 1;
             }
         }
+        if(selection === 'new') {
+            setNewGem(true);
+        } else {
+            setNewGem(false);
+        }
+        setCharacter({...charObj});
+    }
+
+    const selectNewGem = (event) => {
+        const charObj = character;
+        const newGemName = event.target.value;
+        let newGem;
+        if(newGemName) {
+            newGem = gems.find(gem => gem.name === newGemName);
+            if (charObj.race.heartStone.toLowerCase().includes(newGemName.toLowerCase()) 
+                || charObj.race.spawnStone.toLowerCase().includes(newGemName.toLowerCase())
+            ) {
+                newGem.level = 2;
+            } else {
+                newGem.level = 1;
+            }
+        } else {
+            newGem = {}
+        }
+        charObj.alignmentGemTwo = newGem;
         setCharacter({...charObj});
     }
 
@@ -209,6 +239,24 @@ const CharacterEditor = () => {
         //Handle Ability Score Increase
             //Todo: Prepare way to update ability scores 
         
+        //Handle Gemstones
+        const gemOptionArray = [...GEMS[0].topics, ...GEMS[2].topics];
+        if(!charObj.alignment.includes('Evil')) {
+            gemOptionArray.push(...GEMS[1].topics);
+        } else {
+            gemOptionArray.push(...DGEMS[1].topics);
+        }
+        if(!charObj.alignment.includes('Good')) {
+            gemOptionArray.push(...DGEMS[0].topics);
+        }
+        gemOptionArray.sort((a, b) => {
+            const nameA = a.name.toUpperCase();
+            const nameB = b.name.toUpperCase();
+            if (nameA < nameB) return -1;
+            if (nameA > nameB) return 1;
+        })
+        setGems([...gemOptionArray]);
+
         //Save Upgraded Character
         console.log(charObj);
         setCharacter({...charObj});
@@ -358,20 +406,44 @@ const CharacterEditor = () => {
                                             <p>
                                                 Increase your gemstone level or select another gemstone.
                                             </p>
-                                            <select 
-                                                name='alignment' 
-                                                className="form-select" 
-                                                id="alignment-select" 
-                                                onChange={handleGem}
-                                            >
-                                                <option value="">--Make Selection--</option>
-                                                <option value="same">
-                                                    Invest in Current Gemstone
-                                                </option>
-                                                <option value="new">
-                                                    Align to another Gemstone
-                                                </option>
-                                            </select>
+                                            <div className='row'>
+                                                <select 
+                                                    name='alignment' 
+                                                    className="form-select" 
+                                                    id="alignment-select" 
+                                                    onChange={handleGem}
+                                                >
+                                                    <option value="">--Make Selection--</option>
+                                                    <option value="same">
+                                                        Invest in Current Gemstone
+                                                    </option>
+                                                    <option value="new">
+                                                        Align to another Gemstone
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div className='row m-3'>
+                                            {newGem && (
+                                                <select 
+                                                    name='newGem' 
+                                                    className="form-select" 
+                                                    id="newGem-select" 
+                                                    onChange={selectNewGem}
+                                                >
+                                                    <option value="">--Select a Gem--</option>
+                                                    {gems.map((gem,key) => (
+                                                        <option key={key} value={gem.name}>
+                                                            {gem.name} - {gem.quality}
+                                                        </option>
+                                                    ))}
+                                                    
+                                                    
+                                                    <option value="new">
+                                                        Align to another Gemstone
+                                                    </option>
+                                                </select>
+                                            )}
+                                            </div>
                                         </li>
                                     </ul>
                                     <Button 
